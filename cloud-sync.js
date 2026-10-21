@@ -46,9 +46,13 @@
     signedIn.hidden = !next;
     document.getElementById('account-current-email').textContent = next?.email || '';
     const emptyLogin = document.getElementById('empty-login');
-    if (emptyLogin) emptyLogin.textContent = next ? 'จัดการบัญชีและการซิงก์' : 'เข้าสู่ระบบ / สร้างบัญชี';
+    const emptyDescription = document.getElementById('empty-description');
+    if (emptyLogin) emptyLogin.hidden = Boolean(next);
+    if (emptyDescription) emptyDescription.textContent = next
+      ? 'เข้าสู่ระบบแล้ว · ห้องสมุดของคุณยังไม่มีหนังสือ'
+      : 'เข้าสู่ระบบหรือสร้างบัญชีด้วยอีเมล เพื่อบันทึกและซิงก์ห้องสมุดข้ามอุปกรณ์';
     buttons.forEach(button => {
-      button.textContent = next ? 'บัญชี ✓' : 'เข้าสู่ระบบ';
+      button.textContent = next ? 'บัญชี' : 'เข้าสู่ระบบ';
       button.setAttribute('aria-label', next ? 'บัญชีและการซิงก์' : 'เข้าสู่ระบบเพื่อซิงก์ข้อมูล');
     });
   }
@@ -199,7 +203,7 @@
     message('ข้อมูลในเครื่อง · เข้าสู่ระบบเพื่อซิงก์');
   }
 
-  window.BookwiseCloudSync = { schedule };
+  window.BookwiseCloudSync = { schedule, isSignedIn: () => Boolean(user) };
   if (!app || !config?.url || !config?.publishableKey || !/^https?:$/.test(location.protocol)) {
     if (!/^https?:$/.test(location.protocol)) {
       message('เปิดเว็บไซต์ผ่าน HTTPS เพื่อเข้าสู่ระบบ');
