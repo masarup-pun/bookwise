@@ -19,6 +19,7 @@
   let user = null;
   let revision = 0;
   let pending = null;
+  let pendingCallbacks = [];
   let syncing = false;
   let conflicted = false;
   let timer = null;
@@ -74,7 +75,8 @@
         favorite: Boolean(saved.favorite || guest.favorite),
         started: Boolean(saved.started || guest.started),
         completed: Boolean(saved.completed || guest.completed),
-        lastRead: Math.max(Number(saved.lastRead) || 0, Number(guest.lastRead) || 0)
+        lastRead: Math.max(Number(saved.lastRead) || 0, Number(guest.lastRead) || 0),
+        coverPath: saved.coverPath || guest.coverPath || null
       };
     }
     for (const key of ['annotations', 'bookmarks', 'reviewQueue']) {
@@ -112,9 +114,10 @@
     return Number(data);
   }
 
-  function schedule(state) {
+  function schedule(state, onSynced) {
     if (!user) return;
     pending = clone(state);
+    if (typeof onSynced === 'function') pendingCallbacks.push(onSynced);
     message(conflicted ? 'มีข้อมูลใหม่จากอุปกรณ์อื่น โปรดตรวจสอบก่อนซิงก์' : 'บันทึกในเครื่องแล้ว · รอซิงก์');
     if (conflicted) return;
     clearTimeout(timer);
@@ -128,16 +131,20 @@
     const owner = user.id;
     const currentGeneration = generation;
     const state = pending;
+    const callbacks = pendingCallbacks;
     pending = null;
+    pendingCallbacks = [];
     message('กำลังซิงก์…');
     try {
       const nextRevision = await writeRemote(revision, state);
       if (generation !== currentGeneration || user?.id !== owner) return;
       revision = nextRevision;
       message(pending ? 'บันทึกในเครื่องแล้ว · รอซิงก์' : 'ซิงก์ล่าสุดแล้ว');
+      callbacks.forEach(callback => Promise.resolve().then(callback).catch(error => console.warn('Bookwise after-sync action:', error)));
     } catch (error) {
       if (generation !== currentGeneration || user?.id !== owner) return;
       pending ||= state;
+      pendingCallbacks = [...callbacks, ...pendingCallbacks];
       if (isConflict(error)) {
         conflicted = true;
         message('ข้อมูลบนอุปกรณ์อื่นใหม่กว่า กรุณาโหลดข้อมูลล่าสุด');
@@ -159,6 +166,7 @@
     activatingUserId = nextUser.id;
     clearTimeout(timer);
     pending = null;
+    pendingCallbacks = [];
     conflicted = false;
     message('กำลังโหลดข้อมูลจากบัญชี…');
     try {
@@ -196,6 +204,7 @@
     ++generation;
     clearTimeout(timer);
     pending = null;
+    pendingCallbacks = [];
     conflicted = false;
     revision = 0;
     activatingUserId = null;
@@ -205,7 +214,41 @@
     message('ข้อมูลในเครื่อง · เข้าสู่ระบบเพื่อซิงก์');
   }
 
-  window.BookwiseCloudSync = { schedule, isSignedIn: () => Boolean(user) };
+  async function uploadCover(bookId, file) {
+    if (!client || !user) throw new Error('sign_in_required');
+    const owner = user.id;
+    const extension = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp' }[file.type];
+    if (!extension || file.size > 5 * 1024 * 1024) throw new Error('invalid_cover_file');
+    const path = `${owner}/${bookId}/${crypto.randomUUID()}.${extension}`;
+    const { error: uploadError } = await client.storage.from('book-covers').upload(path, file, {
+      cacheControl: '3600', contentType: file.type, upsert: false
+    });
+    if (uploadError) throw uploadError;
+    if (user?.id !== owner) throw new Error('account_changed_during_upload');
+    const { data, error } = await client.storage.from('book-covers').createSignedUrl(path, 86400);
+    if (error) throw error;
+    if (user?.id !== owner) throw new Error('account_changed_during_upload');
+    return { path, signedUrl: data.signedUrl };
+  }
+
+  async function getCoverUrl(path) {
+    if (!client || !user) throw new Error('sign_in_required');
+    const owner = user.id;
+    if (typeof path !== 'string' || !path.startsWith(`${owner}/`)) throw new Error('invalid_cover_path');
+    const { data, error } = await client.storage.from('book-covers').createSignedUrl(path, 86400);
+    if (error) throw error;
+    if (user?.id !== owner) throw new Error('account_changed_during_cover_load');
+    return data.signedUrl;
+  }
+
+  async function removeCover(path) {
+    if (!client || !user) throw new Error('sign_in_required');
+    if (typeof path !== 'string' || !path.startsWith(`${user.id}/`)) throw new Error('invalid_cover_path');
+    const { error } = await client.storage.from('book-covers').remove([path]);
+    if (error) throw error;
+  }
+
+  window.BookwiseCloudSync = { schedule, isSignedIn: () => Boolean(user), uploadCover, getCoverUrl, removeCover };
   if (!app || !config?.url || !config?.publishableKey || !/^https?:$/.test(location.protocol)) {
     if (!/^https?:$/.test(location.protocol)) {
       message('เปิดเว็บไซต์ผ่าน HTTPS เพื่อเข้าสู่ระบบ');
