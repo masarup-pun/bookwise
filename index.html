@@ -274,20 +274,24 @@ body[data-theme="dark"] .reader-tools .font-size{color:#e4edf7}
 </head>
 <body>
   <div class="shell">
-    <aside>
+    <header class="app-header">
       <div class="brand"><span class="brand-symbol" aria-hidden="true"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="brand-fill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#325e92"/><stop offset="1" stop-color="#173a63"/></linearGradient></defs><rect width="48" height="48" rx="14" fill="url(#brand-fill)"/><path fill="#fff" fill-rule="evenodd" d="M14 12h13c6 0 9 3 9 8 0 4-2 7-6 8l6 8h-7l-6-8h-3v8h-6V12Zm6 6v5h7c2 0 3-1 3-2.5S29 18 27 18h-7Z"/><circle cx="37" cy="11" r="3" fill="#a5dece"/></svg></span><span>Readwise</span></div>
-      <div class="nav-label">ห้องสมุด</div>
       <nav class="nav">
         <button class="active" data-view="all"><svg viewBox="0 0 24 24"><path d="M4 5.5c0-1 .8-1.8 1.8-1.8h12.4c1 0 1.8.8 1.8 1.8v13c0 1-.8 1.8-1.8 1.8H5.8c-1 0-1.8-.8-1.8-1.8z"/><path d="M8 3.7v16.6M11 8h5M11 12h5"/></svg>หนังสือ</button>
         <button data-view="favorites"><svg viewBox="0 0 24 24"><path d="M20.8 8.8c0 5.1-8.8 10.2-8.8 10.2S3.2 13.9 3.2 8.8a4.4 4.4 0 0 1 8.8-1 4.4 4.4 0 0 1 8.8 1Z"/></svg>รายการโปรด</button>
         <button data-view="review"><svg viewBox="0 0 24 24"><path d="M4 5.5c0-1 .8-1.8 1.8-1.8h12.4c1 0 1.8.8 1.8 1.8v13c0 1-.8 1.8-1.8 1.8H5.8c-1 0-1.8-.8-1.8-1.8z"/><path d="M8 8h8M8 12h5M8 16h3"/></svg>ทบทวน</button>
         <button data-view="saved"><svg viewBox="0 0 24 24"><path d="M6 3.5h12a1 1 0 0 1 1 1V21l-7-4-7 4V4.5a1 1 0 0 1 1-1Z"/></svg>บันทึกไว้</button>
       </nav>
-      <div class="side-bottom"><div class="reading-card"><div class="eyebrow">กำลังอ่าน</div><strong id="side-reading">ศิลปะแห่งการใส่ใจ</strong><div class="progress"><i id="side-progress" style="width:38%"></i></div><small id="side-chapter">บทที่ 3 จาก 8 · 38%</small></div><div class="profile"><div class="avatar">R</div><div><strong>ห้องสมุดของคุณ</strong><small id="profile-sync-status">บันทึกในเบราว์เซอร์นี้</small></div></div></div>
-      <div class="mobile-menu"><button aria-label="Menu"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button></div>
-    </aside>
+      <div class="profile"><div class="avatar">R</div><div class="profile-copy"><strong>ห้องสมุดของคุณ</strong><small id="profile-sync-status">บันทึกในเบราว์เซอร์นี้</small></div></div>
+      <div class="header-actions">
+        <button class="account-button" id="account-button" type="button" hidden>เข้าสู่ระบบ</button>
+        <button class="theme-toggle" id="theme-toggle" role="switch" aria-checked="false" aria-label="เปิดโหมดมืด"><span class="theme-glyph" id="theme-glyph">◐</span><span class="theme-label" id="theme-label">โหมดมืด</span><i class="theme-track"><b></b></i></button>
+        <button class="icon-btn" aria-label="ค้นหาหนังสือ" id="search-btn"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg></button>
+      </div>
+      <div class="sr-only" aria-hidden="true"><span id="side-reading">ศิลปะแห่งการใส่ใจ</span><span id="side-progress"></span><span id="side-chapter"></span></div>
+    </header>
     <main>
-      <div class="topbar" id="home-top"><div class="crumb">ห้องสมุดส่วนตัว</div><div class="top-actions"><span class="date" id="today"></span><button class="account-button" id="account-button" type="button" hidden>เข้าสู่ระบบ</button><button class="theme-toggle" id="theme-toggle" role="switch" aria-checked="false" aria-label="เปิดโหมดมืด"><span class="theme-glyph" id="theme-glyph">◐</span><span class="theme-label" id="theme-label">โหมดมืด</span><i class="theme-track"><b></b></i></button><button class="icon-btn" aria-label="ค้นหาหนังสือ" id="search-btn"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg></button></div></div>
+      <div class="topbar" id="home-top"><div class="crumb">ห้องสมุดส่วนตัว</div><span class="date" id="today"></span></div>
       <section id="library-view">
         <div class="hero"><div><div class="kicker">พื้นที่สงบสำหรับการเรียนรู้</div><h1>ห้องสมุดของคุณ</h1><p>เก็บแนวคิดที่อยากกลับมาอ่านและนำไปใช้</p></div></div>
         <section class="continue-wrap" id="continue-wrap"><div class="continue-head"><h2>อ่านต่อ</h2><span id="continue-count"></span></div><div class="continue-list" id="continue-list"></div></section>
@@ -409,5 +413,33 @@ body[data-theme="dark"] .reader-tools .font-size{color:#e4edf7}
   </script>
   <script src="supabase-config.js"></script>
   <script src="cloud-sync.js"></script>
+<style id="readwise-header-navigation">
+  .shell{display:block;max-width:none;min-height:100vh;padding:0 28px;background:transparent}
+  .app-header{position:sticky;top:12px;z-index:30;max-width:1544px;margin:12px auto 0;padding:12px 20px;display:flex;align-items:center;gap:24px;border:1px solid rgba(255,255,255,.88);border-radius:20px;background:rgba(250,251,252,.78);box-shadow:0 12px 38px rgba(32,48,68,.09),inset 0 1px white;backdrop-filter:blur(28px) saturate(150%);-webkit-backdrop-filter:blur(28px) saturate(150%)}
+  .brand{flex:none;margin:0 6px 0 0;font-size:22px}
+  .brand-symbol svg{display:block;width:36px;height:36px}
+  .nav-label{display:none}
+  .nav{position:static;left:auto;bottom:auto;transform:none;display:flex;align-items:center;gap:4px;flex:1;min-width:0;width:auto;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+  .nav button{height:42px;padding:0 13px;white-space:nowrap;gap:8px;border:1px solid transparent;font-size:13px}
+  .nav button.active{border-color:rgba(255,255,255,.8)}
+  .header-actions{display:flex;align-items:center;gap:9px;flex:none}
+  .profile{border:0;border-left:1px solid var(--line);padding:0 0 0 14px;gap:8px;max-width:176px;min-width:0}
+  .profile-copy{min-width:0}
+  .profile strong,.profile small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .profile strong{font-size:12px}
+  .profile small{font-size:10px;max-width:138px}
+  .header-actions .account-button{min-height:36px;padding:7px 12px;font-size:12px}
+  .header-actions .theme-toggle{height:38px;padding:0 9px;gap:7px}
+  .header-actions .icon-btn{width:38px;height:38px}
+  .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  main{max-width:1544px;margin:0 auto;padding:38px clamp(20px,4.5vw,72px) 80px}
+  .topbar{margin-bottom:48px}
+  body[data-theme="dark"] .app-header{background:rgba(18,32,48,.8);border-color:#dbe9f51c;box-shadow:0 12px 38px #0004,inset 0 1px #ffffff12}
+  body[data-theme="dark"] .profile{border-left-color:var(--line)}
+  @media(max-width:1000px){.shell{padding:0 18px}.app-header{gap:14px;padding:11px 14px}.nav button{padding:0 9px;font-size:12px}.profile{max-width:145px}.profile small{max-width:110px}.header-actions{gap:6px}}
+  @media(max-width:760px){.app-header{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"brand actions" "nav nav" "profile profile";gap:8px 12px;top:0;margin:0 -18px;padding:10px 17px 10px;border-radius:0 0 18px 18px;border-top:0}.brand{grid-area:brand;font-size:20px}.brand-symbol svg{width:32px;height:32px}.header-actions{grid-area:actions;gap:6px}.profile{display:flex;grid-area:profile;border:0;padding:0;max-width:none;gap:7px}.profile .avatar{width:24px;height:24px;font-size:9px}.profile strong{font-size:11px}.profile small{font-size:10px;max-width:none}.nav{grid-area:nav;width:100%;overflow-x:auto;scrollbar-width:none;padding-bottom:1px}.nav::-webkit-scrollbar{display:none}.nav button{flex:none;height:38px;padding:0 12px;font-size:12px}.header-actions .account-button{min-height:34px;padding:6px 10px}.header-actions .theme-toggle{height:35px}.header-actions .theme-label{display:none}.header-actions .icon-btn{width:35px;height:35px}.shell{padding:0}.app-header{position:sticky}main{padding:24px 20px 55px}.topbar{margin-bottom:36px}}
+  @media(max-width:420px){.app-header{padding-left:13px;padding-right:13px}.brand{font-size:18px}.brand-symbol svg{width:29px;height:29px}.nav button{padding:0 10px}.header-actions .account-button{font-size:11px}.header-actions{gap:4px}}
+  @media(prefers-reduced-transparency:reduce){.app-header{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--surface-solid)}}
+</style>
 </body>
 </html>
