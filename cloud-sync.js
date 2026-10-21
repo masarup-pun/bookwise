@@ -65,9 +65,9 @@
       }
       result[key] = [...byId.values()];
     }
-    result.fontSizePt = remote.fontSizePt ||
-      (Number.isInteger(remote.fontSize) ? Math.max(24, Math.min(40, 30 + remote.fontSize - 23)) : null) ||
-      local.fontSizePt || 30;
+    result.fontSizeCustomized = remote.fontSizeCustomized === true || local.fontSizeCustomized === true;
+    result.fontSizePt = remote.fontSizeCustomized === true ? remote.fontSizePt :
+      local.fontSizeCustomized === true ? local.fontSizePt : 30;
     delete result.fontSize;
     return result;
   }
