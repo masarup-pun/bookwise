@@ -260,6 +260,9 @@ body,button,input,textarea,select,dialog{font-family:var(--sans)}
 .reader-content .prose,.reader-content .quote{font-size:var(--reader-size,30pt)}
 .reader-content .prose h2{font-size:1.08em;line-height:1.35}
 .reader-tools .font-size{min-width:48px;white-space:nowrap;text-align:center}
+body[data-theme="dark"] .reader-tools button,
+body[data-theme="dark"] .reader-tools .font-label,
+body[data-theme="dark"] .reader-tools .font-size{color:#e4edf7}
 @media(min-width:851px){
   .reader{max-width:1120px}
   .reader-layout{grid-template-columns:210px minmax(0,760px);gap:32px}
