@@ -11,8 +11,8 @@
 ## ตั้งค่า Supabase สำหรับซิงก์
 
 1. เปิด Supabase project `Bookwise` → **SQL Editor** → **New query** แล้วคัดลอกไฟล์ [`supabase/schema.sql`](supabase/schema.sql) ทั้งหมดไปวางและกด **Run** ไฟล์นี้สร้างตารางข้อมูลส่วนตัว เปิด Row Level Security และเพิ่มฟังก์ชันบันทึกแบบตรวจ revision
-2. ไปที่ **Authentication → URL Configuration** ตั้ง **Site URL** เป็น `https://masarup-pun.github.io/bookwise/` และเพิ่ม URL เดียวกันใน **Redirect URLs** หากเคยเพิ่ม URL ที่ลงท้ายด้วย `Readwise-glass.html` ให้เก็บไว้ชั่วคราวเพื่อรองรับลิงก์อีเมลที่ส่งไปแล้ว
-3. ตรวจว่า **Authentication → Providers → Email** เปิดใช้งานอยู่ และส่งอีเมลเข้าสู่ระบบได้
+2. ไปที่ **Authentication → URL Configuration** ตั้ง **Site URL** เป็น `https://masarup-pun.github.io/bookwise/` และเพิ่ม URL เดียวกันใน **Redirect URLs** แอปจะส่งลิงก์ยืนยันกลับมาที่ URL นี้เสมอ แม้ขอ Login จาก localhost
+3. ตรวจว่า **Authentication → Providers → Email** เปิดใช้งานอยู่ และส่งอีเมลเข้าสู่ระบบได้ ลิงก์ยืนยันใช้ได้ครั้งเดียวและมีอายุจำกัด หากหมดอายุให้ขอลิงก์ฉบับใหม่แล้วเปิดเพียงครั้งเดียว
 4. เปิดเว็บ กด **เข้าสู่ระบบ** กรอกอีเมล แล้วกดลิงก์ในอีเมล หลังเข้าระบบ เว็บจะสร้างข้อมูลบัญชีจากข้อมูลที่อยู่ในเบราว์เซอร์นี้ หากเคยใช้บัญชีจากอุปกรณ์อื่นแล้ว สามารถกด **นำเข้าข้อมูลจากเครื่องนี้** เพื่อรวมข้อมูลเดิมได้
 
 ค่า Project URL และ publishable key อยู่ใน `supabase-config.js` ซึ่งส่งไปยังเบราว์เซอร์ได้ตามรูปแบบของ Supabase ห้ามเพิ่ม database password, secret key หรือ service_role key ลงใน repository

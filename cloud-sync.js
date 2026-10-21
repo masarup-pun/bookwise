@@ -13,6 +13,9 @@
   const signoutButton = document.getElementById('account-signout');
   const sendButton = document.getElementById('account-send');
   const buttons = [document.getElementById('account-button'), document.getElementById('reader-account-button')];
+  const authRedirectUrl = 'https://masarup-pun.github.io/bookwise/';
+  const authErrorParams = new URLSearchParams(location.hash.replace(/^#/, ''));
+  const authErrorCode = authErrorParams.get('error_code');
   let client = null;
   let user = null;
   let revision = 0;
@@ -26,6 +29,15 @@
   function message(value) {
     status.textContent = value;
     if (profileStatus) profileStatus.textContent = value;
+  }
+
+  function showAuthLinkError() {
+    const text = authErrorCode === 'otp_expired'
+      ? 'ลิงก์นี้หมดอายุหรือถูกใช้แล้ว · กรอกอีเมลเพื่อขอลิงก์ใหม่'
+      : 'ยืนยันอีเมลไม่สำเร็จ · กรอกอีเมลแล้วขอลิงก์ใหม่';
+    if (!dialog.open) dialog.showModal();
+    message(text);
+    history.replaceState(null, '', location.pathname + location.search);
   }
 
   function setUser(next) {
@@ -218,7 +230,7 @@
     message('กำลังส่งลิงก์…');
     const { error } = await client.auth.signInWithOtp({
       email,
-      options: { emailRedirectTo: location.origin + location.pathname }
+      options: { emailRedirectTo: authRedirectUrl }
     });
     sendButton.disabled = false;
     message(error ? `ส่งลิงก์ไม่สำเร็จ: ${error.message}` : 'ส่งลิงก์แล้ว · เปิดอีเมลและกดลิงก์เพื่อเข้าสู่ระบบ');
@@ -279,9 +291,11 @@
       const { data, error } = await client.auth.getUser();
       if (error && error.name !== 'AuthSessionMissingError') throw error;
       if (data.user) await activate(data.user);
+      else if (authErrorCode) showAuthLinkError();
       else message('ข้อมูลในเครื่อง · เข้าสู่ระบบเพื่อซิงก์');
     } catch (error) {
-      message('เชื่อมต่อบัญชีไม่สำเร็จ · ข้อมูลยังอยู่ในเครื่อง');
+      if (authErrorCode) showAuthLinkError();
+      else message('เชื่อมต่อบัญชีไม่สำเร็จ · ข้อมูลยังอยู่ในเครื่อง');
       console.error('Bookwise Supabase:', error);
     }
   };
