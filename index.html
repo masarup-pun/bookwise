@@ -2,8 +2,16 @@
 <html lang="th">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#f5f7fb" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f7f7f4" />
+  <meta name="application-name" content="Readwise" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Readwise" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="./favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" sizes="180x180" />
+  <link rel="manifest" href="./site.webmanifest" />
   <link rel="canonical" href="https://masarup-pun.github.io/bookwise/" />
   <title>Readwise — ห้องสมุดของคุณ</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -216,7 +224,7 @@ body:not([data-theme="dark"]) .saved-view>p,
 body:not([data-theme="dark"]) .review-view>p{color:#465a70}
 body:not([data-theme="dark"]) .reader-content .prose{color:#263749}
 .reader-content .prose ul,.reader-content .prose ol{padding-left:1.45em;margin:0 0 22px;line-height:1.7}
-.reader-content .prose li{padding-left:.2em;margin:0 0 9px}
+  .reader-content .prose li{padding-left:.2em;margin:0 0 9px;white-space:pre-line}
 .reader-content .prose li::marker{color:#416b94;font-weight:700}
 body[data-theme="dark"] .reader-content .prose li::marker{color:#a8c9ec}
 body[data-theme="dark"] .nav-label,
@@ -257,7 +265,7 @@ body,button,input,textarea,select,dialog{font-family:var(--sans)}
 .saved-card .saved-quote,.note-dialog blockquote{
   font-family:"Cordia New",Cordia,"Noto Serif Thai",serif;
 }
-.reader-content .prose,.reader-content .quote{font-size:var(--reader-size,30pt)}
+  .reader-content .prose,.reader-content .quote{font-size:var(--reader-size,20pt)}
 .reader-content .prose h2{font-size:1.08em;line-height:1.35}
 .reader-tools .font-size{min-width:48px;white-space:nowrap;text-align:center}
 body[data-theme="dark"] .reader-tools button,
@@ -307,8 +315,8 @@ body[data-theme="dark"] .reader-tools .font-size{color:#e4edf7}
       <section class="review-view" id="review-view"><div class="kicker">กลับมาจำสิ่งสำคัญ</div><h1>ทบทวน</h1><p>การ์ดที่บันทึกไว้จะอยู่ที่นี่ และมีวันทบทวนครั้งถัดไปให้เสมอ</p><div class="workspace-stats" id="review-stats"></div><div id="review-list"></div></section>
       <section class="saved-view" id="saved-view"><div class="kicker">ร่องรอยการอ่าน</div><h1>บันทึกไว้</h1><p>ไฮไลต์ โน้ต และบุ๊กมาร์กที่คุณเก็บไว้ระหว่างอ่าน</p><div class="workspace-stats" id="saved-stats"></div><div id="saved-list"></div></section>
       <section class="reader" id="reader-view">
-        <div class="reader-top"><button class="back" id="back-library"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>กลับห้องสมุด</button><div class="reader-actions"><button class="account-button" id="reader-account-button" type="button" hidden aria-label="บัญชีและการซิงก์">บัญชี</button><button class="bookmark-toggle" id="bookmark-toggle" aria-pressed="false" aria-label="บันทึกบทนี้"><svg viewBox="0 0 24 24"><path d="M6 3.5h12a1 1 0 0 1 1 1V21l-7-4-7 4V4.5a1 1 0 0 1 1-1Z"/></svg><span>บุ๊กมาร์ก</span></button><div class="reader-tools"><span class="font-label">ขนาดตัวอักษร</span><button id="font-down" aria-label="ลดขนาดตัวอักษร">A−</button><span class="font-size" id="font-value">30 pt</span><button id="font-up" aria-label="เพิ่มขนาดตัวอักษร">A+</button></div></div></div>
-        <div class="reader-layout"><nav class="toc"><div class="toc-title">สารบัญ</div><div class="toc-book" id="toc-book"></div><div class="toc-list" id="toc-list"></div><div class="reader-saved" id="reader-saved"></div></nav><article class="reader-content"><div class="reader-chapter" id="chapter-label"></div><h1 id="chapter-title"></h1><p class="chapter-deck" id="chapter-deck"></p><div class="reader-rule"></div><div class="prose" id="chapter-body"></div><div class="chapter-footer"><span id="chapter-number"></span><button id="next-chapter">บทถัดไป →</button></div><div class="reader-progress"><span>ความคืบหน้า</span><div class="progress"><i id="reader-progress-fill" style="width:0%"></i></div><span id="reader-progress-text"></span></div><section class="recall" id="recall"><div class="recall-kicker">ทบทวนท้ายบท</div><h2>จำอะไรได้บ้าง</h2><p class="recall-intro">ทบทวน 3 ข้อในแต่ละบท แล้วบันทึกข้อที่อยากกลับมาทบทวนอีกครั้ง</p><div id="quiz-content"></div></section></article></div>
+        <div class="reader-top"><button class="back" id="back-library"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>กลับห้องสมุด</button><div class="reader-actions"><button class="account-button" id="reader-account-button" type="button" hidden aria-label="บัญชีและการซิงก์">บัญชี</button><button class="bookmark-toggle" id="bookmark-toggle" aria-pressed="false" aria-label="บันทึกบทนี้"><svg viewBox="0 0 24 24"><path d="M6 3.5h12a1 1 0 0 1 1 1V21l-7-4-7 4V4.5a1 1 0 0 1 1-1Z"/></svg><span>บุ๊กมาร์ก</span></button><div class="reader-tools"><span class="font-label">ขนาดตัวอักษร</span><button id="font-down" aria-label="ลดขนาดตัวอักษร">A−</button><span class="font-size" id="font-value">20 pt</span><button id="font-up" aria-label="เพิ่มขนาดตัวอักษร">A+</button></div></div></div>
+        <div class="reader-layout"><nav class="toc"><div class="toc-title">สารบัญ</div><div class="toc-book" id="toc-book"></div><div class="toc-list" id="toc-list"></div><div class="reader-saved" id="reader-saved"></div></nav><article class="reader-content"><div class="reader-chapter" id="chapter-label"></div><h1 id="chapter-title"></h1><p class="chapter-deck" id="chapter-deck"></p><div class="reader-rule"></div><div class="prose" id="chapter-body"></div><div class="chapter-footer"><span id="chapter-number"></span><button id="next-chapter">บทถัดไป →</button></div><div class="reader-progress"><span>ความคืบหน้า</span><div class="progress"><i id="reader-progress-fill" style="width:0%"></i></div><span id="reader-progress-text"></span></div><section class="recall" id="recall"><div class="recall-kicker">ทบทวนท้ายบท</div><h2>เข้าใจหลักคิด</h2><p class="recall-intro">ลองใช้ 3 คำถามเพื่อเชื่อมหลักคิดของบทกับสถานการณ์จริง และบันทึกข้อที่อยากกลับมาทบทวนอีกครั้ง</p><div id="quiz-content"></div></section></article></div>
       </section>
     </main>
   </div>
@@ -317,10 +325,56 @@ body[data-theme="dark"] .reader-tools .font-size{color:#e4edf7}
   <dialog class="note-dialog" id="note-dialog"><form id="note-form"><div class="note-dialog-top"><span>โน้ตระหว่างอ่าน</span><button type="button" id="close-note" aria-label="ปิดโน้ต">×</button></div><h2>บันทึกความคิด</h2><blockquote id="note-excerpt"></blockquote><label for="note-text">โน้ตของคุณ</label><textarea id="note-text" rows="5" placeholder="เขียนสิ่งที่อยากจำ หรือความคิดที่เกิดขึ้น..."></textarea><div class="note-dialog-actions"><button type="button" class="note-delete" id="delete-note">ลบไฮไลต์</button><button type="submit" class="note-save">บันทึกโน้ต</button></div></form></dialog>
   <dialog class="search-dialog" id="search-dialog"><div class="search-dialog-top"><label for="search-input">ค้นหาในห้องสมุด</label><button id="close-search" aria-label="ปิดการค้นหา">×</button></div><input id="search-input" type="search" placeholder="ชื่อหนังสือ ผู้เขียน หรือชื่อบท" autocomplete="off"><div id="search-results" class="search-results"></div></dialog>
   <dialog class="account-dialog" id="account-dialog"><div class="account-dialog-head"><h2>เข้าสู่ระบบ Bookwise</h2><button type="button" id="account-close" aria-label="ปิด">×</button></div><p>กรอกอีเมลเพื่อรับลิงก์เข้าสู่ระบบหรือสร้างบัญชี แล้วซิงก์ห้องสมุดข้ามอุปกรณ์ ลิงก์ใช้ได้ครั้งเดียวและมีอายุจำกัด</p><form id="account-form"><label for="account-email">อีเมล</label><input id="account-email" type="email" autocomplete="email" required placeholder="you@example.com"><div class="account-dialog-actions"><button type="submit" id="account-send">ส่งลิงก์เข้าสู่ระบบ</button></div></form><div id="account-signed-in" hidden><p id="account-current-email"></p><div class="account-dialog-actions"><button class="secondary" type="button" id="account-import" hidden>นำเข้าข้อมูลจากเครื่องนี้</button><button class="secondary" type="button" id="account-reload">โหลดข้อมูลล่าสุด</button><button class="secondary" type="button" id="account-signout">ออกจากระบบ</button></div></div><p class="account-status" id="account-status" role="status" aria-live="polite">กำลังเชื่อมต่อ…</p></dialog>
+  <script src="bookwise-chapters-03-13.js"></script>
   <script>
-    // เริ่มต้นด้วยห้องสมุดว่าง ผู้ใช้จะเพิ่มหนังสือของตนเองในขั้นถัดไป
-    const booksData=[];
-    let filter='All',sort='Title A–Z',activeBook='attention',activeView='all',fontSize=30,fontSizeCustomized=false,quizIndex=0,quizAnswered=false;
+    // The first two chapters are editorial summaries; chapters 3–13 are loaded from the companion data file.
+    const booksData=[{
+      id:'monk-ferrari',title:'The Monk Who Sold His Ferrari',author:'Robin Sharma',category:'Personal growth',color:'#27475a',text:'#f5e9ca',added:1,totalChapters:13,chapter:0,progress:0,favorite:false,started:false,completed:false,
+      chapters:[{
+        title:'สัญญาณเตือนให้ตื่น (The Wake-Up Call)',
+        deck:'Julian Mantle มีชื่อเสียงและทรัพย์สินมากขึ้น แต่ชีวิตกลับเสียสมดุลจนร่างกายส่งสัญญาณเตือน ความสำเร็จภายนอกจึงไม่ได้ตอบคำถามว่าชีวิตยังมีสุขภาพ ความสัมพันธ์ และความหมายหรือไม่',
+        body:[
+          ['p','Julian Mantle ทนายความชื่อดังล้มหมดสติกลางศาล เหตุการณ์นี้ทำให้ John เพื่อนร่วมงานที่รู้จักเขามานานนึกถึงเส้นทางที่พา Julian มาถึงจุดนั้น: จากทนายหนุ่มผู้มีฝีมือและรักความท้าทาย เขากลายเป็นคนที่ทำงานวันละหลายชั่วโมง รับคดีใหญ่ขึ้นเรื่อย ๆ และแทบรู้สึกผิดเมื่อหยุดพัก'],
+          ['p','John รู้จัก Julian ตั้งแต่เป็นนักศึกษากฎหมายฝึกงาน Julian เลือกเขาเข้าทีมคดีสำคัญเพราะเห็นความกระหายที่จะเรียนรู้ และต่อมาก็ชวนให้อยู่ทำงานด้วยกัน ความสัมพันธ์ของทั้งคู่จึงมีทั้งการเป็นหัวหน้ากับลูกทีมและมิตรภาพส่วนตัว Julian เข้มงวดและยึดวิธีของตัวเอง แต่ก็ใส่ใจเพื่อนและช่วยเหลือ John ในยามลำบาก ภาพนี้ทำให้การล้มลงของ Julian ไม่ใช่เพียงข่าวของทนายดัง แต่เป็นเหตุการณ์ที่กระทบคนใกล้ชิดซึ่งเคยเห็นเขามีชีวิตชีวา'],
+          ['p','ความทุ่มเทช่วยให้ Julian สร้างชื่อเสียงและฐานะ จนมีบ้าน เครื่องบินส่วนตัว และ Ferrari แต่ภาระงานที่เพิ่มขึ้นทำให้เขาใช้ชีวิตอยู่กับความกังวลและการเตรียมคดีไม่รู้จบ John สังเกตว่าผลที่ตามมาไม่ได้จำกัดอยู่แค่ความเหนื่อยล้า: สุขภาพและสมาธิแย่ลง การแต่งงานพัง ความสัมพันธ์กับพ่อขาดหาย และความสนุกในชีวิตลดลง'],
+          ['p','วงจรนี้ค่อย ๆ ขยายจาก Julian มาถึง John ด้วย ทั้งคู่ใช้เวลาส่วนใหญ่ในสำนักงานและผลักตัวเองให้เตรียมพร้อมรับทุกความเป็นไปได้ในศาล ยิ่งคดีใหญ่ขึ้น ยิ่งรู้สึกว่าการเตรียมตัวยังไม่พอ การทำงานดึกจึงดูเหมือนเป็นราคาปกติของความสำเร็จ ทั้งที่ชีวิตนอกสำนักงานและคนในครอบครัวค่อย ๆ ถูกเบียดออกไป'],
+          ['h','สิ่งที่ Julian ค่อย ๆ สูญเสีย'],
+          ['ul',['สุขภาพและพลังชีวิต: พักผ่อนน้อย กินดื่มหนัก และดูแก่กว่าวัย','ความสัมพันธ์: งานเบียดบังชีวิตคู่และความผูกพันกับครอบครัว','ความหมายของงาน: เขาเคยรักกฎหมายเพราะความท้าทายและโอกาสช่วยผู้อื่น แต่ภายหลังกลับหมกมุ่นกับชื่อเสียง เงิน และชัยชนะครั้งต่อไป']],
+          ['p','จุดเปลี่ยนสำคัญคือ Julian ไม่ได้เพียงทำงานหนักเกินไป แต่เริ่มห่างจากเหตุผลที่เคยทำให้งานมีความหมาย ในสายตาของ John เขามีทุกอย่างที่คนมักใช้วัดความสำเร็จ แต่กลับรู้สึกว่างเปล่าและหมดแรงใจ บทนี้จึงชวนให้เห็นว่าความสำเร็จภายนอกกับคุณภาพชีวิตเป็นคนละเรื่องกัน'],
+          ['p','ความเสื่อมถอยยังเริ่มกระทบงานที่เคยเป็นจุดแข็งของเขา: Julian เสียสมาธิ พูดวกวนในศาล และตอบโต้คนอื่นด้วยความหงุดหงิด แทนที่จะใช้ความเฉียบคมและความสุขุมแบบเดิม นี่ทำให้เห็นว่าการทำงานต่อเนื่องโดยไม่ดูแลตัวเองไม่ได้เพียงลดความสุขส่วนตัว แต่อาจบั่นทอนความสามารถที่เคยสร้างความสำเร็จนั้นด้วย'],
+          ['p','John เชื่อว่าความว่างเปล่าของ Julian ลึกกว่าความเครียดจากตารางงาน เพราะชายที่เคยรู้สึกว่างานกฎหมายช่วยสังคมกลับไม่เหลือความหลงใหลกับมันแล้ว นอกจากนี้ยังมีเรื่องสะเทือนใจในอดีตที่เพื่อนร่วมงานไม่ยอมเปิดเผย แต่บทนี้ยังไม่ให้ข้อมูลพอจะสรุปว่าเหตุการณ์นั้นคืออะไรหรือมีส่วนเพียงใด'],
+          ['p','หัวใจวายกลางศาลทำให้ Julian เผชิญขีดจำกัดของร่างกายและความจริงเรื่องชีวิตที่เสียสมดุล บทนี้ไม่ได้เสนอวิธีแก้ปัญหา แต่เปิดคำถามว่าเมื่อเป้าหมายที่ไล่ตามเริ่มพรากสุขภาพ ความสัมพันธ์ และความหมายไปแล้ว ความสำเร็จนั้นยังคุ้มค่าเพียงใด'],
+          ['h','ประเด็นสำคัญที่ควรจำ'],
+          ['ul',['ความสำเร็จที่มองเห็นไม่ได้รับประกันว่าชีวิตจะดีขึ้น — Julian มีชื่อเสียงและทรัพย์สิน แต่สุขภาพและความสัมพันธ์กลับเสียหาย ตัวอย่างประกอบ: การได้เลื่อนตำแหน่งอาจเป็นเรื่องน่ายินดี แต่ควรดูด้วยว่าภาระงานใหม่กระทบเวลาพักแค่ไหน','ความทุ่มเทต้องไม่ทำให้เราลืมเหตุผลที่เริ่มต้น — Julian เคยเห็นงานกฎหมายเป็นหนทางช่วยสังคม ก่อนจะถูกแรงผลักให้ต้องชนะและได้มากขึ้นกลบความหมายเดิม ตัวอย่างประกอบ: คนที่เลือกอาชีพเพราะอยากช่วยผู้คนอาจลองกลับมาทบทวนเป้าหมายนั้น เมื่อเริ่มสนใจแต่ตัวเลขผลงาน','ความว่างเปล่าอาจเป็นสัญญาณให้ทบทวนชีวิต — แม้บทนี้ยังไม่บอกทางออก แต่แสดงให้เห็นว่าความสำเร็จอย่างเดียวไม่ได้เติมเต็มสิ่งที่ขาด ตัวอย่างประกอบ: เมื่อบรรลุเป้าหมายแล้วแต่ยังไม่รู้สึกพอใจ อาจถามตัวเองว่ามีความต้องการด้านใดที่ยังไม่ได้รับการดูแล']]
+        ],
+        quiz:[
+          {type:'choice',label:'ประยุกต์หลักคิด',q:'คนคนหนึ่งได้เลื่อนตำแหน่งและทำผลงานได้ดี แต่เริ่มนอนไม่พอ ห่างจากครอบครัว และไม่รู้สึกภูมิใจกับงานเหมือนเดิม แนวทางใดสอดคล้องกับสาระของบทมากที่สุด?',options:['ตรวจดูทั้งผลลัพธ์และสิ่งที่ต้องแลก พร้อมทบทวนว่าเป้าหมายยังเชื่อมกับคุณค่าที่ตนให้ความสำคัญหรือไม่','เพิ่มชั่วโมงทำงานต่อไป เพราะความสำเร็จภายนอกพิสูจน์ว่าแนวทางนี้ดีแล้ว','ลาออกทันที เพราะงานที่เหนื่อยย่อมไม่มีความหมาย','สนใจเฉพาะสุขภาพกาย เพราะความสัมพันธ์และเป้าหมายไม่เกี่ยวกับชีวิตการทำงาน'],answer:0,answerText:'หลักคิด: ประเมินความสำเร็จควบคู่กับต้นทุนต่อสุขภาพ ความสัมพันธ์ และความหมาย',why:'เรื่องของ Julian แสดงให้เห็นว่าผลงานและทรัพย์สินอาจเพิ่มขึ้นพร้อมกับคุณภาพชีวิตและความรู้สึกมีเป้าหมายที่ลดลง จึงควรมองภาพรวมก่อนตัดสินว่าความสำเร็จนั้นคุ้มค่า'},
+          {type:'truefalse',label:'เข้าใจเหตุและผล',q:'ข้อความนี้สอดคล้องกับหลักคิดของบทหรือไม่?',statement:'ผลงานภายนอกเพียงด้านเดียวไม่พอจะบอกว่าชีวิตกำลังไปได้ดี',options:['สอดคล้อง','ไม่สอดคล้อง'],answer:0,answerText:'หลักคิด: อย่าใช้ตัวชี้วัดด้านเดียวแทนคุณภาพชีวิตทั้งหมด',why:'บทชี้ให้เห็นช่องว่างระหว่างความสำเร็จทางอาชีพของ Julian กับสุขภาพ ความสัมพันธ์ และความรู้สึกว่างเปล่าของเขา'},
+          {type:'reflection',label:'นำไปใช้กับตัวเอง',q:'เลือกเป้าหมายหนึ่งข้อที่คุณกำลังไล่ตาม: มีสัญญาณอะไรบ้างที่บอกว่าคุณกำลังแลกสุขภาพ ความสัมพันธ์ หรือเหตุผลที่เริ่มต้นมากเกินไป?',answerText:'หลักคิด: ทบทวนทั้งสิ่งที่เป้าหมายมอบให้และสิ่งที่ต้องแลก โดยกลับไปดูเหตุผลที่เริ่มต้น',why:'ตัวอย่างการเริ่มตอบ: ระบุเป้าหมาย เหตุผลที่เลือก และผลกระทบที่สังเกตได้ในชีวิตประจำวัน คำตอบเป็นการสะท้อนส่วนตัว ไม่ใช่คำแนะนำตรงจากผู้เขียน'}
+        ]
+      },{
+        title:'ผู้มาเยือนลึกลับ (The Mysterious Visitor)',
+        deck:'สามปีหลังจาก Julian ออกจากอาชีพกฎหมาย John ใช้ชีวิตเรียบง่ายขึ้นแต่ยังสงสัยว่าเกิดอะไรขึ้นกับเพื่อนเก่า จนชายหนุ่มผู้เปี่ยมพลังและสงบนิ่งมาเยือน พร้อมเปิดเผยตัวตนที่ John คาดไม่ถึง',
+        body:[
+          ['p','หลังหัวใจวาย Julian ตัดสินใจลาออกจากสำนักงานกฎหมายและไม่ยอมพบ John ที่โรงพยาบาล เขาเดินทางไปอินเดียเพื่อใช้ชีวิตให้เรียบง่ายและค้นหาคำตอบ พร้อมขายบ้าน เครื่องบิน เกาะส่วนตัว และ Ferrari การจากไปโดยไม่บอกลาอย่างตรงไปตรงมาทำให้ John เจ็บใจและค้างคาใจ'],
+          ['p','John ได้รู้ข่าวการลาออกจากการประชุมฉุกเฉินของสำนักงาน ไม่ใช่จาก Julian โดยตรง แม้เขาจะพยายามไปเยี่ยมและโทรหา เพื่อนเก่าก็ปฏิเสธการพบทุกครั้ง John จึงทั้งเป็นห่วงและรู้สึกถูกตัดออกจากชีวิตของคนที่เคยสนิทกัน เขาคาดเดาว่าการพบเขาอาจทำให้ Julian นึกถึงอดีต แต่ก็ไม่รู้เหตุผลจริง ๆ'],
+          ['p','เวลาผ่านไปกว่าสามปี John เองก็เริ่มเปลี่ยนมุมมองหลังมีครอบครัว เขาลดเวลาทำงานลงและกลับบ้านมากขึ้น แม้ชีวิตจะสงบและเป็นกิจวัตร เขายังนึกถึง Julian และสงสัยว่าเพื่อนเก่าหายไปใช้ชีวิตแบบใด'],
+          ['p','การมีลูกทำให้ John มองเวลาและบทบาทของตัวเองต่างไป เขาเริ่มกลับบ้านเร็วขึ้นแทนการใช้เวลาทั้งหมดที่สำนักงาน และเลือกชีวิตที่ธรรมดาแต่มีพื้นที่ให้ครอบครัวมากขึ้น ถึงอย่างนั้น การปรับตารางงานยังไม่ได้ทำให้คำถามเรื่องความหมายหายไป เขายังสงสัยว่า Julian พบอะไรจากการเดินทาง และคิดถึงเพื่อนที่หายไปโดยไม่มีข่าว'],
+          ['p','คำตอบมาถึงหลังวันทำงานที่ยาวนาน เมื่อ Genevieve ผู้ช่วยของ John แจ้งว่ามีชายคนหนึ่งยืนกรานจะพบเขา John เกือบปฏิเสธเพราะอยากกลับไปกินข้าวและทำงานต่อ แต่สุดท้ายก็ยอมให้เข้ามา ชายคนนั้นดูแข็งแรง ใบหน้าสดใส และมีความสงบที่ไม่เข้ากับภาพทนายหนุ่มผู้ทะเยอทะยานซึ่ง John นึกว่าอาจมาขอร่วมงาน'],
+          ['p','เมื่อชายแปลกหน้าเอ่ยถึงวิธีว่าความที่ Julian เคยสอน John จึงจำเสียงและรู้ว่าเขาคือเพื่อนเก่าที่หายไป ความประหลาดใจไม่ได้อยู่แค่การที่ Julian กลับมา แต่อยู่ที่ความแตกต่างอย่างชัดเจนจากวันที่เขาล้มลงในศาล: จากคนอ่อนล้าและเคร่งเครียด กลายเป็นคนที่ดูมีพลังและสงบนิ่ง John ถึงกับรู้สึกสงบเมื่อนั่งอยู่ใกล้เขา'],
+          ['p','บทนี้ยังไม่ได้บอกว่า Julian เปลี่ยนแปลงตัวเองด้วยวิธีใด หรือสิ่งใดทำให้สุขภาพและอารมณ์ของเขาดีขึ้น สิ่งที่ผู้อ่านรู้ในตอนนี้คือเขาตั้งใจออกจากชีวิตเดิมไปค้นหาคำตอบ และกลับมาพร้อมความเปลี่ยนแปลงที่ John สังเกตได้ เรื่องจึงทิ้งคำถามไว้ว่าเขาเรียนรู้อะไรระหว่างทาง โดยไม่ควรรีบสรุปสาเหตุแทนเนื้อหาที่บทนี้ยังไม่ได้เล่า'],
+          ['h','ประเด็นสำคัญที่ควรจำ'],
+          ['ul',['การหยุดจากเส้นทางเดิมอาจเปิดพื้นที่ให้ตั้งคำถามใหม่ — หลังป่วยหนัก Julian ออกจากงานและออกเดินทางเพื่อค้นหาคำตอบ ไม่ใช่เพียงกลับไปทำงานแบบเดิม ตัวอย่างประกอบ: การลาพักเพื่อคิดเรื่องทิศทางอาชีพอาจช่วยให้เห็นทางเลือกที่กิจวัตรเดิมบดบัง','การเปลี่ยนแปลงอาจสังเกตได้จากหลายด้าน — John เห็นทั้งสุขภาพ พลังชีวิต และความสงบของ Julian เปลี่ยนไปพร้อมกัน ทั้งหมดนี้เป็นสิ่งที่ตัวละครสังเกต ไม่ใช่หลักฐานว่าวิธีใดวิธีหนึ่งใช้ได้กับทุกคน ตัวอย่างประกอบ: การประเมินชีวิตอาจดูทั้งการพักผ่อน ความสัมพันธ์ และความรู้สึกต่อสิ่งที่ทำ','การมีชีวิตที่เรียบง่ายขึ้นไม่ได้ตอบทุกคำถามโดยอัตโนมัติ — John ลดเวลางานหลังมีลูก แต่ยังคงสงสัยเรื่องความหมายและสิ่งที่เกิดขึ้นกับ Julian ตัวอย่างประกอบ: การมีเวลาว่างมากขึ้นช่วยได้ แต่คนเรายังต้องค้นหาว่าต้องการใช้เวลานั้นกับอะไร']]
+        ],
+        quiz:[
+          {type:'choice',label:'ประยุกต์หลักคิด',q:'หลังสัญญาณเตือนครั้งใหญ่ คนคนหนึ่งเริ่มสงสัยว่าเส้นทางชีวิตเดิมยังเหมาะกับตนหรือไม่ ข้อใดเป็นก้าวแรกที่สอดคล้องกับบทนี้ โดยไม่ด่วนสรุปเกินเนื้อหา?',options:['เว้นพื้นที่จากกิจวัตรเพื่อค้นหาคำตอบและทบทวนทิศทาง โดยยังไม่คิดว่าการเปลี่ยนทุกอย่างทันทีจะเป็นคำตอบแน่นอน','ขายทรัพย์สินทั้งหมด เพราะนั่นเป็นวิธีเดียวที่จะพบความหมาย','กลับไปใช้ชีวิตแบบเดิมทันที เพราะการเปลี่ยนแปลงมีแต่ความเสี่ยง','คาดหวังว่าการเดินทางเพียงอย่างเดียวจะแก้ปัญหาทุกด้าน'],answer:0,answerText:'หลักคิด: วิกฤตอาจเป็นจุดเริ่มให้หยุดและทบทวน แต่ไม่รับประกันคำตอบสำเร็จรูป',why:'Julian เลือกออกจากเส้นทางเดิมเพื่อค้นหาคำตอบ บทนี้ยังไม่ได้บอกว่าการเดินทางหรือการขายทรัพย์สินเป็นสูตรที่ทุกคนควรทำ'},
+          {type:'truefalse',label:'เข้าใจข้อจำกัดของข้อสรุป',q:'ข้อความนี้สอดคล้องกับสิ่งที่บทเปิดเผยหรือไม่?',statement:'การเปลี่ยนแปลงของ Julian ทำให้ John เห็นผลลัพธ์ แต่บทนี้ยังไม่เปิดเผยวิธีหรือเหตุที่ทำให้เกิดผลนั้น',options:['สอดคล้อง','ไม่สอดคล้อง'],answer:0,answerText:'หลักคิด: แยกสิ่งที่สังเกตเห็นออกจากสาเหตุที่ยังไม่มีข้อมูลยืนยัน',why:'บทบรรยายความเปลี่ยนแปลงของ Julian ผ่านสายตา John แต่ยังไม่เล่าวิธีที่เขาใช้ระหว่างเดินทาง จึงไม่ควรแต่งคำอธิบายแทนต้นฉบับ'},
+          {type:'reflection',label:'นำไปใช้กับตัวเอง',q:'ถ้าคุณรู้สึกว่ากิจวัตรปัจจุบันไม่ตอบโจทย์ แต่ยังไม่รู้ว่าต้องการอะไร คุณจะสร้างช่วงเวลาสั้น ๆ เพื่อสำรวจคำถามนั้นอย่างไร ก่อนตัดสินใจเปลี่ยนครั้งใหญ่?',answerText:'หลักคิด: ใช้ช่วงหยุดเพื่อระบุคำถามและทางเลือกก่อนลงมือเปลี่ยนชีวิตครั้งใหญ่',why:'ตัวอย่างการเริ่มตอบ: กันเวลาเขียนสิ่งที่อยากเปลี่ยน สิ่งที่ยังมีคุณค่า และข้อมูลที่ต้องรู้เพิ่ม นี่เป็นแนวทางสะท้อนที่ต่อยอดจากเรื่อง ไม่ใช่คำสั่งจากผู้เขียน'}
+        ]
+      }]
+    }];
+    booksData[0].chapters.push(...(window.BOOKWISE_ADDITIONAL_CHAPTERS||[]));
+    let filter='All',sort='Title A–Z',activeBook='attention',activeView='all',fontSize=20,fontSizeCustomized=false,quizIndex=0,quizAnswered=false;
     let pendingSelection=null,editingAnnotationId=null;
     const STORAGE_KEY='readwise-demo-state-v2';
     const booksEl=document.getElementById('books'),lib=document.getElementById('library-view'),reader=document.getElementById('reader-view');
@@ -334,7 +388,7 @@ body[data-theme="dark"] .reader-tools .font-size{color:#e4edf7}
     const reviewQueue=Array.isArray(stored.reviewQueue)?stored.reviewQueue.filter(c=>booksData.some(b=>b.id===c.bookId)&&Number.isFinite(c.due)):[];
     const annotations=Array.isArray(stored.annotations)?stored.annotations.filter(a=>booksData.some(b=>b.id===a.bookId)&&Array.isArray(a.segments)):[];
     const bookmarks=Array.isArray(stored.bookmarks)?stored.bookmarks.filter(m=>booksData.some(b=>b.id===m.bookId)&&Number.isInteger(m.chapter)):[];
-    function readingSize(state){fontSizeCustomized=state?.fontSizeCustomized===true;return fontSizeCustomized&&Number.isInteger(state?.fontSizePt)?Math.max(24,Math.min(40,state.fontSizePt)):30}
+    function readingSize(state){fontSizeCustomized=state?.fontSizeCustomized===true;return fontSizeCustomized&&Number.isInteger(state?.fontSizePt)?Math.max(16,Math.min(40,state.fontSizePt)):20}
     fontSize=readingSize(stored);
     booksData.forEach(b=>{const state=stored.books?.[b.id];if(state){b.chapter=Math.max(0,Math.min(b.chapters.length-1,Number(state.chapter)||0));b.progress=Math.max(0,Math.min(100,Number(state.progress)||0));b.favorite=Boolean(state.favorite);b.started=Boolean(state.started);b.completed=Boolean(state.completed);b.lastRead=Number(state.lastRead)||0}else if(b.started&&!b.lastRead)b.lastRead=Date.now()});
     let syncUserId=null,guestSnapshot=null,applyingAccountState=false;
@@ -345,15 +399,15 @@ body[data-theme="dark"] .reader-tools .font-size{color:#e4edf7}
     function toast(message){const el=document.getElementById('toast');el.textContent=message;el.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>el.classList.remove('show'),2800)}
     function coverMarkup(b,mini=false){const style=b.coverUrl?`background-image:url('${b.coverUrl}');background-size:cover;background-position:center;color:transparent`:`background:${b.color};color:${b.text}`;return `<div class="${mini?'mini-cover':'cover'}" style="${style}">${b.coverUrl?'':`<h3>${esc(b.title)}</h3><div class="${mini?'cover-author':'author'}">${esc(b.author)}</div><span class="ornament"></span>`}${mini?'':`<button class="cover-upload" data-cover="${b.id}" title="เปลี่ยนปก">เปลี่ยนปก</button>`}</div>`}
     function renderContinue(){const list=booksData.filter(b=>b.started&&b.progress>0&&!b.completed).sort((a,b)=>(b.lastRead||0)-(a.lastRead||0));document.getElementById('continue-count').textContent=list.length?`${list.length} เล่มกำลังอ่าน`:'';document.getElementById('continue-wrap').style.display=list.length?'block':'none';document.getElementById('continue-list').innerHTML=list.map(b=>`<button class="continue" data-continue="${b.id}">${coverMarkup(b,true)}<div class="continue-info"><div class="kicker">อ่านต่อจากครั้งล่าสุด</div><h2>${esc(b.title)}</h2><p>บทที่ ${b.chapter+1} · ${esc(b.chapters[b.chapter]?.title||'')}</p><div class="continue-progress"><div class="progress"><i style="width:${b.progress}%"></i></div><span>${b.progress}%</span></div><div class="resume">อ่านต่อ <svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></div></div></button>`).join('');document.querySelectorAll('[data-continue]').forEach(el=>el.onclick=()=>openBook(el.dataset.continue));if(list[0]){const recent=list[0];document.getElementById('side-reading').textContent=recent.title;document.getElementById('side-chapter').textContent=`บทที่ ${recent.chapter+1} จาก ${recent.chapters.length} · ${recent.progress}%`;document.getElementById('side-progress').style.width=recent.progress+'%'}}
-    function renderBooks(){let list=booksData.filter(b=>filter==='All'||(filter==='Favorites'?b.favorite:b.category===filter));list.sort(sort==='Title A–Z'?(a,b)=>a.title.localeCompare(b.title,'th'):(a,b)=>b.added-a.added);document.getElementById('book-count').textContent=`· ${list.length}`;document.getElementById('filters').style.display=booksData.length?'flex':'none';const signedIn=Boolean(window.BookwiseCloudSync?.isSignedIn?.());booksEl.innerHTML=list.length?list.map(b=>`<div class="book" data-id="${b.id}">${coverMarkup(b)}<div class="book-meta"><h3>${esc(b.title)}</h3><button class="fav ${b.favorite?'on':''}" data-fav="${b.id}" aria-label="${b.favorite?'นำออกจากรายการโปรด':'เพิ่มในรายการโปรด'}" aria-pressed="${b.favorite}">${b.favorite?'♥':'♡'}</button></div><div class="book-sub">${esc(categoryLabel[b.category]||b.category)} · ${b.chapters.length} บท</div>${b.progress?`<div class="book-prog"><div class="progress"><i style="width:${b.progress}%"></i></div><span>${b.progress}%</span></div>`:''}</div>`).join(''):`<div class="empty-state"><span class="empty-mark" aria-hidden="true">✦</span><h2>ห้องสมุดของคุณยังว่าง</h2><p id="empty-description">${signedIn?'เข้าสู่ระบบแล้ว · ห้องสมุดของคุณยังไม่มีหนังสือ':'เข้าสู่ระบบหรือสร้างบัญชีด้วยอีเมล เพื่อบันทึกและซิงก์ห้องสมุดข้ามอุปกรณ์'}</p><button type="button" id="empty-login" ${signedIn?'hidden':''}>เข้าสู่ระบบ / สร้างบัญชี</button></div>`;booksEl.querySelectorAll('.book').forEach(el=>el.addEventListener('click',e=>{if(!e.target.closest('[data-fav]')&&!e.target.closest('[data-cover]'))openBook(el.dataset.id)}));booksEl.querySelectorAll('[data-fav]').forEach(btn=>btn.addEventListener('click',e=>{e.stopPropagation();const b=booksData.find(x=>x.id===btn.dataset.fav);b.favorite=!b.favorite;persist();renderBooks()}));booksEl.querySelectorAll('[data-cover]').forEach(btn=>btn.addEventListener('click',e=>{e.stopPropagation();const input=document.createElement('input');input.type='file';input.accept='image/*';input.onchange=()=>{const file=input.files[0];if(file){const b=booksData.find(x=>x.id===btn.dataset.cover);b.coverUrl=URL.createObjectURL(file);renderBooks();renderContinue();toast('เปลี่ยนปกสำหรับการเปิดหน้านี้แล้ว')}};input.click()}));renderContinue()}
+    function renderBooks(){let list=booksData.filter(b=>filter==='All'||(filter==='Favorites'?b.favorite:b.category===filter));list.sort(sort==='Title A–Z'?(a,b)=>a.title.localeCompare(b.title,'th'):(a,b)=>b.added-a.added);document.getElementById('book-count').textContent=`· ${list.length}`;document.getElementById('filters').style.display=booksData.length?'flex':'none';const signedIn=Boolean(window.BookwiseCloudSync?.isSignedIn?.());booksEl.innerHTML=list.length?list.map(b=>`<div class="book" data-id="${b.id}">${coverMarkup(b)}<div class="book-meta"><h3>${esc(b.title)}</h3><button class="fav ${b.favorite?'on':''}" data-fav="${b.id}" aria-label="${b.favorite?'นำออกจากรายการโปรด':'เพิ่มในรายการโปรด'}" aria-pressed="${b.favorite}">${b.favorite?'♥':'♡'}</button></div><div class="book-sub">${esc(categoryLabel[b.category]||b.category)} · ${b.totalChapters&&b.totalChapters>b.chapters.length?`มีบทสรุป ${b.chapters.length} จาก ${b.totalChapters} บท`:`${b.chapters.length} บท`}</div>${b.progress?`<div class="book-prog"><div class="progress"><i style="width:${b.progress}%"></i></div><span>${b.progress}%</span></div>`:''}</div>`).join(''):`<div class="empty-state"><span class="empty-mark" aria-hidden="true">✦</span><h2>ห้องสมุดของคุณยังว่าง</h2><p id="empty-description">${signedIn?'เข้าสู่ระบบแล้ว · ห้องสมุดของคุณยังไม่มีหนังสือ':'เข้าสู่ระบบหรือสร้างบัญชีด้วยอีเมล เพื่อบันทึกและซิงก์ห้องสมุดข้ามอุปกรณ์'}</p><button type="button" id="empty-login" ${signedIn?'hidden':''}>เข้าสู่ระบบ / สร้างบัญชี</button></div>`;booksEl.querySelectorAll('.book').forEach(el=>el.addEventListener('click',e=>{if(!e.target.closest('[data-fav]')&&!e.target.closest('[data-cover]'))openBook(el.dataset.id)}));booksEl.querySelectorAll('[data-fav]').forEach(btn=>btn.addEventListener('click',e=>{e.stopPropagation();const b=booksData.find(x=>x.id===btn.dataset.fav);b.favorite=!b.favorite;persist();renderBooks()}));booksEl.querySelectorAll('[data-cover]').forEach(btn=>btn.addEventListener('click',e=>{e.stopPropagation();const input=document.createElement('input');input.type='file';input.accept='image/*';input.onchange=()=>{const file=input.files[0];if(file){const b=booksData.find(x=>x.id===btn.dataset.cover);b.coverUrl=URL.createObjectURL(file);renderBooks();renderContinue();toast('เปลี่ยนปกสำหรับการเปิดหน้านี้แล้ว')}};input.click()}));renderContinue()}
     function showView(view){hideToolbar();activeView=view;reader.style.display='none';reviewView.style.display=view==='review'?'block':'none';savedView.style.display=view==='saved'?'block':'none';const libraryVisible=view==='all'||view==='favorites';lib.style.display=libraryVisible?'block':'none';document.getElementById('home-top').style.display=libraryVisible?'flex':'none';document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.view===view));if(libraryVisible){filter=view==='favorites'?'Favorites':'All';document.querySelectorAll('.filter').forEach(x=>x.classList.toggle('active',x.dataset.category===filter));document.getElementById('shelf-title').firstChild.textContent=view==='favorites'?'รายการโปรด':'หนังสือทั้งหมด';renderBooks()}if(view==='review')renderReview();if(view==='saved')renderSaved();window.scrollTo(0,0)}
     function annotationsFor(bookId,chapter){return annotations.filter(a=>a.bookId===bookId&&a.chapter===chapter)}
     function renderBlock(text,blockIndex,chapterAnnotations){const spans=chapterAnnotations.flatMap(a=>a.segments.filter(s=>s.block===blockIndex&&s.end>s.start).map(s=>({...s,id:a.id,createdAt:a.createdAt||0})));const cuts=[0,text.length,...spans.flatMap(s=>[Math.max(0,Math.min(text.length,s.start)),Math.max(0,Math.min(text.length,s.end))])].sort((a,b)=>a-b).filter((n,i,arr)=>i===0||n!==arr[i-1]);let html='';for(let i=0;i<cuts.length-1;i++){const start=cuts[i],end=cuts[i+1];if(start===end)continue;const active=spans.filter(s=>s.start<=start&&s.end>=end).sort((a,b)=>b.createdAt-a.createdAt)[0];const piece=esc(text.slice(start,end));html+=active?`<mark class="reader-highlight" data-annotation="${esc(active.id)}" tabindex="0" title="เปิดหรือแก้โน้ต">${piece}</mark>`:piece}return html}
     function renderChapterBody(){const b=booksData.find(x=>x.id===activeBook),ch=b.chapters[b.chapter],chapterAnnotations=annotationsFor(b.id,b.chapter);document.getElementById('chapter-body').innerHTML=ch.body.map(([type,txt],i)=>{if(type==='ul'||type==='ol'){const items=Array.isArray(txt)?txt:[];return `<${type} class="reading-block">${items.map((item,j)=>`<li data-block="${i}.${j}">${renderBlock(String(item),`${i}.${j}`,chapterAnnotations)}</li>`).join('')}</${type}>`}const tag=type==='quote'?'div':type==='h'?'h2':'p';return `<${tag} class="reading-block${type==='quote'?' quote':''}" data-block="${i}">${renderBlock(String(txt),i,chapterAnnotations)}</${tag}>`}).join('');document.getElementById('chapter-body').style.setProperty('--reader-size',fontSize+'pt')}
     function renderReaderSaved(){const b=booksData.find(x=>x.id===activeBook),items=annotationsFor(b.id,b.chapter),bookmarked=bookmarks.some(m=>m.bookId===b.id&&m.chapter===b.chapter);const button=document.getElementById('bookmark-toggle');button.setAttribute('aria-pressed',String(bookmarked));button.querySelector('span').textContent=bookmarked?'บันทึกแล้ว':'บุ๊กมาร์ก';button.setAttribute('aria-label',bookmarked?'นำบุ๊กมาร์กออก':'บันทึกบทนี้');const panel=document.getElementById('reader-saved');panel.innerHTML=`<div class="reader-saved-title">บันทึกในบทนี้</div>${bookmarked?'<button data-saved-bookmark="1">◆ บุ๊กมาร์กบทนี้</button>':''}${items.map(a=>`<button data-saved-mark="${esc(a.id)}">${a.note?'✎':'◩'} ${esc(a.text.slice(0,55))}${a.text.length>55?'…':''}</button>`).join('')}${!bookmarked&&!items.length?'<p>เลือกข้อความเพื่อไฮไลต์หรือจดโน้ต</p>':''}`;panel.querySelectorAll('[data-saved-mark]').forEach(btn=>btn.onclick=()=>{const mark=[...document.querySelectorAll('.reader-highlight')].find(x=>x.dataset.annotation===btn.dataset.savedMark);mark?.scrollIntoView({behavior:'smooth',block:'center'});if(mark)mark.focus?.()})}
-    function showChapter(index){hideToolbar();const b=booksData.find(x=>x.id===activeBook),n=Math.max(0,Math.min(index,b.chapters.length-1)),ch=b.chapters[n];b.chapter=n;b.started=true;b.progress=Math.max(b.progress||0,Math.round(((n+0.5)/b.chapters.length)*100));b.lastRead=Date.now();persist();document.getElementById('toc-book').textContent=b.title;document.getElementById('chapter-label').textContent=`บทที่ ${String(n+1).padStart(2,'0')}`;document.getElementById('chapter-title').textContent=ch.title;document.getElementById('chapter-deck').textContent=ch.deck;document.getElementById('chapter-number').textContent=`${String(n+1).padStart(2,'0')} / ${String(b.chapters.length).padStart(2,'0')}`;document.getElementById('reader-progress-fill').style.width=b.progress+'%';document.getElementById('reader-progress-text').textContent=b.progress+'%';document.getElementById('font-value').textContent=`${fontSize} pt`;document.getElementById('toc-list').innerHTML=b.chapters.map((c,i)=>`<button class="toc-item ${i===n?'active':''}" data-chapter="${i}">${String(i+1).padStart(2,'0')} &nbsp; ${esc(c.title)}</button>`).join('');document.querySelectorAll('.toc-item').forEach(x=>x.onclick=()=>{showChapter(Number(x.dataset.chapter));window.scrollTo(0,0)});renderChapterBody();renderReaderSaved();quizIndex=0;renderQuiz();const next=document.getElementById('next-chapter');next.textContent=n===b.chapters.length-1?'อ่านจบแล้ว ✓':'บทถัดไป →';next.onclick=()=>{if(n<b.chapters.length-1){showChapter(n+1);window.scrollTo(0,0)}else{b.completed=true;b.progress=100;persist();renderContinue();toast('อ่านหนังสือตัวอย่างเล่มนี้จบแล้ว')}};document.getElementById('side-reading').textContent=b.title;document.getElementById('side-chapter').textContent=`บทที่ ${n+1} จาก ${b.chapters.length} · ${b.progress}%`;document.getElementById('side-progress').style.width=b.progress+'%';renderContinue()}
+    function showChapter(index){hideToolbar();const b=booksData.find(x=>x.id===activeBook),n=Math.max(0,Math.min(index,b.chapters.length-1)),ch=b.chapters[n],total=b.totalChapters||b.chapters.length;b.chapter=n;b.started=true;b.progress=Math.max(b.progress||0,Math.round(((n+0.5)/total)*100));b.lastRead=Date.now();persist();document.getElementById('toc-book').textContent=b.title;document.getElementById('chapter-label').textContent=`บทที่ ${String(n+1).padStart(2,'0')}`;document.getElementById('chapter-title').textContent=ch.title;document.getElementById('chapter-deck').textContent=ch.deck;document.getElementById('chapter-number').textContent=`${String(n+1).padStart(2,'0')} / ${String(total).padStart(2,'0')}`;document.getElementById('reader-progress-fill').style.width=b.progress+'%';document.getElementById('reader-progress-text').textContent=b.progress+'%';document.getElementById('font-value').textContent=`${fontSize} pt`;document.getElementById('toc-list').innerHTML=b.chapters.map((c,i)=>`<button class="toc-item ${i===n?'active':''}" data-chapter="${i}">${String(i+1).padStart(2,'0')} &nbsp; ${esc(c.title)}</button>`).join('');document.querySelectorAll('.toc-item').forEach(x=>x.onclick=()=>{showChapter(Number(x.dataset.chapter));window.scrollTo(0,0)});renderChapterBody();renderReaderSaved();quizIndex=0;renderQuiz();const next=document.getElementById('next-chapter');next.textContent=n===b.chapters.length-1?(total>b.chapters.length?'บทถัดไปจะเพิ่มภายหลัง':'อ่านจบแล้ว ✓'):'บทถัดไป →';next.onclick=()=>{if(n<b.chapters.length-1){showChapter(n+1);window.scrollTo(0,0)}else if(total>b.chapters.length){toast('ตอนนี้มีเนื้อหาในระบบเฉพาะบทที่ 1')}else{b.completed=true;b.progress=100;persist();renderContinue();toast('อ่านหนังสือเล่มนี้จบแล้ว')}};document.getElementById('side-reading').textContent=b.title;document.getElementById('side-chapter').textContent=`บทที่ ${n+1} จาก ${total} · มีเนื้อหา ${b.chapters.length} บท · ${b.progress}%`;document.getElementById('side-progress').style.width=b.progress+'%';renderContinue()}
     function openBook(id,chapter,markId){const b=booksData.find(x=>x.id===id);if(!b)return;activeBook=id;lib.style.display='none';reviewView.style.display='none';savedView.style.display='none';document.getElementById('home-top').style.display='none';reader.style.display='block';showChapter(chapter??b.chapter);if(markId){requestAnimationFrame(()=>{const mark=[...document.querySelectorAll('.reader-highlight')].find(x=>x.dataset.annotation===markId);mark?.scrollIntoView({behavior:'smooth',block:'center'})})}else window.scrollTo(0,0)}
-    function getChapterQuiz(b,n){const ch=b.chapters[n],all=booksData.flatMap(book=>book.chapters.map(c=>c.deck)),others=[...new Set(all.filter(text=>text!==ch.deck))];const options=others.slice((n+b.added)%Math.max(1,others.length)).concat(others).slice(0,3);const answer=(n+b.added)%4;options.splice(answer,0,ch.deck);const quote=ch.body.find(([type])=>type==='quote')?.[1]||ch.deck;const otherQuote=booksData.find(book=>book.id!==b.id).chapters[0].body.find(([type])=>type==='quote')?.[1]||'ทุกเรื่องต้องรีบทำให้เสร็จ';const trueStatement=n%2===0;const statement=trueStatement?quote:otherQuote;return [
+    function getChapterQuiz(b,n){const ch=b.chapters[n];if(Array.isArray(ch.quiz)&&ch.quiz.length)return ch.quiz;const all=booksData.flatMap(book=>book.chapters.map(c=>c.deck)),others=[...new Set(all.filter(text=>text!==ch.deck))];const options=others.slice((n+(b.added||0))%Math.max(1,others.length)).concat(others).slice(0,3);while(options.length<3)options.push(`บทนี้ไม่ได้ระบุว่า ${['ความสำเร็จทางวัตถุแก้ทุกปัญหาได้','การพักผ่อนไม่สำคัญต่อชีวิต','ความสัมพันธ์ควรถูกละเลย'][options.length]}`);const answer=(n+(b.added||0))%4;options.splice(answer,0,ch.deck);const quote=ch.body.find(([type])=>type==='quote')?.[1]||ch.deck;const otherQuote=booksData.find(book=>book.id!==b.id)?.chapters[0]?.body.find(([type])=>type==='quote')?.[1]||'การทำงานหนักเพียงอย่างเดียวรับประกันความสุข';const trueStatement=n%2===0;const statement=trueStatement?quote:otherQuote;return [
       {type:'choice',label:'เลือกคำตอบ',q:`บท “${ch.title}” มีใจความสำคัญตรงกับข้อใด?`,options,answer,answerText:ch.deck,why:`ใจความของบทนี้คือ “${ch.deck}”`},
       {type:'truefalse',label:'จริงหรือไม่',q:`ข้อความนี้สอดคล้องกับบท “${ch.title}” หรือไม่?`,statement,options:['จริง','ไม่จริง'],answer:trueStatement?0:1,answerText:trueStatement?'จริง':'ไม่จริง',why:trueStatement?`ข้อความนี้มาจากแนวคิดในบท: “${quote}”`:`บทนี้เน้นว่า “${ch.deck}”`},
       {type:'reflection',label:'ตอบด้วยตัวเอง',q:`จากบท “${ch.title}” คุณจะนำแนวคิดหนึ่งข้อไปใช้ในวันพรุ่งนี้อย่างไร?`,answerText:ch.deck,why:`แนวทางตัวอย่าง: ${ch.deck}`}
@@ -390,7 +444,7 @@ body[data-theme="dark"] .reader-tools .font-size{color:#e4edf7}
     document.getElementById('close-note').onclick=()=>noteDialog.close();document.getElementById('note-form').onsubmit=e=>{e.preventDefault();const note=document.getElementById('note-text').value.trim();if(editingAnnotationId){const a=annotations.find(x=>x.id===editingAnnotationId);if(a){a.note=note;persist();if(reader.style.display==='block'){renderChapterBody();renderReaderSaved()}if(savedView.style.display==='block')renderSaved();toast('บันทึกโน้ตแล้ว')}}else if(note)addAnnotation(note);else{toast('กรุณาเขียนโน้ตก่อนบันทึก');return}noteDialog.close();editingAnnotationId=null};document.getElementById('delete-note').onclick=()=>{if(editingAnnotationId)deleteAnnotation(editingAnnotationId);noteDialog.close();editingAnnotationId=null};
     document.getElementById('bookmark-toggle').onclick=toggleBookmark;
     document.getElementById('back-library').onclick=()=>showView(activeView);
-    document.getElementById('font-down').onclick=()=>{fontSize=Math.max(24,fontSize-1);fontSizeCustomized=true;document.getElementById('chapter-body').style.setProperty('--reader-size',fontSize+'pt');document.getElementById('font-value').textContent=`${fontSize} pt`;persist()};
+    document.getElementById('font-down').onclick=()=>{fontSize=Math.max(16,fontSize-1);fontSizeCustomized=true;document.getElementById('chapter-body').style.setProperty('--reader-size',fontSize+'pt');document.getElementById('font-value').textContent=`${fontSize} pt`;persist()};
     document.getElementById('font-up').onclick=()=>{fontSize=Math.min(40,fontSize+1);fontSizeCustomized=true;document.getElementById('chapter-body').style.setProperty('--reader-size',fontSize+'pt');document.getElementById('font-value').textContent=`${fontSize} pt`;persist()};
     document.querySelectorAll('.filter').forEach(btn=>btn.onclick=()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));btn.classList.add('active');filter=btn.dataset.category;renderBooks()});
     document.querySelectorAll('.nav button').forEach(btn=>btn.onclick=()=>showView(btn.dataset.view));
@@ -469,6 +523,117 @@ body[data-theme="dark"] .reader-tools .font-size{color:#e4edf7}
   @media(max-width:760px){.app-header{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"brand actions" "nav nav";gap:8px 12px;top:0;margin:0 -18px;padding:10px 17px 10px;border-radius:0 0 18px 18px;border-top:0}.brand{grid-area:brand;font-size:20px}.brand-symbol svg{width:32px;height:32px}.header-actions{grid-area:actions;gap:7px}.nav{grid-area:nav;width:100%;overflow-x:auto;scrollbar-width:none;padding-bottom:1px}.nav::-webkit-scrollbar{display:none}.nav button{flex:none;min-height:44px;padding:0 12px;font-size:13px}.header-actions .theme-toggle{width:72px;height:44px}.header-actions .icon-btn{width:44px;height:44px}.header-actions .account-button{width:56px;min-width:56px;height:44px}.shell{padding:0}.app-header{position:sticky}main{padding:24px 20px 55px}.topbar{margin-bottom:36px}}
   @media(max-width:420px){.app-header{padding-left:13px;padding-right:13px}.brand{font-size:18px}.brand-symbol svg{width:29px;height:29px}.nav button{padding:0 10px}.header-actions{gap:5px}.header-actions .theme-toggle{width:68px}.header-actions .account-button{width:52px;min-width:52px}}
   @media(prefers-reduced-transparency:reduce){.app-header{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--surface-solid)}}
+  .reader-content .chapter-deck{font-family:"Noto Sans Thai",Tahoma,sans-serif;font-size:21px;font-style:normal;line-height:1.7}
+  @media(max-width:620px){.reader-content .chapter-deck{font-size:19px;line-height:1.7}}
+</style>
+<style id="bookwise-responsive-polish">
+  html{min-width:320px;scroll-padding-top:120px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  body{overflow-x:hidden}
+  .app-header,.app-header *{min-width:0}
+  .nav button,.header-actions button,.reader-top button,.toc-item,.filter{touch-action:manipulation}
+  .nav button,.header-actions .theme-toggle,.header-actions .icon-btn,.header-actions .account-button{min-height:44px}
+  .reader-content{min-width:0;overflow-wrap:anywhere}
+  .reader-content .prose li{white-space:pre-line}
+  .account-menu{max-height:calc(100dvh - 100px);overflow:auto}
+  dialog{max-width:calc(100vw - 24px);max-height:calc(100dvh - 24px);overflow:auto}
+  dialog input,dialog textarea{font-size:16px}
+  @media (min-width:761px) and (max-width:1000px){
+    .books{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 18px}
+    .reader-layout{grid-template-columns:minmax(155px,190px) minmax(0,1fr);gap:24px}
+    .reader-content{padding:26px clamp(20px,3vw,34px)}
+  }
+  @media (max-width:760px){
+    html{scroll-padding-top:150px}
+    .shell{width:100%;padding:0}
+    .app-header{position:sticky;top:0;display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"brand actions" "nav nav";gap:8px 10px;width:100%;margin:0;padding:calc(9px + env(safe-area-inset-top)) 14px 9px;border-radius:0 0 18px 18px}
+    .brand{grid-area:brand;gap:9px;font-size:20px;letter-spacing:-.04em}
+    .brand-symbol,.brand-symbol svg{width:32px;height:32px}
+    .header-actions{grid-area:actions;gap:6px}
+    .header-actions .theme-toggle{width:48px;height:44px;justify-content:center;padding:0}
+    .header-actions .theme-glyph{display:none}
+    .header-actions .theme-track{width:31px}
+    .header-actions .icon-btn{width:44px;height:44px}
+    .header-actions .account-button{width:48px;min-width:48px;height:44px}
+    .nav{grid-area:nav;display:flex;position:static;left:auto;bottom:auto;transform:none;width:100%;min-width:0;overflow-x:auto;overflow-y:hidden;justify-content:flex-start;gap:5px;padding:0 0 1px;border:0;border-radius:0;background:transparent;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;scrollbar-width:none;overscroll-behavior-x:contain;scroll-snap-type:x proximity}
+    .nav::-webkit-scrollbar{display:none}
+    .nav button{flex:0 0 auto;min-height:44px;height:44px;padding:0 12px;gap:7px;font-size:13px;scroll-snap-align:start}
+    .nav svg{width:17px;height:17px}
+    main{width:100%;padding:22px 16px calc(44px + env(safe-area-inset-bottom))}
+    .topbar{margin-bottom:29px}
+    .hero{align-items:flex-start;margin-bottom:27px}
+    .hero h1{font-size:clamp(34px,9vw,44px);letter-spacing:-1.8px}
+    .hero p{max-width:34em;font-size:14px;line-height:1.65}
+    .section-head{gap:10px}
+    .section-head h2{font-size:21px}
+    .filters{max-width:calc(100vw - 16px);overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none}
+    .filters::-webkit-scrollbar{display:none}
+    .filter{min-height:40px;padding:8px 13px;font-size:12px;flex:0 0 auto}
+    .books{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 14px}
+    .book-meta h3{font-size:13px;line-height:1.5}
+    .cover{padding:clamp(12px,4vw,18px);border-radius:12px}
+    .cover h3{font-size:clamp(15px,4.5vw,20px);line-height:1.2}
+    .reader{width:100%;max-width:none}
+    .reader-top{display:grid;grid-template-columns:minmax(0,1fr);gap:11px;margin-bottom:20px}
+    .reader-actions{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+    .reader-actions .bookmark-toggle{min-height:44px;padding:0 12px}
+    .reader-tools{margin-left:auto;gap:3px}
+    .reader-tools .font-label{display:none}
+    .reader-tools button{min-width:42px;min-height:42px;padding:8px}
+    .reader-tools .font-size{min-width:48px;text-align:center}
+    .reader-layout{display:flex;flex-direction:column;gap:14px}
+    .toc{position:static;min-width:0}
+    .toc .toc-title{margin-bottom:8px;font-size:12px;letter-spacing:.04em}
+    .toc-book{display:none}
+    .toc-list{display:flex;max-width:100%;overflow-x:auto;gap:6px;padding:2px 2px 9px;scrollbar-width:thin;overscroll-behavior-x:contain;scroll-snap-type:x proximity}
+    .toc-item{flex:0 0 auto;min-height:42px;padding:9px 12px;font-size:13px;scroll-snap-align:start}
+    .reader-content{width:100%;max-width:none;padding:22px 19px;border-radius:20px}
+    .reader-content .reader-chapter{margin-top:0;font-size:12px}
+    .reader-content h1{font-size:clamp(31px,8vw,40px);line-height:1.18;letter-spacing:-.7px}
+    .reader-content .chapter-deck{font-size:18px;line-height:1.65;margin-bottom:22px}
+    .reader-rule{margin-bottom:22px}
+    .reader-content .prose{font-size:var(--reader-size,20pt);line-height:1.72;overflow-wrap:anywhere}
+    .reader-content .prose p{margin-bottom:18px}
+    .reader-content .prose h2{font-size:1.05em;margin:28px 0 10px}
+    .reader-content .prose li{padding-left:.08em;margin-bottom:12px}
+    .chapter-footer{gap:12px;margin-top:30px;font-size:13px}
+    .chapter-footer button{min-height:44px;padding:8px;font-size:14px}
+    .reader-progress{gap:9px;font-size:12px}
+    .reader-saved{overflow:auto}
+    .recall{margin-top:28px;padding:20px 16px;border-radius:18px}
+    .recall h2{font-size:27px}
+    .recall-intro{font-size:14px;line-height:1.65}
+    .quiz-question{font-size:19px;line-height:1.55}
+    .quiz-option{min-height:48px;padding:12px;font-size:15px;line-height:1.6}
+    .quiz-feedback{font-size:14px;line-height:1.7}
+    .continue-list{max-width:calc(100vw - 16px);overscroll-behavior-x:contain;scroll-snap-type:x proximity}
+    .continue{scroll-snap-align:start}
+    .review-view h1,.saved-view h1{font-size:clamp(34px,9vw,44px)}
+    .review-card,.saved-card{padding:18px}
+    .account-menu{position:fixed;top:calc(70px + env(safe-area-inset-top));right:12px}
+    .selection-toolbar{max-width:calc(100vw - 20px);left:50%;transform:translateX(-50%)}
+  }
+  @media (max-width:390px){
+    .app-header{padding-left:11px;padding-right:11px;gap:7px 6px}
+    .brand{font-size:18px}
+    .brand-symbol,.brand-symbol svg{width:29px;height:29px}
+    .header-actions{gap:4px}
+    .header-actions .theme-toggle{width:42px}
+    .header-actions .icon-btn,.header-actions .account-button{width:42px;min-width:42px}
+    main{padding-left:13px;padding-right:13px}
+    .reader-content{padding:19px 16px}
+    .reader-content .prose{line-height:1.7}
+    .reader-tools button{min-width:38px}
+    .reader-tools .font-size{min-width:42px;font-size:12px}
+  }
+  @media (orientation:landscape) and (max-height:500px) and (max-width:1000px){
+    .app-header{position:relative}
+    .reader-top{margin-bottom:14px}
+    .reader-layout{display:grid;grid-template-columns:minmax(140px,26%) minmax(0,1fr);gap:14px;align-items:start}
+    .toc{position:sticky;top:12px}
+    .toc-list{display:grid;max-height:55vh;overflow:auto}
+    .reader-content{padding:20px}
+  }
+  @media(prefers-reduced-motion:reduce){.continue,.nav,.reader-content{scroll-behavior:auto;animation:none;transition:none}}
 </style>
 </body>
 </html>
