@@ -87,7 +87,7 @@
     }
     result.fontSizeCustomized = remote.fontSizeCustomized === true || local.fontSizeCustomized === true;
     result.fontSizePt = remote.fontSizeCustomized === true ? remote.fontSizePt :
-      local.fontSizeCustomized === true ? local.fontSizePt : 30;
+      local.fontSizeCustomized === true ? local.fontSizePt : 20;
     delete result.fontSize;
     return result;
   }
