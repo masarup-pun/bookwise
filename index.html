@@ -527,6 +527,14 @@ body[data-theme="dark"] .reader-tools .font-size{color:#e4edf7}
   .reader-content .chapter-deck{font-family:"Noto Sans Thai",Tahoma,sans-serif;font-size:21px;font-style:normal;line-height:1.7}
   @media(max-width:620px){.reader-content .chapter-deck{font-size:19px;line-height:1.7}}
 </style>
+<style id="header-centered-navigation">
+  @media (min-width:1001px){
+    .app-header{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}
+    .brand{grid-column:1;grid-row:1}
+    .nav{grid-column:2;grid-row:1;justify-self:center;flex:none;width:max-content}
+    .header-actions{grid-column:3;grid-row:1;justify-self:end}
+  }
+</style>
 <style id="bookwise-responsive-polish">
   html{min-width:320px;scroll-padding-top:120px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
   body{overflow-x:hidden}
