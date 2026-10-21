@@ -1,17 +1,17 @@
 # Bookwise
 
-เว็บอ่านหนังสือตัวอย่างภาษาไทย: [เปิด Bookwise](https://masarup-pun.github.io/bookwise/Readwise-glass.html)
+เว็บอ่านหนังสือตัวอย่างภาษาไทย: [เปิด Bookwise](https://masarup-pun.github.io/bookwise/)
 
 เนื้อหาหนังสือในเว็บเป็นข้อมูลจำลอง ส่วน `CHAPTER_CONTENT_PROMPTS.md` เป็นชุดพรอมป์ต์สำหรับวางแผน เขียน และตรวจเนื้อหารายบท
 
 ## เปิดในเครื่อง
 
-เปิด `Readwise-glass.html` ได้ทันที ข้อมูลจะเก็บในเบราว์เซอร์เครื่องนั้น การเข้าสู่ระบบและซิงก์ใช้ได้เมื่อเปิดผ่านเว็บที่เป็น HTTPS
+เปิด `index.html` ได้ทันที ข้อมูลจะเก็บในเบราว์เซอร์เครื่องนั้น การเข้าสู่ระบบและซิงก์ใช้ได้เมื่อเปิดผ่านเว็บที่เป็น HTTPS ลิงก์ `Readwise-glass.html` เดิมจะพาไปหน้าเว็บหลักโดยเก็บพารามิเตอร์และ hash ไว้
 
 ## ตั้งค่า Supabase สำหรับซิงก์
 
 1. เปิด Supabase project `Bookwise` → **SQL Editor** → **New query** แล้วคัดลอกไฟล์ [`supabase/schema.sql`](supabase/schema.sql) ทั้งหมดไปวางและกด **Run** ไฟล์นี้สร้างตารางข้อมูลส่วนตัว เปิด Row Level Security และเพิ่มฟังก์ชันบันทึกแบบตรวจ revision
-2. ไปที่ **Authentication → URL Configuration** ตั้ง **Site URL** เป็น `https://masarup-pun.github.io/bookwise/Readwise-glass.html` และเพิ่ม URL เดียวกันใน **Redirect URLs**
+2. ไปที่ **Authentication → URL Configuration** ตั้ง **Site URL** เป็น `https://masarup-pun.github.io/bookwise/` และเพิ่ม URL เดียวกันใน **Redirect URLs** หากเคยเพิ่ม URL ที่ลงท้ายด้วย `Readwise-glass.html` ให้เก็บไว้ชั่วคราวเพื่อรองรับลิงก์อีเมลที่ส่งไปแล้ว
 3. ตรวจว่า **Authentication → Providers → Email** เปิดใช้งานอยู่ และส่งอีเมลเข้าสู่ระบบได้
 4. เปิดเว็บ กด **เข้าสู่ระบบ** กรอกอีเมล แล้วกดลิงก์ในอีเมล หลังเข้าระบบ เว็บจะสร้างข้อมูลบัญชีจากข้อมูลที่อยู่ในเบราว์เซอร์นี้ หากเคยใช้บัญชีจากอุปกรณ์อื่นแล้ว สามารถกด **นำเข้าข้อมูลจากเครื่องนี้** เพื่อรวมข้อมูลเดิมได้
 

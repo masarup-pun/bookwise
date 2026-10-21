@@ -65,7 +65,10 @@
       }
       result[key] = [...byId.values()];
     }
-    result.fontSize = remote.fontSize || local.fontSize || 23;
+    result.fontSizePt = remote.fontSizePt ||
+      (Number.isInteger(remote.fontSize) ? Math.max(24, Math.min(40, 30 + remote.fontSize - 23)) : null) ||
+      local.fontSizePt || 30;
+    delete result.fontSize;
     return result;
   }
 
