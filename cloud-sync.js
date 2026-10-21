@@ -5,14 +5,13 @@
   const config = window.BOOKWISE_SUPABASE;
   const dialog = document.getElementById('account-dialog');
   const status = document.getElementById('account-status');
-  const profileStatus = document.getElementById('profile-sync-status');
   const form = document.getElementById('account-form');
   const signedIn = document.getElementById('account-signed-in');
   const importButton = document.getElementById('account-import');
   const reloadButton = document.getElementById('account-reload');
   const signoutButton = document.getElementById('account-signout');
   const sendButton = document.getElementById('account-send');
-  const buttons = [document.getElementById('account-button'), document.getElementById('reader-account-button')];
+  const buttons = [document.getElementById('reader-account-button')];
   const authRedirectUrl = 'https://masarup-pun.github.io/bookwise/';
   const authErrorParams = new URLSearchParams(location.hash.replace(/^#/, ''));
   const authErrorCode = authErrorParams.get('error_code');
@@ -28,7 +27,6 @@
 
   function message(value) {
     status.textContent = value;
-    if (profileStatus) profileStatus.textContent = value;
   }
 
   function showAuthLinkError() {
@@ -47,10 +45,14 @@
     document.getElementById('account-current-email').textContent = next?.email || '';
     const emptyLogin = document.getElementById('empty-login');
     const emptyDescription = document.getElementById('empty-description');
+    const menuEmail = document.getElementById('account-menu-email');
+    const menuAction = document.getElementById('account-menu-action');
     if (emptyLogin) emptyLogin.hidden = Boolean(next);
     if (emptyDescription) emptyDescription.textContent = next
       ? 'เข้าสู่ระบบแล้ว · ห้องสมุดของคุณยังไม่มีหนังสือ'
       : 'เข้าสู่ระบบหรือสร้างบัญชีด้วยอีเมล เพื่อบันทึกและซิงก์ห้องสมุดข้ามอุปกรณ์';
+    if (menuEmail) menuEmail.textContent = next?.email || 'ยังไม่ได้เข้าสู่ระบบ';
+    if (menuAction) menuAction.textContent = next ? 'จัดการบัญชีและการซิงก์' : 'เข้าสู่ระบบ / สร้างบัญชี';
     buttons.forEach(button => {
       button.textContent = next ? 'บัญชี' : 'เข้าสู่ระบบ';
       button.setAttribute('aria-label', next ? 'บัญชีและการซิงก์' : 'เข้าสู่ระบบเพื่อซิงก์ข้อมูล');
