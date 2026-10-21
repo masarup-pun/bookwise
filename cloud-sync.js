@@ -33,6 +33,8 @@
     form.hidden = Boolean(next);
     signedIn.hidden = !next;
     document.getElementById('account-current-email').textContent = next?.email || '';
+    const emptyLogin = document.getElementById('empty-login');
+    if (emptyLogin) emptyLogin.textContent = next ? 'จัดการบัญชีและการซิงก์' : 'เข้าสู่ระบบ / สร้างบัญชี';
     buttons.forEach(button => {
       button.textContent = next ? 'บัญชี ✓' : 'เข้าสู่ระบบ';
       button.setAttribute('aria-label', next ? 'บัญชีและการซิงก์' : 'เข้าสู่ระบบเพื่อซิงก์ข้อมูล');
@@ -186,7 +188,22 @@
   }
 
   window.BookwiseCloudSync = { schedule };
-  if (!app || !config?.url || !config?.publishableKey || !/^https?:$/.test(location.protocol)) return;
+  if (!app || !config?.url || !config?.publishableKey || !/^https?:$/.test(location.protocol)) {
+    if (!/^https?:$/.test(location.protocol)) {
+      message('เปิดเว็บไซต์ผ่าน HTTPS เพื่อเข้าสู่ระบบ');
+      form.addEventListener('submit', event => {
+        event.preventDefault();
+        message('ระบบเข้าสู่ระบบใช้ได้เมื่อเปิดเว็บไซต์ Bookwise ผ่าน HTTPS');
+      });
+    } else {
+      message('ระบบเข้าสู่ระบบยังตั้งค่าไม่ครบ โปรดตรวจ Supabase');
+      form.addEventListener('submit', event => {
+        event.preventDefault();
+        message('ระบบเข้าสู่ระบบยังตั้งค่าไม่ครบ โปรดตรวจ Supabase URL และ Publishable key');
+      });
+    }
+    return;
+  }
 
   buttons.forEach(button => {
     button.hidden = false;
