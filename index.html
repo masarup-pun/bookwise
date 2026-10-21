@@ -636,6 +636,19 @@ body[data-theme="dark"] .reader-tools .font-size{color:#e4edf7}
   }
   @media(prefers-reduced-motion:reduce){.continue,.nav,.reader-content{scroll-behavior:auto;animation:none;transition:none}}
 </style>
+<style id="reader-alignment-and-width">
+  @media (min-width:761px){
+    .reader{width:auto;max-width:none;margin-left:calc(20px - clamp(20px,4.5vw,72px));margin-right:calc(20px - clamp(20px,4.5vw,72px))}
+    .reader-top,.reader-layout{width:100%}
+    .reader-layout{grid-template-columns:210px minmax(0,1fr);gap:clamp(24px,3vw,48px)}
+    .reader-content{width:100%;max-width:none;min-width:0}
+  }
+  @media (min-width:761px) and (max-width:1000px){
+    .reader{margin-left:calc(14px - clamp(20px,4.5vw,72px));margin-right:calc(14px - clamp(20px,4.5vw,72px))}
+    .reader-layout{grid-template-columns:minmax(155px,190px) minmax(0,1fr);gap:clamp(20px,2.4vw,28px)}
+  }
+  @media (max-width:760px){.reader{width:auto;margin-left:-2px;margin-right:-2px}}
+</style>
 <style id="reader-emphasis-style">
   .reader-content .prose strong{font-weight:750;color:#193b63}
   .reader-content .prose .key-takeaways-heading{font-family:"Noto Sans Thai",Tahoma,sans-serif;font-size:1.04em;font-weight:700;letter-spacing:-.025em}
