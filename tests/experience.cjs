@@ -6,7 +6,7 @@ const output=path.join(root,'test-results');fs.mkdirSync(output,{recursive:true}
 const sdk=`window.supabase={createClient(){
  let listener=null,current=(window.__testSignedIn||localStorage.getItem('__testAuth')==='true')?{id:'test-reader',email:'reader@example.test'}:null;
  window.__testSetUser=value=>{current=value;localStorage.setItem('__testAuth',String(Boolean(value)));listener?.(value?'SIGNED_IN':'SIGNED_OUT',{user:value});};
- const client={auth:{onAuthStateChange(fn){listener=fn;},async getUser(){return {data:{user:current},error:null};},async signInWithPassword(args){if(args.email!=='library@bookwise.example'||args.password!=='test-only-password')return {data:{user:null},error:{status:400,message:'Invalid credentials'}};window.__testSetUser({id:'test-reader',email:args.email});return {data:{user:current},error:null};},async signOut(){current=null;localStorage.removeItem('__testAuth');listener?.('SIGNED_OUT',null);return {error:null};}},
+ const client={storage:{from(){return {async upload(path){return {data:{path},error:null};},async createSignedUrl(path){return {data:{signedUrl:'https://covers.example.test/'+path},error:null};},async remove(){return {error:null};}};}},auth:{onAuthStateChange(fn){listener=fn;},async getUser(){return {data:{user:current},error:null};},async signInWithPassword(args){if(args.email!=='library@bookwise.example'||args.password!=='test-only-password')return {data:{user:null},error:{status:400,message:'Invalid credentials'}};window.__testSetUser({id:'test-reader',email:args.email});return {data:{user:current},error:null};},async signOut(){current=null;localStorage.removeItem('__testAuth');listener?.('SIGNED_OUT',null);return {error:null};}},
  from(table){const filters={};return {select(){return this;},eq(k,v){filters[k]=v;return this;},async maybeSingle(){return {data:{revision:1,state:JSON.parse(localStorage.getItem('__testRemote')||'{}')},error:null};},async single(){window.__testChapterRequests=(window.__testChapterRequests||0)+1;await new Promise(r=>setTimeout(r,window.__testDelay||0));const book=window.__testContent.find(b=>b.id===filters.book_id);return {data:{content:book.chapters[filters.chapter_index]},error:null};}};},
  async rpc(name,args){localStorage.setItem('__testRemote',JSON.stringify(args.p_state));return {data:2,error:null};}};
  return client;
@@ -18,6 +18,7 @@ let activeBrowser;
  const context=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'});
  await context.addInitScript(({content})=>{window.__testContent=content;window.__testSignedIn=false;},{content});
  await context.route('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2',route=>route.fulfill({status:200,contentType:'application/javascript',body:sdk}));
+ await context.route('https://covers.example.test/**',route=>route.fulfill({status:200,contentType:'image/png',body:fs.readFileSync(path.join(root,'icon-192.png'))}));
  const page=await context.newPage(),errors=[];page.on('pageerror',error=>errors.push(error.message));
  await page.goto('http://127.0.0.1:4173/');await page.waitForFunction(()=>window.__testSetUser);
  await page.locator('#account-send').waitFor({state:'visible'});
@@ -36,6 +37,14 @@ let activeBrowser;
  assert.equal(await page.locator('#login-screen').isVisible(),false);
  assert.equal(await page.locator('.book').count(),18);
  assert.equal(await page.locator('#account-password').inputValue(),'');
+ // Upload a cover, persist its path remotely, then reload and restore its signed URL.
+ const chooserPromise=page.waitForEvent('filechooser');
+ await page.locator('[data-cover="atomic-habits"]').click();
+ await (await chooserPromise).setFiles(path.join(root,'icon-192.png'));
+ await page.waitForFunction(()=>JSON.parse(localStorage.getItem('__testRemote')||'{}').books?.['atomic-habits']?.coverPath);
+ assert((await page.locator('.book[data-id="atomic-habits"] .cover').evaluate(el=>getComputedStyle(el).backgroundImage)).includes('https://covers.example.test/'));
+ await page.reload();await page.waitForFunction(()=>document.body.dataset.auth==='signed-in');
+ await page.waitForFunction(()=>getComputedStyle(document.querySelector('.book[data-id="atomic-habits"] .cover')).backgroundImage.includes('https://covers.example.test/'));
  await page.locator('.book[data-id="atomic-habits"] .book-title-button').click();
  await page.locator('#chapter-body .reading-block').first().waitFor();
  assert.equal(await page.locator('#font-value').innerText(),'14 pt');
@@ -62,7 +71,7 @@ let activeBrowser;
  assert(scheduled.includes(10/1440));
  await page.locator('#review-flip').click();await page.locator('[data-grade="easy"]').click();
  await page.locator('.review-finished').waitFor();assert.equal(await page.evaluate(()=>window.BookwiseApp.getState().reviewQueue.filter(c=>c.due<=Date.now()).length),0);
- await page.waitForFunction(()=>JSON.parse(localStorage.getItem('__testRemote')||'{}').reviewQueue?.every(c=>c.repetitions===1));
+ await page.waitForFunction(()=>{const cards=JSON.parse(localStorage.getItem('__testRemote')||'{}').reviewQueue;return cards?.length===3&&cards.every(c=>c.repetitions===1);});
  await page.reload();await page.waitForFunction(()=>document.body.dataset.auth==='signed-in');
  assert.equal(await page.evaluate(()=>window.BookwiseApp.getState().reviewQueue.filter(c=>c.due>Date.now()).length),3);
  for(const width of [320,390,768,1024,1440]){
