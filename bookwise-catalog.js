@@ -1,0 +1,1818 @@
+// Public catalog: titles only. Reading content is served by authenticated Supabase queries.
+window.BOOKWISE_CATALOG = [
+  {
+    "id": "monk-ferrari",
+    "title": "The Monk Who Sold His Ferrari",
+    "author": "Robin Sharma",
+    "category": "Personal growth",
+    "color": "#27475a",
+    "text": "#f5e9ca",
+    "added": 1,
+    "totalChapters": 13,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "สัญญาณเตือนให้ตื่น (The Wake-Up Call)"
+      },
+      {
+        "title": "ผู้มาเยือนลึกลับ (The Mysterious Visitor)"
+      },
+      {
+        "title": "การเปลี่ยนแปลงครั้งใหญ่ของ Julian Mantle (The Miraculous Transformation of Julian Mantle)"
+      },
+      {
+        "title": "การพบปราชญ์แห่ง Sivana (A Magical Meeting with the Sages of Sivana)"
+      },
+      {
+        "title": "ศิษย์ผู้แสวงหาทางจิตวิญญาณ (A Spiritual Student of the Sages)"
+      },
+      {
+        "title": "ปัญญาแห่งการเปลี่ยนแปลงตนเอง (The Wisdom of Personal Change)"
+      },
+      {
+        "title": "สวนที่ไม่ธรรมดา (A Most Extraordinary Garden)"
+      },
+      {
+        "title": "จุดไฟแห่งเป้าหมาย (Kindling Your Inner Fire)"
+      },
+      {
+        "title": "ศิลปะแห่งการนำตนเอง (The Ancient Art of Self-Leadership)"
+      },
+      {
+        "title": "พลังแห่งวินัย (The Power of Discipline)"
+      },
+      {
+        "title": "เวลา: ทรัพย์สินที่มีค่าที่สุด (Your Most Precious Commodity)"
+      },
+      {
+        "title": "จุดมุ่งหมายสูงสุดของชีวิต (The Ultimate Purpose of Life)"
+      },
+      {
+        "title": "ความลับนิรันดร์ของความสุขที่ยืนยาว (The Timeless Secret of Lifelong Happiness)"
+      }
+    ]
+  },
+  {
+    "id": "atomic-habits",
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "category": "Personal growth",
+    "color": "#b9d0c8",
+    "text": "#183d38",
+    "added": 2,
+    "totalChapters": 20,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "พลังที่คาดไม่ถึงของนิสัยเล็ก ๆ (The Surprising Power of Atomic Habits)"
+      },
+      {
+        "title": "นิสัยหล่อหลอมตัวตนอย่างไร (How Your Habits Shape Your Identity)"
+      },
+      {
+        "title": "สร้างนิสัยที่ดีด้วย 4 ขั้นตอน (How to Build Better Habits in 4 Simple Steps)"
+      },
+      {
+        "title": "ชายผู้สังเกตเห็นสิ่งผิดปกติ (The Man Who Didn’t Look Right)"
+      },
+      {
+        "title": "วิธีเริ่มนิสัยใหม่ที่ได้ผล (The Best Way to Start a New Habit)"
+      },
+      {
+        "title": "แรงจูงใจอาจแพ้การออกแบบสภาพแวดล้อม (Motivation Is Overrated; Environment Often Matters More)"
+      },
+      {
+        "title": "เคล็ดลับการควบคุมตนเอง (The Secret to Self-Control)"
+      },
+      {
+        "title": "ทำให้นิสัยน่าดึงดูดจนอยากทำ (How to Make a Habit Irresistible)"
+      },
+      {
+        "title": "ครอบครัวและเพื่อนหล่อหลอมนิสัย (The Role of Family and Friends in Shaping Your Habits)"
+      },
+      {
+        "title": "หาสาเหตุและแก้นิสัยที่ไม่ดี (How to Find and Fix the Causes of Your Bad Habits)"
+      },
+      {
+        "title": "ก้าวช้า ๆ แต่ไม่ถอยหลัง (Walk Slowly, but Never Backward)"
+      },
+      {
+        "title": "กฎแห่งการใช้แรงให้น้อยที่สุด (The Law of Least Effort)"
+      },
+      {
+        "title": "หยุดผัดวันด้วยกฎสองนาที (How to Stop Procrastinating by Using the Two-Minute Rule)"
+      },
+      {
+        "title": "ทำให้นิสัยดีเกิดแน่นอนและนิสัยแย่ทำได้ยาก (How to Make Good Habits Inevitable and Bad Habits Impossible)"
+      },
+      {
+        "title": "กฎสำคัญของการเปลี่ยนพฤติกรรม (The Cardinal Rule of Behavior Change)"
+      },
+      {
+        "title": "ทำอย่างไรให้รักษานิสัยดีทุกวัน (How to Stick with Good Habits Every Day)"
+      },
+      {
+        "title": "คู่รับผิดชอบช่วยเปลี่ยนทุกอย่างได้ (How an Accountability Partner Can Change Everything)"
+      },
+      {
+        "title": "ความจริงเรื่องพรสวรรค์และพันธุกรรม (The Truth About Talent)"
+      },
+      {
+        "title": "กฎโกลดิล็อกส์: รักษาแรงจูงใจในชีวิตและงาน (The Goldilocks Rule)"
+      },
+      {
+        "title": "ด้านที่ต้องระวังของการสร้างนิสัยดี (The Downside of Creating Good Habits)"
+      }
+    ]
+  },
+  {
+    "id": "buy-back-your-time",
+    "title": "Buy Back Your Time",
+    "author": "Dan Martell",
+    "category": "ธุรกิจและการทำงาน",
+    "color": "#d6c9b7",
+    "text": "#3d3026",
+    "added": 3,
+    "totalChapters": 14,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "ซื้อชีวิตของตัวเองกลับคืนมา (How I Buy Back My Life)"
+      },
+      {
+        "title": "เมทริกซ์ DRIP: เห็นว่างานกินเวลาไปไหน (The DRIP Matrix)"
+      },
+      {
+        "title": "ห้าตัวการลอบสังหารเวลา (The 5 Time Assassins)"
+      },
+      {
+        "title": "การแลกเปลี่ยนสามระดับ (The Only 3 Trades That Matter)"
+      },
+      {
+        "title": "บันไดการถ่ายโอนงาน (The Replacement Ladder)"
+      },
+      {
+        "title": "สร้างตัวช่วยที่ทำงานเคียงข้างเรา (Clone Yourself)"
+      },
+      {
+        "title": "คู่มือการทำงานที่สร้างซ้ำได้ (Building Playbooks)"
+      },
+      {
+        "title": "ออกแบบสัปดาห์ในแบบที่เหมาะกับเรา (Your Perfect Week)"
+      },
+      {
+        "title": "กลเม็ดประหยัดเวลาสี่ข้อ (The Only 4 Time Hacks You Need)"
+      },
+      {
+        "title": "วิธีจ้างแบบทดลองทำก่อน (The “Test-First” Hiring Method)"
+      },
+      {
+        "title": "ภาวะผู้นำที่ทำให้คนเติบโต (Transformational Leadership)"
+      },
+      {
+        "title": "คำว่า “Feedback” ช่วยรักษาทีม (This “F-Word” Will Save Your Business)"
+      },
+      {
+        "title": "ฝันให้ใหญ่ แล้วลงมือให้ไกลกว่าเดิม (Dream BIG. Achieve Bigger)"
+      },
+      {
+        "title": "วางแผนทั้งปีล่วงหน้า (The Preloaded Year)"
+      }
+    ]
+  },
+  {
+    "id": "feeling-is-the-secret",
+    "title": "Feeling Is the Secret and Other Works",
+    "author": "Neville Goddard",
+    "category": "จิตใจและจิตวิญญาณ",
+    "color": "#d8c8b2",
+    "text": "#3d3026",
+    "added": 4,
+    "totalChapters": 40,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "ความลับของความรู้สึก · กฎและการทำงานของจิตสำนึก (The Feeling Is the Secret: Law and Its Operation)"
+      },
+      {
+        "title": "ความลับของความรู้สึก · การนอน (The Feeling Is the Secret: Sleep)"
+      },
+      {
+        "title": "ความลับของความรู้สึก · การอธิษฐาน (The Feeling Is the Secret: Prayer)"
+      },
+      {
+        "title": "ความลับของความรู้สึก · จิตวิญญาณและความรู้สึก (The Feeling Is the Secret: Spirit—Feeling)"
+      },
+      {
+        "title": "ตามบัญชาของคุณ · ตามบัญชาของคุณ (At Your Command: At Your Command)"
+      },
+      {
+        "title": "ศรัทธาคือโชคชะตา · ก่อนอับราฮัมจะมีอยู่ (Your Faith Is Your Fortune: Before Abraham Was)"
+      },
+      {
+        "title": "ศรัทธาคือโชคชะตา · เจ้าจงประกาศ (Your Faith Is Your Fortune: You Shall Decree)"
+      },
+      {
+        "title": "ศรัทธาคือโชคชะตา · หลักแห่งความจริง (Your Faith Is Your Fortune: The Principle of Truth)"
+      },
+      {
+        "title": "ศรัทธาคือโชคชะตา · พวกเจ้าตามหาใคร (Your Faith Is Your Fortune: Whom Seek Ye?)"
+      },
+      {
+        "title": "ศรัทธาคือโชคชะตา · ฉันคือใคร (Your Faith Is Your Fortune: Who Am I?)"
+      },
+      {
+        "title": "ศรัทธาคือโชคชะตา · เราคือผู้นั้น (Your Faith Is Your Fortune: I Am He)"
+      },
+      {
+        "title": "ศรัทธาคือโชคชะตา · ขอให้พระประสงค์สำเร็จ (Your Faith Is Your Fortune: Thy Will Be Done)"
+      },
+      {
+        "title": "ศรัทธาคือโชคชะตา · ไม่มีพระเจ้าองค์อื่น (Your Faith Is Your Fortune: No Other God)"
+      },
+      {
+        "title": "ศรัทธาคือโชคชะตา · ศิลาฐานราก (Your Faith Is Your Fortune: The Foundation Stone)"
+      },
+      {
+        "title": "ศรัทธาคือโชคชะตา · ผู้ที่มีอยู่แล้วจะได้รับเพิ่ม (Your Faith Is Your Fortune: To Him That Hath)"
+      },
+      {
+        "title": "ศรัทธาคือโชคชะตา · คริสต์มาส (Your Faith Is Your Fortune: Christmas)"
+      },
+      {
+        "title": "ศรัทธาคือโชคชะตา · การตรึงกางเขนและการฟื้นคืนชีพ (Your Faith Is Your Fortune: Crucifixion and Resurrection)"
+      },
+      {
+        "title": "ศรัทธาคือโชคชะตา · รอยประทับในจิตใจ (Your Faith Is Your Fortune: The I’m-Pressions)"
+      },
+      {
+        "title": "ศรัทธาคือโชคชะตา · พิธีเข้าสุหนัต (Your Faith Is Your Fortune: Circumcision)"
+      },
+      {
+        "title": "ศรัทธาคือโชคชะตา · ช่วงเวลา (Your Faith Is Your Fortune: Interval of Time)"
+      },
+      {
+        "title": "ศรัทธาคือโชคชะตา · พระเจ้าสามภาค (Your Faith Is Your Fortune: The Triune God)"
+      },
+      {
+        "title": "ศรัทธาคือโชคชะตา · การอธิษฐาน (Your Faith Is Your Fortune: Prayer)"
+      },
+      {
+        "title": "ศรัทธาคือโชคชะตา · สาวกทั้งสิบสอง (Your Faith Is Your Fortune: The Twelve Disciples)"
+      },
+      {
+        "title": "ศรัทธาคือโชคชะตา · แสงเหลว (Your Faith Is Your Fortune: Liquid Light)"
+      },
+      {
+        "title": "ศรัทธาคือโชคชะตา · ลมหายใจแห่งชีวิต (Your Faith Is Your Fortune: The Breath of Life)"
+      },
+      {
+        "title": "ศรัทธาคือโชคชะตา · ดาเนียลในถ้ำสิงโต (Your Faith Is Your Fortune: Daniel in the Lions’ Den)"
+      },
+      {
+        "title": "ศรัทธาคือโชคชะตา · การตกปลา (Your Faith Is Your Fortune: Fishing)"
+      },
+      {
+        "title": "ศรัทธาคือโชคชะตา · จงเป็นผู้มีหูรับฟัง (Your Faith Is Your Fortune: Be Ears That Hear)"
+      },
+      {
+        "title": "ศรัทธาคือโชคชะตา · ญาณหยั่งรู้ (Your Faith Is Your Fortune: Clairvoyance)"
+      },
+      {
+        "title": "ศรัทธาคือโชคชะตา · สดุดีบทที่ยี่สิบสาม (Your Faith Is Your Fortune: Twenty-Third Psalm)"
+      },
+      {
+        "title": "ศรัทธาคือโชคชะตา · เกทเสมนี (Your Faith Is Your Fortune: Gethsemane)"
+      },
+      {
+        "title": "ศรัทธาคือโชคชะตา · สูตรแห่งชัยชนะ (Your Faith Is Your Fortune: A Formula for Victory)"
+      },
+      {
+        "title": "จินตนาการที่ตื่นรู้ · จินตนาการของคุณคืออะไร (Awakened Imagination: Who Is Your Imagination?)"
+      },
+      {
+        "title": "จินตนาการที่ตื่นรู้ · คำชี้แนะที่ถูกผนึกไว้ (Awakened Imagination: Sealed Instructions)"
+      },
+      {
+        "title": "จินตนาการที่ตื่นรู้ · เส้นทางสู่โลกภายใน (Awakened Imagination: Highways of the Inner World)"
+      },
+      {
+        "title": "จินตนาการที่ตื่นรู้ · กรรไกรตัดแต่งด้วยการทบทวน (Awakened Imagination: The Pruning Shears of Revision)"
+      },
+      {
+        "title": "จินตนาการที่ตื่นรู้ · เหรียญแห่งสวรรค์ (Awakened Imagination: The Coin of Heaven)"
+      },
+      {
+        "title": "จินตนาการที่ตื่นรู้ · ทุกสิ่งอยู่ภายใน (Awakened Imagination: It Is Within)"
+      },
+      {
+        "title": "จินตนาการที่ตื่นรู้ · การสร้างสรรค์เสร็จสิ้นแล้ว (Awakened Imagination: Creation Is Finished)"
+      },
+      {
+        "title": "จินตนาการที่ตื่นรู้ · แก้วตาดวงใจของพระเจ้า (Awakened Imagination: The Apple of God’s Eye)"
+      }
+    ]
+  },
+  {
+    "id": "fluke",
+    "title": "Fluke: Chance, Chaos, and Why Everything We Do Matters",
+    "author": "Brian Klaas",
+    "category": "วิทยาศาสตร์และสังคม",
+    "color": "#c4d2df",
+    "text": "#26394a",
+    "added": 5,
+    "totalChapters": 13,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "บทนำ: โลกอาจเปลี่ยนจากจุดเล็ก ๆ (Introduction)"
+      },
+      {
+        "title": "เปลี่ยนสิ่งหนึ่ง โลกเปลี่ยนทั้งหมด (Changing Anything Changes Everything)"
+      },
+      {
+        "title": "ไม่ใช่ทุกอย่างเกิดขึ้นเพราะมีเหตุผล (Everything Doesn’t Happen for a Reason)"
+      },
+      {
+        "title": "ทำไมสมองบิดเบือนความจริง (Why Our Brains Distort Reality)"
+      },
+      {
+        "title": "ฝูงมนุษย์และหงส์ดำ (The Human Swarm)"
+      },
+      {
+        "title": "เฮราคลิตัสถูกต้อง: ทุกสิ่งเปลี่ยนแปลง (Heraclitus Rules)"
+      },
+      {
+        "title": "สัตว์ที่เล่าเรื่อง (The Storytelling Animal)"
+      },
+      {
+        "title": "ลอตเตอรี่ของโลก: ภูมิศาสตร์กำหนดโอกาส (The Lottery of Earth)"
+      },
+      {
+        "title": "ทุกคนเป็นผีเสื้อ (Everyone’s a Butterfly)"
+      },
+      {
+        "title": "นาฬิกาและปฏิทิน (Of Clocks and Calendars)"
+      },
+      {
+        "title": "สมการใหม่ของจักรพรรดิ (The Emperor’s New Equations)"
+      },
+      {
+        "title": "มันอาจเป็นอย่างอื่นได้ไหม? (Could It Be Otherwise?)"
+      },
+      {
+        "title": "ทำไมทุกสิ่งที่เราทำจึงสำคัญ (Why Everything We Do Matters)"
+      }
+    ]
+  },
+  {
+    "id": "who-will-cry-when-you-die",
+    "title": "Who Will Cry When You Die?",
+    "author": "Robin Sharma",
+    "category": "การพัฒนาตนเองและการใช้ชีวิต",
+    "color": "#b5a78c",
+    "text": "#302c25",
+    "added": 0,
+    "totalChapters": 101,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "บทที่ 1: ค้นหาเสียงเรียกของตัวเอง (Discover Your Calling)"
+      },
+      {
+        "title": "บทที่ 2: มีน้ำใจกับคนแปลกหน้าทุกวัน (Every Day, Be Kind to a Stranger)"
+      },
+      {
+        "title": "บทที่ 3: รักษามุมมองให้สมดุล (Maintain Your Perspective)"
+      },
+      {
+        "title": "บทที่ 4: ใช้ความรักที่มีขอบเขต (Practice Tough Love)"
+      },
+      {
+        "title": "บทที่ 5: จดบันทึกเพื่อเข้าใจตัวเอง (Keep a Journal)"
+      },
+      {
+        "title": "บทที่ 6: สร้างหลักความซื่อตรงให้ตัวเอง (Develop an Honesty Philosophy)"
+      },
+      {
+        "title": "บทที่ 7: ให้เกียรติอดีตโดยไม่ติดอยู่กับมัน (Honor Your Past)"
+      },
+      {
+        "title": "บทที่ 8: เริ่มต้นวันอย่างตั้งใจ (Start Your Day Well)"
+      },
+      {
+        "title": "บทที่ 9: ปฏิเสธอย่างสุภาพ (Learn to Say No Gracefully)"
+      },
+      {
+        "title": "บทที่ 10: พักจากงานทุกสัปดาห์ (Take a Weekly Sabbatical)"
+      },
+      {
+        "title": "บทที่ 11: พูดกับตัวเองอย่างเป็นมิตร (Talk to Yourself)"
+      },
+      {
+        "title": "บทที่ 12: กำหนดเวลาคิดกังวล (Schedule Worry Breaks)"
+      },
+      {
+        "title": "บทที่ 13: เรียนรู้จากความสงสัยของเด็ก (Model a Child)"
+      },
+      {
+        "title": "บทที่ 14: ปล่อยให้แรงบันดาลใจมาก่อนความสมบูรณ์แบบ (Remember, Genius Is 99 Percent Inspiration)"
+      },
+      {
+        "title": "บทที่ 15: ดูแลร่างกายอย่างเคารพ (Care for the Temple)"
+      },
+      {
+        "title": "บทที่ 16: ฝึกความเงียบ (Learn to Be Silent)"
+      },
+      {
+        "title": "บทที่ 17: นึกถึงชุมชนที่อยากอยู่ (Think About Your Ideal Neighborhood)"
+      },
+      {
+        "title": "บทที่ 18: ตื่นเช้าเมื่อเหมาะกับชีวิต (Get Up Early)"
+      },
+      {
+        "title": "บทที่ 19: มองบททดสอบเป็นโอกาสเรียนรู้ (See Your Troubles as Blessings)"
+      },
+      {
+        "title": "บทที่ 20: หัวเราะให้มากขึ้น (Laugh More)"
+      },
+      {
+        "title": "บทที่ 21: ลองใช้ชีวิตหนึ่งวันโดยไม่ดูนาฬิกาบ่อย ๆ (Spend a Day Without Your Watch)"
+      },
+      {
+        "title": "บทที่ 22: กล้าเสี่ยงอย่างมีสติ (Take More Risks)"
+      },
+      {
+        "title": "บทที่ 23: ใช้ชีวิตจริงแทนเพียงสะสมสิ่งของ (Live a Life)"
+      },
+      {
+        "title": "บทที่ 24: เรียนรู้จากภาพยนตร์ที่ดี (Learn from a Good Movie)"
+      },
+      {
+        "title": "บทที่ 25: ใช้เงินให้สอดคล้องกับคุณค่า (Bless Your Money)"
+      },
+      {
+        "title": "บทที่ 26: ทุ่มพลังให้สิ่งที่คู่ควร (Focus on the Worthy)"
+      },
+      {
+        "title": "บทที่ 27: เขียนข้อความขอบคุณ (Write Thank-You Notes)"
+      },
+      {
+        "title": "บทที่ 28: พกหนังสือติดตัว (Always Carry a Book with You)"
+      },
+      {
+        "title": "บทที่ 29: เติมบัญชีความรัก (Create a Love Account)"
+      },
+      {
+        "title": "บทที่ 30: มองโลกผ่านสายตาคนอื่น (Get Behind People’s Eyeballs)"
+      },
+      {
+        "title": "บทที่ 31: แจกแจงปัญหาแทนการจมกับมัน (List Your Problems)"
+      },
+      {
+        "title": "บทที่ 32: ฝึกนิสัยลงมือทำ (Practice the Action Habit)"
+      },
+      {
+        "title": "บทที่ 33: มองลูกเป็นของขวัญและเป็นคนคนหนึ่ง (See Your Children as Gifts)"
+      },
+      {
+        "title": "บทที่ 34: เห็นคุณค่าระหว่างทาง (Enjoy the Path, Not Just the Reward)"
+      },
+      {
+        "title": "บทที่ 35: ตระหนักก่อนเปลี่ยนแปลง (Remember That Awareness Precedes Change)"
+      },
+      {
+        "title": "บทที่ 36: เรียนรู้จากเรื่องราวการใช้ชีวิต (Read Tuesdays with Morrie)"
+      },
+      {
+        "title": "บทที่ 37: บริหารเวลาให้ตรงกับสิ่งสำคัญ (Master Your Time)"
+      },
+      {
+        "title": "บทที่ 38: รักษาความสงบเมื่อถูกกระทบ (Keep Your Cool)"
+      },
+      {
+        "title": "บทที่ 39: สร้างคณะที่ปรึกษาส่วนตัว (Recruit a Board of Directors)"
+      },
+      {
+        "title": "บทที่ 40: สงบความคิดที่วิ่งไม่หยุด (Cure Your Monkey Mind)"
+      },
+      {
+        "title": "บทที่ 41: ฝึกขอความช่วยเหลือ (Get Good at Asking)"
+      },
+      {
+        "title": "บทที่ 42: ค้นหาความหมายที่สูงขึ้นของงาน (Look for the Higher Meaning of Your Work)"
+      },
+      {
+        "title": "บทที่ 43: สร้างห้องสมุดหนังสือที่ยกระดับใจ (Build a Library of Heroic Books)"
+      },
+      {
+        "title": "บทที่ 44: พัฒนาความสามารถของตัวเอง (Develop Your Talents)"
+      },
+      {
+        "title": "บทที่ 45: เชื่อมโยงกับธรรมชาติ (Connect with Nature)"
+      },
+      {
+        "title": "บทที่ 46: ใช้เวลาเดินทางให้เป็นประโยชน์หรือพักอย่างตั้งใจ (Use Your Commute Time)"
+      },
+      {
+        "title": "บทที่ 47: พักจากข่าวเป็นช่วง ๆ (Go on a News Fast)"
+      },
+      {
+        "title": "บทที่ 48: จริงจังกับการตั้งเป้าหมาย (Get Serious About Setting Goals)"
+      },
+      {
+        "title": "บทที่ 49: สร้างนิสัยด้วยความสม่ำเสมอ (Remember the Rule of 21)"
+      },
+      {
+        "title": "บทที่ 50: ฝึกให้อภัยเพื่อคลายการยึดติด (Practice Forgiveness)"
+      },
+      {
+        "title": "บทที่ 51: เลือกอาหารสดอย่างเหมาะสม (Drink Fresh Fruit Juice)"
+      },
+      {
+        "title": "บทที่ 52: สร้างสภาพแวดล้อมที่เกื้อหนุน (Create a Pure Environment)"
+      },
+      {
+        "title": "บทที่ 53: เดินท่ามกลางป่า (Walk in the Woods)"
+      },
+      {
+        "title": "บทที่ 54: ขอผู้ฝึกสอนหรือโค้ช (Get a Coach)"
+      },
+      {
+        "title": "บทที่ 55: พักผ่อนสั้น ๆ ระหว่างงาน (Take a Mini-Vacation)"
+      },
+      {
+        "title": "บทที่ 56: เป็นอาสาสมัคร (Become a Volunteer)"
+      },
+      {
+        "title": "บทที่ 57: มองเห็นความเชื่อมโยงของผู้คน (Find Your Six Degrees of Separation)"
+      },
+      {
+        "title": "บทที่ 58: ฟังดนตรีทุกวัน (Listen to Music Daily)"
+      },
+      {
+        "title": "บทที่ 59: เขียนข้อความมรดกชีวิต (Write a Legacy Statement)"
+      },
+      {
+        "title": "บทที่ 60: รักษามิตรภาพใกล้ชิดสามคน (Find Three Great Friends)"
+      },
+      {
+        "title": "บทที่ 61: ปลุกความคิดสร้างสรรค์ด้วย The Artist’s Way (Read The Artist’s Way)"
+      },
+      {
+        "title": "บทที่ 62: ฝึกสมาธิเพื่อฝึกความสนใจ (Learn to Meditate)"
+      },
+      {
+        "title": "บทที่ 63: ระลึกถึงความตายเพื่อใช้ชีวิตวันนี้ (Have a Living Funeral)"
+      },
+      {
+        "title": "บทที่ 64: หยุดบ่นแล้วเริ่มเลือกสิ่งที่ทำได้ (Stop Complaining and Start Living)"
+      },
+      {
+        "title": "บทที่ 65: เพิ่มคุณค่าที่มอบให้ผู้อื่น (Increase Your Value)"
+      },
+      {
+        "title": "บทที่ 66: พัฒนาทักษะการเป็นพ่อแม่ (Be a Better Parent)"
+      },
+      {
+        "title": "บทที่ 67: กล้าคิดและเลือกทางของตน (Be Unorthodox)"
+      },
+      {
+        "title": "บทที่ 68: พกบัตรเป้าหมายเพื่อกลับมาโฟกัส (Carry a Goal Card)"
+      },
+      {
+        "title": "บทที่ 69: อย่าปล่อยให้อารมณ์กำหนดตัวตน (Be More than Your Moods)"
+      },
+      {
+        "title": "บทที่ 70: ชื่นชมสิ่งเรียบง่ายในชีวิต (Savor the Simple Stuff)"
+      },
+      {
+        "title": "บทที่ 71: หยุดกล่าวโทษและตัดสินคนอื่น (Stop Condemning)"
+      },
+      {
+        "title": "บทที่ 72: มองแต่ละวันเป็นส่วนหนึ่งของชีวิต (See Your Day as Your Life)"
+      },
+      {
+        "title": "บทที่ 73: สร้างกลุ่มแลกเปลี่ยนความคิดแบบ Mastermind (Create a MasterMind Alliance)"
+      },
+      {
+        "title": "บทที่ 74: เขียนหลักปฏิบัติประจำวัน (Create a Daily Code of Conduct)"
+      },
+      {
+        "title": "บทที่ 75: จินตนาการถึงความเป็นไปได้ที่ดีกว่า (Imagine a Richer Reality)"
+      },
+      {
+        "title": "บทที่ 76: เป็นผู้กำหนดทิศทางชีวิตตนเอง (Become the CEO of Your Life)"
+      },
+      {
+        "title": "บทที่ 77: ถ่อมตนและเปิดใจเรียนรู้ (Be Humble)"
+      },
+      {
+        "title": "บทที่ 78: ไม่จำเป็นต้องอ่านทุกเล่มจนจบ (Don’t Finish Every Book You Start)"
+      },
+      {
+        "title": "บทที่ 79: เมตตาต่อตนเองเมื่อทำผิดพลาด (Don’t Be So Hard on Yourself)"
+      },
+      {
+        "title": "บทที่ 80: ใช้ช่วงเงียบฝึกวินัยในการพูด (Make a Vow of Silence)"
+      },
+      {
+        "title": "บทที่ 81: ไม่ต้องรับโทรศัพท์ทุกครั้งที่ดัง (Don’t Pick Up the Phone Every Time It Rings)"
+      },
+      {
+        "title": "บทที่ 82: เลือกการพักผ่อนที่ช่วยฟื้นพลัง (Remember That Recreation Must Involve Recreation)"
+      },
+      {
+        "title": "บทที่ 83: เลือกความท้าทายที่คู่ควร (Choose Worthy Opponents)"
+      },
+      {
+        "title": "บทที่ 84: ทบทวนคุณภาพการนอนโดยไม่ฝืนลดเวลา (Sleep Less)"
+      },
+      {
+        "title": "บทที่ 85: สร้างมื้ออาหารที่ครอบครัวได้เชื่อมกัน (Have a Family Mealtime)"
+      },
+      {
+        "title": "บทที่ 86: ทดลองทำตัวเหมือนคนที่อยากเป็น (Become an Imposter)"
+      },
+      {
+        "title": "บทที่ 87: ฝึกพูดต่อหน้าคนอย่างเป็นขั้นตอน (Take a Public Speaking Course)"
+      },
+      {
+        "title": "บทที่ 88: เลิกจำกัดความฝันด้วยความคิดเล็ก (Stop Thinking Tiny Thoughts)"
+      },
+      {
+        "title": "บทที่ 89: แยกเรื่องที่ควบคุมได้ออกจากความกังวล (Don’t Worry About Things You Can’t Change)"
+      },
+      {
+        "title": "บทที่ 90: เดินอย่างมีสติและไม่เร่งไปถึงจุดหมาย (Learn How to Walk)"
+      },
+      {
+        "title": "บทที่ 91: เริ่มเขียนเรื่องราวชีวิตบทใหม่ (Rewrite Your Life Story)"
+      },
+      {
+        "title": "บทที่ 92: ปลูกต้นไม้เป็นสัญลักษณ์ของการเติบโต (Plant a Tree)"
+      },
+      {
+        "title": "บทที่ 93: สร้างพื้นที่สงบของตนเอง (Find Your Place of Peace)"
+      },
+      {
+        "title": "บทที่ 94: บันทึกช่วงเวลาสำคัญด้วยภาพถ่าย (Take More Pictures)"
+      },
+      {
+        "title": "บทที่ 95: เพิ่มการผจญภัยที่เหมาะกับตน (Be an Adventurer)"
+      },
+      {
+        "title": "บทที่ 96: พักเปลี่ยนผ่านก่อนกลับบ้าน (Decompress Before You Go Home)"
+      },
+      {
+        "title": "บทที่ 97: รับฟังสัญชาตญาณพร้อมตรวจสอบข้อมูล (Respect Your Instincts)"
+      },
+      {
+        "title": "บทที่ 98: สะสมข้อความที่ช่วยเตือนใจ (Collect Quotes That Inspire You)"
+      },
+      {
+        "title": "บทที่ 99: ค้นหาความหมายและความสนุกในงาน (Love Your Work)"
+      },
+      {
+        "title": "บทที่ 100: รับใช้ผู้อื่นอย่างไม่เห็นแก่ตัว (Selflessly Serve)"
+      },
+      {
+        "title": "บทที่ 101: ใช้ชีวิตให้เต็มเพื่อไม่เสียดายภายหลัง (Live Fully so You Can Die Happy)"
+      }
+    ]
+  },
+  {
+    "id": "33-strategies-of-war",
+    "title": "The 33 Strategies of War",
+    "author": "Robert Greene",
+    "category": "กลยุทธ์และภาวะผู้นำ",
+    "color": "#c9c5bb",
+    "text": "#35332e",
+    "added": 16,
+    "totalChapters": 33,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "ประกาศสงครามกับปัญหาที่แท้จริง: กลยุทธ์ขั้วตรงข้าม (Declare War on Your Enemies: Polarity)"
+      },
+      {
+        "title": "อย่ารบศึกเก่า: สงครามกองโจรทางความคิด (Do Not Fight the Last War)"
+      },
+      {
+        "title": "รักษาสติท่ามกลางความวุ่นวาย (Presence of Mind: Counterbalance)"
+      },
+      {
+        "title": "สร้างความเร่งด่วนอย่างระมัดระวัง (Death-Ground)"
+      },
+      {
+        "title": "หลีกเลี่ยงการคิดตามกลุ่ม (Command-and-Control)"
+      },
+      {
+        "title": "แบ่งงานให้คล่องตัว (Controlled Chaos)"
+      },
+      {
+        "title": "สร้างขวัญกำลังใจด้วยจุดหมายร่วม (Morale Strategies)"
+      },
+      {
+        "title": "เลือกศึกให้คุ้ม (Perfect-Economy)"
+      },
+      {
+        "title": "พลิกสถานการณ์ด้วยการตั้งรับ (Counterattack)"
+      },
+      {
+        "title": "สร้างความน่าเชื่อถือและขอบเขต (Deterrence)"
+      },
+      {
+        "title": "แลกพื้นที่เพื่อเวลา (Nonengagement)"
+      },
+      {
+        "title": "แพ้ย่อยเพื่อชนะเป้าหมายใหญ่ (Grand Strategy)"
+      },
+      {
+        "title": "รู้จักผู้เกี่ยวข้อง (Intelligence Strategy)"
+      },
+      {
+        "title": "ลดเวลาติดขัดด้วยการลงมือที่เหมาะสม (Blitzkrieg)"
+      },
+      {
+        "title": "กำหนดกรอบความสัมพันธ์ (Forcing Strategies)"
+      },
+      {
+        "title": "จัดการจุดสำคัญของปัญหา (Center-of-Gravity)"
+      },
+      {
+        "title": "แยกปัญหาใหญ่เป็นส่วนย่อย (Divide and Conquer)"
+      },
+      {
+        "title": "เข้าหาจุดที่ติดขัดโดยไม่ปะทะ (Turning Strategy)"
+      },
+      {
+        "title": "ปิดช่องโหว่ด้วยการประสานงาน (Annihilation)"
+      },
+      {
+        "title": "วางเงื่อนไขให้ตัดสินใจง่ายขึ้น (Ripening-for-the-Sickle)"
+      },
+      {
+        "title": "เจรจาอย่างมีทางเลือก (Diplomatic-War)"
+      },
+      {
+        "title": "รู้จักยุติสิ่งที่ควรจบ (Exit Strategy)"
+      },
+      {
+        "title": "แยกข้อเท็จจริงออกจากการสร้างภาพ (Misperception)"
+      },
+      {
+        "title": "ทำสิ่งที่คาดไม่ถึงอย่างสร้างสรรค์ (Ordinary-Extraordinary)"
+      },
+      {
+        "title": "ยืนบนหลักการอย่างสุจริต (Righteous Strategy)"
+      },
+      {
+        "title": "ไม่เป็นเป้าโจมตี: เว้นระยะอย่างมีสติ (Strategy of the Void)"
+      },
+      {
+        "title": "สร้างพันธมิตรเพื่อเป้าหมายร่วม (Alliance Strategy)"
+      },
+      {
+        "title": "ปล่อยให้คู่แข่งพลาดเอง: กลยุทธ์เหนือชั้น (One-Upmanship)"
+      },
+      {
+        "title": "คืบหน้าเป็นขั้นเล็ก (Fait Accompli)"
+      },
+      {
+        "title": "สื่อสารให้เข้าใจและโน้มน้าวด้วยเหตุผล (Communication Strategies)"
+      },
+      {
+        "title": "เปลี่ยนจากภายในด้วยความร่วมมือ (Inner-Front)"
+      },
+      {
+        "title": "พูดตรงและไม่ใช้การต่อต้านแฝง (Passive-Aggression)"
+      },
+      {
+        "title": "รับมือความตื่นตระหนกด้วยเหตุผล (Chain Reaction)"
+      }
+    ]
+  },
+  {
+    "id": "games-people-play",
+    "title": "Games People Play",
+    "author": "Eric Berne",
+    "category": "จิตวิทยาและความสัมพันธ์",
+    "color": "#cfc5d8",
+    "text": "#3b3144",
+    "added": 15,
+    "totalChapters": 19,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "บทนำ: ปฏิสัมพันธ์และการจัดสรรเวลา (Social Intercourse; Structuring of Time)"
+      },
+      {
+        "title": "การวิเคราะห์โครงสร้าง (Structural Analysis)"
+      },
+      {
+        "title": "การวิเคราะห์ธุรกรรมทางสังคม (Transactional Analysis)"
+      },
+      {
+        "title": "ขั้นตอนและพิธีกรรม (Procedures and Rituals)"
+      },
+      {
+        "title": "กิจกรรมยามว่าง (Pastimes)"
+      },
+      {
+        "title": "เกม: นิยาม รูปแบบ และหน้าที่ (Games)"
+      },
+      {
+        "title": "เกมในชีวิตประจำวัน (Life Games)"
+      },
+      {
+        "title": "เกมในชีวิตคู่ (Marital Games)"
+      },
+      {
+        "title": "เกมในงานสังสรรค์ (Party Games)"
+      },
+      {
+        "title": "เกมทางเพศและความใกล้ชิด (Sexual Games)"
+      },
+      {
+        "title": "เกมในโลกอาชญากรรม (Underworld Games)"
+      },
+      {
+        "title": "เกมในห้องให้คำปรึกษา (Consulting Room Games)"
+      },
+      {
+        "title": "เกมที่ให้ผลดี (Good Games)"
+      },
+      {
+        "title": "ความสำคัญของเกม (The Significance of Games)"
+      },
+      {
+        "title": "ผู้เล่นและบทบาท (The Players)"
+      },
+      {
+        "title": "แบบจำลองปฏิสัมพันธ์ (A Paradigm)"
+      },
+      {
+        "title": "ความเป็นอิสระ (Autonomy)"
+      },
+      {
+        "title": "การเข้าถึงความเป็นอิสระ (The Attainment of Autonomy)"
+      },
+      {
+        "title": "หลังเกมแล้วทำอะไรต่อ? (After Games, What?)"
+      }
+    ]
+  },
+  {
+    "id": "mastery-robert-greene",
+    "title": "Mastery",
+    "author": "Robert Greene",
+    "category": "การพัฒนาทักษะและความชำนาญ",
+    "color": "#d5c5ad",
+    "text": "#3c3327",
+    "added": 14,
+    "totalChapters": 6,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "ค้นพบเสียงเรียก: ภารกิจชีวิต (Discover Your Calling: The Life’s Task)"
+      },
+      {
+        "title": "ยอมรับความจริง: การฝึกงานที่เหมาะสม (Submit to Reality: The Ideal Apprenticeship)"
+      },
+      {
+        "title": "ซึมซับพลังของผู้เชี่ยวชาญ: พลวัตของพี่เลี้ยง (Absorb the Master’s Power: The Mentor Dynamic)"
+      },
+      {
+        "title": "มองผู้คนตามจริง: ปัญญาทางสังคม (See People as They Are: Social Intelligence)"
+      },
+      {
+        "title": "ปลุกจิตคิดเชิงมิติ: ช่วงสร้างสรรค์อย่างกระตือรือร้น (Awaken the Dimensional Mind: The Creative-Active Phase)"
+      },
+      {
+        "title": "หลอมรวมสัญชาตญาณกับเหตุผล: ความชำนาญ (Fuse the Intuitive with the Rational: Mastery)"
+      }
+    ]
+  },
+  {
+    "id": "tao-te-ching",
+    "title": "Tao Te Ching",
+    "author": "Lao Tzu (translated by Jonathan Star)",
+    "category": "ปรัชญาตะวันออก",
+    "color": "#c5d1c6",
+    "text": "#304036",
+    "added": 13,
+    "totalChapters": 81,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "บทที่ 01 — หนทางที่ตั้งชื่อไม่ได้"
+      },
+      {
+        "title": "บทที่ 02 — ความสัมพันธ์ของสิ่งตรงข้าม"
+      },
+      {
+        "title": "บทที่ 03 — ลดการแข่งขันและความอยาก"
+      },
+      {
+        "title": "บทที่ 04 — ความว่างที่ให้กำเนิดประโยชน์"
+      },
+      {
+        "title": "บทที่ 05 — ความเป็นกลางของฟ้าและดิน"
+      },
+      {
+        "title": "บทที่ 06 — จิตวิญญาณแห่งหุบเขา"
+      },
+      {
+        "title": "บทที่ 07 — ผู้อยู่เบื้องหลังยืนยาว"
+      },
+      {
+        "title": "บทที่ 08 — คุณธรรมแห่งน้ำ"
+      },
+      {
+        "title": "บทที่ 09 — รู้จักพอและหยุดให้ทัน"
+      },
+      {
+        "title": "บทที่ 10 — ดูแลร่างกายและชีวิตโดยไม่ยึดอำนาจ"
+      },
+      {
+        "title": "บทที่ 11 — ประโยชน์ของสิ่งที่ว่าง"
+      },
+      {
+        "title": "บทที่ 12 — อย่าให้ประสาทสัมผัสลากใจ"
+      },
+      {
+        "title": "บทที่ 13 — ชื่อเสียงและตัวตน"
+      },
+      {
+        "title": "บทที่ 14 — มองเห็นสิ่งละเอียดอ่อน"
+      },
+      {
+        "title": "บทที่ 15 — ปราชญ์ผู้รอบคอบ"
+      },
+      {
+        "title": "บทที่ 16 — กลับสู่ความสงบ"
+      },
+      {
+        "title": "บทที่ 17 — ผู้นำที่ผู้คนแทบไม่รู้สึกว่าถูกปกครอง"
+      },
+      {
+        "title": "บทที่ 18 — เมื่อ Tao สูญหาย"
+      },
+      {
+        "title": "บทที่ 19 — กลับสู่ความเรียบง่าย"
+      },
+      {
+        "title": "บทที่ 20 — อยู่อย่างเป็นธรรมชาติ"
+      },
+      {
+        "title": "บทที่ 21 — คุณธรรมที่ตาม Tao"
+      },
+      {
+        "title": "บทที่ 22 — การโอนอ่อนและการรักษาตน"
+      },
+      {
+        "title": "บทที่ 23 — ประหยัดคำและพลัง"
+      },
+      {
+        "title": "บทที่ 24 — เกินพอดีแล้วเสื่อม"
+      },
+      {
+        "title": "บทที่ 25 — Tao ก่อนฟ้าและดิน"
+      },
+      {
+        "title": "บทที่ 26 — ความหนักเป็นรากของความเบา"
+      },
+      {
+        "title": "บทที่ 27 — ทำอย่างชำนาญโดยไม่ทิ้งร่องรอย"
+      },
+      {
+        "title": "บทที่ 28 — รู้จักความแข็งและเลือกความอ่อน"
+      },
+      {
+        "title": "บทที่ 29 — อย่าฝืนธรรมชาติของโลก"
+      },
+      {
+        "title": "บทที่ 30 — หลีกเลี่ยงการยกย่องสงคราม"
+      },
+      {
+        "title": "บทที่ 31 — อาวุธคือสิ่งอัปมงคล"
+      },
+      {
+        "title": "บทที่ 32 — พอใจกับ Tao ที่เรียบง่าย"
+      },
+      {
+        "title": "บทที่ 33 — รู้จักตนเองและรู้จักพอ"
+      },
+      {
+        "title": "บทที่ 34 — Tao หล่อเลี้ยงทุกสิ่ง"
+      },
+      {
+        "title": "บทที่ 35 — ยึดภาพใหญ่แทนสิ่งเร้าเล็ก"
+      },
+      {
+        "title": "บทที่ 36 — ความอ่อนน้อมเปิดทางให้การเติบโต"
+      },
+      {
+        "title": "บทที่ 37 — Tao ไม่บังคับแต่ไม่มีสิ่งใดถูกละเลย"
+      },
+      {
+        "title": "บทที่ 38 — คุณธรรมกับการเลียนแบบ"
+      },
+      {
+        "title": "บทที่ 39 — ความสมบูรณ์ที่ดูไม่สมบูรณ์"
+      },
+      {
+        "title": "บทที่ 40 — ความสงบและการกลับคืน"
+      },
+      {
+        "title": "บทที่ 41 — ปราชญ์หัวเราะเมื่อได้ยิน Tao"
+      },
+      {
+        "title": "บทที่ 42 — หยินหยางและต้นกำเนิด"
+      },
+      {
+        "title": "บทที่ 43 — พลังของสิ่งอ่อนนุ่ม"
+      },
+      {
+        "title": "บทที่ 44 — รู้จักพอในชื่อเสียงและทรัพย์สิน"
+      },
+      {
+        "title": "บทที่ 45 — ความสมบูรณ์ที่ดูไม่เต็ม"
+      },
+      {
+        "title": "บทที่ 46 — ความพอใจคือความมั่งคั่ง"
+      },
+      {
+        "title": "บทที่ 47 — รู้โลกโดยไม่ต้องเดินทางไกล"
+      },
+      {
+        "title": "บทที่ 48 — เรียนรู้ด้วยการลดทอน"
+      },
+      {
+        "title": "บทที่ 49 — ปราชญ์มีใจเปิดกว้าง"
+      },
+      {
+        "title": "บทที่ 50 — ธรรมชาติของชีวิตและความตาย"
+      },
+      {
+        "title": "บทที่ 51 — คุณธรรมแท้ไม่ต้องฝืน"
+      },
+      {
+        "title": "บทที่ 52 — Tao ให้กำเนิดและคุณธรรมหล่อเลี้ยง"
+      },
+      {
+        "title": "บทที่ 53 — กลับไปสู่ราก"
+      },
+      {
+        "title": "บทที่ 54 — สิ่งใหญ่เริ่มจากสิ่งเล็ก"
+      },
+      {
+        "title": "บทที่ 55 — จัดการปัญหาก่อนเกิด"
+      },
+      {
+        "title": "บทที่ 56 — ปกครองด้วยความเรียบง่าย"
+      },
+      {
+        "title": "บทที่ 57 — ทะเลรับแม่น้ำเพราะอยู่ต่ำ"
+      },
+      {
+        "title": "บทที่ 58 — Tao เป็นที่พึ่งของทุกคน"
+      },
+      {
+        "title": "บทที่ 59 — ความยากเริ่มจากความง่าย"
+      },
+      {
+        "title": "บทที่ 60 — ป้องกันก่อนเกิดวิกฤต"
+      },
+      {
+        "title": "บทที่ 61 — ปกครองโดยไม่สร้างความวุ่นวาย"
+      },
+      {
+        "title": "บทที่ 62 — โชคและเคราะห์สลับเปลี่ยน"
+      },
+      {
+        "title": "บทที่ 63 — หยั่งรากลึกเพื่อความมั่นคง"
+      },
+      {
+        "title": "บทที่ 64 — ปกครองเรื่องใหญ่โดยไม่กวนมาก"
+      },
+      {
+        "title": "บทที่ 65 — อ่อนน้อมเพื่อรวบรวมผู้คน"
+      },
+      {
+        "title": "บทที่ 66 — Tao เป็นสมบัติของโลก"
+      },
+      {
+        "title": "บทที่ 67 — สมบัติล้ำค่าสามประการ"
+      },
+      {
+        "title": "บทที่ 68 — ผู้นำที่ไม่แข่งขัน"
+      },
+      {
+        "title": "บทที่ 69 — กลยุทธ์ที่ถ่อมตน"
+      },
+      {
+        "title": "บทที่ 70 — ผู้รู้ลึกอาจดูธรรมดา"
+      },
+      {
+        "title": "บทที่ 71 — รู้ว่ายังไม่รู้"
+      },
+      {
+        "title": "บทที่ 72 — เคารพชีวิตและพื้นที่ของผู้คน"
+      },
+      {
+        "title": "บทที่ 73 — กล้าหาญอย่างมีวิจารณญาณ"
+      },
+      {
+        "title": "บทที่ 74 — อย่าปกครองด้วยความกลัวความตาย"
+      },
+      {
+        "title": "บทที่ 75 — ความทุกข์จากการปกครองที่กดขี่"
+      },
+      {
+        "title": "บทที่ 76 — ความอ่อนนุ่มคือชีวิต"
+      },
+      {
+        "title": "บทที่ 77 — ฟ้าดินปรับสมดุล"
+      },
+      {
+        "title": "บทที่ 78 — พลังของน้ำและตำแหน่งต่ำ"
+      },
+      {
+        "title": "บทที่ 79 — ให้โดยไม่เรียกคืน"
+      },
+      {
+        "title": "บทที่ 80 — ชีวิตเรียบง่ายในชุมชนเล็ก"
+      },
+      {
+        "title": "บทที่ 81 — ความจริงใจและการให้"
+      }
+    ]
+  },
+  {
+    "id": "the-50th-law",
+    "title": "The 50th Law",
+    "author": "50 Cent and Robert Greene",
+    "category": "ความกล้าหาญและภาวะผู้นำ",
+    "color": "#c8c3bc",
+    "text": "#34312d",
+    "added": 12,
+    "totalChapters": 10,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "มองสิ่งต่าง ๆ ตามจริง: สัจนิยมเข้มข้น (See Things for What They Are—Intense Realism)"
+      },
+      {
+        "title": "ทำทุกอย่างให้เป็นความรับผิดชอบของตน: พึ่งพาตนเอง (Make Everything Your Own—Self-Reliance)"
+      },
+      {
+        "title": "เปลี่ยนอุปสรรคเป็นโอกาส: ฉวยใช้สถานการณ์ (Turn Shit into Sugar—Opportunism)"
+      },
+      {
+        "title": "เดินหน้าต่อด้วยแรงส่งที่คำนวณแล้ว (Keep Moving—Calculated Momentum)"
+      },
+      {
+        "title": "รู้ว่าเมื่อไรควรแข็งกร้าว: การยืนยันจุดยืน (Know When to Be Bad—Aggression)"
+      },
+      {
+        "title": "นำจากแนวหน้า: อำนาจและความรับผิดชอบ (Lead from the Front—Authority)"
+      },
+      {
+        "title": "รู้จักสภาพแวดล้อมจากภายใน (Know Your Environment from the Inside Out—Connection)"
+      },
+      {
+        "title": "เคารพกระบวนการ: ความชำนาญ (Respect the Process—Mastery)"
+      },
+      {
+        "title": "ผลักขีดจำกัดของตน: ความเชื่อมั่นในตัวเอง (Push Beyond Your Limits—Self-Belief)"
+      },
+      {
+        "title": "เผชิญความตาย: มองเห็นสิ่งสำคัญ (Confront Your Mortality—the Sublime)"
+      }
+    ]
+  },
+  {
+    "id": "four-agreements-companion",
+    "title": "The Four Agreements Companion Book",
+    "author": "Don Miguel Ruiz and Janet Mills",
+    "category": "จิตใจและความสัมพันธ์",
+    "color": "#d7cbb7",
+    "text": "#3b3328",
+    "added": 10,
+    "totalChapters": 8,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "การฝึกให้เชื่อฟังแบบแผน (Domestication)"
+      },
+      {
+        "title": "พลังของคำพูด (The Power of the Word)"
+      },
+      {
+        "title": "ความฝันของจิตใจ (Dreaming)"
+      },
+      {
+        "title": "ความใส่ใจครั้งที่สอง (The Second Attention)"
+      },
+      {
+        "title": "เปลี่ยนวงจรการกระทำและปฏิกิริยา (Action–Reaction)"
+      },
+      {
+        "title": "ยึดติดและปล่อยวาง (Attach–Detach)"
+      },
+      {
+        "title": "บทสนทนากับ Don Miguel (A Dialogue with Don Miguel)"
+      },
+      {
+        "title": "เรื่องเล่าของการตระหนักรู้และเปลี่ยนแปลง (True Stories of Awareness and Transformation)"
+      }
+    ]
+  },
+  {
+    "id": "seven-spiritual-laws",
+    "title": "The Seven Spiritual Laws of Success",
+    "author": "Deepak Chopra",
+    "category": "จิตใจและการใช้ชีวิต",
+    "color": "#cad5ca",
+    "text": "#2f4035",
+    "added": 7,
+    "totalChapters": 7,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "กฎแห่งศักยภาพอันบริสุทธิ์ (The Law of Pure Potentiality)"
+      },
+      {
+        "title": "กฎแห่งการให้ (The Law of Giving)"
+      },
+      {
+        "title": "กฎแห่งกรรมหรือเหตุและผล (The Law of Karma)"
+      },
+      {
+        "title": "กฎแห่งความพยายามน้อยที่สุด (The Law of Least Effort)"
+      },
+      {
+        "title": "กฎแห่งความตั้งใจและความปรารถนา (The Law of Intention and Desire)"
+      },
+      {
+        "title": "กฎแห่งการไม่ยึดติด (The Law of Detachment)"
+      },
+      {
+        "title": "กฎแห่งธรรมะหรือจุดหมายชีวิต (The Law of Dharma)"
+      }
+    ]
+  },
+  {
+    "id": "power-subconscious-mind",
+    "title": "The Power of Your Subconscious Mind",
+    "author": "Joseph Murphy",
+    "category": "จิตใจและการพัฒนาตนเอง",
+    "color": "#d6c3b6",
+    "text": "#3b312c",
+    "added": 11,
+    "totalChapters": 20,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "ขุมทรัพย์ภายใน (The Treasure House Within You)"
+      },
+      {
+        "title": "จิตของคุณทำงานอย่างไร (How Your Own Mind Works)"
+      },
+      {
+        "title": "พลังของจิตใต้สำนึก (The Miracle-Working Power of Your Subconscious)"
+      },
+      {
+        "title": "การเยียวยาทางใจในอดีต (Mental Healings in Ancient Times)"
+      },
+      {
+        "title": "การเยียวยาทางใจในยุคใหม่ (Mental Healings in Modern Times)"
+      },
+      {
+        "title": "เทคนิคปฏิบัติสำหรับการเยียวยาทางใจ (Practical Techniques in Mental Healings)"
+      },
+      {
+        "title": "จิตใต้สำนึกมุ่งสู่ชีวิต (The Tendency of the Subconscious Is Lifeward)"
+      },
+      {
+        "title": "ทำอย่างไรให้ได้ผลที่ต้องการ (How to Get the Results You Want)"
+      },
+      {
+        "title": "ใช้จิตใต้สำนึกเพื่อสร้างความมั่งคั่ง (How to Use the Power of Your Subconscious for Wealth)"
+      },
+      {
+        "title": "สิทธิของคุณที่จะมั่งคั่ง (Your Right to Be Rich)"
+      },
+      {
+        "title": "จิตใต้สำนึกในฐานะหุ้นส่วนแห่งความสำเร็จ (Your Subconscious Mind as a Partner in Success)"
+      },
+      {
+        "title": "นักวิทยาศาสตร์ใช้จิตใต้สำนึก (Scientists Use the Subconscious Mind)"
+      },
+      {
+        "title": "จิตใต้สำนึกกับความมหัศจรรย์ของการนอน (Your Subconscious Mind and the Wonders of Sleep)"
+      },
+      {
+        "title": "จิตใต้สำนึกกับปัญหาชีวิตคู่ (Your Subconscious Mind and Marital Problems)"
+      },
+      {
+        "title": "จิตใต้สำนึกกับความสุข (Your Subconscious Mind and Your Happiness)"
+      },
+      {
+        "title": "จิตใต้สำนึกกับความสัมพันธ์ที่กลมกลืน (Your Subconscious Mind and Harmonious Human Relations)"
+      },
+      {
+        "title": "ใช้จิตใต้สำนึกเพื่อการให้อภัย (How to Use Your Subconscious Mind for Forgiveness)"
+      },
+      {
+        "title": "จิตใต้สำนึกช่วยคลายอุปสรรคทางใจ (How Your Subconscious Removes Mental Blocks)"
+      },
+      {
+        "title": "ใช้จิตใต้สำนึกเพื่อจัดการความกลัว (How to Use Your Subconscious Mind to Remove Fear)"
+      },
+      {
+        "title": "คงความเยาว์วัยทางใจ (How to Stay Young in Spirit Forever)"
+      }
+    ]
+  },
+  {
+    "id": "obstacle-is-the-way",
+    "title": "The Obstacle Is the Way",
+    "author": "Ryan Holiday",
+    "category": "ปรัชญาและการพัฒนาตนเอง",
+    "color": "#b9c9bf",
+    "text": "#2e4035",
+    "added": 9,
+    "totalChapters": 32,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "วินัยในการมองเหตุการณ์ (The Discipline of Perception)"
+      },
+      {
+        "title": "ตระหนักถึงพลังของตน (Recognize Your Power)"
+      },
+      {
+        "title": "รักษาความนิ่ง (Steady Your Nerves)"
+      },
+      {
+        "title": "ควบคุมอารมณ์ (Control Your Emotions)"
+      },
+      {
+        "title": "ฝึกมองอย่างเป็นกลาง (Practice Objectivity)"
+      },
+      {
+        "title": "เปลี่ยนมุมมอง (Alter Your Perspective)"
+      },
+      {
+        "title": "เรื่องนี้อยู่ในอำนาจเราหรือไม่? (Is It Up to You?)"
+      },
+      {
+        "title": "อยู่กับปัจจุบัน (Live in the Present Moment)"
+      },
+      {
+        "title": "คิดให้ต่าง (Think Differently)"
+      },
+      {
+        "title": "มองหาโอกาสในอุปสรรค (Finding the Opportunity)"
+      },
+      {
+        "title": "เตรียมพร้อมลงมือ (Prepare to Act)"
+      },
+      {
+        "title": "วินัยในการลงมือ (The Discipline of Action)"
+      },
+      {
+        "title": "เริ่มขยับ (Get Moving)"
+      },
+      {
+        "title": "ฝึกความเพียร (Practice Persistence)"
+      },
+      {
+        "title": "ทำซ้ำและปรับปรุง (Iterate)"
+      },
+      {
+        "title": "ทำตามกระบวนการ (Follow the Process)"
+      },
+      {
+        "title": "ทำหน้าที่ของตนให้ดี (Do Your Job, Do It Right)"
+      },
+      {
+        "title": "สิ่งที่ได้ผลคือสิ่งที่ถูกต้อง (What’s Right Is What Works)"
+      },
+      {
+        "title": "ใช้การโจมตีทางอ้อม (In Praise of the Flank Attack)"
+      },
+      {
+        "title": "ใช้สิ่งกีดขวางย้อนกลับ (Use Obstacles Against Themselves)"
+      },
+      {
+        "title": "เปลี่ยนพลังให้เป็นแรงขับ (Channel Your Energy)"
+      },
+      {
+        "title": "ชิงลงมือก่อน (Seize the Offensive)"
+      },
+      {
+        "title": "เตรียมใจว่าแผนอาจไม่สำเร็จ (Prepare for None of It to Work)"
+      },
+      {
+        "title": "วินัยแห่งเจตจำนง (The Discipline of the Will)"
+      },
+      {
+        "title": "สร้างป้อมปราการภายใน (Build Your Inner Citadel)"
+      },
+      {
+        "title": "คาดการณ์และคิดทางลบอย่างมีประโยชน์ (Anticipation)"
+      },
+      {
+        "title": "ศิลปะแห่งการยอมรับ (The Art of Acquiescence)"
+      },
+      {
+        "title": "รักในสิ่งที่เกิดขึ้น (Amor Fati)"
+      },
+      {
+        "title": "ความเพียร (Perseverance)"
+      },
+      {
+        "title": "สิ่งที่ใหญ่กว่าตัวเรา (Something Bigger Than Yourself)"
+      },
+      {
+        "title": "ระลึกถึงความตาย (Meditate on Your Mortality)"
+      },
+      {
+        "title": "เตรียมเริ่มต้นใหม่ (Prepare to Start Again)"
+      }
+    ]
+  },
+  {
+    "id": "science-getting-rich",
+    "title": "The Science of Getting Rich",
+    "author": "Wallace D. Wattles",
+    "category": "การเงินและความคิด",
+    "color": "#d2c4ab",
+    "text": "#3c3329",
+    "added": 8,
+    "totalChapters": 17,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "สิทธิในการมั่งคั่ง (The Right to Be Rich)"
+      },
+      {
+        "title": "วิทยาศาสตร์แห่งความมั่งคั่ง (There Is a Science of Getting Rich)"
+      },
+      {
+        "title": "โอกาสถูกผูกขาดหรือไม่? (Is Opportunity Monopolized?)"
+      },
+      {
+        "title": "หลักแรกของวิทยาศาสตร์แห่งความมั่งคั่ง (The First Principle)"
+      },
+      {
+        "title": "เพิ่มพูนชีวิต (Increasing Life)"
+      },
+      {
+        "title": "ความมั่งคั่งมาถึงเราได้อย่างไร (How Riches Come to You)"
+      },
+      {
+        "title": "ความกตัญญู (Gratitude)"
+      },
+      {
+        "title": "คิดในวิธีที่แน่นอน (Thinking in the Certain Way)"
+      },
+      {
+        "title": "วิธีใช้เจตจำนง (How to Use the Will)"
+      },
+      {
+        "title": "ใช้เจตจำนงเพิ่มเติม (Further Use of the Will)"
+      },
+      {
+        "title": "ลงมือในวิธีที่แน่นอน (Acting in the Certain Way)"
+      },
+      {
+        "title": "การกระทำอย่างมีประสิทธิภาพ (Efficient Action)"
+      },
+      {
+        "title": "เข้าสู่ธุรกิจที่เหมาะกับตน (Getting into the Right Business)"
+      },
+      {
+        "title": "สร้างความประทับใจแห่งการเติบโต (The Impression of Increase)"
+      },
+      {
+        "title": "ผู้ที่ก้าวหน้า (The Advancing Man)"
+      },
+      {
+        "title": "ข้อควรระวังและข้อสังเกตท้ายเล่ม (Some Cautions and Concluding Observations)"
+      },
+      {
+        "title": "สรุปวิทยาศาสตร์แห่งความมั่งคั่ง (Summary of the Science of Getting Rich)"
+      }
+    ]
+  },
+  {
+    "id": "21-success-secrets",
+    "title": "The 21 Success Secrets of Self-Made Millionaires",
+    "author": "Brian Tracy",
+    "category": "การพัฒนาตนเองและการเงิน",
+    "color": "#d9c9a7",
+    "text": "#3e3427",
+    "added": 6,
+    "totalChapters": 21,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "ฝันให้ใหญ่ (Dream Big Dreams)"
+      },
+      {
+        "title": "กำหนดทิศทางให้ชัด (Develop a Clear Sense of Direction)"
+      },
+      {
+        "title": "คิดและทำเหมือนเจ้าของงาน (See Yourself as Self-Employed)"
+      },
+      {
+        "title": "ทำในสิ่งที่รักและถนัด (Do What You Love to Do)"
+      },
+      {
+        "title": "มุ่งมั่นสู่ความเป็นเลิศ (Commit to Excellence)"
+      },
+      {
+        "title": "ทำงานหนักและยาวนานขึ้นอย่างมีเป้าหมาย (Work Longer and Harder)"
+      },
+      {
+        "title": "เรียนรู้ตลอดชีวิต (Dedicate Yourself to Lifelong Learning)"
+      },
+      {
+        "title": "จ่ายให้ตัวเองก่อน (Pay Yourself First)"
+      },
+      {
+        "title": "รู้ทุกรายละเอียดของธุรกิจ (Learn Every Detail of Your Business)"
+      },
+      {
+        "title": "ทุ่มเทเพื่อรับใช้ผู้อื่น (Dedicate Yourself to Serving Others)"
+      },
+      {
+        "title": "ซื่อตรงกับตัวเองและผู้อื่น (Be Absolutely Honest)"
+      },
+      {
+        "title": "จัดลำดับสิ่งสำคัญและโฟกัส (Determine Your Highest Priorities)"
+      },
+      {
+        "title": "สร้างชื่อเสียงด้านความเร็วและเชื่อถือได้ (Develop a Reputation for Speed and Dependability)"
+      },
+      {
+        "title": "พร้อมไต่จากยอดหนึ่งสู่อีกยอดหนึ่ง (Be Prepared to Climb from Peak to Peak)"
+      },
+      {
+        "title": "ฝึกวินัยในทุกด้าน (Practice Self-Discipline)"
+      },
+      {
+        "title": "ปลดล็อกความคิดสร้างสรรค์ (Unlock Your Inborn Creativity)"
+      },
+      {
+        "title": "อยู่ใกล้คนที่ส่งเสริมการเติบโต (Get around the Right People)"
+      },
+      {
+        "title": "ดูแลสุขภาพกายให้ดี (Take Excellent Care of Your Physical Health)"
+      },
+      {
+        "title": "ตัดสินใจและลงมือทำ (Be Decisive and Action Oriented)"
+      },
+      {
+        "title": "อย่ายอมแพ้ต่อความล้มเหลว (Never Allow Failure to Be an Option)"
+      },
+      {
+        "title": "ผ่านบททดสอบความเพียร (Pass the “Persistence Test”)"
+      }
+    ]
+  },
+  {
+    "id": "48-laws-of-power",
+    "title": "The 48 Laws of Power",
+    "author": "Robert Greene",
+    "category": "จิตวิทยาสังคมและกลยุทธ์",
+    "color": "#9b7b55",
+    "text": "#fff",
+    "added": 0,
+    "totalChapters": 48,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "กฎ 1: อย่าทำให้ผู้มีอำนาจเหนือกว่ารู้สึกด้อย (Never Outshine the Master)"
+      },
+      {
+        "title": "กฎ 2: อย่าไว้ใจเพื่อนมากเกินไป และเรียนรู้วิธีใช้ศัตรู (Never Put Too Much Trust in Friends, Learn How to Use Enemies)"
+      },
+      {
+        "title": "กฎ 3: ปกปิดเจตนาที่แท้จริง (Conceal Your Intentions)"
+      },
+      {
+        "title": "กฎ 4: พูดให้น้อยกว่าที่จำเป็น (Always Say Less Than Necessary)"
+      },
+      {
+        "title": "กฎ 5: ชื่อเสียงสำคัญ จงปกป้องไว้ (So Much Depends on Reputation—Guard It with Your Life)"
+      },
+      {
+        "title": "กฎ 6: เรียกร้องความสนใจไม่ว่าต้องทำอย่างไร (Court Attention at All Cost)"
+      },
+      {
+        "title": "กฎ 7: ให้ผู้อื่นทำงานให้ แต่รับเครดิตไว้ (Get Others to Do the Work for You, but Always Take the Credit)"
+      },
+      {
+        "title": "กฎ 8: ทำให้คนอื่นเข้าหา ใช้สิ่งล่อเมื่อจำเป็น (Make Other People Come to You—Use Bait If Necessary)"
+      },
+      {
+        "title": "กฎ 9: ชนะด้วยการกระทำ ไม่ใช่การโต้เถียง (Win Through Your Actions, Never Through Argument)"
+      },
+      {
+        "title": "กฎ 10: หลีกเลี่ยงผู้ทุกข์และโชคร้าย (Infection: Avoid the Unhappy and Unlucky)"
+      },
+      {
+        "title": "กฎ 11: ทำให้คนอื่นต้องพึ่งพาคุณ (Learn to Keep People Dependent on You)"
+      },
+      {
+        "title": "กฎ 12: ใช้ความซื่อสัตย์และความเอื้อเฟื้อเพื่อคลายความระแวง (Use Selective Honesty and Generosity to Disarm Your Victim)"
+      },
+      {
+        "title": "กฎ 13: ขอความช่วยเหลือโดยอุทธรณ์ผลประโยชน์ของอีกฝ่าย (When Asking for Help, Appeal to People’s Self-Interest, Never to Their Mercy or Gratitude)"
+      },
+      {
+        "title": "กฎ 14: วางตัวเป็นเพื่อนและสอดส่องข้อมูล (Pose as a Friend, Work as a Spy)"
+      },
+      {
+        "title": "กฎ 15: บดขยี้ศัตรูให้สิ้นซาก (Crush Your Enemy Totally)"
+      },
+      {
+        "title": "กฎ 16: ใช้การไม่ปรากฏตัวเพิ่มความเคารพ (Use Absence to Increase Respect and Honor)"
+      },
+      {
+        "title": "กฎ 17: ทำให้คนอื่นคาดเดาคุณไม่ได้ (Keep Others in Suspended Terror: Cultivate an Air of Unpredictability)"
+      },
+      {
+        "title": "กฎ 18: อย่าสร้างป้อมแยกตัว เพราะการโดดเดี่ยวเป็นอันตราย (Do Not Build Fortresses to Protect Yourself—Isolation Is Dangerous)"
+      },
+      {
+        "title": "กฎ 19: รู้ว่ากำลังรับมือกับใคร อย่าล่วงเกินผิดคน (Know Who You’re Dealing With—Do Not Offend the Wrong Person)"
+      },
+      {
+        "title": "กฎ 20: อย่าผูกมัดตนกับฝ่ายใด (Do Not Commit to Anyone)"
+      },
+      {
+        "title": "กฎ 21: ทำเป็นรู้น้อยเพื่อให้คนอื่นประมาท (Play a Sucker to Catch a Sucker—Seem Dumber Than Your Mark)"
+      },
+      {
+        "title": "กฎ 22: ใช้การยอมจำนนเปลี่ยนจุดอ่อนให้เป็นพลัง (Use the Surrender Tactic: Transform Weakness into Power)"
+      },
+      {
+        "title": "กฎ 23: รวมพลังไว้กับสิ่งสำคัญ (Concentrate Your Forces)"
+      },
+      {
+        "title": "กฎ 24: เป็นข้าราชสำนักในอุดมคติ (Play the Perfect Courtier)"
+      },
+      {
+        "title": "กฎ 25: สร้างตัวตนของคุณขึ้นใหม่ (Re-Create Yourself)"
+      },
+      {
+        "title": "กฎ 26: รักษามือให้สะอาด (Keep Your Hands Clean)"
+      },
+      {
+        "title": "กฎ 27: ใช้ความต้องการความเชื่อของผู้คนสร้างสาวก (Play on People’s Need to Believe to Create a Cultlike Following)"
+      },
+      {
+        "title": "กฎ 28: ลงมืออย่างกล้าหาญ (Enter Action with Boldness)"
+      },
+      {
+        "title": "กฎ 29: วางแผนไปจนถึงปลายทาง (Plan All the Way to the End)"
+      },
+      {
+        "title": "กฎ 30: ทำให้ความสำเร็จดูเหมือนไม่ต้องออกแรง (Make Your Accomplishments Seem Effortless)"
+      },
+      {
+        "title": "กฎ 31: ควบคุมทางเลือก ให้ผู้อื่นเลือกจากสิ่งที่คุณจัดไว้ (Control the Options: Get Others to Play with the Cards You Deal)"
+      },
+      {
+        "title": "กฎ 32: เล่นกับจินตนาการและความหวังของผู้คน (Play to People’s Fantasies)"
+      },
+      {
+        "title": "กฎ 33: ค้นหาจุดอ่อนของแต่ละคน (Discover Each Man’s Thumbscrew)"
+      },
+      {
+        "title": "กฎ 34: วางตัวอย่างผู้มีศักดิ์ศรีเพื่อให้คนปฏิบัติต่อคุณเช่นนั้น (Be Royal in Your Own Fashion: Act Like a King to Be Treated Like One)"
+      },
+      {
+        "title": "กฎ 35: เชี่ยวชาญศิลปะแห่งจังหวะเวลา (Master the Art of Timing)"
+      },
+      {
+        "title": "กฎ 36: ดูแคลนสิ่งที่เอื้อมไม่ถึง การเพิกเฉยคือการแก้แค้นที่ดีที่สุด (Disdain Things You Cannot Have: Ignoring Them Is the Best Revenge)"
+      },
+      {
+        "title": "กฎ 37: สร้างภาพที่ดึงดูดใจ (Create Compelling Spectacles)"
+      },
+      {
+        "title": "กฎ 38: คิดอย่างที่ต้องการ แต่ประพฤติตนให้กลมกลืนกับคนรอบข้าง (Think as You Like, but Behave Like Others)"
+      },
+      {
+        "title": "กฎ 39: กวนน้ำให้ขุ่นเพื่อจับปลา (Stir Up Waters to Catch Fish)"
+      },
+      {
+        "title": "กฎ 40: อย่าหลงเชื่อของฟรี (Despise the Free Lunch)"
+      },
+      {
+        "title": "กฎ 41: อย่าก้าวตามรอยผู้ยิ่งใหญ่ (Avoid Stepping into a Great Man’s Shoes)"
+      },
+      {
+        "title": "กฎ 42: จัดการต้นเหตุแล้วกลุ่มจะสลาย (Strike the Shepherd and the Sheep Will Scatter)"
+      },
+      {
+        "title": "กฎ 43: เข้าถึงหัวใจและความคิดของผู้อื่น (Work on the Hearts and Minds of Others)"
+      },
+      {
+        "title": "กฎ 44: ปลดอาวุธหรือยั่วให้โกรธด้วยการสะท้อน (Disarm and Infuriate with the Mirror Effect)"
+      },
+      {
+        "title": "กฎ 45: สนับสนุนการเปลี่ยนแปลง แต่อย่าปฏิรูปมากเกินไปในคราวเดียว (Preach the Need for Change, but Never Reform Too Much at Once)"
+      },
+      {
+        "title": "กฎ 46: อย่าทำให้ตนดูสมบูรณ์แบบเกินไป (Never Appear Too Perfect)"
+      },
+      {
+        "title": "กฎ 47: อย่าเลยเป้าหมายที่ตั้งไว้ เมื่อชนะจงรู้ว่าเมื่อไรควรหยุด (Do Not Go Past the Mark You Aimed for; in Victory, Learn When to Stop)"
+      },
+      {
+        "title": "กฎ 48: ปรับตัวไร้รูปแบบ (Assume Formlessness)"
+      }
+    ]
+  }
+];

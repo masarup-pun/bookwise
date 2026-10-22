@@ -58,6 +58,7 @@
       button.textContent = next ? 'บัญชี' : 'เข้าสู่ระบบ';
       button.setAttribute('aria-label', next ? 'บัญชีและการซิงก์' : 'เข้าสู่ระบบเพื่อซิงก์ข้อมูล');
     });
+    app.authChanged?.(Boolean(next && !next.is_anonymous));
   }
 
   function clone(state) {
@@ -89,7 +90,7 @@
     }
     result.fontSizeCustomized = remote.fontSizeCustomized === true || local.fontSizeCustomized === true;
     result.fontSizePt = remote.fontSizeCustomized === true ? remote.fontSizePt :
-      local.fontSizeCustomized === true ? local.fontSizePt : 20;
+      local.fontSizeCustomized === true ? local.fontSizePt : 14;
     delete result.fontSize;
     return result;
   }
@@ -161,6 +162,7 @@
   }
 
   async function activate(nextUser) {
+    if (nextUser.is_anonymous) { deactivate(); return; }
     if (user?.id === nextUser.id || activatingUserId === nextUser.id) return;
     const currentGeneration = ++generation;
     activatingUserId = nextUser.id;
@@ -248,7 +250,23 @@
     if (error) throw error;
   }
 
-  window.BookwiseCloudSync = { schedule, isSignedIn: () => Boolean(user), uploadCover, getCoverUrl, removeCover };
+  async function loadChapter(bookId, chapterIndex) {
+    if (!client || !user || user.is_anonymous) throw new Error('sign_in_required');
+    const owner = user.id;
+    const { data, error } = await client.from('book_chapters').select('content')
+      .eq('book_id', bookId).eq('chapter_index', chapterIndex).single();
+    if (user?.id !== owner) throw new Error('account_changed_during_chapter_load');
+    if (error) {
+      if (error.status === 401 || error.code === 'PGRST301' || error.code === 'PGRST303') deactivate();
+      throw error;
+    }
+    if (!data?.content) throw new Error('chapter_not_available');
+    return data.content;
+  }
+
+  window.BookwiseCloudSync = { schedule, isSignedIn: () => Boolean(user && !user.is_anonymous), uploadCover, getCoverUrl, removeCover, loadChapter };
+  app.authChanged?.(false);
+  document.getElementById('account-close').addEventListener('click', () => dialog.close());
   if (!app || !config?.url || !config?.publishableKey || !/^https?:$/.test(location.protocol)) {
     if (!/^https?:$/.test(location.protocol)) {
       message('เปิดเว็บไซต์ผ่าน HTTPS เพื่อเข้าสู่ระบบ');
@@ -270,7 +288,6 @@
     button.hidden = false;
     button.addEventListener('click', () => dialog.showModal());
   });
-  document.getElementById('account-close').addEventListener('click', () => dialog.close());
   form.addEventListener('submit', async event => {
     event.preventDefault();
     if (!client) return;

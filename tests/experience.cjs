@@ -1,0 +1,83 @@
+// Browser integration tests with a simulated Supabase transport, never a real login.
+const {chromium}=require('playwright');
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'..'),content=JSON.parse(fs.readFileSync(path.join(root,'private/book-content.json'),'utf8'));
+const output=path.join(root,'test-results');fs.mkdirSync(output,{recursive:true});
+const sdk=`window.supabase={createClient(){
+ let listener=null,current=(window.__testSignedIn||localStorage.getItem('__testAuth')==='true')?{id:'test-reader',email:'reader@example.test'}:null;
+ window.__testSetUser=value=>{current=value;localStorage.setItem('__testAuth',String(Boolean(value)));listener?.(value?'SIGNED_IN':'SIGNED_OUT',{user:value});};
+ const client={auth:{onAuthStateChange(fn){listener=fn;},async getUser(){return {data:{user:current},error:null};},async signOut(){current=null;listener?.('SIGNED_OUT',null);return {error:null};}},
+ from(table){const filters={};return {select(){return this;},eq(k,v){filters[k]=v;return this;},async maybeSingle(){return {data:{revision:1,state:JSON.parse(localStorage.getItem('__testRemote')||'{}')},error:null};},async single(){window.__testChapterRequests=(window.__testChapterRequests||0)+1;await new Promise(r=>setTimeout(r,window.__testDelay||0));const book=window.__testContent.find(b=>b.id===filters.book_id);return {data:{content:book.chapters[filters.chapter_index]},error:null};}};},
+ async rpc(name,args){localStorage.setItem('__testRemote',JSON.stringify(args.p_state));return {data:2,error:null};}};
+ return client;
+}};`;
+let activeBrowser;
+(async()=>{
+ const browser=await chromium.launch({headless:true});
+ activeBrowser=browser;
+ const context=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'});
+ await context.addInitScript(({content})=>{window.__testContent=content;window.__testSignedIn=false;},{content});
+ await context.route('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2',route=>route.fulfill({status:200,contentType:'application/javascript',body:sdk}));
+ const page=await context.newPage(),errors=[];page.on('pageerror',error=>errors.push(error.message));
+ await page.goto('http://127.0.0.1:4173/');await page.waitForFunction(()=>window.__testSetUser);
+ assert.equal(await page.locator('.book').count(),18);
+ await page.locator('.book[data-id="atomic-habits"] .book-title-button').click();
+ await page.locator('#account-dialog').waitFor({state:'visible'});
+ assert.equal(await page.locator('#chapter-body').innerText(),'');
+ assert.equal(await page.evaluate(()=>window.__testChapterRequests||0),0);
+ await page.locator('#account-close').click();
+ await page.locator('.nav [data-view="review"]').click();await page.locator('.access-gate').waitFor();
+ assert.equal(await page.locator('.flashcard').count(),0);
+ await page.evaluate(()=>window.__testSetUser({id:'test-reader',email:'reader@example.test'}));
+ await page.locator('#chapter-body .reading-block').first().waitFor();
+ assert.equal(await page.locator('#font-value').innerText(),'14 pt');
+ assert.equal(await page.locator('#chapter-title').innerText(),content.find(b=>b.id==='atomic-habits').chapters[0].title.split(' (')[0]);
+ await page.locator('#type-settings summary').click();
+ await page.locator('#font-range').fill('48');assert.equal(await page.locator('#font-value').innerText(),'48 pt');
+ await page.locator('#font-range').fill('10');assert.equal(await page.locator('#font-value').innerText(),'10 pt');
+ await page.locator('#font-reset').click();assert.equal(await page.locator('#font-value').innerText(),'14 pt');
+ await page.locator('#chapter-picker').click();await page.locator('#chapter-dialog').waitFor({state:'visible'});
+ await page.screenshot({path:path.join(output,'mobile-chapter-picker.png')});
+ await page.locator('#chapter-search').fill('20');assert.equal(await page.locator('.chapter-option').count(),1);
+ await page.locator('[data-pick-chapter="19"]').click();await page.waitForFunction(()=>document.getElementById('chapter-label').textContent==='บทที่ 20'&&!document.getElementById('recall').hidden);
+ assert.equal(await page.locator('#chapter-prev').isEnabled(),true);assert.equal(await page.locator('#chapter-forward').isEnabled(),false);
+ await page.locator('#chapter-flip').scrollIntoViewIfNeeded();await page.locator('#chapter-flip').click();
+ assert.equal(await page.locator('#chapter-flashcard').getAttribute('class'),'flashcard is-flipped');
+ await page.screenshot({path:path.join(output,'mobile-flashcard.png')});
+ await page.locator('#save-all-cards').click();
+ assert.equal(await page.evaluate(()=>window.BookwiseApp.getState().reviewQueue.length),3);
+ await page.locator('.nav [data-view="review"]').click();await page.locator('#review-flip').click();
+ await page.locator('[data-grade="good"]').click();
+ assert.equal(await page.evaluate(()=>window.BookwiseApp.getState().reviewQueue.filter(c=>c.due>Date.now()).length),1);
+ await page.locator('#review-flip').click();await page.locator('[data-grade="again"]').click();
+ const scheduled=await page.evaluate(()=>window.BookwiseApp.getState().reviewQueue.filter(c=>c.due>Date.now()).map(c=>c.interval));
+ assert(scheduled.includes(10/1440));
+ await page.locator('#review-flip').click();await page.locator('[data-grade="easy"]').click();
+ await page.locator('.review-finished').waitFor();assert.equal(await page.evaluate(()=>window.BookwiseApp.getState().reviewQueue.filter(c=>c.due<=Date.now()).length),0);
+ await page.waitForFunction(()=>JSON.parse(localStorage.getItem('__testRemote')||'{}').reviewQueue?.every(c=>c.repetitions===1));
+ await page.reload();await page.waitForFunction(()=>document.body.dataset.auth==='signed-in');
+ assert.equal(await page.evaluate(()=>window.BookwiseApp.getState().reviewQueue.filter(c=>c.due>Date.now()).length),3);
+ for(const width of [320,390,768,1024,1440]){
+  await page.setViewportSize({width,height:width<500?844:1000});await page.locator('.nav [data-view="all"]').click();
+  const dimensions=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,dock:document.querySelector('.nav').classList.contains('mobile-dock')}));
+  assert(dimensions.scroll<=dimensions.width+1,'Library overflow at '+width+': '+JSON.stringify(dimensions));assert.equal(dimensions.dock,width<=1000);
+  await page.locator('.book[data-id="atomic-habits"] .book-title-button').click();await page.locator('#chapter-body .reading-block').first().waitFor();
+  const reading=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,font:getComputedStyle(document.getElementById('chapter-body')).fontFamily}));
+  assert(reading.scroll<=reading.width+1,'Reader overflow at '+width+': '+JSON.stringify(reading));assert(reading.font.includes('Sarabun'));
+  await page.screenshot({path:path.join(output,'reader-'+width+'.png')});
+ }
+ await page.locator('#chapter-picker').click();
+ assert(await page.locator('#chapter-options').evaluate(el=>el.scrollHeight>el.clientHeight),'Desktop chapter picker must scroll inside the dialog');
+ await page.locator('#chapter-dialog-close').click();
+ await page.setViewportSize({width:390,height:844});await page.locator('#theme-toggle').click();await page.evaluate(()=>Promise.all(document.getAnimations().map(animation=>animation.finished.catch(()=>{}))));const darkColor=await page.locator('.prose').evaluate(el=>getComputedStyle(el).color);assert(Number(darkColor.match(/\d+/)[0])>150,'Dark reading text must be legible: '+darkColor);await page.screenshot({path:path.join(output,'mobile-dark.png')});
+ // A chapter request finishing after sign out must never repopulate reading content.
+ await page.evaluate(()=>{window.__testDelay=250;showChapter(2);window.__testSetUser(null);});
+ await page.waitForFunction(()=>document.body.dataset.auth==='signed-out');
+ await page.waitForTimeout(350);
+ assert.equal(await page.locator('#chapter-body').innerText(),'');assert.equal(await page.locator('#quiz-content').innerText(),'');
+ assert.equal(await page.evaluate(()=>booksData.some(b=>b.chapters.some(c=>c.body))),false);
+ const blocked=await page.request.get('http://127.0.0.1:4173/private/book-content.json');assert.equal(blocked.status(),404);
+ assert.equal(errors.length,0,errors.join('\n'));
+ console.log('PASS: guest gate, authenticated chapter loading, 10–48 pt, searchable chapters, flashcards, persisted scheduling, 5 viewport widths, logout/in-flight clearing.');
+ await browser.close();
+})().catch(async error=>{console.error(error);await activeBrowser?.close();process.exitCode=1;});
