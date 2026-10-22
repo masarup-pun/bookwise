@@ -30,8 +30,23 @@
   <link rel="stylesheet" href="app-base.css">
   <link rel="stylesheet" href="app-experience.css">
 </head>
-<body>
-  <div class="shell">
+<body data-auth="signed-out">
+  <main class="login-screen" id="login-screen" aria-labelledby="login-title">
+    <section class="login-card">
+      <img src="favicon.svg" alt="" class="login-logo" width="64" height="64">
+      <span class="login-brand">Readwise</span>
+      <h1 id="login-title">เปิดโลกความคิด<br>จากหนังสือเล่มถัดไป</h1>
+      <p>เข้าสู่ห้องสมุดส่วนตัวด้วยรหัสผ่านของคุณ</p>
+      <form id="account-form">
+        <label for="account-password">รหัสผ่าน</label>
+        <div class="password-control"><input id="account-password" type="password" autocomplete="current-password" required placeholder="กรอกรหัสผ่าน" aria-describedby="login-status"><button type="button" id="password-toggle" aria-label="แสดงรหัสผ่าน" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
+        <button type="submit" id="account-send" disabled>เข้าสู่ห้องสมุด <span aria-hidden="true">→</span></button>
+        <p id="login-status" class="login-status" role="status" aria-live="polite">กำลังเชื่อมต่อ…</p>
+      </form>
+      <small class="login-footnote">อ่านลึก · คิดไกล · ใช้ได้จริง</small>
+    </section>
+  </main>
+  <div class="shell" hidden>
     <header class="app-header">
       <div class="brand"><span class="brand-symbol" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">  <defs>    <linearGradient id="bookwise-mark" x1="3" y1="2" x2="45" y2="46" gradientUnits="userSpaceOnUse">      <stop stop-color="#416fA8"/>      <stop offset="1" stop-color="#193b66"/>    </linearGradient>  </defs>  <rect width="48" height="48" rx="14" fill="url(#bookwise-mark)"/>  <path d="M8 13.4c5.6-1.8 11.1-.9 16 2.2v20.7c-4.6-3-10.1-3.9-16-2.1V13.4Z" fill="#F8FBFF"/>  <path d="M40 13.4c-5.6-1.8-11.1-.9-16 2.2v20.7c4.6-3 10.1-3.9 16-2.1V13.4Z" fill="#E6F0FA"/>  <path d="M12 18c3.2-.6 6.4-.1 9.1 1.2M12 22.3c3.2-.5 6.4 0 9.1 1.2M36 18c-3.2-.6-6.4-.1-9.1 1.2M36 22.3c-3.2-.5-6.4 0-9.1 1.2" fill="none" stroke="#9CB3CE" stroke-linecap="round" stroke-width="1.25"/>  <path d="M24 15.6v20.7" fill="none" stroke="#92D8C7" stroke-linecap="round" stroke-width="2"/></svg></span><span>Readwise</span></div>
       <nav class="nav" aria-label="เมนูหลัก">
@@ -74,7 +89,7 @@
   <div class="selection-toolbar" id="selection-toolbar" hidden><span>บันทึกข้อความ</span><button id="highlight-selection">ไฮไลต์</button><button id="note-selection">+ โน้ต</button></div>
   <dialog class="note-dialog" id="note-dialog"><form id="note-form"><div class="note-dialog-top"><span>โน้ตระหว่างอ่าน</span><button type="button" id="close-note" aria-label="ปิดโน้ต">×</button></div><h2>บันทึกความคิด</h2><blockquote id="note-excerpt"></blockquote><label for="note-text">โน้ตของคุณ</label><textarea id="note-text" rows="5" placeholder="เขียนสิ่งที่อยากจำ หรือความคิดที่เกิดขึ้น..."></textarea><div class="note-dialog-actions"><button type="button" class="note-delete" id="delete-note">ลบไฮไลต์</button><button type="submit" class="note-save">บันทึกโน้ต</button></div></form></dialog>
   <dialog class="search-dialog" id="search-dialog"><div class="search-dialog-top"><label for="search-input">ค้นหาในห้องสมุด</label><button id="close-search" aria-label="ปิดการค้นหา">×</button></div><input id="search-input" type="search" placeholder="ชื่อหนังสือ ผู้เขียน หรือชื่อบท" autocomplete="off"><div id="search-results" class="search-results"></div></dialog>
-  <dialog class="account-dialog" id="account-dialog"><div class="account-dialog-head"><h2>เข้าสู่ระบบ Bookwise</h2><button type="button" id="account-close" aria-label="ปิด">×</button></div><p>กรอกอีเมลเพื่อรับลิงก์เข้าสู่ระบบหรือสร้างบัญชี แล้วซิงก์ห้องสมุดข้ามอุปกรณ์ ลิงก์ใช้ได้ครั้งเดียวและมีอายุจำกัด</p><form id="account-form"><label for="account-email">อีเมล</label><input id="account-email" type="email" autocomplete="email" required placeholder="you@example.com"><div class="account-dialog-actions"><button type="submit" id="account-send">ส่งลิงก์เข้าสู่ระบบ</button></div></form><div id="account-signed-in" hidden><p id="account-current-email"></p><div class="account-dialog-actions"><button class="secondary" type="button" id="account-import" hidden>นำเข้าข้อมูลจากเครื่องนี้</button><button class="secondary" type="button" id="account-reload">โหลดข้อมูลล่าสุด</button><button class="secondary" type="button" id="account-signout">ออกจากระบบ</button></div></div><p class="account-status" id="account-status" role="status" aria-live="polite">กำลังเชื่อมต่อ…</p></dialog>
+  <dialog class="account-dialog" id="account-dialog"><div class="account-dialog-head"><h2>ห้องสมุดส่วนตัว</h2><button type="button" id="account-close" aria-label="ปิด">×</button></div><div id="account-signed-in" hidden><p id="account-current-email"></p><div class="account-dialog-actions"><button class="secondary" type="button" id="account-import" hidden>นำเข้าข้อมูลจากเครื่องนี้</button><button class="secondary" type="button" id="account-reload">โหลดข้อมูลล่าสุด</button><button class="secondary" type="button" id="account-signout">ออกจากระบบ</button></div></div><p class="account-status" id="account-status" role="status" aria-live="polite">กำลังเชื่อมต่อ…</p></dialog>
   <dialog class="chapter-dialog" id="chapter-dialog" aria-labelledby="chapter-dialog-title"><div class="sheet-handle" aria-hidden="true"></div><div class="sheet-heading"><div><h2 id="chapter-dialog-title">เลือกบท</h2><p id="chapter-dialog-book"></p></div><button id="chapter-dialog-close" class="close-control" aria-label="ปิดสารบัญ">×</button></div><label class="sr-only" for="chapter-search">ค้นหาบท</label><input type="search" id="chapter-search" placeholder="ค้นหาชื่อบท หรือเลขบท…" autocomplete="off"><div id="chapter-options" class="chapter-options"></div></dialog>
   <script src="bookwise-catalog.js"></script>
   <script src="app.js"></script>

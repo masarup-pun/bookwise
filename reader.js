@@ -6,8 +6,7 @@ const plainText=value=>String(value||'').replace(/\*\*/g,'');
 function requireLogin(bookRequest){
   if(signedIn())return true;
   if(bookRequest)pendingBook=bookRequest;
-  const dialog=document.getElementById('account-dialog');
-  if(!dialog.open)dialog.showModal();
+  document.getElementById('account-password').focus();
   return false;
 }
 function clearReadingContent(){
@@ -249,6 +248,8 @@ document.addEventListener('keydown',event=>{if(event.key==='Escape')document.get
 document.getElementById('review-list').insertAdjacentHTML('afterend','<p class="sr-only" id="review-status" role="status"></p>');
 window.BookwiseApp.authChanged=authenticated=>{
   document.body.dataset.auth=authenticated?'signed-in':'signed-out';
+  document.querySelector('.shell').hidden=!authenticated;
+  document.getElementById('login-screen').hidden=authenticated;
   if(!authenticated){clearReadingContent();showView('all');}else{
     document.getElementById('account-dialog').close();
     renderBooks();

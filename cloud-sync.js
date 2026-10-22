@@ -12,9 +12,7 @@
   const signoutButton = document.getElementById('account-signout');
   const sendButton = document.getElementById('account-send');
   const buttons = [document.getElementById('reader-account-button')];
-  const authRedirectUrl = 'https://masarup-pun.github.io/bookwise/';
-  const authErrorParams = new URLSearchParams(location.hash.replace(/^#/, ''));
-  const authErrorCode = authErrorParams.get('error_code');
+  const loginStatus = document.getElementById('login-status');
   let client = null;
   let user = null;
   let revision = 0;
@@ -30,20 +28,11 @@
     status.textContent = value;
   }
 
-  function showAuthLinkError() {
-    const text = authErrorCode === 'otp_expired'
-      ? 'ลิงก์นี้หมดอายุหรือถูกใช้แล้ว · กรอกอีเมลเพื่อขอลิงก์ใหม่'
-      : 'ยืนยันอีเมลไม่สำเร็จ · กรอกอีเมลแล้วขอลิงก์ใหม่';
-    if (!dialog.open) dialog.showModal();
-    message(text);
-    history.replaceState(null, '', location.pathname + location.search);
-  }
-
   function setUser(next) {
     user = next;
-    form.hidden = Boolean(next);
+    if (!next) loginStatus.textContent = 'กรอกรหัสผ่านเพื่อเปิดห้องสมุด';
     signedIn.hidden = !next;
-    document.getElementById('account-current-email').textContent = next?.email || '';
+    document.getElementById('account-current-email').textContent = next ? 'ห้องสมุดส่วนตัว' : '';
     const emptyLogin = document.getElementById('empty-login');
     const emptyDescription = document.getElementById('empty-description');
     const menuEmail = document.getElementById('account-menu-email');
@@ -51,9 +40,9 @@
     if (emptyLogin) emptyLogin.hidden = Boolean(next);
     if (emptyDescription) emptyDescription.textContent = next
       ? 'เข้าสู่ระบบแล้ว · ห้องสมุดของคุณยังไม่มีหนังสือ'
-      : 'เข้าสู่ระบบหรือสร้างบัญชีด้วยอีเมล เพื่อบันทึกและซิงก์ห้องสมุดข้ามอุปกรณ์';
-    if (menuEmail) menuEmail.textContent = next?.email || 'ยังไม่ได้เข้าสู่ระบบ';
-    if (menuAction) menuAction.textContent = next ? 'จัดการบัญชีและการซิงก์' : 'เข้าสู่ระบบ / สร้างบัญชี';
+      : 'เข้าสู่ระบบด้วยรหัสผ่านเพื่อเปิดห้องสมุด';
+    if (menuEmail) menuEmail.textContent = next ? 'เข้าสู่ระบบแล้ว' : 'ยังไม่ได้เข้าสู่ระบบ';
+    if (menuAction) menuAction.textContent = next ? 'จัดการบัญชีและการซิงก์' : 'เข้าสู่ระบบ';
     buttons.forEach(button => {
       button.textContent = next ? 'บัญชี' : 'เข้าสู่ระบบ';
       button.setAttribute('aria-label', next ? 'บัญชีและการซิงก์' : 'เข้าสู่ระบบเพื่อซิงก์ข้อมูล');
@@ -267,15 +256,15 @@
   window.BookwiseCloudSync = { schedule, isSignedIn: () => Boolean(user && !user.is_anonymous), uploadCover, getCoverUrl, removeCover, loadChapter };
   app.authChanged?.(false);
   document.getElementById('account-close').addEventListener('click', () => dialog.close());
-  if (!app || !config?.url || !config?.publishableKey || !/^https?:$/.test(location.protocol)) {
+  if (!app || !config?.url || !config?.publishableKey || !config?.accessEmail || !/^https?:$/.test(location.protocol)) {
     if (!/^https?:$/.test(location.protocol)) {
-      message('เปิดเว็บไซต์ผ่าน HTTPS เพื่อเข้าสู่ระบบ');
+      loginStatus.textContent = 'เปิดเว็บไซต์ผ่าน HTTPS หรือ localhost เพื่อเข้าสู่ระบบ';
       form.addEventListener('submit', event => {
         event.preventDefault();
         message('ระบบเข้าสู่ระบบใช้ได้เมื่อเปิดเว็บไซต์ Bookwise ผ่าน HTTPS');
       });
     } else {
-      message('ระบบเข้าสู่ระบบยังตั้งค่าไม่ครบ โปรดตรวจ Supabase');
+      loginStatus.textContent = 'ระบบเข้าสู่ระบบยังตั้งค่าไม่ครบ โปรดตรวจ Supabase';
       form.addEventListener('submit', event => {
         event.preventDefault();
         message('ระบบเข้าสู่ระบบยังตั้งค่าไม่ครบ โปรดตรวจ Supabase URL และ Publishable key');
@@ -288,18 +277,45 @@
     button.hidden = false;
     button.addEventListener('click', () => dialog.showModal());
   });
+  document.getElementById('password-toggle').addEventListener('click', event => {
+    const input = document.getElementById('account-password');
+    const reveal = input.type === 'password';
+    input.type = reveal ? 'text' : 'password';
+    event.currentTarget.setAttribute('aria-pressed', String(reveal));
+    event.currentTarget.setAttribute('aria-label', reveal ? 'ซ่อนรหัสผ่าน' : 'แสดงรหัสผ่าน');
+  });
   form.addEventListener('submit', async event => {
     event.preventDefault();
-    if (!client) return;
-    const email = document.getElementById('account-email').value.trim();
+    if (!client || sendButton.disabled) return;
+    const input = document.getElementById('account-password');
     sendButton.disabled = true;
-    message('กำลังส่งลิงก์…');
-    const { error } = await client.auth.signInWithOtp({
-      email,
-      options: { emailRedirectTo: authRedirectUrl }
-    });
-    sendButton.disabled = false;
-    message(error ? `ส่งลิงก์ไม่สำเร็จ: ${error.message}` : 'ส่งลิงก์แล้ว · เปิดอีเมลและกดลิงก์เพื่อเข้าสู่ระบบ');
+    form.setAttribute('aria-busy', 'true');
+    loginStatus.textContent = 'กำลังเปิดห้องสมุด…';
+    try {
+      const { data, error } = await client.auth.signInWithPassword({
+        email: config.accessEmail, password: input.value
+      });
+      if (error) {
+        loginStatus.textContent = error.status === 429
+          ? 'ลองเข้าสู่ระบบหลายครั้งเกินไป กรุณารอสักครู่แล้วลองใหม่'
+          : 'รหัสผ่านไม่ถูกต้อง หรือยังไม่ได้เปิดใช้งานบัญชีห้องสมุด';
+        input.focus(); input.select();
+        return;
+      }
+      if (!data?.user || data.user.is_anonymous) throw new Error('invalid_session');
+      await activate(data.user);
+      input.value = '';
+      input.type = 'password';
+      document.getElementById('password-toggle').setAttribute('aria-pressed', 'false');
+      document.getElementById('password-toggle').setAttribute('aria-label', 'แสดงรหัสผ่าน');
+      document.getElementById('shelf-title').setAttribute('tabindex', '-1');
+      document.getElementById('shelf-title').focus();
+    } catch {
+      loginStatus.textContent = 'เชื่อมต่อไม่สำเร็จ ตรวจอินเทอร์เน็ตแล้วลองอีกครั้ง';
+    } finally {
+      sendButton.disabled = false;
+      form.removeAttribute('aria-busy');
+    }
   });
   importButton.addEventListener('click', async () => {
     if (!user || pending || syncing || conflicted) {
@@ -357,14 +373,14 @@
       const { data, error } = await client.auth.getUser();
       if (error && error.name !== 'AuthSessionMissingError') throw error;
       if (data.user) await activate(data.user);
-      else if (authErrorCode) showAuthLinkError();
-      else message('ข้อมูลในเครื่อง · เข้าสู่ระบบเพื่อซิงก์');
+      else loginStatus.textContent = 'กรอกรหัสผ่านเพื่อเปิดห้องสมุด';
+      sendButton.disabled = false;
     } catch (error) {
-      if (authErrorCode) showAuthLinkError();
-      else message('เชื่อมต่อบัญชีไม่สำเร็จ · ข้อมูลยังอยู่ในเครื่อง');
+      loginStatus.textContent = 'ตรวจสอบการเข้าสู่ระบบไม่สำเร็จ กรุณาลองเข้าสู่ระบบอีกครั้ง';
+      sendButton.disabled = false;
       console.error('Bookwise Supabase:', error);
     }
   };
-  script.onerror = () => message('โหลดระบบบัญชีไม่สำเร็จ · ตรวจการเชื่อมต่ออินเทอร์เน็ต');
+  script.onerror = () => { loginStatus.textContent = 'โหลดระบบเข้าสู่ระบบไม่สำเร็จ กรุณาตรวจอินเทอร์เน็ตแล้วรีเฟรช'; };
   document.head.appendChild(script);
 })();

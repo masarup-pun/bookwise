@@ -6,7 +6,7 @@ const output=path.join(root,'test-results');fs.mkdirSync(output,{recursive:true}
 const sdk=`window.supabase={createClient(){
  let listener=null,current=(window.__testSignedIn||localStorage.getItem('__testAuth')==='true')?{id:'test-reader',email:'reader@example.test'}:null;
  window.__testSetUser=value=>{current=value;localStorage.setItem('__testAuth',String(Boolean(value)));listener?.(value?'SIGNED_IN':'SIGNED_OUT',{user:value});};
- const client={auth:{onAuthStateChange(fn){listener=fn;},async getUser(){return {data:{user:current},error:null};},async signOut(){current=null;listener?.('SIGNED_OUT',null);return {error:null};}},
+ const client={auth:{onAuthStateChange(fn){listener=fn;},async getUser(){return {data:{user:current},error:null};},async signInWithPassword(args){if(args.email!=='library@bookwise.example'||args.password!=='test-only-password')return {data:{user:null},error:{status:400,message:'Invalid credentials'}};window.__testSetUser({id:'test-reader',email:args.email});return {data:{user:current},error:null};},async signOut(){current=null;localStorage.removeItem('__testAuth');listener?.('SIGNED_OUT',null);return {error:null};}},
  from(table){const filters={};return {select(){return this;},eq(k,v){filters[k]=v;return this;},async maybeSingle(){return {data:{revision:1,state:JSON.parse(localStorage.getItem('__testRemote')||'{}')},error:null};},async single(){window.__testChapterRequests=(window.__testChapterRequests||0)+1;await new Promise(r=>setTimeout(r,window.__testDelay||0));const book=window.__testContent.find(b=>b.id===filters.book_id);return {data:{content:book.chapters[filters.chapter_index]},error:null};}};},
  async rpc(name,args){localStorage.setItem('__testRemote',JSON.stringify(args.p_state));return {data:2,error:null};}};
  return client;
@@ -20,15 +20,23 @@ let activeBrowser;
  await context.route('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2',route=>route.fulfill({status:200,contentType:'application/javascript',body:sdk}));
  const page=await context.newPage(),errors=[];page.on('pageerror',error=>errors.push(error.message));
  await page.goto('http://127.0.0.1:4173/');await page.waitForFunction(()=>window.__testSetUser);
- assert.equal(await page.locator('.book').count(),18);
- await page.locator('.book[data-id="atomic-habits"] .book-title-button').click();
- await page.locator('#account-dialog').waitFor({state:'visible'});
- assert.equal(await page.locator('#chapter-body').innerText(),'');
+ await page.locator('#account-send').waitFor({state:'visible'});
+ assert.equal(await page.locator('.shell').isVisible(),false);
+ assert.equal(await page.locator('.nav').isVisible(),false);
+ assert.equal(await page.locator('input[type="email"]').count(),0);
  assert.equal(await page.evaluate(()=>window.__testChapterRequests||0),0);
- await page.locator('#account-close').click();
- await page.locator('.nav [data-view="review"]').click();await page.locator('.access-gate').waitFor();
- assert.equal(await page.locator('.flashcard').count(),0);
- await page.evaluate(()=>window.__testSetUser({id:'test-reader',email:'reader@example.test'}));
+ await page.locator('#account-password').fill('wrong-password');
+ await page.locator('#account-send').click();
+ await page.locator('#login-status').filter({hasText:'รหัสผ่านไม่ถูกต้อง'}).waitFor();
+ assert.equal(await page.locator('.shell').isVisible(),false);
+ await page.locator('#password-toggle').click();assert.equal(await page.locator('#account-password').getAttribute('type'),'text');
+ await page.locator('#account-password').fill('test-only-password');
+ await page.locator('#account-send').click();
+ await page.waitForFunction(()=>document.body.dataset.auth==='signed-in');
+ assert.equal(await page.locator('#login-screen').isVisible(),false);
+ assert.equal(await page.locator('.book').count(),18);
+ assert.equal(await page.locator('#account-password').inputValue(),'');
+ await page.locator('.book[data-id="atomic-habits"] .book-title-button').click();
  await page.locator('#chapter-body .reading-block').first().waitFor();
  assert.equal(await page.locator('#font-value').innerText(),'14 pt');
  assert.equal(await page.locator('#chapter-title').innerText(),content.find(b=>b.id==='atomic-habits').chapters[0].title.split(' (')[0]);
@@ -77,6 +85,9 @@ let activeBrowser;
  assert.equal(await page.locator('#chapter-body').innerText(),'');assert.equal(await page.locator('#quiz-content').innerText(),'');
  assert.equal(await page.evaluate(()=>booksData.some(b=>b.chapters.some(c=>c.body))),false);
  const blocked=await page.request.get('http://127.0.0.1:4173/private/book-content.json');assert.equal(blocked.status(),404);
+ assert.equal(await page.locator('#login-screen').isVisible(),true);
+ assert.equal(await page.locator('.shell').isVisible(),false);
+ await page.screenshot({path:path.join(output,'password-login.png')});
  assert.equal(errors.length,0,errors.join('\n'));
  console.log('PASS: guest gate, authenticated chapter loading, 10–48 pt, searchable chapters, flashcards, persisted scheduling, 5 viewport widths, logout/in-flight clearing.');
  await browser.close();
