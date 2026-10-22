@@ -1,0 +1,99 @@
+// Run locally in Terminal. Credentials are prompted without echo and never saved.
+const fs = require('node:fs');
+const path = require('node:path');
+const readline = require('node:readline');
+const { Writable } = require('node:stream');
+const root = path.resolve(__dirname, '..');
+let Client;
+try { ({ Client } = require(path.join(root, 'private/import-runtime/node_modules/pg'))); }
+catch { console.error('ยังไม่ได้ติดตั้ง PostgreSQL client: รัน npm install --prefix private/import-runtime pg@8 --no-audit --no-fund --ignore-scripts'); process.exit(1); }
+// CA downloaded from the official Supabase Dashboard SSL configuration:
+// https://supabase-downloads.s3-ap-southeast-1.amazonaws.com/prod/ssl/prod-ca-2021.crt
+const project = 'rbouzxzajsstudywwlvj';
+const connection = { host: 'aws-0-ap-northeast-1.pooler.supabase.com', port: 5432,
+  user: `postgres.${project}`, database: 'postgres', ssl: { rejectUnauthorized: true, ca: fs.readFileSync(path.join(root, 'supabase/prod-ca-2021.crt'), 'utf8') },
+  connectionTimeoutMillis: 20000, application_name: 'bookwise-local-content-import' };
+
+function loadBooks() {
+  const books = JSON.parse(fs.readFileSync(path.join(root, 'private/book-content.json'), 'utf8'));
+  if (!Array.isArray(books) || !books.length) throw new Error('ไม่พบข้อมูลหนังสือ');
+  const ids = new Set();
+  for (const book of books) {
+    if (!book.id || ids.has(book.id) || !Array.isArray(book.chapters) || !book.chapters.length) throw new Error('รายการหนังสือไม่ถูกต้องหรือมี ID ซ้ำ');
+    ids.add(book.id);
+    for (const chapter of book.chapters) {
+      if (!chapter.title || !Array.isArray(chapter.body) || !chapter.body.length || !Array.isArray(chapter.quiz)) throw new Error(`เนื้อหาไม่ครบ: ${book.title}`);
+    }
+  }
+  return books;
+}
+function passwordPrompt() {
+  if (!process.stdin.isTTY) throw new Error('กรุณาเปิดไฟล์ Import Bookwise.command ใน Terminal เพื่อกรอกรหัสผ่าน');
+  return new Promise((resolve, reject) => {
+    let muted = false;
+    const output = new Writable({ write(chunk, encoding, callback) { if (muted) callback(); else process.stdout.write(chunk, encoding, callback); } });
+    const rl = readline.createInterface({ input: process.stdin, output, terminal: true });
+    process.stdout.write('Database password (พิมพ์แล้วกด Enter — ตัวอักษรจะไม่แสดง): ');
+    muted = true;
+    rl.question('', value => { muted = false; rl.close(); process.stdout.write('\n'); resolve(value); });
+    rl.on('SIGINT', () => { rl.close(); reject(new Error('ยกเลิกการนำเข้า')); });
+  });
+}
+async function importBooks(books, password) {
+  const client = new Client({ ...connection, password });
+  let transaction = false;
+  try {
+    await client.connect();
+    await client.query('begin'); transaction = true;
+    await client.query("set local statement_timeout = '120s'");
+    await client.query(fs.readFileSync(path.join(root, 'supabase/content-schema.sql'), 'utf8'));
+    for (let i = 0; i < books.length; i++) {
+      const book = books[i];
+      await client.query(`insert into public.book_chapters(book_id,chapter_index,content)
+        select $1, (ordinality - 1)::integer, chapter
+        from jsonb_array_elements($2::jsonb) with ordinality as source(chapter,ordinality)
+        on conflict(book_id,chapter_index) do update set content=excluded.content,updated_at=now()`,
+        [book.id, JSON.stringify(book.chapters)]);
+      const result = await client.query(`select count(*)::integer as checked,
+        count(*) filter (where saved.content is distinct from expected.chapter)::integer as mismatches
+        from jsonb_array_elements($2::jsonb) with ordinality as expected(chapter,ordinality)
+        left join public.book_chapters saved on saved.book_id=$1 and saved.chapter_index=expected.ordinality-1`,
+        [book.id, JSON.stringify(book.chapters)]);
+      if (result.rows[0].checked !== book.chapters.length || result.rows[0].mismatches !== 0) throw new Error(`ตรวจเนื้อหาไม่ผ่าน: ${book.title}`);
+      console.log(`[${i + 1}/${books.length}] ตรวจแล้ว: ${book.title} — ${book.chapters.length} บท`);
+    }
+    const result = await client.query('select count(*)::integer as chapters, count(distinct book_id)::integer as books from public.book_chapters where book_id = any($1::text[])', [books.map(book => book.id)]);
+    const count = books.reduce((sum, book) => sum + book.chapters.length, 0);
+    if (result.rows[0].chapters !== count || result.rows[0].books !== books.length) throw new Error('จำนวนบทในฐานข้อมูลไม่ตรงกับต้นฉบับ');
+    await client.query('commit'); transaction = false;
+    console.log(`\nนำเข้าสำเร็จ: ${books.length} เล่ม / ${count} บท — ตรวจข้อมูลทุกบทตรงกับไฟล์ในเครื่องแล้ว`);
+    const progressPath = path.join(root, 'private/drafts/rewrite-progress.json');
+    try {
+      const progress = JSON.parse(fs.readFileSync(progressPath, 'utf8'));
+      progress.status = 'catalog_publish_pending'; progress.database_import_pending = false; progress.catalog_push_pending = true;
+      progress.integration_blocker = null;
+      progress.database_audit = { project: 'Bookwise production', books: books.length, chapters: count, all_content_matches_source: true, audited_at: new Date().toISOString() };
+      progress.updated_at = new Date().toISOString();
+      fs.writeFileSync(progressPath, JSON.stringify(progress, null, 2) + '\n');
+    } catch { console.log('นำเข้าแล้ว แต่บันทึกไฟล์สถานะในเครื่องไม่ได้'); }
+    console.log('แจ้ง Codex ว่า “นำเข้าเสร็จแล้ว” เพื่อเผยแพร่ catalog และตรวจเว็บต่อ');
+  } catch (error) {
+    if (transaction) await client.query('rollback').catch(() => {});
+    throw error;
+  } finally { await client.end().catch(() => {}); }
+}
+async function main() {
+  const books = loadBooks(), count = books.reduce((sum, book) => sum + book.chapters.length, 0);
+  console.log(`Bookwise — นำเข้า ${books.length} เล่ม / ${count} บท\nโครงการ: ${project}`);
+  if (process.argv.includes('--check')) { console.log('ตรวจไฟล์และ PostgreSQL client ผ่าน (ยังไม่ได้เชื่อมต่อหรือแก้ฐานข้อมูล)'); return; }
+  console.log('ใช้ Database password ของ Supabase Project ไม่ใช่รหัสเข้าเว็บ Readwise\nรหัสผ่านไม่ถูกบันทึกไว้ในไฟล์\n');
+  const password = await passwordPrompt();
+  if (!password) throw new Error('ยังไม่ได้กรอกรหัสผ่าน');
+  await importBooks(books, password);
+}
+if (require.main === module) main().catch(error => {
+  console.error('\nนำเข้าไม่สำเร็จ:', error.message);
+  if (error.code === '28P01') console.error('ตรวจ Database password ใน Supabase อีกครั้ง');
+  process.exitCode = 1;
+});
+module.exports = { loadBooks };

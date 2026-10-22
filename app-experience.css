@@ -184,3 +184,29 @@ body[data-theme="dark"] .login-card{background:#192d43;border-color:#3c526c;colo
 body[data-theme="dark"] .login-card>p,body[data-theme="dark"] .login-status,body[data-theme="dark"] .login-footnote{color:#b8c9df}
 @media(max-width:480px){.login-screen{padding:24px 16px}.login-card{padding:32px 24px 24px;border-radius:24px}.login-card h1{font-size:26px}}
 @media(prefers-reduced-motion:reduce){.login-card #account-send{transition:none}}
+
+/* Full book titles and a quiet, category-free shelf. */
+#filters{display:none!important}
+.book-meta{align-items:flex-start;gap:8px}
+.book-meta h3{min-width:0;flex:1;white-space:normal;overflow:visible;text-overflow:clip;line-height:1.6}
+.book-title-button{display:block;width:100%;padding:0;border:0;background:transparent;text-align:left;white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere;font:inherit;color:inherit;line-height:inherit}
+.book-meta .fav{flex:0 0 44px;margin-top:-5px}
+.continue-info{min-width:0}.continue-info h2{white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere;line-height:1.6}
+.practice-question{padding:28px;border:1px solid var(--control-line);border-radius:20px;background:var(--panel);color:var(--text-main)}
+.practice-question h3{font-size:19px;line-height:1.75;margin:12px 0 22px;white-space:pre-line;overflow-wrap:anywhere}
+.practice-question label{display:block;font-size:13px;font-weight:600;margin:0 0 8px}
+.practice-response{display:block;width:100%;min-height:48px;padding:13px 14px;border:1px solid var(--control-line);border-radius:12px;background:var(--panel-alt);color:var(--text-main);font:400 16px/1.8 var(--sans);resize:vertical}
+.practice-response:focus-visible,.practice-options button:focus-visible,.book-title-button:focus-visible{outline:3px solid var(--action);outline-offset:3px}
+.practice-hint{font-size:12px;line-height:1.7;color:var(--text-secondary);margin:12px 0 0}
+.practice-answer{margin-top:24px;padding:20px;border-radius:14px;background:var(--action-soft)}
+.practice-answer[hidden]{display:none}.practice-answer p{font-size:16px;line-height:1.85;white-space:pre-line;margin:10px 0 0}.practice-feedback:empty{display:none}
+.practice-options{display:grid;gap:10px}.practice-options button{display:flex;gap:12px;align-items:flex-start;text-align:left;padding:15px;border:1px solid var(--control-line);border-radius:12px;background:var(--panel-alt);color:var(--text-main);font-size:15px;line-height:1.75;min-height:48px}
+.practice-options button>span{flex:none;display:grid;place-items:center;width:28px;height:28px;border-radius:8px;background:var(--panel);font-size:12px;font-weight:700}
+.practice-options button[aria-pressed="true"]{border-color:var(--action);box-shadow:0 0 0 1px var(--action);background:var(--action-soft)}
+.practice-options button.correct-answer{border-color:#339266;background:var(--action-soft);opacity:1}.practice-options button:disabled{cursor:default}
+.cloze-sentence{font-size:17px;line-height:2;white-space:pre-line}.cloze-blank{display:inline-block;min-width:70px;margin:0 5px;border-bottom:2px solid var(--action);text-align:center;color:var(--action);font-weight:700}
+.practice-review-label{display:block;color:var(--action);font-size:12px;font-weight:700;margin:0 0 12px}
+@media(max-width:760px){.practice-question{padding:20px 16px;border-radius:16px}.practice-question h3{font-size:17px}.practice-answer{padding:15px}.practice-answer p{font-size:15px}.practice-options button{font-size:14px;padding:12px}.book-meta .fav{flex-basis:36px;width:36px}.book-meta{gap:4px}}
+.cover h3.long-cover-title{font-size:clamp(12px,1.1vw,16px);line-height:1.45;overflow-wrap:anywhere}
+.reader.is-resuming .reader-content{animation:none}
+.reader-content .prose h3{font-family:"Noto Sans Thai",Tahoma,sans-serif;font-weight:700;font-size:1em;line-height:1.65;margin:28px 0 12px}

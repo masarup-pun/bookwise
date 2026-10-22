@@ -3,6 +3,34 @@ let chapterLoadId=0, pendingBook=null, reviewSessionDone=0;
 const signedIn=()=>Boolean(window.BookwiseCloudSync?.isSignedIn?.());
 const plainText=value=>String(value||'').replace(/\*\*/g,'');
 
+// Anchor progress to a text block so it survives font and viewport changes.
+let readingReady=false,positionTimer=null;
+function readingInset(){return Math.max(20,(document.querySelector('.app-header')?.getBoundingClientRect().bottom||80)+16);}
+function captureReadingPosition(save=true){
+  if(!readingReady||reader.style.display!=='block'||!signedIn())return;
+  const book=booksData.find(b=>b.id===activeBook),body=document.getElementById('chapter-body');
+  if(!book||!body.children.length)return;
+  const inset=readingInset(),nodes=[...body.querySelectorAll('[data-block]'),document.getElementById('recall')];
+  let position={chapter:book.chapter,top:true};
+  if(body.getBoundingClientRect().top<=inset){
+    const anchor=nodes.filter(node=>node.getBoundingClientRect().top<=inset).at(-1)||nodes[0];
+    if(anchor){const rect=anchor.getBoundingClientRect();position={chapter:book.chapter,block:anchor.id==='recall'?'recall':anchor.dataset.block,fraction:Math.max(0,Math.min(2,(inset-rect.top)/Math.max(1,rect.height)))};}
+  }
+  book.readPosition=position;book.lastRead=Date.now();
+  if(save)persist();
+}
+function restoreReadingPosition(position){
+  if(!position||position.top){window.scrollTo({top:0,behavior:'instant'});return;}
+  const node=position.block==='recall'?document.getElementById('recall'):[...document.querySelectorAll('#chapter-body [data-block]')].find(n=>n.dataset.block===String(position.block));
+  if(!node){window.scrollTo({top:0,behavior:'instant'});return;}
+  const rect=node.getBoundingClientRect(),fraction=Math.max(0,Math.min(2,Number(position.fraction)||0));
+  window.scrollTo({top:Math.max(0,window.scrollY+rect.top+rect.height*fraction-readingInset()),behavior:'instant'});
+}
+function flushReadingPosition(){clearTimeout(positionTimer);captureReadingPosition();}
+window.addEventListener('scroll',()=>{if(!readingReady)return;clearTimeout(positionTimer);positionTimer=setTimeout(()=>captureReadingPosition(),300);},{passive:true});
+window.addEventListener('pagehide',flushReadingPosition);
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden'){flushReadingPosition();window.BookwiseCloudSync?.flush?.();}});
+
 function requireLogin(bookRequest){
   if(signedIn())return true;
   if(bookRequest)pendingBook=bookRequest;
@@ -10,6 +38,7 @@ function requireLogin(bookRequest){
   return false;
 }
 function clearReadingContent(){
+  clearTimeout(positionTimer);readingReady=false;
   ++chapterLoadId;
   for(const book of booksData)book.chapters=book.chapters.map(chapter=>({title:chapter.title}));
   for(const id of ['chapter-body','chapter-title','chapter-original','chapter-deck','quiz-content','reader-saved','review-list','saved-list'])document.getElementById(id).replaceChildren();
@@ -34,6 +63,7 @@ function lockedView(element){
   element.querySelector('[data-login]').onclick=()=>requireLogin();
 }
 function showView(view){
+  flushReadingPosition();readingReady=false;
   if(!['all','favorites','review','saved'].includes(view))view='all';
   ++chapterLoadId;hideToolbar();
   if(view==='review'&&activeView!=='review')reviewSessionDone=0;
@@ -57,15 +87,17 @@ function showView(view){
 async function openBook(id,chapter,markId){
   const book=booksData.find(item=>item.id===id);if(!book)return;
   if(!requireLogin({id,chapter,markId}))return;
+  flushReadingPosition();readingReady=false;
+  reader.classList.toggle('is-resuming',chapter==null&&!markId&&Boolean(book.readPosition));
   activeBook=id;lib.style.display='none';reviewView.style.display='none';savedView.style.display='none';
   document.getElementById('home-top').style.display='none';reader.style.display='block';setNavigation('all');
-  await showChapter(chapter??book.chapter);
+  await showChapter(chapter??book.chapter,{resume:chapter==null&&!markId});
   if(!signedIn()||activeBook!==id||reader.style.display!=='block')return;
   requestAnimationFrame(alignDesktopReader);
   if(markId){requestAnimationFrame(()=>{
     const mark=[...document.querySelectorAll('.reader-highlight')].find(item=>item.dataset.annotation===markId);
-    mark?.scrollIntoView({behavior:'smooth',block:'center'});
-  });}else window.scrollTo(0,0);
+    if(mark)mark.scrollIntoView({behavior:'smooth',block:'center'});else toast('ข้อความเดิมยังอยู่ในบันทึก แต่ไม่พบในสรุปฉบับใหม่');
+  });}
 }
 function updateChapterControls(book,n){
   document.getElementById('toc-book').textContent=book.title;
@@ -77,10 +109,12 @@ function updateChapterControls(book,n){
   document.getElementById('toc-list').innerHTML=book.chapters.map((chapter,i)=>`<button class="toc-item ${i===n?'active':''}" ${i===n?'aria-current="location"':''} data-chapter="${i}"><span class="toc-number">${String(i+1).padStart(2,'0')}</span><span>${esc(chapter.title)}</span></button>`).join('');
   document.querySelectorAll('.toc-item').forEach(button=>button.onclick=()=>showChapter(Number(button.dataset.chapter)).then(()=>window.scrollTo(0,0)));
 }
-async function showChapter(index){
+async function showChapter(index,{resume=false}={}){
   if(!requireLogin())return;
+  flushReadingPosition();readingReady=false;
   hideToolbar();const book=booksData.find(item=>item.id===activeBook);if(!book)return;
   const n=Math.max(0,Math.min(index,book.chapters.length-1)),requestId=++chapterLoadId;
+  const resumePosition=resume&&book.readPosition?.chapter===n?{...book.readPosition}:null;
   updateChapterControls(book,n);
   document.getElementById('chapter-label').textContent=`บทที่ ${String(n+1).padStart(2,'0')}`;
   const titleParts=plainText(book.chapters[n].title).match(/^(.*?)\s+\((.+)\)$/s);
@@ -113,10 +147,14 @@ async function showChapter(index){
       else {book.completed=true;book.progress=100;persist();toast('อ่านหนังสือเล่มนี้จบแล้ว');showView('all');}
     };
     renderContinue();
+    if(document.fonts)await document.fonts.ready;
+    await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+    if(requestId!==chapterLoadId||!signedIn())return;
+    alignDesktopReader();restoreReadingPosition(resumePosition);readingReady=true;captureReadingPosition();
   }catch(error){
     if(requestId!==chapterLoadId)return;
     document.getElementById('chapter-body').innerHTML='<div class="content-error" role="alert"><p>ยังเปิดบทนี้ไม่ได้ กรุณาลองอีกครั้ง</p><button class="primary-action" id="retry-chapter">ลองใหม่</button></div>';
-    document.getElementById('retry-chapter').onclick=()=>showChapter(n);
+    document.getElementById('retry-chapter').onclick=()=>showChapter(n,{resume});
     console.warn('Bookwise chapter load:',error.message);
   }finally{if(requestId===chapterLoadId)document.getElementById('chapter-body').setAttribute('aria-busy','false');}
 }
@@ -158,28 +196,74 @@ function bindFlip(card,button,onFlip){
   };
 }
 function quizCardData(book,index){
-  const q=getChapterQuiz(book,book.chapter)[index];if(!q)return null;
+  const q=getChapterQuiz(book,book.chapter)[index];if(!q)return null;const data=normalizedQuestion(q);
   return {id:`${book.id}-${book.chapter}-${index}`,bookId:book.id,chapter:book.chapter,questionIndex:index,
-    question:plainText(q.q)+(q.statement?'\n'+plainText(q.statement):''),
-    answer:plainText(q.answerText||q.options?.[q.answer]),why:plainText(q.why),due:Date.now(),interval:0,repetitions:0,ease:2.5,createdAt:Date.now()};
+    question:data.question,answer:data.answer,why:data.why,options:data.options,correct:data.correct,due:Date.now(),interval:0,repetitions:0,ease:2.5,createdAt:Date.now()};
 }
-function saveQuizCard(all=false){
+function saveQuizCard(){
   if(!requireLogin())return;
   const book=booksData.find(item=>item.id===activeBook);if(!book)return;
-  const indices=all?getChapterQuiz(book,book.chapter).map((_,i)=>i):[quizIndex];let added=0;
-  indices.forEach(index=>{const card=quizCardData(book,index);if(card&&!reviewQueue.some(item=>item.id===card.id)){reviewQueue.push(card);added++;}});
-  persist();renderQuiz();updateReviewBadge();toast(added?`เพิ่ม ${added} การ์ดเข้าชุดทบทวนแล้ว`:'การ์ดเหล่านี้อยู่ในชุดทบทวนแล้ว');
+  const card=quizCardData(book,quizIndex);if(!card||reviewQueue.some(item=>item.id===card.id))return;
+  reviewQueue.push(card);persist();const saveButton=document.getElementById('save-card');saveButton.disabled=true;saveButton.textContent='อยู่ในชุดทบทวนแล้ว';updateReviewBadge();toast('เพิ่มคำถามเข้าชุดทบทวนแล้ว');
+}
+const practiceModes=new Map();
+const practiceLabels={flashcard:'การ์ดพลิก',written:'เขียนคำตอบ',cloze:'เติมคำ',choice:'เลือกคำตอบ'};
+function normalizedQuestion(q){
+  const options=Array.isArray(q.options)?q.options.map(plainText):[];
+  return {question:plainText(q.question||q.q)+(q.statement?'\n'+plainText(q.statement):''),answer:plainText(q.answerText||(typeof q.answer==='string'?q.answer:options[q.answer])),why:plainText(q.why),options,correct:Number.isInteger(q.answer)&&q.answer>=0&&q.answer<options.length?q.answer:null};
+}
+function clozeData(answer){
+  if(!globalThis.Intl?.Segmenter||!answer)return null;
+  const candidates=[...new Intl.Segmenter('th',{granularity:'word'}).segment(answer)].filter(s=>s.isWordLike&&s.segment.length>=4&&/\p{L}/u.test(s.segment));
+  const word=candidates.sort((a,b)=>b.segment.length-a.segment.length)[0];
+  return word?{before:answer.slice(0,word.index),term:word.segment,after:answer.slice(word.index+word.segment.length)}:null;
+}
+function availablePracticeModes(data){return ['flashcard','written',...(clozeData(data.answer)?['cloze']:[]),...(data.options?.length>1&&data.correct!==null?['choice']:[])];}
+function shuffled(values){return values.map(value=>({value,order:Math.random()})).sort((a,b)=>a.order-b.order).map(item=>item.value);}
+function chapterPracticeMode(book,index,questions){
+  const key=`${book.id}:${book.chapter}`;
+  if(!practiceModes.has(key)){
+    const used=new Set();
+    practiceModes.set(key,questions.map(q=>{const modes=availablePracticeModes(normalizedQuestion(q)),fresh=modes.filter(m=>!used.has(m)),mode=shuffled(fresh.length?fresh:modes)[0];used.add(mode);return mode;}));
+  }
+  return practiceModes.get(key)[index];
+}
+function practiceMarkup(data,mode,key){
+  if(mode==='flashcard')return flashcardMarkup(data.question,data.answer,data.why,key)+`<button class="primary-action flip-action" id="${key}-reveal" aria-pressed="false">พลิกดูคำตอบ</button>`;
+  const cloze=mode==='cloze'?clozeData(data.answer):null;
+  return `<section class="practice-question" id="${key}" aria-label="${practiceLabels[mode]}"><span class="card-eyebrow">ลองตอบก่อนดูเฉลย</span><h3>${esc(data.question)}</h3>${mode==='choice'?`<div class="practice-options">${data.options.map((option,i)=>`<button type="button" data-option="${i}" aria-pressed="false"><span>${String.fromCharCode(65+i)}</span>${esc(option)}</button>`).join('')}</div>`:cloze?`<p class="cloze-sentence">${esc(cloze.before)}<span class="cloze-blank" aria-label="คำที่เว้นว่าง">···</span>${esc(cloze.after)}</p><label for="${key}-response">เติมคำที่หายไป</label><input id="${key}-response" class="practice-response" autocomplete="off" placeholder="พิมพ์คำตอบของคุณ">`:`<label for="${key}-response">อธิบายความเข้าใจด้วยคำของคุณเอง</label><textarea id="${key}-response" class="practice-response" rows="4" placeholder="ลองนึกเหตุผล หรือตัวอย่างที่ช่วยอธิบายหลักคิด…"></textarea>`}<p class="practice-hint">${mode==='choice'?'เลือกคำตอบแล้วดูเหตุผลประกอบ':'ตอบในใจได้เช่นกัน แล้วเทียบกับแนวคำตอบด้วยตัวเอง'}</p><div class="practice-answer" id="${key}-answer" hidden role="region" aria-label="แนวคำตอบ"><span class="card-eyebrow">${cloze?'คำที่หายไป: '+esc(cloze.term):'แนวคำตอบ'}</span><p>${esc(data.answer)}</p>${data.why?`<p>${esc(data.why)}</p>`:''}<p class="practice-feedback" role="status"></p></div></section><button class="primary-action flip-action" id="${key}-reveal" aria-expanded="false" aria-controls="${key}-answer">ดูแนวคำตอบ</button>`;
+}
+function bindPractice(data,mode,key,onReveal){
+  const card=document.getElementById(key),button=document.getElementById(key+'-reveal');
+  if(mode==='flashcard'){bindFlip(card,button,onReveal);return;}
+  let selected=null,revealed=false;
+  card.querySelectorAll('[data-option]').forEach(option=>option.onclick=()=>{
+    if(revealed)return;selected=Number(option.dataset.option);
+    card.querySelectorAll('[data-option]').forEach(item=>item.setAttribute('aria-pressed',String(item===option)));
+  });
+  button.onclick=()=>{
+    revealed=!revealed;document.getElementById(key+'-answer').hidden=!revealed;
+    button.setAttribute('aria-expanded',String(revealed));button.textContent=revealed?'ซ่อนแนวคำตอบ':'ดูแนวคำตอบ';
+    if(mode==='choice'){
+      card.querySelectorAll('[data-option]').forEach(item=>{item.disabled=revealed;item.classList.toggle('correct-answer',revealed&&Number(item.dataset.option)===data.correct);});
+      card.querySelector('.practice-feedback').textContent=revealed&&selected!==null?(selected===data.correct?'ตอบถูก ลองอธิบายด้วยว่าเหตุใดข้อนี้จึงเหมาะสม':'ลองเทียบเหตุผลของคำตอบที่เลือกกับแนวคำตอบ แล้วประเมินตัวเอง') : '';
+    }
+    onReveal?.(revealed);
+  };
 }
 function renderQuiz(){
   if(!signedIn())return;
   const book=booksData.find(item=>item.id===activeBook),questions=getChapterQuiz(book,book.chapter),el=document.getElementById('quiz-content');
-  if(!questions.length){el.textContent='บทนี้ยังไม่มีการ์ดทบทวน';return;}
-  quizIndex=Math.max(0,Math.min(quizIndex,questions.length-1));const q=currentQuiz(),saved=reviewQueue.some(card=>card.id===`${book.id}-${book.chapter}-${quizIndex}`);
-  el.innerHTML=`<div class="flashcard-meta"><span>Flashcard</span><span>การ์ด ${quizIndex+1} / ${questions.length}</span></div>${flashcardMarkup(plainText(q.q)+(q.statement?'\n'+plainText(q.statement):''),q.answerText||q.options?.[q.answer],q.why,'chapter-flashcard')}<button class="primary-action flip-action" id="chapter-flip" aria-pressed="false">พลิกดูคำตอบ</button><div class="flashcard-pagination"><button id="card-prev" ${quizIndex===0?'disabled':''} aria-label="การ์ดก่อนหน้า">←</button><div class="card-dots" aria-hidden="true">${questions.map((_,i)=>`<i class="${i===quizIndex?'current':''}"></i>`).join('')}</div><button id="card-next" ${quizIndex===questions.length-1?'disabled':''} aria-label="การ์ดถัดไป">→</button></div><div class="card-save-actions"><button class="secondary-action" id="save-card" ${saved?'disabled':''}>${saved?'อยู่ในชุดทบทวนแล้ว':'เพิ่มการ์ดนี้เข้าชุดทบทวน'}</button><button class="text-action" id="save-all-cards">เพิ่มทั้งบท (${questions.length} การ์ด)</button></div>`;
-  bindFlip(document.getElementById('chapter-flashcard'),document.getElementById('chapter-flip'));
-  document.getElementById('card-prev').onclick=()=>{quizIndex--;renderQuiz();document.getElementById('chapter-flip').focus({preventScroll:true});};document.getElementById('card-next').onclick=()=>{quizIndex++;renderQuiz();document.getElementById('chapter-flip').focus({preventScroll:true});};
-  document.getElementById('save-card').onclick=()=>saveQuizCard();document.getElementById('save-all-cards').onclick=()=>saveQuizCard(true);
+  if(!questions.length){el.textContent='บทนี้ยังไม่มีคำถามทบทวน';return;}
+  quizIndex=Math.max(0,Math.min(quizIndex,questions.length-1));
+  const data=normalizedQuestion(currentQuiz()),mode=chapterPracticeMode(book,quizIndex,questions),saved=reviewQueue.some(card=>card.id===`${book.id}-${book.chapter}-${quizIndex}`);
+  el.innerHTML=`<div class="flashcard-meta"><span>${practiceLabels[mode]}</span><span>ข้อ ${quizIndex+1} / ${questions.length}</span></div>${practiceMarkup(data,mode,'chapter-practice')}<div class="flashcard-pagination"><button id="card-prev" ${quizIndex===0?'disabled':''} aria-label="คำถามก่อนหน้า">←</button><div class="card-dots" aria-hidden="true">${questions.map((_,i)=>`<i class="${i===quizIndex?'current':''}"></i>`).join('')}</div><button id="card-next" ${quizIndex===questions.length-1?'disabled':''} aria-label="คำถามถัดไป">→</button></div><div class="card-save-actions"><button class="secondary-action" id="save-card" ${saved?'disabled':''}>${saved?'อยู่ในชุดทบทวนแล้ว':'เพิ่มคำถามนี้เข้าชุดทบทวน'}</button></div>`;
+  bindPractice(data,mode,'chapter-practice');
+  document.getElementById('card-prev').onclick=()=>{quizIndex--;renderQuiz();document.getElementById('chapter-practice-reveal').focus({preventScroll:true});};
+  document.getElementById('card-next').onclick=()=>{quizIndex++;renderQuiz();document.getElementById('chapter-practice-reveal').focus({preventScroll:true});};
+  document.getElementById('save-card').onclick=()=>saveQuizCard();
 }
+
 function reviewInterval(card,rating){
   const interval=Number(card.interval)||0,ease=Number(card.ease)||2.5;
   if(rating==='again')return 10/1440;
@@ -199,17 +283,19 @@ function renderReview(){
   const now=Date.now(),due=reviewQueue.filter(card=>card.due<=now).sort((a,b)=>a.due-b.due),upcoming=reviewQueue.filter(card=>card.due>now).sort((a,b)=>a.due-b.due);
   stats.innerHTML=`<span><strong>${due.length}</strong> ถึงกำหนด</span><span><strong>${upcoming.length}</strong> รอทบทวน</span><span><strong>${reviewSessionDone}</strong> ทบทวนแล้วในรอบนี้</span>`;
   const card=due[0],book=card&&booksData.find(item=>item.id===card.bookId);
-  list.innerHTML=card?`<section class="review-session"><div class="flashcard-meta"><span>${esc(book?.title||'หนังสือ')} · บทที่ ${card.chapter+1}</span><span>เหลือ ${due.length} การ์ด</span></div>${flashcardMarkup(card.question,card.answer,card.why,'review-flashcard')}<button class="primary-action flip-action" id="review-flip" aria-pressed="false">พลิกดูคำตอบ</button><div class="review-rating" id="review-rating" hidden><p>คุณนึกคำตอบได้แค่ไหน?</p><div>${['again','hard','good','easy'].map((rating,i)=>`<button data-grade="${rating}"><strong>${['อีกครั้ง','ยาก','จำได้','ง่าย'][i]}</strong><span>${rating==='again'?'10 นาที':reviewInterval(card,rating)+' วัน'}</span></button>`).join('')}</div></div></section>`:
-    `<div class="review-finished"><span aria-hidden="true">${reviewQueue.length?'✓':'↻'}</span><h2>${reviewQueue.length?'ทบทวนครบแล้ว':'เริ่มชุดทบทวนของคุณ'}</h2><p>${reviewQueue.length?(upcoming[0]?`การ์ดถัดไป ${formatDue(upcoming[0].due)}`:'กลับมาอีกครั้งเมื่อมีการ์ดใหม่'):'เปิดอ่านหนังสือ แล้วเพิ่ม Flashcard ท้ายบทเข้าชุดทบทวน'}</p><button class="primary-action" id="review-library">เลือกหนังสือ</button></div>`;
+  const data=card?{question:card.question,answer:card.answer,why:card.why||'',options:card.options||[],correct:Number.isInteger(card.correct)?card.correct:null}:null;
+  const mode=data?shuffled(availablePracticeModes(data).filter(m=>m!==card.lastFormat))[0]:null;
+  list.innerHTML=card?`<section class="review-session"><div class="flashcard-meta"><span>${esc(book?.title||'หนังสือ')} · บทที่ ${card.chapter+1}</span><span>เหลือ ${due.length} การ์ด</span></div><span class="practice-review-label">${practiceLabels[mode]}</span>${practiceMarkup(data,mode,'review-practice')}<div class="review-rating" id="review-rating" hidden><p>คุณนึกคำตอบได้แค่ไหน?</p><div>${['again','hard','good','easy'].map((rating,i)=>`<button data-grade="${rating}"><strong>${['อีกครั้ง','ยาก','จำได้','ง่าย'][i]}</strong><span>${rating==='again'?'10 นาที':reviewInterval(card,rating)+' วัน'}</span></button>`).join('')}</div></div></section>`:
+    `<div class="review-finished"><span aria-hidden="true">${reviewQueue.length?'✓':'↻'}</span><h2>${reviewQueue.length?'ทบทวนครบแล้ว':'เริ่มชุดทบทวนของคุณ'}</h2><p>${reviewQueue.length?(upcoming[0]?`การ์ดถัดไป ${formatDue(upcoming[0].due)}`:'กลับมาอีกครั้งเมื่อมีการ์ดใหม่'):'เปิดอ่านหนังสือ แล้วเพิ่มคำถามท้ายบทเข้าชุดทบทวน'}</p><button class="primary-action" id="review-library">เลือกหนังสือ</button></div>`;
   if(upcoming.length){list.insertAdjacentHTML('beforeend',`<details class="review-upcoming"><summary>จัดการการ์ดที่กำหนดไว้ (${upcoming.length})</summary>${upcoming.map(c=>`<div class="scheduled-card"><p>${esc(plainText(c.question))}</p><small>${esc(booksData.find(b=>b.id===c.bookId)?.title||'')} · ${formatDue(c.due)}</small><div class="scheduled-actions"><label>วันทบทวน<input type="date" data-due-input="${esc(c.id)}" value="${dateInputValue(c.due)}"></label><button class="secondary-action" data-set-due="${esc(c.id)}">บันทึก</button><button class="text-action" data-delete-card="${esc(c.id)}">ลบการ์ด</button></div></div>`).join('')}</details>`);}
   if(card){
-    bindFlip(document.getElementById('review-flashcard'),document.getElementById('review-flip'),flipped=>{document.getElementById('review-rating').hidden=!flipped;});
+    bindPractice(data,mode,'review-practice',revealed=>{document.getElementById('review-rating').hidden=!revealed;});
     list.querySelectorAll('[data-grade]').forEach(button=>button.onclick=()=>{
       if(!signedIn()||document.getElementById('review-rating').hidden)return;
-      const rating=button.dataset.grade;card.interval=reviewInterval(card,rating);card.due=Date.now()+card.interval*86400000;
+      const rating=button.dataset.grade;card.lastFormat=mode;card.interval=reviewInterval(card,rating);card.due=Date.now()+card.interval*86400000;
       card.ease=Math.max(1.3,(Number(card.ease)||2.5)+(rating==='easy'?.15:rating==='hard'?-.15:rating==='again'?-.2:0));
       card.repetitions=(Number(card.repetitions)||0)+1;card.lastReviewedAt=Date.now();if(rating==='again')card.lapses=(card.lapses||0)+1;
-      reviewSessionDone++;persist();renderReview();document.getElementById('review-status').textContent='บันทึกผลทบทวนและกำหนดครั้งถัดไปแล้ว';document.getElementById('review-flip')?.focus({preventScroll:true});
+      reviewSessionDone++;persist();renderReview();document.getElementById('review-status').textContent='บันทึกผลทบทวนและกำหนดครั้งถัดไปแล้ว';document.getElementById('review-practice-reveal')?.focus({preventScroll:true});
     });
   }
   list.querySelector('#review-library')?.addEventListener('click',()=>showView('all'));
@@ -246,6 +332,7 @@ document.getElementById('chapter-dialog').addEventListener('click',event=>{if(ev
 document.addEventListener('click',event=>{if(!event.target.closest('.type-settings'))document.getElementById('type-settings').open=false;});
 document.addEventListener('keydown',event=>{if(event.key==='Escape')document.getElementById('type-settings').open=false;});
 document.getElementById('review-list').insertAdjacentHTML('afterend','<p class="sr-only" id="review-status" role="status"></p>');
+window.BookwiseApp.saveReadingPosition=flushReadingPosition;
 window.BookwiseApp.authChanged=authenticated=>{
   document.body.dataset.auth=authenticated?'signed-in':'signed-out';
   document.querySelector('.shell').hidden=!authenticated;
@@ -257,4 +344,4 @@ window.BookwiseApp.authChanged=authenticated=>{
   }
   updateReviewBadge();
 };
-window.addEventListener('focus',()=>{if(activeView==='review'&&signedIn())renderReview();});
+window.addEventListener('focus',()=>{if(activeView==='review'&&signedIn()&&!document.querySelector('.review-session'))renderReview();});

@@ -55,12 +55,14 @@
   }
 
   function mergeStates(remote, local) {
+    remote = app.migrateState(remote); local = app.migrateState(local);
     const result = clone(remote);
     result.books = { ...(remote.books || {}) };
     for (const [id, guest] of Object.entries(local.books || {})) {
       const saved = result.books[id] || {};
       result.books[id] = {
         chapter: (Number(guest.lastRead) || 0) > (Number(saved.lastRead) || 0) ? guest.chapter : saved.chapter ?? guest.chapter,
+        readPosition: (Number(guest.lastRead) || 0) > (Number(saved.lastRead) || 0) ? guest.readPosition || null : saved.readPosition || null,
         progress: Math.max(Number(saved.progress) || 0, Number(guest.progress) || 0),
         favorite: Boolean(saved.favorite || guest.favorite),
         started: Boolean(saved.started || guest.started),
@@ -82,6 +84,21 @@
       local.fontSizeCustomized === true ? local.fontSizePt : 14;
     delete result.fontSize;
     return result;
+  }
+
+  function recoverReadingState(remote, cached) {
+    const state = clone(remote);
+    let changed = false;
+    for (const [id, localBook] of Object.entries(cached.books || {})) {
+      const remoteBook = state.books?.[id] || {};
+      if (localBook.readPosition && Number(localBook.lastRead) > (Number(remoteBook.lastRead) || 0)) {
+        state.books ||= {};
+        state.books[id] = { ...remoteBook, chapter: localBook.chapter, readPosition: localBook.readPosition,
+          lastRead: localBook.lastRead, started: true, progress: Math.max(remoteBook.progress || 0, localBook.progress || 0) };
+        changed = true;
+      }
+    }
+    return { state, changed };
   }
 
   function isConflict(error) {
@@ -176,8 +193,12 @@
       }
       if (generation !== currentGeneration) return;
       revision = Number(row.revision);
+      const migrated = app.migrateState(row.state);
+      const needsMigrationSave = row.state.contentRevision !== migrated.contentRevision;
+      const recovered = recoverReadingState(migrated, app.getCachedState(nextUser.id));
       setUser(nextUser);
-      app.activateAccount(nextUser.id, row.state);
+      app.activateAccount(nextUser.id, recovered.state);
+      if (recovered.changed || needsMigrationSave) schedule(recovered.state);
       importButton.hidden = false;
       message('ซิงก์ล่าสุดแล้ว');
     } catch (error) {
@@ -253,7 +274,7 @@
     return data.content;
   }
 
-  window.BookwiseCloudSync = { schedule, isSignedIn: () => Boolean(user && !user.is_anonymous), uploadCover, getCoverUrl, removeCover, loadChapter };
+  window.BookwiseCloudSync = { schedule, flush, isSignedIn: () => Boolean(user && !user.is_anonymous), uploadCover, getCoverUrl, removeCover, loadChapter };
   app.authChanged?.(false);
   document.getElementById('account-close').addEventListener('click', () => dialog.close());
   if (!app || !config?.url || !config?.publishableKey || !config?.accessEmail || !/^https?:$/.test(location.protocol)) {
@@ -350,6 +371,7 @@
     message('โหลดข้อมูลล่าสุดแล้ว');
   });
   signoutButton.addEventListener('click', async () => {
+    app.saveReadingPosition?.();
     if (pending) await flush();
     if (pending || syncing) { message('ข้อมูลยังไม่ซิงก์ กรุณาลองใหม่เมื่อเชื่อมต่อได้'); return; }
     const { error } = await client.auth.signOut();

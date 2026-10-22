@@ -16,43 +16,43 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "สัญญาณเตือนให้ตื่น (The Wake-Up Call)"
+        "title": "บทที่ 1: สัญญาณเตือนให้ตื่น (The Wake-Up Call)"
       },
       {
-        "title": "ผู้มาเยือนลึกลับ (The Mysterious Visitor)"
+        "title": "บทที่ 2: ผู้มาเยือนลึกลับ (The Mysterious Visitor)"
       },
       {
-        "title": "การเปลี่ยนแปลงครั้งใหญ่ของ Julian Mantle (The Miraculous Transformation of Julian Mantle)"
+        "title": "บทที่ 3: การเปลี่ยนแปลงอันน่าทึ่งของ Julian Mantle (The Miraculous Transformation of Julian Mantle)"
       },
       {
-        "title": "การพบปราชญ์แห่ง Sivana (A Magical Meeting with the Sages of Sivana)"
+        "title": "บทที่ 4: การพบปราชญ์แห่ง Sivana (A Magical Meeting with the Sages of Sivana)"
       },
       {
-        "title": "ศิษย์ผู้แสวงหาทางจิตวิญญาณ (A Spiritual Student of the Sages)"
+        "title": "บทที่ 5: ศิษย์แห่งปราชญ์ (A Spiritual Student of the Sages)"
       },
       {
-        "title": "ปัญญาแห่งการเปลี่ยนแปลงตนเอง (The Wisdom of Personal Change)"
+        "title": "บทที่ 6: ปัญญาแห่งการเปลี่ยนแปลงตนเอง (The Wisdom of Personal Change)"
       },
       {
-        "title": "สวนที่ไม่ธรรมดา (A Most Extraordinary Garden)"
+        "title": "บทที่ 7: สวนอันน่าพิศวง (A Most Extraordinary Garden)"
       },
       {
-        "title": "จุดไฟแห่งเป้าหมาย (Kindling Your Inner Fire)"
+        "title": "บทที่ 8: จุดไฟแห่งเป้าหมายในชีวิต (Kindling Your Inner Fire)"
       },
       {
-        "title": "ศิลปะแห่งการนำตนเอง (The Ancient Art of Self-Leadership)"
+        "title": "บทที่ 9: ศิลปะแห่งการนำตนเอง (The Ancient Art of Self-Leadership)"
       },
       {
-        "title": "พลังแห่งวินัย (The Power of Discipline)"
+        "title": "บทที่ 10: พลังแห่งวินัย (The Power of Discipline)"
       },
       {
-        "title": "เวลา: ทรัพย์สินที่มีค่าที่สุด (Your Most Precious Commodity)"
+        "title": "บทที่ 11: เวลา—ทรัพย์สินที่มีค่าที่สุด (Your Most Precious Commodity)"
       },
       {
-        "title": "จุดมุ่งหมายสูงสุดของชีวิต (The Ultimate Purpose of Life)"
+        "title": "บทที่ 12: จุดมุ่งหมายสูงสุดของชีวิต (The Ultimate Purpose of Life)"
       },
       {
-        "title": "ความลับนิรันดร์ของความสุขที่ยืนยาว (The Timeless Secret of Lifelong Happiness)"
+        "title": "บทที่ 13: ความลับนิรันดร์ของความสุขที่ยืนยาว (The Timeless Secret of Lifelong Happiness)"
       }
     ]
   },
@@ -64,7 +64,7 @@ window.BOOKWISE_CATALOG = [
     "color": "#b9d0c8",
     "text": "#183d38",
     "added": 2,
-    "totalChapters": 20,
+    "totalChapters": 22,
     "chapter": 0,
     "progress": 0,
     "favorite": false,
@@ -72,64 +72,70 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
+        "title": "บทนำ: เรื่องราวของผม (Introduction: My Story)"
+      },
+      {
         "title": "พลังที่คาดไม่ถึงของนิสัยเล็ก ๆ (The Surprising Power of Atomic Habits)"
       },
       {
-        "title": "นิสัยหล่อหลอมตัวตนอย่างไร (How Your Habits Shape Your Identity)"
+        "title": "นิสัยกำหนดตัวตน และตัวตนก็หล่อหลอมนิสัย (How Your Habits Shape Your Identity (and Vice Versa))"
       },
       {
-        "title": "สร้างนิสัยที่ดีด้วย 4 ขั้นตอน (How to Build Better Habits in 4 Simple Steps)"
+        "title": "สร้างนิสัยที่ดีด้วยสี่ขั้นตอน (How to Build Better Habits in 4 Simple Steps)"
       },
       {
-        "title": "ชายผู้สังเกตเห็นสิ่งผิดปกติ (The Man Who Didn’t Look Right)"
+        "title": "ชายที่ “ดูไม่ปกติ” (The Man Who Didn’t Look Right)"
       },
       {
-        "title": "วิธีเริ่มนิสัยใหม่ที่ได้ผล (The Best Way to Start a New Habit)"
+        "title": "วิธีที่ดีที่สุดในการเริ่มนิสัยใหม่ (The Best Way to Start a New Habit)"
       },
       {
-        "title": "แรงจูงใจอาจแพ้การออกแบบสภาพแวดล้อม (Motivation Is Overrated; Environment Often Matters More)"
+        "title": "แรงจูงใจสำคัญน้อยกว่าสภาพแวดล้อม (Motivation Is Overrated; Environment Often Matters More)"
       },
       {
-        "title": "เคล็ดลับการควบคุมตนเอง (The Secret to Self-Control)"
+        "title": "ความลับของการควบคุมตนเอง (The Secret to Self-Control)"
       },
       {
-        "title": "ทำให้นิสัยน่าดึงดูดจนอยากทำ (How to Make a Habit Irresistible)"
+        "title": "ทำให้นิสัยน่าดึงดูดยิ่งขึ้น (How to Make a Habit Irresistible)"
       },
       {
-        "title": "ครอบครัวและเพื่อนหล่อหลอมนิสัย (The Role of Family and Friends in Shaping Your Habits)"
+        "title": "บทบาทของครอบครัวและเพื่อนต่อการสร้างนิสัย (The Role of Family and Friends in Shaping Your Habits)"
       },
       {
-        "title": "หาสาเหตุและแก้นิสัยที่ไม่ดี (How to Find and Fix the Causes of Your Bad Habits)"
+        "title": "ค้นหาและแก้ต้นตอของนิสัยที่ไม่ดี (How to Find and Fix the Causes of Your Bad Habits)"
       },
       {
-        "title": "ก้าวช้า ๆ แต่ไม่ถอยหลัง (Walk Slowly, but Never Backward)"
+        "title": "ก้าวช้า ๆ แต่อย่าถอยหลัง (Walk Slowly, but Never Backward)"
       },
       {
-        "title": "กฎแห่งการใช้แรงให้น้อยที่สุด (The Law of Least Effort)"
+        "title": "กฎของการออกแรงให้น้อยที่สุด (The Law of Least Effort)"
       },
       {
         "title": "หยุดผัดวันด้วยกฎสองนาที (How to Stop Procrastinating by Using the Two-Minute Rule)"
       },
       {
-        "title": "ทำให้นิสัยดีเกิดแน่นอนและนิสัยแย่ทำได้ยาก (How to Make Good Habits Inevitable and Bad Habits Impossible)"
+        "title": "ทำให้นิสัยดีเกิดขึ้นแน่นอน และนิสัยไม่ดีทำได้ยาก (How to Make Good Habits Inevitable and Bad Habits Impossible)"
       },
       {
         "title": "กฎสำคัญของการเปลี่ยนพฤติกรรม (The Cardinal Rule of Behavior Change)"
       },
       {
-        "title": "ทำอย่างไรให้รักษานิสัยดีทุกวัน (How to Stick with Good Habits Every Day)"
+        "title": "รักษานิสัยดีให้ทำต่อได้ทุกวัน (How to Stick with Good Habits Every Day)"
       },
       {
-        "title": "คู่รับผิดชอบช่วยเปลี่ยนทุกอย่างได้ (How an Accountability Partner Can Change Everything)"
+        "title": "คู่รับผิดชอบช่วยเปลี่ยนพฤติกรรมได้อย่างไร (How an Accountability Partner Can Change Everything)"
       },
       {
-        "title": "ความจริงเรื่องพรสวรรค์และพันธุกรรม (The Truth About Talent)"
+        "title": "ความจริงเรื่องพรสวรรค์: ยีนมีผลเมื่อไรและไม่มีผลเมื่อไร (The Truth About Talent (When Genes Matter and When They Don’t))"
       },
       {
-        "title": "กฎโกลดิล็อกส์: รักษาแรงจูงใจในชีวิตและงาน (The Goldilocks Rule)"
+        "title": "กฎโกลดิล็อกส์: รักษาแรงจูงใจในการทำงานและชีวิต (The Goldilocks Rule: How to Stay Motivated in Life and Work)"
       },
       {
-        "title": "ด้านที่ต้องระวังของการสร้างนิสัยดี (The Downside of Creating Good Habits)"
+        "title": "ด้านที่ควรระวังของการสร้างนิสัย (The Downside of Creating Good Habits)"
+      },
+      {
+        "title": "ความลับของผลลัพธ์ที่ยั่งยืน (Conclusion: The Secret to Results That Last)"
       }
     ]
   },
@@ -141,7 +147,7 @@ window.BOOKWISE_CATALOG = [
     "color": "#d6c9b7",
     "text": "#3d3026",
     "added": 3,
-    "totalChapters": 14,
+    "totalChapters": 16,
     "chapter": 0,
     "progress": 0,
     "favorite": false,
@@ -149,46 +155,52 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "ซื้อชีวิตของตัวเองกลับคืนมา (How I Buy Back My Life)"
+        "title": "บทนำ: ธุรกิจช่วยชีวิต แต่เกือบทำลายชีวิต (How Business Saved My Life (Then Almost Ruined It))"
       },
       {
-        "title": "เมทริกซ์ DRIP: เห็นว่างานกินเวลาไปไหน (The DRIP Matrix)"
+        "title": "วิธีซื้อเวลากลับคืนมา (How I Buy Back My Life)"
       },
       {
-        "title": "ห้าตัวการลอบสังหารเวลา (The 5 Time Assassins)"
+        "title": "เมทริกซ์ DRIP: จัดเวลาให้ตรงกับจุดแข็ง (The DRIP Matrix)"
       },
       {
-        "title": "การแลกเปลี่ยนสามระดับ (The Only 3 Trades That Matter)"
+        "title": "ห้าโจรขโมยเวลา (The 5 Time Assassins)"
+      },
+      {
+        "title": "การแลกเปลี่ยนสำคัญเพียงสามระดับ (The Only 3 Trades That Matter)"
       },
       {
         "title": "บันไดการถ่ายโอนงาน (The Replacement Ladder)"
       },
       {
-        "title": "สร้างตัวช่วยที่ทำงานเคียงข้างเรา (Clone Yourself)"
+        "title": "สร้างระบบเพื่อแบ่งงานให้ตัวเอง (Clone Yourself)"
       },
       {
-        "title": "คู่มือการทำงานที่สร้างซ้ำได้ (Building Playbooks)"
+        "title": "สร้าง Playbook ให้ทีมทำงานแทนคุณ (Building Playbooks)"
       },
       {
-        "title": "ออกแบบสัปดาห์ในแบบที่เหมาะกับเรา (Your Perfect Week)"
+        "title": "ออกแบบสัปดาห์ที่เหมาะกับคุณ (Your Perfect Week)"
       },
       {
-        "title": "กลเม็ดประหยัดเวลาสี่ข้อ (The Only 4 Time Hacks You Need)"
+        "title": "เครื่องมือจัดการเวลาสี่อย่างที่ใช้ได้จริง (The Only 4 Time Hacks You Need)"
       },
       {
-        "title": "วิธีจ้างแบบทดลองทำก่อน (The “Test-First” Hiring Method)"
+        "title": "จ้างให้ถูกคนด้วยวิธีทดสอบก่อน (The “Test-First” Hiring Method)"
       },
       {
         "title": "ภาวะผู้นำที่ทำให้คนเติบโต (Transformational Leadership)"
       },
       {
-        "title": "คำว่า “Feedback” ช่วยรักษาทีม (This “F-Word” Will Save Your Business)"
+        "title": "คำว่า Feedback ที่ช่วยให้ธุรกิจรอด (This “F-Word” Will Save Your Business)"
       },
       {
-        "title": "ฝันให้ใหญ่ แล้วลงมือให้ไกลกว่าเดิม (Dream BIG. Achieve Bigger)"
+        "title": "ฝันให้ใหญ่ แล้วทำให้ภาพชัด (Dream BIG. Achieve Bigger)"
       },
       {
         "title": "วางแผนทั้งปีล่วงหน้า (The Preloaded Year)"
+      },
+      {
+        "title": "บทสรุป: ชีวิตที่ซื้อเวลากลับคืน (The Buyback Life)"
       }
     ]
   },
@@ -289,13 +301,13 @@ window.BOOKWISE_CATALOG = [
         "title": "ศรัทธาคือโชคชะตา · การตกปลา (Your Faith Is Your Fortune: Fishing)"
       },
       {
-        "title": "ศรัทธาคือโชคชะตา · จงเป็นผู้มีหูรับฟัง (Your Faith Is Your Fortune: Be Ears That Hear)"
+        "title": "ศรัทธาคือโชคชะตา · จงเป็นหูที่ได้ยิน (Your Faith Is Your Fortune: Be Ears That Hear)"
       },
       {
-        "title": "ศรัทธาคือโชคชะตา · ญาณหยั่งรู้ (Your Faith Is Your Fortune: Clairvoyance)"
+        "title": "ศรัทธาคือโชคชะตา · ญาณรู้แจ้ง (Your Faith Is Your Fortune: Clairvoyance)"
       },
       {
-        "title": "ศรัทธาคือโชคชะตา · สดุดีบทที่ยี่สิบสาม (Your Faith Is Your Fortune: Twenty-Third Psalm)"
+        "title": "ศรัทธาคือโชคชะตา · สดุดีบทที่ 23 (Your Faith Is Your Fortune: Twenty-Third Psalm)"
       },
       {
         "title": "ศรัทธาคือโชคชะตา · เกทเสมนี (Your Faith Is Your Fortune: Gethsemane)"
@@ -345,43 +357,43 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทนำ: โลกอาจเปลี่ยนจากจุดเล็ก ๆ (Introduction)"
+        "title": "บทที่ 1: บทนำ (Introduction)"
       },
       {
-        "title": "เปลี่ยนสิ่งหนึ่ง โลกเปลี่ยนทั้งหมด (Changing Anything Changes Everything)"
+        "title": "บทที่ 2: เปลี่ยนสิ่งหนึ่ง โลกเปลี่ยนทั้งหมด (Changing Anything Changes Everything)"
       },
       {
-        "title": "ไม่ใช่ทุกอย่างเกิดขึ้นเพราะมีเหตุผล (Everything Doesn’t Happen for a Reason)"
+        "title": "บทที่ 3: ไม่ใช่ทุกอย่างเกิดขึ้นเพราะมีเหตุผล (Everything Doesn’t Happen for a Reason)"
       },
       {
-        "title": "ทำไมสมองบิดเบือนความจริง (Why Our Brains Distort Reality)"
+        "title": "บทที่ 4: ทำไมสมองบิดเบือนความจริง (Why Our Brains Distort Reality)"
       },
       {
-        "title": "ฝูงมนุษย์และหงส์ดำ (The Human Swarm)"
+        "title": "บทที่ 5: ฝูงมนุษย์ (The Human Swarm)"
       },
       {
-        "title": "เฮราคลิตัสถูกต้อง: ทุกสิ่งเปลี่ยนแปลง (Heraclitus Rules)"
+        "title": "บทที่ 6: เฮราคลิตัสถูกต้อง: ทุกสิ่งเปลี่ยนแปลง (Heraclitus Rules)"
       },
       {
-        "title": "สัตว์ที่เล่าเรื่อง (The Storytelling Animal)"
+        "title": "บทที่ 7: สัตว์ที่เล่าเรื่อง (The Storytelling Animal)"
       },
       {
-        "title": "ลอตเตอรี่ของโลก: ภูมิศาสตร์กำหนดโอกาส (The Lottery of Earth)"
+        "title": "บทที่ 8: ลอตเตอรี่ของโลก (The Lottery of Earth)"
       },
       {
-        "title": "ทุกคนเป็นผีเสื้อ (Everyone’s a Butterfly)"
+        "title": "บทที่ 9: ทุกคนเป็นผีเสื้อ (Everyone’s a Butterfly)"
       },
       {
-        "title": "นาฬิกาและปฏิทิน (Of Clocks and Calendars)"
+        "title": "บทที่ 10: นาฬิกาและปฏิทิน (Of Clocks and Calendars)"
       },
       {
-        "title": "สมการใหม่ของจักรพรรดิ (The Emperor’s New Equations)"
+        "title": "บทที่ 11: สมการใหม่ของจักรพรรดิ (The Emperor’s New Equations)"
       },
       {
-        "title": "มันอาจเป็นอย่างอื่นได้ไหม? (Could It Be Otherwise?)"
+        "title": "บทที่ 12: โลกอาจเป็นอย่างอื่นได้หรือไม่? (Could It Be Otherwise?)"
       },
       {
-        "title": "ทำไมทุกสิ่งที่เราทำจึงสำคัญ (Why Everything We Do Matters)"
+        "title": "บทที่ 13: ทำไมทุกสิ่งที่เราทำจึงสำคัญ (Why Everything We Do Matters)"
       }
     ]
   },
@@ -1206,34 +1218,34 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "มองสิ่งต่าง ๆ ตามจริง: สัจนิยมเข้มข้น (See Things for What They Are—Intense Realism)"
+        "title": "บทที่ 1: มองสิ่งต่าง ๆ ตามจริง—สัจนิยมเข้มข้น (See Things for What They Are—Intense Realism)"
       },
       {
-        "title": "ทำทุกอย่างให้เป็นความรับผิดชอบของตน: พึ่งพาตนเอง (Make Everything Your Own—Self-Reliance)"
+        "title": "บทที่ 2: ทำทุกอย่างให้เป็นความรับผิดชอบของตน—พึ่งพาตนเอง (Make Everything Your Own—Self-Reliance)"
       },
       {
-        "title": "เปลี่ยนอุปสรรคเป็นโอกาส: ฉวยใช้สถานการณ์ (Turn Shit into Sugar—Opportunism)"
+        "title": "บทที่ 3: เปลี่ยนสิ่งเลวร้ายให้เป็นโอกาส—ฉวยใช้สถานการณ์ (Turn Shit into Sugar—Opportunism)"
       },
       {
-        "title": "เดินหน้าต่อด้วยแรงส่งที่คำนวณแล้ว (Keep Moving—Calculated Momentum)"
+        "title": "บทที่ 4: เคลื่อนไหวต่อไป—แรงส่งที่คำนวณแล้ว (Keep Moving—Calculated Momentum)"
       },
       {
-        "title": "รู้ว่าเมื่อไรควรแข็งกร้าว: การยืนยันจุดยืน (Know When to Be Bad—Aggression)"
+        "title": "บทที่ 5: รู้ว่าเมื่อใดควรแข็งกร้าว—ความเด็ดขาด (Know When to Be Bad—Aggression)"
       },
       {
-        "title": "นำจากแนวหน้า: อำนาจและความรับผิดชอบ (Lead from the Front—Authority)"
+        "title": "บทที่ 6: นำจากแนวหน้า—ภาวะผู้นำ (Lead from the Front—Authority)"
       },
       {
-        "title": "รู้จักสภาพแวดล้อมจากภายใน (Know Your Environment from the Inside Out—Connection)"
+        "title": "บทที่ 7: รู้จักสภาพแวดล้อมจากภายใน—การเชื่อมโยง (Know Your Environment from the Inside Out—Connection)"
       },
       {
-        "title": "เคารพกระบวนการ: ความชำนาญ (Respect the Process—Mastery)"
+        "title": "บทที่ 8: เคารพกระบวนการ—ความชำนาญ (Respect the Process—Mastery)"
       },
       {
-        "title": "ผลักขีดจำกัดของตน: ความเชื่อมั่นในตัวเอง (Push Beyond Your Limits—Self-Belief)"
+        "title": "บทที่ 9: ผลักขีดจำกัดของตน—ความเชื่อมั่นในตัวเอง (Push Beyond Your Limits—Self-Belief)"
       },
       {
-        "title": "เผชิญความตาย: มองเห็นสิ่งสำคัญ (Confront Your Mortality—the Sublime)"
+        "title": "บทที่ 10: เผชิญความตาย—สัมผัสความยิ่งใหญ่ของชีวิต (Confront Your Mortality—the Sublime)"
       }
     ]
   },
@@ -1590,67 +1602,67 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "ฝันให้ใหญ่ (Dream Big Dreams)"
+        "title": "บทที่ 1: ฝันให้ใหญ่ (Dream Big Dreams)"
       },
       {
-        "title": "กำหนดทิศทางให้ชัด (Develop a Clear Sense of Direction)"
+        "title": "บทที่ 2: กำหนดทิศทางให้ชัด (Develop a Clear Sense of Direction)"
       },
       {
-        "title": "คิดและทำเหมือนเจ้าของงาน (See Yourself as Self-Employed)"
+        "title": "บทที่ 3: มองตัวเองเป็นผู้รับผิดชอบชีวิตการงาน (See Yourself as Self-Employed)"
       },
       {
-        "title": "ทำในสิ่งที่รักและถนัด (Do What You Love to Do)"
+        "title": "บทที่ 4: ทำงานที่รักให้ดี (Do What You Love to Do)"
       },
       {
-        "title": "มุ่งมั่นสู่ความเป็นเลิศ (Commit to Excellence)"
+        "title": "บทที่ 5: มุ่งมั่นสู่ความเป็นเลิศ (Commit to Excellence)"
       },
       {
-        "title": "ทำงานหนักและยาวนานขึ้นอย่างมีเป้าหมาย (Work Longer and Harder)"
+        "title": "บทที่ 6: ทำงานให้มากและเต็มที่ (Work Longer and Harder)"
       },
       {
-        "title": "เรียนรู้ตลอดชีวิต (Dedicate Yourself to Lifelong Learning)"
+        "title": "บทที่ 7: เรียนรู้อย่างต่อเนื่อง (Dedicate Yourself to Lifelong Learning)"
       },
       {
-        "title": "จ่ายให้ตัวเองก่อน (Pay Yourself First)"
+        "title": "บทที่ 8: จ่ายให้ตัวเองก่อน (Pay Yourself First)"
       },
       {
-        "title": "รู้ทุกรายละเอียดของธุรกิจ (Learn Every Detail of Your Business)"
+        "title": "บทที่ 9: รู้ทุกรายละเอียดของธุรกิจ (Learn Every Detail of Your Business)"
       },
       {
-        "title": "ทุ่มเทเพื่อรับใช้ผู้อื่น (Dedicate Yourself to Serving Others)"
+        "title": "บทที่ 10: อุทิศตนเพื่อรับใช้ผู้อื่น (Dedicate Yourself to Serving Others)"
       },
       {
-        "title": "ซื่อตรงกับตัวเองและผู้อื่น (Be Absolutely Honest)"
+        "title": "บทที่ 11: ซื่อตรงต่อตนเองและผู้อื่น (Be Absolutely Honest with Yourself and Others)"
       },
       {
-        "title": "จัดลำดับสิ่งสำคัญและโฟกัส (Determine Your Highest Priorities)"
+        "title": "บทที่ 12: จัดลำดับและจดจ่อกับสิ่งสำคัญที่สุด (Determine Your Highest Priorities and Concentrate on Them Single-Mindedly)"
       },
       {
-        "title": "สร้างชื่อเสียงด้านความเร็วและเชื่อถือได้ (Develop a Reputation for Speed and Dependability)"
+        "title": "บทที่ 13: สร้างชื่อเสียงด้านความรวดเร็วและเชื่อถือได้ (Develop a Reputation for Speed and Dependability)"
       },
       {
-        "title": "พร้อมไต่จากยอดหนึ่งสู่อีกยอดหนึ่ง (Be Prepared to Climb from Peak to Peak)"
+        "title": "บทที่ 14: เตรียมพร้อมปีนจากยอดหนึ่งสู่อีกยอด (Be Prepared to Climb from Peak to Peak)"
       },
       {
-        "title": "ฝึกวินัยในทุกด้าน (Practice Self-Discipline)"
+        "title": "บทที่ 15: ฝึกวินัยในทุกด้าน (Practice Self-Discipline in All Things)"
       },
       {
-        "title": "ปลดล็อกความคิดสร้างสรรค์ (Unlock Your Inborn Creativity)"
+        "title": "บทที่ 16: ปลดล็อกความคิดสร้างสรรค์ในตัว (Unlock Your Inborn Creativity)"
       },
       {
-        "title": "อยู่ใกล้คนที่ส่งเสริมการเติบโต (Get around the Right People)"
+        "title": "บทที่ 17: อยู่ใกล้ผู้คนที่เกื้อหนุนกัน (Get around the Right People)"
       },
       {
-        "title": "ดูแลสุขภาพกายให้ดี (Take Excellent Care of Your Physical Health)"
+        "title": "บทที่ 18: ดูแลสุขภาพร่างกายให้ดี (Take Excellent Care of Your Physical Health)"
       },
       {
-        "title": "ตัดสินใจและลงมือทำ (Be Decisive and Action Oriented)"
+        "title": "บทที่ 19: ตัดสินใจและลงมือทำ (Be Decisive and Action Oriented)"
       },
       {
-        "title": "อย่ายอมแพ้ต่อความล้มเหลว (Never Allow Failure to Be an Option)"
+        "title": "บทที่ 20: อย่าปล่อยให้ความกลัวความล้มเหลวหยุดคุณ (Never Allow Failure to Be an Option)"
       },
       {
-        "title": "ผ่านบททดสอบความเพียร (Pass the “Persistence Test”)"
+        "title": "บทที่ 21: ผ่านบททดสอบความเพียร (Pass the “Persistence Test”)"
       }
     ]
   },
@@ -1670,28 +1682,28 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "กฎ 1: อย่าทำให้ผู้มีอำนาจเหนือกว่ารู้สึกด้อย (Never Outshine the Master)"
+        "title": "กฎข้อ 1: อย่าทำให้ผู้มีอำนาจเหนือกว่ารู้สึกด้อย (Never Outshine the Master)"
       },
       {
-        "title": "กฎ 2: อย่าไว้ใจเพื่อนมากเกินไป และเรียนรู้วิธีใช้ศัตรู (Never Put Too Much Trust in Friends, Learn How to Use Enemies)"
+        "title": "กฎข้อ 2: อย่าไว้ใจเพื่อนมากเกินไป และเรียนรู้ที่จะร่วมงานกับอดีตคู่แข่ง (Never Put Too Much Trust in Friends, Learn How to Use Enemies)"
       },
       {
-        "title": "กฎ 3: ปกปิดเจตนาที่แท้จริง (Conceal Your Intentions)"
+        "title": "กฎข้อ 3: ปกปิดเจตนาของคุณ (Conceal Your Intentions)"
       },
       {
-        "title": "กฎ 4: พูดให้น้อยกว่าที่จำเป็น (Always Say Less Than Necessary)"
+        "title": "กฎข้อ 4: พูดให้น้อยกว่าที่จำเป็น (Always Say Less Than Necessary)"
       },
       {
-        "title": "กฎ 5: ชื่อเสียงสำคัญ จงปกป้องไว้ (So Much Depends on Reputation—Guard It with Your Life)"
+        "title": "กฎข้อ 5: ปกป้องชื่อเสียง เพราะมีหลายอย่างขึ้นอยู่กับมัน (So Much Depends on Reputation—Guard It with Your Life)"
       },
       {
-        "title": "กฎ 6: เรียกร้องความสนใจไม่ว่าต้องทำอย่างไร (Court Attention at All Cost)"
+        "title": "กฎข้อ 6: เรียกร้องความสนใจให้ผู้คนมองเห็น (Court Attention at All Costs)"
       },
       {
-        "title": "กฎ 7: ให้ผู้อื่นทำงานให้ แต่รับเครดิตไว้ (Get Others to Do the Work for You, but Always Take the Credit)"
+        "title": "กฎข้อ 7: ใช้ความสามารถของผู้อื่น แต่ให้เครดิตอย่างเป็นธรรม (Get Others to Do the Work for You, but Always Take the Credit)"
       },
       {
-        "title": "กฎ 8: ทำให้คนอื่นเข้าหา ใช้สิ่งล่อเมื่อจำเป็น (Make Other People Come to You—Use Bait If Necessary)"
+        "title": "กฎข้อ 8: ทำให้ผู้อื่นเป็นฝ่ายเข้าหาคุณ (Make Other People Come to You—Use Bait If Necessary)"
       },
       {
         "title": "กฎ 9: ชนะด้วยการกระทำ ไม่ใช่การโต้เถียง (Win Through Your Actions, Never Through Argument)"
@@ -1787,19 +1799,19 @@ window.BOOKWISE_CATALOG = [
         "title": "กฎ 39: กวนน้ำให้ขุ่นเพื่อจับปลา (Stir Up Waters to Catch Fish)"
       },
       {
-        "title": "กฎ 40: อย่าหลงเชื่อของฟรี (Despise the Free Lunch)"
+        "title": "กฎ 40: จงระแวงของฟรี (Despise the Free Lunch)"
       },
       {
-        "title": "กฎ 41: อย่าก้าวตามรอยผู้ยิ่งใหญ่ (Avoid Stepping into a Great Man’s Shoes)"
+        "title": "กฎ 41: อย่าเดินตามรอยเท้าของผู้ยิ่งใหญ่ (Avoid Stepping into a Great Man’s Shoes)"
       },
       {
-        "title": "กฎ 42: จัดการต้นเหตุแล้วกลุ่มจะสลาย (Strike the Shepherd and the Sheep Will Scatter)"
+        "title": "กฎ 42: จัดการต้นตอของความวุ่นวาย (Strike the Shepherd and the Sheep Will Scatter)"
       },
       {
-        "title": "กฎ 43: เข้าถึงหัวใจและความคิดของผู้อื่น (Work on the Hearts and Minds of Others)"
+        "title": "กฎ 43: เข้าถึงใจและความคิดของผู้อื่น (Work on the Hearts and Minds of Others)"
       },
       {
-        "title": "กฎ 44: ปลดอาวุธหรือยั่วให้โกรธด้วยการสะท้อน (Disarm and Infuriate with the Mirror Effect)"
+        "title": "กฎ 44: สะท้อนเพื่อคลี่คลายหรือทำให้เห็นผลของการกระทำ (Disarm and Infuriate with the Mirror Effect)"
       },
       {
         "title": "กฎ 45: สนับสนุนการเปลี่ยนแปลง แต่อย่าปฏิรูปมากเกินไปในคราวเดียว (Preach the Need for Change, but Never Reform Too Much at Once)"
@@ -1808,10 +1820,579 @@ window.BOOKWISE_CATALOG = [
         "title": "กฎ 46: อย่าทำให้ตนดูสมบูรณ์แบบเกินไป (Never Appear Too Perfect)"
       },
       {
-        "title": "กฎ 47: อย่าเลยเป้าหมายที่ตั้งไว้ เมื่อชนะจงรู้ว่าเมื่อไรควรหยุด (Do Not Go Past the Mark You Aimed for; in Victory, Learn When to Stop)"
+        "title": "กฎ 47: เมื่อชนะแล้วจงรู้ว่าเมื่อไรควรหยุด (Do Not Go Past the Mark You Aimed for; in Victory, Learn When to Stop)"
       },
       {
-        "title": "กฎ 48: ปรับตัวไร้รูปแบบ (Assume Formlessness)"
+        "title": "กฎ 48: ปรับตัวอย่างไร้รูปแบบ (Assume Formlessness)"
+      }
+    ]
+  },
+  {
+    "id": "breakthrough-copywriter-2-0",
+    "title": "Breakthrough Copywriter 2.0",
+    "author": "Dr. Robert C. Worstell",
+    "category": "ธุรกิจและการทำงาน",
+    "color": "#d8d0c3",
+    "text": "#30291f",
+    "added": 17,
+    "totalChapters": 7,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "คำนำและวิธีใช้คู่มือการศึกษา (Preface & How to Study This Book)"
+      },
+      {
+        "title": "หลักสูตรย่อว่าด้วยการโฆษณาที่สร้างความเปลี่ยนแปลง"
+      },
+      {
+        "title": "ถอดรหัสความลับของโฆษณาที่ได้ผล (Breakthrough Advertising Secrets)"
+      },
+      {
+        "title": "อ่านต้นฉบับให้พบแก่น ก่อนเรียบเรียงโฆษณา (Eugene Schwartz Talk at Rodale)"
+      },
+      {
+        "title": "ปรับข้อความให้ตรงระดับความเข้าใจของตลาด (What the Copywriter Needs to Know)"
+      },
+      {
+        "title": "กรอบแนวคิดเรื่องความต้องการและแรงจูงใจ (What Forms the “Mass Desires?”)"
+      },
+      {
+        "title": "สิ่งที่หลักการตลาดควรทำเพื่อผู้อ่าน (Postscript – What This Series Has To Do With You)"
+      }
+    ]
+  },
+  {
+    "id": "poor-charlie-almanack",
+    "title": "Poor Charlie’s Almanack",
+    "author": "Charles T. Munger; compiled by Peter D. Kaufman",
+    "category": "การเงินและความคิด",
+    "color": "#294b66",
+    "text": "#f5e9ca",
+    "added": 18,
+    "totalChapters": 15,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "บทนำ: มองโลกผ่านแบบจำลองความคิด (Introduction by Peter D. Kaufman)"
+      },
+      {
+        "title": "บทที่ 1 ภาพชีวิตของ Charlie Munger (A Portrait of Charles T. Munger)"
+      },
+      {
+        "title": "บทที่ 2 แนวทางคิด การเรียนรู้ และการตัดสินใจของ Munger (The Munger Approach to Life, Learning, and Decision Making)"
+      },
+      {
+        "title": "บทที่ 3 คำคมและคำตอบสดของ Munger (Mungerisms: Charlie Unscripted)"
+      },
+      {
+        "title": "คำบรรยาย 1 วิธีสร้างชีวิตให้ไม่มีความสุข (Harvard School Commencement Speech)"
+      },
+      {
+        "title": "คำบรรยาย 2 ปัญญารอบด้านกับการลงทุนและธุรกิจ (A Lesson on Elementary, Worldly Wisdom as It Relates to Investment Management and Business)"
+      },
+      {
+        "title": "คำบรรยาย 3 ปัญญารอบด้าน: ทบทวนอีกครั้งที่ Stanford Law School (A Lesson on Elementary, Worldly Wisdom, Revisited)"
+      },
+      {
+        "title": "คำบรรยาย 4 วิธีคิดเชิงปฏิบัติ (Practical Thought About Practical Thought?)"
+      },
+      {
+        "title": "คำบรรยาย 5 เหตุใดผู้เชี่ยวชาญต้องมีทักษะข้ามศาสตร์ (The Need for More Multidisciplinary Skills from Professionals)"
+      },
+      {
+        "title": "คำบรรยาย 6 วิธีลงทุนของมูลนิธิการกุศลชั้นนำ (Investment Practices of Leading Charitable Foundations)"
+      },
+      {
+        "title": "คำบรรยาย 7 ผลของความมั่งคั่งจากตลาดหุ้น (Philanthropy Roundtable)"
+      },
+      {
+        "title": "คำบรรยาย 8 เรื่องอื้อฉาวทางการเงินครั้งใหญ่ปี 2003 (The Great Financial Scandal of 2003)"
+      },
+      {
+        "title": "คำบรรยาย 9 จุดแข็งและข้อบกพร่องของเศรษฐศาสตร์เชิงวิชาการ (Academic Economics: Strengths and Faults after Considering Interdisciplinary Needs)"
+      },
+      {
+        "title": "คำบรรยาย 10 สุนทรพจน์รับปริญญา USC Gould School of Law (USC Gould School of Law Commencement Address)"
+      },
+      {
+        "title": "คำบรรยาย 11 จิตวิทยาของการตัดสินใจผิดพลาด (The Psychology of Human Misjudgment)"
+      }
+    ]
+  },
+  {
+    "id": "manifest-7-steps",
+    "title": "Manifest: 7 Steps to Living Your Best Life",
+    "author": "Roxie Nafousi",
+    "category": "การพัฒนาตนเอง",
+    "color": "#d9c9a7",
+    "text": "#3e3427",
+    "added": 21,
+    "totalChapters": 8,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "บทนำ: Manifest คืออะไร (Introduction)"
+      },
+      {
+        "title": "ขั้นที่ 1: ทำให้ภาพอนาคตชัดเจน (Be Clear in Your Vision)"
+      },
+      {
+        "title": "ขั้นที่ 2: ลดความกลัวและความสงสัย (Remove Fear and Doubt)"
+      },
+      {
+        "title": "ขั้นที่ 3: ปรับพฤติกรรมให้สอดคล้องกับเป้าหมาย (Align Your Behaviour)"
+      },
+      {
+        "title": "ขั้นที่ 4: ก้าวผ่านบททดสอบ (Overcome Tests from the Universe)"
+      },
+      {
+        "title": "ขั้นที่ 5: ฝึกความกตัญญูโดยไม่เติมเงื่อนไข (Embrace Gratitude Without Caveats)"
+      },
+      {
+        "title": "ขั้นที่ 6: เปลี่ยนความอิจฉาเป็นแรงบันดาลใจ (Turn Envy into Inspiration)"
+      },
+      {
+        "title": "ขั้นที่ 7: ไว้วางใจจักรวาล (Trust in the Universe)"
+      }
+    ]
+  },
+  {
+    "id": "manifest-dive-deeper",
+    "title": "Manifest: Dive Deeper",
+    "author": "Roxie Nafousi",
+    "category": "การพัฒนาตนเอง",
+    "color": "#d9c9a7",
+    "text": "#3e3427",
+    "added": 22,
+    "totalChapters": 8,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "บทนำ: ลงลึกกับการ Manifest (Introduction)"
+      },
+      {
+        "title": "ขั้นที่ 1: ทำให้ภาพอนาคตชัดเจน (Be Clear in Your Vision)"
+      },
+      {
+        "title": "ขั้นที่ 2: ลดความกลัวและความสงสัย (Remove Fear and Doubt)"
+      },
+      {
+        "title": "ขั้นที่ 3: ปรับพฤติกรรมให้สอดคล้องกับตัวตนที่ต้องการ (Align Your Behaviour)"
+      },
+      {
+        "title": "ขั้นที่ 4: ผ่านบททดสอบและทบทวนทิศทาง (Overcome Tests from the Universe)"
+      },
+      {
+        "title": "ขั้นที่ 5: ฝึกความกตัญญูโดยไม่เติมเงื่อนไข (Embrace Gratitude Without Caveats)"
+      },
+      {
+        "title": "ขั้นที่ 6: เปลี่ยนความอิจฉาเป็นแรงบันดาลใจ (Turn Envy into Inspiration)"
+      },
+      {
+        "title": "ขั้นที่ 7: ไว้วางใจและปล่อยให้เส้นทางคลี่คลาย (Trust in the Universe)"
+      }
+    ]
+  },
+  {
+    "id": "meditations",
+    "title": "Meditations",
+    "author": "Marcus Aurelius",
+    "category": "ปรัชญาและการพัฒนาตนเอง",
+    "color": "#6e7974",
+    "text": "#f5f1e8",
+    "added": 23,
+    "totalChapters": 12,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "เล่มที่ 1: หนี้แห่งความกตัญญูและบทเรียน (Book 1: Debts and Lessons)"
+      },
+      {
+        "title": "เล่มที่ 2: บันทึกระหว่างอยู่กับชาว Quadi (Book 2: On the River Gran, Among the Quadi)"
+      },
+      {
+        "title": "เล่มที่ 3: ณ ค่าย Carnuntum (Book 3: In Carnuntum)"
+      },
+      {
+        "title": "เล่มที่ 4 (Book 4)"
+      },
+      {
+        "title": "เล่มที่ 5 (Book 5)"
+      },
+      {
+        "title": "เล่มที่ 6 (Book 6)"
+      },
+      {
+        "title": "เล่มที่ 7 (Book 7)"
+      },
+      {
+        "title": "เล่มที่ 8 (Book 8)"
+      },
+      {
+        "title": "เล่มที่ 9 (Book 9)"
+      },
+      {
+        "title": "เล่มที่ 10 (Book 10)"
+      },
+      {
+        "title": "เล่มที่ 11 (Book 11)"
+      },
+      {
+        "title": "เล่มที่ 12 (Book 12)"
+      }
+    ]
+  },
+  {
+    "id": "million-dollar-weekend",
+    "title": "Million Dollar Weekend",
+    "author": "Noah Kagan",
+    "category": "ธุรกิจและผู้ประกอบการ",
+    "color": "#e8b84e",
+    "text": "#2d2a24",
+    "added": 24,
+    "totalChapters": 9,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "บทที่ 1: แค่เริ่มลงมือ (Just Fu**ing Start)"
+      },
+      {
+        "title": "บทที่ 2: พลังของการกล้าขอ (The Unlimited Upside of Asking)"
+      },
+      {
+        "title": "บทที่ 3: ค้นหาไอเดียธุรกิจที่มีโอกาส (Finding Million-Dollar Ideas)"
+      },
+      {
+        "title": "บทที่ 4: โมเดลธุรกิจในหนึ่งนาที (The One-Minute Business Model)"
+      },
+      {
+        "title": "บทที่ 5: ภารกิจหาเงินใน 48 ชั่วโมง (The 48-Hour Money Challenge)"
+      },
+      {
+        "title": "บทที่ 6: โซเชียลมีเดียช่วยสร้างการเติบโต (Social Media Is for Growth)"
+      },
+      {
+        "title": "บทที่ 7: อีเมลเปลี่ยนผู้ชมเป็นรายได้ (Email Is for Profit)"
+      },
+      {
+        "title": "บทที่ 8: เครื่องจักรการเติบโต (The Growth Machine)"
+      },
+      {
+        "title": "บทที่ 9: 52 โอกาสในหนึ่งปี (52 Chances This Year)"
+      }
+    ]
+  },
+  {
+    "id": "split-the-pie",
+    "title": "Split the Pie",
+    "author": "Barry Nalebuff",
+    "category": "ธุรกิจและการเจรจาต่อรอง",
+    "color": "#315b71",
+    "text": "#f2ead8",
+    "added": 25,
+    "totalChapters": 22,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "บทที่ 1: พิซซ่าหนึ่งถาด (A Pizza)"
+      },
+      {
+        "title": "บทที่ 2: เจรจากับคนที่เอาเปรียบ (Negotiating with a Troll)"
+      },
+      {
+        "title": "บทที่ 3: พายจากการเจรจา (The Pie)"
+      },
+      {
+        "title": "บทที่ 4: ความเชื่อผิดสองข้อในการเจรจา (Two Negotiation Myths)"
+      },
+      {
+        "title": "บทที่ 5: พายที่แบ่งกันอย่างเป็นธรรม (An Honest Pie)"
+      },
+      {
+        "title": "บทที่ 6: พายทางกฎหมาย (A Legal Pie)"
+      },
+      {
+        "title": "บทที่ 7: จำเป็นต้องแบ่งพายครึ่งหนึ่งเสมอหรือไม่ (Do You Have to Split the Pie?)"
+      },
+      {
+        "title": "บทที่ 8: ทำให้อีกฝ่ายยอมรับการแบ่งพายได้อย่างไร (Will the Other Side Buy In?)"
+      },
+      {
+        "title": "บทที่ 9: วิธีแบ่งผ้าที่สอดคล้องกับพาย (A Talmudic Solution)"
+      },
+      {
+        "title": "บทที่ 10: ใครควรจ่ายเท่าไร (Who Pays?)"
+      },
+      {
+        "title": "บทที่ 11: ถ้าอีกฝ่ายให้ความสำคัญมากกว่า (What If You Care More?)"
+      },
+      {
+        "title": "บทที่ 12: เมื่อยังไม่รู้ว่าพายมีขนาดเท่าไร (What If the Pie Is Uncertain?)"
+      },
+      {
+        "title": "บทที่ 13: กติกาและชื่อเสียง (Rules and Reputations)"
+      },
+      {
+        "title": "บทที่ 14: การเจรจาที่มีหลายฝ่าย (Multi-Party Negotiations)"
+      },
+      {
+        "title": "บทที่ 15: เมื่อคุณถูกใช้เป็นตัวต่อรอง (What If You Are Being Used as a Pawn?)"
+      },
+      {
+        "title": "บทที่ 16: ให้สิ่งที่อีกฝ่ายต้องการ (Give the Other Side What They Want)"
+      },
+      {
+        "title": "บทที่ 17: ถ้าคู่เจรจาเห็นขนาดพายไม่ตรงกัน (What If the Parties See Different Pies?)"
+      },
+      {
+        "title": "บทที่ 18: ลองเสนอเหตุผลจากมุมของอีกฝ่าย (Making the Other Side’s Case)"
+      },
+      {
+        "title": "บทที่ 19: นำเสนอข้อเสนอให้คนอยากรับฟัง (Selling Your Solutions)"
+      },
+      {
+        "title": "บทที่ 20: เตรียมตัวก่อนเจรจา (Preparing for a Negotiation)"
+      },
+      {
+        "title": "บทที่ 21: อะไรควรเปิดเผยและอะไรควรเก็บไว้ (What to Reveal and What to Keep Hidden)"
+      },
+      {
+        "title": "บทที่ 22: เปิดการเจรจาอย่างไรไม่ให้พลาดตั้งแต่ต้น (Opening Moves)"
+      }
+    ]
+  },
+  {
+    "id": "the-book-of-elon",
+    "title": "The Book of Elon: A Guide to Purpose and Success",
+    "author": "Eric Jorgenson",
+    "category": "ธุรกิจและเทคโนโลยี",
+    "color": "#4a6078",
+    "text": "#f2ead8",
+    "added": 26,
+    "totalChapters": 5,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "ภาค 1: ใช้ชีวิตเพื่อเป้าหมาย (Pursue Purpose)"
+      },
+      {
+        "title": "ภาค 2: ทำงานอย่างเข้มข้น (Ultra Hardcore Work)"
+      },
+      {
+        "title": "ภาค 3: การสร้างบริษัท (Building Companies)"
+      },
+      {
+        "title": "ภาค 4: เพื่อมนุษยชาติ (On Behalf of Humanity)"
+      },
+      {
+        "title": "Bonus: 69 หลักคิดของ Musk (The 69 Core Musk Methods)"
+      }
+    ]
+  },
+  {
+    "id": "you-are-the-placebo",
+    "title": "You Are the Placebo: Making Your Mind Matter",
+    "author": "Dr. Joe Dispenza",
+    "category": "สุขภาพและจิตวิทยา",
+    "color": "#4f685a",
+    "text": "#f2ead8",
+    "added": 27,
+    "totalChapters": 12,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "บทที่ 1: เป็นไปได้หรือไม่? (Is It Possible?)"
+      },
+      {
+        "title": "บทที่ 2: ประวัติโดยย่อของยาหลอก (A Brief History of the Placebo)"
+      },
+      {
+        "title": "บทที่ 3: ผลของยาหลอกในสมอง (The Placebo Effect in the Brain)"
+      },
+      {
+        "title": "บทที่ 4: ผลของยาหลอกในร่างกาย (The Placebo Effect in the Body)"
+      },
+      {
+        "title": "บทที่ 5: ความคิดเปลี่ยนสมองและร่างกายอย่างไร (How Thoughts Change the Brain and the Body)"
+      },
+      {
+        "title": "บทที่ 6: การรับคำชี้แนะ (Suggestibility)"
+      },
+      {
+        "title": "บทที่ 7: ทัศนคติ ความเชื่อ และการรับรู้ (Attitudes, Beliefs, and Perceptions)"
+      },
+      {
+        "title": "บทที่ 8: จิตกับโลกควอนตัม (The Quantum Mind)"
+      },
+      {
+        "title": "บทที่ 9: เรื่องราวการเปลี่ยนแปลงสามกรณี (Three Stories of Personal Transformation)"
+      },
+      {
+        "title": "บทที่ 10: จากข้อมูลสู่การเปลี่ยนแปลง (Information to Transformation: Proof That You Are the Placebo)"
+      },
+      {
+        "title": "บทที่ 11: เตรียมตัวทำสมาธิ (Meditation Preparation)"
+      },
+      {
+        "title": "บทที่ 12: สมาธิเพื่อเปลี่ยนความเชื่อและการรับรู้ (Changing Beliefs and Perceptions Meditation)"
+      }
+    ]
+  },
+  {
+    "id": "art-of-seduction",
+    "title": "The Art of Seduction",
+    "author": "Robert Greene",
+    "category": "จิตวิทยาและกลยุทธ์",
+    "color": "#8b6f8f",
+    "text": "AS",
+    "added": 28,
+    "totalChapters": 35,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "แบบที่ 1: ไซเรน (The Siren)"
+      },
+      {
+        "title": "แบบที่ 2: นักรักเจ้าสำราญ (The Rake)"
+      },
+      {
+        "title": "แบบที่ 3: ผู้รักในอุดมคติ (The Ideal Lover)"
+      },
+      {
+        "title": "แบบที่ 4: แดนดี (The Dandy)"
+      },
+      {
+        "title": "แบบที่ 5: ผู้เป็นธรรมชาติ (The Natural)"
+      },
+      {
+        "title": "แบบที่ 6: ผู้ให้ความหวังสลับถอยห่าง (The Coquette)"
+      },
+      {
+        "title": "แบบที่ 7: ผู้มีเสน่ห์แบบนักประสานใจ (The Charmer)"
+      },
+      {
+        "title": "แบบที่ 8: ผู้มีบารมีดึงดูดใจ (The Charismatic)"
+      },
+      {
+        "title": "แบบที่ 9: ดาราผู้ชวนฝัน (The Star)"
+      },
+      {
+        "title": "แบบที่ 10: พฤติกรรมต้านเสน่ห์ (The Anti-Seducer)"
+      },
+      {
+        "title": "ประเภทความต้องการที่ทำให้คนเปิดใจ (The Seducer's Victims—The Eighteen Types)"
+      },
+      {
+        "title": "บทที่ 1: เลือกคู่สัมพันธ์ให้เหมาะสม (Choose the Right Victim)"
+      },
+      {
+        "title": "บทที่ 2: เริ่มทำความรู้จักอย่างค่อยเป็นค่อยไป (Create a False Sense of Security—Approach Indirectly)"
+      },
+      {
+        "title": "บทที่ 3: แสดงตัวตนหลายด้าน (Send Mixed Signals)"
+      },
+      {
+        "title": "บทที่ 4: ความนิยมและเกมสามเหลี่ยม (Appear to Be an Object of Desire—Create Triangles)"
+      },
+      {
+        "title": "บทที่ 5: ความต้องการและความไม่พอใจ (Create a Need—Stir Anxiety and Discontent)"
+      },
+      {
+        "title": "บทที่ 6: ศิลปะของการสื่อความเป็นนัย (Master the Art of Insinuation)"
+      },
+      {
+        "title": "บทที่ 7: เข้าไปอยู่ในโลกของอีกฝ่าย (Enter Their Spirit)"
+      },
+      {
+        "title": "บทที่ 8: สร้างแรงดึงดูดด้วยสิ่งที่ยังเอื้อมไม่ถึง (Create Temptation)"
+      },
+      {
+        "title": "บทที่ 9: รักษาความอยากรู้ว่าอะไรจะเกิดขึ้นต่อไป (Keep Them in Suspense—What Comes Next?)"
+      },
+      {
+        "title": "บทที่ 10: พลังของถ้อยคำที่ชวนให้คล้อยตาม (Use the Demonic Power of Words to Sow Confusion)"
+      },
+      {
+        "title": "บทที่ 11: ใส่ใจรายละเอียด (Pay Attention to Detail)"
+      },
+      {
+        "title": "บทที่ 12: สร้างภาพจำให้งดงามกว่าความจริง (Poeticize Your Presence)"
+      },
+      {
+        "title": "บทที่ 13: เปิดเผยความเปราะบางอย่างมีกลยุทธ์ (Disarm Through Strategic Weakness and Vulnerability)"
+      },
+      {
+        "title": "บทที่ 14: ทำให้ความปรารถนาดูเหมือนเป็นจริง (Confuse Desire and Reality—The Perfect Illusion)"
+      },
+      {
+        "title": "บทที่ 15: แยกอีกฝ่ายออกจากเครือข่ายสนับสนุน (Isolate the Victim)"
+      },
+      {
+        "title": "บทที่ 16: แสดงให้เห็นด้วยการกระทำ (Prove Yourself)"
+      },
+      {
+        "title": "บทที่ 17: ย้อนกลับไปสัมผัสความต้องการในวัยเยาว์ (Effect a Regression)"
+      },
+      {
+        "title": "บทที่ 18: ปลุกแรงดึงดูดของสิ่งต้องห้าม (Stir Up the Transgressive and Taboo)"
+      },
+      {
+        "title": "บทที่ 19: ใช้แรงดึงดูดจากจิตวิญญาณและความหมาย (Use Spiritual Lures)"
+      },
+      {
+        "title": "บทที่ 20: สลับความสุขกับความเจ็บปวด (Mix Pleasure with Pain)"
+      },
+      {
+        "title": "บทที่ 21: เว้นระยะให้อีกฝ่ายเป็นผู้เข้าหา (Give Them Space to Fall—The Pursuer Is Pursued)"
+      },
+      {
+        "title": "บทที่ 22: ใช้แรงดึงดูดทางประสาทสัมผัส (Use Physical Lures)"
+      },
+      {
+        "title": "บทที่ 23: กล้าตัดสินใจในจังหวะสำคัญ (Master the Art of the Bold Move)"
+      },
+      {
+        "title": "บทที่ 24: รับมือผลที่ตามมาหลังแรงดึงดูดจางลง (Beware the Aftereffects)"
       }
     ]
   }
