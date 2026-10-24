@@ -29,6 +29,7 @@
   }
 
   function setUser(next) {
+    if (user && user.id !== next?.id) window.BookwiseCoverImages.clear();
     user = next;
     if (!next) loginStatus.textContent = 'กรอกรหัสผ่านเพื่อเปิดห้องสมุด';
     signedIn.hidden = !next;
@@ -229,35 +230,41 @@
   async function uploadCover(bookId, file) {
     if (!client || !user) throw new Error('sign_in_required');
     const owner = user.id;
+    if (!['image/jpeg', 'image/png', 'image/webp'].includes(file.type) || file.size > 5 * 1024 * 1024) throw new Error('invalid_cover_file');
+    file = await window.BookwiseCoverImages.optimize(file);
+    if (user?.id !== owner) throw new Error('account_changed_during_upload');
     const extension = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp' }[file.type];
-    if (!extension || file.size > 5 * 1024 * 1024) throw new Error('invalid_cover_file');
     const path = `${owner}/${bookId}/${crypto.randomUUID()}.${extension}`;
     const { error: uploadError } = await client.storage.from('book-covers').upload(path, file, {
-      cacheControl: '3600', contentType: file.type, upsert: false
+      cacheControl: '31536000', contentType: file.type, upsert: false
     });
     if (uploadError) throw uploadError;
     if (user?.id !== owner) throw new Error('account_changed_during_upload');
-    const { data, error } = await client.storage.from('book-covers').createSignedUrl(path, 86400);
-    if (error) throw error;
+    const signedUrl = await window.BookwiseCoverImages.remember(owner, path, file);
     if (user?.id !== owner) throw new Error('account_changed_during_upload');
-    return { path, signedUrl: data.signedUrl };
+    return { path, signedUrl };
   }
 
   async function getCoverUrl(path) {
     if (!client || !user) throw new Error('sign_in_required');
     const owner = user.id;
-    if (typeof path !== 'string' || !path.startsWith(`${owner}/`)) throw new Error('invalid_cover_path');
-    const { data, error } = await client.storage.from('book-covers').createSignedUrl(path, 86400);
-    if (error) throw error;
+    const url = await window.BookwiseCoverImages.get(owner, path, async () => {
+      const { data, error } = await client.storage.from('book-covers').createSignedUrl(path, 86400);
+      if (error) throw error;
+      if (user?.id !== owner) throw new Error('account_changed_during_cover_load');
+      return data.signedUrl;
+    });
     if (user?.id !== owner) throw new Error('account_changed_during_cover_load');
-    return data.signedUrl;
+    return url;
   }
 
   async function removeCover(path) {
     if (!client || !user) throw new Error('sign_in_required');
     if (typeof path !== 'string' || !path.startsWith(`${user.id}/`)) throw new Error('invalid_cover_path');
+    const owner = user.id;
     const { error } = await client.storage.from('book-covers').remove([path]);
     if (error) throw error;
+    await window.BookwiseCoverImages.forget(owner, path);
   }
 
   async function loadChapter(bookId, chapterIndex) {
