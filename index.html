@@ -17,7 +17,7 @@
   <title>Readwise — อ่านลึก คิดไกล ใช้ได้จริง</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&family=Sarabun:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&family=Sarabun:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
 
 
@@ -28,7 +28,7 @@
 
 
   <link rel="stylesheet" href="app-base.css?v=20261022-2">
-  <link rel="stylesheet" href="app-experience.css?v=20261024-continue1">
+  <link rel="stylesheet" href="app-experience.css?v=20261025-reader1">
 </head>
 <body data-auth="signed-out">
   <main class="login-screen" id="login-screen" aria-labelledby="login-title">
@@ -82,7 +82,7 @@
       <section class="saved-view" id="saved-view"><div class="kicker">ร่องรอยการอ่าน</div><h1>บันทึกไว้</h1><p>ไฮไลต์ โน้ต และบุ๊กมาร์กที่คุณเก็บไว้ระหว่างอ่าน</p><div class="workspace-stats" id="saved-stats"></div><div id="saved-list"></div></section>
       <section class="reader" id="reader-view">
         <div class="reader-top"><button class="back" id="back-library"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>กลับห้องสมุด</button><div class="reader-actions"><button class="account-button" id="reader-account-button" type="button" hidden aria-label="บัญชีและการซิงก์">บัญชี</button><button class="bookmark-toggle" id="bookmark-toggle" aria-pressed="false" aria-label="บันทึกบทนี้"><svg viewBox="0 0 24 24"><path d="M6 3.5h12a1 1 0 0 1 1 1V21l-7-4-7 4V4.5a1 1 0 0 1 1-1Z"/></svg><span>บุ๊กมาร์ก</span></button><div class="reader-tools"><details class="type-settings" id="type-settings"><summary aria-label="ปรับขนาดตัวอักษร"><span aria-hidden="true">Aa</span><span id="font-value">14 pt</span></summary><div class="type-panel"><label for="font-range">ขนาดตัวอักษร <output id="font-output">14 pt</output></label><div class="font-scale"><button id="font-down" aria-label="ลดขนาดตัวอักษร">A−</button><input id="font-range" type="range" min="10" max="48" step="1" value="14"><button id="font-up" aria-label="เพิ่มขนาดตัวอักษร">A+</button></div><div class="font-limits"><span>10 pt</span><button id="font-reset">ค่าเริ่มต้น 14 pt</button><span>48 pt</span></div></div></details></div></div></div>
-        <div class="chapter-controls"><button id="chapter-prev" class="chapter-step" aria-label="บทก่อนหน้า">←</button><button id="chapter-picker" aria-haspopup="dialog" aria-controls="chapter-dialog"><span><small>สารบัญ</small><strong id="chapter-picker-label">เลือกบท</strong></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></button><button id="chapter-forward" class="chapter-step" aria-label="บทถัดไป">→</button></div><div class="reader-layout"><nav class="toc" aria-label="สารบัญหนังสือ"><div class="toc-title">สารบัญ</div><div class="toc-book" id="toc-book"></div><div class="toc-list" id="toc-list"></div><div class="reader-saved" id="reader-saved"></div></nav><article class="reader-content"><div class="reader-chapter" id="chapter-label"></div><h1 id="chapter-title"></h1><p class="chapter-original" id="chapter-original" lang="en"></p><p class="chapter-deck" id="chapter-deck"></p><div class="reader-rule"></div><div class="prose" id="chapter-body"></div><div class="chapter-footer"><span id="chapter-number"></span><button id="next-chapter">บทถัดไป →</button></div><div class="reader-progress"><span>ความคืบหน้า</span><div class="progress"><i id="reader-progress-fill" style="width:0%"></i></div><span id="reader-progress-text"></span></div><section class="recall" id="recall"><h2>ทบทวนท้ายบท</h2><p class="recall-intro">ฝึกตอบด้วยรูปแบบที่หลากหลาย แล้วเก็บคำถามที่อยากฝึกซ้ำเข้าชุดทบทวน</p><div id="quiz-content"></div></section></article></div>
+        <div class="chapter-controls"><button id="chapter-prev" class="chapter-step" aria-label="บทก่อนหน้า">←</button><div class="chapter-select"><button id="chapter-picker" type="button" aria-expanded="false" aria-haspopup="dialog" aria-controls="chapter-dialog"><span><small>สารบัญ</small><strong id="chapter-picker-label">เลือกบท</strong></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></button><div id="chapter-dropdown" class="chapter-dropdown" role="region" aria-label="เลือกบท" hidden></div></div><button id="chapter-forward" class="chapter-step" aria-label="บทถัดไป">→</button></div><div class="reader-layout"><article class="reader-content"><div class="reader-chapter" id="chapter-label"></div><h1 id="chapter-title"></h1><p class="chapter-original" id="chapter-original" lang="en"></p><p class="chapter-deck" id="chapter-deck"></p><div class="reader-rule"></div><div class="prose" id="chapter-body"></div><div class="chapter-footer"><span id="chapter-number"></span><button id="next-chapter">บทถัดไป →</button></div><div class="reader-progress"><span>ความคืบหน้า</span><div class="progress"><i id="reader-progress-fill" style="width:0%"></i></div><span id="reader-progress-text"></span></div><details class="reader-notes" id="reader-notes" hidden><summary>ไฮไลต์และโน้ตในบทนี้</summary><div class="reader-saved" id="reader-saved"></div></details><section class="recall" id="recall"><h2>ทบทวนท้ายบท</h2><div id="quiz-content"></div></section></article></div>
       </section>
     </main>
   </div>
@@ -91,13 +91,13 @@
   <dialog class="note-dialog" id="note-dialog"><form id="note-form"><div class="note-dialog-top"><span>โน้ตระหว่างอ่าน</span><button type="button" id="close-note" aria-label="ปิดโน้ต">×</button></div><h2>บันทึกความคิด</h2><blockquote id="note-excerpt"></blockquote><label for="note-text">โน้ตของคุณ</label><textarea id="note-text" rows="5" placeholder="เขียนสิ่งที่อยากจำ หรือความคิดที่เกิดขึ้น..."></textarea><div class="note-dialog-actions"><button type="button" class="note-delete" id="delete-note">ลบไฮไลต์</button><button type="submit" class="note-save">บันทึกโน้ต</button></div></form></dialog>
   <dialog class="search-dialog" id="search-dialog"><div class="search-dialog-top"><label for="search-input">ค้นหาในห้องสมุด</label><button id="close-search" aria-label="ปิดการค้นหา">×</button></div><input id="search-input" type="search" placeholder="ชื่อหนังสือ ผู้เขียน หรือชื่อบท" autocomplete="off"><div id="search-results" class="search-results"></div></dialog>
   <dialog class="account-dialog" id="account-dialog"><div class="account-dialog-head"><h2>ห้องสมุดส่วนตัว</h2><button type="button" id="account-close" aria-label="ปิด">×</button></div><div id="account-signed-in" hidden><p id="account-current-email"></p><div class="account-dialog-actions"><button class="secondary" type="button" id="account-import" hidden>นำเข้าข้อมูลจากเครื่องนี้</button><button class="secondary" type="button" id="account-reload">โหลดข้อมูลล่าสุด</button><button class="secondary" type="button" id="account-signout">ออกจากระบบ</button></div></div><p class="account-status" id="account-status" role="status" aria-live="polite">กำลังเชื่อมต่อ…</p></dialog>
-  <dialog class="chapter-dialog" id="chapter-dialog" aria-labelledby="chapter-dialog-title"><div class="sheet-handle" aria-hidden="true"></div><div class="sheet-heading"><div><h2 id="chapter-dialog-title">เลือกบท</h2><p id="chapter-dialog-book"></p></div><button id="chapter-dialog-close" class="close-control" aria-label="ปิดสารบัญ">×</button></div><label class="sr-only" for="chapter-search">ค้นหาบท</label><input type="search" id="chapter-search" placeholder="ค้นหาชื่อบท หรือเลขบท…" autocomplete="off"><div id="chapter-options" class="chapter-options"></div></dialog>
-  <script src="bookwise-catalog.js?v=20261024-continue1"></script>
-  <script src="cover-images.js?v=20261024-continue1"></script>
-  <script src="app.js?v=20261024-continue1"></script>
-  <script src="reader.js?v=20261024-continue1"></script>
+  <dialog class="chapter-dialog" id="chapter-dialog" aria-labelledby="chapter-dialog-title"><div id="chapter-picker-content"><div class="sheet-handle" aria-hidden="true"></div><div class="sheet-heading"><div><h2 id="chapter-dialog-title">เลือกบท</h2><p id="chapter-dialog-book"></p></div><button id="chapter-dialog-close" class="close-control" aria-label="ปิดสารบัญ">×</button></div><label class="sr-only" for="chapter-search">ค้นหาบท</label><input type="search" id="chapter-search" placeholder="ค้นหาชื่อบท หรือเลขบท…" autocomplete="off"><div id="chapter-options" class="chapter-options"></div></div></dialog>
+  <script src="bookwise-catalog.js?v=20261025-reader1"></script>
+  <script src="cover-images.js?v=20261025-reader1"></script>
+  <script src="app.js?v=20261025-reader1"></script>
+  <script src="reader.js?v=20261025-reader1"></script>
   <script src="supabase-config.js?v=20261022-2"></script>
-  <script src="cloud-sync.js?v=20261024-continue1"></script>
+  <script src="cloud-sync.js?v=20261025-reader1"></script>
 
 
 

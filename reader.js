@@ -43,7 +43,7 @@ function clearReadingContent(){
   for(const book of booksData)book.chapters=book.chapters.map(chapter=>({title:chapter.title}));
   for(const id of ['chapter-body','chapter-title','chapter-original','chapter-deck','quiz-content','reader-saved','review-list','saved-list'])document.getElementById(id).replaceChildren();
   reader.style.display='none';
-  document.getElementById('chapter-dialog').close();
+  closeChapterPicker(false);
   noteDialog.close();
   document.getElementById('type-settings').open=false;
   clearSelection();
@@ -63,6 +63,7 @@ function lockedView(element){
   element.querySelector('[data-login]').onclick=()=>requireLogin();
 }
 function showView(view){
+  closeChapterPicker(false);
   flushReadingPosition();readingReady=false;
   if(!['all','favorites','review','saved'].includes(view))view='all';
   ++chapterLoadId;hideToolbar();
@@ -94,21 +95,18 @@ async function openBook(id,chapter,markId){
   document.getElementById('home-top').style.display='none';reader.style.display='block';setNavigation('all');
   await showChapter(chapter??book.chapter,{resume:chapter==null&&!markId});
   if(!signedIn()||activeBook!==id||reader.style.display!=='block')return;
-  requestAnimationFrame(alignDesktopReader);
   if(markId){requestAnimationFrame(()=>{
     const mark=[...document.querySelectorAll('.reader-highlight')].find(item=>item.dataset.annotation===markId);
     if(mark)mark.scrollIntoView({behavior:'smooth',block:'center'});else toast('ข้อความเดิมยังอยู่ในบันทึก แต่ไม่พบในสรุปฉบับใหม่');
   });}
 }
 function updateChapterControls(book,n){
-  document.getElementById('toc-book').textContent=book.title;
   document.getElementById('chapter-picker-label').textContent=`บทที่ ${n+1} · ${plainText(book.chapters[n].title).split(' (')[0]}`;
   document.getElementById('chapter-prev').disabled=n===0;
   document.getElementById('chapter-forward').disabled=n===book.chapters.length-1;
   document.getElementById('chapter-prev').onclick=()=>showChapter(n-1).then(()=>window.scrollTo(0,0));
   document.getElementById('chapter-forward').onclick=()=>showChapter(n+1).then(()=>window.scrollTo(0,0));
-  document.getElementById('toc-list').innerHTML=book.chapters.map((chapter,i)=>`<button class="toc-item ${i===n?'active':''}" ${i===n?'aria-current="location"':''} data-chapter="${i}"><span class="toc-number">${String(i+1).padStart(2,'0')}</span><span>${esc(chapter.title)}</span></button>`).join('');
-  document.querySelectorAll('.toc-item').forEach(button=>button.onclick=()=>showChapter(Number(button.dataset.chapter)).then(()=>window.scrollTo(0,0)));
+
 }
 async function showChapter(index,{resume=false}={}){
   if(!requireLogin())return;
@@ -151,7 +149,7 @@ async function showChapter(index,{resume=false}={}){
     if(document.fonts)await document.fonts.ready;
     await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
     if(requestId!==chapterLoadId||!signedIn())return;
-    alignDesktopReader();restoreReadingPosition(resumePosition);readingReady=true;captureReadingPosition();
+    restoreReadingPosition(resumePosition);readingReady=true;captureReadingPosition();
   }catch(error){
     if(requestId!==chapterLoadId)return;
     document.getElementById('chapter-body').innerHTML='<div class="content-error" role="alert"><p>ยังเปิดบทนี้ไม่ได้ กรุณาลองอีกครั้ง</p><button class="primary-action" id="retry-chapter">ลองใหม่</button></div>';
@@ -176,7 +174,7 @@ function renderChapterOptions(){
   const options=document.getElementById('chapter-options');
   options.innerHTML=entries.length?entries.map(({chapter,i})=>`<button class="chapter-option ${i===book.chapter?'selected':''}" data-pick-chapter="${i}" ${i===book.chapter?'aria-current="location"':''}><span class="chapter-option-number">${String(i+1).padStart(2,'0')}</span><span>${esc(chapter.title)}${i===book.chapter?'<small>กำลังอ่าน</small>':''}</span><span class="chapter-option-check" aria-hidden="true">${i===book.chapter?'✓':'→'}</span></button>`).join(''):'<p class="chapter-no-results" role="status">ไม่พบบทที่ค้นหา</p>';
   options.querySelectorAll('[data-pick-chapter]').forEach(button=>button.onclick=()=>{
-    document.getElementById('chapter-dialog').close();showChapter(Number(button.dataset.pickChapter)).then(()=>window.scrollTo(0,0));
+    closeChapterPicker();showChapter(Number(button.dataset.pickChapter)).then(()=>window.scrollTo(0,0));
   });
 }
 function getChapterQuiz(book,index){return Array.isArray(book?.chapters[index]?.quiz)?book.chapters[index].quiz:[];}
@@ -208,7 +206,7 @@ function saveQuizCard(){
   reviewQueue.push(card);persist();const saveButton=document.getElementById('save-card');saveButton.disabled=true;saveButton.textContent='อยู่ในชุดทบทวนแล้ว';updateReviewBadge();toast('เพิ่มคำถามเข้าชุดทบทวนแล้ว');
 }
 const practiceModes=new Map();
-const practiceLabels={flashcard:'การ์ดพลิก',written:'เขียนคำตอบ',cloze:'เติมคำ',choice:'เลือกคำตอบ'};
+const practiceLabels={flashcard:'การ์ดพลิก',written:'คำถามทบทวน',cloze:'เติมคำ',choice:'เลือกคำตอบ'};
 function normalizedQuestion(q){
   const options=Array.isArray(q.options)?q.options.map(plainText):[];
   return {question:plainText(q.question||q.q)+(q.statement?'\n'+plainText(q.statement):''),answer:plainText(q.answerText||(typeof q.answer==='string'?q.answer:options[q.answer])),why:plainText(q.why),options,correct:Number.isInteger(q.answer)&&q.answer>=0&&q.answer<options.length?q.answer:null};
@@ -232,7 +230,7 @@ function chapterPracticeMode(book,index,questions){
 function practiceMarkup(data,mode,key){
   if(mode==='flashcard')return flashcardMarkup(data.question,data.answer,data.why,key)+`<button class="primary-action flip-action" id="${key}-reveal" aria-pressed="false">พลิกดูคำตอบ</button>`;
   const cloze=mode==='cloze'?clozeData(data.answer):null;
-  return `<section class="practice-question" id="${key}" aria-label="${practiceLabels[mode]}"><span class="card-eyebrow">ลองตอบก่อนดูเฉลย</span><h3>${esc(data.question)}</h3>${mode==='choice'?`<div class="practice-options">${data.options.map((option,i)=>`<button type="button" data-option="${i}" aria-pressed="false"><span>${String.fromCharCode(65+i)}</span>${esc(option)}</button>`).join('')}</div>`:cloze?`<p class="cloze-sentence">${esc(cloze.before)}<span class="cloze-blank" aria-label="คำที่เว้นว่าง">···</span>${esc(cloze.after)}</p><label for="${key}-response">เติมคำที่หายไป</label><input id="${key}-response" class="practice-response" autocomplete="off" placeholder="พิมพ์คำตอบของคุณ">`:`<label for="${key}-response">อธิบายความเข้าใจด้วยคำของคุณเอง</label><textarea id="${key}-response" class="practice-response" rows="4" placeholder="ลองนึกเหตุผล หรือตัวอย่างที่ช่วยอธิบายหลักคิด…"></textarea>`}<p class="practice-hint">${mode==='choice'?'เลือกคำตอบแล้วดูเหตุผลประกอบ':'ตอบในใจได้เช่นกัน แล้วเทียบกับแนวคำตอบด้วยตัวเอง'}</p><div class="practice-answer" id="${key}-answer" hidden role="region" aria-label="แนวคำตอบ"><span class="card-eyebrow">${cloze?'คำที่หายไป: '+esc(cloze.term):'แนวคำตอบ'}</span><p>${esc(data.answer)}</p>${data.why?`<p>${esc(data.why)}</p>`:''}<p class="practice-feedback" role="status"></p></div></section><button class="primary-action flip-action" id="${key}-reveal" aria-expanded="false" aria-controls="${key}-answer">ดูแนวคำตอบ</button>`;
+  return `<section class="practice-question" id="${key}" aria-label="${practiceLabels[mode]}"><span class="card-eyebrow">ลองตอบก่อนดูเฉลย</span><h3>${esc(data.question)}</h3>${mode==='choice'?`<div class="practice-options">${data.options.map((option,i)=>`<button type="button" data-option="${i}" aria-pressed="false"><span>${String.fromCharCode(65+i)}</span>${esc(option)}</button>`).join('')}</div>`:cloze?`<p class="cloze-sentence">${esc(cloze.before)}<span class="cloze-blank" aria-label="คำที่เว้นว่าง">···</span>${esc(cloze.after)}</p><label for="${key}-response">เติมคำที่หายไป</label><input id="${key}-response" class="practice-response" autocomplete="off" placeholder="พิมพ์คำตอบของคุณ">`:`<label class="sr-only" for="${key}-response">อธิบายความเข้าใจด้วยคำของคุณเอง</label><textarea id="${key}-response" class="practice-response" rows="4" placeholder="ลองนึกเหตุผล หรือตัวอย่างที่ช่วยอธิบายหลักคิด…"></textarea>`}${mode==='choice'?'<p class="practice-hint">เลือกคำตอบแล้วดูเหตุผลประกอบ</p>':''}<div class="practice-answer" id="${key}-answer" hidden role="region" aria-label="แนวคำตอบ"><span class="card-eyebrow">${cloze?'คำที่หายไป: '+esc(cloze.term):'แนวคำตอบ'}</span><p>${esc(data.answer)}</p>${data.why?`<p>${esc(data.why)}</p>`:''}<p class="practice-feedback" role="status"></p></div></section><button class="primary-action flip-action" id="${key}-reveal" aria-expanded="false" aria-controls="${key}-answer">ดูแนวคำตอบ</button>`;
 }
 function bindPractice(data,mode,key,onReveal){
   const card=document.getElementById(key),button=document.getElementById(key+'-reveal');
@@ -258,7 +256,7 @@ function renderQuiz(){
   if(!questions.length){el.textContent='บทนี้ยังไม่มีคำถามทบทวน';return;}
   quizIndex=Math.max(0,Math.min(quizIndex,questions.length-1));
   const data=normalizedQuestion(currentQuiz()),mode=chapterPracticeMode(book,quizIndex,questions),saved=reviewQueue.some(card=>card.id===`${book.id}-${book.chapter}-${quizIndex}`);
-  el.innerHTML=`<div class="flashcard-meta"><span>${practiceLabels[mode]}</span><span>ข้อ ${quizIndex+1} / ${questions.length}</span></div>${practiceMarkup(data,mode,'chapter-practice')}<div class="flashcard-pagination"><button id="card-prev" ${quizIndex===0?'disabled':''} aria-label="คำถามก่อนหน้า">←</button><div class="card-dots" aria-hidden="true">${questions.map((_,i)=>`<i class="${i===quizIndex?'current':''}"></i>`).join('')}</div><button id="card-next" ${quizIndex===questions.length-1?'disabled':''} aria-label="คำถามถัดไป">→</button></div><div class="card-save-actions"><button class="secondary-action" id="save-card" ${saved?'disabled':''}>${saved?'อยู่ในชุดทบทวนแล้ว':'เพิ่มคำถามนี้เข้าชุดทบทวน'}</button></div>`;
+  el.innerHTML=`<div class="flashcard-meta">${mode==='written'?'':`<span>${practiceLabels[mode]}</span>`}<span>ข้อ ${quizIndex+1} / ${questions.length}</span></div>${practiceMarkup(data,mode,'chapter-practice')}<div class="flashcard-pagination"><button id="card-prev" ${quizIndex===0?'disabled':''} aria-label="คำถามก่อนหน้า">←</button><div class="card-dots" aria-hidden="true">${questions.map((_,i)=>`<i class="${i===quizIndex?'current':''}"></i>`).join('')}</div><button id="card-next" ${quizIndex===questions.length-1?'disabled':''} aria-label="คำถามถัดไป">→</button></div><div class="card-save-actions"><button class="secondary-action" id="save-card" ${saved?'disabled':''}>${saved?'อยู่ในชุดทบทวนแล้ว':'เพิ่มคำถามนี้เข้าชุดทบทวน'}</button></div>`;
   bindPractice(data,mode,'chapter-practice');
   document.getElementById('card-prev').onclick=()=>{quizIndex--;renderQuiz();document.getElementById('chapter-practice-reveal').focus({preventScroll:true});};
   document.getElementById('card-next').onclick=()=>{quizIndex++;renderQuiz();document.getElementById('chapter-practice-reveal').focus({preventScroll:true});};
@@ -321,15 +319,59 @@ document.getElementById('font-down').onclick=()=>setReadingSize(fontSize-1);
 document.getElementById('font-up').onclick=()=>setReadingSize(fontSize+1);
 document.getElementById('font-range').oninput=event=>setReadingSize(event.target.value);
 document.getElementById('font-reset').onclick=()=>{fontSizeCustomized=false;setReadingSize(14,false);persist();document.getElementById('type-settings').open=false;};setReadingSize(fontSize,false);
-document.getElementById('chapter-picker').onclick=()=>{
+const chapterPickerMedia=matchMedia('(min-width:1001px)');
+function closeChapterPicker(restoreFocus=true){
+  const button=document.getElementById('chapter-picker'),dropdown=document.getElementById('chapter-dropdown'),dialog=document.getElementById('chapter-dialog');
+  const wasOpen=!dropdown.hidden||dialog.open;
+  dropdown.hidden=true;if(dialog.open)dialog.close();button.setAttribute('aria-expanded','false');
+  if(wasOpen&&restoreFocus)button.focus({preventScroll:true});
+}
+function configureChapterPicker(){
+  closeChapterPicker(false);
+  const button=document.getElementById('chapter-picker');
+  const target=document.getElementById(chapterPickerMedia.matches?'chapter-dropdown':'chapter-dialog');
+  target.appendChild(document.getElementById('chapter-picker-content'));
+  button.setAttribute('aria-controls',target.id);
+  if(chapterPickerMedia.matches)button.removeAttribute('aria-haspopup');else button.setAttribute('aria-haspopup','dialog');
+}
+function openChapterPicker(){
   const book=booksData.find(item=>item.id===activeBook);if(!book||!requireLogin())return;
-  document.getElementById('chapter-dialog-book').textContent=book.title;document.getElementById('chapter-search').value='';renderChapterOptions();
-  document.getElementById('chapter-dialog').showModal();
-  requestAnimationFrame(()=>document.querySelector('.chapter-option.selected')?.scrollIntoView({block:'center'}));
-};
+  const dropdown=document.getElementById('chapter-dropdown'),dialog=document.getElementById('chapter-dialog');
+  if(!dropdown.hidden||dialog.open){closeChapterPicker();return;}
+  document.getElementById('chapter-dialog-book').textContent=book.title;
+  document.getElementById('chapter-search').value='';renderChapterOptions();
+  document.getElementById('type-settings').open=false;
+  if(chapterPickerMedia.matches)dropdown.hidden=false;else dialog.showModal();
+  document.getElementById('chapter-picker').setAttribute('aria-expanded','true');
+  document.getElementById('chapter-search').focus({preventScroll:true});
+  requestAnimationFrame(()=>{
+    const options=document.getElementById('chapter-options'),selected=options.querySelector('.selected');
+    if(selected)options.scrollTop=Math.max(0,selected.offsetTop-options.offsetTop-options.clientHeight/2+selected.clientHeight/2);
+  });
+}
+chapterPickerMedia.addEventListener('change',configureChapterPicker);configureChapterPicker();
+document.getElementById('chapter-picker').onclick=openChapterPicker;
 document.getElementById('chapter-search').oninput=renderChapterOptions;
-document.getElementById('chapter-dialog-close').onclick=()=>document.getElementById('chapter-dialog').close();
-document.getElementById('chapter-dialog').addEventListener('click',event=>{if(event.target===event.currentTarget){const rect=event.currentTarget.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)event.currentTarget.close();}});
+document.getElementById('chapter-dialog-close').onclick=()=>closeChapterPicker();
+document.getElementById('chapter-dialog').addEventListener('cancel',event=>{event.preventDefault();closeChapterPicker();});
+document.getElementById('chapter-dialog').addEventListener('close',()=>document.getElementById('chapter-picker').setAttribute('aria-expanded','false'));
+document.getElementById('chapter-dialog').addEventListener('click',event=>{if(event.target===event.currentTarget){const rect=event.currentTarget.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)closeChapterPicker();}});
+document.addEventListener('click',event=>{if(!document.getElementById('chapter-dropdown').hidden&&!event.target.closest('.chapter-select'))closeChapterPicker(false);});
+document.addEventListener('keydown',event=>{
+  const open=!document.getElementById('chapter-dropdown').hidden||document.getElementById('chapter-dialog').open;
+  if(event.key==='Escape'&&open){event.preventDefault();closeChapterPicker();}
+});
+document.querySelector('.chapter-select').addEventListener('focusout',()=>{
+  requestAnimationFrame(()=>{if(chapterPickerMedia.matches&&!document.querySelector('.chapter-select').contains(document.activeElement))closeChapterPicker(false);});
+});
+document.getElementById('chapter-picker-content').addEventListener('keydown',event=>{
+  if(!['ArrowDown','ArrowUp','Home','End'].includes(event.key))return;
+  const buttons=[...document.querySelectorAll('[data-pick-chapter]')],index=buttons.indexOf(document.activeElement);
+  if(index<0&&event.target.id!=='chapter-search')return;
+  if(event.target.id==='chapter-search'&&event.key!=='ArrowDown')return;
+  event.preventDefault();const next=event.key==='Home'?0:event.key==='End'?buttons.length-1:event.key==='ArrowDown'?Math.min(buttons.length-1,index+1):Math.max(0,index-1);
+  buttons[next]?.focus();
+});
 document.addEventListener('click',event=>{if(!event.target.closest('.type-settings'))document.getElementById('type-settings').open=false;});
 document.addEventListener('keydown',event=>{if(event.key==='Escape')document.getElementById('type-settings').open=false;});
 document.getElementById('review-list').insertAdjacentHTML('afterend','<p class="sr-only" id="review-status" role="status"></p>');
