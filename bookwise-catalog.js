@@ -757,7 +757,7 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "ประกาศสงครามกับศัตรู: กลยุทธ์ขั้วตรงข้าม (Declare War on Your Enemies: The Polarity Strategy)"
+        "title": "ประกาศสงครามกับศัตรู: กลยุทธ์ขั้วตรงข้าม (Declare War on Your Enemies: The Polarity Strategy — ดีแคลร์ วอร์ ออน ยัวร์ เอนะมีส์: เดอะ พอลาริตี สแตรทิจี)"
       },
       {
         "title": "อย่ารบศึกเก่า: สงครามกองโจรทางความคิด (Do Not Fight the Last War)"
