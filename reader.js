@@ -74,6 +74,7 @@ function showView(view){
   setNavigation(view);
   if(libraryVisible){
     filter=view==='favorites'?'Favorites':'All';
+    document.getElementById('library-heading').textContent=view==='favorites'?'รายการโปรดของคุณ':'ห้องสมุดส่วนตัวของคุณ';
     document.querySelectorAll('.filter').forEach(button=>button.classList.toggle('active',button.dataset.category===filter));
     document.getElementById('shelf-title').firstChild.textContent=view==='favorites'?'รายการโปรด':'หนังสือทั้งหมด';
     renderBooks();
