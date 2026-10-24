@@ -27,6 +27,23 @@ const sdk=`window.supabase={createClient(){
   assert.equal(await page.locator('.book-taxonomy').count(),0);
   assert.equal(await page.locator('.book-category').count(),content.length);
   assert.equal(await page.locator('.book>.shelf-progress').count(),content.length);
+  // Resume cards are compact and expose arrow navigation alongside native swiping.
+  assert.equal(await page.locator('.continue-info .kicker,.continue-info p').count(),0);
+  assert.equal(await page.locator('.continue-open').first().evaluate(el=>getComputedStyle(el).paddingTop),'8px');
+  assert((await page.locator('.continue').first().boundingBox()).height<130);
+  assert.equal(await page.locator('#continue-prev').isDisabled(),true);
+  assert.equal(await page.locator('#continue-next').isDisabled(),true);
+  await page.setViewportSize({width:390,height:1000});
+  await page.waitForFunction(()=>!document.getElementById('continue-next').disabled);
+  await page.locator('#continue-next').click();
+  await page.waitForFunction(()=>document.getElementById('continue-list').scrollLeft>0&&document.getElementById('continue-next').disabled);
+  assert.equal(await page.locator('#continue-prev').isEnabled(),true);
+  await page.locator('#continue-prev').click();
+  await page.waitForFunction(()=>document.getElementById('continue-prev').disabled);
+  await page.locator('#continue-list').focus();await page.keyboard.press('ArrowRight');
+  await page.waitForFunction(()=>document.getElementById('continue-next').disabled);
+  await page.setViewportSize({width:1440,height:1000});
+  await page.waitForFunction(()=>document.getElementById('continue-next').disabled&&document.getElementById('continue-prev').disabled);
   // Every progress baseline in a shelf row must match despite different title lengths.
   const layout=await page.locator('.book').evaluateAll(cards=>cards.map(card=>({top:Math.round(card.getBoundingClientRect().top),bottom:Math.round(card.querySelector('.book-prog').getBoundingClientRect().bottom)})));
   for(const row of new Set(layout.map(x=>x.top)))assert.equal(new Set(layout.filter(x=>x.top===row).map(x=>x.bottom)).size,1);

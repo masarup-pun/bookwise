@@ -75,11 +75,31 @@
       const value=Math.round(Math.max(0,Math.min(100,Number(b.progress)||0)));
       return `<div class="shelf-progress ${extra}" style="--progress-color:hsl(${value*1.25} 55% 43%)"><div class="progress" role="progressbar" aria-label="ความคืบหน้าการอ่าน ${esc(b.title)}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${value}"><i style="width:${value}%"></i></div><span>${value}%</span></div>`;
     }
+    const continueList=document.getElementById('continue-list');
+    function updateContinueArrows(){
+      const max=Math.max(0,continueList.scrollWidth-continueList.clientWidth);
+      document.getElementById('continue-prev').disabled=continueList.scrollLeft<=2;
+      document.getElementById('continue-next').disabled=continueList.scrollLeft>=max-2;
+    }
+    function moveContinue(direction){
+      const max=Math.max(0,continueList.scrollWidth-continueList.clientWidth),current=continueList.scrollLeft;
+      const edge=continueList.getBoundingClientRect().left;
+      const positions=[...continueList.children].map(card=>card.getBoundingClientRect().left-edge+current);
+      const target=direction>0?positions.find(left=>left>current+2)??max:positions.reverse().find(left=>left<current-2)??0;
+      continueList.scrollTo({left:Math.max(0,Math.min(max,target)),behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});
+    }
+    document.getElementById('continue-prev').onclick=()=>moveContinue(-1);
+    document.getElementById('continue-next').onclick=()=>moveContinue(1);
+    continueList.addEventListener('scroll',updateContinueArrows,{passive:true});
+    continueList.addEventListener('keydown',event=>{if(event.target===continueList&&['ArrowLeft','ArrowRight'].includes(event.key)){event.preventDefault();moveContinue(event.key==='ArrowRight'?1:-1)}});
+    window.addEventListener('resize',updateContinueArrows,{passive:true});
+    if('ResizeObserver' in window)new ResizeObserver(updateContinueArrows).observe(continueList);
     function renderContinue(){
       const list=booksData.filter(b=>window.BookwiseCloudSync?.isSignedIn?.()&&b.started&&b.progress>0&&!b.completed&&(!b.continueDismissedAt||b.lastRead>b.continueDismissedAt)).sort((a,b)=>(b.lastRead||0)-(a.lastRead||0));
       document.getElementById('continue-count').textContent=list.length?`${list.length} เล่มกำลังอ่าน`:'';
       document.getElementById('continue-wrap').style.display=list.length?'block':'none';
-      document.getElementById('continue-list').innerHTML=list.map(b=>`<article class="continue"><button type="button" class="continue-open" data-continue="${b.id}" aria-label="อ่านต่อ ${esc(b.title)}">${coverMarkup(b,true)}<div class="continue-info"><div class="kicker">อ่านต่อจากครั้งล่าสุด</div><h2>${esc(b.title)}</h2><p>บทที่ ${b.chapter+1} · ${esc(b.chapters[b.chapter]?.title||'')}</p>${progressMarkup(b,'continue-progress')}<div class="resume">อ่านต่อ <svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></div></div></button><button type="button" class="continue-dismiss" data-dismiss-continue="${b.id}" aria-label="นำ ${esc(b.title)} ออกจากอ่านต่อ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10M17 7 7 17"/></svg></button></article>`).join('');
+      document.getElementById('continue-list').innerHTML=list.map(b=>`<article class="continue"><button type="button" class="continue-open" data-continue="${b.id}" aria-label="อ่านต่อ ${esc(b.title)}">${coverMarkup(b,true)}<div class="continue-info"><h2>${esc(b.title)}</h2>${progressMarkup(b,'continue-progress')}<div class="resume">อ่านต่อ <svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></div></div></button><button type="button" class="continue-dismiss" data-dismiss-continue="${b.id}" aria-label="นำ ${esc(b.title)} ออกจากอ่านต่อ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10M17 7 7 17"/></svg></button></article>`).join('');
+      requestAnimationFrame(updateContinueArrows);
       document.querySelectorAll('[data-continue]').forEach(el=>el.onclick=()=>openBook(el.dataset.continue));
       document.querySelectorAll('[data-dismiss-continue]').forEach(el=>el.onclick=()=>{
         const b=booksData.find(book=>book.id===el.dataset.dismissContinue);if(!requireLogin())return;
