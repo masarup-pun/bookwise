@@ -292,8 +292,8 @@ button.brand:focus-visible{outline:3px solid var(--action);outline-offset:6px;bo
 @media(max-width:760px){.continue-controls{gap:8px}.continue-controls>#continue-count{font-size:11px}.continue-arrows button{width:44px;height:44px}.continue-list>.continue{flex-basis:290px}.continue-open{padding-top:8px;padding-bottom:8px;gap:12px}.continue-open .continue-info h2{font-size:14px}}
 
 /* A single centered reading column; desktop chapters open beneath their trigger. */
-:root{--reading-copy:#5c6676;--reading-heading:#203a5b;--reading-emphasis:#7043a3}
-body[data-theme="dark"]{--reading-copy:#b8c2d0;--reading-heading:#f0f4fc;--reading-emphasis:#d8b4fe}
+:root{--reading-copy:#5c6676;--reading-heading:#203a5b;--reading-emphasis:#255DDB}
+body[data-theme="dark"]{--reading-copy:#b8c2d0;--reading-heading:#f0f4fc;--reading-emphasis:#255DDB}
 .reader{width:100%;max-width:960px;margin:0 auto}
 .reader-top,.reader-layout,.chapter-controls{width:100%;max-width:none;margin-left:0;margin-right:0}
 .reader-layout{display:block;grid-template-columns:minmax(0,1fr)}

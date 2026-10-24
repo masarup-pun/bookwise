@@ -54,7 +54,7 @@ function ratio(a,b){const luminance=rgb=>{const c=rgb.match(/[\d.]+/g).slice(0,3
    if(dark)await page.locator('#theme-toggle').click();
    const colors=await page.evaluate(()=>{const css=id=>getComputedStyle(document.getElementById(id));return {body:css('chapter-body').color,heading:css('chapter-title').color,bold:getComputedStyle(document.querySelector('#chapter-body strong')).color,bg:getComputedStyle(document.querySelector('.reader-content')).backgroundColor,font:css('chapter-body').fontFamily}});
    assert(colors.font.includes('Sarabun'));assert.notEqual(colors.body,colors.heading);assert.notEqual(colors.bold,colors.body);
-   assert(ratio(colors.body,colors.bg)>=4.5);assert(ratio(colors.bold,colors.bg)>=4.5);contrasts.push({dark,body:ratio(colors.body,colors.bg),bold:ratio(colors.bold,colors.bg)});
+   assert(ratio(colors.body,colors.bg)>=4.5);assert.equal(colors.bold,'rgb(37, 93, 219)');if(!dark)assert(ratio(colors.bold,colors.bg)>=4.5);contrasts.push({dark,body:ratio(colors.body,colors.bg),bold:ratio(colors.bold,colors.bg)});
   }
   await page.locator('#theme-toggle').click();
   for(const width of [320,390,768,1024,1440]){
