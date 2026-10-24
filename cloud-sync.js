@@ -69,6 +69,7 @@
         started: Boolean(saved.started || guest.started),
         completed: Boolean(saved.completed || guest.completed),
         lastRead: Math.max(Number(saved.lastRead) || 0, Number(guest.lastRead) || 0),
+        continueDismissedAt: Math.max(Number(saved.continueDismissedAt)||0, Number(guest.continueDismissedAt)||0),
         coverPath: saved.coverPath || guest.coverPath || null
       };
     }
@@ -92,9 +93,12 @@
     let changed = false;
     for (const [id, localBook] of Object.entries(cached.books || {})) {
       const remoteBook = state.books?.[id] || {};
+      if (Number(localBook.continueDismissedAt) > (Number(remoteBook.continueDismissedAt)||0)) {
+        state.books ||= {}; state.books[id] = { ...remoteBook, continueDismissedAt: localBook.continueDismissedAt }; changed = true;
+      }
       if (localBook.readPosition && Number(localBook.lastRead) > (Number(remoteBook.lastRead) || 0)) {
         state.books ||= {};
-        state.books[id] = { ...remoteBook, chapter: localBook.chapter, readPosition: localBook.readPosition,
+        state.books[id] = { ...(state.books[id] || remoteBook), chapter: localBook.chapter, readPosition: localBook.readPosition,
           lastRead: localBook.lastRead, started: true, progress: Math.max(remoteBook.progress || 0, localBook.progress || 0) };
         changed = true;
       }

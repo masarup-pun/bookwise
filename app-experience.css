@@ -216,3 +216,43 @@ body[data-theme="dark"] .login-card>p,body[data-theme="dark"] .login-status,body
 .has-cover-image>h3,.has-cover-image>.author,.has-cover-image>.cover-author,.has-cover-image>.ornament{visibility:hidden}
 .cover.has-cover-image:before,.mini-cover.has-cover-image:before,.mini-cover.has-cover-image:after{display:none}
 .cover .cover-upload{z-index:3}
+
+/* Library: cover actions, author taxonomy and aligned reading progress. */
+button.brand{border:0;background:transparent;padding:0;color:inherit;text-align:left;cursor:pointer;flex-shrink:0}
+button.brand:focus-visible{outline:3px solid var(--action);outline-offset:6px;border-radius:12px}
+#home-top{justify-content:flex-end;margin-bottom:22px;min-height:22px}
+.book{display:flex;flex-direction:column;cursor:default}
+.book>.cover{flex-shrink:0;cursor:pointer}
+.book-meta{display:block;margin-top:14px}
+.book-meta h3{margin:0}
+.book-title-button{min-height:0;cursor:pointer}
+.book-authors{font:400 13px/1.7 var(--sans);color:var(--text-secondary);margin-top:6px;overflow-wrap:anywhere}
+.author-link{display:inline;border:0;padding:3px 0;background:transparent;color:inherit;font:inherit;text-align:left;cursor:pointer;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:4px;transition:color .18s,text-decoration-color .18s}
+.author-link:hover{color:var(--action);text-decoration-color:currentColor}
+.author-link:focus-visible,.continue-open:focus-visible,.continue-dismiss:focus-visible,.cover>.fav:focus-visible{outline:3px solid var(--action);outline-offset:3px;border-radius:8px}
+.book-taxonomy{margin:10px 0 0;min-height:28px}
+.book-category{display:inline-flex;align-items:center;min-height:25px;padding:3px 10px;border:1px solid var(--control-line);border-radius:999px;background:var(--panel-alt);color:var(--text-secondary);font:500 11px/1.5 var(--sans)}
+.cover>.fav{position:absolute;z-index:4;right:8px;top:8px;display:grid;place-items:center;width:40px;height:40px;margin:0;padding:9px;border:1px solid #ffffff80;border-radius:50%;background:#ffffffed;color:#4c6076;box-shadow:0 3px 12px #0002;opacity:0;transform:translateY(-4px);pointer-events:none;transition:opacity .18s,transform .18s,background .18s}
+.cover>.fav svg{width:22px;height:22px;stroke:currentColor;stroke-width:1.8;fill:none}
+.cover>.fav.on{color:#9b6900;background:#fff4c7;border-color:#ffe293;opacity:1;transform:none;pointer-events:auto}
+.cover>.fav.on svg{fill:#f5c542;stroke:#bb860b}
+.book:hover .cover>.fav,.book:focus-within .cover>.fav,.cover>.fav:focus-visible{opacity:1;transform:none;pointer-events:auto}
+.shelf-progress{display:flex;align-items:center;gap:10px;width:100%}
+.book>.shelf-progress{margin-top:auto;padding-top:16px}
+.shelf-progress>.progress{flex:1;height:7px;min-width:0;border-radius:999px;background:#8a9bad26;overflow:hidden;box-shadow:none}
+.shelf-progress>.progress>i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#dc6262,var(--progress-color));box-shadow:none}
+.shelf-progress>span{flex:0 0 36px;text-align:right;white-space:nowrap;font:600 12px/1.6 var(--sans);font-variant-numeric:tabular-nums;color:var(--text-secondary)}
+.author-filter{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;padding:12px 16px;margin:0 0 24px;border:1px solid var(--control-line);border-radius:14px;background:var(--panel-alt);color:var(--text-main);font-size:14px}
+.author-filter[hidden]{display:none}
+.author-filter button{display:flex;align-items:center;gap:12px;min-height:36px;border:0;background:transparent;color:var(--action);font:500 12px var(--sans);cursor:pointer}
+.author-filter button span{font-size:22px}
+.continue{position:relative;display:block;padding:0;flex-basis:350px;overflow:hidden}
+.continue-open{display:grid;grid-template-columns:72px minmax(0,1fr);align-items:center;gap:16px;width:100%;height:100%;min-height:160px;padding:20px 38px 20px 16px;border:0;border-radius:inherit;background:transparent;text-align:left;color:inherit;font:inherit;cursor:pointer}
+.continue-dismiss{position:absolute;z-index:3;top:7px;right:7px;display:grid;place-items:center;width:32px;height:32px;padding:7px;border:0;border-radius:50%;background:transparent;color:var(--text-secondary);cursor:pointer}
+.continue-dismiss:hover{background:var(--panel-alt);color:var(--text-main)}
+.continue-dismiss svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
+.continue-progress{margin-top:10px}
+@media(hover:none),(pointer:coarse){.cover>.fav{opacity:1;transform:none;pointer-events:auto}.author-link{min-height:32px}.continue-dismiss{width:44px;height:44px;top:2px;right:2px}}
+@media(max-width:760px){.book-authors{font-size:12px}.book-taxonomy{margin-top:8px}.book-category{font-size:10px}.book>.shelf-progress{padding-top:14px}.cover>.fav{width:36px;height:36px;padding:7px;top:7px;right:7px}.continue{flex-basis:310px}.continue-open{gap:12px;padding-right:38px}.continue-info h2{font-size:14px}.author-filter{padding:10px 12px;font-size:13px}}
+@media(prefers-reduced-motion:reduce){.cover>.fav,.author-link{transition:none}}
+.continue-info .kicker,.continue-info p,.continue-head>span{color:var(--text-secondary)}

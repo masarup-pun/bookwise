@@ -28,7 +28,7 @@
 
 
   <link rel="stylesheet" href="app-base.css?v=20261022-2">
-  <link rel="stylesheet" href="app-experience.css?v=20261024-covers1">
+  <link rel="stylesheet" href="app-experience.css?v=20261024-shelf1">
 </head>
 <body data-auth="signed-out">
   <main class="login-screen" id="login-screen" aria-labelledby="login-title">
@@ -48,7 +48,7 @@
   </main>
   <div class="shell" hidden>
     <header class="app-header">
-      <div class="brand"><span class="brand-symbol" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">  <defs>    <linearGradient id="bookwise-mark" x1="3" y1="2" x2="45" y2="46" gradientUnits="userSpaceOnUse">      <stop stop-color="#416fA8"/>      <stop offset="1" stop-color="#193b66"/>    </linearGradient>  </defs>  <rect width="48" height="48" rx="14" fill="url(#bookwise-mark)"/>  <path d="M8 13.4c5.6-1.8 11.1-.9 16 2.2v20.7c-4.6-3-10.1-3.9-16-2.1V13.4Z" fill="#F8FBFF"/>  <path d="M40 13.4c-5.6-1.8-11.1-.9-16 2.2v20.7c4.6-3 10.1-3.9 16-2.1V13.4Z" fill="#E6F0FA"/>  <path d="M12 18c3.2-.6 6.4-.1 9.1 1.2M12 22.3c3.2-.5 6.4 0 9.1 1.2M36 18c-3.2-.6-6.4-.1-9.1 1.2M36 22.3c-3.2-.5-6.4 0-9.1 1.2" fill="none" stroke="#9CB3CE" stroke-linecap="round" stroke-width="1.25"/>  <path d="M24 15.6v20.7" fill="none" stroke="#92D8C7" stroke-linecap="round" stroke-width="2"/></svg></span><span>Readwise</span></div>
+      <button class="brand" id="brand-home" type="button" aria-label="ไปหน้าหนังสือ"><span class="brand-symbol" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">  <defs>    <linearGradient id="bookwise-mark" x1="3" y1="2" x2="45" y2="46" gradientUnits="userSpaceOnUse">      <stop stop-color="#416fA8"/>      <stop offset="1" stop-color="#193b66"/>    </linearGradient>  </defs>  <rect width="48" height="48" rx="14" fill="url(#bookwise-mark)"/>  <path d="M8 13.4c5.6-1.8 11.1-.9 16 2.2v20.7c-4.6-3-10.1-3.9-16-2.1V13.4Z" fill="#F8FBFF"/>  <path d="M40 13.4c-5.6-1.8-11.1-.9-16 2.2v20.7c4.6-3 10.1-3.9 16-2.1V13.4Z" fill="#E6F0FA"/>  <path d="M12 18c3.2-.6 6.4-.1 9.1 1.2M12 22.3c3.2-.5 6.4 0 9.1 1.2M36 18c-3.2-.6-6.4-.1-9.1 1.2M36 22.3c-3.2-.5-6.4 0-9.1 1.2" fill="none" stroke="#9CB3CE" stroke-linecap="round" stroke-width="1.25"/>  <path d="M24 15.6v20.7" fill="none" stroke="#92D8C7" stroke-linecap="round" stroke-width="2"/></svg></span><span>Readwise</span></button>
       <nav class="nav" aria-label="เมนูหลัก">
         <button class="active" data-view="all"><svg viewBox="0 0 24 24"><path d="M4 5.5c0-1 .8-1.8 1.8-1.8h12.4c1 0 1.8.8 1.8 1.8v13c0 1-.8 1.8-1.8 1.8H5.8c-1 0-1.8-.8-1.8-1.8z"/><path d="M8 3.7v16.6M11 8h5M11 12h5"/></svg>หนังสือ</button>
         <button data-view="favorites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.8 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3.1-5.8 3.1 1.1-6.5-4.7-4.6 6.5-.9L12 2.8Z"/></svg>รายการโปรด</button>
@@ -69,12 +69,13 @@
       <div class="sr-only" aria-hidden="true"><span id="side-reading">ศิลปะแห่งการใส่ใจ</span><span id="side-progress"></span><span id="side-chapter"></span></div>
     </header>
     <main>
-      <div class="topbar" id="home-top"><div class="crumb">ห้องสมุดส่วนตัว</div><span class="date" id="today"></span></div>
+      <div class="topbar" id="home-top"><span class="date" id="today"></span></div>
       <section id="library-view">
-        <div class="hero"><div><div class="kicker">พื้นที่สงบสำหรับการเรียนรู้</div><h1>ห้องสมุดของคุณ</h1><p>พื้นที่ส่วนตัวสำหรับหนังสือและแนวคิดที่อยากกลับมาอ่าน</p></div></div>
+
         <section class="continue-wrap" id="continue-wrap"><div class="continue-head"><h2>อ่านต่อ</h2><span id="continue-count"></span></div><div class="continue-list" id="continue-list"></div></section>
         <div class="section-head"><h2 id="shelf-title">หนังสือทั้งหมด <span style="font:400 14px var(--sans);color:#99998f;margin-left:5px" id="book-count"></span></h2></div>
         <div id="filters" hidden></div>
+        <div id="author-filter" class="author-filter" hidden><span id="author-filter-label"></span><button id="clear-author-filter" type="button" aria-label="ล้างตัวกรองผู้เขียน">ดูหนังสือทั้งหมด <span aria-hidden="true">×</span></button></div>
         <div class="books" id="books"></div>
       </section>
       <section class="review-view" id="review-view"><div class="kicker">กลับมาจำสิ่งสำคัญ</div><h1>ทบทวน</h1><p>ฝึกตอบคำถามหลายรูปแบบ แล้วประเมินความเข้าใจเพื่อกำหนดวันทบทวนครั้งถัดไป</p><div class="workspace-stats" id="review-stats"></div><div id="review-list"></div></section>
@@ -91,12 +92,12 @@
   <dialog class="search-dialog" id="search-dialog"><div class="search-dialog-top"><label for="search-input">ค้นหาในห้องสมุด</label><button id="close-search" aria-label="ปิดการค้นหา">×</button></div><input id="search-input" type="search" placeholder="ชื่อหนังสือ ผู้เขียน หรือชื่อบท" autocomplete="off"><div id="search-results" class="search-results"></div></dialog>
   <dialog class="account-dialog" id="account-dialog"><div class="account-dialog-head"><h2>ห้องสมุดส่วนตัว</h2><button type="button" id="account-close" aria-label="ปิด">×</button></div><div id="account-signed-in" hidden><p id="account-current-email"></p><div class="account-dialog-actions"><button class="secondary" type="button" id="account-import" hidden>นำเข้าข้อมูลจากเครื่องนี้</button><button class="secondary" type="button" id="account-reload">โหลดข้อมูลล่าสุด</button><button class="secondary" type="button" id="account-signout">ออกจากระบบ</button></div></div><p class="account-status" id="account-status" role="status" aria-live="polite">กำลังเชื่อมต่อ…</p></dialog>
   <dialog class="chapter-dialog" id="chapter-dialog" aria-labelledby="chapter-dialog-title"><div class="sheet-handle" aria-hidden="true"></div><div class="sheet-heading"><div><h2 id="chapter-dialog-title">เลือกบท</h2><p id="chapter-dialog-book"></p></div><button id="chapter-dialog-close" class="close-control" aria-label="ปิดสารบัญ">×</button></div><label class="sr-only" for="chapter-search">ค้นหาบท</label><input type="search" id="chapter-search" placeholder="ค้นหาชื่อบท หรือเลขบท…" autocomplete="off"><div id="chapter-options" class="chapter-options"></div></dialog>
-  <script src="bookwise-catalog.js?v=20261022-2"></script>
-  <script src="cover-images.js?v=20261024-covers1"></script>
-  <script src="app.js?v=20261024-covers1"></script>
-  <script src="reader.js?v=20261022-2"></script>
+  <script src="bookwise-catalog.js?v=20261024-shelf1"></script>
+  <script src="cover-images.js?v=20261024-shelf1"></script>
+  <script src="app.js?v=20261024-shelf1"></script>
+  <script src="reader.js?v=20261024-shelf1"></script>
   <script src="supabase-config.js?v=20261022-2"></script>
-  <script src="cloud-sync.js?v=20261024-covers1"></script>
+  <script src="cloud-sync.js?v=20261024-shelf1"></script>
 
 
 

@@ -54,7 +54,11 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "บทที่ 13: ความลับนิรันดร์ของความสุขที่ยืนยาว (The Timeless Secret of Lifelong Happiness)"
       }
-    ]
+    ],
+    "authors": [
+      "Robin Sharma"
+    ],
+    "shelfCategory": "พัฒนาตนเอง"
   },
   {
     "id": "atomic-habits",
@@ -137,7 +141,11 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "ความลับของผลลัพธ์ที่ยั่งยืน (Conclusion: The Secret to Results That Last)"
       }
-    ]
+    ],
+    "authors": [
+      "James Clear"
+    ],
+    "shelfCategory": "พัฒนาตนเอง"
   },
   {
     "id": "buy-back-your-time",
@@ -202,7 +210,11 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "บทสรุป: ชีวิตที่ซื้อเวลากลับคืน (The Buyback Life)"
       }
-    ]
+    ],
+    "authors": [
+      "Dan Martell"
+    ],
+    "shelfCategory": "ธุรกิจ"
   },
   {
     "id": "feeling-is-the-secret",
@@ -339,7 +351,11 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "จินตนาการที่ตื่นรู้ · แก้วตาดวงใจของพระเจ้า (Awakened Imagination: The Apple of God’s Eye)"
       }
-    ]
+    ],
+    "authors": [
+      "Neville Goddard"
+    ],
+    "shelfCategory": "จิตใจ"
   },
   {
     "id": "fluke",
@@ -395,7 +411,11 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "บทที่ 13: ทำไมทุกสิ่งที่เราทำจึงสำคัญ (Why Everything We Do Matters)"
       }
-    ]
+    ],
+    "authors": [
+      "Brian Klaas"
+    ],
+    "shelfCategory": "วิทยาศาสตร์"
   },
   {
     "id": "who-will-cry-when-you-die",
@@ -715,7 +735,11 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "บทที่ 101: ใช้ชีวิตให้เต็มเพื่อไม่เสียดายภายหลัง (Live Fully so You Can Die Happy)"
       }
-    ]
+    ],
+    "authors": [
+      "Robin Sharma"
+    ],
+    "shelfCategory": "พัฒนาตนเอง"
   },
   {
     "id": "33-strategies-of-war",
@@ -831,7 +855,11 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "รับมือความตื่นตระหนกด้วยเหตุผล (Chain Reaction)"
       }
-    ]
+    ],
+    "authors": [
+      "Robert Greene"
+    ],
+    "shelfCategory": "กลยุทธ์"
   },
   {
     "id": "games-people-play",
@@ -905,7 +933,11 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "หลังเกมแล้วทำอะไรต่อ? (After Games, What?)"
       }
-    ]
+    ],
+    "authors": [
+      "Eric Berne"
+    ],
+    "shelfCategory": "จิตวิทยา"
   },
   {
     "id": "mastery-robert-greene",
@@ -940,7 +972,11 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "หลอมรวมสัญชาตญาณกับเหตุผล: ความชำนาญ (Fuse the Intuitive with the Rational: Mastery)"
       }
-    ]
+    ],
+    "authors": [
+      "Robert Greene"
+    ],
+    "shelfCategory": "พัฒนาตนเอง"
   },
   {
     "id": "tao-te-ching",
@@ -1200,7 +1236,11 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "บทที่ 81 — ความจริงใจและการให้"
       }
-    ]
+    ],
+    "authors": [
+      "Lao Tzu"
+    ],
+    "shelfCategory": "ปรัชญา"
   },
   {
     "id": "the-50th-law",
@@ -1247,7 +1287,12 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "บทที่ 10: เผชิญความตาย—สัมผัสความยิ่งใหญ่ของชีวิต (Confront Your Mortality—the Sublime)"
       }
-    ]
+    ],
+    "authors": [
+      "50 Cent",
+      "Robert Greene"
+    ],
+    "shelfCategory": "กลยุทธ์"
   },
   {
     "id": "four-agreements-companion",
@@ -1288,7 +1333,12 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "เรื่องเล่าของการตระหนักรู้และเปลี่ยนแปลง (True Stories of Awareness and Transformation)"
       }
-    ]
+    ],
+    "authors": [
+      "Don Miguel Ruiz",
+      "Janet Mills"
+    ],
+    "shelfCategory": "จิตใจ"
   },
   {
     "id": "seven-spiritual-laws",
@@ -1326,7 +1376,11 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "กฎแห่งธรรมะหรือจุดหมายชีวิต (The Law of Dharma)"
       }
-    ]
+    ],
+    "authors": [
+      "Deepak Chopra"
+    ],
+    "shelfCategory": "จิตใจ"
   },
   {
     "id": "power-subconscious-mind",
@@ -1403,7 +1457,11 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "คงความเยาว์วัยทางใจ (How to Stay Young in Spirit Forever)"
       }
-    ]
+    ],
+    "authors": [
+      "Joseph Murphy"
+    ],
+    "shelfCategory": "จิตวิทยา"
   },
   {
     "id": "obstacle-is-the-way",
@@ -1516,7 +1574,11 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "เตรียมเริ่มต้นใหม่ (Prepare to Start Again)"
       }
-    ]
+    ],
+    "authors": [
+      "Ryan Holiday"
+    ],
+    "shelfCategory": "ปรัชญา"
   },
   {
     "id": "science-getting-rich",
@@ -1584,7 +1646,11 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "สรุปวิทยาศาสตร์แห่งความมั่งคั่ง (Summary of the Science of Getting Rich)"
       }
-    ]
+    ],
+    "authors": [
+      "Wallace D. Wattles"
+    ],
+    "shelfCategory": "การเงิน"
   },
   {
     "id": "21-success-secrets",
@@ -1664,7 +1730,11 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "บทที่ 21: ผ่านบททดสอบความเพียร (Pass the “Persistence Test”)"
       }
-    ]
+    ],
+    "authors": [
+      "Brian Tracy"
+    ],
+    "shelfCategory": "การเงิน"
   },
   {
     "id": "48-laws-of-power",
@@ -1825,7 +1895,11 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "กฎ 48: ปรับตัวอย่างไร้รูปแบบ (Assume Formlessness)"
       }
-    ]
+    ],
+    "authors": [
+      "Robert Greene"
+    ],
+    "shelfCategory": "กลยุทธ์"
   },
   {
     "id": "breakthrough-copywriter-2-0",
@@ -1863,7 +1937,11 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "สิ่งที่หลักการตลาดควรทำเพื่อผู้อ่าน (Postscript – What This Series Has To Do With You)"
       }
-    ]
+    ],
+    "authors": [
+      "Dr. Robert C. Worstell"
+    ],
+    "shelfCategory": "ธุรกิจ"
   },
   {
     "id": "poor-charlie-almanack",
@@ -1925,7 +2003,11 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "คำบรรยาย 11 จิตวิทยาของการตัดสินใจผิดพลาด (The Psychology of Human Misjudgment)"
       }
-    ]
+    ],
+    "authors": [
+      "Charles T. Munger"
+    ],
+    "shelfCategory": "การเงิน"
   },
   {
     "id": "manifest-7-steps",
@@ -1966,7 +2048,11 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "ขั้นที่ 7: ไว้วางใจจักรวาล (Trust in the Universe)"
       }
-    ]
+    ],
+    "authors": [
+      "Roxie Nafousi"
+    ],
+    "shelfCategory": "พัฒนาตนเอง"
   },
   {
     "id": "manifest-dive-deeper",
@@ -2007,7 +2093,11 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "ขั้นที่ 7: ไว้วางใจและปล่อยให้เส้นทางคลี่คลาย (Trust in the Universe)"
       }
-    ]
+    ],
+    "authors": [
+      "Roxie Nafousi"
+    ],
+    "shelfCategory": "พัฒนาตนเอง"
   },
   {
     "id": "meditations",
@@ -2060,7 +2150,11 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "เล่มที่ 12 (Book 12)"
       }
-    ]
+    ],
+    "authors": [
+      "Marcus Aurelius"
+    ],
+    "shelfCategory": "ปรัชญา"
   },
   {
     "id": "million-dollar-weekend",
@@ -2104,7 +2198,11 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "บทที่ 9: 52 โอกาสในหนึ่งปี (52 Chances This Year)"
       }
-    ]
+    ],
+    "authors": [
+      "Noah Kagan"
+    ],
+    "shelfCategory": "ธุรกิจ"
   },
   {
     "id": "split-the-pie",
@@ -2187,7 +2285,11 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "บทที่ 22: เปิดการเจรจาอย่างไรไม่ให้พลาดตั้งแต่ต้น (Opening Moves)"
       }
-    ]
+    ],
+    "authors": [
+      "Barry Nalebuff"
+    ],
+    "shelfCategory": "ธุรกิจ"
   },
   {
     "id": "the-book-of-elon",
@@ -2219,7 +2321,11 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "Bonus: 69 หลักคิดของ Musk (The 69 Core Musk Methods)"
       }
-    ]
+    ],
+    "authors": [
+      "Eric Jorgenson"
+    ],
+    "shelfCategory": "ธุรกิจ"
   },
   {
     "id": "you-are-the-placebo",
@@ -2272,7 +2378,11 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "บทที่ 12: สมาธิเพื่อเปลี่ยนความเชื่อและการรับรู้ (Changing Beliefs and Perceptions Meditation)"
       }
-    ]
+    ],
+    "authors": [
+      "Dr. Joe Dispenza"
+    ],
+    "shelfCategory": "จิตวิทยา"
   },
   {
     "id": "art-of-seduction",
@@ -2394,6 +2504,10 @@ window.BOOKWISE_CATALOG = [
       {
         "title": "บทที่ 24: รับมือผลที่ตามมาหลังแรงดึงดูดจางลง (Beware the Aftereffects)"
       }
-    ]
+    ],
+    "authors": [
+      "Robert Greene"
+    ],
+    "shelfCategory": "จิตวิทยา"
   }
 ];
