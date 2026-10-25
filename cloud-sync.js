@@ -55,6 +55,26 @@
     return JSON.parse(JSON.stringify(state));
   }
 
+  function clearDeletedBookData(state) {
+    const deleted = new Set(Object.entries(state.books || {}).filter(([, book]) => book.libraryHidden).map(([id]) => id));
+    let changed = false;
+    for (const id of deleted) {
+      const book = state.books[id] || {};
+      const cleared = { chapter: 0, progress: 0, favorite: false, started: false, completed: false,
+        lastRead: 0, continueDismissedAt: 0, readPosition: null, coverPath: null };
+      if (Object.entries(cleared).some(([key, value]) => book[key] !== value)) {
+        state.books[id] = { ...book, ...cleared };
+        changed = true;
+      }
+    }
+    for (const key of ['annotations', 'bookmarks', 'reviewQueue']) {
+      const items = state[key] || [];
+      const kept = items.filter(item => !deleted.has(item.bookId));
+      if (kept.length !== items.length) { state[key] = kept; changed = true; }
+    }
+    return changed;
+  }
+
   function mergeStates(remote, local) {
     remote = app.migrateState(remote); local = app.migrateState(local);
     const result = clone(remote);
@@ -70,9 +90,8 @@
         completed: Boolean(saved.completed || guest.completed),
         lastRead: Math.max(Number(saved.lastRead) || 0, Number(guest.lastRead) || 0),
         continueDismissedAt: Math.max(Number(saved.continueDismissedAt)||0, Number(guest.continueDismissedAt)||0),
-        ...((Number(guest.libraryVisibilityUpdatedAt)||0) > (Number(saved.libraryVisibilityUpdatedAt)||0)
-          ? { libraryHidden: Boolean(guest.libraryHidden), libraryVisibilityUpdatedAt: Number(guest.libraryVisibilityUpdatedAt)||0 }
-          : { libraryHidden: Boolean(saved.libraryHidden), libraryVisibilityUpdatedAt: Number(saved.libraryVisibilityUpdatedAt)||0 }),
+        libraryHidden: Boolean(saved.libraryHidden || guest.libraryHidden),
+        libraryVisibilityUpdatedAt: Math.max(Number(saved.libraryVisibilityUpdatedAt)||0, Number(guest.libraryVisibilityUpdatedAt)||0),
         coverPath: saved.coverPath || guest.coverPath || null
       };
     }
@@ -88,6 +107,7 @@
     result.fontSizePt = remote.fontSizeCustomized === true ? remote.fontSizePt :
       local.fontSizeCustomized === true ? local.fontSizePt : 14;
     delete result.fontSize;
+    clearDeletedBookData(result);
     return result;
   }
 
@@ -96,6 +116,13 @@
     let changed = false;
     for (const [id, localBook] of Object.entries(cached.books || {})) {
       const remoteBook = state.books?.[id] || {};
+      if (localBook.libraryHidden || remoteBook.libraryHidden) {
+        state.books ||= {};
+        state.books[id] = { ...remoteBook, libraryHidden: true,
+          libraryVisibilityUpdatedAt: Math.max(Number(localBook.libraryVisibilityUpdatedAt)||0, Number(remoteBook.libraryVisibilityUpdatedAt)||0) };
+        changed = true;
+        continue;
+      }
       if (Number(localBook.continueDismissedAt) > (Number(remoteBook.continueDismissedAt)||0)) {
         state.books ||= {}; state.books[id] = { ...remoteBook, continueDismissedAt: localBook.continueDismissedAt }; changed = true;
       }
@@ -111,6 +138,7 @@
         changed = true;
       }
     }
+    if (clearDeletedBookData(state)) changed = true;
     return { state, changed };
   }
 

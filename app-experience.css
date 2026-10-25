@@ -229,8 +229,6 @@ button.brand:focus-visible{outline:3px solid var(--action);outline-offset:6px;bo
 .author-link{display:inline;border:0;padding:1px 0;background:transparent;color:inherit;font:inherit;text-align:left;cursor:pointer;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:4px;transition:color .18s,text-decoration-color .18s}
 .author-link:hover{color:var(--action);text-decoration-color:currentColor}
 .author-link:focus-visible,.continue-open:focus-visible,.continue-dismiss:focus-visible,.cover>.fav:focus-visible{outline:3px solid var(--action);outline-offset:3px;border-radius:8px}
-.cover>.book-category{position:absolute;z-index:4;top:10px;left:10px;display:inline-flex;align-items:center;max-width:calc(100% - 60px);min-height:24px;padding:4px 9px;border:1px solid #ffffff8c;border-radius:999px;background:#f8fbfff0;color:#344b64;font:600 10px/1.5 var(--sans);white-space:nowrap;pointer-events:none;box-shadow:0 2px 8px #0001}
-.book>.cover{padding-top:51px}
 .cover>.fav{position:absolute;z-index:4;right:8px;top:8px;display:grid;place-items:center;width:40px;height:40px;margin:0;padding:9px;border:0;border-radius:0;background:transparent;color:#fff;box-shadow:none;opacity:0;transform:translateY(-4px);pointer-events:none;transition:opacity .18s,transform .18s,background .18s}
 .cover>.fav svg{width:24px;height:24px;stroke:currentColor;stroke-width:1.8;fill:none;filter:drop-shadow(0 1px 2px #132131b3)}
 .cover>.fav.on{color:#f5c542;background:transparent;border:0;box-shadow:none;opacity:1;transform:none;pointer-events:auto}
@@ -252,7 +250,7 @@ button.brand:focus-visible{outline:3px solid var(--action);outline-offset:6px;bo
 .continue-dismiss svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
 .continue-progress{margin-top:10px}
 @media(hover:none),(pointer:coarse){.cover>.fav{opacity:1;transform:none;pointer-events:auto}.author-link{min-height:28px}.continue-dismiss{width:44px;height:44px;top:2px;right:2px}}
-@media(max-width:760px){.book-meta h3{font-size:15px}.book-authors{font-size:12px}.cover>.book-category{left:8px;top:8px;padding:3px 7px;font-size:9px}.book>.cover{padding-top:44px}.book>.shelf-progress{padding-top:14px}.cover>.fav{width:36px;height:36px;padding:7px;top:7px;right:7px}.continue{flex-basis:310px}.continue-open{gap:12px;padding-right:38px}.continue-info h2{font-size:14px}.author-filter{padding:10px 12px;font-size:13px}}
+@media(max-width:760px){.book-meta h3{font-size:15px}.book-authors{font-size:12px}.book>.shelf-progress{padding-top:14px}.cover>.fav{width:36px;height:36px;padding:7px;top:7px;right:7px}.continue{flex-basis:310px}.continue-open{gap:12px;padding-right:38px}.continue-info h2{font-size:14px}.author-filter{padding:10px 12px;font-size:13px}}
 @media(prefers-reduced-motion:reduce){.cover>.fav,.author-link{transition:none}}
 .continue-info .kicker,.continue-info p,.continue-head>span{color:var(--text-secondary)}
 
@@ -334,21 +332,16 @@ body:not([data-theme="dark"]) .reader-content .prose,body[data-theme="dark"] .re
 @media(max-width:760px){.reader-layout>.reader-content{padding:25px 20px}.chapter-controls{gap:6px}.reader-content #chapter-title{font-size:28px}.reader-notes{padding:14px}}
 body[data-theme="dark"] .reader-layout>.reader-content{background:var(--panel)}
 
-/* Cover actions: image picker on the left, reversible remove/restore on the right. */
+/* Cover actions: image picker on the left, permanent remove on the right. */
 .shelf-actions{display:flex;align-items:center;justify-content:flex-end;gap:9px;min-width:0;flex:1}
 .shelf-actions .category-filters{flex:1}
-.library-archive-toggle{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:40px;flex:none;padding:7px 12px;border:1px solid var(--control-line);border-radius:999px;background:var(--panel);color:var(--text-secondary);font:600 12px/1.4 var(--sans);cursor:pointer}
-.library-archive-toggle:hover{border-color:var(--action);color:var(--action)}
-.library-archive-toggle svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-.library-archive-toggle small{display:grid;place-items:center;min-width:20px;height:20px;padding:0 5px;border-radius:999px;background:var(--action-soft);color:var(--action);font-size:10px}
 .cover>.cover-action{position:absolute;z-index:5;bottom:10px;display:grid;place-items:center;width:40px;height:40px;margin:0;padding:9px;border:1px solid #ffffffb8;border-radius:50%;background:#f8fbfff2;color:#253d5b;box-shadow:0 3px 12px #10233b30;opacity:1;transform:none;pointer-events:auto;transition:background .18s,border-color .18s,transform .18s,box-shadow .18s}
 .cover>.cover-upload{left:10px;right:auto;font-size:0}
-.cover>.cover-library-remove,.cover>.cover-library-restore{right:10px}
+.cover>.cover-library-remove{right:10px}
 .cover>.cover-action svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;filter:none}
 .cover>.cover-action:hover{background:#fff;border-color:#fff;transform:translateY(-2px);box-shadow:0 5px 16px #10233b45}
 .cover>.cover-library-remove:hover{color:#b42332}
-.cover>.cover-library-restore:hover{color:#1d744f}
-.cover>.cover-action:focus-visible,.library-archive-toggle:focus-visible{outline:3px solid var(--action);outline-offset:3px}
-@media(max-width:1000px){#library-view>.section-head .shelf-actions{width:100%;flex:1 0 100%}#library-view>.section-head .shelf-actions .category-filters{width:auto;flex:1}.library-archive-toggle{min-height:44px}}
-@media(max-width:760px){.cover>.cover-action{width:42px;height:42px;bottom:8px}.cover>.cover-upload{left:8px}.cover>.cover-library-remove,.cover>.cover-library-restore{right:8px}}
-@media(prefers-reduced-motion:reduce){.cover>.cover-action,.library-archive-toggle{transition:none}}
+.cover>.cover-action:focus-visible{outline:3px solid var(--action);outline-offset:3px}
+@media(max-width:1000px){#library-view>.section-head .shelf-actions{width:100%;flex:1 0 100%}#library-view>.section-head .shelf-actions .category-filters{width:auto;flex:1}}
+@media(max-width:760px){.cover>.cover-action{width:42px;height:42px;bottom:8px}.cover>.cover-upload{left:8px}.cover>.cover-library-remove{right:8px}}
+@media(prefers-reduced-motion:reduce){.cover>.cover-action{transition:none}}

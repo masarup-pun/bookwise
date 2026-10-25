@@ -87,7 +87,7 @@ function showView(view){
   window.scrollTo(0,0);
 }
 async function openBook(id,chapter,markId){
-  const book=booksData.find(item=>item.id===id);if(!book)return;
+  const book=booksData.find(item=>item.id===id);if(!book)return;if(book.libraryHidden){toast('หนังสือเล่มนี้ถูกลบออกจากห้องสมุดอย่างถาวรแล้ว');return}
   if(!requireLogin({id,chapter,markId}))return;
   flushReadingPosition();readingReady=false;
   reader.classList.toggle('is-resuming',chapter==null&&!markId&&Boolean(book.readPosition));

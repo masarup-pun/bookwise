@@ -1,6 +1,6 @@
     const booksData=window.BOOKWISE_CATALOG.map(book=>({...book,chapters:book.chapters.map(chapter=>({...chapter}))}));
     let authorFilter=null,categoryFilter=null;
-    let filter='All',sort='Title A–Z',activeBook='attention',activeView='all',fontSize=14,fontSizeCustomized=false,quizIndex=0,quizAnswered=false,showArchivedBooks=false;
+    let filter='All',sort='Title A–Z',activeBook='attention',activeView='all',fontSize=14,fontSizeCustomized=false,quizIndex=0,quizAnswered=false;
     let pendingSelection=null,editingAnnotationId=null;
     const STORAGE_KEY='readwise-demo-state-v2';
     const booksEl=document.getElementById('books'),lib=document.getElementById('library-view'),reader=document.getElementById('reader-view');
@@ -35,7 +35,7 @@
     let syncUserId=null,guestSnapshot=null,applyingAccountState=false;
     function snapshotState(){const books=Object.fromEntries(booksData.map(b=>[b.id,{chapter:b.chapter,progress:b.progress,favorite:b.favorite,started:Boolean(b.started),completed:Boolean(b.completed),lastRead:b.lastRead||0,continueDismissedAt:b.continueDismissedAt||0,readPosition:b.readPosition||null,coverPath:b.coverPath||null,libraryHidden:Boolean(b.libraryHidden),libraryVisibilityUpdatedAt:b.libraryVisibilityUpdatedAt||0}]));return {contentRevision:CONTENT_REVISION,books,annotations:[...annotations],bookmarks:[...bookmarks],reviewQueue:[...reviewQueue],fontSizePt:fontSize,fontSizeCustomized}}
     function persist(afterSync){try{const state=snapshotState();localStorage.setItem(syncUserId?`${STORAGE_KEY}:${syncUserId}`:STORAGE_KEY,JSON.stringify(state));if(!syncUserId)guestSnapshot=state;else if(!applyingAccountState)window.BookwiseCloudSync?.schedule(state,afterSync);return true}catch(_){toast('บันทึกในเบราว์เซอร์ไม่สำเร็จ กรุณาตรวจพื้นที่จัดเก็บ');return false}}
-    function applyAccountState(state){authorFilter=null;categoryFilter=null;showArchivedBooks=false;readingReady=false;clearTimeout(positionTimer);const next=migrateReadingState(state);applyingAccountState=true;booksData.forEach(b=>{const saved=next.books?.[b.id]||{};b.chapter=Math.max(0,Math.min(b.chapters.length-1,Number(saved.chapter)||0));b.progress=Math.max(0,Math.min(100,Number(saved.progress)||0));b.favorite=Boolean(saved.favorite);b.started=Boolean(saved.started);b.completed=Boolean(saved.completed);b.lastRead=Number(saved.lastRead)||0;b.continueDismissedAt=Number(saved.continueDismissedAt)||0;b.readPosition=saved.readPosition||null;b.libraryHidden=Boolean(saved.libraryHidden);b.libraryVisibilityUpdatedAt=Number(saved.libraryVisibilityUpdatedAt)||0;b.coverPath=typeof saved.coverPath==='string'&&syncUserId&&saved.coverPath.startsWith(`${syncUserId}/`)?saved.coverPath:null;b.coverUrl=null});annotations.splice(0,annotations.length,...(Array.isArray(next.annotations)?next.annotations.filter(a=>booksData.some(b=>b.id===a.bookId)&&Array.isArray(a.segments)):[]));bookmarks.splice(0,bookmarks.length,...(Array.isArray(next.bookmarks)?next.bookmarks.filter(m=>booksData.some(b=>b.id===m.bookId)&&Number.isInteger(m.chapter)):[]));reviewQueue.splice(0,reviewQueue.length,...(Array.isArray(next.reviewQueue)?next.reviewQueue.filter(c=>booksData.some(b=>b.id===c.bookId)&&Number.isFinite(c.due)):[]));fontSize=readingSize(next);showView('all');persist();applyingAccountState=false}
+    function applyAccountState(state){authorFilter=null;categoryFilter=null;readingReady=false;clearTimeout(positionTimer);const next=migrateReadingState(state);applyingAccountState=true;booksData.forEach(b=>{const saved=next.books?.[b.id]||{};b.chapter=Math.max(0,Math.min(b.chapters.length-1,Number(saved.chapter)||0));b.progress=Math.max(0,Math.min(100,Number(saved.progress)||0));b.favorite=Boolean(saved.favorite);b.started=Boolean(saved.started);b.completed=Boolean(saved.completed);b.lastRead=Number(saved.lastRead)||0;b.continueDismissedAt=Number(saved.continueDismissedAt)||0;b.readPosition=saved.readPosition||null;b.libraryHidden=Boolean(saved.libraryHidden);b.libraryVisibilityUpdatedAt=Number(saved.libraryVisibilityUpdatedAt)||0;b.coverPath=typeof saved.coverPath==='string'&&syncUserId&&saved.coverPath.startsWith(`${syncUserId}/`)?saved.coverPath:null;b.coverUrl=null});annotations.splice(0,annotations.length,...(Array.isArray(next.annotations)?next.annotations.filter(a=>booksData.some(b=>b.id===a.bookId)&&Array.isArray(a.segments)):[]));bookmarks.splice(0,bookmarks.length,...(Array.isArray(next.bookmarks)?next.bookmarks.filter(m=>booksData.some(b=>b.id===m.bookId)&&Number.isInteger(m.chapter)):[]));reviewQueue.splice(0,reviewQueue.length,...(Array.isArray(next.reviewQueue)?next.reviewQueue.filter(c=>booksData.some(b=>b.id===c.bookId)&&Number.isFinite(c.due)):[]));clearDeletedBookData();fontSize=readingSize(next);showView('all');persist();applyingAccountState=false}
     window.BookwiseApp={migrateState:migrateReadingState,getState:snapshotState,getCachedState:id=>{try{return migrateReadingState(JSON.parse(localStorage.getItem(`${STORAGE_KEY}:${id}`)||'{}'))}catch(_){return {}}},getGuestState:()=>guestSnapshot||snapshotState(),activateAccount:(id,state)=>{syncUserId=id;applyAccountState(state)},activateGuest:()=>{syncUserId=null;applyAccountState(guestSnapshot||{})},toast};
     function toast(message){const el=document.getElementById('toast');el.textContent=message;el.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>el.classList.remove('show'),2800)}
     const coverUrlLoads=new Map(), coverFailures=new Map();
@@ -67,9 +67,46 @@
         elements.forEach(el=>{if(el.dataset.coverPath&&!el.querySelector('.cover-image'))coverObserver.observe(el)});
       }else elements.forEach(el=>loadCover(booksData.find(b=>b.id===el.dataset.coverBook)));
     }
-    function bookCategory(b){return b.category||b.shelfCategory||'ทั่วไป'}
+    const bookCategoryGroups={
+      'ความกล้าหาญและภาวะผู้นำ':'Business',
+      'การเงินและความคิด':'Business',
+      'การลงทุนและการเงิน':'Business',
+      'การเขียนโฆษณาและการตลาด':'Business',
+      'กลยุทธ์และภาวะผู้นำ':'Business',
+      'ธุรกิจและการเจรจาต่อรอง':'Business',
+      'ธุรกิจและการทำงาน':'Business',
+      'ธุรกิจและเทคโนโลยี':'Business',
+      'ธุรกิจและผู้ประกอบการ':'Business',
+      'ธุรกิจและการตลาดดิจิทัล':'Business',
+      'ธุรกิจและการตลาด':'Business',
+      'ธุรกิจและการพัฒนาตนเอง':'Business',
+      'การพัฒนาตนเองและการเงิน':'Growth',
+      'การพัฒนาตนเองและการใช้ชีวิต':'Growth',
+      'การพัฒนาตนเองและความเชี่ยวชาญ':'Growth',
+      'การพัฒนาตนเองและนิสัย':'Growth',
+      'การพัฒนาตนเองและผลิตภาพ':'Growth',
+      'จิตใจและการพัฒนาตนเอง':'Growth',
+      'จิตวิทยาและการพัฒนาตนเอง':'Growth',
+      'จิตวิทยาและพัฒนาตนเอง':'Growth',
+      'จริยธรรมและการพัฒนาตนเอง':'Growth',
+      'ปรัชญาและการพัฒนาตนเอง':'Growth',
+      'สุขภาพและจิตวิทยา':'Psychology',
+      'สุขภาพจิตและจิตวิทยา':'Psychology',
+      'อารมณ์และสุขภาวะ':'Psychology',
+      'จิตใจและความสัมพันธ์':'Psychology',
+      'จิตวิทยาและความสัมพันธ์':'Psychology',
+      'จิตใจและการใช้ชีวิต':'Wisdom',
+      'จิตใจและจิตวิญญาณ':'Wisdom',
+      'ปรัชญาและจิตใจ':'Wisdom',
+      'ปรัชญาและจิตวิญญาณ':'Wisdom',
+      'วิทยาศาสตร์และสังคม':'Knowledge',
+      'วิทยาศาสตร์และปรัชญา':'Knowledge',
+      'วรรณกรรมและความทรงจำ':'Knowledge',
+      'วรรณกรรมและปรัชญา':'Knowledge'
+    };
+    function bookCategory(b){const source=b.category||b.shelfCategory||'';return bookCategoryGroups[source]||'Other'}
     function coverMarkup(b,mini=false){
-      return `<div class="${mini?'mini-cover':'cover'}${b.coverUrl?' has-cover-image':''}" data-cover-book="${esc(b.id)}" data-cover-path="${esc(b.coverPath||'')}" style="background:${esc(b.color)};color:${esc(b.text)}">${b.coverUrl?`<img class="cover-image" src="${esc(b.coverUrl)}" alt="" loading="lazy" decoding="async">`:''}<h3${!mini&&b.title.length>42?' class="long-cover-title"':''}>${esc(b.title)}</h3><div class="${mini?'cover-author':'author'}">${esc(b.author)}</div><span class="ornament"></span>${mini?'':`<span class="book-category">${esc(bookCategory(b))}</span>${favoriteMarkup(b)}<button type="button" class="cover-action cover-upload" data-cover="${esc(b.id)}" title="เปลี่ยนปก" aria-label="เปลี่ยนปกของ ${esc(b.title)}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5h3.2l1.5-2h6.6l1.5 2H20v11H4z"/><circle cx="12" cy="13" r="3.2"/><path d="M17 10h.01"/></svg></button>${b.libraryHidden?`<button type="button" class="cover-action cover-library-restore" data-library-visibility="restore" data-book-id="${esc(b.id)}" title="คืนหนังสือเข้าห้องสมุด" aria-label="คืน ${esc(b.title)} เข้าห้องสมุด"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 14 4 9l5-5"/><path d="M4 9h9a6 6 0 0 1 0 12h-2"/></svg></button>`:`<button type="button" class="cover-action cover-library-remove" data-library-visibility="remove" data-book-id="${esc(b.id)}" title="ย้ายไปถังขยะ" aria-label="ย้าย ${esc(b.title)} ไปถังขยะ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6m4-6v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg></button>`}`}</div>`;
+      return `<div class="${mini?'mini-cover':'cover'}${b.coverUrl?' has-cover-image':''}" data-cover-book="${esc(b.id)}" data-cover-path="${esc(b.coverPath||'')}" style="background:${esc(b.color)};color:${esc(b.text)}">${b.coverUrl?`<img class="cover-image" src="${esc(b.coverUrl)}" alt="" loading="lazy" decoding="async">`:''}<h3${!mini&&b.title.length>42?' class="long-cover-title"':''}>${esc(b.title)}</h3><div class="${mini?'cover-author':'author'}">${esc(b.author)}</div><span class="ornament"></span>${mini?'':`${favoriteMarkup(b)}<button type="button" class="cover-action cover-upload" data-cover="${esc(b.id)}" title="เปลี่ยนปก" aria-label="เปลี่ยนปกของ ${esc(b.title)}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5h3.2l1.5-2h6.6l1.5 2H20v11H4z"/><circle cx="12" cy="13" r="3.2"/><path d="M17 10h.01"/></svg></button><button type="button" class="cover-action cover-library-remove" data-delete-book="${esc(b.id)}" title="ลบถาวร" aria-label="ลบ ${esc(b.title)} ออกจากห้องสมุดอย่างถาวร"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6m4-6v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg></button>`}</div>`;
     }
     function favoriteMarkup(b){return `<button type="button" class="fav ${b.favorite?'on':''}" data-fav="${b.id}" aria-label="${b.favorite?'นำออกจากรายการโปรด':'เพิ่มในรายการโปรด'} · ${esc(b.title)}" aria-pressed="${b.favorite}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.8 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3.1-5.8 3.1 1.1-6.5-4.7-4.6 6.5-.9L12 2.8Z"/></svg></button>`}
     function progressMarkup(b,extra=''){
@@ -96,7 +133,7 @@
     window.addEventListener('resize',updateContinueArrows,{passive:true});
     if('ResizeObserver' in window)new ResizeObserver(updateContinueArrows).observe(continueList);
     function renderContinue(){
-      const list=booksData.filter(b=>window.BookwiseCloudSync?.isSignedIn?.()&&b.started&&b.progress>0&&!b.completed&&(!b.continueDismissedAt||b.lastRead>b.continueDismissedAt)).sort((a,b)=>(b.lastRead||0)-(a.lastRead||0));
+      const list=booksData.filter(b=>!b.libraryHidden&&window.BookwiseCloudSync?.isSignedIn?.()&&b.started&&b.progress>0&&!b.completed&&(!b.continueDismissedAt||b.lastRead>b.continueDismissedAt)).sort((a,b)=>(b.lastRead||0)-(a.lastRead||0));
       document.getElementById('continue-count').textContent=list.length?`${list.length} เล่มกำลังอ่าน`:'';
       document.getElementById('continue-wrap').style.display=list.length?'block':'none';
       document.getElementById('continue-list').innerHTML=list.map(b=>`<article class="continue"><button type="button" class="continue-open" data-continue="${b.id}" aria-label="อ่านต่อ ${esc(b.title)}">${coverMarkup(b,true)}<div class="continue-info"><h2>${esc(b.title)}</h2>${progressMarkup(b,'continue-progress')}<div class="resume">อ่านต่อ <svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></div></div></button><button type="button" class="continue-dismiss" data-dismiss-continue="${b.id}" aria-label="นำ ${esc(b.title)} ออกจากอ่านต่อ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10M17 7 7 17"/></svg></button></article>`).join('');
@@ -110,7 +147,7 @@
       if(list[0]){const recent=list[0];document.getElementById('side-reading').textContent=recent.title;document.getElementById('side-chapter').textContent=`บทที่ ${recent.chapter+1} จาก ${recent.chapters.length} · ${recent.progress}%`;document.getElementById('side-progress').style.width=recent.progress+'%'}
     }
     function renderCategoryFilters(){
-      const categories=[...new Set(booksData.map(bookCategory))].sort((a,b)=>a.localeCompare(b,'th'));
+      const categories=[...new Set(booksData.filter(book=>!book.libraryHidden).map(bookCategory))].sort((a,b)=>a.localeCompare(b,'en'));
       const container=document.getElementById('category-filters');
       const scroll=container.scrollLeft;
       container.innerHTML=[['','ทั้งหมด'],...categories.map(category=>[category,category])].map(([value,label])=>`<button type="button" class="category-chip ${(categoryFilter||'')===value?'is-active':''}" data-shelf-category="${esc(value)}" aria-pressed="${(categoryFilter||'')===value}">${esc(label)}</button>`).join('');
@@ -120,7 +157,7 @@
         [...container.querySelectorAll('button')].find(button=>button.dataset.shelfCategory===(categoryFilter||''))?.focus({preventScroll:true});
       });
     }
-    function renderBooks(){renderCategoryFilters();let list=booksData.filter(b=>(filter!=='Favorites'||b.favorite)&&(!authorFilter||(b.authors||[b.author]).includes(authorFilter))&&(!categoryFilter||bookCategory(b)===categoryFilter));list.sort(sort==='Title A–Z'?(a,b)=>a.title.localeCompare(b.title,'th'):(a,b)=>b.added-a.added);document.getElementById('book-count').textContent=`· ${list.length}`;document.getElementById('author-filter').hidden=!authorFilter;document.getElementById('author-filter-label').textContent=authorFilter?`ผู้เขียน · ${authorFilter}`:'';const signedIn=Boolean(window.BookwiseCloudSync?.isSignedIn?.());booksEl.innerHTML=list.length?list.map((b,i)=>`<div class="book" style="--i:${i}" data-id="${b.id}">${coverMarkup(b)}<div class="book-meta"><h3><button class="book-title-button" type="button" aria-label="เปิดหนังสือ ${esc(b.title)}">${esc(b.title)}</button></h3></div><div class="book-authors">${(b.authors||[b.author]).map(author=>`<button class="author-link" type="button" data-author="${esc(author)}" aria-label="ดูหนังสือของ ${esc(author)}">${esc(author)}</button>`).join('<span aria-hidden="true"> · </span>')}</div>${progressMarkup(b,'book-prog')}</div>`).join(''):`<div class="empty-state"><span class="empty-mark" aria-hidden="true">✦</span><h2>${categoryFilter||authorFilter?'ไม่พบหนังสือที่ตรงกับตัวกรอง':filter==='Favorites'?'ยังไม่มีรายการโปรด':'ห้องสมุดของคุณยังว่าง'}</h2><p id="empty-description">${categoryFilter||authorFilter?'เลือกหมวดหมู่อื่น หรือกดทั้งหมดเพื่อล้างตัวกรองหมวดหมู่':filter==='Favorites'?'กดดาวบนหน้าปกเพื่อเก็บหนังสือที่ชอบ':signedIn?'เข้าสู่ระบบแล้ว · ห้องสมุดของคุณยังไม่มีหนังสือ':'เข้าสู่ระบบเพื่อเปิดห้องสมุด'}</p><button type="button" id="empty-login" ${signedIn?'hidden':''}>เข้าสู่ระบบ / สร้างบัญชี</button></div>`;booksEl.querySelectorAll('.book').forEach(el=>el.addEventListener('click',e=>{if(!e.target.closest('button:not(.book-title-button)'))openBook(el.dataset.id)}));booksEl.querySelectorAll('[data-author]').forEach(btn=>btn.onclick=()=>{authorFilter=btn.dataset.author;categoryFilter=null;showView('all');document.getElementById('clear-author-filter').focus()});booksEl.querySelectorAll('[data-fav]').forEach(btn=>btn.addEventListener('click',e=>{e.stopPropagation();const b=booksData.find(x=>x.id===btn.dataset.fav);if(!requireLogin())return;b.favorite=!b.favorite;persist();renderBooks();const star=booksEl.querySelector(`[data-fav="${b.id}"]`);star?.focus({preventScroll:true});if(b.favorite){star?.classList.add('star-pop');star?.querySelector('svg')?.addEventListener('animationend',()=>star.classList.remove('star-pop'),{once:true})}}));booksEl.querySelectorAll('[data-cover]').forEach(btn=>btn.addEventListener('click',e=>{e.stopPropagation();if(!window.BookwiseCloudSync?.isSignedIn?.()){toast('เข้าสู่ระบบก่อน เพื่อบันทึกและซิงก์รูปปก');document.getElementById('reader-account-button')?.click();return}const input=document.createElement('input');input.type='file';input.accept='image/jpeg,image/png,image/webp';input.onchange=async()=>{const file=input.files[0];input.remove();if(!file)return;if(!['image/jpeg','image/png','image/webp'].includes(file.type)){toast('เลือกไฟล์ JPG, PNG หรือ WebP');return}if(file.size>5*1024*1024){toast('รูปปกต้องมีขนาดไม่เกิน 5 MB');return}const b=booksData.find(x=>x.id===btn.dataset.cover);btn.disabled=true;toast('กำลังบันทึกรูปปก…');try{const saved=await window.BookwiseCloudSync.uploadCover(b.id,file);const previousPath=b.coverPath,previousUrl=b.coverUrl;b.coverPath=saved.path;b.coverUrl=saved.signedUrl;const persisted=persist(()=>{if(previousPath)window.BookwiseCloudSync.removeCover(previousPath).catch(error=>console.warn('Bookwise old cover cleanup:',error))});if(!persisted){b.coverPath=previousPath;b.coverUrl=previousUrl;throw new Error('cover_state_not_saved')}renderBooks();renderContinue();toast('บันทึกปกแล้ว · กำลังซิงก์')}catch(error){console.error('Bookwise cover upload:',error);toast('บันทึกปกไม่สำเร็จ กรุณาลองใหม่อีกครั้ง')}finally{btn.disabled=false}};input.hidden=true;input.addEventListener('cancel',()=>input.remove(),{once:true});document.body.appendChild(input);input.click()}));renderContinue();loadSavedCoverUrls()}
+    function renderBooks(){renderCategoryFilters();let list=booksData.filter(b=>!b.libraryHidden&&(filter!=='Favorites'||b.favorite)&&(!authorFilter||(b.authors||[b.author]).includes(authorFilter))&&(!categoryFilter||bookCategory(b)===categoryFilter));list.sort(sort==='Title A–Z'?(a,b)=>a.title.localeCompare(b.title,'th'):(a,b)=>b.added-a.added);document.getElementById('book-count').textContent=`· ${list.length}`;document.getElementById('author-filter').hidden=!authorFilter;document.getElementById('author-filter-label').textContent=authorFilter?`ผู้เขียน · ${authorFilter}`:'';const signedIn=Boolean(window.BookwiseCloudSync?.isSignedIn?.());booksEl.innerHTML=list.length?list.map((b,i)=>`<div class="book" style="--i:${i}" data-id="${b.id}">${coverMarkup(b)}<div class="book-meta"><h3><button class="book-title-button" type="button" aria-label="เปิดหนังสือ ${esc(b.title)}">${esc(b.title)}</button></h3></div><div class="book-authors">${(b.authors||[b.author]).map(author=>`<button class="author-link" type="button" data-author="${esc(author)}" aria-label="ดูหนังสือของ ${esc(author)}">${esc(author)}</button>`).join('<span aria-hidden="true"> · </span>')}</div>${progressMarkup(b,'book-prog')}</div>`).join(''):`<div class="empty-state"><span class="empty-mark" aria-hidden="true">✦</span><h2>${categoryFilter||authorFilter?'ไม่พบหนังสือที่ตรงกับตัวกรอง':filter==='Favorites'?'ยังไม่มีรายการโปรด':'ห้องสมุดของคุณยังว่าง'}</h2><p id="empty-description">${categoryFilter||authorFilter?'เลือกหมวดหมู่อื่น หรือกดทั้งหมดเพื่อล้างตัวกรองหมวดหมู่':filter==='Favorites'?'กดดาวบนหน้าปกเพื่อเก็บหนังสือที่ชอบ':signedIn?'เข้าสู่ระบบแล้ว · ห้องสมุดของคุณยังไม่มีหนังสือ':'เข้าสู่ระบบเพื่อเปิดห้องสมุด'}</p><button type="button" id="empty-login" ${signedIn?'hidden':''}>เข้าสู่ระบบ / สร้างบัญชี</button></div>`;booksEl.querySelectorAll('.book').forEach(el=>el.addEventListener('click',e=>{if(!e.target.closest('button:not(.book-title-button)'))openBook(el.dataset.id)}));booksEl.querySelectorAll('[data-author]').forEach(btn=>btn.onclick=()=>{authorFilter=btn.dataset.author;categoryFilter=null;showView('all');document.getElementById('clear-author-filter').focus()});booksEl.querySelectorAll('[data-fav]').forEach(btn=>btn.addEventListener('click',e=>{e.stopPropagation();const b=booksData.find(x=>x.id===btn.dataset.fav);if(!requireLogin())return;b.favorite=!b.favorite;persist();renderBooks();const star=booksEl.querySelector(`[data-fav="${b.id}"]`);star?.focus({preventScroll:true});if(b.favorite){star?.classList.add('star-pop');star?.querySelector('svg')?.addEventListener('animationend',()=>star.classList.remove('star-pop'),{once:true})}}));booksEl.querySelectorAll('[data-cover]').forEach(btn=>btn.addEventListener('click',e=>{e.stopPropagation();if(!window.BookwiseCloudSync?.isSignedIn?.()){toast('เข้าสู่ระบบก่อน เพื่อบันทึกและซิงก์รูปปก');document.getElementById('reader-account-button')?.click();return}const input=document.createElement('input');input.type='file';input.accept='image/jpeg,image/png,image/webp';input.onchange=async()=>{const file=input.files[0];input.remove();if(!file)return;if(!['image/jpeg','image/png','image/webp'].includes(file.type)){toast('เลือกไฟล์ JPG, PNG หรือ WebP');return}if(file.size>5*1024*1024){toast('รูปปกต้องมีขนาดไม่เกิน 5 MB');return}const b=booksData.find(x=>x.id===btn.dataset.cover);btn.disabled=true;toast('กำลังบันทึกรูปปก…');try{const saved=await window.BookwiseCloudSync.uploadCover(b.id,file);const previousPath=b.coverPath,previousUrl=b.coverUrl;b.coverPath=saved.path;b.coverUrl=saved.signedUrl;const persisted=persist(()=>{if(previousPath)window.BookwiseCloudSync.removeCover(previousPath).catch(error=>console.warn('Bookwise old cover cleanup:',error))});if(!persisted){b.coverPath=previousPath;b.coverUrl=previousUrl;throw new Error('cover_state_not_saved')}renderBooks();renderContinue();toast('บันทึกปกแล้ว · กำลังซิงก์')}catch(error){console.error('Bookwise cover upload:',error);toast('บันทึกปกไม่สำเร็จ กรุณาลองใหม่อีกครั้ง')}finally{btn.disabled=false}};input.hidden=true;input.addEventListener('cancel',()=>input.remove(),{once:true});document.body.appendChild(input);input.click()}));renderContinue();loadSavedCoverUrls()}
     function annotationsFor(bookId,chapter){return annotations.filter(a=>a.bookId===bookId&&a.chapter===chapter)}
     function renderBlock(text,blockIndex,chapterAnnotations){const source=String(text),tokens=[],pattern=/\*\*(.+?)\*\*/g;let displayText='',cursor=0,match;function addToken(value,bold=false){if(!value)return;tokens.push({start:displayText.length,end:displayText.length+value.length,bold});displayText+=value}while((match=pattern.exec(source))){addToken(source.slice(cursor,match.index));addToken(match[1],true);cursor=match.index+match[0].length}addToken(source.slice(cursor));const spans=chapterAnnotations.flatMap(a=>a.segments.filter(s=>s.block===blockIndex&&s.end>s.start).map(s=>({...s,id:a.id,createdAt:a.createdAt||0})));const cuts=[0,displayText.length,...tokens.flatMap(t=>[t.start,t.end]),...spans.flatMap(s=>[Math.max(0,Math.min(displayText.length,s.start)),Math.max(0,Math.min(displayText.length,s.end))])].sort((a,b)=>a-b).filter((n,i,arr)=>i===0||n!==arr[i-1]);let html='';for(let i=0;i<cuts.length-1;i++){const start=cuts[i],end=cuts[i+1];if(start===end)continue;const active=spans.filter(s=>s.start<=start&&s.end>=end).sort((a,b)=>b.createdAt-a.createdAt)[0],token=tokens.find(t=>t.start<=start&&t.end>=end);let piece=esc(displayText.slice(start,end));if(token?.bold)piece=`<strong>${piece}</strong>`;html+=active?`<mark class="reader-highlight" data-annotation="${esc(active.id)}" tabindex="0" title="เปิดหรือแก้โน้ต">${piece}</mark>`:piece}return html}
     function annotationMatchesChapter(chapter,annotation){
@@ -177,7 +214,7 @@
     document.getElementById('brand-home').onclick=()=>{authorFilter=null;categoryFilter=null;showView('all')};
     document.getElementById('clear-author-filter').onclick=()=>{authorFilter=null;renderBooks();document.getElementById('brand-home').focus({preventScroll:true})};
     const searchDialog=document.getElementById('search-dialog'),searchInput=document.getElementById('search-input');
-    function renderSearch(){const q=searchInput.value.trim().toLocaleLowerCase('th'),results=document.getElementById('search-results');if(!q){results.innerHTML='<p>พิมพ์ชื่อหนังสือ ผู้เขียน หรือชื่อบทเพื่อค้นหา</p>';return}const hits=booksData.filter(b=>[b.title,b.author,...b.chapters.map(c=>c.title)].some(text=>text.toLocaleLowerCase('th').includes(q)));results.innerHTML=hits.length?hits.map(b=>`<button data-search-book="${b.id}"><strong>${esc(b.title)}</strong><small>${esc(b.author)}</small></button>`).join(''):'<p>ไม่พบหนังสือที่ตรงกับคำค้น</p>';results.querySelectorAll('[data-search-book]').forEach(btn=>btn.onclick=()=>{searchDialog.close();openBook(btn.dataset.searchBook)})}
+    function renderSearch(){const q=searchInput.value.trim().toLocaleLowerCase('th'),results=document.getElementById('search-results');if(!q){results.innerHTML='<p>พิมพ์ชื่อหนังสือ ผู้เขียน หรือชื่อบทเพื่อค้นหา</p>';return}const hits=booksData.filter(b=>!b.libraryHidden&&[b.title,b.author,...b.chapters.map(c=>c.title)].some(text=>text.toLocaleLowerCase('th').includes(q)));results.innerHTML=hits.length?hits.map(b=>`<button data-search-book="${b.id}"><strong>${esc(b.title)}</strong><small>${esc(b.author)}</small></button>`).join(''):'<p>ไม่พบหนังสือที่ตรงกับคำค้น</p>';results.querySelectorAll('[data-search-book]').forEach(btn=>btn.onclick=()=>{searchDialog.close();openBook(btn.dataset.searchBook)})}
     document.getElementById('search-btn').onclick=()=>{searchInput.value='';renderSearch();searchDialog.showModal();searchInput.focus()};
     booksEl.addEventListener('click',event=>{if(event.target.closest('#empty-login'))document.getElementById('account-dialog').showModal()});
     document.getElementById('close-search').onclick=()=>searchDialog.close();searchInput.oninput=renderSearch;
@@ -188,57 +225,35 @@
     document.addEventListener('click',event=>{if(!event.target.closest('.account-control'))closeAccountMenu()});
     document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!accountMenu.hidden){closeAccountMenu();accountButton.focus()}});
     document.getElementById('today').textContent=new Intl.DateTimeFormat('th-TH',{weekday:'short',day:'numeric',month:'short'}).format(new Date());
-    function setBookLibraryVisibility(bookId,hidden){
-      const book=booksData.find(item=>item.id===bookId);
-      if(!book||!requireLogin())return;
-      if(hidden&&!window.confirm(`ย้าย “${book.title}” ไปถังขยะหรือไม่?\nความคืบหน้า โน้ต และบุ๊กมาร์กจะยังเก็บไว้ และคืนหนังสือได้จากถังขยะ`))return;
-      const previousHidden=Boolean(book.libraryHidden),previousUpdatedAt=book.libraryVisibilityUpdatedAt||0;
-      book.libraryHidden=hidden;book.libraryVisibilityUpdatedAt=Date.now();
-      if(!persist()){book.libraryHidden=previousHidden;book.libraryVisibilityUpdatedAt=previousUpdatedAt;return}
-      renderBooks();
-      document.getElementById('toggle-archived-books')?.focus({preventScroll:true});
-      toast(hidden?'ย้ายหนังสือไปถังขยะแล้ว':'คืนหนังสือเข้าห้องสมุดแล้ว');
+    function clearDeletedBookData(){
+      const deleted=new Set(booksData.filter(book=>book.libraryHidden).map(book=>book.id));
+      for(const book of booksData)if(deleted.has(book.id)){
+        book.chapter=0;book.progress=0;book.favorite=false;book.started=false;book.completed=false;
+        book.lastRead=0;book.continueDismissedAt=0;book.readPosition=null;book.coverPath=null;book.coverUrl=null;
+      }
+      for(const records of [annotations,bookmarks,reviewQueue])records.splice(0,records.length,...records.filter(record=>!deleted.has(record.bookId)));
     }
-    const renderBooksBeforeArchive=renderBooks;
-    renderBooks=function(){
-      renderBooksBeforeArchive();
-      const hiddenCount=booksData.filter(book=>book.libraryHidden).length;
-      const cards=[...booksEl.querySelectorAll('.book')];
-      cards.forEach(card=>{const book=booksData.find(item=>item.id===card.dataset.id);card.hidden=Boolean(book?.libraryHidden)!==showArchivedBooks});
-      const visibleCount=cards.filter(card=>!card.hidden).length;
-      document.getElementById('book-count').textContent=`· ${visibleCount}`;
-      document.getElementById('shelf-title-label').textContent=showArchivedBooks?'ถังขยะ':'หนังสือทั้งหมด';
-      const archiveButton=document.getElementById('toggle-archived-books');
-      archiveButton.hidden=hiddenCount===0&&!showArchivedBooks;
-      archiveButton.setAttribute('aria-label',showArchivedBooks?'กลับไปที่ห้องสมุด':`เปิดถังขยะ มี ${hiddenCount} เล่ม`);
-      archiveButton.innerHTML=showArchivedBooks?'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 14-5-5 5-5M4 9h9a6 6 0 0 1 0 12h-2"/></svg><span>กลับห้องสมุด</span>':`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6m4-6v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg><span>ถังขยะ</span><small>${hiddenCount}</small>`;
-      if(cards.length&&!visibleCount)booksEl.innerHTML=`<div class="empty-state"><span class="empty-mark" aria-hidden="true">${showArchivedBooks?'▱':'✦'}</span><h2>${showArchivedBooks?'ถังขยะยังว่าง':'ห้องสมุดของคุณยังว่าง'}</h2><p>${showArchivedBooks?'หนังสือที่ย้ายออกจากห้องสมุดจะแสดงที่นี่':'เลือกหนังสือที่ต้องการอ่านจากห้องสมุด'}</p></div>`;
-    };
-    const renderContinueBeforeArchive=renderContinue;
-    renderContinue=function(){
-      renderContinueBeforeArchive();
-      const list=document.getElementById('continue-list');
-      [...list.querySelectorAll('[data-continue]')].forEach(button=>{const book=booksData.find(item=>item.id===button.dataset.continue);if(book?.libraryHidden)button.closest('.continue')?.remove()});
-      const visible=list.querySelectorAll('.continue').length;
-      document.getElementById('continue-wrap').style.display=visible?'block':'none';
-      document.getElementById('continue-count').textContent=visible?`${visible} เล่มกำลังอ่าน`:'';
-      requestAnimationFrame(updateContinueArrows);
-    };
-    const renderSearchBeforeArchive=renderSearch;
-    renderSearch=function(){
-      renderSearchBeforeArchive();
-      const results=document.getElementById('search-results'),matches=[...results.querySelectorAll('[data-search-book]')];
-      matches.forEach(button=>{const book=booksData.find(item=>item.id===button.dataset.searchBook);button.hidden=Boolean(book?.libraryHidden)!==showArchivedBooks});
-      if(matches.length&&!matches.some(button=>!button.hidden))results.innerHTML=`<p>${showArchivedBooks?'ไม่พบหนังสือในถังขยะที่ตรงกับคำค้น':'ไม่พบหนังสือในห้องสมุดที่ตรงกับคำค้น'}</p>`;
-    };
+    clearDeletedBookData();
+    function deleteBookFromLibrary(bookId){
+      const book=booksData.find(item=>item.id===bookId);
+      if(!book||book.libraryHidden||!requireLogin())return;
+      if(!window.confirm(`ลบ “${book.title}” ออกจากห้องสมุดอย่างถาวรหรือไม่?\nหนังสือ ความคืบหน้า โน้ต บุ๊กมาร์ก การ์ดทบทวน และปกที่อัปโหลดจะถูกลบ กู้คืนไม่ได้`))return;
+      const previous={chapter:book.chapter,progress:book.progress,favorite:book.favorite,started:book.started,completed:book.completed,lastRead:book.lastRead,continueDismissedAt:book.continueDismissedAt,readPosition:book.readPosition,coverPath:book.coverPath,coverUrl:book.coverUrl,libraryHidden:book.libraryHidden,libraryVisibilityUpdatedAt:book.libraryVisibilityUpdatedAt};
+      const previousAnnotations=annotations.filter(item=>item.bookId===book.id),previousBookmarks=bookmarks.filter(item=>item.bookId===book.id),previousCards=reviewQueue.filter(item=>item.bookId===book.id);
+      const coverPath=book.coverPath;
+      book.libraryHidden=true;book.libraryVisibilityUpdatedAt=Date.now();
+      clearDeletedBookData();
+      if(!persist(()=>{if(coverPath)window.BookwiseCloudSync.removeCover(coverPath).catch(error=>console.warn('Bookwise deleted cover cleanup:',error))})){
+        Object.assign(book,previous);annotations.push(...previousAnnotations);bookmarks.push(...previousBookmarks);reviewQueue.push(...previousCards);return;
+      }
+      renderBooks();renderContinue();renderSaved();window.renderReview?.();
+      toast('ลบหนังสือและข้อมูลที่เกี่ยวข้องถาวรแล้ว');
+    }
     booksEl.addEventListener('click',event=>{
-      const button=event.target.closest('[data-library-visibility]');
+      const button=event.target.closest('[data-delete-book]');
       if(!button)return;
       event.stopPropagation();
-      setBookLibraryVisibility(button.dataset.bookId,button.dataset.libraryVisibility==='remove');
-    });
-    document.getElementById('toggle-archived-books').addEventListener('click',()=>{
-      showArchivedBooks=!showArchivedBooks;filter='All';authorFilter=null;categoryFilter=null;renderBooks();
+      deleteBookFromLibrary(button.dataset.deleteBook);
     });
     renderBooks();
     const themeButton=document.getElementById('theme-toggle');
