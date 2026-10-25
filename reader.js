@@ -101,12 +101,20 @@ async function openBook(id,chapter,markId){
   });}
 }
 function updateChapterControls(book,n){
-  document.getElementById('chapter-picker-label').textContent=`บทที่ ${n+1} · ${plainText(book.chapters[n].title).split(' (')[0]}`;
-  document.getElementById('chapter-prev').disabled=n===0;
-  document.getElementById('chapter-forward').disabled=n===book.chapters.length-1;
-  document.getElementById('chapter-prev').onclick=()=>showChapter(n-1).then(()=>window.scrollTo(0,0));
-  document.getElementById('chapter-forward').onclick=()=>showChapter(n+1).then(()=>window.scrollTo(0,0));
-
+  const title=`บทที่ ${n+1} · ${plainText(book.chapters[n].title).split(' (')[0]}`,isLast=n===book.chapters.length-1;
+  document.querySelectorAll('.chapter-controls').forEach(controls=>{
+    const [previous,forward]=controls.querySelectorAll('.chapter-step');
+    controls.querySelector('.chapter-picker-label').textContent=title;
+    previous.disabled=n===0;
+    previous.setAttribute('aria-label','บทก่อนหน้า');
+    previous.onclick=()=>showChapter(n-1).then(()=>window.scrollTo(0,0));
+    forward.disabled=false;forward.textContent=isLast?'✓':'→';
+    forward.setAttribute('aria-label',isLast?'อ่านจบเล่มนี้':'บทถัดไป');
+    forward.onclick=()=>{
+      if(!isLast){showChapter(n+1).then(()=>window.scrollTo(0,0));return;}
+      book.completed=true;book.progress=100;persist();renderContinue();toast('อ่านหนังสือเล่มนี้จบแล้ว');showView('all');
+    };
+  });
 }
 async function showChapter(index,{resume=false}={}){
   if(!requireLogin())return;
@@ -123,7 +131,6 @@ async function showChapter(index,{resume=false}={}){
   document.getElementById('chapter-body').innerHTML='<p class="content-loading" role="status">กำลังเปิดบทนี้…</p>';
   document.getElementById('recall').hidden=true;
   document.getElementById('chapter-body').setAttribute('aria-busy','true');
-  document.getElementById('next-chapter').disabled=true;
   document.getElementById('bookmark-toggle').disabled=true;
   document.getElementById('reader-saved').replaceChildren();
   try{
@@ -133,18 +140,11 @@ async function showChapter(index,{resume=false}={}){
     book.chapters[n]={...chapter,title:book.chapters[n].title};book.chapter=n;book.started=true;book.lastRead=Date.now();
     book.progress=Math.max(book.progress||0,Math.round(((n+.5)/(book.totalChapters||book.chapters.length))*100));persist();
     document.getElementById('chapter-deck').textContent=plainText(chapter.deck);
-    document.getElementById('chapter-number').textContent=`${n+1} / ${book.chapters.length}`;
     document.getElementById('reader-progress-fill').style.width=book.progress+'%';
     document.getElementById('reader-progress-text').textContent=book.progress+'%';
     renderChapterBody();renderReaderSaved();setReadingSize(fontSize,false);quizIndex=0;renderQuiz();
     document.getElementById('recall').hidden=false;
     document.getElementById('bookmark-toggle').disabled=false;
-    const next=document.getElementById('next-chapter');next.disabled=false;
-    next.textContent=n===book.chapters.length-1?'อ่านจบเล่มนี้':'บทถัดไป →';
-    next.onclick=()=>{
-      if(n<book.chapters.length-1)showChapter(n+1).then(()=>window.scrollTo(0,0));
-      else {book.completed=true;book.progress=100;persist();toast('อ่านหนังสือเล่มนี้จบแล้ว');showView('all');}
-    };
     renderContinue();
     if(document.fonts)await document.fonts.ready;
     await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
@@ -182,12 +182,15 @@ function currentQuiz(){const book=booksData.find(item=>item.id===activeBook);ret
 function flashcardMarkup(question,answer,why,key){
   return `<div class="flashcard" id="${key}" role="group" aria-label="การ์ดทบทวน"><div class="flashcard-inner"><div class="flashcard-face flashcard-front"><span class="card-eyebrow">นึกคำตอบด้วยตัวเอง</span><h3>${esc(plainText(question))}</h3><span class="card-hint">ลองอธิบายหลักคิดก่อนดูคำตอบ</span></div><div class="flashcard-face flashcard-back" aria-hidden="true" inert><span class="card-eyebrow">แนวคำตอบ</span><h3>${esc(plainText(answer))}</h3><p>${esc(plainText(why))}</p></div></div><span class="sr-only card-announcement" role="status"></span></div>`;
 }
+function chapterRecallMarkup(data,key){
+  return `<div class="flashcard chapter-recall-card" id="${key}" role="group" aria-label="คำถามทบทวน"><div class="flashcard-inner"><div class="flashcard-face flashcard-front"><h3>${esc(plainText(data.question))}</h3></div><div class="flashcard-face flashcard-back" aria-hidden="true" inert><span class="card-eyebrow">แนวคำตอบ</span><h3>${esc(plainText(data.answer))}</h3>${data.why?`<p>${esc(plainText(data.why))}</p>`:''}</div></div><span class="sr-only card-announcement" role="status"></span></div><button class="primary-action flip-action" id="${key}-reveal" aria-pressed="false">ดูแนวคำตอบ</button>`;
+}
 function bindFlip(card,button,onFlip){
   let flipped=false;
   button.setAttribute('aria-controls',card.id);
   button.onclick=()=>{
     flipped=!flipped;card.classList.toggle('is-flipped',flipped);button.setAttribute('aria-pressed',String(flipped));
-    button.textContent=flipped?'กลับไปดูคำถาม':'พลิกดูคำตอบ';
+    button.textContent=flipped?'กลับไปดูคำถาม':'ดูแนวคำตอบ';
     const front=card.querySelector('.flashcard-front'),back=card.querySelector('.flashcard-back');
     front.setAttribute('aria-hidden',String(flipped));back.setAttribute('aria-hidden',String(!flipped));front.inert=flipped;back.inert=!flipped;
     card.querySelector('.card-announcement').textContent=(flipped?back:front).textContent;
@@ -205,7 +208,6 @@ function saveQuizCard(){
   const card=quizCardData(book,quizIndex);if(!card||reviewQueue.some(item=>item.id===card.id))return;
   reviewQueue.push(card);persist();const saveButton=document.getElementById('save-card');saveButton.disabled=true;saveButton.textContent='อยู่ในชุดทบทวนแล้ว';updateReviewBadge();toast('เพิ่มคำถามเข้าชุดทบทวนแล้ว');
 }
-const practiceModes=new Map();
 const practiceLabels={flashcard:'การ์ดพลิก',written:'คำถามทบทวน',cloze:'เติมคำ',choice:'เลือกคำตอบ'};
 function normalizedQuestion(q){
   const options=Array.isArray(q.options)?q.options.map(plainText):[];
@@ -219,14 +221,6 @@ function clozeData(answer){
 }
 function availablePracticeModes(data){return ['flashcard','written',...(clozeData(data.answer)?['cloze']:[]),...(data.options?.length>1&&data.correct!==null?['choice']:[])];}
 function shuffled(values){return values.map(value=>({value,order:Math.random()})).sort((a,b)=>a.order-b.order).map(item=>item.value);}
-function chapterPracticeMode(book,index,questions){
-  const key=`${book.id}:${book.chapter}`;
-  if(!practiceModes.has(key)){
-    const used=new Set();
-    practiceModes.set(key,questions.map(q=>{const modes=availablePracticeModes(normalizedQuestion(q)),fresh=modes.filter(m=>!used.has(m)),mode=shuffled(fresh.length?fresh:modes)[0];used.add(mode);return mode;}));
-  }
-  return practiceModes.get(key)[index];
-}
 function practiceMarkup(data,mode,key){
   if(mode==='flashcard')return flashcardMarkup(data.question,data.answer,data.why,key)+`<button class="primary-action flip-action" id="${key}-reveal" aria-pressed="false">พลิกดูคำตอบ</button>`;
   const cloze=mode==='cloze'?clozeData(data.answer):null;
@@ -255,9 +249,9 @@ function renderQuiz(){
   const book=booksData.find(item=>item.id===activeBook),questions=getChapterQuiz(book,book.chapter),el=document.getElementById('quiz-content');
   if(!questions.length){el.textContent='บทนี้ยังไม่มีคำถามทบทวน';return;}
   quizIndex=Math.max(0,Math.min(quizIndex,questions.length-1));
-  const data=normalizedQuestion(currentQuiz()),mode=chapterPracticeMode(book,quizIndex,questions),saved=reviewQueue.some(card=>card.id===`${book.id}-${book.chapter}-${quizIndex}`);
-  el.innerHTML=`<div class="flashcard-meta">${mode==='written'?'':`<span>${practiceLabels[mode]}</span>`}<span>ข้อ ${quizIndex+1} / ${questions.length}</span></div>${practiceMarkup(data,mode,'chapter-practice')}<div class="flashcard-pagination"><button id="card-prev" ${quizIndex===0?'disabled':''} aria-label="คำถามก่อนหน้า">←</button><div class="card-dots" aria-hidden="true">${questions.map((_,i)=>`<i class="${i===quizIndex?'current':''}"></i>`).join('')}</div><button id="card-next" ${quizIndex===questions.length-1?'disabled':''} aria-label="คำถามถัดไป">→</button></div><div class="card-save-actions"><button class="secondary-action" id="save-card" ${saved?'disabled':''}>${saved?'อยู่ในชุดทบทวนแล้ว':'เพิ่มคำถามนี้เข้าชุดทบทวน'}</button></div>`;
-  bindPractice(data,mode,'chapter-practice');
+  const data=normalizedQuestion(currentQuiz()),saved=reviewQueue.some(card=>card.id===`${book.id}-${book.chapter}-${quizIndex}`);
+  el.innerHTML=`${chapterRecallMarkup(data,'chapter-practice')}<div class="flashcard-pagination"><button id="card-prev" ${quizIndex===0?'disabled':''} aria-label="คำถามก่อนหน้า">←</button><div class="card-dots" aria-hidden="true">${questions.map((_,i)=>`<i class="${i===quizIndex?'current':''}"></i>`).join('')}</div><button id="card-next" ${quizIndex===questions.length-1?'disabled':''} aria-label="คำถามถัดไป">→</button></div><div class="card-save-actions"><button class="secondary-action" id="save-card" ${saved?'disabled':''}>${saved?'อยู่ในชุดทบทวนแล้ว':'เพิ่มคำถามนี้เข้าชุดทบทวน'}</button></div>`;
+  bindFlip(document.getElementById('chapter-practice'),document.getElementById('chapter-practice-reveal'));
   document.getElementById('card-prev').onclick=()=>{quizIndex--;renderQuiz();document.getElementById('chapter-practice-reveal').focus({preventScroll:true});};
   document.getElementById('card-next').onclick=()=>{quizIndex++;renderQuiz();document.getElementById('chapter-practice-reveal').focus({preventScroll:true});};
   document.getElementById('save-card').onclick=()=>saveQuizCard();
@@ -320,29 +314,39 @@ document.getElementById('font-up').onclick=()=>setReadingSize(fontSize+1);
 document.getElementById('font-range').oninput=event=>setReadingSize(event.target.value);
 document.getElementById('font-reset').onclick=()=>{fontSizeCustomized=false;setReadingSize(14,false);persist();document.getElementById('type-settings').open=false;};setReadingSize(fontSize,false);
 const chapterPickerMedia=matchMedia('(min-width:1001px)');
+let activeChapterPicker=null;
+function chapterPickerButtons(){return [...document.querySelectorAll('.chapter-picker-button')];}
+function chapterPickerDropdowns(){return [...document.querySelectorAll('.chapter-controls .chapter-dropdown')];}
 function closeChapterPicker(restoreFocus=true){
-  const button=document.getElementById('chapter-picker'),dropdown=document.getElementById('chapter-dropdown'),dialog=document.getElementById('chapter-dialog');
-  const wasOpen=!dropdown.hidden||dialog.open;
-  dropdown.hidden=true;if(dialog.open)dialog.close();button.setAttribute('aria-expanded','false');
-  if(wasOpen&&restoreFocus)button.focus({preventScroll:true});
+  const buttons=chapterPickerButtons(),dialog=document.getElementById('chapter-dialog'),wasOpen=chapterPickerDropdowns().some(dropdown=>!dropdown.hidden)||dialog.open;
+  chapterPickerDropdowns().forEach(dropdown=>dropdown.hidden=true);
+  if(dialog.open)dialog.close();buttons.forEach(button=>button.setAttribute('aria-expanded','false'));
+  if(wasOpen&&restoreFocus)(activeChapterPicker||buttons[0])?.focus({preventScroll:true});
 }
 function configureChapterPicker(){
   closeChapterPicker(false);
-  const button=document.getElementById('chapter-picker');
-  const target=document.getElementById(chapterPickerMedia.matches?'chapter-dropdown':'chapter-dialog');
-  target.appendChild(document.getElementById('chapter-picker-content'));
-  button.setAttribute('aria-controls',target.id);
-  if(chapterPickerMedia.matches)button.removeAttribute('aria-haspopup');else button.setAttribute('aria-haspopup','dialog');
+  const buttons=chapterPickerButtons(),content=document.getElementById('chapter-picker-content'),dialog=document.getElementById('chapter-dialog');
+  if(chapterPickerMedia.matches){
+    buttons.forEach(button=>{const dropdown=button.closest('.chapter-select').querySelector('.chapter-dropdown');button.setAttribute('aria-controls',dropdown.id);button.removeAttribute('aria-haspopup');});
+    buttons[0]?.closest('.chapter-select').querySelector('.chapter-dropdown').appendChild(content);
+  }else{
+    buttons.forEach(button=>{button.setAttribute('aria-controls',dialog.id);button.setAttribute('aria-haspopup','dialog');});
+    dialog.appendChild(content);
+  }
 }
-function openChapterPicker(){
+function openChapterPicker(button){
   const book=booksData.find(item=>item.id===activeBook);if(!book||!requireLogin())return;
-  const dropdown=document.getElementById('chapter-dropdown'),dialog=document.getElementById('chapter-dialog');
-  if(!dropdown.hidden||dialog.open){closeChapterPicker();return;}
+  const dialog=document.getElementById('chapter-dialog'),dropdown=chapterPickerMedia.matches?button.closest('.chapter-select').querySelector('.chapter-dropdown'):null;
+  if(dialog.open||chapterPickerDropdowns().some(item=>!item.hidden)){
+    const samePicker=activeChapterPicker===button;closeChapterPicker(false);if(samePicker)return;
+  }
+  activeChapterPicker=button;
   document.getElementById('chapter-dialog-book').textContent=book.title;
   document.getElementById('chapter-search').value='';renderChapterOptions();
   document.getElementById('type-settings').open=false;
-  if(chapterPickerMedia.matches)dropdown.hidden=false;else dialog.showModal();
-  document.getElementById('chapter-picker').setAttribute('aria-expanded','true');
+  if(chapterPickerMedia.matches){dropdown.appendChild(document.getElementById('chapter-picker-content'));dropdown.hidden=false;}
+  else {dialog.appendChild(document.getElementById('chapter-picker-content'));dialog.showModal();}
+  chapterPickerButtons().forEach(item=>item.setAttribute('aria-expanded',String(item===button)));
   document.getElementById('chapter-search').focus({preventScroll:true});
   requestAnimationFrame(()=>{
     const options=document.getElementById('chapter-options'),selected=options.querySelector('.selected');
@@ -350,20 +354,20 @@ function openChapterPicker(){
   });
 }
 chapterPickerMedia.addEventListener('change',configureChapterPicker);configureChapterPicker();
-document.getElementById('chapter-picker').onclick=openChapterPicker;
+chapterPickerButtons().forEach(button=>button.onclick=()=>openChapterPicker(button));
 document.getElementById('chapter-search').oninput=renderChapterOptions;
 document.getElementById('chapter-dialog-close').onclick=()=>closeChapterPicker();
 document.getElementById('chapter-dialog').addEventListener('cancel',event=>{event.preventDefault();closeChapterPicker();});
-document.getElementById('chapter-dialog').addEventListener('close',()=>document.getElementById('chapter-picker').setAttribute('aria-expanded','false'));
+document.getElementById('chapter-dialog').addEventListener('close',()=>chapterPickerButtons().forEach(button=>button.setAttribute('aria-expanded','false')));
 document.getElementById('chapter-dialog').addEventListener('click',event=>{if(event.target===event.currentTarget){const rect=event.currentTarget.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)closeChapterPicker();}});
-document.addEventListener('click',event=>{if(!document.getElementById('chapter-dropdown').hidden&&!event.target.closest('.chapter-select'))closeChapterPicker(false);});
+document.addEventListener('click',event=>{if(chapterPickerDropdowns().some(dropdown=>!dropdown.hidden)&&!event.target.closest('.chapter-select'))closeChapterPicker(false);});
 document.addEventListener('keydown',event=>{
-  const open=!document.getElementById('chapter-dropdown').hidden||document.getElementById('chapter-dialog').open;
+  const open=chapterPickerDropdowns().some(dropdown=>!dropdown.hidden)||document.getElementById('chapter-dialog').open;
   if(event.key==='Escape'&&open){event.preventDefault();closeChapterPicker();}
 });
-document.querySelector('.chapter-select').addEventListener('focusout',()=>{
-  requestAnimationFrame(()=>{if(chapterPickerMedia.matches&&!document.querySelector('.chapter-select').contains(document.activeElement))closeChapterPicker(false);});
-});
+document.querySelectorAll('.chapter-select').forEach(select=>select.addEventListener('focusout',()=>{
+  requestAnimationFrame(()=>{if(chapterPickerMedia.matches&&!select.contains(document.activeElement))closeChapterPicker(false);});
+}));
 document.getElementById('chapter-picker-content').addEventListener('keydown',event=>{
   if(!['ArrowDown','ArrowUp','Home','End'].includes(event.key))return;
   const buttons=[...document.querySelectorAll('[data-pick-chapter]')],index=buttons.indexOf(document.activeElement);
