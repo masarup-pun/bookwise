@@ -1,6 +1,7 @@
 // Run locally in Terminal. Credentials are prompted without echo and never saved.
 const fs = require('node:fs');
 const path = require('node:path');
+const { createHash } = require('node:crypto');
 const readline = require('node:readline');
 const { Writable } = require('node:stream');
 const root = path.resolve(__dirname, '..');
@@ -39,7 +40,8 @@ function passwordPrompt() {
     rl.on('SIGINT', () => { rl.close(); reject(new Error('ยกเลิกการนำเข้า')); });
   });
 }
-async function importBooks(books, password) {
+async function importBooks(books, password, replace = false) {
+  const importedHash = createHash('sha256').update(JSON.stringify(books)).digest('hex');
   const client = new Client({ ...connection, password });
   let transaction = false;
   try {
@@ -47,8 +49,13 @@ async function importBooks(books, password) {
     await client.query('begin'); transaction = true;
     await client.query("set local statement_timeout = '120s'");
     await client.query(fs.readFileSync(path.join(root, 'supabase/content-schema.sql'), 'utf8'));
+    if (replace) {
+      await client.query('delete from public.book_chapters');
+      console.log('ล้างบทสรุปเดิมใน Production แล้ว');
+    }
     for (let i = 0; i < books.length; i++) {
       const book = books[i];
+      await client.query('delete from public.book_chapters where book_id=$1 and chapter_index >= $2', [book.id, book.chapters.length]);
       await client.query(`insert into public.book_chapters(book_id,chapter_index,content)
         select $1, (ordinality - 1)::integer, chapter
         from jsonb_array_elements($2::jsonb) with ordinality as source(chapter,ordinality)
@@ -67,29 +74,68 @@ async function importBooks(books, password) {
     if (result.rows[0].chapters !== count || result.rows[0].books !== books.length) throw new Error('จำนวนบทในฐานข้อมูลไม่ตรงกับต้นฉบับ');
     await client.query('commit'); transaction = false;
     console.log(`\nนำเข้าสำเร็จ: ${books.length} เล่ม / ${count} บท — ตรวจข้อมูลทุกบทตรงกับไฟล์ในเครื่องแล้ว`);
-    const progressPath = path.join(root, 'private/drafts/rewrite-progress.json');
+    const progressPath = path.join(root, 'private/rebuild/progress.json');
     try {
       const progress = JSON.parse(fs.readFileSync(progressPath, 'utf8'));
-      progress.status = 'catalog_publish_pending'; progress.database_import_pending = false; progress.catalog_push_pending = true;
-      progress.integration_blocker = null;
-      progress.database_audit = { project: 'Bookwise production', books: books.length, chapters: count, all_content_matches_source: true, audited_at: new Date().toISOString() };
+      const currentHash = createHash('sha256').update(JSON.stringify(loadBooks())).digest('hex');
+      const matchesLocalFile = importedHash === currentHash;
+      // These flags compare database JSON with the local summary file, not with the original books.
+      progress.production = { project: 'Readwise', books: books.length, chapters: count, all_content_matches_source: matchesLocalFile, all_content_matches_local_file: matchesLocalFile, imported_content_sha256: importedHash, sync_required: !matchesLocalFile, synced_at: new Date().toISOString() };
       progress.updated_at = new Date().toISOString();
       fs.writeFileSync(progressPath, JSON.stringify(progress, null, 2) + '\n');
     } catch { console.log('นำเข้าแล้ว แต่บันทึกไฟล์สถานะในเครื่องไม่ได้'); }
-    console.log('แจ้ง Codex ว่า “นำเข้าเสร็จแล้ว” เพื่อเผยแพร่ catalog และตรวจเว็บต่อ');
   } catch (error) {
     if (transaction) await client.query('rollback').catch(() => {});
     throw error;
   } finally { await client.end().catch(() => {}); }
 }
+async function watchBooks(password, replace = false) {
+  const contentPath = path.join(root, 'private/book-content.json');
+  const initial = loadBooks();
+  let signature = JSON.stringify(initial);
+  await importBooks(initial, password, replace);
+  console.log('\nเฝ้าดู private/book-content.json — เมื่อเพิ่มหรือแก้สรุปหนังสือ ระบบจะนำเข้า Production อัตโนมัติ');
+  console.log('กด Ctrl+C เพื่อหยุดการเฝ้าดู');
+  let timer = null, busy = false, pending = false;
+  const watcher = fs.watch(contentPath, { persistent: true }, () => {
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(async () => {
+      if (busy) { pending = true; return; }
+      busy = true;
+      try {
+        const books = loadBooks(), next = JSON.stringify(books);
+        if (next !== signature) {
+          await importBooks(books, password, false);
+          signature = next;
+        }
+      } catch (error) {
+        console.error('\nซิงก์ Production ไม่สำเร็จ:', error.message);
+      } finally {
+        busy = false;
+        if (pending) {
+          pending = false;
+          watcher.emit('change', 'rename');
+        }
+      }
+    }, 900);
+  });
+  await new Promise(resolve => {
+    const stop = async () => { watcher.close(); if (timer) clearTimeout(timer); resolve(); };
+    process.once('SIGINT', stop);
+    process.once('SIGTERM', stop);
+  });
+}
 async function main() {
   const books = loadBooks(), count = books.reduce((sum, book) => sum + book.chapters.length, 0);
-  console.log(`Bookwise — นำเข้า ${books.length} เล่ม / ${count} บท\nโครงการ: ${project}`);
+  const replace = process.argv.includes('--replace');
+  const watch = process.argv.includes('--watch');
+  console.log(`Bookwise — นำเข้า ${books.length} เล่ม / ${count} บท${replace ? ' และล้างบทสรุปเดิม' : ''}\nโครงการ: ${project}`);
   if (process.argv.includes('--check')) { console.log('ตรวจไฟล์และ PostgreSQL client ผ่าน (ยังไม่ได้เชื่อมต่อหรือแก้ฐานข้อมูล)'); return; }
   console.log('ใช้ Database password ของ Supabase Project ไม่ใช่รหัสเข้าเว็บ Readwise\nรหัสผ่านไม่ถูกบันทึกไว้ในไฟล์\n');
   const password = await passwordPrompt();
   if (!password) throw new Error('ยังไม่ได้กรอกรหัสผ่าน');
-  await importBooks(books, password);
+  if (watch) await watchBooks(password, replace);
+  else await importBooks(books, password, replace);
 }
 if (require.main === module) main().catch(error => {
   console.error('\nนำเข้าไม่สำเร็จ:', error.message);

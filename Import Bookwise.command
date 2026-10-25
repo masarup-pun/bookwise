@@ -1,7 +1,7 @@
 #!/bin/bash
 export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
 cd -- "$(dirname -- "$0")" || exit 1
-node scripts/import-content.cjs
+node scripts/import-content.cjs --replace
 import_result=$?
 printf '\nกด Enter เพื่อปิดหน้าต่าง…'
 read -r
