@@ -2,7 +2,7 @@
 
 For any task that summarizes, audits, repairs, renders, or imports book content in this Readwise project:
 
-1. Read `BOOK_SUMMARY_STANDARD.md` before acting and treat it as required project guidance.
+1. Read `BOOK_SUMMARY_STANDARD.md` and `BOOK_SUMMARY_PRINCIPLE_GUIDELINE.md` before acting; treat both as required project guidance. The standard governs evidence and quality gates; the principle guideline governs summary voice and format.
 2. Use the supplied original book files as the source of truth. Do not rely on existing summaries as proof of coverage.
 3. Keep a source-to-summary coverage map for every content-bearing paragraph/section and complete semantic checks before marking a book ready.
 4. Do not import or publish a book until every chapter in that book passes the coverage, fidelity, structure, and presentation checks in the standard.

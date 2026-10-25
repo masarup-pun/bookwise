@@ -2,7 +2,7 @@
 
 เว็บห้องสมุดส่วนตัว Bookwise: [เปิด Bookwise](https://masarup-pun.github.io/bookwise/)
 
-หน้าแรกเป็นช่องรหัสผ่านช่องเดียว เมื่อ Supabase Auth ตรวจสอบผ่านแล้วจะแสดงหนังสือทั้งหมด พร้อมเนื้อหาและ Flashcard ข้อมูลการอ่านและกำหนดทบทวนจะซิงก์ข้ามอุปกรณ์ ส่วน `CHAPTER_CONTENT_PROMPTS.md` เป็นชุดพรอมป์ต์สำหรับวางแผน เขียน และตรวจเนื้อหารายบท
+หน้าแรกเป็นช่องรหัสผ่านช่องเดียว เมื่อ Supabase Auth ตรวจสอบผ่านแล้วจะแสดงหนังสือทั้งหมด พร้อมเนื้อหาและ Flashcard ข้อมูลการอ่านและกำหนดทบทวนจะซิงก์ข้ามอุปกรณ์ แนวเสียงและรูปแบบบทสรุปอยู่ใน [`BOOK_SUMMARY_PRINCIPLE_GUIDELINE.md`](BOOK_SUMMARY_PRINCIPLE_GUIDELINE.md) ส่วน [`BOOK_SUMMARY_STANDARD.md`](BOOK_SUMMARY_STANDARD.md) กำหนดหลักฐานและเกณฑ์คุณภาพก่อน Production; `CHAPTER_CONTENT_PROMPTS.md` เป็นชุดพรอมป์ต์สำหรับวางแผน เขียน และตรวจเนื้อหารายบท
 
 ## เปิดในเครื่อง
 
