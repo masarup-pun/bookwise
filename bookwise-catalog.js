@@ -903,73 +903,73 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทที่ 1 — เรื่องราวของผม (Introduction: My Story)"
+        "title": "บทนำ - เรื่องราวของผม (Introduction: My Story)"
       },
       {
-        "title": "บทที่ 2 — พลังที่คาดไม่ถึงของนิสัยเล็ก ๆ (The Surprising Power of Atomic Habits)"
+        "title": "บทที่ 1 - พลังที่คาดไม่ถึงของนิสัยเล็ก ๆ (The Surprising Power of Atomic Habits)"
       },
       {
-        "title": "บทที่ 3 — นิสัยหล่อหลอมตัวตน และตัวตนก็หล่อหลอมนิสัย (How Your Habits Shape Your Identity (and Vice Versa))"
+        "title": "บทที่ 2 - นิสัยหล่อหลอมตัวตน และตัวตนก็หล่อหลอมนิสัย (How Your Habits Shape Your Identity (and Vice Versa))"
       },
       {
-        "title": "บทที่ 4 — สร้างนิสัยที่ดีด้วย 4 ขั้นตอน (How to Build Better Habits in 4 Simple Steps)"
+        "title": "บทที่ 3 - สร้างนิสัยที่ดีด้วย 4 ขั้นตอน (How to Build Better Habits in 4 Simple Steps)"
       },
       {
-        "title": "บทที่ 5 — ชายที่ดูไม่ปกติ (The Man Who Didn’t Look Right)"
+        "title": "บทที่ 4 - ชายที่ดูไม่ปกติ (The Man Who Didn’t Look Right)"
       },
       {
-        "title": "บทที่ 6 — วิธีเริ่มนิสัยใหม่ที่ดีที่สุด (The Best Way to Start a New Habit)"
+        "title": "บทที่ 5 - วิธีเริ่มนิสัยใหม่ที่ดีที่สุด (The Best Way to Start a New Habit)"
       },
       {
-        "title": "บทที่ 7 — แรงจูงใจสำคัญน้อยกว่าสภาพแวดล้อม (Motivation Is Overrated; Environment Often Matters More)"
+        "title": "บทที่ 6 - แรงจูงใจสำคัญน้อยกว่าสภาพแวดล้อม (Motivation Is Overrated; Environment Often Matters More)"
       },
       {
-        "title": "บทที่ 8 — เคล็ดลับของการควบคุมตนเอง (The Secret to Self-Control)"
+        "title": "บทที่ 7 - เคล็ดลับของการควบคุมตนเอง (The Secret to Self-Control)"
       },
       {
-        "title": "บทที่ 9 — ทำให้นิสัยน่าดึงดูด (How to Make a Habit Irresistible)"
+        "title": "บทที่ 8 - ทำให้นิสัยน่าดึงดูด (How to Make a Habit Irresistible)"
       },
       {
-        "title": "บทที่ 10 — ครอบครัวและเพื่อนหล่อหลอมนิสัยอย่างไร (The Role of Family and Friends in Shaping Your Habits)"
+        "title": "บทที่ 9 - ครอบครัวและเพื่อนหล่อหลอมนิสัยอย่างไร (The Role of Family and Friends in Shaping Your Habits)"
       },
       {
-        "title": "บทที่ 11 — ค้นหาและแก้สาเหตุของนิสัยไม่ดี (How to Find and Fix the Causes of Your Bad Habits)"
+        "title": "บทที่ 10 - ค้นหาและแก้สาเหตุของนิสัยไม่ดี (How to Find and Fix the Causes of Your Bad Habits)"
       },
       {
-        "title": "บทที่ 12 — ค่อย ๆ ก้าว แต่อย่าถอยหลัง (Walk Slowly, but Never Backward)"
+        "title": "บทที่ 11 - ค่อย ๆ ก้าว แต่อย่าถอยหลัง (Walk Slowly, but Never Backward)"
       },
       {
-        "title": "บทที่ 13 — กฎแห่งการใช้ความพยายามน้อยที่สุด (The Law of Least Effort)"
+        "title": "บทที่ 12 - กฎแห่งการใช้ความพยายามน้อยที่สุด (The Law of Least Effort)"
       },
       {
-        "title": "บทที่ 14 — หยุดผัดวันด้วยกฎสองนาที (How to Stop Procrastinating by Using the Two-Minute Rule)"
+        "title": "บทที่ 13 - หยุดผัดวันด้วยกฎสองนาที (How to Stop Procrastinating by Using the Two-Minute Rule)"
       },
       {
-        "title": "บทที่ 15 — ทำให้นิสัยดีเกิดขึ้นแน่และนิสัยไม่ดีทำได้ยาก (How to Make Good Habits Inevitable and Bad Habits Impossible)"
+        "title": "บทที่ 14 - ทำให้นิสัยดีเกิดขึ้นแน่และนิสัยไม่ดีทำได้ยาก (How to Make Good Habits Inevitable and Bad Habits Impossible)"
       },
       {
-        "title": "บทที่ 16 — กฎสำคัญที่สุดของการเปลี่ยนพฤติกรรม (The Cardinal Rule of Behavior Change)"
+        "title": "บทที่ 15 - กฎสำคัญที่สุดของการเปลี่ยนพฤติกรรม (The Cardinal Rule of Behavior Change)"
       },
       {
-        "title": "บทที่ 17 — รักษานิสัยดีให้ทำได้ทุกวัน (How to Stick with Good Habits Every Day)"
+        "title": "บทที่ 16 - รักษานิสัยดีให้ทำได้ทุกวัน (How to Stick with Good Habits Every Day)"
       },
       {
-        "title": "บทที่ 18 — คู่รับผิดชอบช่วยเปลี่ยนทุกอย่างได้ (How an Accountability Partner Can Change Everything)"
+        "title": "บทที่ 17 - คู่รับผิดชอบช่วยเปลี่ยนทุกอย่างได้ (How an Accountability Partner Can Change Everything)"
       },
       {
-        "title": "บทที่ 19 — ความจริงเรื่องพรสวรรค์—ยีนมีผลเมื่อใด (The Truth About Talent (When Genes Matter and When They Don’t))"
+        "title": "บทที่ 18 - ความจริงเรื่องพรสวรรค์-ยีนมีผลเมื่อใด (The Truth About Talent (When Genes Matter and When They Don’t))"
       },
       {
-        "title": "บทที่ 20 — กฎโกลดิล็อกส์: รักษาแรงจูงใจในชีวิตและงาน (The Goldilocks Rule: How to Stay Motivated in Life and Work)"
+        "title": "บทที่ 19 - กฎโกลดิล็อกส์: รักษาแรงจูงใจในชีวิตและงาน (The Goldilocks Rule: How to Stay Motivated in Life and Work)"
       },
       {
-        "title": "บทที่ 21 — ข้อเสียของการสร้างนิสัยดี (The Downside of Creating Good Habits)"
+        "title": "บทที่ 20 - ข้อเสียของการสร้างนิสัยดี (The Downside of Creating Good Habits)"
       },
       {
-        "title": "บทที่ 22 — บทสรุป: เคล็ดลับของผลลัพธ์ที่ยั่งยืน (Conclusion: The Secret to Results That Last)"
+        "title": "บทสรุป - เคล็ดลับของผลลัพธ์ที่ยั่งยืน (Conclusion: The Secret to Results That Last)"
       },
       {
-        "title": "บทที่ 23 — ภาคผนวกและบทเรียนเพิ่มเติม (Appendix)"
+        "title": "ภาคผนวก (Appendix)"
       }
     ]
   },
