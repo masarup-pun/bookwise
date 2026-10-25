@@ -290,7 +290,7 @@ button.brand:focus-visible{outline:3px solid var(--action);outline-offset:6px;bo
 
 /* A single centered reading column; desktop chapters open beneath their trigger. */
 :root{--reading-copy:#5c6676;--reading-heading:#203a5b;--reading-emphasis:#255DDB}
-body[data-theme="dark"]{--reading-copy:#b8c2d0;--reading-heading:#f0f4fc;--reading-emphasis:#255DDB}
+body[data-theme="dark"]{--reading-copy:#b8c2d0;--reading-heading:#f0f4fc;--reading-emphasis:#a9c6ff}
 .reader{width:100%;max-width:960px;margin:0 auto}
 .reader-top,.reader-layout,.chapter-controls{width:100%;max-width:none;margin-left:0;margin-right:0}
 .reader-layout{display:block;grid-template-columns:minmax(0,1fr)}
