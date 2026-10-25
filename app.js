@@ -1,6 +1,6 @@
     const booksData=window.BOOKWISE_CATALOG.map(book=>({...book,chapters:book.chapters.map(chapter=>({...chapter}))}));
     let authorFilter=null,categoryFilter=null;
-    let filter='All',sort='Title A–Z',activeBook='attention',activeView='all',fontSize=14,fontSizeCustomized=false,quizIndex=0,quizAnswered=false;
+    let filter='All',sort='Title A–Z',activeBook='attention',activeView='all',fontSize=14,fontSizeCustomized=false,quizIndex=0,quizAnswered=false,showArchivedBooks=false;
     let pendingSelection=null,editingAnnotationId=null;
     const STORAGE_KEY='readwise-demo-state-v2';
     const booksEl=document.getElementById('books'),lib=document.getElementById('library-view'),reader=document.getElementById('reader-view');
@@ -31,11 +31,11 @@
     const bookmarks=Array.isArray(stored.bookmarks)?stored.bookmarks.filter(m=>booksData.some(b=>b.id===m.bookId)&&Number.isInteger(m.chapter)):[];
     function readingSize(state){fontSizeCustomized=state?.fontSizeCustomized===true;return fontSizeCustomized&&Number.isInteger(state?.fontSizePt)?Math.max(10,Math.min(48,state.fontSizePt)):14}
     fontSize=readingSize(stored);
-    booksData.forEach(b=>{const state=stored.books?.[b.id];if(state){b.chapter=Math.max(0,Math.min(b.chapters.length-1,Number(state.chapter)||0));b.progress=Math.max(0,Math.min(100,Number(state.progress)||0));b.favorite=Boolean(state.favorite);b.started=Boolean(state.started);b.completed=Boolean(state.completed);b.lastRead=Number(state.lastRead)||0;b.continueDismissedAt=Number(state.continueDismissedAt)||0;b.readPosition=state.readPosition||null;b.coverPath=typeof state.coverPath==='string'?state.coverPath:null}else if(b.started&&!b.lastRead)b.lastRead=Date.now()});
+    booksData.forEach(b=>{const state=stored.books?.[b.id];if(state){b.chapter=Math.max(0,Math.min(b.chapters.length-1,Number(state.chapter)||0));b.progress=Math.max(0,Math.min(100,Number(state.progress)||0));b.favorite=Boolean(state.favorite);b.started=Boolean(state.started);b.completed=Boolean(state.completed);b.lastRead=Number(state.lastRead)||0;b.continueDismissedAt=Number(state.continueDismissedAt)||0;b.readPosition=state.readPosition||null;b.coverPath=typeof state.coverPath==='string'?state.coverPath:null;b.libraryHidden=Boolean(state.libraryHidden);b.libraryVisibilityUpdatedAt=Number(state.libraryVisibilityUpdatedAt)||0}else if(b.started&&!b.lastRead)b.lastRead=Date.now()});
     let syncUserId=null,guestSnapshot=null,applyingAccountState=false;
-    function snapshotState(){const books=Object.fromEntries(booksData.map(b=>[b.id,{chapter:b.chapter,progress:b.progress,favorite:b.favorite,started:Boolean(b.started),completed:Boolean(b.completed),lastRead:b.lastRead||0,continueDismissedAt:b.continueDismissedAt||0,readPosition:b.readPosition||null,coverPath:b.coverPath||null}]));return {contentRevision:CONTENT_REVISION,books,annotations:[...annotations],bookmarks:[...bookmarks],reviewQueue:[...reviewQueue],fontSizePt:fontSize,fontSizeCustomized}}
+    function snapshotState(){const books=Object.fromEntries(booksData.map(b=>[b.id,{chapter:b.chapter,progress:b.progress,favorite:b.favorite,started:Boolean(b.started),completed:Boolean(b.completed),lastRead:b.lastRead||0,continueDismissedAt:b.continueDismissedAt||0,readPosition:b.readPosition||null,coverPath:b.coverPath||null,libraryHidden:Boolean(b.libraryHidden),libraryVisibilityUpdatedAt:b.libraryVisibilityUpdatedAt||0}]));return {contentRevision:CONTENT_REVISION,books,annotations:[...annotations],bookmarks:[...bookmarks],reviewQueue:[...reviewQueue],fontSizePt:fontSize,fontSizeCustomized}}
     function persist(afterSync){try{const state=snapshotState();localStorage.setItem(syncUserId?`${STORAGE_KEY}:${syncUserId}`:STORAGE_KEY,JSON.stringify(state));if(!syncUserId)guestSnapshot=state;else if(!applyingAccountState)window.BookwiseCloudSync?.schedule(state,afterSync);return true}catch(_){toast('บันทึกในเบราว์เซอร์ไม่สำเร็จ กรุณาตรวจพื้นที่จัดเก็บ');return false}}
-    function applyAccountState(state){authorFilter=null;categoryFilter=null;readingReady=false;clearTimeout(positionTimer);const next=migrateReadingState(state);applyingAccountState=true;booksData.forEach(b=>{const saved=next.books?.[b.id]||{};b.chapter=Math.max(0,Math.min(b.chapters.length-1,Number(saved.chapter)||0));b.progress=Math.max(0,Math.min(100,Number(saved.progress)||0));b.favorite=Boolean(saved.favorite);b.started=Boolean(saved.started);b.completed=Boolean(saved.completed);b.lastRead=Number(saved.lastRead)||0;b.continueDismissedAt=Number(saved.continueDismissedAt)||0;b.readPosition=saved.readPosition||null;b.coverPath=typeof saved.coverPath==='string'&&syncUserId&&saved.coverPath.startsWith(`${syncUserId}/`)?saved.coverPath:null;b.coverUrl=null});annotations.splice(0,annotations.length,...(Array.isArray(next.annotations)?next.annotations.filter(a=>booksData.some(b=>b.id===a.bookId)&&Array.isArray(a.segments)):[]));bookmarks.splice(0,bookmarks.length,...(Array.isArray(next.bookmarks)?next.bookmarks.filter(m=>booksData.some(b=>b.id===m.bookId)&&Number.isInteger(m.chapter)):[]));reviewQueue.splice(0,reviewQueue.length,...(Array.isArray(next.reviewQueue)?next.reviewQueue.filter(c=>booksData.some(b=>b.id===c.bookId)&&Number.isFinite(c.due)):[]));fontSize=readingSize(next);showView('all');persist();applyingAccountState=false}
+    function applyAccountState(state){authorFilter=null;categoryFilter=null;showArchivedBooks=false;readingReady=false;clearTimeout(positionTimer);const next=migrateReadingState(state);applyingAccountState=true;booksData.forEach(b=>{const saved=next.books?.[b.id]||{};b.chapter=Math.max(0,Math.min(b.chapters.length-1,Number(saved.chapter)||0));b.progress=Math.max(0,Math.min(100,Number(saved.progress)||0));b.favorite=Boolean(saved.favorite);b.started=Boolean(saved.started);b.completed=Boolean(saved.completed);b.lastRead=Number(saved.lastRead)||0;b.continueDismissedAt=Number(saved.continueDismissedAt)||0;b.readPosition=saved.readPosition||null;b.libraryHidden=Boolean(saved.libraryHidden);b.libraryVisibilityUpdatedAt=Number(saved.libraryVisibilityUpdatedAt)||0;b.coverPath=typeof saved.coverPath==='string'&&syncUserId&&saved.coverPath.startsWith(`${syncUserId}/`)?saved.coverPath:null;b.coverUrl=null});annotations.splice(0,annotations.length,...(Array.isArray(next.annotations)?next.annotations.filter(a=>booksData.some(b=>b.id===a.bookId)&&Array.isArray(a.segments)):[]));bookmarks.splice(0,bookmarks.length,...(Array.isArray(next.bookmarks)?next.bookmarks.filter(m=>booksData.some(b=>b.id===m.bookId)&&Number.isInteger(m.chapter)):[]));reviewQueue.splice(0,reviewQueue.length,...(Array.isArray(next.reviewQueue)?next.reviewQueue.filter(c=>booksData.some(b=>b.id===c.bookId)&&Number.isFinite(c.due)):[]));fontSize=readingSize(next);showView('all');persist();applyingAccountState=false}
     window.BookwiseApp={migrateState:migrateReadingState,getState:snapshotState,getCachedState:id=>{try{return migrateReadingState(JSON.parse(localStorage.getItem(`${STORAGE_KEY}:${id}`)||'{}'))}catch(_){return {}}},getGuestState:()=>guestSnapshot||snapshotState(),activateAccount:(id,state)=>{syncUserId=id;applyAccountState(state)},activateGuest:()=>{syncUserId=null;applyAccountState(guestSnapshot||{})},toast};
     function toast(message){const el=document.getElementById('toast');el.textContent=message;el.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>el.classList.remove('show'),2800)}
     const coverUrlLoads=new Map(), coverFailures=new Map();
@@ -68,7 +68,7 @@
       }else elements.forEach(el=>loadCover(booksData.find(b=>b.id===el.dataset.coverBook)));
     }
     function coverMarkup(b,mini=false){
-      return `<div class="${mini?'mini-cover':'cover'}${b.coverUrl?' has-cover-image':''}" data-cover-book="${esc(b.id)}" data-cover-path="${esc(b.coverPath||'')}" style="background:${esc(b.color)};color:${esc(b.text)}">${b.coverUrl?`<img class="cover-image" src="${esc(b.coverUrl)}" alt="" loading="lazy" decoding="async">`:''}<h3${!mini&&b.title.length>42?' class="long-cover-title"':''}>${esc(b.title)}</h3><div class="${mini?'cover-author':'author'}">${esc(b.author)}</div><span class="ornament"></span>${mini?'':`<span class="book-category">${esc(b.shelfCategory||'ทั่วไป')}</span>${favoriteMarkup(b)}<button class="cover-upload" data-cover="${b.id}" title="เปลี่ยนปก">เปลี่ยนปก</button>`}</div>`;
+      return `<div class="${mini?'mini-cover':'cover'}${b.coverUrl?' has-cover-image':''}" data-cover-book="${esc(b.id)}" data-cover-path="${esc(b.coverPath||'')}" style="background:${esc(b.color)};color:${esc(b.text)}">${b.coverUrl?`<img class="cover-image" src="${esc(b.coverUrl)}" alt="" loading="lazy" decoding="async">`:''}<h3${!mini&&b.title.length>42?' class="long-cover-title"':''}>${esc(b.title)}</h3><div class="${mini?'cover-author':'author'}">${esc(b.author)}</div><span class="ornament"></span>${mini?'':`<span class="book-category">${esc(b.shelfCategory||'ทั่วไป')}</span>${favoriteMarkup(b)}<button type="button" class="cover-action cover-upload" data-cover="${esc(b.id)}" title="เปลี่ยนปก" aria-label="เปลี่ยนปกของ ${esc(b.title)}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5h3.2l1.5-2h6.6l1.5 2H20v11H4z"/><circle cx="12" cy="13" r="3.2"/><path d="M17 10h.01"/></svg></button>${b.libraryHidden?`<button type="button" class="cover-action cover-library-restore" data-library-visibility="restore" data-book-id="${esc(b.id)}" title="คืนหนังสือเข้าห้องสมุด" aria-label="คืน ${esc(b.title)} เข้าห้องสมุด"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 14 4 9l5-5"/><path d="M4 9h9a6 6 0 0 1 0 12h-2"/></svg></button>`:`<button type="button" class="cover-action cover-library-remove" data-library-visibility="remove" data-book-id="${esc(b.id)}" title="ย้ายไปถังขยะ" aria-label="ย้าย ${esc(b.title)} ไปถังขยะ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6m4-6v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg></button>`}`}</div>`;
     }
     function favoriteMarkup(b){return `<button type="button" class="fav ${b.favorite?'on':''}" data-fav="${b.id}" aria-label="${b.favorite?'นำออกจากรายการโปรด':'เพิ่มในรายการโปรด'} · ${esc(b.title)}" aria-pressed="${b.favorite}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.8 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3.1-5.8 3.1 1.1-6.5-4.7-4.6 6.5-.9L12 2.8Z"/></svg></button>`}
     function progressMarkup(b,extra=''){
@@ -187,6 +187,58 @@
     document.addEventListener('click',event=>{if(!event.target.closest('.account-control'))closeAccountMenu()});
     document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!accountMenu.hidden){closeAccountMenu();accountButton.focus()}});
     document.getElementById('today').textContent=new Intl.DateTimeFormat('th-TH',{weekday:'short',day:'numeric',month:'short'}).format(new Date());
+    function setBookLibraryVisibility(bookId,hidden){
+      const book=booksData.find(item=>item.id===bookId);
+      if(!book||!requireLogin())return;
+      if(hidden&&!window.confirm(`ย้าย “${book.title}” ไปถังขยะหรือไม่?\nความคืบหน้า โน้ต และบุ๊กมาร์กจะยังเก็บไว้ และคืนหนังสือได้จากถังขยะ`))return;
+      const previousHidden=Boolean(book.libraryHidden),previousUpdatedAt=book.libraryVisibilityUpdatedAt||0;
+      book.libraryHidden=hidden;book.libraryVisibilityUpdatedAt=Date.now();
+      if(!persist()){book.libraryHidden=previousHidden;book.libraryVisibilityUpdatedAt=previousUpdatedAt;return}
+      renderBooks();
+      document.getElementById('toggle-archived-books')?.focus({preventScroll:true});
+      toast(hidden?'ย้ายหนังสือไปถังขยะแล้ว':'คืนหนังสือเข้าห้องสมุดแล้ว');
+    }
+    const renderBooksBeforeArchive=renderBooks;
+    renderBooks=function(){
+      renderBooksBeforeArchive();
+      const hiddenCount=booksData.filter(book=>book.libraryHidden).length;
+      const cards=[...booksEl.querySelectorAll('.book')];
+      cards.forEach(card=>{const book=booksData.find(item=>item.id===card.dataset.id);card.hidden=Boolean(book?.libraryHidden)!==showArchivedBooks});
+      const visibleCount=cards.filter(card=>!card.hidden).length;
+      document.getElementById('book-count').textContent=`· ${visibleCount}`;
+      document.getElementById('shelf-title-label').textContent=showArchivedBooks?'ถังขยะ':'หนังสือทั้งหมด';
+      const archiveButton=document.getElementById('toggle-archived-books');
+      archiveButton.hidden=hiddenCount===0&&!showArchivedBooks;
+      archiveButton.setAttribute('aria-label',showArchivedBooks?'กลับไปที่ห้องสมุด':`เปิดถังขยะ มี ${hiddenCount} เล่ม`);
+      archiveButton.innerHTML=showArchivedBooks?'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 14-5-5 5-5M4 9h9a6 6 0 0 1 0 12h-2"/></svg><span>กลับห้องสมุด</span>':`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6m4-6v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg><span>ถังขยะ</span><small>${hiddenCount}</small>`;
+      if(cards.length&&!visibleCount)booksEl.innerHTML=`<div class="empty-state"><span class="empty-mark" aria-hidden="true">${showArchivedBooks?'▱':'✦'}</span><h2>${showArchivedBooks?'ถังขยะยังว่าง':'ห้องสมุดของคุณยังว่าง'}</h2><p>${showArchivedBooks?'หนังสือที่ย้ายออกจากห้องสมุดจะแสดงที่นี่':'เลือกหนังสือที่ต้องการอ่านจากห้องสมุด'}</p></div>`;
+    };
+    const renderContinueBeforeArchive=renderContinue;
+    renderContinue=function(){
+      renderContinueBeforeArchive();
+      const list=document.getElementById('continue-list');
+      [...list.querySelectorAll('[data-continue]')].forEach(button=>{const book=booksData.find(item=>item.id===button.dataset.continue);if(book?.libraryHidden)button.closest('.continue')?.remove()});
+      const visible=list.querySelectorAll('.continue').length;
+      document.getElementById('continue-wrap').style.display=visible?'block':'none';
+      document.getElementById('continue-count').textContent=visible?`${visible} เล่มกำลังอ่าน`:'';
+      requestAnimationFrame(updateContinueArrows);
+    };
+    const renderSearchBeforeArchive=renderSearch;
+    renderSearch=function(){
+      renderSearchBeforeArchive();
+      const results=document.getElementById('search-results'),matches=[...results.querySelectorAll('[data-search-book]')];
+      matches.forEach(button=>{const book=booksData.find(item=>item.id===button.dataset.searchBook);button.hidden=Boolean(book?.libraryHidden)!==showArchivedBooks});
+      if(matches.length&&!matches.some(button=>!button.hidden))results.innerHTML=`<p>${showArchivedBooks?'ไม่พบหนังสือในถังขยะที่ตรงกับคำค้น':'ไม่พบหนังสือในห้องสมุดที่ตรงกับคำค้น'}</p>`;
+    };
+    booksEl.addEventListener('click',event=>{
+      const button=event.target.closest('[data-library-visibility]');
+      if(!button)return;
+      event.stopPropagation();
+      setBookLibraryVisibility(button.dataset.bookId,button.dataset.libraryVisibility==='remove');
+    });
+    document.getElementById('toggle-archived-books').addEventListener('click',()=>{
+      showArchivedBooks=!showArchivedBooks;filter='All';authorFilter=null;categoryFilter=null;renderBooks();
+    });
     renderBooks();
     const themeButton=document.getElementById('theme-toggle');
     function setTheme(theme){document.body.dataset.theme=theme;const dark=theme==='dark';themeButton?.setAttribute('aria-checked',String(dark));themeButton?.setAttribute('aria-label',dark?'เปิดโหมดสว่าง':'เปิดโหมดมืด');const glyph=document.getElementById('theme-glyph');if(glyph)glyph.innerHTML=dark?'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>':'<svg viewBox="0 0 24 24"><path d="M20.2 15.1A8.5 8.5 0 0 1 8.9 3.8 8.6 8.6 0 1 0 20.2 15.1Z"/></svg>';try{localStorage.setItem('readwise-theme',theme)}catch(_){}}

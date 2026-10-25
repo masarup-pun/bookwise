@@ -70,6 +70,9 @@
         completed: Boolean(saved.completed || guest.completed),
         lastRead: Math.max(Number(saved.lastRead) || 0, Number(guest.lastRead) || 0),
         continueDismissedAt: Math.max(Number(saved.continueDismissedAt)||0, Number(guest.continueDismissedAt)||0),
+        ...((Number(guest.libraryVisibilityUpdatedAt)||0) > (Number(saved.libraryVisibilityUpdatedAt)||0)
+          ? { libraryHidden: Boolean(guest.libraryHidden), libraryVisibilityUpdatedAt: Number(guest.libraryVisibilityUpdatedAt)||0 }
+          : { libraryHidden: Boolean(saved.libraryHidden), libraryVisibilityUpdatedAt: Number(saved.libraryVisibilityUpdatedAt)||0 }),
         coverPath: saved.coverPath || guest.coverPath || null
       };
     }
@@ -95,6 +98,11 @@
       const remoteBook = state.books?.[id] || {};
       if (Number(localBook.continueDismissedAt) > (Number(remoteBook.continueDismissedAt)||0)) {
         state.books ||= {}; state.books[id] = { ...remoteBook, continueDismissedAt: localBook.continueDismissedAt }; changed = true;
+      }
+      if (Number(localBook.libraryVisibilityUpdatedAt) > (Number(remoteBook.libraryVisibilityUpdatedAt)||0)) {
+        state.books ||= {};
+        state.books[id] = { ...(state.books[id] || remoteBook), libraryHidden: Boolean(localBook.libraryHidden), libraryVisibilityUpdatedAt: localBook.libraryVisibilityUpdatedAt };
+        changed = true;
       }
       if (localBook.readPosition && Number(localBook.lastRead) > (Number(remoteBook.lastRead) || 0)) {
         state.books ||= {};
