@@ -130,7 +130,28 @@
       }).join(' ').replace(/\s+/g,' ').trim();
       return text===String(annotation.text||'').replace(/\s+/g,' ').trim();
     }
-    function renderChapterBody(){if(!window.BookwiseCloudSync?.isSignedIn?.())return;const b=booksData.find(x=>x.id===activeBook),ch=b.chapters[b.chapter],chapterAnnotations=annotationsFor(b.id,b.chapter).filter(a=>annotationMatchesChapter(ch,a));document.getElementById('chapter-body').innerHTML=ch.body.map(([type,txt],i)=>{if(type==='ul'||type==='ol'){const items=Array.isArray(txt)?txt:[];return `<${type} class="reading-block">${items.map((item,j)=>`<li data-block="${i}.${j}">${renderBlock(String(item),`${i}.${j}`,chapterAnnotations)}</li>`).join('')}</${type}>`}const tag=type==='quote'?'div':type==='h'?'h2':type==='h3'?'h3':'p',headingClass=type==='h'&&txt==='ประเด็นสำคัญที่ควรจำ'?' key-takeaways-heading':'';return `<${tag} class="reading-block${type==='quote'?' quote':''}${headingClass}" data-block="${i}">${renderBlock(String(txt),i,chapterAnnotations)}</${tag}>`}).join('');document.getElementById('chapter-body').style.setProperty('--reader-size',fontSize+'pt')}
+    function renderChapterBody(){
+      if(!window.BookwiseCloudSync?.isSignedIn?.())return;
+      const b=booksData.find(x=>x.id===activeBook),ch=b.chapters[b.chapter];
+      const chapterAnnotations=annotationsFor(b.id,b.chapter).filter(a=>annotationMatchesChapter(ch,a));
+      document.getElementById('chapter-body').innerHTML=ch.body.map(([type,txt],i)=>{
+        if(type==='ul'||type==='ol'){
+          const items=Array.isArray(txt)?txt:[txt];
+          return `<${type} class="reading-block">${items.map((item,j)=>{
+            const key=Array.isArray(txt)?`${i}.${j}`:i;
+            return `<li data-block="${key}">${renderBlock(String(item),key,chapterAnnotations)}</li>`;
+          }).join('')}</${type}>`;
+        }
+        const tag=type==='quote'?'div':type==='h'?'h2':type==='h3'?'h3':'p';
+        const headingClass=type==='h'&&/Key Takeaways|ประเด็นสำคัญที่ควรจำ/.test(String(txt))?' key-takeaways-heading':'';
+        const paragraphs=Array.isArray(txt)?txt:[txt];
+        return paragraphs.map((paragraph,j)=>{
+          const key=j===0?i:`${i}.${j}`;
+          return `<${tag} class="reading-block${type==='quote'?' quote':''}${headingClass}" data-block="${key}">${renderBlock(String(paragraph),key,chapterAnnotations)}</${tag}>`;
+        }).join('');
+      }).join('');
+      document.getElementById('chapter-body').style.setProperty('--reader-size',fontSize+'pt');
+    }
     function renderReaderSaved(){const b=booksData.find(x=>x.id===activeBook),items=annotationsFor(b.id,b.chapter),bookmarked=bookmarks.some(m=>m.bookId===b.id&&m.chapter===b.chapter);const button=document.getElementById('bookmark-toggle');button.setAttribute('aria-pressed',String(bookmarked));button.querySelector('span').textContent=bookmarked?'บันทึกแล้ว':'บุ๊กมาร์ก';button.setAttribute('aria-label',bookmarked?'นำบุ๊กมาร์กออก':'บันทึกบทนี้');document.getElementById('reader-notes').hidden=!bookmarked&&!items.length;const panel=document.getElementById('reader-saved');panel.innerHTML=`<div class="reader-saved-title">บันทึกในบทนี้</div>${bookmarked?'<button data-saved-bookmark="1">◆ บุ๊กมาร์กบทนี้</button>':''}${items.map(a=>`<button data-saved-mark="${esc(a.id)}">${a.note?'✎':'◩'} ${esc(a.text.slice(0,55))}${a.text.length>55?'…':''}</button>`).join('')}${!bookmarked&&!items.length?'<p>เลือกข้อความเพื่อไฮไลต์หรือจดโน้ต</p>':''}`;panel.querySelectorAll('[data-saved-mark]').forEach(btn=>btn.onclick=()=>{const mark=[...document.querySelectorAll('.reader-highlight')].find(x=>x.dataset.annotation===btn.dataset.savedMark);mark?.scrollIntoView({behavior:'smooth',block:'center'});if(mark)mark.focus?.()})}
     function formatDue(time){return new Intl.DateTimeFormat('th-TH',{day:'numeric',month:'short',year:'numeric'}).format(new Date(time))}
     function dateInputValue(time){const d=new Date(time);return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}

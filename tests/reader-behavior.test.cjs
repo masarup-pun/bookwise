@@ -79,6 +79,24 @@ test('chapter subheadings retain their heading semantics in the reader',()=>{
   assert.match(body.innerHTML,/<h3 class="reading-block" data-block="1">หัวข้อย่อย<\/h3>/);
   assert.match(body.innerHTML,/<ul class="reading-block">/);
 });
+test('legacy string bullets and paragraph arrays remain visible with stable annotation blocks',()=>{
+  const appSource=fs.readFileSync(require('node:path').join(__dirname,'../app.js'),'utf8');
+  const start=appSource.indexOf('function renderBlock('),end=appSource.indexOf('function renderReaderSaved()',start);
+  const chapter={body:[['p',['ย่อหน้าแรก','ย่อหน้าที่สอง']],['ul','หลักคิด: **ความเข้าใจ** — ตัวอย่าง: <ข้อความ>'],['ol',['ขั้นหนึ่ง','ขั้นสอง']]]};
+  const plain=chapter.body[1][1].replace(/\*\*/g,'');
+  const startOffset=plain.indexOf('ความเข้าใจ');
+  const annotation={id:'legacy-note',text:'ความเข้าใจ',segments:[{block:1,start:startOffset,end:startOffset+'ความเข้าใจ'.length}]};
+  const body={style:{setProperty(){}}};
+  const context=vm.createContext({window:{BookwiseCloudSync:{isSignedIn:()=>true}},booksData:[{id:'test',chapter:0,chapters:[chapter]}],activeBook:'test',annotationsFor:()=>[annotation],fontSize:14,esc:s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'),document:{getElementById:()=>body}});
+  vm.runInContext(appSource.slice(start,end)+';renderChapterBody()',context);
+  assert.match(body.innerHTML,/<p class="reading-block" data-block="0">ย่อหน้าแรก<\/p><p class="reading-block" data-block="0\.1">ย่อหน้าที่สอง<\/p>/);
+  assert.doesNotMatch(body.innerHTML,/ย่อหน้าแรก,ย่อหน้าที่สอง/);
+  assert.match(body.innerHTML,/<li data-block="1">หลักคิด: /);
+  assert.match(body.innerHTML,/<strong>ความเข้าใจ<\/strong>/);
+  assert.match(body.innerHTML,/data-annotation="legacy-note"/);
+  assert.match(body.innerHTML,/&lt;ข้อความ&gt;/);
+  assert.match(body.innerHTML,/<li data-block="2\.1">ขั้นสอง<\/li>/);
+});
 test('legacy chapter progress, bookmarks and review IDs move once when introductions are added',()=>{
   const source=fs.readFileSync(require('node:path').join(__dirname,'../app.js'),'utf8');
   const start=source.indexOf('const CONTENT_REVISION='),end=source.indexOf('const stored=',start);
