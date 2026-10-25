@@ -321,6 +321,7 @@ body[data-theme="dark"]{--reading-copy:#b8c2d0;--reading-heading:#f0f4fc;--readi
 body:not([data-theme="dark"]) .reader-content .prose,body[data-theme="dark"] .reader-content .prose{color:var(--reading-copy)}
 #chapter-body h2,#chapter-body h3{font-family:"Noto Sans Thai",Tahoma,sans-serif;font-weight:800;color:var(--reading-heading)}
 #chapter-body strong{font-weight:700;color:var(--reading-emphasis)}
+#chapter-body strong.example-label{color:var(--reading-copy)}
 .reader-content .chapter-deck,.reader-content .chapter-original{color:var(--text-secondary)}
 .reader-notes{margin-top:24px;padding:16px 20px;border:1px solid var(--control-line);border-radius:14px;background:var(--panel-alt);color:var(--text-main)}
 .reader-notes>summary{min-height:28px;cursor:pointer;font:600 14px/1.8 var(--sans)}
