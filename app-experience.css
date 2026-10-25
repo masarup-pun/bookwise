@@ -335,7 +335,8 @@ body[data-theme="dark"] .reader-layout>.reader-content{background:var(--panel)}
 /* Cover actions: image picker on the left, permanent remove on the right. */
 .shelf-actions{display:flex;align-items:center;justify-content:flex-end;gap:9px;min-width:0;flex:1}
 .shelf-actions .category-filters{flex:1}
-.cover>.cover-action{position:absolute;z-index:5;bottom:10px;display:grid;place-items:center;width:40px;height:40px;margin:0;padding:9px;border:1px solid #ffffffb8;border-radius:50%;background:#f8fbfff2;color:#253d5b;box-shadow:0 3px 12px #10233b30;opacity:1;transform:none;pointer-events:auto;transition:background .18s,border-color .18s,transform .18s,box-shadow .18s}
+.cover>.cover-action{position:absolute;z-index:5;bottom:10px;display:grid;place-items:center;width:40px;height:40px;margin:0;padding:9px;border:1px solid #ffffffb8;border-radius:50%;background:#f8fbfff2;color:#253d5b;box-shadow:0 3px 12px #10233b30;opacity:0;transform:translateY(4px);pointer-events:none;transition:opacity .18s,background .18s,border-color .18s,transform .18s,box-shadow .18s}
+.book:hover .cover>.cover-action,.book:focus-within .cover>.cover-action,.cover>.cover-action:focus-visible{opacity:1;transform:none;pointer-events:auto}
 .cover>.cover-upload{left:10px;right:auto;font-size:0}
 .cover>.cover-library-remove{right:10px}
 .cover>.cover-action svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;filter:none}
@@ -345,3 +346,4 @@ body[data-theme="dark"] .reader-layout>.reader-content{background:var(--panel)}
 @media(max-width:1000px){#library-view>.section-head .shelf-actions{width:100%;flex:1 0 100%}#library-view>.section-head .shelf-actions .category-filters{width:auto;flex:1}}
 @media(max-width:760px){.cover>.cover-action{width:42px;height:42px;bottom:8px}.cover>.cover-upload{left:8px}.cover>.cover-library-remove{right:8px}}
 @media(prefers-reduced-motion:reduce){.cover>.cover-action{transition:none}}
+@media(hover:none),(pointer:coarse){.cover>.cover-action{opacity:1;transform:none;pointer-events:auto}}
