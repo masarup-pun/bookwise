@@ -8,7 +8,7 @@ window.BOOKWISE_CATALOG = [
     "color": "#c8c3bc",
     "text": "#34312d",
     "added": 12,
-    "totalChapters": 10,
+    "totalChapters": 12,
     "chapter": 0,
     "progress": 0,
     "favorite": false,
@@ -16,34 +16,40 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทที่ 1 — มองสิ่งต่าง ๆ ตามจริง—สัจนิยมเข้มข้น (See Things for What They Are—Intense Realism)"
+        "title": "คำนำ (Foreword)"
       },
       {
-        "title": "บทที่ 2 — ทำทุกอย่างให้เป็นของเรา—การพึ่งพาตนเอง (Make Everything Your Own—Self-Reliance)"
+        "title": "บทนำ - กฎข้อที่ 50 (Introduction - The 50th Law)"
       },
       {
-        "title": "บทที่ 3 — เปลี่ยนสิ่งเลวร้ายให้เป็นโอกาส—การฉวยใช้จังหวะ (Turn Shit into Sugar—Opportunism)"
+        "title": "บทที่ 1 - มองสิ่งต่าง ๆ ตามความเป็นจริง (See Things for What They Are - Intense Realism)"
       },
       {
-        "title": "บทที่ 4 — เคลื่อนไหวต่อไป—แรงส่งที่คำนวณได้ (Keep Moving—Calculated Momentum)"
+        "title": "บทที่ 2 - ทำทุกอย่างให้เป็นของเรา (Make Everything Your Own - Self-Reliance)"
       },
       {
-        "title": "บทที่ 5 — รู้ว่าเมื่อใดควรแข็งกร้าว—ความก้าวร้าวอย่างมีกลยุทธ์ (Know When to Be Bad—Aggression)"
+        "title": "บทที่ 3 - เปลี่ยนเรื่องเลวร้ายให้เป็นโอกาส (Turn Shit into Sugar - Opportunism)"
       },
       {
-        "title": "บทที่ 6 — นำจากแนวหน้า—อำนาจและภาวะผู้นำ (Lead from the Front—Authority)"
+        "title": "บทที่ 4 - เคลื่อนที่ต่อไป (Keep Moving - Calculated Momentum)"
       },
       {
-        "title": "บทที่ 7 — รู้จักสภาพแวดล้อมจากข้างใน—การเชื่อมต่อ (Know Your Environment from the Inside Out—Connection)"
+        "title": "บทที่ 5 - รู้ว่าเมื่อไรควรแข็งกร้าว (Know When to Be Bad - Aggression)"
       },
       {
-        "title": "บทที่ 8 — เคารพกระบวนการ—ความเชี่ยวชาญ (Respect the Process—Mastery)"
+        "title": "บทที่ 6 - นำจากแนวหน้า (Lead from the Front - Authority)"
       },
       {
-        "title": "บทที่ 9 — ก้าวพ้นขีดจำกัด—ความเชื่อมั่นในตนเอง (Push Beyond Your Limits—Self-Belief)"
+        "title": "บทที่ 7 - เข้าใจสภาพแวดล้อมจากภายใน (Know Your Environment from the Inside Out - Connection)"
       },
       {
-        "title": "บทที่ 10 — เผชิญความตาย—สัมผัสความยิ่งใหญ่ของชีวิต (Confront Your Mortality—the Sublime)"
+        "title": "บทที่ 8 - เคารพกระบวนการ (Respect the Process - Mastery)"
+      },
+      {
+        "title": "บทที่ 9 - ก้าวข้ามขีดจำกัดของตัวเอง (Push Beyond Your Limits)"
+      },
+      {
+        "title": "บทที่ 10 - เผชิญหน้ากับความตาย (Confront Your Mortality)"
       }
     ]
   },
