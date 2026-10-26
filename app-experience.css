@@ -41,7 +41,7 @@ body[data-theme="dark"] .reader-top .back,body[data-theme="dark"] .bookmark-togg
 .toc-number{flex:none;opacity:.7;font-size:.8em;padding-top:3px;font-variant-numeric:tabular-nums}
 .toc-item span:last-child{min-width:0;overflow-wrap:anywhere}
 .reader-content .chapter-deck{font-family:"Noto Sans Thai",Tahoma,sans-serif!important;font-size:18px;line-height:1.7}
-.reader-content .prose{font-size:var(--reader-size,14pt);line-height:1.85;text-align:start;word-spacing:normal}
+.reader-content .prose{font-size:var(--reader-size,14pt);line-height:1.85;text-align:justify;text-justify:inter-word;word-spacing:normal}
 .chapter-original{font-size:16px;line-height:1.6;color:var(--text-secondary);margin:0 0 18px}
 .chapter-original:empty{display:none}
 .reader-content .prose h2,.reader-content .prose .key-takeaways-heading{font-family:"Noto Sans Thai",Tahoma,sans-serif!important;font-size:1.04em;font-weight:700}
