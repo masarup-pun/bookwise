@@ -61,7 +61,7 @@ window.BOOKWISE_CATALOG = [
     "color": "#496353",
     "text": "#f2ead8",
     "added": 2,
-    "totalChapters": 10,
+    "totalChapters": 18,
     "chapter": 0,
     "progress": 0,
     "favorite": false,
@@ -69,34 +69,58 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทที่ 1 — ความสนใจคือพลังพิเศษของคุณ (Attention Is Your Superpower)"
+        "title": "บทนำ - ขอความสนใจจากคุณได้ไหม? (May I Have Your Attention, Please?)"
       },
       {
-        "title": "บทที่ 2 — แต่ก็มีคริปโตไนต์ (…But There’s Kryptonite)"
+        "title": "บทที่ 1 - ความสนใจคือพลังพิเศษของคุณ (Attention Is Your Superpower)"
       },
       {
-        "title": "บทที่ 3 — วิดพื้นให้จิตใจ (Push-ups for the Mind)"
+        "title": "บทที่ 2 - แต่ความสนใจก็มีจุดอ่อน (. . . But There’s Kryptonite)"
       },
       {
-        "title": "บทที่ 4 — ค้นหาจุดโฟกัส (Find Your Focus)"
+        "title": "บทที่ 3 - วิดพื้นให้จิตใจ (Push-ups for the Mind)"
       },
       {
-        "title": "บทที่ 5 — อยู่กับจังหวะปัจจุบัน (Stay in Play)"
+        "title": "บทที่ 4 - ค้นหาโฟกัสของคุณ (Find Your Focus)"
       },
       {
-        "title": "บทที่ 6 — กดปุ่มบันทึก (Press Record)"
+        "title": "บทที่ 5 - อยู่กับปัจจุบัน (Stay in Play)"
       },
       {
-        "title": "บทที่ 7 — วางเรื่องเล่าลง (Drop the Story)"
+        "title": "บทที่ 6 - กดปุ่มบันทึก (Press Record)"
       },
       {
-        "title": "บทที่ 8 — ขยายมุมมอง (Go Big)"
+        "title": "บทที่ 7 - วางเรื่องเล่าลง (Drop the Story)"
       },
       {
-        "title": "บทที่ 9 — เชื่อมโยงกับผู้อื่น (Get Connected)"
+        "title": "บทที่ 8 - มองให้กว้างขึ้น (Go Big)"
       },
       {
-        "title": "บทที่ 10 — ฝึกจนรู้สึกถึงแรงต้าน (Feel the Burn)"
+        "title": "บทที่ 9 - เชื่อมโยงกับผู้อื่น (Get Connected)"
+      },
+      {
+        "title": "บทที่ 10 - ฝึกจนรู้สึกถึงแรงต้าน (Feel the Burn)"
+      },
+      {
+        "title": "บทสรุป - Peak Mind in Action"
+      },
+      {
+        "title": "คู่มือฝึก Peak Mind - Core Training for the Brain"
+      },
+      {
+        "title": "สัปดาห์ที่ 1 - Week One"
+      },
+      {
+        "title": "สัปดาห์ที่ 2 - Week Two"
+      },
+      {
+        "title": "สัปดาห์ที่ 3 - Week Three"
+      },
+      {
+        "title": "สัปดาห์ที่ 4 - Week Four"
+      },
+      {
+        "title": "สัปดาห์ที่ 5 เป็นต้นไป - Weeks Five Through Forever"
       }
     ]
   },
