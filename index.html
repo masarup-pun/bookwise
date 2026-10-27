@@ -28,7 +28,7 @@
 
 
   <link rel="stylesheet" href="app-base.css?v=20261022-2">
-  <link rel="stylesheet" href="app-experience.css?v=20261027-saved-masonry1">
+  <link rel="stylesheet" href="app-experience.css?v=20261028-revised-only1">
 </head>
 <body data-auth="signed-out">
   <main class="login-screen" id="login-screen" aria-labelledby="login-title">
@@ -74,7 +74,7 @@
         <h1 class="library-heading" id="library-heading">ห้องสมุดส่วนตัวของคุณ</h1>
         <section class="continue-wrap" id="continue-wrap"><div class="continue-head"><h2>อ่านต่อ</h2><div class="continue-controls"><span id="continue-count"></span><div class="continue-arrows" role="group" aria-label="เลื่อนหนังสือที่อ่านต่อ"><button type="button" id="continue-prev" aria-label="เลื่อนหนังสือไปทางซ้าย" aria-controls="continue-list" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button><button type="button" id="continue-next" aria-label="เลื่อนหนังสือไปทางขวา" aria-controls="continue-list" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button></div></div></div><div class="continue-list" id="continue-list" tabindex="0" aria-label="หนังสือที่กำลังอ่าน"></div></section>
         <div class="section-head"><h2 id="shelf-title">หนังสือทั้งหมด <span style="font:400 14px var(--sans);color:#99998f;margin-left:5px" id="book-count"></span></h2><div class="shelf-actions"><div id="category-filters" class="category-filters" role="group" aria-label="กรองตามหมวดหมู่หนังสือ"></div></div></div>
-        <div class="summary-status-row"><span class="summary-status-label">สถานะสรุป</span><div id="summary-status-filters" class="summary-status-filters" role="group" aria-label="กรองตามสถานะการปรับปรุงสรุปหนังสือ"></div></div>
+        <div class="summary-status-row"><span class="summary-status-label">หนังสือที่แสดง</span><div id="summary-status-filters" class="summary-status-filters" aria-live="polite"></div></div>
         <div id="filters" hidden></div>
         <div id="author-filter" class="author-filter" hidden><span id="author-filter-label"></span><button id="clear-author-filter" type="button" aria-label="ล้างตัวกรองผู้เขียน">ดูหนังสือทั้งหมด <span aria-hidden="true">×</span></button></div>
         <div class="books" id="books"></div>
@@ -96,8 +96,8 @@
   <script src="bookwise-catalog.js?v=20261028-power-now12"></script>
   <script src="book-summary-status.js?v=20261028-status3"></script>
   <script src="cover-images.js?v=20261025-reader1"></script>
-  <script src="app.js?v=20261027-saved-books1"></script>
-  <script src="reader.js?v=20261025-reader-recall1"></script>
+  <script src="app.js?v=20261028-revised-only1"></script>
+  <script src="reader.js?v=20261028-revised-only1"></script>
   <script src="supabase-config.js?v=20261022-2"></script>
   <script src="cloud-sync.js?v=20261025-reader1"></script>
 

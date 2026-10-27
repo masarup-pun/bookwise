@@ -87,7 +87,7 @@ function showView(view){
   window.scrollTo(0,0);
 }
 async function openBook(id,chapter,markId){
-  const book=booksData.find(item=>item.id===id);if(!book)return;if(book.libraryHidden){toast('หนังสือเล่มนี้ถูกลบออกจากห้องสมุดอย่างถาวรแล้ว');return}
+  const book=booksData.find(item=>item.id===id);if(!book)return;if(book.summaryStatus!=='revised'){toast('หนังสือเล่มนี้จะแสดงเมื่อปรับสรุปตามแนวทางล่าสุดครบแล้ว');return}if(book.libraryHidden){toast('หนังสือเล่มนี้ถูกลบออกจากห้องสมุดอย่างถาวรแล้ว');return}
   if(!requireLogin({id,chapter,markId}))return;
   flushReadingPosition();readingReady=false;
   reader.classList.toggle('is-resuming',chapter==null&&!markId&&Boolean(book.readPosition));
@@ -267,19 +267,19 @@ function reviewInterval(card,rating){
 function updateReviewBadge(){
   const button=document.querySelector('.nav [data-view="review"]');if(!button)return;
   button.querySelector('.nav-badge')?.remove();
-  const due=signedIn()?reviewQueue.filter(card=>card.due<=Date.now()).length:0;
+  const due=signedIn()?reviewQueue.filter(card=>card.due<=Date.now()&&booksData.some(book=>book.id===card.bookId&&book.summaryStatus==='revised'&&!book.libraryHidden)).length:0;
   if(due){const badge=document.createElement('span');badge.className='nav-badge';badge.textContent=String(Math.min(due,99));badge.setAttribute('aria-label',`${due} การ์ดถึงกำหนด`);button.appendChild(badge);}
 }
 function renderReview(){
   const list=document.getElementById('review-list'),stats=document.getElementById('review-stats');
   if(!signedIn()){stats.replaceChildren();lockedView(list);return;}
-  const now=Date.now(),due=reviewQueue.filter(card=>card.due<=now).sort((a,b)=>a.due-b.due),upcoming=reviewQueue.filter(card=>card.due>now).sort((a,b)=>a.due-b.due);
+  const now=Date.now(),eligibleQueue=reviewQueue.filter(card=>booksData.some(book=>book.id===card.bookId&&book.summaryStatus==='revised'&&!book.libraryHidden)),due=eligibleQueue.filter(card=>card.due<=now).sort((a,b)=>a.due-b.due),upcoming=eligibleQueue.filter(card=>card.due>now).sort((a,b)=>a.due-b.due);
   stats.innerHTML=`<span><strong>${due.length}</strong> ถึงกำหนด</span><span><strong>${upcoming.length}</strong> รอทบทวน</span><span><strong>${reviewSessionDone}</strong> ทบทวนแล้วในรอบนี้</span>`;
   const card=due[0],book=card&&booksData.find(item=>item.id===card.bookId);
   const data=card?{question:card.question,answer:card.answer,why:card.why||'',options:card.options||[],correct:Number.isInteger(card.correct)?card.correct:null}:null;
   const mode=data?shuffled(availablePracticeModes(data).filter(m=>m!==card.lastFormat))[0]:null;
   list.innerHTML=card?`<section class="review-session"><div class="flashcard-meta"><span>${esc(book?.title||'หนังสือ')} · บทที่ ${card.chapter+1}</span><span>เหลือ ${due.length} การ์ด</span></div><span class="practice-review-label">${practiceLabels[mode]}</span>${practiceMarkup(data,mode,'review-practice')}<div class="review-rating" id="review-rating" hidden><p>คุณนึกคำตอบได้แค่ไหน?</p><div>${['again','hard','good','easy'].map((rating,i)=>`<button data-grade="${rating}"><strong>${['อีกครั้ง','ยาก','จำได้','ง่าย'][i]}</strong><span>${rating==='again'?'10 นาที':reviewInterval(card,rating)+' วัน'}</span></button>`).join('')}</div></div></section>`:
-    `<div class="review-finished"><span aria-hidden="true">${reviewQueue.length?'✓':'↻'}</span><h2>${reviewQueue.length?'ทบทวนครบแล้ว':'เริ่มชุดทบทวนของคุณ'}</h2><p>${reviewQueue.length?(upcoming[0]?`การ์ดถัดไป ${formatDue(upcoming[0].due)}`:'กลับมาอีกครั้งเมื่อมีการ์ดใหม่'):'เปิดอ่านหนังสือ แล้วเพิ่มคำถามท้ายบทเข้าชุดทบทวน'}</p><button class="primary-action" id="review-library">เลือกหนังสือ</button></div>`;
+    `<div class="review-finished"><span aria-hidden="true">${eligibleQueue.length?'✓':'↻'}</span><h2>${eligibleQueue.length?'ทบทวนครบแล้ว':'เริ่มชุดทบทวนของคุณ'}</h2><p>${eligibleQueue.length?(upcoming[0]?`การ์ดถัดไป ${formatDue(upcoming[0].due)}`:'กลับมาอีกครั้งเมื่อมีการ์ดใหม่'):'เปิดอ่านหนังสือ แล้วเพิ่มคำถามท้ายบทเข้าชุดทบทวน'}</p><button class="primary-action" id="review-library">เลือกหนังสือ</button></div>`;
   if(upcoming.length){list.insertAdjacentHTML('beforeend',`<details class="review-upcoming"><summary>จัดการการ์ดที่กำหนดไว้ (${upcoming.length})</summary>${upcoming.map(c=>`<div class="scheduled-card"><p>${esc(plainText(c.question))}</p><small>${esc(booksData.find(b=>b.id===c.bookId)?.title||'')} · ${formatDue(c.due)}</small><div class="scheduled-actions"><label>วันทบทวน<input type="date" data-due-input="${esc(c.id)}" value="${dateInputValue(c.due)}"></label><button class="secondary-action" data-set-due="${esc(c.id)}">บันทึก</button><button class="text-action" data-delete-card="${esc(c.id)}">ลบการ์ด</button></div></div>`).join('')}</details>`);}
   if(card){
     bindPractice(data,mode,'review-practice',revealed=>{document.getElementById('review-rating').hidden=!revealed;});

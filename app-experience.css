@@ -392,6 +392,8 @@ body[data-theme="dark"] .reader-layout>.reader-content{background:var(--panel)}
 .summary-status-chip:hover{border-color:var(--action);color:var(--text-main)}
 .summary-status-chip.is-active{background:var(--action);border-color:var(--action);color:var(--action-contrast,#fff)}
 .summary-status-chip:focus-visible{outline:3px solid var(--action);outline-offset:3px}
+.summary-status-chip.summary-status-notice{cursor:default}
+.summary-status-chip.summary-status-notice:hover{border-color:var(--control-line);color:var(--action-contrast,#fff)}
 .book-summary-status{display:inline-flex;align-items:center;width:max-content;max-width:100%;margin-top:5px;padding:3px 8px;border:1px solid transparent;border-radius:999px;font:600 10px/1.5 var(--sans)}
 .book-summary-status.status-revised{background:#e7f5ec;border-color:#b8dfc5;color:#245f39}
 .book-summary-status.status-pending{background:#eef2f7;border-color:#d5deea;color:#43566f}
