@@ -693,7 +693,7 @@ window.BOOKWISE_CATALOG = [
     "color": "#b6c9c2",
     "text": "#193b35",
     "added": 20,
-    "totalChapters": 9,
+    "totalChapters": 10,
     "chapter": 0,
     "progress": 0,
     "favorite": false,
@@ -701,31 +701,34 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทที่ 1 — การดำรงอยู่และการตื่นรู้ (Being and Enlightenment)"
+        "title": "บทนำ - ข้อความจากผู้เขียน (Introduction)"
       },
       {
-        "title": "บทที่ 2 — ต้นกำเนิดของความกลัว (The Origin of Fear)"
+        "title": "บทที่ 1 - การดำรงอยู่และการตื่นรู้ (Being and Enlightenment)"
       },
       {
-        "title": "บทที่ 3 — เข้าสู่ปัจจุบัน (Entering the Now)"
+        "title": "บทที่ 2 - ต้นกำเนิดของความกลัว (The Origin of Fear)"
       },
       {
-        "title": "บทที่ 4 — สลายความไม่รู้ตัว (Dissolving Unconsciousness)"
+        "title": "บทที่ 3 - เข้าสู่ปัจจุบัน (Entering the Now)"
       },
       {
-        "title": "บทที่ 5 — ความงามปรากฏในความสงบของการดำรงอยู่ (Beauty Arises in the Stillness of Your Presence)"
+        "title": "บทที่ 4 - สลายความไม่รู้ตัว (Dissolving Unconsciousness)"
       },
       {
-        "title": "บทที่ 6 — สลายกายแห่งความเจ็บปวด (Dissolving the Pain-Body)"
+        "title": "บทที่ 5 - ความงามปรากฏในความสงบของการดำรงอยู่ (Beauty Arises in the Stillness of Your Presence)"
       },
       {
-        "title": "บทที่ 7 — จากความสัมพันธ์เสพติดสู่ความสัมพันธ์ที่ตื่นรู้ (From Addictive to Enlightened Relationships)"
+        "title": "บทที่ 6 - สลายกายแห่งความเจ็บปวด (Dissolving the Pain-Body)"
       },
       {
-        "title": "บทที่ 8 — การยอมรับปัจจุบัน (Acceptance of the Now)"
+        "title": "บทที่ 7 - จากความสัมพันธ์เสพติดสู่ความสัมพันธ์ที่ตื่นรู้ (From Addictive to Enlightened Relationships)"
       },
       {
-        "title": "บทที่ 9 — เปลี่ยนความเจ็บป่วยและความทุกข์ (Transforming Illness and Suffering)"
+        "title": "บทที่ 8 - การยอมรับปัจจุบัน (Acceptance of the Now)"
+      },
+      {
+        "title": "บทที่ 9 - เปลี่ยนความเจ็บป่วยและความทุกข์ (Transforming Illness and Suffering)"
       }
     ]
   },
