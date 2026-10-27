@@ -640,7 +640,7 @@ window.BOOKWISE_CATALOG = [
     "color": "#d4c6b2",
     "text": "#382f25",
     "added": 19,
-    "totalChapters": 11,
+    "totalChapters": 12,
     "chapter": 0,
     "progress": 0,
     "favorite": false,
@@ -648,37 +648,40 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทที่ 1 — เริ่มต้นอย่างรวดเร็วในสองสัปดาห์ (Two-Week Quick Start)"
+        "title": "บทนำ - การเป็นมืออาชีพที่สร้างคุณค่า (Introduction)"
       },
       {
-        "title": "บทที่ 2 — ภาวะผู้นำแบบเรียบง่าย (Leadership Made Simple)"
+        "title": "บทที่ 1 - เริ่มต้นอย่างรวดเร็วในสองสัปดาห์ (Two-Week Quick Start)"
       },
       {
-        "title": "บทที่ 3 — ผลิตภาพแบบเรียบง่าย (Productivity Made Simple)"
+        "title": "บทที่ 2 - ภาวะผู้นำแบบเรียบง่าย (Leadership Made Simple)"
       },
       {
-        "title": "บทที่ 4 — กลยุทธ์ธุรกิจแบบเรียบง่าย (Business Strategy Made Simple)"
+        "title": "บทที่ 3 - ผลิตภาพแบบเรียบง่าย (Productivity Made Simple)"
       },
       {
-        "title": "บทที่ 5 — การสื่อสารการตลาดแบบเรียบง่าย (Messaging Made Simple)"
+        "title": "บทที่ 4 - กลยุทธ์ธุรกิจแบบเรียบง่าย (Business Strategy Made Simple)"
       },
       {
-        "title": "บทที่ 6 — การตลาดแบบเรียบง่าย (Marketing Made Simple)"
+        "title": "บทที่ 5 - การสื่อสารการตลาดแบบเรียบง่าย (Messaging Made Simple)"
       },
       {
-        "title": "บทที่ 7 — การสื่อสารแบบเรียบง่าย (Communication Made Simple)"
+        "title": "บทที่ 6 - การตลาดแบบเรียบง่าย (Marketing Made Simple)"
       },
       {
-        "title": "บทที่ 8 — การขายแบบเรียบง่าย (Sales Made Simple)"
+        "title": "บทที่ 7 - การสื่อสารแบบเรียบง่าย (Communication Made Simple)"
       },
       {
-        "title": "บทที่ 9 — การเจรจาแบบเรียบง่าย (Negotiation Made Simple)"
+        "title": "บทที่ 8 - การขายแบบเรียบง่าย (Sales Made Simple)"
       },
       {
-        "title": "บทที่ 10 — การบริหารแบบเรียบง่าย (Management Made Simple)"
+        "title": "บทที่ 9 - การเจรจาแบบเรียบง่าย (Negotiation Made Simple)"
       },
       {
-        "title": "บทที่ 11 — การลงมือทำให้สำเร็จแบบเรียบง่าย (Execution Made Simple)"
+        "title": "บทที่ 10 - การบริหารแบบเรียบง่าย (Management Made Simple)"
+      },
+      {
+        "title": "บทที่ 11 - การลงมือทำให้สำเร็จแบบเรียบง่าย (Execution Made Simple)"
       }
     ]
   },
