@@ -549,7 +549,7 @@ window.BOOKWISE_CATALOG = [
     "color": "#cad5ca",
     "text": "#2f4035",
     "added": 7,
-    "totalChapters": 7,
+    "totalChapters": 10,
     "chapter": 0,
     "progress": 0,
     "favorite": false,
@@ -557,25 +557,34 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทที่ 1 — กฎแห่งศักยภาพบริสุทธิ์ (The Law of Pure Potentiality)"
+        "title": "บทนำ - ความสำเร็จคือชีวิตที่งอกงาม (Introduction)"
       },
       {
-        "title": "บทที่ 2 — กฎแห่งการให้ (The Law of Giving)"
+        "title": "บทที่ 1 - กฎแห่งศักยภาพบริสุทธิ์ (The Law of Pure Potentiality)"
       },
       {
-        "title": "บทที่ 3 — กฎแห่งกรรมหรือเหตุและผล (The Law of Karma or Cause and Effect)"
+        "title": "บทที่ 2 - กฎแห่งการให้ (The Law of Giving)"
       },
       {
-        "title": "บทที่ 4 — กฎแห่งความพยายามน้อยที่สุด (The Law of Least Effort)"
+        "title": "บทที่ 3 - กฎแห่งกรรมหรือเหตุและผล (The Law of Karma or Cause and Effect)"
       },
       {
-        "title": "บทที่ 5 — กฎแห่งความตั้งใจและความปรารถนา (The Law of Intention and Desire)"
+        "title": "บทที่ 4 - กฎแห่งความพยายามน้อยที่สุด (The Law of Least Effort)"
       },
       {
-        "title": "บทที่ 6 — กฎแห่งการไม่ยึดติด (The Law of Detachment)"
+        "title": "บทที่ 5 - กฎแห่งความตั้งใจและความปรารถนา (The Law of Intention and Desire)"
       },
       {
-        "title": "บทที่ 7 — กฎแห่งธรรมะหรือจุดมุ่งหมายในชีวิต (The Law of Dharma or Purpose in Life)"
+        "title": "บทที่ 6 - กฎแห่งการไม่ยึดติด (The Law of Detachment)"
+      },
+      {
+        "title": "บทที่ 7 - กฎแห่งธรรมะหรือจุดมุ่งหมายในชีวิต (The Law of Dharma or Purpose in Life)"
+      },
+      {
+        "title": "บทสรุปและส่งท้าย - 7 กฎในชีวิตประจำวัน (Summary and Conclusion)"
+      },
+      {
+        "title": "จดหมายท้ายเล่ม - เครือข่ายเพื่อความสำเร็จทางจิตวิญญาณ (Global Network for Spiritual Success)"
       }
     ]
   },
