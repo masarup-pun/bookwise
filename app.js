@@ -9,14 +9,20 @@
     const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     const uid=()=>globalThis.crypto?.randomUUID?.()||`mark-${Date.now()}-${Math.random().toString(36).slice(2)}`;
     function loadState(){try{const value=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');return value&&typeof value==='object'&&!Array.isArray(value)?value:{}}catch(_){return {}}}
-    const CONTENT_REVISION=1;
+    const CONTENT_REVISION=2;
     function migrateReadingState(value){
       const state=value&&typeof value==='object'&&!Array.isArray(value)?JSON.parse(JSON.stringify(value)):{};
       if(state.contentRevision===CONTENT_REVISION)return state;
-      const shift=(id,index)=>['atomic-habits','buy-back-your-time'].includes(id)?Number(index||0)+1:Number(index||0);
+      const previousRevision=Number.isInteger(Number(state.contentRevision))?Number(state.contentRevision):0;
+      const shift=(id,index)=>{
+        let next=Number(index||0);
+        if(previousRevision<1&&['atomic-habits','buy-back-your-time'].includes(id))next++;
+        if(previousRevision<2&&id==='four-agreements-companion')next++;
+        return next;
+      };
       for(const [id,book] of Object.entries(state.books||{})){
         if(book.started||book.progress>0||book.lastRead)book.chapter=shift(id,book.chapter);
-        book.readPosition=null;
+        if(previousRevision===0||id==='four-agreements-companion')book.readPosition=null;
       }
       for(const key of ['annotations','bookmarks','reviewQueue'])for(const item of state[key]||[]){
         const previous=item.chapter;item.chapter=shift(item.bookId,previous);

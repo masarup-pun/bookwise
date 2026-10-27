@@ -596,7 +596,7 @@ window.BOOKWISE_CATALOG = [
     "color": "#d7cbb7",
     "text": "#3b3328",
     "added": 10,
-    "totalChapters": 8,
+    "totalChapters": 9,
     "chapter": 0,
     "progress": 0,
     "favorite": false,
@@ -604,28 +604,31 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทที่ 1 — การฝึกตระหนักรู้: การถูกหล่อหลอม (Domestication)"
+        "title": "บทนำ - สามความชำนาญและ 4 ข้อตกลง (Three Masteries, Four Agreements)"
       },
       {
-        "title": "บทที่ 2 — พลังของถ้อยคำ (The Power of the Word)"
+        "title": "บทที่ 1 - การถูกฝึกให้เชื่อและภาพความสมบูรณ์แบบ (Domestication)"
       },
       {
-        "title": "บทที่ 3 — ความฝัน (Dreaming)"
+        "title": "บทที่ 2 - พลังของคำพูด (The Power of the Word)"
       },
       {
-        "title": "บทที่ 4 — ความใส่ใจครั้งที่สอง (The Second Attention)"
+        "title": "บทที่ 3 - การฝันของจิตใจ (Dreaming)"
       },
       {
-        "title": "บทที่ 5 — การกระทำและปฏิกิริยา (Action–Reaction)"
+        "title": "บทที่ 4 - ใช้ความสนใจเป็นครั้งที่สอง (The Second Attention)"
       },
       {
-        "title": "บทที่ 6 — ยึดไว้และปล่อยวาง (Attach–Detach)"
+        "title": "บทที่ 5 - การกระทำและปฏิกิริยา (Action-Reaction)"
       },
       {
-        "title": "บทที่ 7 — สนทนากับ Don Miguel (A Dialogue with Don Miguel)"
+        "title": "บทที่ 6 - แนบสนิทและปล่อยวาง (Attach-Detach)"
       },
       {
-        "title": "บทที่ 8 — เรื่องจริงของการตระหนักรู้และการเปลี่ยนแปลง (True Stories of Awareness and Transformation)"
+        "title": "บทที่ 7 - บทสนทนากับ Don Miguel Ruiz (ดอน มิเกล รุยซ์) (A Dialogue with Don Miguel)"
+      },
+      {
+        "title": "บทที่ 8 - เรื่องจริงของการตระหนักรู้และการเปลี่ยนแปลง (True Stories of Awareness and Transformation)"
       }
     ]
   },
