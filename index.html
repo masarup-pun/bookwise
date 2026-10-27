@@ -28,7 +28,7 @@
 
 
   <link rel="stylesheet" href="app-base.css?v=20261022-2">
-  <link rel="stylesheet" href="app-experience.css?v=20261026-justify1">
+  <link rel="stylesheet" href="app-experience.css?v=20261027-saved-masonry1">
 </head>
 <body data-auth="signed-out">
   <main class="login-screen" id="login-screen" aria-labelledby="login-title">
@@ -53,7 +53,7 @@
         <button class="active" data-view="all"><svg viewBox="0 0 24 24"><path d="M4 5.5c0-1 .8-1.8 1.8-1.8h12.4c1 0 1.8.8 1.8 1.8v13c0 1-.8 1.8-1.8 1.8H5.8c-1 0-1.8-.8-1.8-1.8z"/><path d="M8 3.7v16.6M11 8h5M11 12h5"/></svg>หนังสือ</button>
         <button data-view="favorites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.8 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3.1-5.8 3.1 1.1-6.5-4.7-4.6 6.5-.9L12 2.8Z"/></svg>รายการโปรด</button>
         <button data-view="review"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m17 2 4 4-4 4M3 11V9a3 3 0 0 1 3-3h15M7 22l-4-4 4-4m14-1v2a3 3 0 0 1-3 3H3"/></svg><span>ทบทวน</span></button>
-        <button data-view="saved"><svg viewBox="0 0 24 24"><path d="M6 3.5h12a1 1 0 0 1 1 1V21l-7-4-7 4V4.5a1 1 0 0 1 1-1Z"/></svg>บันทึกไว้</button>
+        <button data-view="saved"><svg viewBox="0 0 24 24"><path d="M6 3.5h12a1 1 0 0 1 1 1V21l-7-4-7 4V4.5a1 1 0 0 1 1-1Z"/></svg>บันทึกการอ่าน</button>
       </nav>
       <div class="header-actions">
         <button class="icon-btn" aria-label="ค้นหาหนังสือ" id="search-btn"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg></button>
@@ -80,7 +80,7 @@
         <div class="books" id="books"></div>
       </section>
       <section class="review-view" id="review-view"><div class="kicker">กลับมาจำสิ่งสำคัญ</div><h1>ทบทวน</h1><p>ฝึกตอบคำถามหลายรูปแบบ แล้วประเมินความเข้าใจเพื่อกำหนดวันทบทวนครั้งถัดไป</p><div class="workspace-stats" id="review-stats"></div><div id="review-list"></div></section>
-      <section class="saved-view" id="saved-view"><div class="kicker">ร่องรอยการอ่าน</div><h1>บันทึกไว้</h1><p>ไฮไลต์ โน้ต และบุ๊กมาร์กที่คุณเก็บไว้ระหว่างอ่าน</p><div class="workspace-stats" id="saved-stats"></div><div id="saved-list"></div></section>
+      <section class="saved-view" id="saved-view"><div class="kicker">ร่องรอยการอ่าน</div><h1>บันทึกการอ่าน</h1><p>เลือกหนังสือเพื่อดูไฮไลต์ โน้ต และบุ๊กมาร์กของเล่มนั้น</p><div class="workspace-stats" id="saved-stats"></div><div id="saved-list"></div></section>
       <section class="reader" id="reader-view">
         <div class="reader-top"><button class="back" id="back-library"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>กลับห้องสมุด</button><div class="reader-actions"><button class="account-button" id="reader-account-button" type="button" hidden aria-label="บัญชีและการซิงก์">บัญชี</button><button class="bookmark-toggle" id="bookmark-toggle" aria-pressed="false" aria-label="บันทึกบทนี้"><svg viewBox="0 0 24 24"><path d="M6 3.5h12a1 1 0 0 1 1 1V21l-7-4-7 4V4.5a1 1 0 0 1 1-1Z"/></svg><span>บุ๊กมาร์ก</span></button><div class="reader-tools"><details class="type-settings" id="type-settings"><summary aria-label="ปรับขนาดตัวอักษร"><span aria-hidden="true">Aa</span><span id="font-value">14 pt</span></summary><div class="type-panel"><label for="font-range">ขนาดตัวอักษร <output id="font-output">14 pt</output></label><div class="font-scale"><button id="font-down" aria-label="ลดขนาดตัวอักษร">A−</button><input id="font-range" type="range" min="10" max="48" step="1" value="14"><button id="font-up" aria-label="เพิ่มขนาดตัวอักษร">A+</button></div><div class="font-limits"><span>10 pt</span><button id="font-reset">ค่าเริ่มต้น 14 pt</button><span>48 pt</span></div></div></details></div></div></div>
         <div class="chapter-controls"><button id="chapter-prev" class="chapter-step" aria-label="บทก่อนหน้า">←</button><div class="chapter-select"><button id="chapter-picker" class="chapter-picker-button" type="button" aria-expanded="false" aria-haspopup="dialog" aria-controls="chapter-dialog"><span><small>สารบัญ</small><strong id="chapter-picker-label" class="chapter-picker-label">เลือกบท</strong></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></button><div id="chapter-dropdown" class="chapter-dropdown" role="region" aria-label="เลือกบท" hidden></div></div><button id="chapter-forward" class="chapter-step" aria-label="บทถัดไป">→</button></div><div class="reader-layout"><article class="reader-content"><div class="reader-chapter" id="chapter-label"></div><h1 id="chapter-title"></h1><p class="chapter-original" id="chapter-original" lang="en"></p><p class="chapter-deck" id="chapter-deck"></p><div class="reader-rule"></div><div class="prose" id="chapter-body"></div><div class="chapter-controls chapter-controls-bottom" aria-label="นำทางบท"><button id="chapter-prev-bottom" class="chapter-step" aria-label="บทก่อนหน้า">←</button><div class="chapter-select"><button id="chapter-picker-bottom" class="chapter-picker-button" type="button" aria-expanded="false"><span><small>สารบัญ</small><strong id="chapter-picker-label-bottom" class="chapter-picker-label">เลือกบท</strong></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></button><div id="chapter-dropdown-bottom" class="chapter-dropdown" role="region" aria-label="เลือกบท" hidden></div></div><button id="chapter-forward-bottom" class="chapter-step" aria-label="บทถัดไป">→</button></div><div class="reader-progress"><span>ความคืบหน้า</span><div class="progress"><i id="reader-progress-fill" style="width:0%"></i></div><span id="reader-progress-text"></span></div><details class="reader-notes" id="reader-notes" hidden><summary>ไฮไลต์และโน้ตในบทนี้</summary><div class="reader-saved" id="reader-saved"></div></details><section class="recall" id="recall"><h2>ทบทวนท้ายบท</h2><div id="quiz-content"></div></section></article></div>
@@ -93,10 +93,10 @@
   <dialog class="search-dialog" id="search-dialog"><div class="search-dialog-top"><label for="search-input">ค้นหาในห้องสมุด</label><button id="close-search" aria-label="ปิดการค้นหา">×</button></div><input id="search-input" type="search" placeholder="ชื่อหนังสือ ผู้เขียน หรือชื่อบท" autocomplete="off"><div id="search-results" class="search-results"></div></dialog>
   <dialog class="account-dialog" id="account-dialog"><div class="account-dialog-head"><h2>ห้องสมุดส่วนตัว</h2><button type="button" id="account-close" aria-label="ปิด">×</button></div><div id="account-signed-in" hidden><p id="account-current-email"></p><div class="account-dialog-actions"><button class="secondary" type="button" id="account-import" hidden>นำเข้าข้อมูลจากเครื่องนี้</button><button class="secondary" type="button" id="account-reload">โหลดข้อมูลล่าสุด</button><button class="secondary" type="button" id="account-signout">ออกจากระบบ</button></div></div><p class="account-status" id="account-status" role="status" aria-live="polite">กำลังเชื่อมต่อ…</p></dialog>
   <dialog class="chapter-dialog" id="chapter-dialog" aria-labelledby="chapter-dialog-title"><div id="chapter-picker-content"><div class="sheet-handle" aria-hidden="true"></div><div class="sheet-heading"><div><h2 id="chapter-dialog-title">เลือกบท</h2><p id="chapter-dialog-book"></p></div><button id="chapter-dialog-close" class="close-control" aria-label="ปิดสารบัญ">×</button></div><label class="sr-only" for="chapter-search">ค้นหาบท</label><input type="search" id="chapter-search" placeholder="ค้นหาชื่อบท หรือเลขบท…" autocomplete="off"><div id="chapter-options" class="chapter-options"></div></div></dialog>
-  <script src="bookwise-catalog.js?v=20261027-four-agreements1"></script>
-  <script src="book-summary-status.js?v=20261027-status2"></script>
+  <script src="bookwise-catalog.js?v=20261028-power-now12"></script>
+  <script src="book-summary-status.js?v=20261028-status3"></script>
   <script src="cover-images.js?v=20261025-reader1"></script>
-  <script src="app.js?v=20261027-summary-status1"></script>
+  <script src="app.js?v=20261027-saved-books1"></script>
   <script src="reader.js?v=20261025-reader-recall1"></script>
   <script src="supabase-config.js?v=20261022-2"></script>
   <script src="cloud-sync.js?v=20261025-reader1"></script>

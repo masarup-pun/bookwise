@@ -279,76 +279,76 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "คำนำ — Preface"
+        "title": "คำนำ - เส้นทางค้นหาความสำเร็จที่สร้างขึ้นด้วยตนเอง (Preface)"
       },
       {
-        "title": "บทนำ — กฎเหตุและผล (The Law of Cause and Effect)"
+        "title": "บทนำ - กฎแห่งเหตุและผล (Introduction: The Law of Cause and Effect)"
       },
       {
-        "title": "บทที่ 1 — ฝันให้ใหญ่ (Dream Big Dreams)"
+        "title": "บทที่ 1 - ฝันให้ใหญ่ (Dream Big Dreams)"
       },
       {
-        "title": "บทที่ 2 — กำหนดทิศทางให้ชัด (Develop a Clear Sense of Direction)"
+        "title": "บทที่ 2 - กำหนดทิศทางให้ชัดเจน (Develop a Clear Sense of Direction)"
       },
       {
-        "title": "บทที่ 3 — มองตัวเองเป็นผู้ประกอบการ (See Yourself as Self-Employed)"
+        "title": "บทที่ 3 - มองตัวเองเป็นผู้รับผิดชอบงานและชีวิต (See Yourself as Self-Employed)"
       },
       {
-        "title": "บทที่ 4 — ทำงานที่รัก (Do What You Love to Do)"
+        "title": "บทที่ 4 - ทำสิ่งที่รัก (Do What You Love to Do)"
       },
       {
-        "title": "บทที่ 5 — มุ่งมั่นสู่ความเป็นเลิศ (Commit to Excellence)"
+        "title": "บทที่ 5 - มุ่งมั่นสู่ความเป็นเลิศ (Commit to Excellence)"
       },
       {
-        "title": "บทที่ 6 — ทำงานให้นานและหนักขึ้น (Work Longer and Harder)"
+        "title": "บทที่ 6 - ทำงานให้นานขึ้นและหนักขึ้น (Work Longer and Harder)"
       },
       {
-        "title": "บทที่ 7 — เรียนรู้ตลอดชีวิต (Dedicate Yourself to Lifelong Learning)"
+        "title": "บทที่ 7 - เรียนรู้ตลอดชีวิต (Dedicate Yourself to Lifelong Learning)"
       },
       {
-        "title": "บทที่ 8 — จ่ายให้ตัวเองก่อน (Pay Yourself First)"
+        "title": "บทที่ 8 - จ่ายให้ตัวเองก่อน (Pay Yourself First)"
       },
       {
-        "title": "บทที่ 9 — เรียนรู้ทุกรายละเอียดในธุรกิจ (Learn Every Detail of Your Business)"
+        "title": "บทที่ 9 - เรียนรู้ทุกรายละเอียดของธุรกิจ (Learn Every Detail of Your Business)"
       },
       {
-        "title": "บทที่ 10 — อุทิศตนเพื่อรับใช้ผู้อื่น (Dedicate Yourself to Serving Others)"
+        "title": "บทที่ 10 - ทุ่มเทให้การบริการผู้อื่น (Dedicate Yourself to Serving Others)"
       },
       {
-        "title": "บทที่ 11 — ซื่อตรงต่อตนเองและผู้อื่น (Be Absolutely Honest with Yourself and Others)"
+        "title": "บทที่ 11 - ซื่อตรงต่อตนเองและผู้อื่นอย่างเด็ดขาด (Be Absolutely Honest with Yourself and Others)"
       },
       {
-        "title": "บทที่ 12 — เลือกสิ่งสำคัญที่สุดและจดจ่อ (Determine Your Highest Priorities and Concentrate on Them Single-Mindedly)"
+        "title": "บทที่ 12 - กำหนดสิ่งสำคัญสูงสุดและจดจ่อกับมัน (Determine Your Highest Priorities and Concentrate on Them Single-Mindedly)"
       },
       {
-        "title": "บทที่ 13 — สร้างชื่อเสียงด้านความรวดเร็วและความน่าเชื่อถือ (Develop a Reputation for Speed and Dependability)"
+        "title": "บทที่ 13 - สร้างชื่อเสียงด้านความรวดเร็วและไว้ใจได้ (Develop a Reputation for Speed and Dependability)"
       },
       {
-        "title": "บทที่ 14 — เตรียมพร้อมปีนจากยอดหนึ่งสู่อีกยอด (Be Prepared to Climb from Peak to Peak)"
+        "title": "บทที่ 14 - เตรียมพร้อมไต่จากยอดหนึ่งสู่อีกยอด (Be Prepared to Climb from Peak to Peak)"
       },
       {
-        "title": "บทที่ 15 — ฝึกวินัยในทุกด้าน (Practice Self-Discipline in All Things)"
+        "title": "บทที่ 15 - ฝึกวินัยในทุกเรื่อง (Practice Self-Discipline in All Things)"
       },
       {
-        "title": "บทที่ 16 — ปลดล็อกความคิดสร้างสรรค์ที่มีอยู่ (Unlock Your Inborn Creativity)"
+        "title": "บทที่ 16 - ปลดล็อกความคิดสร้างสรรค์ที่มีอยู่ในตัว (Unlock Your Inborn Creativity)"
       },
       {
-        "title": "บทที่ 17 — อยู่ใกล้คนที่เหมาะสม (Get Around the Right People)"
+        "title": "บทที่ 17 - อยู่ใกล้คนที่ใช่ (Get around the Right People)"
       },
       {
-        "title": "บทที่ 18 — ดูแลสุขภาพกายให้ดี (Take Excellent Care of Your Physical Health)"
+        "title": "บทที่ 18 - ดูแลสุขภาพร่างกายอย่างดี (Take Excellent Care of Your Physical Health)"
       },
       {
-        "title": "บทที่ 19 — ตัดสินใจและลงมือทำ (Be Decisive and Action Oriented)"
+        "title": "บทที่ 19 - ตัดสินใจเด็ดขาดและลงมือทำ (Be Decisive and Action Oriented)"
       },
       {
-        "title": "บทที่ 20 — อย่าปล่อยให้ความล้มเหลวเป็นทางเลือก (Never Allow Failure to Be an Option)"
+        "title": "บทที่ 20 - อย่าปล่อยให้ความล้มเหลวเป็นทางเลือกเดียว (Never Allow Failure to Be an Option)"
       },
       {
-        "title": "บทที่ 21 — ผ่านบททดสอบความพากเพียร (Pass the “Persistence Test”)"
+        "title": "บทที่ 21 - ผ่านบททดสอบความเพียร (Pass the Persistence Test)"
       },
       {
-        "title": "บทสรุป — ความสำเร็จคาดการณ์ได้ (Success Is Predictable)"
+        "title": "ความสำเร็จคาดการณ์ได้ (Conclusion: Success Is Predictable)"
       }
     ]
   },
@@ -740,7 +740,7 @@ window.BOOKWISE_CATALOG = [
     "color": "#c4b9a8",
     "text": "#34312d",
     "added": 21,
-    "totalChapters": 10,
+    "totalChapters": 12,
     "chapter": 0,
     "progress": 0,
     "favorite": false,
@@ -748,34 +748,40 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทที่ 1 — คุณไม่ใช่ความคิดของคุณ (You Are Not Your Mind)"
+        "title": "คำนำ - ประตูสู่ความจริงที่อยู่ตรงหน้า (Foreword)"
       },
       {
-        "title": "บทที่ 2 — ความรู้ตัว: ทางออกจากความเจ็บปวด (Consciousness: The Way Out of Pain)"
+        "title": "บทนำ - ความจริงที่อยู่ภายในคุณ (Introduction)"
       },
       {
-        "title": "บทที่ 3 — ก้าวลึกสู่ปัจจุบัน (Moving Deeply into the Now)"
+        "title": "บทที่ 1 - คุณไม่ใช่ความคิดของคุณ (You Are Not Your Mind)"
       },
       {
-        "title": "บทที่ 4 — กลยุทธ์ของจิตเพื่อหลีกเลี่ยงปัจจุบัน (Mind Strategies for Avoiding the Now)"
+        "title": "บทที่ 2 - ความรู้ตัว: ทางออกจากความเจ็บปวด (Consciousness: The Way Out of Pain)"
       },
       {
-        "title": "บทที่ 5 — สภาวะแห่งการอยู่พร้อม (The State of Presence)"
+        "title": "บทที่ 3 - ก้าวลึกสู่ปัจจุบัน (Moving Deeply into the Now)"
       },
       {
-        "title": "บทที่ 6 — ร่างกายภายใน (The Inner Body)"
+        "title": "บทที่ 4 - กลยุทธ์ของจิตใจเพื่อหลีกเลี่ยงปัจจุบัน (Mind Strategies for Avoiding the Now)"
       },
       {
-        "title": "บทที่ 7 — ประตูสู่สิ่งที่ยังไม่ปรากฏเป็นรูป (Portals into the Unmanifested)"
+        "title": "บทที่ 5 - สภาวะความรู้ตัว (The State of Presence)"
       },
       {
-        "title": "บทที่ 8 — ความสัมพันธ์ที่ตื่นรู้ (Enlightened Relationships)"
+        "title": "บทที่ 6 - ร่างกายภายใน (The Inner Body)"
       },
       {
-        "title": "บทที่ 9 — เหนือสุขและทุกข์ยังมีความสงบ (Beyond Happiness and Unhappiness There Is Peace)"
+        "title": "บทที่ 7 - ช่องทางสู่สิ่งที่ไม่ปรากฏเป็นรูป (Portals into the Unmanifested)"
       },
       {
-        "title": "บทที่ 10 — ความหมายของการยอมจำนน (The Meaning of Surrender)"
+        "title": "บทที่ 8 - ความสัมพันธ์ที่ตื่นรู้ (Enlightened Relationships)"
+      },
+      {
+        "title": "บทที่ 9 - เหนือความสุขและความทุกข์คือความสงบ (Beyond Happiness and Unhappiness There Is Peace)"
+      },
+      {
+        "title": "บทที่ 10 - ความหมายของการยอมจำนน (The Meaning of Surrender)"
       }
     ]
   },
@@ -1005,7 +1011,7 @@ window.BOOKWISE_CATALOG = [
         "title": "บทที่ 17 - คู่รับผิดชอบช่วยเปลี่ยนทุกอย่างได้ (How an Accountability Partner Can Change Everything)"
       },
       {
-        "title": "บทที่ 18 - ความจริงเรื่องพรสวรรค์-ยีนมีผลเมื่อใด (The Truth About Talent (When Genes Matter and When They Don’t))"
+        "title": "บทที่ 18 - ความจริงเรื่องพรสวรรค์: ยีนมีผลเมื่อใด (The Truth About Talent (When Genes Matter and When They Don’t))"
       },
       {
         "title": "บทที่ 19 - กฎโกลดิล็อกส์: รักษาแรงจูงใจในชีวิตและงาน (The Goldilocks Rule: How to Stay Motivated in Life and Work)"
@@ -3655,58 +3661,58 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "คำนำ — คู่มือปฏิบัติเรื่องความมั่งคั่ง (Preface)"
+        "title": "คำนำ - คู่มือปฏิบัติว่าด้วยความมั่งคั่ง (Preface)"
       },
       {
-        "title": "บทที่ 1 — สิทธิที่จะมั่งคั่ง (The Right to Be Rich)"
+        "title": "บทที่ 1 - สิทธิที่จะมั่งคั่ง (The Right to Be Rich)"
       },
       {
-        "title": "บทที่ 2 — มีหลักการของการสร้างความมั่งคั่ง (There Is a Science of Getting Rich)"
+        "title": "บทที่ 2 - มีกฎแห่งการสร้างความมั่งคั่ง (There Is a Science of Getting Rich)"
       },
       {
-        "title": "บทที่ 3 — โอกาสถูกผูกขาดแล้วหรือไม่ (Is Opportunity Monopolized?)"
+        "title": "บทที่ 3 - โอกาสถูกผูกขาดแล้วหรือ? (Is Opportunity Monopolized?)"
       },
       {
-        "title": "บทที่ 4 — หลักการแรกของศาสตร์แห่งความมั่งคั่ง (The First Principle in the Science of Getting Rich)"
+        "title": "บทที่ 4 - หลักการแรกของศาสตร์แห่งความมั่งคั่ง (The First Principle in the Science of Getting Rich)"
       },
       {
-        "title": "บทที่ 5 — การเพิ่มพูนชีวิต (Increasing Life)"
+        "title": "บทที่ 5 - การเพิ่มพูนชีวิต (Increasing Life)"
       },
       {
-        "title": "บทที่ 6 — ความมั่งคั่งมาถึงเราได้อย่างไร (How Riches Come to You)"
+        "title": "บทที่ 6 - ความมั่งคั่งมาถึงคุณได้อย่างไร (How Riches Come to You)"
       },
       {
-        "title": "บทที่ 7 — ความกตัญญู (Gratitude)"
+        "title": "บทที่ 7 - ความกตัญญู (Gratitude)"
       },
       {
-        "title": "บทที่ 8 — คิดในวิธีที่แน่นอน (Thinking in the Certain Way)"
+        "title": "บทที่ 8 - คิดในแนวทางที่แน่นอน (Thinking in the Certain Way)"
       },
       {
-        "title": "บทที่ 9 — การใช้เจตจำนง (How to Use the Will)"
+        "title": "บทที่ 9 - วิธีใช้เจตจำนง (How to Use the Will)"
       },
       {
-        "title": "บทที่ 10 — การใช้เจตจำนงเพิ่มเติม (Further Use of the Will)"
+        "title": "บทที่ 10 - การใช้เจตจำนงเพิ่มเติม (Further Use of the Will)"
       },
       {
-        "title": "บทที่ 11 — ลงมือในวิธีที่แน่นอน (Acting in the Certain Way)"
+        "title": "บทที่ 11 - ลงมือในวิถีที่แน่นอน (Acting in the Certain Way)"
       },
       {
-        "title": "บทที่ 12 — การกระทำที่มีประสิทธิภาพ (Efficient Action)"
+        "title": "บทที่ 12 - การลงมืออย่างมีประสิทธิภาพ (Efficient Action)"
       },
       {
-        "title": "บทที่ 13 — เข้าสู่งานที่เหมาะสม (Getting Into the Right Business)"
+        "title": "บทที่ 13 - เลือกธุรกิจที่เหมาะกับตนเอง (Getting Into the Right Business)"
       },
       {
-        "title": "บทที่ 14 — สร้างความประทับใจของการเพิ่มพูน (The Impression of Increase)"
+        "title": "บทที่ 14 - สื่อความเพิ่มพูนให้ผู้คนที่ติดต่อด้วย (The Impression of Increase)"
       },
       {
-        "title": "บทที่ 15 — ผู้กำลังก้าวหน้า (The Advancing Man)"
+        "title": "บทที่ 15 - ผู้ที่กำลังก้าวหน้า (The Advancing Man)"
       },
       {
-        "title": "บทที่ 16 — ข้อควรระวังและข้อสังเกตท้ายเรื่อง (Some Cautions and Concluding Observations)"
+        "title": "บทที่ 16 - ข้อควรระวังและข้อสังเกตส่งท้าย (Some Cautions and Concluding Observations)"
       },
       {
-        "title": "บทที่ 17 — สรุปหลักการแห่งความมั่งคั่ง (Summary of the Science of Getting Rich)"
+        "title": "บทที่ 17 - สรุปศาสตร์แห่งความมั่งคั่ง (Summary of the Science of Getting Rich)"
       }
     ]
   },
@@ -4002,6 +4008,127 @@ window.BOOKWISE_CATALOG = [
       },
       {
         "title": "บทที่สาม — ความสงบของจิตใจ (On Tranquillity of Mind)"
+      }
+    ]
+  },
+  {
+    "id": "dopamine-nation",
+    "title": "Dopamine Nation: Finding Balance in the Age of Indulgence",
+    "author": "Anna Lembke",
+    "category": "สุขภาพและจิตวิทยา",
+    "color": "#3f536b",
+    "text": "#f2ead8",
+    "added": 60,
+    "totalChapters": 12,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "บทนำ - ปัญหา"
+      },
+      {
+        "title": "บทที่ 1 - เครื่องช่วยสำเร็จความใคร่ของเรา"
+      },
+      {
+        "title": "บทที่ 2 - วิ่งหนีความเจ็บปวด"
+      },
+      {
+        "title": "บทที่ 3 - ตาชั่งความสุขและความเจ็บปวด"
+      },
+      {
+        "title": "บทที่ 4 - การงดสิ่งกระตุ้นโดพามีน"
+      },
+      {
+        "title": "บทที่ 5 - พื้นที่ เวลา และความหมาย"
+      },
+      {
+        "title": "บทที่ 6 - ตาชั่งที่เสียสมดุล?"
+      },
+      {
+        "title": "บทที่ 7 - กดลงบนด้านความเจ็บปวด"
+      },
+      {
+        "title": "บทที่ 8 - ความซื่อตรงอย่างถึงที่สุด"
+      },
+      {
+        "title": "บทที่ 9 - ความละอายที่เกื้อหนุนสังคม"
+      },
+      {
+        "title": "บทสรุป - บทเรียนจากตาชั่ง"
+      },
+      {
+        "title": "หมายเหตุจากผู้เขียน"
+      }
+    ]
+  },
+  {
+    "id": "buddhas-brain",
+    "title": "Buddha's Brain: The Practical Neuroscience of Happiness, Love, and Wisdom",
+    "author": "Rick Hanson with Richard Mendius",
+    "category": "สุขภาพและจิตวิทยา",
+    "color": "#536c68",
+    "text": "#f2ead8",
+    "added": 61,
+    "totalChapters": 17,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "คำนำ - Foreword โดย Daniel J. Siegel"
+      },
+      {
+        "title": "คำนำ - Preface โดย Jack Kornfield"
+      },
+      {
+        "title": "บทนำ - ความสุข ความรัก และปัญญาในสมอง (Introduction)"
+      },
+      {
+        "title": "บทที่ 1 - สมองที่เปลี่ยนแปลงตัวเอง (The Self-Transforming Brain)"
+      },
+      {
+        "title": "บทที่ 2 - วิวัฒนาการของความทุกข์ (The Evolution of Suffering)"
+      },
+      {
+        "title": "บทที่ 3 - ลูกศรดอกแรกและดอกที่สอง (The First and Second Dart)"
+      },
+      {
+        "title": "บทที่ 4 - ซึมซับสิ่งดี ๆ (Taking in the Good)"
+      },
+      {
+        "title": "บทที่ 5 - ดับไฟความเครียด (Cooling the Fires)"
+      },
+      {
+        "title": "บทที่ 6 - เจตจำนงที่เข้มแข็ง (Strong Intentions)"
+      },
+      {
+        "title": "บทที่ 7 - อุเบกขา (Equanimity)"
+      },
+      {
+        "title": "บทที่ 8 - หมาป่าสองตัวในหัวใจ (Two Wolves in the Heart)"
+      },
+      {
+        "title": "บทที่ 9 - ความเมตตาและการยืนหยัด (Compassion and Assertion)"
+      },
+      {
+        "title": "บทที่ 10 - ความเมตตาไร้ขอบเขต (Boundless Kindness)"
+      },
+      {
+        "title": "บทที่ 11 - รากฐานของสติ (Foundations of Mindfulness)"
+      },
+      {
+        "title": "บทที่ 12 - สมาธิอันเป็นสุข (Blissful Concentration)"
+      },
+      {
+        "title": "บทที่ 13 - ผ่อนคลายความเป็นตัวตน (Relaxing the Self)"
+      },
+      {
+        "title": "ภาคผนวก - โภชนาการกับสารเคมีในสมอง (Nutritional Neurochemistry)"
       }
     ]
   }

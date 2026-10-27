@@ -178,6 +178,40 @@ body:not([data-auth="signed-in"]){padding-bottom:0}
 .login-card #account-send:hover:not(:disabled){background:#194dbb;transform:translateY(-1px)}
 .login-status{font-size:13px;line-height:1.7;color:#506580;min-height:44px;margin:12px 0 0;text-align:center}
 .login-footnote{display:block;padding-top:22px;border-top:1px solid #e7ecf2;margin-top:12px;font-size:12px;color:#62758c;letter-spacing:.3px}
+
+/* Saved reading: browse by book first, then scan notes in a responsive masonry layout. */
+.saved-section-hint{margin:8px 0 16px;color:var(--text-secondary);font-size:14px}
+.saved-book-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.saved-book-tile{display:flex;align-items:center;gap:14px;min-width:0;min-height:116px;padding:18px;text-align:left;border:1px solid var(--control-line);border-radius:16px;background:var(--panel);color:var(--text-main);box-shadow:0 8px 24px #24384e0c;cursor:pointer;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.saved-book-tile:hover{transform:translateY(-2px);border-color:#91afd0;box-shadow:0 12px 28px #24384e16}
+.saved-book-tile:focus-visible,.saved-back:focus-visible{outline:3px solid #4a82d8;outline-offset:3px}
+.saved-book-icon{display:grid;place-items:center;flex:0 0 54px;height:72px;border-radius:7px;background:linear-gradient(145deg,#edf4fc,#dce8f6);color:#5278a4;box-shadow:inset 3px 0 #b4cbe3}
+.saved-book-icon svg{width:27px;height:27px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.saved-book-copy{display:flex;flex-direction:column;gap:5px;min-width:0;flex:1}
+.saved-book-copy strong{font-size:15px;line-height:1.45;overflow-wrap:anywhere}
+.saved-book-copy small,.saved-book-count{font-size:12px;line-height:1.5;color:var(--text-secondary);overflow-wrap:anywhere}
+.saved-book-count{color:#3566a6;font-weight:650}
+.saved-book-arrow{flex:0 0 auto;color:#6284aa;font-size:19px}
+.saved-detail-head{display:flex;align-items:center;gap:18px;margin:20px 0 6px}
+.saved-detail-head>div{min-width:0}
+.saved-detail-head h2{margin:0;color:var(--text-main);font-size:24px;line-height:1.4}
+.saved-detail-head p{margin:4px 0 0;color:var(--text-secondary);font-size:13px;line-height:1.6}
+.saved-back{flex:0 0 auto;padding:9px 12px;border:1px solid var(--control-line);border-radius:10px;background:var(--panel);color:var(--text-main);font-family:inherit;font-size:13px;font-weight:600;line-height:1.4;cursor:pointer}
+.saved-masonry{columns:3;column-gap:18px;margin-top:18px}
+.saved-masonry .saved-card{display:inline-block;vertical-align:top;width:100%;break-inside:avoid;margin:0 0 18px;padding:19px 20px}
+.saved-card>small{line-height:1.6}
+.saved-card .saved-quote{overflow-wrap:anywhere}
+.saved-note-label{display:block;margin:12px 0 4px;color:var(--text-secondary);font-size:11px;font-weight:700}
+.saved-expand{margin:10px 0}
+.saved-expand summary{cursor:pointer;color:var(--text-main);font-size:15px;line-height:1.65;overflow-wrap:anywhere}
+.saved-expand summary b{display:block;margin-top:7px;color:#3566a6;font-size:13px}
+.saved-expand>p{margin:10px 0}
+.saved-bookmark-card .saved-quote{font-size:16px}
+body[data-theme="dark"] .saved-book-tile,body[data-theme="dark"] .saved-back{background:#1d3044;color:#e7f0fa;border-color:#ffffff22}
+body[data-theme="dark"] .saved-book-icon{background:linear-gradient(145deg,#2c435c,#20364d);color:#b6d2ef;box-shadow:inset 3px 0 #6485aa}
+body[data-theme="dark"] .saved-book-count,body[data-theme="dark"] .saved-expand summary b{color:#a7ccff}
+@media(max-width:1000px){.saved-book-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.saved-masonry{columns:2}}
+@media(max-width:620px){.saved-book-grid{grid-template-columns:1fr;gap:10px}.saved-masonry{columns:1}.saved-detail-head{align-items:flex-start;flex-direction:column;gap:10px}.saved-detail-head h2{font-size:21px}.saved-masonry .saved-card{padding:17px}}
 body[data-theme="dark"] .login-screen{background:radial-gradient(ellipse at top,#203e60,transparent 65%),#101f30}
 body[data-theme="dark"] .login-card{background:#192d43;border-color:#3c526c;color:#eef4ff}
 body[data-theme="dark"] .login-card>p,body[data-theme="dark"] .login-status,body[data-theme="dark"] .login-footnote{color:#b8c9df}
