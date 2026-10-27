@@ -74,6 +74,7 @@
         <h1 class="library-heading" id="library-heading">ห้องสมุดส่วนตัวของคุณ</h1>
         <section class="continue-wrap" id="continue-wrap"><div class="continue-head"><h2>อ่านต่อ</h2><div class="continue-controls"><span id="continue-count"></span><div class="continue-arrows" role="group" aria-label="เลื่อนหนังสือที่อ่านต่อ"><button type="button" id="continue-prev" aria-label="เลื่อนหนังสือไปทางซ้าย" aria-controls="continue-list" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button><button type="button" id="continue-next" aria-label="เลื่อนหนังสือไปทางขวา" aria-controls="continue-list" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button></div></div></div><div class="continue-list" id="continue-list" tabindex="0" aria-label="หนังสือที่กำลังอ่าน"></div></section>
         <div class="section-head"><h2 id="shelf-title">หนังสือทั้งหมด <span style="font:400 14px var(--sans);color:#99998f;margin-left:5px" id="book-count"></span></h2><div class="shelf-actions"><div id="category-filters" class="category-filters" role="group" aria-label="กรองตามหมวดหมู่หนังสือ"></div></div></div>
+        <div class="summary-status-row"><span class="summary-status-label">สถานะสรุป</span><div id="summary-status-filters" class="summary-status-filters" role="group" aria-label="กรองตามสถานะการปรับปรุงสรุปหนังสือ"></div></div>
         <div id="filters" hidden></div>
         <div id="author-filter" class="author-filter" hidden><span id="author-filter-label"></span><button id="clear-author-filter" type="button" aria-label="ล้างตัวกรองผู้เขียน">ดูหนังสือทั้งหมด <span aria-hidden="true">×</span></button></div>
         <div class="books" id="books"></div>
@@ -93,8 +94,9 @@
   <dialog class="account-dialog" id="account-dialog"><div class="account-dialog-head"><h2>ห้องสมุดส่วนตัว</h2><button type="button" id="account-close" aria-label="ปิด">×</button></div><div id="account-signed-in" hidden><p id="account-current-email"></p><div class="account-dialog-actions"><button class="secondary" type="button" id="account-import" hidden>นำเข้าข้อมูลจากเครื่องนี้</button><button class="secondary" type="button" id="account-reload">โหลดข้อมูลล่าสุด</button><button class="secondary" type="button" id="account-signout">ออกจากระบบ</button></div></div><p class="account-status" id="account-status" role="status" aria-live="polite">กำลังเชื่อมต่อ…</p></dialog>
   <dialog class="chapter-dialog" id="chapter-dialog" aria-labelledby="chapter-dialog-title"><div id="chapter-picker-content"><div class="sheet-handle" aria-hidden="true"></div><div class="sheet-heading"><div><h2 id="chapter-dialog-title">เลือกบท</h2><p id="chapter-dialog-book"></p></div><button id="chapter-dialog-close" class="close-control" aria-label="ปิดสารบัญ">×</button></div><label class="sr-only" for="chapter-search">ค้นหาบท</label><input type="search" id="chapter-search" placeholder="ค้นหาชื่อบท หรือเลขบท…" autocomplete="off"><div id="chapter-options" class="chapter-options"></div></div></dialog>
   <script src="bookwise-catalog.js?v=20261027-four-agreements1"></script>
+  <script src="book-summary-status.js?v=20261027-status1"></script>
   <script src="cover-images.js?v=20261025-reader1"></script>
-  <script src="app.js?v=20261027-content-revision2"></script>
+  <script src="app.js?v=20261027-summary-status1"></script>
   <script src="reader.js?v=20261025-reader-recall1"></script>
   <script src="supabase-config.js?v=20261022-2"></script>
   <script src="cloud-sync.js?v=20261025-reader1"></script>

@@ -349,6 +349,26 @@ body[data-theme="dark"] .reader-layout>.reader-content{background:var(--panel)}
 @media(prefers-reduced-motion:reduce){.cover>.cover-action{transition:none}}
 @media(hover:none),(pointer:coarse){.cover>.cover-action{opacity:1;transform:none;pointer-events:auto}}
 
+/* Book summary progress is visible on each card and filterable from the library. */
+.summary-status-row{display:flex;align-items:center;gap:12px;margin:-10px 0 22px;min-width:0}
+.summary-status-label{flex:none;color:var(--text-secondary);font-size:12px;font-weight:650}
+.summary-status-filters{display:flex;align-items:center;gap:7px;min-width:0;flex-wrap:wrap}
+.summary-status-chip{display:inline-flex;align-items:center;gap:7px;min-height:36px;padding:6px 11px;border:1px solid var(--control-line);border-radius:999px;background:var(--panel-alt);color:var(--text-secondary);font:500 12px/1.4 var(--sans);cursor:pointer;transition:background .18s,color .18s,border-color .18s}
+.summary-status-chip span{font-size:11px;font-variant-numeric:tabular-nums;opacity:.85}
+.summary-status-chip:hover{border-color:var(--action);color:var(--text-main)}
+.summary-status-chip.is-active{background:var(--action);border-color:var(--action);color:var(--action-contrast,#fff)}
+.summary-status-chip:focus-visible{outline:3px solid var(--action);outline-offset:3px}
+.book-summary-status{display:inline-flex;align-items:center;width:max-content;max-width:100%;margin-top:5px;padding:3px 8px;border:1px solid transparent;border-radius:999px;font:600 10px/1.5 var(--sans)}
+.book-summary-status.status-revised{background:#e7f5ec;border-color:#b8dfc5;color:#245f39}
+.book-summary-status.status-pending{background:#eef2f7;border-color:#d5deea;color:#43566f}
+.book-summary-status.status-blocked{background:#fff3df;border-color:#f1d49d;color:#754800}
+body[data-theme="dark"] .book-summary-status.status-revised{background:#193c2a;border-color:#316447;color:#a9e7bc}
+body[data-theme="dark"] .book-summary-status.status-pending{background:#263a50;border-color:#405875;color:#c5d5e8}
+body[data-theme="dark"] .book-summary-status.status-blocked{background:#493718;border-color:#745c2b;color:#ffda8c}
+@media(max-width:1000px){.summary-status-row{align-items:flex-start;flex-direction:column;gap:7px;margin-top:-2px}.summary-status-filters{width:100%;flex-wrap:nowrap;overflow-x:auto;padding:3px 2px 7px;scrollbar-width:thin}.summary-status-chip{min-height:40px;flex:none}}
+@media(max-width:760px){.summary-status-row{margin-bottom:18px}.summary-status-label{font-size:12px}.summary-status-chip{font-size:12px;padding:7px 11px}.book-summary-status{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.summary-status-chip{transition:none}}
+
 /* Chapter-end review: one prominent question followed by its answer control. */
 .chapter-recall-card .flashcard-face{min-height:210px;padding:clamp(24px,4vw,38px)}
 .chapter-recall-card .flashcard-front{align-items:flex-start;text-align:left}
