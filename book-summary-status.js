@@ -15,7 +15,9 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'dopamine-nation': 'revised',
   'science-of-getting-rich': 'revised',
   'poor-charlie-almanack': 'blocked',
-  'buy-back-your-time': 'blocked',
+  'apple-the-first-50-years': 'revised',
+  'building-a-storybrand-2': 'revised',
+  'buy-back-your-time': 'revised',
   'practicing-the-power-of-now': 'revised',
   'the-power-of-now': 'revised'
 });

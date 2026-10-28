@@ -484,7 +484,7 @@ window.BOOKWISE_CATALOG = [
     "color": "#d6c9b7",
     "text": "#3d3026",
     "added": 3,
-    "totalChapters": 16,
+    "totalChapters": 17,
     "chapter": 0,
     "progress": 0,
     "favorite": false,
@@ -492,52 +492,55 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทที่ 1 — ธุรกิจช่วยชีวิตผม ก่อนเกือบทำลายมัน (Introduction)"
+        "title": "บทนำ - ธุรกิจช่วยชีวิตผม (แล้วเกือบทำลายมัน)"
       },
       {
-        "title": "บทที่ 2 — วิธีซื้อชีวิตของผมกลับคืน (Chapter 1)"
+        "title": "บทที่ 1 - วิธีซื้อชีวิตของผมกลับคืน (How I Buy Back My Life)"
       },
       {
-        "title": "บทที่ 3 — DRIP Matrix: เลือกงานตามพลังงานและมูลค่า (Chapter 2)"
+        "title": "บทที่ 2 - เมทริกซ์ DRIP (The DRIP Matrix)"
       },
       {
-        "title": "บทที่ 4 — นักฆ่าเวลา 5 แบบ (Chapter 3)"
+        "title": "บทที่ 3 - มือสังหารเวลา 5 แบบ (The 5 Time Assassins)"
       },
       {
-        "title": "บทที่ 5 — การแลกเปลี่ยน 3 ระดับที่สำคัญ (Chapter 4)"
+        "title": "บทที่ 4 - 3 การแลกเปลี่ยนที่สำคัญ (The Only 3 Trades That Matter)"
       },
       {
-        "title": "บทที่ 6 — บันไดทดแทนงานของผู้ก่อตั้ง (Chapter 5)"
+        "title": "บทที่ 5 - บันไดการทดแทน (The Replacement Ladder)"
       },
       {
-        "title": "บทที่ 7 — สร้างตัวแทนของคุณและซื้อเวลากลับ (Chapter 6)"
+        "title": "บทที่ 6 - ทำสำเนาตัวคุณเอง (Clone Yourself)"
       },
       {
-        "title": "บทที่ 8 — สร้างคู่มือกระบวนการทำงาน (Chapter 7)"
+        "title": "บทที่ 7 - สร้าง Playbook (Building Playbooks)"
       },
       {
-        "title": "บทที่ 9 — ออกแบบสัปดาห์ในอุดมคติ (Chapter 8)"
+        "title": "บทที่ 8 - สัปดาห์ที่สมบูรณ์แบบของคุณ (Your Perfect Week)"
       },
       {
-        "title": "บทที่ 10 — แฮ็กจัดการเวลาสี่อย่างที่จำเป็น (Chapter 9)"
+        "title": "บทที่ 9 - เคล็ดลับจัดการเวลา 4 อย่าง (The Only 4 Time Hacks You Need)"
       },
       {
-        "title": "บทที่ 11 — วิธีจ้างแบบทดลองทำงานก่อน (Chapter 10)"
+        "title": "บทที่ 10 - วิธีจ้างงานแบบทดสอบก่อน (The “Test-First” Hiring Method)"
       },
       {
-        "title": "บทที่ 12 — ภาวะผู้นำที่เปลี่ยนแปลงคน (Chapter 11)"
+        "title": "บทที่ 11 - ภาวะผู้นำที่เปลี่ยนทีม (Transformational Leadership)"
       },
       {
-        "title": "บทที่ 13 — คำ F ที่ช่วยรักษาธุรกิจ (Chapter 12)"
+        "title": "บทที่ 12 - คำ F ที่ช่วยธุรกิจของคุณ (This “F-Word” Will Save Your Business)"
       },
       {
-        "title": "บทที่ 14 — ฝันให้ใหญ่และไปให้ไกลกว่าเดิม (Chapter 13)"
+        "title": "บทที่ 13 - ฝันให้ใหญ่ แล้วไปให้ไกลกว่าเดิม (Dream BIG. Achieve Bigger)"
       },
       {
-        "title": "บทที่ 15 — วางแผนทั้งปีล่วงหน้า (Chapter 14)"
+        "title": "บทที่ 14 - วางแผนทั้งปีล่วงหน้า (The Preloaded Year)"
       },
       {
-        "title": "บทที่ 16 — ชีวิตที่ซื้อเวลากลับคืน (Conclusion & 7 Pillars of Life)"
+        "title": "บทส่งท้าย - ชีวิตที่ซื้อเวลาคืนได้ (The Buyback Life)"
+      },
+      {
+        "title": "ภาคผนวก - 7 เสาหลักของชีวิต (7 Pillars of Life)"
       }
     ]
   },
@@ -4129,6 +4132,247 @@ window.BOOKWISE_CATALOG = [
       },
       {
         "title": "ภาคผนวก - โภชนาการกับสารเคมีในสมอง (Nutritional Neurochemistry)"
+      }
+    ]
+  },
+  {
+    "title": "Apple: The First 50 Years",
+    "author": "David Pogue",
+    "category": "ธุรกิจและเทคโนโลยี",
+    "color": "#d8dce2",
+    "text": "#273548",
+    "added": 88,
+    "id": "apple-the-first-50-years",
+    "totalChapters": 51,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "บทนำ (Introduction)"
+      },
+      {
+        "title": "บทที่ 1 - สองสตีฟ (Two Steves)"
+      },
+      {
+        "title": "บทที่ 2 - Apple I (Apple I)"
+      },
+      {
+        "title": "บทที่ 3 - บริษัท Apple Computer (Apple Computer Company)"
+      },
+      {
+        "title": "บทที่ 4 - Apple II"
+      },
+      {
+        "title": "บทที่ 5 - เริ่มทำธุรกิจ (In Business)"
+      },
+      {
+        "title": "บทที่ 6 - Apple III"
+      },
+      {
+        "title": "บทที่ 7 - Lisa"
+      },
+      {
+        "title": "บทที่ 8 - วิกฤตการณ์ (Crashes)"
+      },
+      {
+        "title": "บทที่ 9 - Macintosh"
+      },
+      {
+        "title": "บทที่ 10 - Sculley"
+      },
+      {
+        "title": "บทที่ 11 - Software"
+      },
+      {
+        "title": "บทที่ 12 - ทำตลาด Mac (Marketing the Mac)"
+      },
+      {
+        "title": "บทที่ 13 - ยอดเยี่ยมเกินธรรมดา (Insanely Great)"
+      },
+      {
+        "title": "บทที่ 14 - สำนักงาน Macintosh (Macintosh Office)"
+      },
+      {
+        "title": "บทที่ 15 - รอยร้าว (Rift)"
+      },
+      {
+        "title": "บทที่ 16 - แนวคิดใหม่ (New Ideas)"
+      },
+      {
+        "title": "บทที่ 17 - ท้าทายกรอบเดิม (Heresies)"
+      },
+      {
+        "title": "บทที่ 18 - สูง/ขวา ต่ำ/ซ้าย (High/Right, Low/Left)"
+      },
+      {
+        "title": "บทที่ 19 - System 7"
+      },
+      {
+        "title": "บทที่ 20 - Newton"
+      },
+      {
+        "title": "บทที่ 21 - Moonshots"
+      },
+      {
+        "title": "บทที่ 22 - PowerBooks"
+      },
+      {
+        "title": "บทที่ 23 - Spindler"
+      },
+      {
+        "title": "บทที่ 24 - Clones"
+      },
+      {
+        "title": "บทที่ 25 - อะมีลิโอ"
+      },
+      {
+        "title": "บทที่ 26 - NeXT"
+      },
+      {
+        "title": "บทที่ 27 - ช่วงเปลี่ยนผ่าน"
+      },
+      {
+        "title": "บทที่ 28 - การพลิกฟื้น"
+      },
+      {
+        "title": "บทที่ 29 - Jony Ive"
+      },
+      {
+        "title": "บทที่ 30 - iMac"
+      },
+      {
+        "title": "บทที่ 31 - Keynotes"
+      },
+      {
+        "title": "บทที่ 32 - Millennium"
+      },
+      {
+        "title": "บทที่ 33 - Retail"
+      },
+      {
+        "title": "บทที่ 34 - iPod"
+      },
+      {
+        "title": "บทที่ 35 - กลับสู่ Mac (Back to the Macs)"
+      },
+      {
+        "title": "บทที่ 36 - iPhone"
+      },
+      {
+        "title": "บทที่ 37 - แอป (Apps)"
+      },
+      {
+        "title": "บทที่ 38 - ภาคต่อ (Sequels)"
+      },
+      {
+        "title": "บทที่ 39 - iPad"
+      },
+      {
+        "title": "บทที่ 40 - China"
+      },
+      {
+        "title": "บทที่ 41 - Apple Park"
+      },
+      {
+        "title": "บทที่ 42 - Loss (การสูญเสีย)"
+      },
+      {
+        "title": "บทที่ 43 - Services (บริการ)"
+      },
+      {
+        "title": "บทที่ 44 - Watch (นาฬิกา)"
+      },
+      {
+        "title": "บทที่ 45 - Vision Pro"
+      },
+      {
+        "title": "บทที่ 46 - Silicon"
+      },
+      {
+        "title": "บทที่ 47 - Apple Intelligence"
+      },
+      {
+        "title": "บทที่ 48 - Headwinds"
+      },
+      {
+        "title": "บทที่ 49 - Apple: The Next 50 Years"
+      },
+      {
+        "title": "บทที่ 50 - Throughlines"
+      }
+    ]
+  },
+  {
+    "title": "Building a StoryBrand 2.0",
+    "author": "Donald Miller",
+    "category": "ธุรกิจและการตลาด",
+    "color": "#c6d7df",
+    "text": "#263b48",
+    "added": 89,
+    "id": "building-a-storybrand-2",
+    "totalChapters": 18,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "หมายเหตุจากผู้เขียนเกี่ยวกับฉบับปรับปรุง"
+      },
+      {
+        "title": "บทนำ - ลูกค้าคือวีรบุรุษของเรื่อง"
+      },
+      {
+        "title": "บทที่ 1 - กุญแจสู่การทำให้คนมองเห็น ได้ยิน และเข้าใจ"
+      },
+      {
+        "title": "บทที่ 2 - อาวุธลับที่จะช่วยให้ธุรกิจเติบโต"
+      },
+      {
+        "title": "บทที่ 3 - กรอบ SB7 ที่เรียบง่าย"
+      },
+      {
+        "title": "บทที่ 4 - ตัวละคร"
+      },
+      {
+        "title": "บทที่ 5 - มีปัญหา"
+      },
+      {
+        "title": "บทที่ 6 - และพบผู้นำทาง"
+      },
+      {
+        "title": "บทที่ 7 - ผู้ที่มอบแผนให้พวกเขา"
+      },
+      {
+        "title": "บทที่ 8 - และชวนให้ลงมือทำ"
+      },
+      {
+        "title": "บทที่ 9 - ที่ช่วยให้พวกเขาหลีกเลี่ยงความล้มเหลว"
+      },
+      {
+        "title": "บทที่ 10 - และจบลงด้วยความสำเร็จ"
+      },
+      {
+        "title": "บทที่ 11 - ผู้คนต้องการให้แบรนด์มีส่วนร่วมในการเปลี่ยนแปลงตัวตน"
+      },
+      {
+        "title": "บทที่ 12 - กำหนดแนวคิดควบคุม"
+      },
+      {
+        "title": "บทที่ 13 - วิธีดำเนินแคมเปญข้อความ StoryBrand ให้ได้ผล"
+      },
+      {
+        "title": "บทที่ 14 - ทำเว็บไซต์ให้สื่อสารได้ตรงจุด"
+      },
+      {
+        "title": "บทที่ 15 - ดำเนินแคมเปญข้อความและการตลาดแบบ StoryBrand"
+      },
+      {
+        "title": "บทส่งท้าย"
       }
     ]
   }
