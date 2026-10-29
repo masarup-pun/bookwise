@@ -254,7 +254,10 @@ body[data-theme="dark"] .login-card>p,body[data-theme="dark"] .login-status,body
 button.brand{border:0;background:transparent;padding:0;color:inherit;text-align:left;cursor:pointer;flex-shrink:0}
 button.brand:focus-visible{outline:3px solid var(--action);outline-offset:6px;border-radius:12px}
 #home-top{justify-content:flex-end;margin-bottom:22px;min-height:22px}
-.book{display:flex;flex-direction:column;min-width:0;padding:12px 12px 14px;border:1px solid var(--control-line);border-radius:18px;background:var(--panel);box-shadow:0 6px 20px rgba(24,39,56,.055);cursor:default;transition:border-color .18s,box-shadow .18s}
+.books{grid-template-columns:repeat(5,minmax(0,1fr));gap:30px 22px}
+@media(min-width:761px) and (max-width:1000px){.books{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:760px){.books{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px}}
+.book{display:flex;flex-direction:column;min-width:0;padding:16px 16px 18px;border:1px solid var(--control-line);border-radius:18px;background:var(--panel);box-shadow:0 6px 20px rgba(24,39,56,.055);cursor:default;transition:border-color .18s,box-shadow .18s}
 .book:hover,.book:focus-within{border-color:color-mix(in srgb,var(--action) 38%,var(--control-line));box-shadow:0 12px 28px rgba(24,39,56,.1)}
 .book>.cover{flex-shrink:0;border-radius:10px;cursor:pointer}
 .book:hover>.cover{transform:none;box-shadow:0 10px 20px rgba(24,39,56,.16)}
