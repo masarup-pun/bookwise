@@ -47,10 +47,10 @@
     const coverUrlLoads=new Map(), coverFailures=new Map();
     let coverObserver;
     function paintCover(el,url){
-      if(el.querySelector('.cover-image'))return;
+      const previous=el.querySelector('.cover-image');
       const img=document.createElement('img');img.className='cover-image';img.alt='';img.loading='lazy';img.decoding='async';img.src=url;
-      img.onload=()=>el.classList.add('has-cover-image');
-      img.onerror=()=>{img.remove();el.classList.remove('has-cover-image')};
+      img.onload=()=>{previous?.remove();el.classList.add('has-cover-image')};
+      img.onerror=()=>{img.remove();if(!previous)el.classList.remove('has-cover-image')};
       el.prepend(img);
     }
     async function loadCover(b){
@@ -112,7 +112,8 @@
     };
     function bookCategory(b){const source=b.category||b.shelfCategory||'';return bookCategoryGroups[source]||'Other'}
     function coverMarkup(b,mini=false){
-      return `<div class="${mini?'mini-cover':'cover'}${b.coverUrl?' has-cover-image':''}" data-cover-book="${esc(b.id)}" data-cover-path="${esc(b.coverPath||'')}" style="background:${esc(b.color)};color:${esc(b.text)}">${b.coverUrl?`<img class="cover-image" src="${esc(b.coverUrl)}" alt="" loading="lazy" decoding="async">`:''}<h3${!mini&&b.title.length>42?' class="long-cover-title"':''}>${esc(b.title)}</h3><div class="${mini?'cover-author':'author'}">${esc(b.author)}</div><span class="ornament"></span>${mini?'':`${favoriteMarkup(b)}<button type="button" class="cover-action cover-upload" data-cover="${esc(b.id)}" title="เปลี่ยนปก" aria-label="เปลี่ยนปกของ ${esc(b.title)}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5h3.2l1.5-2h6.6l1.5 2H20v11H4z"/><circle cx="12" cy="13" r="3.2"/><path d="M17 10h.01"/></svg></button><button type="button" class="cover-action cover-library-remove" data-delete-book="${esc(b.id)}" title="ลบถาวร" aria-label="ลบ ${esc(b.title)} ออกจากห้องสมุดอย่างถาวร"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6m4-6v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg></button>`}</div>`;
+      const imageUrl=b.coverUrl||b.coverImageUrl||'';
+      return `<div class="${mini?'mini-cover':'cover'}${imageUrl?' has-cover-image':''}" data-cover-book="${esc(b.id)}" data-cover-path="${esc(b.coverPath||'')}" style="background:${esc(b.color)};color:${esc(b.text)}">${imageUrl?`<img class="cover-image" src="${esc(imageUrl)}" alt="" loading="lazy" decoding="async">`:''}<h3${!mini&&b.title.length>42?' class="long-cover-title"':''}>${esc(b.title)}</h3><div class="${mini?'cover-author':'author'}">${esc(b.author)}</div><span class="ornament"></span>${mini?'':`${favoriteMarkup(b)}<button type="button" class="cover-action cover-upload" data-cover="${esc(b.id)}" title="เปลี่ยนปก" aria-label="เปลี่ยนปกของ ${esc(b.title)}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5h3.2l1.5-2h6.6l1.5 2H20v11H4z"/><circle cx="12" cy="13" r="3.2"/><path d="M17 10h.01"/></svg></button><button type="button" class="cover-action cover-library-remove" data-delete-book="${esc(b.id)}" title="ลบถาวร" aria-label="ลบ ${esc(b.title)} ออกจากห้องสมุดอย่างถาวร"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6m4-6v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg></button>`}</div>`;
     }
     function favoriteMarkup(b){return `<button type="button" class="fav ${b.favorite?'on':''}" data-fav="${b.id}" aria-label="${b.favorite?'นำออกจากรายการโปรด':'เพิ่มในรายการโปรด'} · ${esc(b.title)}" aria-pressed="${b.favorite}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.8 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3.1-5.8 3.1 1.1-6.5-4.7-4.6 6.5-.9L12 2.8Z"/></svg></button>`}
     function progressMarkup(b,extra=''){

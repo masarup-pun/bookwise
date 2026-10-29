@@ -4437,5 +4437,98 @@ window.BOOKWISE_CATALOG = [
         "title": "บทที่ 9 - มีดโกนของแฮนลอน (Hanlon’s Razor)"
       }
     ]
+  },
+  {
+    "id": "great-mental-models-volume-2",
+    "title": "The Great Mental Models, Volume 2: Physics, Chemistry, and Biology",
+    "author": "Shane Parrish & Rhiannon Beaubien",
+    "category": "วิทยาศาสตร์และปรัชญ",
+    "color": "#8e2535",
+    "text": "#f6eeee",
+    "added": 91,
+    "totalChapters": 25,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "coverImageUrl": "./assets/covers/great-mental-models-volume-2.jpg",
+    "chapters": [
+      {
+        "title": "บทนำ - มองโลกผ่านแบบจำลองจากวิทยาศาสตร์ (Introduction)"
+      },
+      {
+        "title": "ทฤษฎีสัมพัทธภาพ (Relativity)"
+      },
+      {
+        "title": "การตอบแทน (Reciprocity)"
+      },
+      {
+        "title": "อุณหพลศาสตร์ (Thermodynamics)"
+      },
+      {
+        "title": "ความเฉื่อย (Inertia)"
+      },
+      {
+        "title": "แรงเสียดทานและความหนืด (Friction and Viscosity)"
+      },
+      {
+        "title": "ความเร็วเชิงทิศทาง (Velocity)"
+      },
+      {
+        "title": "คานผ่อนแรง (Leverage)"
+      },
+      {
+        "title": "พลังงานกระตุ้น (Activation Energy)"
+      },
+      {
+        "title": "ตัวเร่งปฏิกิริยา (Catalysts)"
+      },
+      {
+        "title": "การผสมธาตุให้เกิดคุณสมบัติใหม่ (Alloying)"
+      },
+      {
+        "title": "วิวัฒนาการ ตอนที่ 1 - การคัดเลือกโดยธรรมชาติและการสูญพันธุ์ (Evolution Part One: Natural Selection and Extinction)"
+      },
+      {
+        "title": "วิวัฒนาการ ตอนที่ 2 - การปรับตัวและปรากฏการณ์ราชินีแดง (Evolution Part Two: Adaptation Rate and the Red Queen Effect)"
+      },
+      {
+        "title": "แนวคิดเสริม - การแข่งขัน (Competition)"
+      },
+      {
+        "title": "ระบบนิเวศ (Ecosystem)"
+      },
+      {
+        "title": "บทบาทและช่องว่างทางระบบนิเวศ (Niches)"
+      },
+      {
+        "title": "สัญชาตญาณในการปกป้องตนเอง (Self-Preservation)"
+      },
+      {
+        "title": "การทำซ้ำและการส่งต่อ (Replication)"
+      },
+      {
+        "title": "ความร่วมมือ (Cooperation)"
+      },
+      {
+        "title": "แนวคิดเสริม - จำนวนของดันบาร์ (Dunbar’s Number)"
+      },
+      {
+        "title": "การจัดองค์กรแบบลำดับชั้น (Hierarchical Organization)"
+      },
+      {
+        "title": "แรงจูงใจ (Incentives)"
+      },
+      {
+        "title": "แนวโน้มลดการใช้พลังงาน (Tendency to Minimize Energy Output)"
+      },
+      {
+        "title": "บทสรุป - เชื่อมแบบจำลองให้เป็นโครงข่าย (Putting It All Together)"
+      },
+      {
+        "title": "ประวัติย่อบุคคลสำคัญ (Mini-Bios)"
+      }
+    ]
   }
 ];

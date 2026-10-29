@@ -20,5 +20,6 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'buy-back-your-time': 'revised',
   'practicing-the-power-of-now': 'revised',
   'the-power-of-now': 'revised',
-  'great-mental-models': 'revised'
+  'great-mental-models': 'revised',
+  'great-mental-models-volume-2': 'revised'
 });
