@@ -13,6 +13,7 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'four-agreements-companion': 'revised',
   'business-made-simple': 'revised',
   'dopamine-nation': 'revised',
+  'ego-is-the-enemy': 'revised',
   'science-of-getting-rich': 'revised',
   'poor-charlie-almanack': 'blocked',
   'apple-the-first-50-years': 'revised',

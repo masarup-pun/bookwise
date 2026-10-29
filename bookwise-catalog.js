@@ -3794,7 +3794,7 @@ window.BOOKWISE_CATALOG = [
     "color": "#d6d7de",
     "text": "#373945",
     "added": 54,
-    "totalChapters": 6,
+    "totalChapters": 33,
     "chapter": 0,
     "progress": 0,
     "favorite": false,
@@ -3802,22 +3802,103 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทนำก่อนเนื้อหา — บทเรียนจากความสำเร็จและการพังทลาย (The Painful Prologue)"
+        "title": "บทนำก่อนเนื้อหา - บทเรียนจากความสำเร็จและการพังทลาย (The Painful Prologue)"
       },
       {
-        "title": "บทนำ — อัตตาเป็นศัตรู (Introduction)"
+        "title": "บทนำ - อัตตาเป็นศัตรู (Introduction)"
       },
       {
-        "title": "ภาคหนึ่ง — ความทะเยอทะยาน — เริ่มต้นด้วยความถ่อมตน (Part I: Aspire)"
+        "title": "ภาคหนึ่ง - ความทะเยอทะยาน (Part I: Aspire)"
       },
       {
-        "title": "ภาคสอง — ความสำเร็จ — อย่าปล่อยให้อัตตาครอบงำ (Part II: Success)"
+        "title": "พูด พูด พูด (Talk, Talk, Talk)"
       },
       {
-        "title": "ภาคสาม — ความล้มเหลว — ใช้เวลาให้เกิดประโยชน์ (Part III: Failure)"
+        "title": "จะเป็นใคร หรือจะทำอะไร? (To Be or to Do?)"
       },
       {
-        "title": "บทส่งท้าย — อัตตายังคงเป็นศัตรู (Epilogue)"
+        "title": "จงเป็นผู้เรียนรู้ (Become a Student)"
+      },
+      {
+        "title": "อย่าปล่อยให้ความหลงใหลครอบงำ (Don’t Be Passionate)"
+      },
+      {
+        "title": "ใช้กลยุทธ์ผืนผ้าใบ (Follow the Canvas Strategy)"
+      },
+      {
+        "title": "ควบคุมตนเอง (Restrain Yourself)"
+      },
+      {
+        "title": "ออกจากโลกในหัวของตัวเอง (Get Out of Your Own Head)"
+      },
+      {
+        "title": "อันตรายของความทะนงตนตั้งแต่ต้น (The Danger of Early Pride)"
+      },
+      {
+        "title": "ทำงาน ทำงาน และทำงาน (Work, Work, Work)"
+      },
+      {
+        "title": "บทเชื่อม - ไม่ว่าก้าวต่อไปจะเป็นอะไร อัตตาคือศัตรู (For Everything That Comes Next, Ego Is the Enemy…)"
+      },
+      {
+        "title": "ภาคสอง - ความสำเร็จ (Part II: Success)"
+      },
+      {
+        "title": "จงเป็นผู้เรียนรู้อยู่เสมอ (Always Stay a Student)"
+      },
+      {
+        "title": "อย่าแต่งเรื่องเข้าข้างตัวเอง (Don’t Tell Yourself a Story)"
+      },
+      {
+        "title": "อะไรสำคัญกับคุณ? (What’s Important to You?)"
+      },
+      {
+        "title": "ความรู้สึกว่าตนสมควรได้ การควบคุม และความหวาดระแวง (Entitlement, Control, and Paranoia)"
+      },
+      {
+        "title": "บริหารจัดการตัวเอง (Managing Yourself)"
+      },
+      {
+        "title": "ระวังโรคที่เรียกว่า ‘ฉัน’ (Beware the Disease of Me)"
+      },
+      {
+        "title": "ใคร่ครวญถึงความกว้างใหญ่ไพศาล (Meditate on the Immensity)"
+      },
+      {
+        "title": "รักษาความสุขุมและไม่หลงระเริง (Maintain Your Sobriety)"
+      },
+      {
+        "title": "บทเชื่อม - สิ่งที่มักตามมาหลังความสำเร็จ (For What Often Comes Next, Ego Is the Enemy…)"
+      },
+      {
+        "title": "ภาคสาม - ความล้มเหลว (Part III: Failure)"
+      },
+      {
+        "title": "เวลาที่มีชีวิตหรือเวลาที่สูญเปล่า? (Alive Time or Dead Time?)"
+      },
+      {
+        "title": "ความพยายามก็มีความหมายในตัวเอง (The Effort Is Enough)"
+      },
+      {
+        "title": "ช่วงเวลาที่ต้องเผชิญหน้ากับความจริง (Fight Club Moments)"
+      },
+      {
+        "title": "ขีดเส้นแบ่งให้ชัด (Draw the Line)"
+      },
+      {
+        "title": "ใช้เกณฑ์วัดความสำเร็จของตัวเอง (Maintain Your Own Scorecard)"
+      },
+      {
+        "title": "จงเลือกความรักเสมอ (Always Love)"
+      },
+      {
+        "title": "บทเชื่อม - ไม่ว่าก้าวต่อไปจะเป็นอะไร อัตตาคือศัตรู (For Everything That Comes Next, Ego Is the Enemy...)"
+      },
+      {
+        "title": "บทส่งท้าย - อัตตายังคงเป็นศัตรู (Epilogue)"
+      },
+      {
+        "title": "อ่านอะไรต่อดี? (What Should You Read Next?)"
       }
     ]
   },
