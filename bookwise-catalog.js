@@ -1118,7 +1118,7 @@ window.BOOKWISE_CATALOG = [
     "color": "#4f685a",
     "text": "#f2ead8",
     "added": 27,
-    "totalChapters": 15,
+    "totalChapters": 17,
     "chapter": 0,
     "progress": 0,
     "favorite": false,
@@ -1126,49 +1126,55 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "คำนำและบทนำ — Waking Up; Making Minds Matter"
+        "title": "คำนำโดย Dawson Church (ดอว์สัน เชิร์ช)"
       },
       {
-        "title": "บทที่ 1 — เป็นไปได้หรือไม่? (Is It Possible?)"
+        "title": "คำนำ: การตื่นขึ้น (Waking Up)"
       },
       {
-        "title": "บทที่ 2 — ประวัติศาสตร์โดยย่อของยาหลอก (A Brief History of the Placebo)"
+        "title": "บทนำ: ทำให้จิตใจมีผล (Making Minds Matter)"
       },
       {
-        "title": "บทที่ 3 — ผลของยาหลอกในสมอง (The Placebo Effect in the Brain)"
+        "title": "บทที่ 1 - เป็นไปได้หรือไม่? (Is It Possible?)"
       },
       {
-        "title": "บทที่ 4 — ผลของยาหลอกในร่างกาย (The Placebo Effect in the Body)"
+        "title": "บทที่ 2 - ประวัติของ placebo โดยสังเขป (A Brief History of the Placebo)"
       },
       {
-        "title": "บทที่ 5 — ความคิดเปลี่ยนสมองและร่างกายอย่างไร (How Thoughts Change the Brain and the Body)"
+        "title": "บทที่ 3 - ผล placebo ในสมอง (The Placebo Effect in the Brain)"
       },
       {
-        "title": "บทที่ 6 — การชี้นำและความไวต่อคำแนะนำ (Suggestibility)"
+        "title": "บทที่ 4 - ผล placebo ในร่างกาย (The Placebo Effect in the Body)"
       },
       {
-        "title": "บทที่ 7 — ทัศนคติ ความเชื่อ และการรับรู้ (Attitudes, Beliefs, and Perceptions)"
+        "title": "บทที่ 5 - ความคิดเปลี่ยนสมองและร่างกายได้อย่างไร (How Thoughts Change the Brain and the Body)"
       },
       {
-        "title": "บทที่ 8 — จิตกับจักรวาลควอนตัม (The Quantum Mind)"
+        "title": "บทที่ 6 - การชี้นำ (Suggestibility)"
       },
       {
-        "title": "บทที่ 9 — เรื่องราวการเปลี่ยนแปลงส่วนบุคคลสามเรื่อง (Three Stories of Personal Transformation)"
+        "title": "บทที่ 7 - ทัศนคติ ความเชื่อ และการรับรู้ (Attitudes, Beliefs, and Perceptions)"
       },
       {
-        "title": "บทที่ 10 — จากข้อมูลสู่การเปลี่ยนแปลง: หลักฐานว่าคุณเป็นยาหลอก (Information to Transformation: Proof That You Are the Placebo)"
+        "title": "บทที่ 8 - จิตใจควอนตัม (The Quantum Mind)"
       },
       {
-        "title": "บทที่ 11 — เตรียมตัวทำสมาธิ (Meditation Preparation)"
+        "title": "บทที่ 9 - เรื่องราวการเปลี่ยนแปลง 3 เรื่อง (Three Stories of Personal Transformation)"
       },
       {
-        "title": "บทที่ 12 — สมาธิเพื่อเปลี่ยนความเชื่อและการรับรู้ (Changing Beliefs and Perceptions Meditation)"
+        "title": "บทที่ 10 - จากข้อมูลสู่ประสบการณ์: หลักฐานว่าคุณเป็น placebo ได้ (Information to Transformation: Proof That You Are the Placebo)"
       },
       {
-        "title": "บทส่งท้าย — กลายเป็นเหนือธรรมดา (Becoming Supernatural)"
+        "title": "บทที่ 11 - การเตรียมทำสมาธิ (Meditation Preparation)"
       },
       {
-        "title": "ภาคผนวก — บทนำสมาธิเพื่อเปลี่ยนความเชื่อและการรับรู้"
+        "title": "บทที่ 12 - สมาธิเพื่อเปลี่ยนความเชื่อและการรับรู้ (Changing Beliefs and Perceptions Meditation)"
+      },
+      {
+        "title": "บทส่งท้าย: การกลายเป็นสิ่งใหม่ (Becoming Supernatural)"
+      },
+      {
+        "title": "ภาคผนวก - บทสคริปต์สมาธิเพื่อเปลี่ยนความเชื่อและการรับรู้ (Script of the Changing Beliefs and Perceptions Meditation)"
       }
     ]
   },
