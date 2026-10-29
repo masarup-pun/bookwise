@@ -9,7 +9,7 @@
     const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     const uid=()=>globalThis.crypto?.randomUUID?.()||`mark-${Date.now()}-${Math.random().toString(36).slice(2)}`;
     function loadState(){try{const value=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');return value&&typeof value==='object'&&!Array.isArray(value)?value:{}}catch(_){return {}}}
-    const CONTENT_REVISION=4;
+    const CONTENT_REVISION=5;
     function readingChapterCount(id){return booksData.find(book=>book.id===id)?.chapters.length||0}
     function normalizeReadChapters(id,values){const total=readingChapterCount(id);return [...new Set((Array.isArray(values)?values:[]).filter(index=>Number.isInteger(index)&&index>=0&&index<total))].sort((a,b)=>a-b)}
     function readingProgress(id,chapters,completed=false){const total=readingChapterCount(id);return completed?100:total?Math.round(normalizeReadChapters(id,chapters).length/total*100):0}
@@ -22,14 +22,22 @@
         let next=Number(index||0);
         if(previousRevision<1&&['atomic-habits','buy-back-your-time'].includes(id))next++;
         if(previousRevision<2&&id==='four-agreements-companion')next++;
+        if(previousRevision<5&&id==='games-people-play')next+=3+(next>=5?1:0);
         return next;
       };
       for(const [id,book] of Object.entries(state.books||{})){
         if(book.started||book.progress>0||book.lastRead)book.chapter=shift(id,book.chapter);
         if(previousRevision===0||id==='four-agreements-companion')book.readPosition=null;
         if(previousRevision<4){
-          book.readChapters=book.completed?Array.from({length:readingChapterCount(id)},(_,index)=>index):[];
+          const oldChapterCount=id==='games-people-play'&&previousRevision<5?18:readingChapterCount(id);
+          book.readChapters=book.completed?Array.from({length:oldChapterCount},(_,index)=>index):[];
           book.progress=readingProgress(id,book.readChapters,Boolean(book.completed));
+        }
+        if(previousRevision<5&&id==='games-people-play'){
+          book.readChapters=normalizeReadChapters(id,(Array.isArray(book.readChapters)?book.readChapters:[]).map(index=>shift(id,index)));
+          if(Number.isInteger(book.readPosition?.chapter))book.readPosition.chapter=shift(id,book.readPosition.chapter);
+          book.completed=book.readChapters.length===readingChapterCount(id);
+          book.progress=readingProgress(id,book.readChapters,book.completed);
         }
       }
       for(const key of ['annotations','bookmarks','reviewQueue'])for(const item of state[key]||[]){

@@ -11,6 +11,7 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'order-of-time': 'revised',
   'seven-spiritual-laws': 'revised',
   'four-agreements-companion': 'revised',
+  'games-people-play': 'revised',
   'business-made-simple': 'revised',
   'dopamine-nation': 'revised',
   'ego-is-the-enemy': 'revised',

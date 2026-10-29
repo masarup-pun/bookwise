@@ -796,7 +796,7 @@ window.BOOKWISE_CATALOG = [
     "color": "#c7b6a3",
     "text": "#34312d",
     "added": 22,
-    "totalChapters": 18,
+    "totalChapters": 23,
     "chapter": 0,
     "progress": 0,
     "favorite": false,
@@ -804,58 +804,73 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทที่ 1 — การวิเคราะห์โครงสร้าง (Structural Analysis)"
+        "title": "คำนำ (Preface)"
       },
       {
-        "title": "บทที่ 2 — การวิเคราะห์ธุรกรรม (Transactional Analysis)"
+        "title": "บทนำ - ปฏิสัมพันธ์ทางสังคม (Social Intercourse)"
       },
       {
-        "title": "บทที่ 3 — กระบวนการและพิธีกรรม (Procedures and Rituals)"
+        "title": "บทนำ - การจัดโครงสร้างเวลา (The Structuring of Time)"
       },
       {
-        "title": "บทที่ 4 — กิจกรรมฆ่าเวลา (Pastimes)"
+        "title": "บทที่ 1 - การวิเคราะห์โครงสร้าง (Structural Analysis)"
       },
       {
-        "title": "บทที่ 5 — เกมทางสังคม (Games)"
+        "title": "บทที่ 2 - การวิเคราะห์ธุรกรรม (Transactional Analysis)"
       },
       {
-        "title": "บทที่ 6 — เกมในชีวิตประจำวัน (Life Games)"
+        "title": "บทที่ 3 - ขั้นตอนและพิธีกรรม (Procedures and Rituals)"
       },
       {
-        "title": "บทที่ 7 — เกมในชีวิตคู่ (Marital Games)"
+        "title": "บทที่ 4 - กิจกรรมฆ่าเวลา (Pastimes)"
       },
       {
-        "title": "บทที่ 8 — เกมในงานสังสรรค์ (Party Games)"
+        "title": "บทที่ 5 - เกม (Games)"
       },
       {
-        "title": "บทที่ 9 — เกมทางเพศ (Sexual Games)"
+        "title": "ภาคสอง - คู่มือจำแนกเกม (A Thesaurus of Games)"
       },
       {
-        "title": "บทที่ 10 — เกมในโลกอาชญากรรม (Underworld Games)"
+        "title": "บทที่ 6 - เกมในชีวิต (Life Games)"
       },
       {
-        "title": "บทที่ 11 — เกมในห้องให้คำปรึกษา (Consulting Room Games)"
+        "title": "บทที่ 7 - เกมชีวิตคู่ (Marital Game)"
       },
       {
-        "title": "บทที่ 12 — เกมที่เป็นประโยชน์ (Good Games)"
+        "title": "บทที่ 8 - เกมในงานสังสรรค์ (Party Games)"
       },
       {
-        "title": "บทที่ 13 — ความสำคัญของเกม (The Significance of Games)"
+        "title": "บทที่ 9 - เกมทางเพศ (Sexual Games)"
       },
       {
-        "title": "บทที่ 14 — ผู้เล่น (The Players)"
+        "title": "บทที่ 10 - เกมในโลกอาชญากรรม (Underworld Games)"
       },
       {
-        "title": "บทที่ 15 — ตัวอย่างแบบจำลอง (A Paradigm)"
+        "title": "บทที่ 11 - เกมในห้องปรึกษา (Consulting Room Games)"
       },
       {
-        "title": "บทที่ 16 — ความเป็นอิสระ (Autonomy)"
+        "title": "บทที่ 12 - เกมที่เป็นประโยชน์ (Good Games)"
       },
       {
-        "title": "บทที่ 17 — การบรรลุความเป็นอิสระ (The Attainment of Autonomy)"
+        "title": "บทที่ 13 - ความสำคัญของเกม (The Significance of Games)"
       },
       {
-        "title": "บทที่ 18 — เมื่อพ้นเกมแล้วจะเป็นอย่างไร (After Games, What?)"
+        "title": "บทที่ 14 - ผู้เล่น (The Players)"
+      },
+      {
+        "title": "บทที่ 15 - แบบแผน (A Paradigm)"
+      },
+      {
+        "title": "บทที่ 16 - อิสรภาพในการกำกับตนเอง (Autonomy)"
+      },
+      {
+        "title": "บทที่ 17 - การบรรลุอิสรภาพในการกำกับตนเอง (The Attainment of Autonomy)"
+      },
+      {
+        "title": "บทที่ 18 - เมื่อพ้นจากเกมแล้วจะเป็นอย่างไร? (After Games, What?)"
+      },
+      {
+        "title": "ภาคผนวก - การจำแนกพฤติกรรม (The Classification of Behavior)"
       }
     ]
   },
