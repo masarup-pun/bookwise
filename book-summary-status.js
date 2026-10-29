@@ -7,6 +7,7 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'peak-mind': 'revised',
   'split-the-pie': 'revised',
   'fluke': 'revised',
+  'freedom-from-the-known': 'revised',
   '21-success-secrets': 'revised',
   'buddhas-brain': 'revised',
   'order-of-time': 'revised',
