@@ -4645,5 +4645,110 @@ window.BOOKWISE_CATALOG = [
         "title": "ประวัติย่อของบุคคลในเล่ม (Mini-Bios)"
       }
     ]
+  },
+  {
+    "id": "great-mental-models-volume-4",
+    "title": "The Great Mental Models, Volume 4: Economics and Art",
+    "author": "Shane Parrish & Rhiannon Beaubien",
+    "category": "วิทยาศาสตร์และปรัชญา",
+    "color": "#8e2535",
+    "text": "#f6eeee",
+    "added": 93,
+    "totalChapters": 29,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "coverImageUrl": "./assets/covers/great-mental-models-volume-4.jpg",
+    "chapters": [
+      {
+        "title": "บทนำ - คลังแบบจำลองความคิดจากเศรษฐศาสตร์และศิลปะ (Introduction)"
+      },
+      {
+        "title": "ความขาดแคลน (Scarcity)"
+      },
+      {
+        "title": "อุปสงค์และอุปทาน (Supply and Demand)"
+      },
+      {
+        "title": "แนวคิดเสริม - ทฤษฎีเกม (Supporting Idea: Game Theory)"
+      },
+      {
+        "title": "การทำให้เกิดประสิทธิผลสูงสุด (Optimization)"
+      },
+      {
+        "title": "การแลกเปลี่ยนที่ต้องยอมเสียบางอย่าง (Trade-Offs)"
+      },
+      {
+        "title": "ความเชี่ยวชาญเฉพาะทาง (Specialization)"
+      },
+      {
+        "title": "การพึ่งพาซึ่งกันและกัน (Interdependence)"
+      },
+      {
+        "title": "ประสิทธิภาพ (Efficiency)"
+      },
+      {
+        "title": "หนี้ (Debt)"
+      },
+      {
+        "title": "การผูกขาดและการแข่งขัน (Monopoly and Competition)"
+      },
+      {
+        "title": "แนวคิดเสริม - ผลกระทบภายนอก (Supporting Idea: Externalities)"
+      },
+      {
+        "title": "การทำลายเพื่อสร้างสิ่งใหม่ (Creative Destruction)"
+      },
+      {
+        "title": "กฎของเกรแชม (Gresham’s Law)"
+      },
+      {
+        "title": "ฟองสบู่ (Bubbles)"
+      },
+      {
+        "title": "ผู้ชม (Audience)"
+      },
+      {
+        "title": "แนวประเภท (Genre)"
+      },
+      {
+        "title": "ความแตกต่างที่ตัดกัน (Contrast)"
+      },
+      {
+        "title": "กรอบการมอง (Framing)"
+      },
+      {
+        "title": "จังหวะ (Rhythm)"
+      },
+      {
+        "title": "ทำนอง (Melody)"
+      },
+      {
+        "title": "การนำเสนอแทนสิ่งจริง (Representation)"
+      },
+      {
+        "title": "หลักเสริม: สมดุล (Balance)"
+      },
+      {
+        "title": "โครงเรื่อง (Plot)"
+      },
+      {
+        "title": "ตัวละคร (Character)"
+      },
+      {
+        "title": "สภาพแวดล้อม (Setting)"
+      },
+      {
+        "title": "นัยแฝง (Subtext)"
+      },
+      {
+        "title": "การแสดง (Performance)"
+      },
+      {
+        "title": "ข้อคิดส่งท้าย (Afterthoughts)"
+      }
+    ]
   }
 ];

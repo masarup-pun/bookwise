@@ -22,5 +22,6 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'the-power-of-now': 'revised',
   'great-mental-models': 'revised',
   'great-mental-models-volume-2': 'revised',
-  'great-mental-models-volume-3': 'revised'
+  'great-mental-models-volume-3': 'revised',
+  'great-mental-models-volume-4': 'revised'
 });
