@@ -1186,7 +1186,7 @@ window.BOOKWISE_CATALOG = [
     "color": "#d6c3b6",
     "text": "#3b312c",
     "added": 11,
-    "totalChapters": 20,
+    "totalChapters": 21,
     "chapter": 0,
     "progress": 0,
     "favorite": false,
@@ -1194,64 +1194,67 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทที่ 1 — ขุมทรัพย์ภายในตัวคุณ (The Treasure House Within You)"
+        "title": "บทนำ - หนังสือเล่มนี้จะเปลี่ยนชีวิตคุณได้อย่างไร (How This Book Can Work Miracles in Your Life)"
       },
       {
-        "title": "บทที่ 2 — จิตของคุณทำงานอย่างไร (How Your Own Mind Works)"
+        "title": "บทที่ 1 - ขุมทรัพย์ภายในตัวคุณ (The Treasure House Within You)"
       },
       {
-        "title": "บทที่ 3 — พลังอัศจรรย์ของจิตใต้สำนึก (The Miracle-working Power of Your Subconscious)"
+        "title": "บทที่ 2 - จิตของคุณทำงานอย่างไร (How Your Own Mind Works)"
       },
       {
-        "title": "บทที่ 4 — การรักษาทางใจในสมัยโบราณ (Mental Healings in Ancient Times)"
+        "title": "บทที่ 3 - พลังอัศจรรย์ของจิตใต้สำนึก (The Miracle-Working Power of Your Subconscious)"
       },
       {
-        "title": "บทที่ 5 — การรักษาทางใจในยุคใหม่ (Mental Healings in Modern Times)"
+        "title": "บทที่ 4 - การเยียวยาทางใจในสมัยโบราณ (Mental Healings in Ancient Times)"
       },
       {
-        "title": "บทที่ 6 — เทคนิคปฏิบัติสำหรับการเยียวยาทางใจ (Practical Techniques in Mental Healings)"
+        "title": "บทที่ 5 - การเยียวยาทางใจในยุคปัจจุบัน (Mental Healings in Modern Times)"
       },
       {
-        "title": "บทที่ 7 — จิตใต้สำนึกมีแนวโน้มมุ่งสู่ชีวิต (The Tendency of the Subconscious Is Lifeward)"
+        "title": "บทที่ 6 - เทคนิคปฏิบัติเพื่อการเยียวยาทางใจ (Practical Techniques in Mental Healings)"
       },
       {
-        "title": "บทที่ 8 — ทำอย่างไรจึงได้ผลตามต้องการ (How to Get the Results You Want)"
+        "title": "บทที่ 7 - จิตใต้สำนึกมีแนวโน้มมุ่งสู่ชีวิต (The Tendency of the Subconscious Is Lifeward)"
       },
       {
-        "title": "บทที่ 9 — ใช้พลังจิตใต้สำนึกเพื่อความมั่งคั่ง (How to Use the Power of Your Subconscious for Wealth)"
+        "title": "บทที่ 8 - ทำอย่างไรจึงได้ผลตามต้องการ (How to Get the Results You Want)"
       },
       {
-        "title": "บทที่ 10 — สิทธิของคุณที่จะมั่งคั่ง (Your Right to Be Rich)"
+        "title": "บทที่ 9 - วิธีใช้พลังจิตใต้สำนึกเพื่อความมั่งคั่ง (How to Use the Power of Your Subconscious for Wealth)"
       },
       {
-        "title": "บทที่ 11 — จิตใต้สำนึกเป็นหุ้นส่วนแห่งความสำเร็จ (Your Subconscious Mind as a Partner in Success)"
+        "title": "บทที่ 10 - สิทธิของคุณที่จะมีความมั่งคั่ง (Your Right to Be Rich)"
       },
       {
-        "title": "บทที่ 12 — นักวิทยาศาสตร์ใช้จิตใต้สำนึก (Scientists Use the Subconscious Mind)"
+        "title": "บทที่ 11 - จิตใต้สำนึกในฐานะคู่คิดสู่ความสำเร็จ (Your Subconscious Mind as a Partner in Success)"
       },
       {
-        "title": "บทที่ 13 — จิตใต้สำนึกกับความมหัศจรรย์ของการนอน (Your Subconscious and the Wonders of Sleep)"
+        "title": "บทที่ 12 - นักวิทยาศาสตร์ใช้จิตใต้สำนึก (Scientists Use the Subconscious Mind)"
       },
       {
-        "title": "บทที่ 14 — จิตใต้สำนึกกับปัญหาชีวิตคู่ (Your Subconscious Mind and Marital Problems)"
+        "title": "บทที่ 13 - จิตใต้สำนึกกับความมหัศจรรย์ของการนอน (Your Subconscious and the Wonders of Sleep)"
       },
       {
-        "title": "บทที่ 15 — จิตใต้สำนึกกับความสุขของคุณ (Your Subconscious Mind and Your Happiness)"
+        "title": "บทที่ 14 - จิตใต้สำนึกกับปัญหาชีวิตคู่ (Your Subconscious Mind and Marital Problems)"
       },
       {
-        "title": "บทที่ 16 — จิตใต้สำนึกกับความสัมพันธ์ที่กลมกลืน (Your Subconscious Mind and Harmonious Human Relations)"
+        "title": "บทที่ 15 - จิตใต้สำนึกกับความสุขของคุณ (Your Subconscious Mind and Your Happiness)"
       },
       {
-        "title": "บทที่ 17 — ใช้จิตใต้สำนึกเพื่อการให้อภัย (How to Use Your Subconscious Mind for Forgiveness)"
+        "title": "บทที่ 16 - จิตใต้สำนึกกับความสัมพันธ์ที่กลมกลืน (Your Subconscious Mind and Harmonious Human Relations)"
       },
       {
-        "title": "บทที่ 18 — จิตใต้สำนึกช่วยขจัดอุปสรรคทางใจ (How Your Subconscious Removes Mental Blocks)"
+        "title": "บทที่ 17 - วิธีใช้จิตใต้สำนึกเพื่อการให้อภัย (How to Use Your Subconscious Mind for Forgiveness)"
       },
       {
-        "title": "บทที่ 19 — ใช้จิตใต้สำนึกเพื่อขจัดความกลัว (How to Use Your Subconscious Mind to Remove Fear)"
+        "title": "บทที่ 18 - จิตใต้สำนึกช่วยขจัดอุปสรรคทางใจได้อย่างไร (How Your Subconscious Removes Mental Blocks)"
       },
       {
-        "title": "บทที่ 20 — รักษาความเยาว์วัยทางใจไว้เสมอ (How to Stay Young in Spirit Forever)"
+        "title": "บทที่ 19 - วิธีใช้จิตใต้สำนึกเพื่อขจัดความกลัว (How to Use Your Subconscious Mind to Remove Fear)"
+      },
+      {
+        "title": "บทที่ 20 - วิธีคงความเยาว์วัยทางจิตใจ (How to Stay Young in Spirit Forever)"
       }
     ]
   },
