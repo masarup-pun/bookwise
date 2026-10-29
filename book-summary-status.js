@@ -2,6 +2,7 @@
 // source files need review, and any unlisted catalog book is still pending.
 window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'atomic-habits': 'revised',
+  'siddhartha': 'revised',
   'the-50th-law': 'revised',
   'peak-mind': 'revised',
   'split-the-pie': 'revised',
