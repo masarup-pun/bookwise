@@ -19,5 +19,6 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'building-a-storybrand-2': 'revised',
   'buy-back-your-time': 'revised',
   'practicing-the-power-of-now': 'revised',
-  'the-power-of-now': 'revised'
+  'the-power-of-now': 'revised',
+  'great-mental-models': 'revised'
 });

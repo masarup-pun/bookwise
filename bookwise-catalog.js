@@ -4375,5 +4375,67 @@ window.BOOKWISE_CATALOG = [
         "title": "บทส่งท้าย"
       }
     ]
+  },
+  {
+    "title": "The Great Mental Models: General Thinking Concepts",
+    "author": "Shane Parrish",
+    "category": "วิทยาศาสตร์และปรัชญา",
+    "color": "#263b53",
+    "text": "#f4f0e7",
+    "added": 90,
+    "id": "great-mental-models",
+    "totalChapters": 15,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "เกี่ยวกับโครงการ - การเรียนรู้โลกผ่านแบบจำลองความคิด (The Great Mental Models Project)"
+      },
+      {
+        "title": "คำนำ - ทำไมผมจึงรวบรวมแบบจำลองความคิด (Preface)"
+      },
+      {
+        "title": "บทนำ - การแสวงหาปัญญา (Acquiring Wisdom)"
+      },
+      {
+        "title": "บทที่ 1 - แผนที่ไม่ใช่ดินแดน (The Map Is Not the Territory)"
+      },
+      {
+        "title": "บทที่ 2 - ขอบเขตความสามารถ (Circle of Competence)"
+      },
+      {
+        "title": "แนวคิดเสริม - การพิสูจน์ว่าผิดได้ (Falsifiability)"
+      },
+      {
+        "title": "บทที่ 3 - การคิดจากหลักพื้นฐาน (First Principles Thinking)"
+      },
+      {
+        "title": "บทที่ 4 - การทดลองทางความคิด (Thought Experiment)"
+      },
+      {
+        "title": "แนวคิดเสริม - เงื่อนไขจำเป็นและเพียงพอ (Necessity and Sufficiency)"
+      },
+      {
+        "title": "บทที่ 5 - การคิดผลลัพธ์ลำดับถัดไป (Second-Order Thinking)"
+      },
+      {
+        "title": "บทที่ 6 - การคิดเชิงความน่าจะเป็น (Probabilistic Thinking)"
+      },
+      {
+        "title": "แนวคิดเสริม - เหตุและความสัมพันธ์ (Causation vs. Correlation)"
+      },
+      {
+        "title": "บทที่ 7 - การคิดกลับด้าน (Inversion)"
+      },
+      {
+        "title": "บทที่ 8 - มีดโกนของอ็อกแคม (Occam’s Razor)"
+      },
+      {
+        "title": "บทที่ 9 - มีดโกนของแฮนลอน (Hanlon’s Razor)"
+      }
+    ]
   }
 ];
