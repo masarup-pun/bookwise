@@ -4016,7 +4016,7 @@ window.BOOKWISE_CATALOG = [
   },
   {
     "id": "dopamine-nation",
-    "title": "Dopamine Nation: Finding Balance in the Age of Indulgence",
+    "title": "Dopamine Nation",
     "author": "Anna Lembke",
     "category": "สุขภาพและจิตวิทยา",
     "color": "#3f536b",
@@ -4069,7 +4069,7 @@ window.BOOKWISE_CATALOG = [
   },
   {
     "id": "buddhas-brain",
-    "title": "Buddha's Brain: The Practical Neuroscience of Happiness, Love, and Wisdom",
+    "title": "Buddha’s Brain",
     "author": "Rick Hanson with Richard Mendius",
     "category": "สุขภาพและจิตวิทยา",
     "color": "#536c68",
