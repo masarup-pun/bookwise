@@ -4530,5 +4530,120 @@ window.BOOKWISE_CATALOG = [
         "title": "ประวัติย่อบุคคลสำคัญ (Mini-Bios)"
       }
     ]
+  },
+  {
+    "id": "great-mental-models-volume-3",
+    "title": "The Great Mental Models, Volume 3: Systems and Mathematics",
+    "author": "Rhiannon Beaubien & Rosie Leizrowice",
+    "authors": [
+      "Rhiannon Beaubien",
+      "Rosie Leizrowice"
+    ],
+    "category": "วิทยาศาสตร์และปรัชญ",
+    "color": "#8e2535",
+    "text": "#f6eeee",
+    "added": 92,
+    "totalChapters": 31,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "coverImageUrl": "./assets/covers/great-mental-models-volume-3.jpg",
+    "chapters": [
+      {
+        "title": "คำกล่าวเปิดเล่มจาก Shane Parrish (เชน แพร์ริช)"
+      },
+      {
+        "title": "บทนำ - มองระบบและคณิตศาสตร์เป็นเครื่องมือคิด (Introduction)"
+      },
+      {
+        "title": "ระบบ (Systems)"
+      },
+      {
+        "title": "วงจรป้อนกลับ (Feedback Loops)"
+      },
+      {
+        "title": "สมดุล (Equilibrium)"
+      },
+      {
+        "title": "คอขวด (Bottlenecks)"
+      },
+      {
+        "title": "ขนาดและระดับของระบบ (Scale)"
+      },
+      {
+        "title": "ระยะเผื่อความปลอดภัย (Margin of Safety)"
+      },
+      {
+        "title": "การหมุนเวียนและการทดแทน (Churn)"
+      },
+      {
+        "title": "อัลกอริทึม (Algorithms)"
+      },
+      {
+        "title": "แนวคิดเสริม - ระบบซับซ้อนที่ปรับตัวได้ (Complex Adaptive Systems)"
+      },
+      {
+        "title": "มวลวิกฤต (Critical Mass)"
+      },
+      {
+        "title": "คุณสมบัติที่เกิดขึ้นใหม่ (Emergence)"
+      },
+      {
+        "title": "แนวคิดเสริม - พลวัตแห่งความโกลาหล (Chaos Dynamics)"
+      },
+      {
+        "title": "การลดทอนจนถึงแก่นที่ขาดไม่ได้ (Irreducibility)"
+      },
+      {
+        "title": "กฎผลตอบแทนที่ลดลง (The Law of Diminishing Returns)"
+      },
+      {
+        "title": "คณิตศาสตร์ (Mathematics)"
+      },
+      {
+        "title": "แนวคิดเสริม - การแจกแจงข้อมูล (Distributions)"
+      },
+      {
+        "title": "การทบต้น (Compounding)"
+      },
+      {
+        "title": "แนวคิดเสริม - ผลของเครือข่าย (Network Effects)"
+      },
+      {
+        "title": "การสุ่มตัวอย่าง (Sampling)"
+      },
+      {
+        "title": "ความสุ่ม (Randomness)"
+      },
+      {
+        "title": "แนวคิดเสริม - หลักการพาเรโต (Pareto Principle)"
+      },
+      {
+        "title": "การถดถอยสู่ค่าเฉลี่ย (Regression to the Mean)"
+      },
+      {
+        "title": "การคูณด้วยศูนย์ (Multiplying by Zero)"
+      },
+      {
+        "title": "ความเทียบเท่า (Equivalence)"
+      },
+      {
+        "title": "แนวคิดเสริม - ลำดับขนาด (Order of Magnitude)"
+      },
+      {
+        "title": "พื้นที่ผิว (Surface Area)"
+      },
+      {
+        "title": "ค่าสูงสุดโดยรวมและค่าสูงสุดเฉพาะที่ (Global and Local Maxima)"
+      },
+      {
+        "title": "แล้วจะทำอะไรต่อ (Now What?)"
+      },
+      {
+        "title": "ประวัติย่อของบุคคลในเล่ม (Mini-Bios)"
+      }
+    ]
   }
 ];
