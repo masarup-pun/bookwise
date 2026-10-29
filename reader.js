@@ -38,7 +38,7 @@ function requireLogin(bookRequest){
   return false;
 }
 function clearReadingContent(){
-  clearTimeout(positionTimer);readingReady=false;
+  clearTimeout(positionTimer);readingReady=false;document.getElementById('chapter-mark-read').disabled=true;
   ++chapterLoadId;
   for(const book of booksData)book.chapters=book.chapters.map(chapter=>({title:chapter.title}));
   for(const id of ['chapter-body','chapter-title','chapter-original','chapter-deck','quiz-content','reader-saved','review-list','saved-list'])document.getElementById(id).replaceChildren();
@@ -102,19 +102,36 @@ async function openBook(id,chapter,markId){
 }
 function updateChapterControls(book,n){
   const title=`บทที่ ${n+1} · ${plainText(book.chapters[n].title).split(' (')[0]}`,isLast=n===book.chapters.length-1;
+  const markRead=document.getElementById('chapter-mark-read'),label=document.getElementById('chapter-mark-read-label');
+  const willComplete=normalizeReadChapters(book.id,[...(book.readChapters||[]),n]).length===book.chapters.length;
+  markRead.disabled=true;
+  label.textContent=isLast?(willComplete?'อ่านแล้ว · จบเล่ม':'อ่านแล้ว · ไปบทที่ยังไม่ได้อ่าน'):'อ่านแล้ว · บทถัดไป';
   document.querySelectorAll('.chapter-controls').forEach(controls=>{
     const [previous,forward]=controls.querySelectorAll('.chapter-step');
     controls.querySelector('.chapter-picker-label').textContent=title;
     previous.disabled=n===0;
     previous.setAttribute('aria-label','บทก่อนหน้า');
     previous.onclick=()=>showChapter(n-1).then(()=>window.scrollTo(0,0));
-    forward.disabled=false;forward.textContent=isLast?'✓':'→';
-    forward.setAttribute('aria-label',isLast?'อ่านจบเล่มนี้':'บทถัดไป');
+    forward.disabled=false;forward.textContent=isLast?(willComplete?'✓':'→'):'→';
+    forward.setAttribute('aria-label',isLast?(willComplete?'อ่านครบแล้ว · กลับห้องสมุด':'ไปบทที่ยังไม่ได้อ่าน'):'บทถัดไป');
     forward.onclick=()=>{
       if(!isLast){showChapter(n+1).then(()=>window.scrollTo(0,0));return;}
-      book.completed=true;book.readChapters=Array.from({length:book.chapters.length},(_,index)=>index);book.progress=100;persist();renderContinue();toast('อ่านหนังสือเล่มนี้จบแล้ว');showView('all');
+      const nextUnread=book.chapters.findIndex((_,index)=>!book.readChapters.includes(index));
+      if(nextUnread>=0){showChapter(nextUnread).then(()=>window.scrollTo(0,0));return;}
+      book.completed=true;book.progress=readingProgress(book.id,book.readChapters,true);persist();renderContinue();renderLibraryOverview();toast('อ่านหนังสือเล่มนี้จบแล้ว');showView('all');
     };
   });
+  markRead.onclick=()=>{
+    if(!requireLogin())return;
+    book.readChapters=normalizeReadChapters(book.id,[...(book.readChapters||[]),n]);
+    const completed=book.readChapters.length===book.chapters.length;
+    book.completed=completed;book.progress=readingProgress(book.id,book.readChapters,completed);persist();renderContinue();renderLibraryOverview();
+    if(n<book.chapters.length-1){showChapter(n+1).then(()=>window.scrollTo(0,0));return;}
+    if(completed){toast('อ่านครบทุกบทแล้ว');renderBooks();showView('all');return;}
+    const nextUnread=book.chapters.findIndex((_,index)=>!book.readChapters.includes(index));
+    if(nextUnread>=0){toast(`บันทึกบทนี้แล้ว · ไปบทที่ ${nextUnread+1} ซึ่งยังไม่ได้ทำเครื่องหมาย`);showChapter(nextUnread).then(()=>window.scrollTo(0,0));return;}
+    toast('บันทึกบทนี้แล้ว');
+  };
 }
 async function showChapter(index,{resume=false}={}){
   if(!requireLogin())return;
@@ -137,13 +154,13 @@ async function showChapter(index,{resume=false}={}){
     const chapter=book.chapters[n].body?book.chapters[n]:await window.BookwiseCloudSync.loadChapter(book.id,n);
     if(requestId!==chapterLoadId||!signedIn())return;
     if(!Array.isArray(chapter.body)||!Array.isArray(chapter.quiz))throw new Error('invalid_chapter');
-    book.chapters[n]={...chapter,title:book.chapters[n].title};book.chapter=n;book.started=true;book.lastRead=Date.now();
-    book.readChapters=normalizeReadChapters(book.id,[...(book.readChapters||[]),n]);book.progress=readingProgress(book.id,book.readChapters,book.completed);persist();
+    book.chapters[n]={...chapter,title:book.chapters[n].title};book.chapter=n;book.started=true;book.lastRead=Date.now();persist();renderLibraryOverview();
     document.getElementById('chapter-deck').textContent=plainText(chapter.deck);
     document.getElementById('reader-progress-fill').style.width=book.progress+'%';
     document.getElementById('reader-progress-text').textContent=book.progress+'%';
     renderChapterBody();renderReaderSaved();setReadingSize(fontSize,false);quizIndex=0;renderQuiz();
     document.getElementById('recall').hidden=false;
+    document.getElementById('chapter-mark-read').disabled=false;
     document.getElementById('bookmark-toggle').disabled=false;
     renderContinue();
     if(document.fonts)await document.fonts.ready;

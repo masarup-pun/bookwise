@@ -254,8 +254,10 @@ body[data-theme="dark"] .login-card>p,body[data-theme="dark"] .login-status,body
 button.brand{border:0;background:transparent;padding:0;color:inherit;text-align:left;cursor:pointer;flex-shrink:0}
 button.brand:focus-visible{outline:3px solid var(--action);outline-offset:6px;border-radius:12px}
 #home-top{justify-content:flex-end;margin-bottom:22px;min-height:22px}
-.book{display:flex;flex-direction:column;cursor:default}
-.book>.cover{flex-shrink:0;cursor:pointer}
+.book{display:flex;flex-direction:column;min-width:0;padding:12px 12px 14px;border:1px solid var(--control-line);border-radius:18px;background:var(--panel);box-shadow:0 6px 20px rgba(24,39,56,.055);cursor:default;transition:border-color .18s,box-shadow .18s}
+.book:hover,.book:focus-within{border-color:color-mix(in srgb,var(--action) 38%,var(--control-line));box-shadow:0 12px 28px rgba(24,39,56,.1)}
+.book>.cover{flex-shrink:0;border-radius:10px;cursor:pointer}
+.book:hover>.cover{transform:none;box-shadow:0 10px 20px rgba(24,39,56,.16)}
 .book-meta{display:grid;grid-template-rows:3em 24px;align-content:start;gap:6px;margin-top:14px}
 .book-meta h3{display:block;height:3em;min-width:0;margin:0;overflow:hidden;font-size:17px;line-height:1.5}
 .book-title-button{display:-webkit-box;width:100%;height:100%;min-height:0;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2;cursor:pointer}
@@ -284,12 +286,29 @@ button.brand:focus-visible{outline:3px solid var(--action);outline-offset:6px;bo
 .continue-dismiss:hover{background:var(--panel-alt);color:var(--text-main)}
 .continue-dismiss svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
 .continue-progress{margin-top:10px}
+.chapter-mark-read{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:54px;margin:24px 0 0;padding:12px 18px;border:1px solid var(--action);border-radius:14px;background:var(--action);color:var(--action-contrast,#fff);font:650 15px/1.4 var(--sans);cursor:pointer;box-shadow:0 7px 18px color-mix(in srgb,var(--action) 20%,transparent);transition:transform .18s,filter .18s,box-shadow .18s}
+.chapter-mark-read:hover:not(:disabled){transform:translateY(-1px);filter:brightness(1.04);box-shadow:0 10px 22px color-mix(in srgb,var(--action) 28%,transparent)}
+.chapter-mark-read:focus-visible{outline:3px solid var(--action);outline-offset:3px}
+.chapter-mark-read:disabled{opacity:.55;cursor:wait}
+.chapter-mark-read svg{width:19px;height:19px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:760px){.book{padding:9px 9px 12px;border-radius:15px}.chapter-mark-read{margin-top:20px;min-height:52px}}
+@media(prefers-reduced-motion:reduce){.book,.chapter-mark-read{transition:none}}
 @media(hover:none),(pointer:coarse){.cover>.fav{opacity:1;transform:none;pointer-events:auto}.author-link{min-height:28px}.continue-dismiss{width:44px;height:44px;top:2px;right:2px}}
 @media(max-width:760px){.book-meta h3{font-size:15px}.book-authors{font-size:12px}.book>.shelf-progress{padding-top:14px}.cover>.fav{width:36px;height:36px;padding:7px;top:7px;right:7px}.continue{flex-basis:310px}.continue-open{gap:12px;padding-right:38px}.continue-info h2{font-size:14px}.author-filter{padding:10px 12px;font-size:13px}}
 @media(prefers-reduced-motion:reduce){.cover>.fav,.author-link{transition:none}}
 .continue-info .kicker,.continue-info p,.continue-head>span{color:var(--text-secondary)}
 
-.library-heading{margin:0 0 24px;font:700 clamp(26px,3vw,36px)/1.4 var(--sans);letter-spacing:-.8px;color:var(--text-main)}
+.library-overview{display:grid;gap:22px;margin:0 0 28px;padding:clamp(20px,3vw,30px);border:1px solid var(--control-line);border-radius:20px;background:var(--panel);box-shadow:0 12px 30px rgba(24,39,56,.07)}
+.library-overview-heading{min-width:0}
+.library-overview-eyebrow{color:var(--action);font:700 10px/1.5 var(--sans);letter-spacing:1.5px}
+.library-heading{margin:5px 0 6px;font:700 clamp(26px,3vw,34px)/1.35 var(--sans);letter-spacing:-.7px;color:var(--text-main)}
+.library-overview-heading p{margin:0;color:var(--text-secondary);font:400 14px/1.6 var(--sans)}
+.library-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.library-metric{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto 1fr;align-items:center;gap:8px 10px;min-width:0;min-height:88px;padding:14px 16px;border:1px solid var(--control-line);border-radius:14px;background:var(--panel-alt)}
+.library-metric-label{grid-column:1/-1;color:var(--text-secondary);font:550 12px/1.4 var(--sans)}
+.library-metric strong{grid-column:1;align-self:end;color:var(--text-main);font:700 28px/1 var(--sans);font-variant-numeric:tabular-nums}
+.library-metric small{grid-column:2;grid-row:2;align-self:end;padding:5px 9px;border-radius:999px;background:var(--action-soft);color:var(--action);font:600 11px/1.4 var(--sans);white-space:nowrap}
+@media(max-width:760px){.library-overview{gap:16px;margin-bottom:22px;padding:20px 16px}.library-overview-heading p{font-size:13px}.library-metrics{gap:8px}.library-metric{min-height:82px;padding:12px 10px;gap:7px}.library-metric-label{font-size:11px}.library-metric strong{font-size:23px}.library-metric small{padding:4px 7px;font-size:10px}}
 .continue-wrap{margin-bottom:26px}
 .continue-list{padding-top:0;padding-bottom:6px}
 #library-view>.section-head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:24px}
@@ -300,7 +319,7 @@ button.brand:focus-visible{outline:3px solid var(--action);outline-offset:6px;bo
 .category-chip.is-active{background:var(--action);color:var(--action-contrast,#fff);border-color:var(--action)}
 .category-chip:focus-visible{outline:3px solid var(--action);outline-offset:3px}
 @media(max-width:1000px){#library-view>.section-head{flex-wrap:wrap;gap:12px}.category-filters{justify-content:flex-start;flex-wrap:nowrap;width:100%;overflow-x:auto;padding:4px 2px 8px;scrollbar-width:thin}.category-chip{min-height:40px}}
-@media(max-width:760px){.library-heading{font-size:26px;margin-bottom:20px;letter-spacing:-.5px}.continue-wrap{margin-bottom:22px}.continue-open{padding-top:8px;padding-bottom:8px;min-height:126px}}
+@media(max-width:760px){.library-heading{font-size:26px;letter-spacing:-.5px}.continue-wrap{margin-bottom:22px}.continue-open{padding-top:8px;padding-bottom:8px;min-height:126px}}
 @media(prefers-reduced-motion:reduce){.category-chip{transition:none}}
 
 .book>.cover h3:not(.long-cover-title){font-size:clamp(17px,1.4vw,22px);line-height:1.25}
