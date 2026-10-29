@@ -9,7 +9,10 @@
     const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     const uid=()=>globalThis.crypto?.randomUUID?.()||`mark-${Date.now()}-${Math.random().toString(36).slice(2)}`;
     function loadState(){try{const value=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');return value&&typeof value==='object'&&!Array.isArray(value)?value:{}}catch(_){return {}}}
-    const CONTENT_REVISION=2;
+    const CONTENT_REVISION=3;
+    function readingChapterCount(id){return booksData.find(book=>book.id===id)?.chapters.length||0}
+    function normalizeReadChapters(id,values){const total=readingChapterCount(id);return [...new Set((Array.isArray(values)?values:[]).filter(index=>Number.isInteger(index)&&index>=0&&index<total))].sort((a,b)=>a-b)}
+    function readingProgress(id,chapters,completed=false){const total=readingChapterCount(id);return completed?100:total?Math.round(normalizeReadChapters(id,chapters).length/total*100):0}
     function migrateReadingState(value){
       const state=value&&typeof value==='object'&&!Array.isArray(value)?JSON.parse(JSON.stringify(value)):{};
       if(state.contentRevision===CONTENT_REVISION)return state;
@@ -23,11 +26,21 @@
       for(const [id,book] of Object.entries(state.books||{})){
         if(book.started||book.progress>0||book.lastRead)book.chapter=shift(id,book.chapter);
         if(previousRevision===0||id==='four-agreements-companion')book.readPosition=null;
+        if(previousRevision<3){
+          const knownChapters=Array.isArray(book.readChapters)?book.readChapters:((book.started||book.progress>0||book.lastRead)?[Number(book.chapter)||0]:[]);
+          book.readChapters=book.completed?Array.from({length:readingChapterCount(id)},(_,index)=>index):normalizeReadChapters(id,knownChapters);
+          book.progress=readingProgress(id,book.readChapters,Boolean(book.completed));
+        }
       }
       for(const key of ['annotations','bookmarks','reviewQueue'])for(const item of state[key]||[]){
         const previous=item.chapter;item.chapter=shift(item.bookId,previous);
         if(key==='bookmarks')item.id=`${item.bookId}-${item.chapter}`;
         if(key==='reviewQueue'&&Number.isInteger(item.questionIndex))item.id=`${item.bookId}-${item.chapter}-${item.questionIndex}`;
+      }
+      if(previousRevision<3)for(const [id,book] of Object.entries(state.books||{})){
+        const evidenced=['annotations','bookmarks','reviewQueue'].flatMap(key=>(state[key]||[]).filter(item=>item.bookId===id).map(item=>item.chapter));
+        book.readChapters=book.completed?Array.from({length:readingChapterCount(id)},(_,index)=>index):normalizeReadChapters(id,[...(book.readChapters||[]),...evidenced]);
+        book.progress=readingProgress(id,book.readChapters,Boolean(book.completed));
       }
       state.contentRevision=CONTENT_REVISION;return state;
     }
@@ -37,12 +50,12 @@
     const bookmarks=Array.isArray(stored.bookmarks)?stored.bookmarks.filter(m=>booksData.some(b=>b.id===m.bookId)&&Number.isInteger(m.chapter)):[];
     function readingSize(state){fontSizeCustomized=state?.fontSizeCustomized===true;return fontSizeCustomized&&Number.isInteger(state?.fontSizePt)?Math.max(10,Math.min(48,state.fontSizePt)):14}
     fontSize=readingSize(stored);
-    booksData.forEach(b=>{const state=stored.books?.[b.id];if(state){b.chapter=Math.max(0,Math.min(b.chapters.length-1,Number(state.chapter)||0));b.progress=Math.max(0,Math.min(100,Number(state.progress)||0));b.favorite=Boolean(state.favorite);b.started=Boolean(state.started);b.completed=Boolean(state.completed);b.lastRead=Number(state.lastRead)||0;b.continueDismissedAt=Number(state.continueDismissedAt)||0;b.readPosition=state.readPosition||null;b.coverPath=typeof state.coverPath==='string'?state.coverPath:null;b.libraryHidden=Boolean(state.libraryHidden);b.libraryVisibilityUpdatedAt=Number(state.libraryVisibilityUpdatedAt)||0}else if(b.started&&!b.lastRead)b.lastRead=Date.now()});
+    booksData.forEach(b=>{const state=stored.books?.[b.id];if(state){b.chapter=Math.max(0,Math.min(b.chapters.length-1,Number(state.chapter)||0));b.readChapters=normalizeReadChapters(b.id,state.readChapters);b.completed=Boolean(state.completed);b.progress=readingProgress(b.id,b.readChapters,b.completed);b.favorite=Boolean(state.favorite);b.started=Boolean(state.started);b.lastRead=Number(state.lastRead)||0;b.continueDismissedAt=Number(state.continueDismissedAt)||0;b.readPosition=state.readPosition||null;b.coverPath=typeof state.coverPath==='string'?state.coverPath:null;b.libraryHidden=Boolean(state.libraryHidden);b.libraryVisibilityUpdatedAt=Number(state.libraryVisibilityUpdatedAt)||0}else{b.readChapters=[];b.progress=0;if(b.started&&!b.lastRead)b.lastRead=Date.now()}});
     let syncUserId=null,guestSnapshot=null,applyingAccountState=false;
-    function snapshotState(){const books=Object.fromEntries(booksData.map(b=>[b.id,{chapter:b.chapter,progress:b.progress,favorite:b.favorite,started:Boolean(b.started),completed:Boolean(b.completed),lastRead:b.lastRead||0,continueDismissedAt:b.continueDismissedAt||0,readPosition:b.readPosition||null,coverPath:b.coverPath||null,libraryHidden:Boolean(b.libraryHidden),libraryVisibilityUpdatedAt:b.libraryVisibilityUpdatedAt||0}]));return {contentRevision:CONTENT_REVISION,books,annotations:[...annotations],bookmarks:[...bookmarks],reviewQueue:[...reviewQueue],fontSizePt:fontSize,fontSizeCustomized}}
+    function snapshotState(){const books=Object.fromEntries(booksData.map(b=>[b.id,{chapter:b.chapter,readChapters:normalizeReadChapters(b.id,b.readChapters),progress:readingProgress(b.id,b.readChapters,b.completed),favorite:b.favorite,started:Boolean(b.started),completed:Boolean(b.completed),lastRead:b.lastRead||0,continueDismissedAt:b.continueDismissedAt||0,readPosition:b.readPosition||null,coverPath:b.coverPath||null,libraryHidden:Boolean(b.libraryHidden),libraryVisibilityUpdatedAt:b.libraryVisibilityUpdatedAt||0}]));return {contentRevision:CONTENT_REVISION,books,annotations:[...annotations],bookmarks:[...bookmarks],reviewQueue:[...reviewQueue],fontSizePt:fontSize,fontSizeCustomized}}
     function persist(afterSync){try{const state=snapshotState();localStorage.setItem(syncUserId?`${STORAGE_KEY}:${syncUserId}`:STORAGE_KEY,JSON.stringify(state));if(!syncUserId)guestSnapshot=state;else if(!applyingAccountState)window.BookwiseCloudSync?.schedule(state,afterSync);return true}catch(_){toast('บันทึกในเบราว์เซอร์ไม่สำเร็จ กรุณาตรวจพื้นที่จัดเก็บ');return false}}
-    function applyAccountState(state){authorFilter=null;categoryFilter=null;readingReady=false;clearTimeout(positionTimer);const next=migrateReadingState(state);applyingAccountState=true;booksData.forEach(b=>{const saved=next.books?.[b.id]||{};b.chapter=Math.max(0,Math.min(b.chapters.length-1,Number(saved.chapter)||0));b.progress=Math.max(0,Math.min(100,Number(saved.progress)||0));b.favorite=Boolean(saved.favorite);b.started=Boolean(saved.started);b.completed=Boolean(saved.completed);b.lastRead=Number(saved.lastRead)||0;b.continueDismissedAt=Number(saved.continueDismissedAt)||0;b.readPosition=saved.readPosition||null;b.libraryHidden=Boolean(saved.libraryHidden);b.libraryVisibilityUpdatedAt=Number(saved.libraryVisibilityUpdatedAt)||0;b.coverPath=typeof saved.coverPath==='string'&&syncUserId&&saved.coverPath.startsWith(`${syncUserId}/`)?saved.coverPath:null;b.coverUrl=null});annotations.splice(0,annotations.length,...(Array.isArray(next.annotations)?next.annotations.filter(a=>booksData.some(b=>b.id===a.bookId)&&Array.isArray(a.segments)):[]));bookmarks.splice(0,bookmarks.length,...(Array.isArray(next.bookmarks)?next.bookmarks.filter(m=>booksData.some(b=>b.id===m.bookId)&&Number.isInteger(m.chapter)):[]));reviewQueue.splice(0,reviewQueue.length,...(Array.isArray(next.reviewQueue)?next.reviewQueue.filter(c=>booksData.some(b=>b.id===c.bookId)&&Number.isFinite(c.due)):[]));clearDeletedBookData();fontSize=readingSize(next);showView('all');persist();applyingAccountState=false}
-    window.BookwiseApp={migrateState:migrateReadingState,getState:snapshotState,getCachedState:id=>{try{return migrateReadingState(JSON.parse(localStorage.getItem(`${STORAGE_KEY}:${id}`)||'{}'))}catch(_){return {}}},getGuestState:()=>guestSnapshot||snapshotState(),activateAccount:(id,state)=>{syncUserId=id;applyAccountState(state)},activateGuest:()=>{syncUserId=null;applyAccountState(guestSnapshot||{})},toast};
+    function applyAccountState(state){authorFilter=null;categoryFilter=null;readingReady=false;clearTimeout(positionTimer);const next=migrateReadingState(state);applyingAccountState=true;booksData.forEach(b=>{const saved=next.books?.[b.id]||{};b.chapter=Math.max(0,Math.min(b.chapters.length-1,Number(saved.chapter)||0));b.readChapters=normalizeReadChapters(b.id,saved.readChapters);b.completed=Boolean(saved.completed);b.progress=readingProgress(b.id,b.readChapters,b.completed);b.favorite=Boolean(saved.favorite);b.started=Boolean(saved.started);b.lastRead=Number(saved.lastRead)||0;b.continueDismissedAt=Number(saved.continueDismissedAt)||0;b.readPosition=saved.readPosition||null;b.libraryHidden=Boolean(saved.libraryHidden);b.libraryVisibilityUpdatedAt=Number(saved.libraryVisibilityUpdatedAt)||0;b.coverPath=typeof saved.coverPath==='string'&&syncUserId&&saved.coverPath.startsWith(`${syncUserId}/`)?saved.coverPath:null;b.coverUrl=null});annotations.splice(0,annotations.length,...(Array.isArray(next.annotations)?next.annotations.filter(a=>booksData.some(b=>b.id===a.bookId)&&Array.isArray(a.segments)):[]));bookmarks.splice(0,bookmarks.length,...(Array.isArray(next.bookmarks)?next.bookmarks.filter(m=>booksData.some(b=>b.id===m.bookId)&&Number.isInteger(m.chapter)):[]));reviewQueue.splice(0,reviewQueue.length,...(Array.isArray(next.reviewQueue)?next.reviewQueue.filter(c=>booksData.some(b=>b.id===c.bookId)&&Number.isFinite(c.due)):[]));clearDeletedBookData();fontSize=readingSize(next);showView('all');persist();applyingAccountState=false}
+    window.BookwiseApp={migrateState:migrateReadingState,readingProgress:(id,chapters,completed)=>readingProgress(id,chapters,completed),getState:snapshotState,getCachedState:id=>{try{return migrateReadingState(JSON.parse(localStorage.getItem(`${STORAGE_KEY}:${id}`)||'{}'))}catch(_){return {}}},getGuestState:()=>guestSnapshot||snapshotState(),activateAccount:(id,state)=>{syncUserId=id;applyAccountState(state)},activateGuest:()=>{syncUserId=null;applyAccountState(guestSnapshot||{})},toast};
     function toast(message){const el=document.getElementById('toast');el.textContent=message;el.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>el.classList.remove('show'),2800)}
     const coverUrlLoads=new Map(), coverFailures=new Map();
     let coverObserver;
@@ -306,7 +319,7 @@
     function clearDeletedBookData(){
       const deleted=new Set(booksData.filter(book=>book.libraryHidden).map(book=>book.id));
       for(const book of booksData)if(deleted.has(book.id)){
-        book.chapter=0;book.progress=0;book.favorite=false;book.started=false;book.completed=false;
+        book.chapter=0;book.readChapters=[];book.progress=0;book.favorite=false;book.started=false;book.completed=false;
         book.lastRead=0;book.continueDismissedAt=0;book.readPosition=null;book.coverPath=null;book.coverUrl=null;
       }
       for(const records of [annotations,bookmarks,reviewQueue])records.splice(0,records.length,...records.filter(record=>!deleted.has(record.bookId)));
@@ -316,7 +329,7 @@
       const book=booksData.find(item=>item.id===bookId);
       if(!book||book.libraryHidden||!requireLogin())return;
       if(!window.confirm(`ลบ “${book.title}” ออกจากห้องสมุดอย่างถาวรหรือไม่?\nหนังสือ ความคืบหน้า โน้ต บุ๊กมาร์ก การ์ดทบทวน และปกที่อัปโหลดจะถูกลบ กู้คืนไม่ได้`))return;
-      const previous={chapter:book.chapter,progress:book.progress,favorite:book.favorite,started:book.started,completed:book.completed,lastRead:book.lastRead,continueDismissedAt:book.continueDismissedAt,readPosition:book.readPosition,coverPath:book.coverPath,coverUrl:book.coverUrl,libraryHidden:book.libraryHidden,libraryVisibilityUpdatedAt:book.libraryVisibilityUpdatedAt};
+      const previous={chapter:book.chapter,readChapters:book.readChapters,progress:book.progress,favorite:book.favorite,started:book.started,completed:book.completed,lastRead:book.lastRead,continueDismissedAt:book.continueDismissedAt,readPosition:book.readPosition,coverPath:book.coverPath,coverUrl:book.coverUrl,libraryHidden:book.libraryHidden,libraryVisibilityUpdatedAt:book.libraryVisibilityUpdatedAt};
       const previousAnnotations=annotations.filter(item=>item.bookId===book.id),previousBookmarks=bookmarks.filter(item=>item.bookId===book.id),previousCards=reviewQueue.filter(item=>item.bookId===book.id);
       const coverPath=book.coverPath;
       book.libraryHidden=true;book.libraryVisibilityUpdatedAt=Date.now();

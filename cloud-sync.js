@@ -60,7 +60,7 @@
     let changed = false;
     for (const id of deleted) {
       const book = state.books[id] || {};
-      const cleared = { chapter: 0, progress: 0, favorite: false, started: false, completed: false,
+      const cleared = { chapter: 0, readChapters: [], progress: 0, favorite: false, started: false, completed: false,
         lastRead: 0, continueDismissedAt: 0, readPosition: null, coverPath: null };
       if (Object.entries(cleared).some(([key, value]) => book[key] !== value)) {
         state.books[id] = { ...book, ...cleared };
@@ -81,13 +81,16 @@
     result.books = { ...(remote.books || {}) };
     for (const [id, guest] of Object.entries(local.books || {})) {
       const saved = result.books[id] || {};
+      const readChapters = [...new Set([...(Array.isArray(saved.readChapters)?saved.readChapters:[]),...(Array.isArray(guest.readChapters)?guest.readChapters:[])])];
+      const completed = Boolean(saved.completed || guest.completed);
       result.books[id] = {
         chapter: (Number(guest.lastRead) || 0) > (Number(saved.lastRead) || 0) ? guest.chapter : saved.chapter ?? guest.chapter,
         readPosition: (Number(guest.lastRead) || 0) > (Number(saved.lastRead) || 0) ? guest.readPosition || null : saved.readPosition || null,
-        progress: Math.max(Number(saved.progress) || 0, Number(guest.progress) || 0),
+        readChapters,
+        progress: app.readingProgress(id, readChapters, completed),
         favorite: Boolean(saved.favorite || guest.favorite),
         started: Boolean(saved.started || guest.started),
-        completed: Boolean(saved.completed || guest.completed),
+        completed,
         lastRead: Math.max(Number(saved.lastRead) || 0, Number(guest.lastRead) || 0),
         continueDismissedAt: Math.max(Number(saved.continueDismissedAt)||0, Number(guest.continueDismissedAt)||0),
         libraryHidden: Boolean(saved.libraryHidden || guest.libraryHidden),
@@ -123,6 +126,14 @@
         changed = true;
         continue;
       }
+      const remoteChapters = Array.isArray(remoteBook.readChapters) ? remoteBook.readChapters : [];
+      const readChapters = [...new Set([...remoteChapters,...(Array.isArray(localBook.readChapters)?localBook.readChapters:[])])];
+      if (readChapters.length !== remoteChapters.length || readChapters.some(chapter=>!remoteChapters.includes(chapter))) {
+        state.books ||= {};
+        state.books[id] = { ...(state.books[id] || remoteBook), readChapters,
+          progress: app.readingProgress(id, readChapters, Boolean(remoteBook.completed || localBook.completed)) };
+        changed = true;
+      }
       if (Number(localBook.continueDismissedAt) > (Number(remoteBook.continueDismissedAt)||0)) {
         state.books ||= {}; state.books[id] = { ...remoteBook, continueDismissedAt: localBook.continueDismissedAt }; changed = true;
       }
@@ -134,7 +145,7 @@
       if (localBook.readPosition && Number(localBook.lastRead) > (Number(remoteBook.lastRead) || 0)) {
         state.books ||= {};
         state.books[id] = { ...(state.books[id] || remoteBook), chapter: localBook.chapter, readPosition: localBook.readPosition,
-          lastRead: localBook.lastRead, started: true, progress: Math.max(remoteBook.progress || 0, localBook.progress || 0) };
+          lastRead: localBook.lastRead, started: true, readChapters, progress: app.readingProgress(id, readChapters, Boolean(remoteBook.completed || localBook.completed)) };
         changed = true;
       }
     }

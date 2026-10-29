@@ -256,10 +256,11 @@ button.brand:focus-visible{outline:3px solid var(--action);outline-offset:6px;bo
 #home-top{justify-content:flex-end;margin-bottom:22px;min-height:22px}
 .book{display:flex;flex-direction:column;cursor:default}
 .book>.cover{flex-shrink:0;cursor:pointer}
-.book-meta{display:block;margin-top:14px}
-.book-meta h3{margin:0;font-size:17px;line-height:1.5}
-.book-title-button{min-height:0;cursor:pointer}
-.book-authors{font:400 13px/1.7 var(--sans);color:var(--text-secondary);margin-top:1px;overflow-wrap:anywhere}
+.book-meta{display:grid;grid-template-rows:3em 24px;align-content:start;gap:6px;margin-top:14px}
+.book-meta h3{display:block;height:3em;min-width:0;margin:0;overflow:hidden;font-size:17px;line-height:1.5}
+.book-title-button{display:-webkit-box;width:100%;height:100%;min-height:0;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2;cursor:pointer}
+.book-meta .book-summary-status{height:24px;max-width:100%;margin:0;overflow:hidden;white-space:nowrap}
+.book-authors{display:-webkit-box;height:2.8em;min-height:2.8em;margin-top:8px;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2;font:400 13px/1.4 var(--sans);color:var(--text-secondary);overflow-wrap:anywhere}
 .author-link{display:inline;border:0;padding:1px 0;background:transparent;color:inherit;font:inherit;text-align:left;cursor:pointer;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:4px;transition:color .18s,text-decoration-color .18s}
 .author-link:hover{color:var(--action);text-decoration-color:currentColor}
 .author-link:focus-visible,.continue-open:focus-visible,.continue-dismiss:focus-visible,.cover>.fav:focus-visible{outline:3px solid var(--action);outline-offset:3px;border-radius:8px}

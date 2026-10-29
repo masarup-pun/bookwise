@@ -112,7 +112,7 @@ function updateChapterControls(book,n){
     forward.setAttribute('aria-label',isLast?'อ่านจบเล่มนี้':'บทถัดไป');
     forward.onclick=()=>{
       if(!isLast){showChapter(n+1).then(()=>window.scrollTo(0,0));return;}
-      book.completed=true;book.progress=100;persist();renderContinue();toast('อ่านหนังสือเล่มนี้จบแล้ว');showView('all');
+      book.completed=true;book.readChapters=Array.from({length:book.chapters.length},(_,index)=>index);book.progress=100;persist();renderContinue();toast('อ่านหนังสือเล่มนี้จบแล้ว');showView('all');
     };
   });
 }
@@ -138,7 +138,7 @@ async function showChapter(index,{resume=false}={}){
     if(requestId!==chapterLoadId||!signedIn())return;
     if(!Array.isArray(chapter.body)||!Array.isArray(chapter.quiz))throw new Error('invalid_chapter');
     book.chapters[n]={...chapter,title:book.chapters[n].title};book.chapter=n;book.started=true;book.lastRead=Date.now();
-    book.progress=Math.max(book.progress||0,Math.round(((n+.5)/(book.totalChapters||book.chapters.length))*100));persist();
+    book.readChapters=normalizeReadChapters(book.id,[...(book.readChapters||[]),n]);book.progress=readingProgress(book.id,book.readChapters,book.completed);persist();
     document.getElementById('chapter-deck').textContent=plainText(chapter.deck);
     document.getElementById('reader-progress-fill').style.width=book.progress+'%';
     document.getElementById('reader-progress-text').textContent=book.progress+'%';
