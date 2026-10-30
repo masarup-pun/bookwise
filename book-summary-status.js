@@ -38,5 +38,6 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'meditations': 'revised',
   'on-the-shortness-of-life': 'revised',
   'indistractable-supplemental-workbook': 'revised',
-  'courage-is-calling': 'revised'
+  'courage-is-calling': 'revised',
+  'solving-procrastination-puzzle': 'revised'
 });
