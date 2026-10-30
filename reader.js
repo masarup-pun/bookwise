@@ -409,3 +409,43 @@ window.BookwiseApp.authChanged=authenticated=>{
   updateReviewBadge();
 };
 window.addEventListener('focus',()=>{if(activeView==='review'&&signedIn()&&!document.querySelector('.review-session'))renderReview();});
+
+function shortcutTypingTarget(target){
+  return target instanceof Element&&Boolean(target.closest('input,textarea,select,[contenteditable]:not([contenteditable="false"]),[role="textbox"]'));
+}
+document.addEventListener('keydown',event=>{
+  const key=event.key.toLowerCase(),target=event.target;
+  const commandFind=(event.metaKey||event.ctrlKey)&&!event.altKey&&!event.shiftKey&&key==='f';
+  if(commandFind){
+    if(shortcutTypingTarget(target)&&target.id!=='search-input')return;
+    event.preventDefault();
+    const dialog=document.getElementById('search-dialog'),input=document.getElementById('search-input');
+    if(dialog.open){input.focus();input.select();}
+    else document.getElementById('search-btn').click();
+    return;
+  }
+  if(event.metaKey||event.ctrlKey||event.altKey||event.shiftKey||shortcutTypingTarget(target)||document.querySelector('dialog[open]'))return;
+
+  const readerOpen=reader.style.display==='block';
+  if(readerOpen){
+    const pickerOpen=document.getElementById('chapter-dialog').open||[...document.querySelectorAll('.chapter-controls .chapter-dropdown')].some(dropdown=>!dropdown.hidden);
+    if(!pickerOpen&&key==='arrowleft'){
+      event.preventDefault();document.getElementById('chapter-prev').click();return;
+    }
+    if(!pickerOpen&&key==='arrowright'){
+      event.preventDefault();document.getElementById('chapter-forward').click();return;
+    }
+    if(key==='enter'){
+      const active=document.activeElement;
+      const interactive=reader.contains(active)&&active.matches('button,a,input,select,textarea,[role="button"],[tabindex]:not([tabindex="-1"])');
+      const markRead=document.getElementById('chapter-mark-read');
+      if(!interactive&&!markRead.disabled){event.preventDefault();markRead.click();return;}
+    }
+  }
+
+  const view={h:'all',f:'favorites',n:'saved'}[key];
+  if(view){
+    event.preventDefault();
+    document.querySelector(`.nav [data-view="${view}"]`)?.click();
+  }
+});
