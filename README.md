@@ -38,6 +38,16 @@
 
 ต้นฉบับบทสรุปอยู่ใน `private/book-content.json` และไฟล์งานเดิมอยู่ใน `private/content-source/` ทั้งสองถูก Git ignore รวมถึงไฟล์หนังสือใน `Books/` รัน `node scripts/prepare-content.cjs` หลังแก้เนื้อหา เพื่อสร้าง catalog และ `private/import-book-content.sql` แล้วนำ SQL นี้เข้า Supabase ด้วย SQL Editor หรือ admin connection ห้ามเพิ่มไฟล์ SQL นำเข้าและ JSON เนื้อหาใน Git หรือ public hosting
 
+สำหรับหนังสือที่แก้ตาม guideline ล่าสุดและตรวจผ่านครบทั้งเล่มแล้ว ให้นำเข้าด้วย batch เฉพาะเล่ม:
+
+```sh
+node scripts/import-content.cjs --keychain-only --batch=private/import-batches/<verified-book>.json
+```
+
+ตัวนำเข้าอ่านข้อมูลรับรองจาก macOS Keychain ภายในโปรแกรมในเครื่อง รหัสไม่ถูกแสดง ส่งกลับเป็นผลลัพธ์ ใส่ command argument หรือบันทึกในไฟล์/Git โหมด `--keychain-only` จะหยุดหากอ่านไม่ได้ โดยไม่ถามรหัสผ่าน การทำงานใน Codex อาจต้องให้สิทธิ์เฉพาะตัวนำเข้าออกจาก sandbox เพื่อเข้าถึง Keychain และ Supabase; การค้นหาไม่พบภายใน sandbox ไม่ยืนยันว่ารายการ Keychain หาย ห้ามแก้ด้วยการเปิดสิทธิ์ทั้งเครื่องหรือบันทึกรหัสลง `.env`
+
+เมื่อ commit ธุรกรรมสำเร็จ ตัวนำเข้าจะยืนยันจำนวนบทและข้อมูล JSON ใน Production ตรงกับ batch พร้อมเขียนใบยืนยันที่ไม่มีรหัสผ่านใน `private/import-receipts/` และแสดง Content SHA-256 ไว้ตรวจย้อนหลัง macOS ยังอาจขอให้ปลดล็อก Keychain หรืออนุญาตแอปเมื่อสิทธิ์เปลี่ยน
+
 รัน `supabase/content-access-test.sql` ใน SQL Editor เพื่อตรวจว่า guest ถูกปฏิเสธ, signed-in reader อ่านได้, anonymous Auth user อ่านไม่ได้ และ browser ไม่มีสิทธิ์แก้เนื้อหา เนื้อหาที่อ่านมาแล้วถูกล้างจาก DOM และ memory เมื่อ Logout รวมถึงกรณี request ยังไม่เสร็จ
 
 เวอร์ชันเก่าเคยฝังบทสรุปไว้ในไฟล์สาธารณะ การย้ายครั้งนี้ไม่ลบ Git history หรือสำเนาที่เคยดาวน์โหลด ต้องจัดการประวัติ repository แยกต่างหากหากต้องการถอนการเข้าถึงสำเนาเก่า
