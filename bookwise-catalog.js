@@ -2284,28 +2284,28 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทนำ — หนังสือเล่มนี้พูดถึงอะไร"
+        "title": "บทนำ - หนังสือเล่มนี้พูดถึงอะไร (What This Book Is About And What It Is Not)"
       },
       {
-        "title": "บทที่ 1 — ธุรกิจที่ผมกำลังทำอยู่"
+        "title": "บทที่ 1 - ธุรกิจที่ผมกำลังทำอยู่ (The Kind Of Business We Are In)"
       },
       {
-        "title": "บทที่ 2 — สามช่วงสู่ความสำเร็จในตลาดต่างประเทศ"
+        "title": "บทที่ 2 - สามช่วงสู่ความสำเร็จในตลาดต่างประเทศ (The 3 Phases to International Success)"
       },
       {
-        "title": "บทที่ 3 — องค์ประกอบสามด้านของผู้เล่นระดับนานาชาติ"
+        "title": "บทที่ 3 - องค์ประกอบสามด้านของผู้เล่นระดับนานาชาติ (The Triad Components of International Player Success)"
       },
       {
-        "title": "บทที่ 4 — ความคิดส่งท้าย"
+        "title": "บทที่ 4 - ความคิดส่งท้าย (Final Thoughts)"
       },
       {
-        "title": "บทที่ 5 — การตลาดเสริม 6 เรื่อง"
+        "title": "บทที่ 5 - การตลาดเสริม 6 เรื่อง (6 Extra Marketing Stuff)"
       },
       {
-        "title": "บทที่ 6 — แหล่งข้อมูลและประวัติผู้เขียน"
+        "title": "บทที่ 6 - แหล่งข้อมูลและประวัติผู้เขียน (Resources)"
       },
       {
-        "title": "บทที่ 7 — โบนัสสำหรับผู้อ่าน"
+        "title": "บทที่ 7 - โบนัสสำหรับผู้อ่าน (Free Bonus For Readers)"
       }
     ]
   },
