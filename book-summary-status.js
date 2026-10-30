@@ -36,5 +36,6 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'tao-te-ching': 'revised',
   'permission-to-feel': 'revised',
   'meditations': 'revised',
-  'on-the-shortness-of-life': 'revised'
+  'on-the-shortness-of-life': 'revised',
+  'indistractable-supplemental-workbook': 'revised'
 });
