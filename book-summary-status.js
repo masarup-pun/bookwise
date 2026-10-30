@@ -31,5 +31,6 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'the-book-of-elon': 'revised',
   'why-has-nobody-told-me': 'revised',
   'you-are-the-placebo': 'revised',
-  'power-subconscious-mind': 'revised'
+  'power-subconscious-mind': 'revised',
+  'remains-of-the-day': 'revised'
 });

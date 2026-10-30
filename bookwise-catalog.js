@@ -1405,28 +1405,28 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทนำ — การเดินทางของพ่อบ้าน (Prologue: July 1956 — Darlington Hall)"
+        "title": "บทนำ - การเดินทางของพ่อบ้าน (Prologue: July 1956 - Darlington Hall)"
       },
       {
-        "title": "วันที่หนึ่ง — เย็นที่ซอลส์บรี (Day One: Evening — Salisbury)"
+        "title": "วันที่หนึ่ง - เย็นที่ซอลส์บรี (Day One - Evening - Salisbury)"
       },
       {
-        "title": "วันที่สอง — เช้าที่ซอลส์บรี (Day Two: Morning — Salisbury)"
+        "title": "วันที่สอง - เช้าที่ซอลส์บรี (Day Two - Morning - Salisbury)"
       },
       {
-        "title": "วันที่สอง — บ่ายที่บ่อน้ำมอร์ติเมอร์ (Day Two: Afternoon — Mortimer’s Pond)"
+        "title": "วันที่สอง - บ่ายที่บ่อน้ำมอร์ทิเมอร์ (Day Two - Afternoon - Mortimer's Pond, Dorset)"
       },
       {
-        "title": "วันที่สาม — เช้าที่ทอนตัน (Day Three: Morning — Taunton)"
+        "title": "วันที่สาม - เช้าที่ทอนตัน (Day Three - Morning - Taunton, Somerset)"
       },
       {
-        "title": "วันที่สาม — เย็นที่มอสคอมบ์ (Day Three: Evening — Moscombe)"
+        "title": "วันที่สาม - ค่ำที่มอสคอมบ์ (Day Three - Evening - Moscombe, near Tavistock, Devon)"
       },
       {
-        "title": "วันที่สี่ — บ่ายที่ลิตเติลคอมป์ตัน (Day Four: Afternoon — Little Compton)"
+        "title": "วันที่สี่ - บ่ายที่ลิตเทิลคอมป์ตัน (Day Four - Afternoon - Little Compton, Cornwall)"
       },
       {
-        "title": "วันที่หก — เย็นที่เวย์มัธ (Day Six: Evening — Weymouth)"
+        "title": "วันที่หก - ค่ำที่เวย์มัธ (Day Six - Evening - Weymouth)"
       }
     ]
   },
