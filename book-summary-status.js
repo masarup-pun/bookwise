@@ -34,5 +34,6 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'power-subconscious-mind': 'revised',
   'remains-of-the-day': 'revised',
   'tao-te-ching': 'revised',
-  'permission-to-feel': 'revised'
+  'permission-to-feel': 'revised',
+  'meditations': 'revised'
 });
