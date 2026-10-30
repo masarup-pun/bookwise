@@ -1266,7 +1266,7 @@ window.BOOKWISE_CATALOG = [
     "color": "#d6e3e1",
     "text": "#243b3a",
     "added": 28,
-    "totalChapters": 37,
+    "totalChapters": 38,
     "chapter": 0,
     "progress": 0,
     "favorite": false,
@@ -1274,115 +1274,118 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทนำ — เครื่องมือสำหรับเข้าใจและดูแลสุขภาพใจ (Introduction)"
+        "title": "บทนำ - คู่มือดูแลสุขภาพใจและรับมือความยาก (Introduction)"
       },
       {
-        "title": "บทที่ 1 — On Dark Places: เข้าใจอารมณ์หม่น (Understanding low mood)"
+        "title": "บทที่ 1 - เข้าใจอารมณ์หม่น (Understanding low mood)"
       },
       {
-        "title": "บทที่ 2 — On Dark Places: หลุมพรางทางอารมณ์ที่ควรระวัง (Mood pitfalls to watch out for)"
+        "title": "บทที่ 2 - กับดักทางอารมณ์ที่ควรสังเกต (Mood pitfalls to watch out for)"
       },
       {
-        "title": "บทที่ 3 — On Dark Places: สิ่งที่ช่วยได้ (Things that help)"
+        "title": "บทที่ 3 - สิ่งที่ช่วยได้ (Things that help)"
       },
       {
-        "title": "บทที่ 4 — On Dark Places: เปลี่ยนวันที่แย่ให้ดีขึ้น (How to turn bad days into better days)"
+        "title": "บทที่ 4 - เปลี่ยนวันแย่ให้ดีขึ้นได้อย่างไร (How to turn bad days into better days)"
       },
       {
-        "title": "บทที่ 5 — On Dark Places: จัดพื้นฐานให้ดี (How to get the basics right)"
+        "title": "บทที่ 5 - วางพื้นฐานให้แน่น (How to get the basics right)"
       },
       {
-        "title": "บทที่ 6 — On Motivation: เข้าใจแรงจูงใจ (Understanding motivation)"
+        "title": "บทที่ 6 - ทำความเข้าใจแรงจูงใจ (Understanding motivation)"
       },
       {
-        "title": "บทที่ 7 — On Motivation: หล่อเลี้ยงความรู้สึกมีแรงทำ (How to nurture that motivation feeling)"
+        "title": "บทที่ 7 - หล่อเลี้ยงความรู้สึกมีแรงจูงใจ (How to nurture that motivation feeling)"
       },
       {
-        "title": "บทที่ 8 — On Motivation: จะทำอย่างไรเมื่อไม่อยากทำ? (How do you make yourself do something when you don’t feel like it?)"
+        "title": "บทที่ 8 - ทำอย่างไรเมื่อไม่อยากทำ (How do you make yourself do something when you don’t feel like it?)"
       },
       {
-        "title": "บทที่ 9 — On Motivation: เปลี่ยนแปลงชีวิตครั้งใหญ่ เริ่มตรงไหน? (Big life changes. Where do I start?)"
+        "title": "บทที่ 9 - การเปลี่ยนแปลงครั้งใหญ่ควรเริ่มตรงไหน (Big life changes. Where do I start?)"
       },
       {
-        "title": "บทที่ 10 — On Emotional Pain: ทำให้ความรู้สึกเจ็บปวดหายไป (Make it all go away!)"
+        "title": "บทที่ 10 - ทำให้มันหายไปให้หมด! (Make it all go away!)"
       },
       {
-        "title": "บทที่ 11 — On Emotional Pain: ทำอย่างไรกับอารมณ์ (What to do with emotions)"
+        "title": "บทที่ 11 - รับมือกับอารมณ์อย่างไร (What to do with emotions)"
       },
       {
-        "title": "บทที่ 12 — On Emotional Pain: พลังของถ้อยคำที่เราใช้ (How to harness the power of your words)"
+        "title": "บทที่ 12 - ใช้พลังของถ้อยคำให้เป็นประโยชน์ (How to harness the power of your words)"
       },
       {
-        "title": "บทที่ 13 — On Emotional Pain: ช่วยเหลือคนที่กำลังทุกข์ใจ (How to support someone)"
+        "title": "บทที่ 13 - จะสนับสนุนใครสักคนได้อย่างไร (How to support someone)"
       },
       {
-        "title": "บทที่ 14 — On Grief: เข้าใจความโศกเศร้า (Understanding grief)"
+        "title": "บทที่ 14 - ทำความเข้าใจความโศกเศร้า (Understanding grief)"
       },
       {
-        "title": "บทที่ 15 — On Grief: ขั้นต่าง ๆ ของความโศกเศร้า (The stages of grief)"
+        "title": "บทที่ 15 - ประสบการณ์ต่าง ๆ ระหว่างความโศกเศร้า (The stages of grief)"
       },
       {
-        "title": "บทที่ 16 — On Grief: งานของการไว้ทุกข์ (The tasks of mourning)"
+        "title": "บทที่ 16 - ภารกิจระหว่างการไว้ทุกข์ (The tasks of mourning)"
       },
       {
-        "title": "บทที่ 17 — On Grief: เสาหลักของความเข้มแข็ง (The pillars of strength)"
+        "title": "บทที่ 17 - เสาหลักแห่งความเข้มแข็ง (The pillars of strength)"
       },
       {
-        "title": "บทที่ 18 — On Self-doubt: รับมือคำวิจารณ์และการไม่เห็นด้วย (Dealing with criticism and disapproval)"
+        "title": "บทที่ 18 - รับมือกับคำวิจารณ์และการไม่เห็นด้วย (Dealing with criticism and disapproval)"
       },
       {
-        "title": "บทที่ 19 — On Self-doubt: กุญแจสู่การสร้างความมั่นใจ (The key to building confidence)"
+        "title": "บทที่ 19 - กุญแจสำคัญของการสร้างความมั่นใจ (The key to building confidence)"
       },
       {
-        "title": "บทที่ 20 — On Self-doubt: คุณไม่ใช่ความผิดพลาดของคุณ (You are not your mistakes)"
+        "title": "บทที่ 20 - คุณไม่ใช่ความผิดพลาดของตัวเอง (You are not your mistakes)"
       },
       {
-        "title": "บทที่ 21 — On Self-doubt: การเป็นตัวเองก็เพียงพอ (Being enough)"
+        "title": "บทที่ 21 - การยอมรับว่าตัวเองดีพอ (Being enough)"
       },
       {
-        "title": "บทที่ 22 — On Fear: ทำให้ความวิตกหายไป! (Make anxiety disappear!)"
+        "title": "บทที่ 22 - ทำให้ความกังวลหายไป! (Make anxiety disappear!)"
       },
       {
-        "title": "บทที่ 23 — On Fear: สิ่งที่เราทำแล้วทำให้วิตกแย่ลง (Things we do that make anxiety worse)"
+        "title": "บทที่ 23 - สิ่งที่เราทำแล้วทำให้ความกังวลหนักขึ้น (Things we do that make anxiety worse)"
       },
       {
-        "title": "บทที่ 24 — On Fear: สงบความวิตกในตอนนี้ (How to calm anxiety right now)"
+        "title": "บทที่ 24 - วิธีสงบความกังวลในตอนนี้ (How to calm anxiety right now)"
       },
       {
-        "title": "บทที่ 25 — On Fear: ทำอย่างไรกับความคิดวิตก (What to do with anxious thoughts)"
+        "title": "บทที่ 25 - รับมือกับความคิดกังวลอย่างไร (What to do with anxious thoughts)"
       },
       {
-        "title": "บทที่ 26 — On Fear: ความกลัวสิ่งที่หลีกเลี่ยงไม่ได้ (Fear of the inevitable)"
+        "title": "บทที่ 26 - ความกลัวต่อสิ่งที่หลีกเลี่ยงไม่ได้ (Fear of the inevitable)"
       },
       {
-        "title": "บทที่ 27 — On Stress: ความเครียดต่างจากความวิตกหรือไม่? (Is stress different from anxiety?)"
+        "title": "บทที่ 27 - ความเครียดต่างจากความกังวลหรือไม่? (Is stress different from anxiety?)"
       },
       {
-        "title": "บทที่ 28 — On Stress: ทำไมการลดความเครียดไม่ใช่คำตอบเดียว (Why reducing stress is not the only answer)"
+        "title": "บทที่ 28 - ทำไมการลดความเครียดจึงไม่ใช่คำตอบทั้งหมด (Why reducing stress is not the only answer)"
       },
       {
-        "title": "บทที่ 29 — On Stress: เมื่อความเครียดที่ดีเริ่มทำร้าย (When good stress goes bad)"
+        "title": "บทที่ 29 - เมื่อความเครียดที่ดีเริ่มส่งผลเสีย (When good stress goes bad)"
       },
       {
-        "title": "บทที่ 30 — On Stress: ทำให้ความเครียดทำงานให้คุณ (Making stress work for you)"
+        "title": "บทที่ 30 - ใช้ความเครียดให้เป็นประโยชน์ (Making stress work for you)"
       },
       {
-        "title": "บทที่ 31 — On Stress: รับมือเมื่อถึงเวลาสำคัญ (Coping when it counts)"
+        "title": "บทที่ 31 - รับมือในเวลาที่สำคัญ (Coping when it counts)"
       },
       {
-        "title": "บทที่ 32 — On a Meaningful Life: ปัญหาของ “ฉันแค่อยากมีความสุข” (The problem with ‘I just want to be happy’)"
+        "title": "บทที่ 32 - ปัญหาของคำว่า 'ฉันแค่อยากมีความสุข' (The problem with ‘I just want to be happy’)"
       },
       {
-        "title": "บทที่ 33 — On a Meaningful Life: ค้นหาสิ่งที่สำคัญ (Working out what matters)"
+        "title": "บทที่ 33 - ค้นหาว่าอะไรสำคัญกับเรา (Working out what matters)"
       },
       {
-        "title": "บทที่ 34 — On a Meaningful Life: สร้างชีวิตที่มีความหมาย (How to create a life with meaning)"
+        "title": "บทที่ 34 - สร้างชีวิตที่มีความหมายได้อย่างไร (How to create a life with meaning)"
       },
       {
-        "title": "บทที่ 35 — On a Meaningful Life: ความสัมพันธ์ (Relationships)"
+        "title": "บทที่ 35 - ความสัมพันธ์ (Relationships)"
       },
       {
-        "title": "บทที่ 36 — On a Meaningful Life: เมื่อใดควรขอความช่วยเหลือ (When to seek help)"
+        "title": "บทที่ 36 - เมื่อไรควรขอความช่วยเหลือ (When to seek help)"
+      },
+      {
+        "title": "ภาคผนวก - เครื่องมือเพิ่มเติม (Spare tools)"
       }
     ]
   },
