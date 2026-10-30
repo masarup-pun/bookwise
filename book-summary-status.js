@@ -32,5 +32,6 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'why-has-nobody-told-me': 'revised',
   'you-are-the-placebo': 'revised',
   'power-subconscious-mind': 'revised',
-  'remains-of-the-day': 'revised'
+  'remains-of-the-day': 'revised',
+  'tao-te-ching': 'revised'
 });
