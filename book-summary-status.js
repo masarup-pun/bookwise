@@ -18,7 +18,7 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'dopamine-nation': 'revised',
   'ego-is-the-enemy': 'revised',
   'science-of-getting-rich': 'revised',
-  'poor-charlie-almanack': 'blocked',
+  'poor-charlie-almanack': 'revised',
   'apple-the-first-50-years': 'revised',
   'building-a-storybrand-2': 'revised',
   'buy-back-your-time': 'revised',
