@@ -30,6 +30,7 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'great-mental-models-volume-4': 'revised',
   'international-player': 'revised',
   'manifest-7-steps': 'revised',
+  'manifest-dive-deeper': 'revised',
   'the-book-of-elon': 'revised',
   'why-has-nobody-told-me': 'revised',
   'you-are-the-placebo': 'revised',
