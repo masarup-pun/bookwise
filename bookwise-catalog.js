@@ -1712,46 +1712,46 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "คำนำ — เราต้องขออนุญาตรู้สึกด้วยหรือ? (Prologue)"
+        "title": "คำนำ - เราต้องขออนุญาตรู้สึกด้วยหรือ? (Prologue)"
       },
       {
-        "title": "บทที่ 1 — อนุญาตให้ตัวเองรู้สึก (Permission to Feel)"
+        "title": "บทที่ 1 - อนุญาตให้ตัวเองรู้สึก (Permission to Feel)"
       },
       {
-        "title": "บทที่ 2 — อารมณ์คือข้อมูล (Emotions Are Information)"
+        "title": "บทที่ 2 - อารมณ์คือข้อมูล (Emotions Are Information)"
       },
       {
-        "title": "บทที่ 3 — ฝึกเป็นนักวิทยาศาสตร์อารมณ์ (How to Become an Emotion Scientist)"
+        "title": "บทที่ 3 - เป็นนักวิทยาศาสตร์อารมณ์ (How to Become an Emotion Scientist)"
       },
       {
-        "title": "บทที่ 4 — R: การรับรู้อารมณ์ (R: Recognizing Emotion)"
+        "title": "บทที่ 4 - R: การรับรู้อารมณ์ (R: Recognizing Emotion)"
       },
       {
-        "title": "บทที่ 5 — U: เข้าใจอารมณ์ (U: Understanding Emotion)"
+        "title": "บทที่ 5 - ทำความเข้าใจอารมณ์ (U: Understanding Emotion)"
       },
       {
-        "title": "บทที่ 6 — L: ตั้งชื่ออารมณ์ (L: Labeling Emotion)"
+        "title": "บทที่ 6 - การติดป้ายชื่ออารมณ์ (L: Labeling Emotion)"
       },
       {
-        "title": "บทที่ 7 — E: แสดงอารมณ์ (E: Expressing Emotion)"
+        "title": "บทที่ 7 - การแสดงออกทางอารมณ์ (E: Expressing Emotion)"
       },
       {
-        "title": "บทที่ 8 — R: กำกับอารมณ์ (R: Regulating Emotion)"
+        "title": "บทที่ 8 - การกำกับอารมณ์ (R: Regulating Emotion)"
       },
       {
-        "title": "บทที่ 9 — อารมณ์ในบ้าน (Emotions at Home)"
+        "title": "บทที่ 9 - อารมณ์ในบ้าน (Emotions at Home)"
       },
       {
-        "title": "บทที่ 10 — อารมณ์ในโรงเรียน: จากอนุบาลถึงมหาวิทยาลัย (Emotions at School: From Preschool to College)"
+        "title": "บทที่ 10 - อารมณ์ในโรงเรียน: จากวัยก่อนเข้าเรียนถึงมหาวิทยาลัย (Emotions at School: From Preschool to College)"
       },
       {
-        "title": "บทที่ 11 — อารมณ์ในที่ทำงาน (Emotions at Work)"
+        "title": "บทที่ 11 - อารมณ์ในที่ทำงาน (Emotions at Work)"
       },
       {
-        "title": "บทส่งท้าย — สร้างการปฏิวัติทางอารมณ์ (Creating an Emotion Revolution)"
+        "title": "Creating an Emotion Revolution - สร้างการปฏิวัติทางอารมณ์"
       },
       {
-        "title": "ประวัติผู้เขียน — มาร์ก แบร็กเก็ตต์ (About the Author)"
+        "title": "เกี่ยวกับผู้เขียน (About the Author)"
       }
     ]
   },

@@ -33,5 +33,6 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'you-are-the-placebo': 'revised',
   'power-subconscious-mind': 'revised',
   'remains-of-the-day': 'revised',
-  'tao-te-ching': 'revised'
+  'tao-te-ching': 'revised',
+  'permission-to-feel': 'revised'
 });
