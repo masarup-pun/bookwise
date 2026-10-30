@@ -3227,31 +3227,31 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทนำ — เริ่มต้นเส้นทางการ Manifest (Introduction)"
+        "title": "บทนำ - จุดเริ่มต้นและกรอบการ Manifest (Introduction)"
       },
       {
-        "title": "ขั้นที่ 1 — เห็นภาพสิ่งที่ต้องการให้ชัด (Step 1: Be Clear in Your Vision)"
+        "title": "ขั้นที่ 1 - เห็นภาพสิ่งที่ต้องการให้ชัด (Step 1: Be Clear in Your Vision)"
       },
       {
-        "title": "ขั้นที่ 2 — ปลดปล่อยความกลัวและความสงสัย (Step 2: Remove Fear and Doubt)"
+        "title": "ขั้นที่ 2 - ปลดปล่อยความกลัวและความสงสัย (Step 2: Remove Fear and Doubt)"
       },
       {
-        "title": "ขั้นที่ 3 — ทำพฤติกรรมให้สอดคล้องกับเป้าหมาย (Step 3: Align Your Behaviour)"
+        "title": "ขั้นที่ 3 - ทำพฤติกรรมให้สอดคล้องกับเป้าหมาย (Step 3: Align Your Behaviour)"
       },
       {
-        "title": "ขั้นที่ 4 — ก้าวผ่านบททดสอบจากจักรวาล (Step 4: Overcome Tests from the Universe)"
+        "title": "ขั้นที่ 4 - ก้าวผ่านบททดสอบจากจักรวาล (Step 4: Overcome Tests from the Universe)"
       },
       {
-        "title": "ขั้นที่ 5 — โอบรับความกตัญญูโดยไม่มีข้อแม้ (Step 5: Embrace Gratitude (without caveats))"
+        "title": "ขั้นที่ 5 - โอบรับความกตัญญูโดยไม่มีข้อแม้ (Step 5: Embrace Gratitude (without caveats))"
       },
       {
-        "title": "ขั้นที่ 6 — เปลี่ยนความอิจฉาให้เป็นแรงบันดาลใจ (Step 6: Turn Envy into Inspiration)"
+        "title": "ขั้นที่ 6 - เปลี่ยนความอิจฉาให้เป็นแรงบันดาลใจ (Step 6: Turn Envy into Inspiration)"
       },
       {
-        "title": "ขั้นที่ 7 — ไว้วางใจจักรวาล (Step 7: Trust in the Universe)"
+        "title": "ขั้นที่ 7 - ไว้วางใจจักรวาล (Step 7: Trust in the Universe)"
       },
       {
-        "title": "บทส่งท้าย — นำทั้งเจ็ดขั้นมาใช้เพื่อสร้างชีวิตที่ดีที่สุด (Epilogue)"
+        "title": "บทส่งท้าย - นำทั้งเจ็ดขั้นมาใช้เพื่อสร้างชีวิตที่ดีที่สุด (Epilogue)"
       }
     ]
   },
