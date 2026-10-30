@@ -1,4 +1,4 @@
-    const booksData=window.BOOKWISE_CATALOG.map(book=>({...book,summaryStatus:window.BOOKWISE_SUMMARY_STATUS?.[book.id]||'pending',chapters:book.chapters.map(chapter=>({...chapter}))}));
+    const booksData=window.BOOKWISE_CATALOG.filter(book=>window.BOOKWISE_SUMMARY_STATUS?.[book.id]==='revised').map(book=>({...book,summaryStatus:'revised',chapters:book.chapters.map(chapter=>({...chapter}))}));
     let authorFilter=null,categoryFilter=null;
     let filter='All',sort='title',activeBook='attention',activeView='all',fontSize=14,fontSizeCustomized=false,quizIndex=0,quizAnswered=false;
     let pendingSelection=null,editingAnnotationId=null;
