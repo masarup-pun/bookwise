@@ -37,5 +37,6 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'permission-to-feel': 'revised',
   'meditations': 'revised',
   'on-the-shortness-of-life': 'revised',
-  'indistractable-supplemental-workbook': 'revised'
+  'indistractable-supplemental-workbook': 'revised',
+  'courage-is-calling': 'revised'
 });
