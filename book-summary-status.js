@@ -35,5 +35,6 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'remains-of-the-day': 'revised',
   'tao-te-ching': 'revised',
   'permission-to-feel': 'revised',
-  'meditations': 'revised'
+  'meditations': 'revised',
+  'on-the-shortness-of-life': 'revised'
 });

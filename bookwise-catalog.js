@@ -4115,13 +4115,13 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทที่หนึ่ง — ชีวิตสั้นเพราะเราใช้เวลาอย่างไร (On the Shortness of Life)"
+        "title": "บทที่ 1 - ชีวิตสั้นเพราะเราใช้เวลาอย่างไร (On the Shortness of Life)"
       },
       {
-        "title": "บทที่สอง — ปลอบประโลมเฮลเวีย (Consolation to Helvia)"
+        "title": "บทที่ 2 - ปลอบประโลมเฮลเวีย (Consolation to Helvia)"
       },
       {
-        "title": "บทที่สาม — ความสงบของจิตใจ (On Tranquillity of Mind)"
+        "title": "บทที่ 3 - ความสงบของจิตใจ (On Tranquillity of Mind)"
       }
     ]
   },
