@@ -17,6 +17,7 @@ function captureReadingPosition(save=true){
     if(anchor){const rect=anchor.getBoundingClientRect();position={chapter:book.chapter,block:anchor.id==='recall'?'recall':anchor.dataset.block,fraction:Math.max(0,Math.min(2,(inset-rect.top)/Math.max(1,rect.height)))};}
   }
   book.readPosition=position;book.lastRead=Date.now();
+  const route=history.state?.bookwiseRoute;if(route?.type==='reader'&&route.bookId===book.id)writeBookwiseHistoryState({...route,chapter:position.chapter,resume:true},true);
   if(save)persist();
 }
 function restoreReadingPosition(position){
@@ -62,6 +63,44 @@ function lockedView(element){
     '<button class="primary-action" data-login>เข้าสู่ระบบ / สร้างบัญชี</button></div>';
   element.querySelector('[data-login]').onclick=()=>requireLogin();
 }
+let bookwiseHistoryReady=false;
+function writeBookwiseHistoryState(route,replace=false){
+  try{history[replace?'replaceState':'pushState']({...history.state,bookwiseRoute:route},'',location.href);return true;}
+  catch(error){console.warn('Bookwise history navigation unavailable:',error);return false;}
+}
+function bookwiseRouteSnapshot(){
+  const route={type:reader.style.display==='block'?'reader':'view',view:activeView,metricFilter:metricFilter||null,authorFilter:authorFilter||null,categoryFilter:categoryFilter||null,scrollY:window.scrollY};
+  if(route.type==='reader'){const book=booksData.find(item=>item.id===activeBook);route.bookId=activeBook;route.chapter=book?.chapter||0;route.resume=Boolean(book?.readPosition);}
+  return route;
+}
+function ensureBookwiseHistory(){
+  if(bookwiseHistoryReady)return;
+  writeBookwiseHistoryState(bookwiseRouteSnapshot(),true);bookwiseHistoryReady=true;
+}
+function pushBookwiseHistory(route){
+  ensureBookwiseHistory();
+  const previous=bookwiseRouteSnapshot();previous.scrollY=window.scrollY;
+  writeBookwiseHistoryState(previous,true);writeBookwiseHistoryState(route);
+}
+function navigateBookwiseView(view,options={}){
+  ensureBookwiseHistory();
+  const previous=bookwiseRouteSnapshot();previous.scrollY=window.scrollY;
+  writeBookwiseHistoryState(previous,true);
+  if(options.resetFilters){authorFilter=null;categoryFilter=null;metricFilter=null;}
+  if(Object.prototype.hasOwnProperty.call(options,'authorFilter'))authorFilter=options.authorFilter;
+  if(Object.prototype.hasOwnProperty.call(options,'categoryFilter'))categoryFilter=options.categoryFilter;
+  if(Object.prototype.hasOwnProperty.call(options,'metricFilter'))metricFilter=options.metricFilter;
+  const route={type:'view',view,metricFilter:metricFilter||null,authorFilter:authorFilter||null,categoryFilter:categoryFilter||null,scrollY:0};
+  const sameRoute=previous.type==='view'&&previous.view===route.view&&previous.metricFilter===route.metricFilter&&previous.authorFilter===route.authorFilter&&previous.categoryFilter===route.categoryFilter;
+  writeBookwiseHistoryState(route,sameRoute);showView(view);
+}
+window.addEventListener('popstate',event=>{
+  const route=event.state?.bookwiseRoute;if(!route)return;
+  authorFilter=route.authorFilter||null;categoryFilter=route.categoryFilter||null;metricFilter=route.metricFilter||null;
+  if(route.type==='reader'&&route.bookId){showView(route.view||'all');openBook(route.bookId,route.chapter,route.markId,{fromHistory:true,resume:route.resume});return;}
+  showView(route.view||'all');requestAnimationFrame(()=>window.scrollTo({top:Math.max(0,Number(route.scrollY)||0),behavior:'instant'}));
+});
+ensureBookwiseHistory();
 function showView(view){
   closeChapterPicker(false);
   flushReadingPosition();readingReady=false;
@@ -86,14 +125,16 @@ function showView(view){
   }
   window.scrollTo(0,0);
 }
-async function openBook(id,chapter,markId){
+async function openBook(id,chapter,markId,options={}){
   const book=booksData.find(item=>item.id===id);if(!book)return;if(book.summaryStatus!=='revised'){toast('หนังสือเล่มนี้จะแสดงเมื่อปรับสรุปตามแนวทางล่าสุดครบแล้ว');return}if(book.libraryHidden){toast('หนังสือเล่มนี้ถูกลบออกจากห้องสมุดอย่างถาวรแล้ว');return}
   if(!requireLogin({id,chapter,markId}))return;
+  const shouldResume=options.resume??(chapter==null&&!markId&&Boolean(book.readPosition));
   flushReadingPosition();readingReady=false;
-  reader.classList.toggle('is-resuming',chapter==null&&!markId&&Boolean(book.readPosition));
+  if(!options.fromHistory)pushBookwiseHistory({type:'reader',view:activeView,bookId:id,chapter:Number.isInteger(chapter)?chapter:book.chapter,markId:markId||null,resume:shouldResume,metricFilter:metricFilter||null,authorFilter:authorFilter||null,categoryFilter:categoryFilter||null,scrollY:0});
+  reader.classList.toggle('is-resuming',shouldResume&&Boolean(book.readPosition));
   activeBook=id;lib.style.display='none';reviewView.style.display='none';savedView.style.display='none';
   document.getElementById('home-top').style.display='none';reader.style.display='block';setNavigation('all');
-  await showChapter(chapter??book.chapter,{resume:chapter==null&&!markId});
+  await showChapter(chapter??book.chapter,{resume:shouldResume});
   if(!signedIn()||activeBook!==id||reader.style.display!=='block')return;
   if(markId){requestAnimationFrame(()=>{
     const mark=[...document.querySelectorAll('.reader-highlight')].find(item=>item.dataset.annotation===markId);
@@ -155,7 +196,7 @@ async function showChapter(index,{resume=false}={}){
     const chapter=book.chapters[n].body?book.chapters[n]:await window.BookwiseCloudSync.loadChapter(book.id,n);
     if(requestId!==chapterLoadId||!signedIn())return;
     if(!Array.isArray(chapter.body)||!Array.isArray(chapter.quiz))throw new Error('invalid_chapter');
-    book.chapters[n]={...chapter,title:book.chapters[n].title};book.chapter=n;book.lastRead=Date.now();persist();renderLibraryOverview();
+    book.chapters[n]={...chapter,title:book.chapters[n].title};book.chapter=n;const route=history.state?.bookwiseRoute;if(route?.type==='reader'&&route.bookId===book.id)writeBookwiseHistoryState({...route,chapter:n,markId:null},true);book.lastRead=Date.now();persist();renderLibraryOverview();
     document.getElementById('chapter-deck').textContent=plainText(chapter.deck);
     document.getElementById('reader-progress-fill').style.width=book.progress+'%';
     document.getElementById('reader-progress-text').textContent=book.progress+'%';
@@ -309,7 +350,7 @@ function renderReview(){
       reviewSessionDone++;persist();renderReview();document.getElementById('review-status').textContent='บันทึกผลทบทวนและกำหนดครั้งถัดไปแล้ว';document.getElementById('review-practice-reveal')?.focus({preventScroll:true});
     });
   }
-  list.querySelector('#review-library')?.addEventListener('click',()=>showView('all'));
+  list.querySelector('#review-library')?.addEventListener('click',()=>navigateBookwiseView('all',{resetFilters:true}));
   list.querySelectorAll('[data-set-due]').forEach(button=>button.onclick=()=>{
     const c=reviewQueue.find(item=>item.id===button.dataset.setDue),input=[...list.querySelectorAll('[data-due-input]')].find(item=>item.dataset.dueInput===c?.id);
     const dueTime=input?.value?new Date(input.value+'T09:00:00').getTime():NaN;if(!c||!Number.isFinite(dueTime))return;

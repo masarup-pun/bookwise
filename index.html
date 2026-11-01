@@ -28,7 +28,7 @@
 
 
   <link rel="stylesheet" href="app-base.css?v=20261022-2">
-  <link rel="stylesheet" href="app-experience.css?v=20261101-reading-progress-toc-checks">
+  <link rel="stylesheet" href="app-experience.css?v=20261101-metric-drilldown-history">
 </head>
 <body data-auth="signed-out">
   <main class="login-screen" id="login-screen" aria-labelledby="login-title">
@@ -74,11 +74,12 @@
         <section class="library-overview" aria-labelledby="library-heading">
           <div class="library-overview-heading"><span class="library-overview-eyebrow">MY READING SPACE</span><h1 class="library-heading" id="library-heading">ห้องสมุดส่วนตัวของคุณ</h1><p>พื้นที่รวมหนังสือที่กำลังอ่าน อ่านจบแล้ว และเล่มใหม่ในชั้นของคุณ</p></div>
           <div class="library-metrics" aria-label="ภาพรวมการอ่าน">
-            <article class="library-metric"><span class="library-metric-label">หนังสือพร้อมอ่าน</span><strong id="metric-library-count">0</strong><small>เล่ม</small></article>
-            <article class="library-metric"><span class="library-metric-label">กำลังอ่าน</span><strong id="metric-reading-count">0</strong><small>เล่ม</small></article>
-            <article class="library-metric"><span class="library-metric-label">อ่านจบแล้ว</span><strong id="metric-completed-count">0</strong><small>เล่ม</small></article>
+            <button type="button" class="library-metric" data-metric="available" aria-pressed="false"><span class="library-metric-label">หนังสือพร้อมอ่าน</span><strong id="metric-library-count">0</strong><small>เล่ม</small><span class="library-metric-action">ดูรายชื่อ <span aria-hidden="true">→</span></span></button>
+            <button type="button" class="library-metric" data-metric="reading" aria-pressed="false"><span class="library-metric-label">กำลังอ่าน</span><strong id="metric-reading-count">0</strong><small>เล่ม</small><span class="library-metric-action">ดูรายชื่อ <span aria-hidden="true">→</span></span></button>
+            <button type="button" class="library-metric" data-metric="completed" aria-pressed="false"><span class="library-metric-label">อ่านจบแล้ว</span><strong id="metric-completed-count">0</strong><small>เล่ม</small><span class="library-metric-action">ดูรายชื่อ <span aria-hidden="true">→</span></span></button>
           </div>
         </section>
+        <div class="metric-filter-toolbar" id="metric-filter-toolbar" hidden><div><strong id="metric-filter-title"></strong><span id="metric-filter-count"></span></div><button type="button" id="metric-filter-clear">ดูหนังสือทั้งหมด</button></div>
         <section class="continue-wrap" id="continue-wrap"><div class="continue-head"><h2>อ่านต่อ</h2><div class="continue-controls"><span id="continue-count"></span><div class="continue-arrows" role="group" aria-label="เลื่อนหนังสือที่อ่านต่อ"><button type="button" id="continue-prev" aria-label="เลื่อนหนังสือไปทางซ้าย" aria-controls="continue-list" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button><button type="button" id="continue-next" aria-label="เลื่อนหนังสือไปทางขวา" aria-controls="continue-list" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button></div></div></div><div class="continue-list" id="continue-list" tabindex="0" aria-label="หนังสือที่กำลังอ่าน"></div></section>
         <div class="section-head"><h2 id="shelf-title">หนังสือทั้งหมด <span style="font:400 14px var(--sans);color:#99998f;margin-left:5px" id="book-count"></span></h2><div class="shelf-actions"><div id="category-filters" class="category-filters" role="group" aria-label="กรองตามหมวดหมู่หนังสือ"></div><label class="book-sort" for="book-sort"><span>Sort</span><select id="book-sort"><option value="title">A–Z</option><option value="added">Date added</option></select></label></div></div>
         <div class="summary-status-row"><span class="summary-status-label">หนังสือที่แสดง</span><div id="summary-status-filters" class="summary-status-filters" aria-live="polite"></div></div>
@@ -103,8 +104,8 @@
   <script src="bookwise-catalog.js?v=20261030-manifest-dive-deeper-complete"></script>
   <script src="book-summary-status.js?v=20261101-trend-following-revised"></script>
   <script src="cover-images.js?v=20261025-reader1"></script>
-  <script src="app.js?v=20261101-reading-progress"></script>
-  <script src="reader.js?v=20261101-chapter-read-checks"></script>
+  <script src="app.js?v=20261101-metric-drilldown-history"></script>
+  <script src="reader.js?v=20261101-metric-drilldown-history"></script>
   <script src="supabase-config.js?v=20261022-2"></script>
   <script src="cloud-sync.js?v=20261029-read-button-dashboard"></script>
 
