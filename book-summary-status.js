@@ -42,5 +42,9 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'on-the-shortness-of-life': 'revised',
   'indistractable-supplemental-workbook': 'revised',
   'courage-is-calling': 'revised',
-  'solving-procrastination-puzzle': 'revised'
+  'solving-procrastination-puzzle': 'revised',
+  'feeling-is-the-secret': 'revised',
+  'breakthrough-copywriter-2': 'revised',
+  'million-dollar-weekend': 'revised',
+  'trend-following': 'revised'
 });
