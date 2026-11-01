@@ -58,13 +58,13 @@ body[data-theme="dark"] .reader-top .back,body[data-theme="dark"] .bookmark-togg
 .close-control{flex:none;width:44px;height:44px;background:var(--panel-alt);border:0;border-radius:50%;color:var(--text-secondary);font-size:25px}
 #chapter-search{min-height:48px;margin:0 24px 12px;width:calc(100% - 48px);border:1px solid var(--control-line);border-radius:12px;padding:12px 14px;background:var(--panel-alt);color:var(--text-main);font-size:16px}
 .chapter-options{overflow:auto;overscroll-behavior:contain;padding:0 12px 18px;scroll-padding:12px}
-.chapter-option{display:grid;grid-template-columns:34px minmax(0,1fr) 24px;gap:12px;width:100%;padding:14px 12px;text-align:left;align-items:start;min-height:64px;background:transparent;border:1px solid transparent;border-radius:12px;color:var(--text-main);font-size:14px;line-height:1.65}
+.chapter-option{display:grid;grid-template-columns:22px 34px minmax(0,1fr);gap:12px;width:100%;padding:14px 12px;text-align:left;align-items:start;min-height:64px;background:transparent;border:1px solid transparent;border-radius:12px;color:var(--text-main);font-size:14px;line-height:1.65}
 .chapter-option+.chapter-option{margin-top:2px}
 .chapter-option:hover{background:var(--panel-alt)}
 .chapter-option.selected{background:var(--action-soft);border-color:var(--control-line)}
 .chapter-option-number{font-size:12px;color:var(--text-secondary);font-variant-numeric:tabular-nums;padding-top:2px}
 .chapter-option small{display:block;font-size:12px;color:var(--action);font-weight:700}
-.chapter-option-check{color:var(--action)}
+.chapter-option-read{min-width:22px;color:var(--action);font-weight:800;text-align:center;line-height:1.65}
 .chapter-no-results{padding:20px;color:var(--text-secondary);font-size:14px}
 .primary-action,.secondary-action,.text-action{min-height:44px;padding:11px 18px;border:0;border-radius:12px;font-size:14px;font-weight:650;line-height:1.5}
 .primary-action{background:#245edb;color:white;box-shadow:0 4px 12px #245edb20}
@@ -154,7 +154,8 @@ body[data-theme="dark"] .scheduled-actions input{color-scheme:dark}
   .review-rating>div{gap:6px}.review-rating button strong{font-size:13px}.workspace-stats{gap:6px}.workspace-stats>span{font-size:12px;padding:9px 11px}
   .account-dialog,.note-dialog,.search-dialog{max-height:calc(100dvh - 32px);overflow:auto}.account-dialog{padding:22px}.account-dialog h2{font-size:22px}
   .sheet-heading{padding-left:18px;padding-right:18px}#chapter-search{margin-left:18px;margin-right:18px;width:calc(100% - 36px)}
-  .chapter-option{font-size:14px;grid-template-columns:27px minmax(0,1fr) 20px;gap:9px;padding:14px 10px}
+  .chapter-option{font-size:14px;grid-template-columns:18px 27px minmax(0,1fr);gap:9px;padding:14px 10px}
+  .chapter-option-read{min-width:18px}
 }
 @media(max-width:360px){.brand{font-size:17px;gap:7px}.brand-symbol,.brand-symbol svg{width:28px;height:28px}.app-header{padding-left:12px;padding-right:12px}.header-actions{gap:3px}.header-actions .theme-toggle{width:40px}.header-actions .icon-btn,.header-actions .account-button{width:40px;min-width:40px}main{padding-left:12px;padding-right:12px}.reader-content{padding:22px 16px}.reader-content h1{font-size:27px}.type-settings summary{padding:10px;gap:6px}}
 @media(prefers-reduced-motion:reduce){html body *,html body *::before,html body *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

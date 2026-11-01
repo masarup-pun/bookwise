@@ -124,6 +124,7 @@ function updateChapterControls(book,n){
   markRead.onclick=()=>{
     if(!requireLogin())return;
     book.readChapters=normalizeReadChapters(book.id,[...(book.readChapters||[]),n]);
+    book.started=true;
     const completed=book.readChapters.length===book.chapters.length;
     book.completed=completed;book.progress=readingProgress(book.id,book.readChapters,completed);persist();renderContinue();renderLibraryOverview();
     if(n<book.chapters.length-1){showChapter(n+1).then(()=>window.scrollTo(0,0));return;}
@@ -154,7 +155,7 @@ async function showChapter(index,{resume=false}={}){
     const chapter=book.chapters[n].body?book.chapters[n]:await window.BookwiseCloudSync.loadChapter(book.id,n);
     if(requestId!==chapterLoadId||!signedIn())return;
     if(!Array.isArray(chapter.body)||!Array.isArray(chapter.quiz))throw new Error('invalid_chapter');
-    book.chapters[n]={...chapter,title:book.chapters[n].title};book.chapter=n;book.started=true;book.lastRead=Date.now();persist();renderLibraryOverview();
+    book.chapters[n]={...chapter,title:book.chapters[n].title};book.chapter=n;book.lastRead=Date.now();persist();renderLibraryOverview();
     document.getElementById('chapter-deck').textContent=plainText(chapter.deck);
     document.getElementById('reader-progress-fill').style.width=book.progress+'%';
     document.getElementById('reader-progress-text').textContent=book.progress+'%';
@@ -189,7 +190,7 @@ function renderChapterOptions(){
   const query=document.getElementById('chapter-search').value.trim().toLocaleLowerCase('th');
   const entries=book.chapters.map((chapter,i)=>({chapter,i})).filter(({chapter,i})=>!query||chapter.title.toLocaleLowerCase('th').includes(query)||String(i+1)===query);
   const options=document.getElementById('chapter-options');
-  options.innerHTML=entries.length?entries.map(({chapter,i})=>`<button class="chapter-option ${i===book.chapter?'selected':''}" data-pick-chapter="${i}" ${i===book.chapter?'aria-current="location"':''}><span class="chapter-option-number">${String(i+1).padStart(2,'0')}</span><span>${esc(chapter.title)}${i===book.chapter?'<small>กำลังอ่าน</small>':''}</span><span class="chapter-option-check" aria-hidden="true">${i===book.chapter?'✓':'→'}</span></button>`).join(''):'<p class="chapter-no-results" role="status">ไม่พบบทที่ค้นหา</p>';
+  options.innerHTML=entries.length?entries.map(({chapter,i})=>{const read=book.readChapters?.includes(i);const selected=i===book.chapter;return `<button class="chapter-option ${selected?'selected':''}" data-pick-chapter="${i}" aria-label="${read?'อ่านแล้ว':'ยังไม่ได้อ่าน'} · บทที่ ${i+1} · ${esc(chapter.title)}" ${selected?'aria-current="location"':''}><span class="chapter-option-read" aria-hidden="true">${read?'✓':''}</span><span class="chapter-option-number">${String(i+1).padStart(2,'0')}</span><span>${esc(chapter.title)}${selected?'<small>กำลังอ่าน</small>':''}</span></button>`}).join(''):'<p class="chapter-no-results" role="status">ไม่พบบทที่ค้นหา</p>';
   options.querySelectorAll('[data-pick-chapter]').forEach(button=>button.onclick=()=>{
     closeChapterPicker();showChapter(Number(button.dataset.pickChapter)).then(()=>window.scrollTo(0,0));
   });
