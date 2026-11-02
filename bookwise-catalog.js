@@ -2098,7 +2098,7 @@ window.BOOKWISE_CATALOG = [
     "color": "#d5c2b0",
     "text": "#30251c",
     "added": 36,
-    "totalChapters": 36,
+    "totalChapters": 37,
     "chapter": 0,
     "progress": 0,
     "favorite": false,
@@ -2106,112 +2106,115 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทนำ — จาก Hooked สู่ Indistractable (From Hooked to Indistractable)"
+        "title": "บทนำ - จาก Hooked สู่ Indistractable"
       },
       {
-        "title": "บทที่ 1 — พลังพิเศษของคุณคืออะไร? (What’s Your Superpower?)"
+        "title": "บทที่ 1 - พลังพิเศษของคุณ (What’s Your Superpower?)"
       },
       {
-        "title": "บทที่ 2 — การเป็นคนไม่วอกแวก (Being Indistractable)"
+        "title": "บทที่ 2 - การเป็นคนที่ไม่วอกแวก (Being Indistractable)"
       },
       {
-        "title": "บทที่ 3 — อะไรกระตุ้นเราอย่างแท้จริง? (What Motivates Us, Really?)"
+        "title": "บทที่ 3 - อะไรเป็นแรงจูงใจจริงๆ? (What Motivates Us, Really?)"
       },
       {
-        "title": "บทที่ 4 — การจัดการเวลาคือการจัดการความเจ็บปวด (Time Management Is Pain Management)"
+        "title": "บทที่ 4 - การจัดการเวลาคือการจัดการความไม่สบายใจ (Time Management Is Pain Management)"
       },
       {
-        "title": "บทที่ 5 — จัดการสิ่งวอกแวกจากภายใน (Deal with Distraction from Within)"
+        "title": "บทที่ 5 - จัดการสิ่งรบกวนจากภายใน (Deal with Distraction from Within)"
       },
       {
-        "title": "บทที่ 6 — จินตนาการสิ่งกระตุ้นภายในใหม่ (Reimagine the Internal Trigger)"
+        "title": "บทที่ 6 - ปรับมุมมองต่อสิ่งกระตุ้นภายใน (Reimagine the Internal Trigger)"
       },
       {
-        "title": "บทที่ 7 — จินตนาการงานขึ้นใหม่ (Reimagine the Task)"
+        "title": "บทที่ 7 - ปรับมุมมองต่องาน (Reimagine the Task)"
       },
       {
-        "title": "บทที่ 8 — จินตนาการอุปนิสัยของเราใหม่ (Reimagine Your Temperament)"
+        "title": "บทที่ 8 - ปรับมุมมองต่อลักษณะนิสัยของตน (Reimagine Your Temperament)"
       },
       {
-        "title": "บทที่ 9 — เปลี่ยนคุณค่าให้เป็นเวลา (Turn Your Values into Time)"
+        "title": "บทที่ 9 - เปลี่ยนคุณค่าให้เป็นเวลา (Turn Your Values into Time)"
       },
       {
-        "title": "บทที่ 10 — ควบคุมสิ่งที่ลงมือ ไม่ใช่ผลลัพธ์ (Control the Inputs, Not the Outcomes)"
+        "title": "บทที่ 10 - ควบคุมสิ่งที่ลงมือ ไม่ใช่ผลลัพธ์ (Control the Inputs, Not the Outcomes)"
       },
       {
-        "title": "บทที่ 11 — จัดเวลาให้ความสัมพันธ์สำคัญ (Schedule Important Relationships)"
+        "title": "บทที่ 11 - จัดเวลาให้ความสัมพันธ์สำคัญ (Schedule Important Relationships)"
       },
       {
-        "title": "บทที่ 12 — ประสานตารางกับผู้เกี่ยวข้องในงาน (Sync with Stakeholders at Work)"
+        "title": "บทที่ 12 - ประสานตารางกับผู้เกี่ยวข้องในงาน (Sync with Stakeholders at Work)"
       },
       {
-        "title": "บทที่ 13 — ถามคำถามสำคัญ (Ask the Critical Question)"
+        "title": "บทที่ 13 - ถามคำถามสำคัญ (Ask the Critical Question)"
       },
       {
-        "title": "บทที่ 14 — จัดการการขัดจังหวะในที่ทำงาน (Hack Back Work Interruptions)"
+        "title": "บทที่ 14 - จัดการสิ่งขัดจังหวะในที่ทำงาน (Hack Back Work Interruptions)"
       },
       {
-        "title": "บทที่ 15 — จัดการอีเมล (Hack Back Email)"
+        "title": "บทที่ 15 - จัดการอีเมล (Hack Back Email)"
       },
       {
-        "title": "บทที่ 16 — จัดการแชตกลุ่ม (Hack Back Group Chat)"
+        "title": "บทที่ 16 - จัดการแชตกลุ่ม (Hack Back Group Chat)"
       },
       {
-        "title": "บทที่ 17 — จัดการการประชุม (Hack Back Meetings)"
+        "title": "บทที่ 17 - จัดการการประชุม (Hack Back Meetings)"
       },
       {
-        "title": "บทที่ 18 — จัดการสมาร์ตโฟน (Hack Back Your Smartphone)"
+        "title": "บทที่ 18 - จัดการสมาร์ตโฟน (Hack Back Your Smartphone)"
       },
       {
-        "title": "บทที่ 19 — จัดการเดสก์ท็อป (Hack Back Your Desktop)"
+        "title": "บทที่ 19 - จัดการหน้าจอคอมพิวเตอร์ (Hack Back Your Desktop)"
       },
       {
-        "title": "บทที่ 20 — จัดการบทความออนไลน์ (Hack Back Online Articles)"
+        "title": "บทที่ 20 - จัดการบทความออนไลน์ (Hack Back Online Articles)"
       },
       {
-        "title": "บทที่ 21 — จัดการฟีด (Hack Back Feeds)"
+        "title": "บทที่ 21 - จัดการฟีด (Hack Back Feeds)"
       },
       {
-        "title": "บทที่ 22 — พลังของการผูกมัดล่วงหน้า (The Power of Precommitments)"
+        "title": "บทที่ 22 - พลังของการผูกมัดล่วงหน้า (The Power of Precommitments)"
       },
       {
-        "title": "บทที่ 23 — ป้องกันสิ่งวอกแวกด้วย Effort Pacts (Prevent Distraction with Effort Pacts)"
+        "title": "บทที่ 23 - ป้องกันสิ่งรบกวนด้วยข้อตกลงเพิ่มความพยายาม (Prevent Distraction with Effort Pacts)"
       },
       {
-        "title": "บทที่ 24 — ป้องกันสิ่งวอกแวกด้วย Price Pacts (Prevent Distraction with Price Pacts)"
+        "title": "บทที่ 24 - ป้องกันสิ่งวอกแวกด้วยข้อตกลงด้านราคา (Prevent Distraction with Price Pacts)"
       },
       {
-        "title": "บทที่ 25 — ป้องกันสิ่งวอกแวกด้วย Identity Pacts (Prevent Distraction with Identity Pacts)"
+        "title": "บทที่ 25 - ป้องกันสิ่งวอกแวกด้วยข้อตกลงด้านอัตลักษณ์ (Prevent Distraction with Identity Pacts)"
       },
       {
-        "title": "บทที่ 26 — การวอกแวกเป็นสัญญาณของความผิดปกติ (Distraction Is a Sign of Dysfunction)"
+        "title": "บทที่ 26 - สิ่งวอกแวกเป็นสัญญาณของความผิดปกติ (Distraction Is a Sign of Dysfunction)"
       },
       {
-        "title": "บทที่ 27 — การแก้การวอกแวกเป็นบททดสอบวัฒนธรรมองค์กร (Fixing Distraction Is a Test of Company Culture)"
+        "title": "บทที่ 27 - การแก้สิ่งวอกแวกคือบททดสอบวัฒนธรรมองค์กร (Fixing Distraction Is a Test of Company Culture)"
       },
       {
-        "title": "บทที่ 28 — ที่ทำงานที่ไม่วอกแวก (The Indistractable Workplace)"
+        "title": "บทที่ 28 - ที่ทำงานที่ไม่วอกแวก (The Indistractable Workplace)"
       },
       {
-        "title": "บทที่ 29 — เลิกใช้ข้ออ้างที่สะดวก (Avoid Convenient Excuses)"
+        "title": "บทที่ 29 - หยุดใช้ข้อแก้ตัวที่สะดวก (Avoid Convenient Excuses)"
       },
       {
-        "title": "บทที่ 30 — เข้าใจสิ่งกระตุ้นภายในของเด็ก (Understand Their Internal Triggers)"
+        "title": "บทที่ 30 - ทำความเข้าใจสิ่งกระตุ้นภายในของเด็ก (Understand Their Internal Triggers)"
       },
       {
-        "title": "บทที่ 31 — จัดเวลาให้เกิด Traction ร่วมกัน (Make Time for Traction Together)"
+        "title": "บทที่ 31 - จัดเวลาเพื่อสิ่งที่ตั้งใจร่วมกัน (Make Time for Traction Together)"
       },
       {
-        "title": "บทที่ 32 — ช่วยลูกจัดการสิ่งกระตุ้นจากภายนอก (Help Them with External Triggers)"
+        "title": "บทที่ 32 - ช่วยเด็กจัดการสิ่งชี้นำภายนอก (Help Them with External Triggers)"
       },
       {
-        "title": "บทที่ 33 — สอนให้ลูกตั้งข้อตกลงล่วงหน้าด้วยตัวเอง (Teach Them to Make Their Own Pacts)"
+        "title": "บทที่ 33 - สอนให้เด็กทำข้อตกลงของตนเอง (Teach Them to Make Their Own Pacts)"
       },
       {
-        "title": "บทที่ 34 — สร้างภูมิคุ้มกันทางสังคมในหมู่เพื่อน (Spread Social Antibodies Among Friends)"
+        "title": "บทที่ 34 - สร้างภูมิคุ้มกันทางสังคมในหมู่เพื่อน (Spread Social Antibodies Among Friends)"
       },
       {
-        "title": "บทที่ 35 — เป็นคู่รักที่ไม่วอกแวก (Be an Indistractable Lover)"
+        "title": "บทที่ 35 - เป็นคนรักที่ไม่วอกแวก (Be an Indistractable Lover)"
+      },
+      {
+        "title": "ภาคผนวก - บทสรุปท้ายเล่ม เครื่องมือ และคู่มือสนทนา"
       }
     ]
   },
@@ -4553,7 +4556,7 @@ window.BOOKWISE_CATALOG = [
     "id": "great-mental-models-volume-2",
     "title": "The Great Mental Models, Volume 2: Physics, Chemistry, and Biology",
     "author": "Shane Parrish & Rhiannon Beaubien",
-    "category": "วิทยาศาสตร์และปรัชญ",
+    "category": "สุขภาพและจิตวิทยา",
     "color": "#8e2535",
     "text": "#f6eeee",
     "added": 91,
@@ -4650,7 +4653,7 @@ window.BOOKWISE_CATALOG = [
       "Rhiannon Beaubien",
       "Rosie Leizrowice"
     ],
-    "category": "วิทยาศาสตร์และปรัชญ",
+    "category": "สุขภาพและจิตวิทยา",
     "color": "#8e2535",
     "text": "#f6eeee",
     "added": 92,

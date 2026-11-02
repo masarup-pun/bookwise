@@ -41,6 +41,7 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'meditations': 'revised',
   'on-the-shortness-of-life': 'revised',
   'indistractable-supplemental-workbook': 'revised',
+  'indistractable': 'revised',
   'courage-is-calling': 'revised',
   'solving-procrastination-puzzle': 'revised',
   'feeling-is-the-secret': 'revised',
