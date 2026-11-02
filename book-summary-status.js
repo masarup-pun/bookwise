@@ -31,6 +31,7 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'international-player': 'revised',
   'manifest-7-steps': 'revised',
   'manifest-dive-deeper': 'revised',
+  'mastery': 'revised',
   'the-book-of-elon': 'revised',
   'why-has-nobody-told-me': 'revised',
   'you-are-the-placebo': 'revised',
