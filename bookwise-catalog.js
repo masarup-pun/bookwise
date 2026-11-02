@@ -2419,109 +2419,109 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "คำนำ — ชีวิตและความขัดแย้ง (Preface)"
+        "title": "คำนำ - ชีวิตและความขัดแย้ง (Preface)"
       },
       {
-        "title": "บทที่ 1 — ประกาศสงครามกับศัตรูของคุณ — กลยุทธ์ขั้วตรงข้าม (Declare War on Your Enemies: The Polarity Strategy)"
+        "title": "บทที่ 1 - ประกาศสงครามกับศัตรูของคุณ - กลยุทธ์ขั้วตรงข้าม (Declare War on Your Enemies: The Polarity Strategy)"
       },
       {
-        "title": "บทที่ 2 — อย่ารบในสงครามครั้งก่อน — กลยุทธ์สงครามกองโจรในความคิด (Do Not Fight the Last War: The Guerrilla-War-of-the-Mind Strategy)"
+        "title": "บทที่ 2 - อย่ารบในสงครามครั้งก่อน - กลยุทธ์สงครามกองโจรในความคิด (Do Not Fight the Last War: The Guerrilla-War-of-the-Mind Strategy)"
       },
       {
-        "title": "บทที่ 3 — ท่ามกลางความวุ่นวาย อย่าสูญเสียสติ — กลยุทธ์รักษาสมดุล (Amidst the Turmoil of Events, Do Not Lose Your Presence of Mind: The Counterbalance Strategy)"
+        "title": "บทที่ 3 - ท่ามกลางความวุ่นวาย อย่าสูญเสียสติ - กลยุทธ์รักษาสมดุล (Amidst the Turmoil of Events, Do Not Lose Your Presence of Mind: The Counterbalance Strategy)"
       },
       {
-        "title": "บทที่ 4 — สร้างความเร่งด่วนและความมุ่งมั่น — กลยุทธ์พื้นที่ไร้ทางถอย (Create a Sense of Urgency and Desperation: The Death-Ground Strategy)"
+        "title": "บทที่ 4 - สร้างความเร่งด่วนและความมุ่งมั่น - กลยุทธ์พื้นที่ไร้ทางถอย (Create a Sense of Urgency and Desperation: The Death-Ground Strategy)"
       },
       {
-        "title": "บทที่ 5 — หลีกเลี่ยงกับดักความคิดแบบกลุ่ม — กลยุทธ์สั่งการและควบคุม (Avoid the Snares of Groupthink: The Command-and-Control Strategy)"
+        "title": "บทที่ 5 - หลีกเลี่ยงกับดักความคิดแบบกลุ่ม - กลยุทธ์สั่งการและควบคุม (Avoid the Snares of Groupthink: The Command-and-Control Strategy)"
       },
       {
-        "title": "บทที่ 6 — แบ่งกำลังเป็นส่วน — กลยุทธ์ความโกลาหลที่ควบคุมได้ (Segment Your Forces: The Controlled-Chaos Strategy)"
+        "title": "บทที่ 6 - แบ่งกำลังเป็นส่วน - กลยุทธ์ความโกลาหลที่ควบคุมได้ (Segment Your Forces: The Controlled-Chaos Strategy)"
       },
       {
-        "title": "บทที่ 7 — เปลี่ยนความขัดแย้งให้เป็นภารกิจร่วม — กลยุทธ์ขวัญกำลังใจ (Transform Your War into a Crusade: Morale Strategies)"
+        "title": "บทที่ 7 - เปลี่ยนความขัดแย้งให้เป็นภารกิจร่วม - กลยุทธ์ขวัญกำลังใจ (Transform Your War into a Crusade: Morale Strategies)"
       },
       {
-        "title": "บทที่ 8 — เลือกศึกอย่างรอบคอบ — กลยุทธ์การใช้กำลังอย่างคุ้มค่า (Pick Your Battles Carefully: The Perfect-Economy Strategy)"
+        "title": "บทที่ 8 - เลือกศึกอย่างรอบคอบ - กลยุทธ์การใช้กำลังอย่างคุ้มค่า (Pick Your Battles Carefully: The Perfect-Economy Strategy)"
       },
       {
-        "title": "บทที่ 9 — พลิกสถานการณ์กลับ — กลยุทธ์โต้กลับ (Turn the Tables: The Counterattack Strategy)"
+        "title": "บทที่ 9 - พลิกสถานการณ์กลับ - กลยุทธ์โต้กลับ (Turn the Tables: The Counterattack Strategy)"
       },
       {
-        "title": "บทที่ 10 — สร้างภาพที่ทำให้ผู้รุกรานลังเล — กลยุทธ์ป้องปราม (Create a Threatening Presence: Deterrence Strategies)"
+        "title": "บทที่ 10 - สร้างภาพที่ทำให้ผู้รุกรานลังเล - กลยุทธ์ป้องปราม (Create a Threatening Presence: Deterrence Strategies)"
       },
       {
-        "title": "บทที่ 11 — แลกพื้นที่กับเวลา — กลยุทธ์หลีกเลี่ยงการปะทะ (Trade Space for Time: The Nonengagement Strategy)"
+        "title": "บทที่ 11 - แลกพื้นที่กับเวลา - กลยุทธ์หลีกเลี่ยงการปะทะ (Trade Space for Time: The Nonengagement Strategy)"
       },
       {
-        "title": "บทที่ 12 — แพ้บางศึกเพื่อชนะสงคราม — ยุทธศาสตร์ใหญ่ (Lose Battles but Win the War: Grand Strategy)"
+        "title": "บทที่ 12 - แพ้บางศึกเพื่อชนะสงคราม - ยุทธศาสตร์ใหญ่ (Lose Battles but Win the War: Grand Strategy)"
       },
       {
-        "title": "บทที่ 13 — รู้จักฝ่ายตรงข้าม — กลยุทธ์ข่าวกรอง (Know Your Enemy: The Intelligence Strategy)"
+        "title": "บทที่ 13 - รู้จักฝ่ายตรงข้าม - กลยุทธ์ข่าวกรอง (Know Your Enemy: The Intelligence Strategy)"
       },
       {
-        "title": "บทที่ 14 — เอาชนะการต่อต้านด้วยความเร็วและความฉับพลัน — กลยุทธ์สายฟ้าแลบ (Overwhelm Resistance with Speed and Suddenness: The Blitzkrieg Strategy)"
+        "title": "บทที่ 14 - เอาชนะการต่อต้านด้วยความเร็วและความฉับพลัน - กลยุทธ์สายฟ้าแลบ (Overwhelm Resistance with Speed and Suddenness: The Blitzkrieg Strategy)"
       },
       {
-        "title": "บทที่ 15 — ควบคุมพลวัตของความสัมพันธ์ — กลยุทธ์บังคับทิศทาง (Control the Dynamic: Forcing Strategies)"
+        "title": "บทที่ 15 - ควบคุมพลวัตของความสัมพันธ์ - กลยุทธ์บังคับทิศทาง (Control the Dynamic: Forcing Strategies)"
       },
       {
-        "title": "บทที่ 16 — โจมตีจุดศูนย์ถ่วง — กลยุทธ์ค้นหาแหล่งพลัง (Hit Them Where It Hurts: The Center-of-Gravity Strategy)"
+        "title": "บทที่ 16 - โจมตีจุดศูนย์ถ่วง - กลยุทธ์ค้นหาแหล่งพลัง (Hit Them Where It Hurts: The Center-of-Gravity Strategy)"
       },
       {
-        "title": "บทที่ 17 — เอาชนะทีละส่วน — กลยุทธ์แบ่งแยกและพิชิต (Defeat Them in Detail: The Divide-and-Conquer Strategy)"
+        "title": "บทที่ 17 - เอาชนะทีละส่วน - กลยุทธ์แบ่งแยกและพิชิต (Defeat Them in Detail: The Divide-and-Conquer Strategy)"
       },
       {
-        "title": "บทที่ 18 — เปิดและเข้าหาจุดอ่อนด้านข้าง — กลยุทธ์โอบอ้อม (Expose and Attack Your Opponent’s Soft Flank: The Turning Strategy)"
+        "title": "บทที่ 18 - เปิดและเข้าหาจุดอ่อนด้านข้าง - กลยุทธ์โอบอ้อม (Expose and Attack Your Opponent’s Soft Flank: The Turning Strategy)"
       },
       {
-        "title": "บทที่ 19 — โอบล้อมคู่ต่อสู้ — กลยุทธ์ปิดทางเลือก (Envelop the Enemy: The Annihilation Strategy)"
+        "title": "บทที่ 19 - โอบล้อมคู่ต่อสู้ - กลยุทธ์ปิดทางเลือก (Envelop the Enemy: The Annihilation Strategy)"
       },
       {
-        "title": "บทที่ 20 — ล่อให้คู่แข่งอ่อนแรง — กลยุทธ์ทำให้สุกก่อนเก็บเกี่ยว (Maneuver Them into Weakness: The Ripening-for-the-Sickle Strategy)"
+        "title": "บทที่ 20 - ล่อให้คู่แข่งอ่อนแรง - กลยุทธ์ทำให้สุกก่อนเก็บเกี่ยว (Maneuver Them into Weakness: The Ripening-for-the-Sickle Strategy)"
       },
       {
-        "title": "บทที่ 21 — เจรจาไปพร้อมกับการเดินหน้า — กลยุทธ์สงครามทางการทูต (Negotiate While Advancing: The Diplomatic-War Strategy)"
+        "title": "บทที่ 21 - เจรจาไปพร้อมกับการเดินหน้า - กลยุทธ์สงครามทางการทูต (Negotiate While Advancing: The Diplomatic-War Strategy)"
       },
       {
-        "title": "บทที่ 22 — รู้จักยุติสิ่งต่าง ๆ — กลยุทธ์ทางออก (Know How to End Things: The Exit Strategy)"
+        "title": "บทที่ 22 - รู้จักยุติสิ่งต่าง ๆ - กลยุทธ์ทางออก (Know How to End Things: The Exit Strategy)"
       },
       {
-        "title": "บทที่ 23 — ผสมข้อเท็จจริงกับเรื่องแต่งอย่างแนบเนียน — กลยุทธ์ทำให้เข้าใจผิด (Weave a Seamless Blend of Fact and Fiction: Misperception Strategies)"
+        "title": "บทที่ 23 - ผสมข้อเท็จจริงกับเรื่องแต่งอย่างแนบเนียน - กลยุทธ์การทำให้เข้าใจผิด (Weave a Seamless Blend of Fact and Fiction: Misperception Strategies)"
       },
       {
-        "title": "บทที่ 24 — เลือกทางที่คนคาดไม่ถึง — กลยุทธ์ธรรมดาสลับพิสดาร (Take the Line of Least Expectation: The Ordinary-Extraordinary Strategy)"
+        "title": "บทที่ 24 - เลือกทางที่คนคาดไม่ถึง - กลยุทธ์ธรรมดาสลับพิสดาร (Take the Line of Least Expectation: The Ordinary-Extraordinary Strategy)"
       },
       {
-        "title": "บทที่ 25 — ยืนบนพื้นที่ทางศีลธรรมที่ได้เปรียบ — กลยุทธ์ความชอบธรรม (Occupy the Moral High Ground: The Righteous Strategy)"
+        "title": "บทที่ 25 - ยืนบนพื้นที่ทางศีลธรรมที่ได้เปรียบ - กลยุทธ์ความชอบธรรม (Occupy the Moral High Ground: The Righteous Strategy)"
       },
       {
-        "title": "บทที่ 26 — ไม่มอบเป้าหมายให้อีกฝ่าย — กลยุทธ์ความว่าง (Deny Them Targets: The Strategy of the Void)"
+        "title": "บทที่ 26 - ไม่มอบเป้าหมายให้อีกฝ่าย - กลยุทธ์ความว่าง (Deny Them Targets: The Strategy of the Void)"
       },
       {
-        "title": "บทที่ 27 — ดูเหมือนสนับสนุนผลประโยชน์ผู้อื่น ขณะรักษาผลประโยชน์ตน — กลยุทธ์พันธมิตร (Seem to Work for the Interests of Others While Furthering Your Own: The Alliance Strategy)"
+        "title": "บทที่ 27 - ดูเหมือนสนับสนุนผลประโยชน์ผู้อื่น ขณะรักษาผลประโยชน์ตน - กลยุทธ์พันธมิตร (Seem to Work for the Interests of Others While Furthering Your Own: The Alliance Strategy)"
       },
       {
-        "title": "บทที่ 28 — ปล่อยให้คู่แข่งเผยจุดอ่อนของตน — กลยุทธ์เหนือชั้นอย่างมีชั้นเชิง (Give Your Rivals Enough Rope to Hang Themselves: The One-Upmanship Strategy)"
+        "title": "บทที่ 28 - ปล่อยให้คู่แข่งเผยจุดอ่อนของตน - กลยุทธ์เอาชนะอย่างเหนือชั้น (Give Your Rivals Enough Rope to Hang Themselves: The One-Upmanship Strategy)"
       },
       {
-        "title": "บทที่ 29 — ค่อย ๆ ยึดพื้นที่ทีละน้อย — กลยุทธ์สิ่งที่เกิดขึ้นแล้ว (Take Small Bites: The Fait Accompli Strategy)"
+        "title": "บทที่ 29 - ค่อย ๆ ยึดพื้นที่ทีละน้อย - กลยุทธ์สิ่งที่เกิดขึ้นแล้ว (Take Small Bites: The Fait Accompli Strategy)"
       },
       {
-        "title": "บทที่ 30 — เข้าถึงจิตใจของผู้ฟัง — กลยุทธ์การสื่อสาร (Penetrate Their Minds: Communication Strategies)"
+        "title": "บทที่ 30 - เข้าถึงจิตใจของผู้ฟัง - กลยุทธ์การสื่อสาร (Penetrate Their Minds: Communication Strategies)"
       },
       {
-        "title": "บทที่ 31 — เปลี่ยนแปลงจากภายใน — กลยุทธ์แนวรบภายใน (Destroy from Within: The Inner-Front Strategy)"
+        "title": "บทที่ 31 - เปลี่ยนแปลงจากภายใน - กลยุทธ์แนวรบภายใน (Destroy from Within: The Inner-Front Strategy)"
       },
       {
-        "title": "บทที่ 32 — มีอิทธิพลโดยดูเหมือนยอมตาม — กลยุทธ์ก้าวร้าวแบบเฉื่อยชา (Dominate While Seeming to Submit: The Passive-Aggression Strategy)"
+        "title": "บทที่ 32 - มีอิทธิพลโดยดูเหมือนยอมตาม - กลยุทธ์ก้าวร้าวแบบเฉื่อยชา (Dominate While Seeming to Submit: The Passive-Aggression Strategy)"
       },
       {
-        "title": "บทที่ 33 — รับมือความหวาดกลัวและความตื่นตระหนก — กลยุทธ์ลูกโซ่ (Sow Uncertainty and Panic Through Acts of Terror: The Chain-Reaction Strategy)"
+        "title": "บทที่ 33 - รับมือความหวาดกลัวและความตื่นตระหนก - กลยุทธ์ลูกโซ่ (Sow Uncertainty and Panic Through Acts of Terror: The Chain-Reaction Strategy)"
       },
       {
-        "title": "ส่วนท้าย — บรรณานุกรมคัดเลือก (Selected Bibliography)"
+        "title": "ส่วนท้าย - บรรณานุกรมคัดเลือก (Selected Bibliography)"
       }
     ]
   },

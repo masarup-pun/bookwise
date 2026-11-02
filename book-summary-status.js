@@ -48,5 +48,6 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'feeling-is-the-secret': 'revised',
   'breakthrough-copywriter-2': 'revised',
   'million-dollar-weekend': 'revised',
-  'trend-following': 'revised'
+  'trend-following': 'revised',
+  '33-strategies-of-war': 'revised'
 });
