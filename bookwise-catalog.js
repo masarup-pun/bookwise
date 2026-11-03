@@ -2700,7 +2700,7 @@ window.BOOKWISE_CATALOG = [
     "color": "#b9c7b0",
     "text": "#2f382f",
     "added": 42,
-    "totalChapters": 41,
+    "totalChapters": 42,
     "chapter": 0,
     "progress": 0,
     "favorite": false,
@@ -2708,127 +2708,130 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "คำนำ — การยั่วยวนในฐานะอิทธิพลทางจิตใจ (Preface)"
+        "title": "คำนำ (Preface)"
       },
       {
-        "title": "ภาคหนึ่ง — บุคลิกที่ดึงดูดใจ (The Seductive Character)"
+        "title": "ภาคหนึ่ง - บุคลิกที่ดึงดูดใจ (The Seductive Character)"
       },
       {
-        "title": "บทที่ 1 — ไซเรน — ดึงดูดด้วยภาพแห่งความปรารถนา (The Siren)"
+        "title": "บทที่ 1 - ไซเรน (The Siren)"
       },
       {
-        "title": "บทที่ 2 — รักเก — แสดงความปรารถนาอย่างเต็มที่ (The Rake)"
+        "title": "บทที่ 2 - Rake ผู้เร่าร้อน (The Rake)"
       },
       {
-        "title": "บทที่ 3 — คู่รักในอุดมคติ — เติมเต็มความฝันที่ขาดหาย (The Ideal Lover)"
+        "title": "บทที่ 3 - คนรักในอุดมคติ (The Ideal Lover)"
       },
       {
-        "title": "บทที่ 4 — แดนดี้ — สร้างตัวตนที่ไม่ถูกจำกัดด้วยกรอบเดิม (The Dandy)"
+        "title": "บทที่ 4 - ดันดี (The Dandy)"
       },
       {
-        "title": "บทที่ 5 — คนธรรมชาติ — ปลุกความเป็นเด็กที่ผ่อนคลาย (The Natural)"
+        "title": "บทที่ 5 - เสน่ห์แบบเป็นธรรมชาติ (The Natural)"
       },
       {
-        "title": "บทที่ 6 — โคเก็ต — รู้จักจังหวะการเข้าใกล้และถอยห่าง (The Coquette)"
+        "title": "บทที่ 6 - ผู้ยั่วยวนที่เว้นระยะ (The Coquette)"
       },
       {
-        "title": "บทที่ 7 — ชาร์เมอร์ — ทำให้คนรู้สึกดีเมื่ออยู่ด้วย (The Charmer)"
+        "title": "บทที่ 7 - ผู้มีเสน่ห์ (The Charmer)"
       },
       {
-        "title": "บทที่ 8 — ผู้มีบารมี — ส่งพลังจากความเชื่อมั่นและเป้าหมาย (The Charismatic)"
+        "title": "บทที่ 8 - ผู้มีบารมี (The Charismatic)"
       },
       {
-        "title": "บทที่ 9 — ดารา — เป็นภาพที่ชวนให้คนจินตนาการ (The Star)"
+        "title": "บทที่ 9 - ดาราผู้ชวนหลงใหล (The Star)"
       },
       {
-        "title": "บทที่ 10 — ผู้ต่อต้านการยั่วยวน — เลิกพฤติกรรมที่ผลักคนออกไป (The Anti-Seducer)"
+        "title": "บทที่ 10 - ผู้ต่อต้านการยั่วยวน (The Anti-Seducer)"
       },
       {
-        "title": "บทเชื่อม — เหยื่อของการยั่วยวน — ความต้องการที่ยังไม่เต็ม (The Seducer's Victims—The Eighteen Types)"
+        "title": "บทที่ 11 - เหยื่อของนักยั่วยวน: 18 ประเภท (The Seducer's Victims - The Eighteen Types)"
       },
       {
-        "title": "ภาคสอง — กระบวนการยั่วยวน (The Seductive Process)"
+        "title": "ภาคสอง - กระบวนการยั่วยวน (Part Two - The Seductive Process)"
       },
       {
-        "title": "กลยุทธ์ที่ 1 — เลือกเป้าหมายให้เหมาะ (Choose the Right Victim)"
+        "title": "บทที่ 1 - เลือกเป้าหมายให้เหมาะสม (Choose the Right Victim)"
       },
       {
-        "title": "กลยุทธ์ที่ 2 — สร้างความปลอดภัยและเข้าหาอย่างค่อยเป็นค่อยไป (Create a False Sense of Security—Approach Indirectly)"
+        "title": "บทที่ 2 - สร้างความรู้สึกปลอดภัยแล้วเข้าหาทางอ้อม (Create a False Sense of Security - Approach Indirectly)"
       },
       {
-        "title": "กลยุทธ์ที่ 3 — ส่งสัญญาณที่มีมิติและไม่จำเจ (Send Mixed Signals)"
+        "title": "บทที่ 3 - ส่งสัญญาณที่ขัดแย้งกัน (Send Mixed Signals)"
       },
       {
-        "title": "กลยุทธ์ที่ 4 — เป็นที่ต้องการโดยไม่สร้างการแข่งขันเทียม (Appear to Be an Object of Desire—Create Triangles)"
+        "title": "บทที่ 4 - ทำตัวให้เป็นที่ปรารถนา (Appear to Be an Object of Desire - Create Triangles)"
       },
       {
-        "title": "กลยุทธ์ที่ 5 — สร้างความต้องการ — ปลุกความไม่พอใจและความกังวล (Create a Need—Stir Anxiety and Discontent)"
+        "title": "บทที่ 5 - สร้างความต้องการ (Create a Need - Stir Anxiety and Discontent)"
       },
       {
-        "title": "กลยุทธ์ที่ 6 — ใช้คำใบ้และนัยอย่างมีชั้นเชิง (Master the Art of Insinuation)"
+        "title": "บทที่ 6 - เชี่ยวชาญศิลปะแห่งการสื่อความหมายแฝง (Master the Art of Insinuation)"
       },
       {
-        "title": "กลยุทธ์ที่ 7 — เข้าไปอยู่ในโลกของอีกฝ่าย (Enter Their Spirit)"
+        "title": "บทที่ 7 - เข้าถึงโลกภายในของอีกฝ่าย (Enter Their Spirit)"
       },
       {
-        "title": "กลยุทธ์ที่ 8 — สร้างสิ่งล่อใจด้วยภาพของความเป็นไปได้ (Create Temptation)"
+        "title": "บทที่ 8 - สร้างแรงเย้ายวน (Create Temptation)"
       },
       {
-        "title": "กลยุทธ์ที่ 9 — รักษาความสนใจด้วยสิ่งใหม่ที่คาดไม่ถึง (Keep Them in Suspense—What Comes Next?)"
+        "title": "บทที่ 9 - ทำให้อีกฝ่ายคาดเดาไม่ได้ (Keep Them in Suspense - What Comes Next?)"
       },
       {
-        "title": "กลยุทธ์ที่ 10 — ใช้ภาษาเพื่อสร้างความรู้สึก ไม่ใช่ทำให้สับสน (Use the Demonic Power of Words to Sow Confusion)"
+        "title": "บทที่ 10 - ใช้พลังของถ้อยคำเพื่อหว่านความสับสน (Use the Demonic Power of Words to Sow Confusion)"
       },
       {
-        "title": "กลยุทธ์ที่ 11 — ใส่ใจรายละเอียดที่แสดงว่าคุณตั้งใจ (Pay Attention to Detail)"
+        "title": "กลยุทธ์ที่ 11 - ใส่ใจรายละเอียด (Pay Attention to Detail)"
       },
       {
-        "title": "กลยุทธ์ที่ 12 — ทำให้การปรากฏตัวมีภาพจำและมีจังหวะ (Poeticize Your Presence)"
+        "title": "บทที่ 12 - แต่งแต้มการปรากฏตัวของคุณให้เป็นบทกวี (Poeticize Your Presence)"
       },
       {
-        "title": "กลยุทธ์ที่ 13 — แสดงความอ่อนแออย่างจริงใจเพื่อสร้างความไว้วางใจ (Disarm Through Strategic Weakness and Vulnerability)"
+        "title": "บทที่ 13 - สลายแรงป้องกันด้วยจุดอ่อนและความเปราะบาง (Disarm Through Strategic Weakness and Vulnerability)"
       },
       {
-        "title": "กลยุทธ์ที่ 14 — แยกความปรารถนากับความเป็นจริงให้ชัด (Confuse Desire and Reality—The Perfect Illusion)"
+        "title": "บทที่ 14 - ทำให้ความปรารถนากับความจริงพร่าเลือน (Confuse Desire and Reality - The Perfect Illusion)"
       },
       {
-        "title": "กลยุทธ์ที่ 15 — แยกตัวจากแรงกดดัน ไม่ตัดขาดเครือข่ายช่วยเหลือ (Isolate the Victim)"
+        "title": "บทที่ 15 - แยกเป้าหมายออกจากโลกเดิม (Isolate the Victim)"
       },
       {
-        "title": "กลยุทธ์ที่ 16 — พิสูจน์ความตั้งใจด้วยการกระทำ (Prove Yourself)"
+        "title": "ภาคสาม - หน้าผา: เพิ่มความลึกด้วยมาตรการสุดขั้ว (Phase Three: The Precipice - Deepening the Effect Through Extreme Measures)"
       },
       {
-        "title": "กลยุทธ์ที่ 17 — ปลุกความทรงจำดีโดยไม่สวมบทผู้ปกครอง (Effect a Regression)"
+        "title": "กลยุทธ์ที่ 16 - พิสูจน์ตัวเอง (Prove Yourself)"
       },
       {
-        "title": "กลยุทธ์ที่ 18 — สำรวจสิ่งต้องห้ามโดยเคารพขอบเขต (Stir Up the Transgressive and Taboo)"
+        "title": "กลยุทธ์ที่ 17 - ย้อนกลับสู่วัยเด็ก (Effect a Regression)"
       },
       {
-        "title": "กลยุทธ์ที่ 19 — ใช้สิ่งที่มีความหมายทางจิตใจเป็นแรงบันดาลใจ (Use Spiritual Lures)"
+        "title": "กลยุทธ์ที่ 18 - ปลุกเร้าการล่วงละเมิดข้อห้าม (Stir Up the Transgressive and Taboo)"
       },
       {
-        "title": "กลยุทธ์ที่ 20 — ผสมความตื่นเต้นกับความสบายใจโดยไม่สร้างความเจ็บปวด (Mix Pleasure with Pain)"
+        "title": "กลยุทธ์ที่ 19 - ใช้แรงดึงดูดทางจิตวิญญาณ (Use Spiritual Lures)"
       },
       {
-        "title": "กลยุทธ์ที่ 21 — เปิดพื้นที่ให้อีกฝ่ายเป็นผู้เข้าหา (Give Them Space to Fall—The Pursuer Is Pursued)"
+        "title": "กลยุทธ์ที่ 20 - ผสมความสุขเข้ากับความเจ็บปวด (Mix Pleasure with Pain)"
       },
       {
-        "title": "กลยุทธ์ที่ 22 — ใช้ความใกล้ชิดทางกายเมื่อมีความยินยอม (Use Physical Lures)"
+        "title": "กลยุทธ์ที่ 21 - เปิดพื้นที่ให้เขาตกหลุม (Give Them Space to Fall - The Pursuer Is Pursued)"
       },
       {
-        "title": "กลยุทธ์ที่ 23 — กล้าทำเมื่อจังหวะชัด โดยไม่เร่งรัด (Master the Art of the Bold Move)"
+        "title": "กลยุทธ์ที่ 22 - ใช้สิ่งเร้าทางกาย (Use Physical Lures)"
       },
       {
-        "title": "กลยุทธ์ที่ 24 — ดูแลผลหลังความรู้สึกเข้มข้นเปลี่ยนผ่าน (Beware the Aftereffects)"
+        "title": "กลยุทธ์ที่ 23 - เชี่ยวชาญจังหวะรุกอย่างกล้าหาญ (Master the Art of the Bold Move)"
       },
       {
-        "title": "ภาคผนวก A — สภาพแวดล้อมและเวลาที่ชวนให้จดจำ (Seductive Environment/Seductive Time)"
+        "title": "กลยุทธ์ที่ 24 - ระวังผลหลังการยั่วยวน (Beware the Aftereffects)"
       },
       {
-        "title": "ภาคผนวก B — การโน้มน้าวคนหมู่มากแบบนุ่มนวล (Soft Seduction: How to Sell Anything to the Masses)"
+        "title": "ภาคผนวก A - สภาพแวดล้อมและช่วงเวลาที่ชวนให้เคลิบเคลิ้ม (Seductive Environment/Seductive Time)"
       },
       {
-        "title": "ส่วนท้าย — บรรณานุกรมคัดเลือก (Selected Bibliography)"
+        "title": "ภาคผนวก B - การขายอย่างนุ่มนวล: ขายสิ่งใดก็ได้ให้คนหมู่มาก (Soft Seduction: How to Sell Anything to the Masses)"
+      },
+      {
+        "title": "บรรณานุกรมคัดสรร (Selected Bibliography)"
       }
     ]
   },
