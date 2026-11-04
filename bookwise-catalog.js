@@ -3989,22 +3989,22 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "คำนำ — สิ่งกีดขวางกลายเป็นทางไปต่อ (Preface)"
+        "title": "คำนำ - อุปสรรคที่กลายเป็นทาง (Preface)"
       },
       {
-        "title": "บทนำ — วิธีรับมือกับสิ่งที่ขวางทาง (Introduction)"
+        "title": "บทนำ - วิธีเดินผ่านอุปสรรค (Introduction)"
       },
       {
-        "title": "ภาคหนึ่ง — การรับรู้ — มองอุปสรรคอย่างเป็นกลาง (Part I: Perception)"
+        "title": "ภาค 1 - การรับรู้ (PART I: PERCEPTION)"
       },
       {
-        "title": "ภาคสอง — การกระทำ — เดินหน้าด้วยความคิดสร้างสรรค์ (Part II: Action)"
+        "title": "ภาค 2 - การลงมือทำ (PART II: ACTION)"
       },
       {
-        "title": "ภาคสาม — เจตจำนง — อดทนต่อสิ่งที่เปลี่ยนไม่ได้ (Part III: Will)"
+        "title": "ภาค 3 - เจตจำนง (PART III: WILL)"
       },
       {
-        "title": "บทสรุป — อุปสรรคกลายเป็นหนทาง (Final Thoughts and Postscript)"
+        "title": "บทส่งท้าย - อุปสรรคกลายเป็นเส้นทาง (Final Thoughts and Postscript)"
       }
     ]
   },
