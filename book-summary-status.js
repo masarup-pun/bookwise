@@ -57,5 +57,6 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'breakthrough-copywriter-2': 'revised',
   'million-dollar-weekend': 'revised',
   'trend-following': 'revised',
-  '33-strategies-of-war': 'revised'
+  '33-strategies-of-war': 'revised',
+  '100m-branding-playbook': 'revised',
 });
