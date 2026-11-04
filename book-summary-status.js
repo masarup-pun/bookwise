@@ -63,4 +63,5 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'discipline-is-destiny': 'revised',
   'right-thing-right-now': 'revised',
   'obstacle-is-the-way': 'revised',
+  'wisdom-takes-work': 'revised',
 });
