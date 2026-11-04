@@ -3954,22 +3954,22 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "คำนำ — คุณธรรมสี่ประการ (The Four Virtues)"
+        "title": "คุณธรรมสี่ประการ (The Four Virtues)"
       },
       {
-        "title": "บทนำ — ความยุติธรรมเป็นวิถีชีวิต (Introduction)"
+        "title": "บทนำ - ความยุติธรรมเป็นวิถีชีวิต (Introduction)"
       },
       {
-        "title": "ภาคหนึ่ง — ฉัน — ความซื่อตรงส่วนบุคคล (Part I: The Me (Personal))"
+        "title": "ภาคหนึ่ง - ตัวฉัน (The Me - Personal)"
       },
       {
-        "title": "ภาคสอง — พวกเรา — ความรับผิดชอบต่อสังคม (Part II: The We (Sociopolitical))"
+        "title": "ภาคสอง - พวกเรา (The We - Sociopolitical)"
       },
       {
-        "title": "ภาคสาม — ทุกคน — ขยายวงแห่งความรัก (Part III: The All (Is One))"
+        "title": "ภาคสาม - ทั้งปวงเป็นหนึ่งเดียว (The All Is One)"
       },
       {
-        "title": "บทส่งท้าย — ทำสิ่งที่ถูกต้องในตอนนี้ (Afterword)"
+        "title": "บทส่งท้าย - ทำสิ่งที่ถูกต้องในตอนนี้ (Afterword)"
       }
     ]
   },
