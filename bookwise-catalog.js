@@ -3460,85 +3460,85 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "Foreword — ใช้ความรู้สร้างธุรกิจและความมั่งคั่ง (Foreword)"
+        "title": "คำนำ - ความรู้และทักษะที่มีอยู่ในตัวคุณ (Foreword)"
       },
       {
-        "title": "What Is Expert Secrets? — จากการเติบโตสู่การช่วยเหลือผู้อื่น (What Is Expert Secrets?)"
+        "title": "บทนำ - จากการเติบโตสู่การช่วยเหลือผู้อื่น (What Is Expert Secrets?)"
       },
       {
-        "title": "Introduction — บทเรียนจากผลิตภัณฑ์ความรู้ชิ้นแรก (Introduction)"
+        "title": "บทนำ - ผลิตภัณฑ์ความรู้ชิ้นแรกของผม (Introduction)"
       },
       {
-        "title": "The Two Types of Expert Businesses — ธุรกิจผู้เชี่ยวชาญสองรูปแบบ (The Two Types of Expert Businesses)"
+        "title": "บทที่ 1 - ธุรกิจผู้เชี่ยวชาญ 2 รูปแบบ (The Two Types of Expert Businesses)"
       },
       {
-        "title": "Secret #1 — ผู้นำที่ผู้คนเชื่อมโยงด้วย (The Charismatic Leader / Attractive Character)"
+        "title": "Secret #1 - ผู้นำที่ผู้คนเชื่อมโยงด้วย (The Charismatic Leader / Attractive Character)"
       },
       {
-        "title": "Secret #2 — สร้างสาเหตุที่ผู้คนอยากร่วม (The Cause)"
+        "title": "Secret #2 - สร้างสาเหตุที่มองไปข้างหน้า (The Cause)"
       },
       {
-        "title": "Secret #3 — นำเสนอโอกาสใหม่ (The New Opportunity)"
+        "title": "Secret #3 - นำเสนอโอกาสใหม่ (The New Opportunity)"
       },
       {
-        "title": "Secret #4 — ออกแบบการเปลี่ยนผ่านสู่โอกาสใหม่ (The Opportunity Switch)"
+        "title": "Secret #4 - ออกแบบโอกาสใหม่และกลุ่มทดลอง (The Opportunity Switch)"
       },
       {
-        "title": "Secret #5 — ความเชื่อแกนหลักที่ทำให้คนตัดสินใจ (The Big Domino)"
+        "title": "Secret #5 - ความเชื่อแกนหลักที่ทำให้คนตัดสินใจ (The Big Domino)"
       },
       {
-        "title": "Secret #6 — เล่าเรื่องที่พาผู้ฟังไปถึงจุดค้นพบ (The Epiphany Bridge)"
+        "title": "บทที่ 9 - สะพานสู่จุดค้นพบ (The Epiphany Bridge)"
       },
       {
-        "title": "Secret #7 — การเดินทางสองชั้นของตัวเอก (The Hero’s Two Journeys)"
+        "title": "บทที่ 10 - Secret #7: การเดินทางสองเส้นทางของตัวเอก (The Hero’s Two Journeys)"
       },
       {
-        "title": "Secret #8 — สคริปต์ Epiphany Bridge (The Epiphany Bridge Script)"
+        "title": "บทที่ 11 - สคริปต์สะพานสู่จุดค้นพบ (The Epiphany Bridge Script)"
       },
       {
-        "title": "Secret #9 — ค้นหาและคลายความเชื่อผิด (False Belief Patterns)"
+        "title": "บทที่ 12 - รูปแบบความเชื่อผิด ๆ (False Belief Patterns)"
       },
       {
-        "title": "Secret #10 — ความเชื่อสามด้านที่ต้องเข้าใจ (The 3 Secrets)"
+        "title": "บทที่ 13 - ความเชื่อผิด ๆ 3 ประการ (The 3 Secrets)"
       },
       {
-        "title": "Secret #11 — สร้างข้อเสนอด้วย Stack Slide (The Stack Slide)"
+        "title": "บทที่ 14 - หน้าที่ทางศีลธรรมและสไลด์จัดข้อเสนอ (Your Moral Obligation - The Stack Slide)"
       },
       {
-        "title": "Secret #12 — โครงสร้าง Perfect Webinar (The Perfect Webinar)"
+        "title": "บทที่ 15 - เว็บบินาร์นำเสนอที่สมบูรณ์แบบ (The Perfect Webinar)"
       },
       {
-        "title": "Secret #13 — บทนำและ One Thing (The One Thing)"
+        "title": "บทที่ 16 - One Thing: เขียนบทนำและสร้างความผูกพัน (The One Thing)"
       },
       {
-        "title": "Secret #14 — คลายและสร้างความเชื่อใหม่ (Breaking and Rebuilding Belief Patterns)"
+        "title": "บทที่ 17 - คลายและสร้างรูปแบบความเชื่อใหม่ (Breaking and Rebuilding Belief Patterns)"
       },
       {
-        "title": "Secret #15 — นำเสนอข้อเสนอด้วย Stack (The Stack)"
+        "title": "บทที่ 18 - นำเสนอข้อเสนอเป็นชั้น ๆ (The Stack)"
       },
       {
-        "title": "Secret #16 — คำถามเช็กการตัดสินใจและวิธีปิดการขาย (Trial Closes)"
+        "title": "บทที่ 19 - คำถามเช็กการตัดสินใจ (Trial Closes)"
       },
       {
-        "title": "Secret #17 — โมเดล Perfect Webinar รายสัปดาห์ (The Perfect Webinar Model)"
+        "title": "บทที่ 20 - โมเดล Perfect Webinar รายสัปดาห์ (The Perfect Webinar Model)"
       },
       {
-        "title": "Secret #18 — ปิดการขายข้อเสนอราคาสูงด้วยสี่คำถาม (The 4-Question Close (For High-Ticket Offers))"
+        "title": "บทที่ 21 - ปิดข้อเสนอราคาสูงด้วย 4 คำถาม (The 4-Question Close)"
       },
       {
-        "title": "Secret #19 — สร้าง Perfect Webinar อย่างรวดเร็ว (The Perfect Webinar Hack)"
+        "title": "บทที่ 22 - สร้าง Perfect Webinar อย่างรวดเร็ว (The Perfect Webinar Hack)"
       },
       {
-        "title": "Secret #20 — ฟันเนลอีเมล Epiphany (Email Epiphany Funnels)"
+        "title": "บทที่ 23 - ฟันเนลอีเมล Epiphany (Email Epiphany Funnels)"
       },
       {
-        "title": "Secret #21 — ฟันเนลเปิดตัวสินค้าผ่าน Epiphany (Epiphany Product Launch Funnels)"
+        "title": "บทที่ 24 - ฟันเนลเปิดตัวสินค้าผ่าน Epiphany (Epiphany Product Launch Funnels)"
       },
       {
-        "title": "Secret #22 — เติมผู้สนใจเข้าสู่ฟันเนล (Fill Your Funnel)"
+        "title": "บทที่ 25 - เติมผู้คนเข้าสู่ฟันเนล (Fill Your Funnel)"
       },
       {
-        "title": "Conclusion — คำเชิญให้ลงมือและแบ่งปันความรู้ (Conclusion: Your Invitation)"
+        "title": "บทส่งท้าย - คำเชิญให้ลงมือและแบ่งปันความรู้ (Conclusion: Your Invitation)"
       }
     ]
   },

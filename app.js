@@ -129,7 +129,7 @@
       'วรรณกรรมและความทรงจำ':'Knowledge',
       'วรรณกรรมและปรัชญา':'Knowledge'
     };
-    function bookCategory(b){const source=b.category||b.shelfCategory||'';return bookCategoryGroups[source]||'Other'}
+    function bookCategory(b){const source=(b.category||b.shelfCategory||'').trim();return bookCategoryGroups[source]||source||'Knowledge'}
     function coverMarkup(b,mini=false){
       const imageUrl=b.coverUrl||b.coverImageUrl||'';
       return `<div class="${mini?'mini-cover':'cover'}${imageUrl?' has-cover-image':''}" data-cover-book="${esc(b.id)}" data-cover-path="${esc(b.coverPath||'')}" style="background:${esc(b.color)};color:${esc(b.text)}">${imageUrl?`<img class="cover-image" src="${esc(imageUrl)}" alt="" loading="lazy" decoding="async">`:''}<h3${!mini&&b.title.length>42?' class="long-cover-title"':''}>${esc(b.title)}</h3><div class="${mini?'cover-author':'author'}">${esc(b.author)}</div><span class="ornament"></span>${mini?'':`${favoriteMarkup(b)}<button type="button" class="cover-action cover-upload" data-cover="${esc(b.id)}" title="เปลี่ยนปก" aria-label="เปลี่ยนปกของ ${esc(b.title)}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5h3.2l1.5-2h6.6l1.5 2H20v11H4z"/><circle cx="12" cy="13" r="3.2"/><path d="M17 10h.01"/></svg></button><button type="button" class="cover-action cover-library-remove" data-delete-book="${esc(b.id)}" title="ลบถาวร" aria-label="ลบ ${esc(b.title)} ออกจากห้องสมุดอย่างถาวร"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6m4-6v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg></button>`}</div>`;
@@ -213,7 +213,7 @@
         const start=cuts[i],end=cuts[i+1];
         if(start===end)continue;
         const active=spans.filter(s=>s.start<=start&&s.end>=end).sort((a,b)=>b.createdAt-a.createdAt)[0],token=tokens.find(t=>t.start<=start&&t.end>=end);
-        let piece=esc(displayText.slice(start,end));
+        let piece=esc(displayText.slice(start,end)).replace(/\n/g,'<br>');
         if(token?.bold)piece=token.keepColor?`<strong class="example-label">${piece}</strong>`:`<strong>${piece}</strong>`;
         html+=active?`<mark class="reader-highlight" data-annotation="${esc(active.id)}" tabindex="0" title="เปิดหรือแก้โน้ต">${piece}</mark>`:piece;
       }
