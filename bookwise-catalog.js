@@ -1031,5 +1031,34 @@ window.BOOKWISE_CATALOG = [
         "title": "บทที่ 3 - เช็กลิสต์สร้างแบรนด์ในหน้าเดียว (One Page Branding Checklist)"
       }
     ]
+  },
+  {
+    "id": "100m-fast-cash-playbook",
+    "title": "$100M Fast Cash Playbook",
+    "author": "Alex Hormozi",
+    "category": "ธุรกิจและการตลาด",
+    "color": "#d9c9a7",
+    "text": "#3e3427",
+    "added": 94,
+    "totalChapters": 4,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "Start Here - เงินสดคือความจริงของธุรกิจ"
+      },
+      {
+        "title": "The Fast Cash Playbook - ออกแบบข้อเสนอและลำดับการขาย"
+      },
+      {
+        "title": "5 Reasons To Run Fast Cash Offers Every 90 Days - เหตุผลและเช็กลิสต์"
+      },
+      {
+        "title": "Sample Email and Text Sequence - ตัวอย่างลำดับอีเมลและข้อความ"
+      }
+    ]
   }
 ];
