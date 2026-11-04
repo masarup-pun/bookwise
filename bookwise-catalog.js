@@ -3368,79 +3368,79 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "คำนำ — พื้นฐานการตลาดที่อยู่ได้นาน (Foreword: What the Online Marketing Wizard Fraternity Doesn’t Want You to Know)"
+        "title": "คำนำ - สิ่งที่กลุ่มพ่อมดการตลาดออนไลน์ไม่อยากให้คุณรู้ (Foreword: What the Online Marketing Wizard Fraternity Doesn’t Want You to Know)"
       },
       {
-        "title": "ก่อนเริ่ม — หนังสือเล่มนี้พูดถึงอะไร (What This Book Is About (and What It’s NOT About))"
+        "title": "บทนำ - หนังสือเล่มนี้พูดถึงอะไรและไม่ได้พูดถึงอะไร (What This Book Is About (and What It’s NOT About))"
       },
       {
-        "title": "บทนำ — จากจดหมายโฆษณาสู่ funnel ออนไลน์ (Introduction)"
+        "title": "บทนำ - จุดเริ่มต้นของผมกับการตลาดทางตรง (Introduction)"
       },
       {
-        "title": "Secret #1 — สูตรลับสี่คำถาม (The Secret Formula)"
+        "title": "บทที่ 1 - สูตรลับ (The Secret Formula)"
       },
       {
-        "title": "Secret #2 — บันไดคุณค่า (The Value Ladder)"
+        "title": "บทที่ 2 - บันไดแห่งคุณค่า (The Value Ladder)"
       },
       {
-        "title": "Secret #3 — จากบันไดสู่ funnel (From a Ladder to a Funnel)"
+        "title": "บทที่ 3 - จากบันไดสู่กรวยการขาย (From a Ladder to a Funnel)"
       },
       {
-        "title": "Secret #4 — หาลูกค้าในฝัน (How to Find Your Dream Customers)"
+        "title": "บทที่ 4 - วิธีค้นหาลูกค้าในฝัน (How to Find Your Dream Customers)"
       },
       {
-        "title": "Secret #5 — ทราฟฟิกสามประเภท (The Three Types of Traffic)"
+        "title": "บทที่ 5 - ทราฟฟิก 3 ประเภท (The Three Types of Traffic)"
       },
       {
-        "title": "Secret #6 — ตัวละครที่ดึงดูด (The Attractive Character)"
+        "title": "บทที่ 8 - ตัวละครที่ดึงดูดใจ (The Attractive Character)"
       },
       {
-        "title": "Secret #7 — ชุดอีเมลแบบละครต่อเนื่อง (The Soap Opera Sequence)"
+        "title": "บทที่ 9 - ลำดับอีเมลแบบละครต่อเนื่อง (The Soap Opera Sequence)"
       },
       {
-        "title": "Secret #8 — อีเมลรายวันแบบ Seinfeld (Daily Seinfeld Sequence)"
+        "title": "บทที่ 10 - ลำดับอีเมล Seinfeld ประจำวัน (Daily Seinfeld Sequence)"
       },
       {
-        "title": "Secret #9 — ถอดรหัส funnel ที่ประสบความสำเร็จ (Reverse Engineering a Successful Funnel)"
+        "title": "บทที่ 11 - ถอดแบบ Funnel ที่ประสบความสำเร็จ (Reverse Engineering a Successful Funnel)"
       },
       {
-        "title": "Secret #10 — เจ็ดระยะของ funnel (Seven Phases of a Funnel)"
+        "title": "บทที่ 10 - เจ็ดระยะของ Funnel (Seven Phases of a Funnel)"
       },
       {
-        "title": "Secret #11 — ยี่สิบสามบล็อกสำหรับประกอบ funnel (The Twenty-Three Building Blocks of a Funnel)"
+        "title": "บทที่ 11 - ยี่สิบสามบล็อกสำหรับประกอบ Funnel (The Twenty-Three Building Blocks of a Funnel)"
       },
       {
-        "title": "Secret #12 — funnel หน้าและหลัง (Frontend vs. Backend Funnels)"
+        "title": "บทที่ 12 - ข้อเสนอ Frontend และ Backend (Frontend vs. Backend Funnels)"
       },
       {
-        "title": "Secret #13 — bait ที่ดีที่สุด (The Best Bait)"
+        "title": "บทที่ 13 - เหยื่อที่ดีที่สุด (The Best Bait)"
       },
       {
-        "title": "Funnel #1 — แบบฟอร์มสองขั้น ฟรีบวกค่าจัดส่ง (Two-Step, Free-Plus-Shipping)"
+        "title": "บทที่ 14 - Funnel สองขั้นแบบฟรีบวกค่าจัดส่ง (Two-Step, Free-Plus-Shipping)"
       },
       {
-        "title": "Funnel #2 — ข้อเสนอคุ้มทุนค่าโฆษณา (Self-Liquidating Offer)"
+        "title": "บทที่ 15 - ข้อเสนอที่ชำระค่าโฆษณาได้ด้วยตัวเอง (Self-Liquidating Offer)"
       },
       {
-        "title": "Funnel #3 — โปรแกรมสมาชิกต่อเนื่อง (Continuity)"
+        "title": "บทที่ 16 - Funnel สมาชิกต่อเนื่อง (Continuity)"
       },
       {
-        "title": "Funnel #4 — เว็บบินาร์สมบูรณ์แบบ (The Perfect Webinar)"
+        "title": "Funnel #4 - เว็บบินาร์สมบูรณ์แบบ (The Perfect Webinar)"
       },
       {
-        "title": "Funnel #5 — เว็บบินาร์ Invisible Funnel (Invisible Funnel Webinar)"
+        "title": "Funnel #5 - เว็บบินาร์ Invisible Funnel (Invisible Funnel Webinar)"
       },
       {
-        "title": "Funnel #6 — เปิดตัวสินค้า (Product Launch)"
+        "title": "Funnel #6 - เปิดตัวสินค้า (Product Launch)"
       },
       {
-        "title": "Funnel #7 — ใบสมัครบริการราคาสูงสามขั้น (High-Ticket, Three-Step Application)"
+        "title": "Funnel #7 - ใบสมัครบริการราคาสูงสามขั้น (High-Ticket, Three-Step Application)"
       },
       {
-        "title": "ส่วนที่ 5 — ใช้ ClickFunnels สร้างระบบ (ClickFunnels)"
+        "title": "ส่วนที่ 5 - ใช้ ClickFunnels สร้างระบบ (ClickFunnels)"
       },
       {
-        "title": "บทสรุป — เริ่มลงมือและจุดไฟให้ธุรกิจ (Conclusion: Ignite)"
+        "title": "บทสรุป - เริ่มลงมือและจุดไฟให้ธุรกิจ (Conclusion: Ignite)"
       }
     ]
   },
