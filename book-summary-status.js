@@ -59,4 +59,5 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'trend-following': 'revised',
   '33-strategies-of-war': 'revised',
   '100m-branding-playbook': 'revised',
+  '100m-fast-cash-playbook': 'revised',
 });
