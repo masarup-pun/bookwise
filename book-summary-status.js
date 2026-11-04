@@ -30,6 +30,7 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'great-mental-models-volume-3': 'revised',
   'great-mental-models-volume-4': 'revised',
   'expert-secrets': 'revised',
+  'traffic-secrets': 'revised',
   'international-player': 'revised',
   'manifest-7-steps': 'revised',
   'manifest-dive-deeper': 'revised',

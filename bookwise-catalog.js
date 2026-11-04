@@ -3558,76 +3558,76 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "Foreword — ทำให้คนที่ต้องการได้พบสิ่งที่มีคุณค่า (Foreword)"
+        "title": "คำนำ - การตลาดช่วยให้คนพบสิ่งที่มีคุณค่า (Foreword by Dean Graziosi)"
       },
       {
-        "title": "คำนำ — พื้นฐานของชุดหนังสือ Secrets (Preface)"
+        "title": "คำนำ - คุณมีไฟ ผมจะมอบกรอบวิธีให้ (Preface)"
       },
       {
-        "title": "บทนำ — สร้างการเข้าถึงที่รับมือกับการเปลี่ยนแปลง (Introduction)"
+        "title": "บทนำ - พายุลูกใหม่กำลังมา (Introduction: There's a Storm Coming)"
       },
       {
-        "title": "Secret #1 — ใครคือลูกค้าในฝันของคุณ? (Who Is Your Dream Customer?)"
+        "title": "Secret #1 - ใครคือลูกค้าในฝันของคุณ? (Who Is Your Dream Customer?)"
       },
       {
-        "title": "Secret #2 — ลูกค้าในฝันของคุณไปรวมตัวกันที่ไหน? (Where Are They Hiding? The Dream 100)"
+        "title": "Secret #2 - พวกเขาไปรวมตัวกันที่ไหน? The Dream 100 (Where Are They Hiding?)"
       },
       {
-        "title": "Secret #3 — Hook, Story, Offer (Hook, Story, Offer, and the Attractive Character)"
+        "title": "Secret #3 - Hook, Story, Offer และ Attractive Character"
       },
       {
-        "title": "Secret #4 — ค่อย ๆ เข้าไปในกลุ่ม หรือซื้อทางเข้าไป (Work Your Way In, Buy Your Way In)"
+        "title": "Secret #4 - เข้าหาผู้ชมผ่านความสัมพันธ์และโฆษณา (Work Your Way In, Buy Your Way In)"
       },
       {
-        "title": "Secret #5 — สร้าง Traffic ที่คุณเป็นเจ้าของ (Traffic That You Own)"
+        "title": "Secret #5 - ทราฟฟิกที่เราเป็นเจ้าของ (Traffic That You Own)"
       },
       {
-        "title": "Secret #6 — Follow-Up Funnels (Follow-Up Funnels)"
+        "title": "Secret #6 - ฟันเนลติดตามผล (Follow-Up Funnels)"
       },
       {
-        "title": "Secret #7 — สร้างช่องทางเผยแพร่ของตัวเอง (Infiltrating the Dream 100)"
+        "title": "Secret #7 - แทรกตัวเข้าไปใน Dream 100 ด้วยรายการของเรา (Infiltrating the Dream 100)"
       },
       {
-        "title": "Secret #8 — เติมฟันเนลด้วยเนื้อหาแบบออร์แกนิก (Fill Your Funnel Organically (Working Your Way In))"
+        "title": "Secret #8 - เติมผู้ชมเข้าสู่ฟันเนลแบบไม่ซื้อโฆษณา (Fill Your Funnel Organically)"
       },
       {
-        "title": "Secret #9 — เติมฟันเนลด้วยโฆษณาแบบชำระเงิน (Fill Your Funnel with Paid Ads (Buying Your Way In))"
+        "title": "Secret #9 - เติมฟันเนลด้วยโฆษณาแบบจ่ายเงิน (Fill Your Funnel with Paid Ads)"
       },
       {
-        "title": "Secret #10 — กลยุทธ์ Traffic บน Instagram (Instagram Traffic Secrets)"
+        "title": "Secret #10 - กลยุทธ์ทราฟฟิกจาก Instagram (Instagram Traffic Secrets)"
       },
       {
-        "title": "Secret #11 — กลยุทธ์ Traffic บน Facebook (Facebook Traffic Secrets)"
+        "title": "Secret #11 - กลยุทธ์ทราฟฟิกจาก Facebook (Facebook Traffic Secrets)"
       },
       {
-        "title": "Secret #12 — กลยุทธ์ Traffic บน Google (Google Traffic Secrets)"
+        "title": "Secret #12 - กลยุทธ์ทราฟฟิกจาก Google (Google Traffic Secrets)"
       },
       {
-        "title": "Secret #13 — กลยุทธ์ Traffic บน YouTube (YouTube Traffic Secrets)"
+        "title": "Secret #13 - กลยุทธ์ทราฟฟิกจาก YouTube (YouTube Traffic Secrets)"
       },
       {
-        "title": "Secret #14 — รับมือเมื่อแพลตฟอร์มเปลี่ยน (After the Slaps and the Snaps)"
+        "title": "Secret #14 - หลังแพลตฟอร์มเปลี่ยนแปลง (After the Slaps and the Snaps)"
       },
       {
-        "title": "Secret #15 — ครองบทสนทนาในหลายช่องทาง (Conversation Domination)"
+        "title": "Secret #15 - ครองบทสนทนาบนทุกช่องทาง (Conversation Domination)"
       },
       {
-        "title": "Secret #16 — Funnel Hub (The Funnel Hub)"
+        "title": "Secret #16 - ศูนย์กลาง Funnel (The Funnel Hub)"
       },
       {
-        "title": "Secret #17 — ใช้ช่องทางจัดจำหน่ายของผู้อื่น (Other People’s Distribution Channels)"
+        "title": "Secret #17 - ใช้ช่องทางกระจายผู้ชมของคนอื่น (Other People's Distribution Channels)"
       },
       {
-        "title": "Secret #18 — สร้างกองทัพ Affiliate (Your Affiliate Army)"
+        "title": "Secret #18 - กองทัพ Affiliate ของคุณ (Your Affiliate Army)"
       },
       {
-        "title": "Secret #19 — Cold Traffic (Cold Traffic)"
+        "title": "Secret #19 - Cold Traffic (ทราฟฟิกเย็น)"
       },
       {
-        "title": "Secret #20 — แนวทางเติบโตเพิ่มเติม (Other Growth Hacks)"
+        "title": "Secret #20 - Other Growth Hacks (เทคนิคเร่งการเติบโตอื่น ๆ)"
       },
       {
-        "title": "บทสรุป — ผูกหลักการเข้าด้วยกัน (Tying It All Back Together)"
+        "title": "Conclusion - Tying It All Back Together (สรุปกรอบคิดและลงมือทำ)"
       }
     ]
   },
