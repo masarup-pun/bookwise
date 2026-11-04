@@ -61,4 +61,5 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   '100m-branding-playbook': 'revised',
   '100m-fast-cash-playbook': 'revised',
   'discipline-is-destiny': 'revised',
+  'right-thing-right-now': 'revised',
 });
