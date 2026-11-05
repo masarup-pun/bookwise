@@ -4992,5 +4992,46 @@ window.BOOKWISE_CATALOG = [
         "title": "ส่วนที่ 5 - เหตุผลที่ควรปรับ Hook และ Hook Checklist"
       }
     ]
+  },
+  {
+    "id": "100m-lead-nurture-playbook",
+    "title": "$100M Lead Nurture Playbook",
+    "author": "Alex Hormozi",
+    "category": "ธุรกิจและการตลาด",
+    "color": "#c9d8d1",
+    "text": "#25352f",
+    "added": 97,
+    "totalChapters": 8,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "ส่วนที่ 1 - Lead Nurture: ทำให้ลีดนัดและมาตามนัด"
+      },
+      {
+        "title": "ส่วนที่ 2 - Four Pillars of Lead Nurture"
+      },
+      {
+        "title": "ส่วนที่ 3 - Pillar I: Availability"
+      },
+      {
+        "title": "ส่วนที่ 4 - Pillar II: Speed"
+      },
+      {
+        "title": "ส่วนที่ 5 - Pillar III: Personalization"
+      },
+      {
+        "title": "ส่วนที่ 6 - Pillar IV: Volume"
+      },
+      {
+        "title": "ส่วนที่ 7 - Execution: ทำงานน่าเบื่อให้เกิดผล"
+      },
+      {
+        "title": "ส่วนที่ 8 - Lead Nurture Checklist"
+      }
+    ]
   }
 ];
