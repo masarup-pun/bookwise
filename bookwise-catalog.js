@@ -4922,5 +4922,43 @@ window.BOOKWISE_CATALOG = [
         "title": "Sample Email and Text Sequence - ตัวอย่างลำดับอีเมลและข้อความ"
       }
     ]
+  },
+  {
+    "id": "100m-goated-ads-playbook",
+    "title": "$100M GOATed Ads Playbook",
+    "author": "Alex Hormozi",
+    "category": "ธุรกิจและการตลาด",
+    "color": "#c9d8d1",
+    "text": "#25352f",
+    "added": 95,
+    "totalChapters": 7,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "บทที่ 1 - โฆษณาที่ขยายผลได้ (GOATed Ads)"
+      },
+      {
+        "title": "บทที่ 2 - ทำไมโฆษณาชนเพดานและจะขยายต่ออย่างไร"
+      },
+      {
+        "title": "บทที่ 3 - กระบวนการประกอบโฆษณา (The Ad Assembly Process)"
+      },
+      {
+        "title": "บทที่ 4 - เนื้อหาหลักของโฆษณา (The Ad Meat)"
+      },
+      {
+        "title": "บทที่ 5 - คำชวนให้ลงมือทำ (CTA - Call To Action)"
+      },
+      {
+        "title": "บทที่ 6 - ขยายผลโฆษณา (Scale It)"
+      },
+      {
+        "title": "บทที่ 7 - เช็กลิสต์ทำโฆษณา (GOATed Ads Playbook Cheat Sheet)"
+      }
+    ]
   }
 ];
