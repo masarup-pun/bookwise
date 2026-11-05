@@ -368,49 +368,49 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทนำ - บางทีเวลาอาจเป็นปริศนาที่ยิ่งใหญ่ที่สุด (Perhaps Time Is the Greatest Mystery)"
+        "title": "บทนำ — เวลาอาจเป็นปริศนาที่ยิ่งใหญ่ที่สุด (Perhaps Time Is the Greatest Mystery)"
       },
       {
-        "title": "บทที่ 1 - การสูญเสียความเป็นหนึ่งเดียว (The Loss of Unity)"
+        "title": "บทที่ 1 — ความเป็นหนึ่งเดียวที่สูญสลาย (The Loss of Unity)"
       },
       {
-        "title": "บทที่ 2 - การสูญเสียทิศทาง (The Loss of Direction)"
+        "title": "บทที่ 2 — ทิศทางที่สูญหาย (The Loss of Direction)"
       },
       {
-        "title": "บทที่ 3 - การสิ้นสุดของปัจจุบัน (The End of the Present)"
+        "title": "บทที่ 3 — จุดจบของปัจจุบัน (The End of the Present)"
       },
       {
-        "title": "บทที่ 4 - การสูญเสียความเป็นอิสระ (The Loss of Independence)"
+        "title": "บทที่ 4 — การสูญเสียความเป็นอิสระ (The Loss of Independence)"
       },
       {
-        "title": "บทที่ 5 - ควอนตัมของเวลา (Time Quanta)"
+        "title": "บทที่ 5 — ควอนตัมของเวลา (The Quanta of Time)"
       },
       {
-        "title": "บทที่ 6 - โลกประกอบจากเหตุการณ์ ไม่ใช่วัตถุ (The World Is Made of Events, Not Things)"
+        "title": "บทที่ 6 — โลกประกอบจากเหตุการณ์ ไม่ใช่วัตถุ (The World Is Made of Events, Not Things)"
       },
       {
-        "title": "บทที่ 7 - ข้อจำกัดของไวยากรณ์ (The Inadequacy of Grammar)"
+        "title": "บทที่ 7 — ข้อจำกัดของไวยากรณ์ (The Inadequacy of Grammar)"
       },
       {
-        "title": "บทที่ 8 - พลวัตผ่านความสัมพันธ์ (Dynamics as Relation)"
+        "title": "บทที่ 8 — พลวัตคือความสัมพันธ์ (Dynamics as Relation)"
       },
       {
-        "title": "บทที่ 9 - เวลาในฐานะความไม่รู้"
+        "title": "บทที่ 9 — เวลาเท่ากับความไม่รู้ (Time Is Ignorance)"
       },
       {
-        "title": "บทที่ 10 - มุมมอง"
+        "title": "บทที่ 10 — มุมมอง (Perspective)"
       },
       {
-        "title": "บทที่ 11 - สิ่งพิเศษเกิดขึ้นได้อย่างไร"
+        "title": "บทที่ 11 — สิ่งใดเกิดขึ้นจากความพิเศษ (What Emerges from a Particularity)"
       },
       {
-        "title": "บทที่ 12 - กลิ่นหอมของขนมมาเดอลีน"
+        "title": "บทที่ 12 — กลิ่นหอมของมาดแลน (The Scent of the Madeleine)"
       },
       {
-        "title": "บทที่ 13 - ที่มาของเวลา"
+        "title": "บทที่ 13 — ต้นกำเนิดของเวลา (The Source of Time)"
       },
       {
-        "title": "บทส่งท้าย - พี่สาวแห่งการหลับใหล"
+        "title": "บทส่งท้าย — พี่สาวแห่งนิทรา (Sisters of Sleep)"
       }
     ]
   },
@@ -422,7 +422,7 @@ window.BOOKWISE_CATALOG = [
     "color": "#294b66",
     "text": "#f5e9ca",
     "added": 18,
-    "totalChapters": 18,
+    "totalChapters": 15,
     "chapter": 0,
     "progress": 0,
     "favorite": false,
@@ -430,58 +430,49 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "คำอุทิศ (Dedication)"
+        "title": "บทที่ 1 — ภาพเหมือนของชาร์ลี มังเกอร์และบทเรียนจากชีวิต (A Portrait of Charles T. Munger)"
       },
       {
-        "title": "คำชี้แจง - Munger พูดถึง Buffett (Rebuttal, Munger on Buffett)"
+        "title": "บทที่ 2 — แนวทางของมังเกอร์ต่อชีวิต การเรียนรู้ และการตัดสินใจ (The Munger Approach to Life, Learning, and Decision Making)"
       },
       {
-        "title": "บทนำ - Peter D. Kaufman (Introduction by Peter D. Kaufman)"
+        "title": "บทที่ 3 — คำคมและคำตอบสดของชาร์ลี (Mungerisms: Charlie Unscripted)"
       },
       {
-        "title": "บทที่ 1 - ภาพเหมือนของ Charles T. Munger (A Portrait of Charles T. Munger)"
+        "title": "บทที่ 4 — วิธีสร้างความทุกข์และหลีกเลี่ยงชีวิตที่ดี (Harvard School Commencement Speech)"
       },
       {
-        "title": "บทที่ 2 - แนวทางของ Munger ต่อชีวิต การเรียนรู้ และการตัดสินใจ (The Munger Approach to Life, Learning, and Decision Making)"
+        "title": "บทที่ 5 — ปัญญาทั่วไปที่ใช้กับการลงทุนและธุรกิจ (A Lesson on Elementary, Worldly Wisdom as It Relates to Investment Management and Business)"
       },
       {
-        "title": "บทที่ 3 - คำคมและข้อคิดของ Munger แบบไม่ปรุงแต่ง (Mungerisms: Charlie Unscripted)"
+        "title": "บทที่ 6 — ปัญญาทั่วไปที่ใช้กับการลงทุน ฉบับทบทวน (A Lesson on Elementary, Worldly Wisdom, Revisited)"
       },
       {
-        "title": "บทที่ 4 - สุนทรพจน์วันรับปริญญาแห่ง Harvard School (Harvard School Commencement Speech)"
+        "title": "บทที่ 7 — วิธีคิดที่นำไปใช้ได้จริง (Practical Thought About Practical Thought?)"
       },
       {
-        "title": "บทที่ 5 - บทเรียนเรื่องภูมิปัญญาโลกขั้นพื้นฐานกับการลงทุนและธุรกิจ (A Lesson on Elementary, Worldly Wisdom as It Relates to Investment Management and Business)"
+        "title": "บทที่ 8 — ผู้เชี่ยวชาญควรมีทักษะข้ามศาสตร์มากขึ้น (The Need for More Multidisciplinary Skills from Professionals)"
       },
       {
-        "title": "บทที่ 6 - บทเรียนเรื่องภูมิปัญญาโลกขั้นพื้นฐาน ฉบับทบทวนที่ Stanford Law School (A Lesson on Elementary, Worldly Wisdom, Revisited Stanford Law School)"
+        "title": "บทที่ 9 — แนวทางลงทุนของมูลนิธิการกุศลชั้นนำ (Investment Practices of Leading Charitable Foundations)"
       },
       {
-        "title": "บทที่ 7 - วิธีคิดเชิงปฏิบัติเกี่ยวกับการคิดเชิงปฏิบัติ (Practical Thought About Practical Thought?)"
+        "title": "บทที่ 10 — Wealth Effects และต้นทุนที่บิดเบือน (Philanthropy Roundtable)"
       },
       {
-        "title": "บทที่ 8 - ความจำเป็นที่ผู้เชี่ยวชาญต้องมีทักษะจากหลายศาสตร์"
+        "title": "บทที่ 11 — มหาวิกฤตการเงินปี 2003 (The Great Financial Scandal of 2003)"
       },
       {
-        "title": "บทที่ 9 - แนวทางการลงทุนของมูลนิธิการกุศลชั้นนำ"
+        "title": "บทที่ 12 — จุดแข็งและข้อบกพร่องของเศรษฐศาสตร์วิชาการ (Academic Economics)"
       },
       {
-        "title": "บทที่ 10 - ผลของราคาหุ้นและต้นทุนการลงทุนต่อมูลนิธิ"
+        "title": "บทที่ 13 — สุนทรพจน์รับปริญญาคณะนิติศาสตร์ USC"
       },
       {
-        "title": "บทที่ 11 - เรื่องอื้อฉาวทางการเงินครั้งใหญ่ปี 2003"
+        "title": "บทที่ 14 — จิตวิทยาของการตัดสินผิดพลาด (The Psychology of Human Misjudgment)"
       },
       {
-        "title": "บทที่ 12 - จุดแข็งและข้อบกพร่องของเศรษฐศาสตร์เชิงวิชาการ"
-      },
-      {
-        "title": "บทที่ 13 - คำกล่าวรับปริญญา คณะนิติศาสตร์ USC Gould"
-      },
-      {
-        "title": "บทที่ 14 - จิตวิทยาเบื้องหลังการตัดสินใจผิดพลาด (The Psychology of Human Misjudgment)"
-      },
-      {
-        "title": "บทที่ 15 - หนังสือที่ Charlie Munger แนะนำ (Charlie Munger’s Recommended Books)"
+        "title": "บทที่ 15 — หนังสือแนะนำของ Charlie Munger"
       }
     ]
   },
@@ -493,7 +484,7 @@ window.BOOKWISE_CATALOG = [
     "color": "#d6c9b7",
     "text": "#3d3026",
     "added": 3,
-    "totalChapters": 16,
+    "totalChapters": 17,
     "chapter": 0,
     "progress": 0,
     "favorite": false,
@@ -501,52 +492,55 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทที่ 1 — ธุรกิจช่วยชีวิตผม ก่อนเกือบทำลายมัน (Introduction)"
+        "title": "บทนำ - ธุรกิจช่วยชีวิตผม (แล้วเกือบทำลายมัน)"
       },
       {
-        "title": "บทที่ 2 — วิธีซื้อชีวิตของผมกลับคืน (Chapter 1)"
+        "title": "บทที่ 1 - วิธีซื้อชีวิตของผมกลับคืน (How I Buy Back My Life)"
       },
       {
-        "title": "บทที่ 3 — DRIP Matrix: เลือกงานตามพลังงานและมูลค่า (Chapter 2)"
+        "title": "บทที่ 2 - เมทริกซ์ DRIP (The DRIP Matrix)"
       },
       {
-        "title": "บทที่ 4 — นักฆ่าเวลา 5 แบบ (Chapter 3)"
+        "title": "บทที่ 3 - มือสังหารเวลา 5 แบบ (The 5 Time Assassins)"
       },
       {
-        "title": "บทที่ 5 — การแลกเปลี่ยน 3 ระดับที่สำคัญ (Chapter 4)"
+        "title": "บทที่ 4 - 3 การแลกเปลี่ยนที่สำคัญ (The Only 3 Trades That Matter)"
       },
       {
-        "title": "บทที่ 6 — บันไดทดแทนงานของผู้ก่อตั้ง (Chapter 5)"
+        "title": "บทที่ 5 - บันไดการทดแทน (The Replacement Ladder)"
       },
       {
-        "title": "บทที่ 7 — สร้างตัวแทนของคุณและซื้อเวลากลับ (Chapter 6)"
+        "title": "บทที่ 6 - ทำสำเนาตัวคุณเอง (Clone Yourself)"
       },
       {
-        "title": "บทที่ 8 — สร้างคู่มือกระบวนการทำงาน (Chapter 7)"
+        "title": "บทที่ 7 - สร้าง Playbook (Building Playbooks)"
       },
       {
-        "title": "บทที่ 9 — ออกแบบสัปดาห์ในอุดมคติ (Chapter 8)"
+        "title": "บทที่ 8 - สัปดาห์ที่สมบูรณ์แบบของคุณ (Your Perfect Week)"
       },
       {
-        "title": "บทที่ 10 — แฮ็กจัดการเวลาสี่อย่างที่จำเป็น (Chapter 9)"
+        "title": "บทที่ 9 - เคล็ดลับจัดการเวลา 4 อย่าง (The Only 4 Time Hacks You Need)"
       },
       {
-        "title": "บทที่ 11 — วิธีจ้างแบบทดลองทำงานก่อน (Chapter 10)"
+        "title": "บทที่ 10 - วิธีจ้างงานแบบทดสอบก่อน (The “Test-First” Hiring Method)"
       },
       {
-        "title": "บทที่ 12 — ภาวะผู้นำที่เปลี่ยนแปลงคน (Chapter 11)"
+        "title": "บทที่ 11 - ภาวะผู้นำที่เปลี่ยนทีม (Transformational Leadership)"
       },
       {
-        "title": "บทที่ 13 — คำ F ที่ช่วยรักษาธุรกิจ (Chapter 12)"
+        "title": "บทที่ 12 - คำ F ที่ช่วยธุรกิจของคุณ (This “F-Word” Will Save Your Business)"
       },
       {
-        "title": "บทที่ 14 — ฝันให้ใหญ่และไปให้ไกลกว่าเดิม (Chapter 13)"
+        "title": "บทที่ 13 - ฝันให้ใหญ่ แล้วไปให้ไกลกว่าเดิม (Dream BIG. Achieve Bigger)"
       },
       {
-        "title": "บทที่ 15 — วางแผนทั้งปีล่วงหน้า (Chapter 14)"
+        "title": "บทที่ 14 - วางแผนทั้งปีล่วงหน้า (The Preloaded Year)"
       },
       {
-        "title": "บทที่ 16 — ชีวิตที่ซื้อเวลากลับคืน (Conclusion & 7 Pillars of Life)"
+        "title": "บทส่งท้าย - ชีวิตที่ซื้อเวลาคืนได้ (The Buyback Life)"
+      },
+      {
+        "title": "ภาคผนวก - 7 เสาหลักของชีวิต (7 Pillars of Life)"
       }
     ]
   },
@@ -605,7 +599,7 @@ window.BOOKWISE_CATALOG = [
     "color": "#d7cbb7",
     "text": "#3b3328",
     "added": 10,
-    "totalChapters": 8,
+    "totalChapters": 9,
     "chapter": 0,
     "progress": 0,
     "favorite": false,
@@ -613,28 +607,31 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทที่ 1 — การฝึกตระหนักรู้: การถูกหล่อหลอม (Domestication)"
+        "title": "บทนำ - สามความชำนาญและ 4 ข้อตกลง (Three Masteries, Four Agreements)"
       },
       {
-        "title": "บทที่ 2 — พลังของถ้อยคำ (The Power of the Word)"
+        "title": "บทที่ 1 - การถูกฝึกให้เชื่อและภาพความสมบูรณ์แบบ (Domestication)"
       },
       {
-        "title": "บทที่ 3 — ความฝัน (Dreaming)"
+        "title": "บทที่ 2 - พลังของคำพูด (The Power of the Word)"
       },
       {
-        "title": "บทที่ 4 — ความใส่ใจครั้งที่สอง (The Second Attention)"
+        "title": "บทที่ 3 - การฝันของจิตใจ (Dreaming)"
       },
       {
-        "title": "บทที่ 5 — การกระทำและปฏิกิริยา (Action–Reaction)"
+        "title": "บทที่ 4 - ใช้ความสนใจเป็นครั้งที่สอง (The Second Attention)"
       },
       {
-        "title": "บทที่ 6 — ยึดไว้และปล่อยวาง (Attach–Detach)"
+        "title": "บทที่ 5 - การกระทำและปฏิกิริยา (Action-Reaction)"
       },
       {
-        "title": "บทที่ 7 — สนทนากับ Don Miguel (A Dialogue with Don Miguel)"
+        "title": "บทที่ 6 - แนบสนิทและปล่อยวาง (Attach-Detach)"
       },
       {
-        "title": "บทที่ 8 — เรื่องจริงของการตระหนักรู้และการเปลี่ยนแปลง (True Stories of Awareness and Transformation)"
+        "title": "บทที่ 7 - บทสนทนากับ Don Miguel Ruiz (ดอน มิเกล รุยซ์) (A Dialogue with Don Miguel)"
+      },
+      {
+        "title": "บทที่ 8 - เรื่องจริงของการตระหนักรู้และการเปลี่ยนแปลง (True Stories of Awareness and Transformation)"
       }
     ]
   },
@@ -646,7 +643,7 @@ window.BOOKWISE_CATALOG = [
     "color": "#d4c6b2",
     "text": "#382f25",
     "added": 19,
-    "totalChapters": 11,
+    "totalChapters": 12,
     "chapter": 0,
     "progress": 0,
     "favorite": false,
@@ -654,37 +651,40 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทที่ 1 — เริ่มต้นอย่างรวดเร็วในสองสัปดาห์ (Two-Week Quick Start)"
+        "title": "บทนำ - การเป็นมืออาชีพที่สร้างคุณค่า (Introduction)"
       },
       {
-        "title": "บทที่ 2 — ภาวะผู้นำแบบเรียบง่าย (Leadership Made Simple)"
+        "title": "บทที่ 1 - เริ่มต้นอย่างรวดเร็วในสองสัปดาห์ (Two-Week Quick Start)"
       },
       {
-        "title": "บทที่ 3 — ผลิตภาพแบบเรียบง่าย (Productivity Made Simple)"
+        "title": "บทที่ 2 - ภาวะผู้นำแบบเรียบง่าย (Leadership Made Simple)"
       },
       {
-        "title": "บทที่ 4 — กลยุทธ์ธุรกิจแบบเรียบง่าย (Business Strategy Made Simple)"
+        "title": "บทที่ 3 - ผลิตภาพแบบเรียบง่าย (Productivity Made Simple)"
       },
       {
-        "title": "บทที่ 5 — การสื่อสารการตลาดแบบเรียบง่าย (Messaging Made Simple)"
+        "title": "บทที่ 4 - กลยุทธ์ธุรกิจแบบเรียบง่าย (Business Strategy Made Simple)"
       },
       {
-        "title": "บทที่ 6 — การตลาดแบบเรียบง่าย (Marketing Made Simple)"
+        "title": "บทที่ 5 - การสื่อสารการตลาดแบบเรียบง่าย (Messaging Made Simple)"
       },
       {
-        "title": "บทที่ 7 — การสื่อสารแบบเรียบง่าย (Communication Made Simple)"
+        "title": "บทที่ 6 - การตลาดแบบเรียบง่าย (Marketing Made Simple)"
       },
       {
-        "title": "บทที่ 8 — การขายแบบเรียบง่าย (Sales Made Simple)"
+        "title": "บทที่ 7 - การสื่อสารแบบเรียบง่าย (Communication Made Simple)"
       },
       {
-        "title": "บทที่ 9 — การเจรจาแบบเรียบง่าย (Negotiation Made Simple)"
+        "title": "บทที่ 8 - การขายแบบเรียบง่าย (Sales Made Simple)"
       },
       {
-        "title": "บทที่ 10 — การบริหารแบบเรียบง่าย (Management Made Simple)"
+        "title": "บทที่ 9 - การเจรจาแบบเรียบง่าย (Negotiation Made Simple)"
       },
       {
-        "title": "บทที่ 11 — การลงมือทำให้สำเร็จแบบเรียบง่าย (Execution Made Simple)"
+        "title": "บทที่ 10 - การบริหารแบบเรียบง่าย (Management Made Simple)"
+      },
+      {
+        "title": "บทที่ 11 - การลงมือทำให้สำเร็จแบบเรียบง่าย (Execution Made Simple)"
       }
     ]
   },
@@ -696,7 +696,7 @@ window.BOOKWISE_CATALOG = [
     "color": "#b6c9c2",
     "text": "#193b35",
     "added": 20,
-    "totalChapters": 9,
+    "totalChapters": 10,
     "chapter": 0,
     "progress": 0,
     "favorite": false,
@@ -704,31 +704,34 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทที่ 1 — การดำรงอยู่และการตื่นรู้ (Being and Enlightenment)"
+        "title": "บทนำ - ข้อความจากผู้เขียน (Introduction)"
       },
       {
-        "title": "บทที่ 2 — ต้นกำเนิดของความกลัว (The Origin of Fear)"
+        "title": "บทที่ 1 - การดำรงอยู่และการตื่นรู้ (Being and Enlightenment)"
       },
       {
-        "title": "บทที่ 3 — เข้าสู่ปัจจุบัน (Entering the Now)"
+        "title": "บทที่ 2 - ต้นกำเนิดของความกลัว (The Origin of Fear)"
       },
       {
-        "title": "บทที่ 4 — สลายความไม่รู้ตัว (Dissolving Unconsciousness)"
+        "title": "บทที่ 3 - เข้าสู่ปัจจุบัน (Entering the Now)"
       },
       {
-        "title": "บทที่ 5 — ความงามปรากฏในความสงบของการดำรงอยู่ (Beauty Arises in the Stillness of Your Presence)"
+        "title": "บทที่ 4 - สลายความไม่รู้ตัว (Dissolving Unconsciousness)"
       },
       {
-        "title": "บทที่ 6 — สลายกายแห่งความเจ็บปวด (Dissolving the Pain-Body)"
+        "title": "บทที่ 5 - ความงามปรากฏในความสงบของการดำรงอยู่ (Beauty Arises in the Stillness of Your Presence)"
       },
       {
-        "title": "บทที่ 7 — จากความสัมพันธ์เสพติดสู่ความสัมพันธ์ที่ตื่นรู้ (From Addictive to Enlightened Relationships)"
+        "title": "บทที่ 6 - สลายกายแห่งความเจ็บปวด (Dissolving the Pain-Body)"
       },
       {
-        "title": "บทที่ 8 — การยอมรับปัจจุบัน (Acceptance of the Now)"
+        "title": "บทที่ 7 - จากความสัมพันธ์เสพติดสู่ความสัมพันธ์ที่ตื่นรู้ (From Addictive to Enlightened Relationships)"
       },
       {
-        "title": "บทที่ 9 — เปลี่ยนความเจ็บป่วยและความทุกข์ (Transforming Illness and Suffering)"
+        "title": "บทที่ 8 - การยอมรับปัจจุบัน (Acceptance of the Now)"
+      },
+      {
+        "title": "บทที่ 9 - เปลี่ยนความเจ็บป่วยและความทุกข์ (Transforming Illness and Suffering)"
       }
     ]
   },
@@ -740,7 +743,7 @@ window.BOOKWISE_CATALOG = [
     "color": "#c4b9a8",
     "text": "#34312d",
     "added": 21,
-    "totalChapters": 10,
+    "totalChapters": 12,
     "chapter": 0,
     "progress": 0,
     "favorite": false,
@@ -748,34 +751,40 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทที่ 1 — คุณไม่ใช่ความคิดของคุณ (You Are Not Your Mind)"
+        "title": "คำนำ - ประตูสู่ความจริงที่อยู่ตรงหน้า (Foreword)"
       },
       {
-        "title": "บทที่ 2 — ความรู้ตัว: ทางออกจากความเจ็บปวด (Consciousness: The Way Out of Pain)"
+        "title": "บทนำ - ความจริงที่อยู่ภายในคุณ (Introduction)"
       },
       {
-        "title": "บทที่ 3 — ก้าวลึกสู่ปัจจุบัน (Moving Deeply into the Now)"
+        "title": "บทที่ 1 - คุณไม่ใช่ความคิดของคุณ (You Are Not Your Mind)"
       },
       {
-        "title": "บทที่ 4 — กลยุทธ์ของจิตเพื่อหลีกเลี่ยงปัจจุบัน (Mind Strategies for Avoiding the Now)"
+        "title": "บทที่ 2 - ความรู้ตัว: ทางออกจากความเจ็บปวด (Consciousness: The Way Out of Pain)"
       },
       {
-        "title": "บทที่ 5 — สภาวะแห่งการอยู่พร้อม (The State of Presence)"
+        "title": "บทที่ 3 - ก้าวลึกสู่ปัจจุบัน (Moving Deeply into the Now)"
       },
       {
-        "title": "บทที่ 6 — ร่างกายภายใน (The Inner Body)"
+        "title": "บทที่ 4 - กลยุทธ์ของจิตใจเพื่อหลีกเลี่ยงปัจจุบัน (Mind Strategies for Avoiding the Now)"
       },
       {
-        "title": "บทที่ 7 — ประตูสู่สิ่งที่ยังไม่ปรากฏเป็นรูป (Portals into the Unmanifested)"
+        "title": "บทที่ 5 - สภาวะความรู้ตัว (The State of Presence)"
       },
       {
-        "title": "บทที่ 8 — ความสัมพันธ์ที่ตื่นรู้ (Enlightened Relationships)"
+        "title": "บทที่ 6 - ร่างกายภายใน (The Inner Body)"
       },
       {
-        "title": "บทที่ 9 — เหนือสุขและทุกข์ยังมีความสงบ (Beyond Happiness and Unhappiness There Is Peace)"
+        "title": "บทที่ 7 - ช่องทางสู่สิ่งที่ไม่ปรากฏเป็นรูป (Portals into the Unmanifested)"
       },
       {
-        "title": "บทที่ 10 — ความหมายของการยอมจำนน (The Meaning of Surrender)"
+        "title": "บทที่ 8 - ความสัมพันธ์ที่ตื่นรู้ (Enlightened Relationships)"
+      },
+      {
+        "title": "บทที่ 9 - เหนือความสุขและความทุกข์คือความสงบ (Beyond Happiness and Unhappiness There Is Peace)"
+      },
+      {
+        "title": "บทที่ 10 - ความหมายของการยอมจำนน (The Meaning of Surrender)"
       }
     ]
   },
@@ -881,19 +890,19 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทที่ 1 - มุ่งสู่เป้าหมาย (Part I: Pursue Purpose)"
+        "title": "บทที่ 1 — มุ่งสู่เป้าหมาย (Part I: Pursue Purpose)"
       },
       {
-        "title": "บทที่ 2 - การทำงานอย่างเข้มข้น (Part II: Ultra Hardcore Work)"
+        "title": "บทที่ 2 — การทำงานอย่างเข้มข้น (Part II: Ultra Hardcore Work)"
       },
       {
-        "title": "บทที่ 3 - การสร้างบริษัท (Part III: Building Companies)"
+        "title": "บทที่ 3 — การสร้างบริษัท (Part III: Building Companies)"
       },
       {
-        "title": "บทที่ 4 - เพื่ออนาคตของมนุษยชาติ (Part IV: On Behalf of Humanity)"
+        "title": "บทที่ 4 — เพื่ออนาคตของมนุษยชาติ (Part IV: On Behalf of Humanity)"
       },
       {
-        "title": "บทที่ 5 - ภาคโบนัส (Bonus)"
+        "title": "บทที่ 5 — ภาคโบนัส (Bonus)"
       }
     ]
   },
@@ -913,40 +922,40 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทที่ 1 - บุตรแห่งพราหมณ์ (The Son of the Brahman)"
+        "title": "บทที่ 1 — บุตรแห่งพราหมณ์ (The Son of the Brahman)"
       },
       {
-        "title": "บทที่ 2 - อยู่กับสมณะ (With the Samanas)"
+        "title": "บทที่ 2 — อยู่กับสมณะ (With the Samanas)"
       },
       {
-        "title": "บทที่ 3 - โคตมะ (Gotama)"
+        "title": "บทที่ 3 — โคตมะ (Gotama)"
       },
       {
-        "title": "บทที่ 4 - การตื่นรู้ (Awakening)"
+        "title": "บทที่ 4 — การตื่นรู้ (Awakening)"
       },
       {
-        "title": "บทที่ 5 - กมลา (Kamala)"
+        "title": "บทที่ 5 — กมลา (Kamala)"
       },
       {
-        "title": "บทที่ 6 - อยู่กับผู้คนเยี่ยงเด็ก (With the Childlike People)"
+        "title": "บทที่ 6 — อยู่กับผู้คนเยี่ยงเด็ก (With the Childlike People)"
       },
       {
-        "title": "บทที่ 7 - สังสารวัฏ (Sansara)"
+        "title": "บทที่ 7 — สังสารวัฏ (Samsara)"
       },
       {
-        "title": "บทที่ 8 - ริมฝั่งแม่น้ำ (By the River)"
+        "title": "บทที่ 8 — ริมฝั่งแม่น้ำ (By the River)"
       },
       {
-        "title": "บทที่ 9 - คนพายเรือ (The Ferryman)"
+        "title": "บทที่ 9 — คนพายเรือ (The Ferryman)"
       },
       {
-        "title": "บทที่ 10 - ลูกชาย (The Son)"
+        "title": "บทที่ 10 — ลูกชาย (The Son)"
       },
       {
-        "title": "บทที่ 11 - โอม (Om)"
+        "title": "บทที่ 11 — โอม (Om)"
       },
       {
-        "title": "บทที่ 12 - โควินทะ (Govinda)"
+        "title": "บทที่ 12 — โควินทะ (Govinda)"
       }
     ]
   },
@@ -1052,52 +1061,52 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทที่ 1 - การแสวงหาความจริงและการรู้จักตนเอง (Chapter 1)"
+        "title": "บทที่ 1 — การแสวงหาความจริงและเริ่มรู้จักตนเอง (Chapter 1)"
       },
       {
-        "title": "บทที่ 2 - การเรียนรู้ตนเองและการสังเกตเงื่อนไขที่หล่อหลอม (Chapter 2)"
+        "title": "บทที่ 2 — การเรียนรู้ตนเองโดยไม่พึ่งอำนาจ (Chapter 2)"
       },
       {
-        "title": "บทที่ 3 - จิตสำนึกทั้งหมด (Chapter 3)"
+        "title": "บทที่ 3 — ความตระหนักรู้ทั้งหมด (Chapter 3)"
       },
       {
-        "title": "บทที่ 4 - ความสุขและความเพลิดเพลิน (Chapter 4)"
+        "title": "บทที่ 4 — ความสุข ความเพลิดเพลิน และความกลัว (Chapter 4)"
       },
       {
-        "title": "บทที่ 5 - เข้าใจความกลัวอย่างครบถ้วน (Chapter 5)"
+        "title": "บทที่ 5 — เข้าใจความกลัวอย่างครบถ้วน (Chapter 5)"
       },
       {
-        "title": "บทที่ 6 - ความรุนแรงและการยุติความขัดแย้ง (Chapter 6)"
+        "title": "บทที่ 6 — ความรุนแรงและการยุติความขัดแย้ง (Chapter 6)"
       },
       {
-        "title": "บทที่ 7 - ความสัมพันธ์ ความขัดแย้ง และการพึ่งพา (Chapter 7)"
+        "title": "บทที่ 7 — ความสัมพันธ์ ภาพจำ และความขัดแย้ง (Chapter 7)"
       },
       {
-        "title": "บทที่ 8 - อิสรภาพและความโดดเดี่ยวภายใน (Chapter 8)"
+        "title": "บทที่ 8 — อิสรภาพและความโดดเดี่ยว (Chapter 8)"
       },
       {
-        "title": "บทที่ 9 - เวลา ความทุกข์ และความตาย (Chapter 9)"
+        "title": "บทที่ 9 — เวลา ความเปลี่ยนแปลง และความตาย (Chapter 9)"
       },
       {
-        "title": "บทที่ 10 - ความรักและความสัมพันธ์ (Chapter 10)"
+        "title": "บทที่ 10 — ความรักที่ปราศจากความกลัวและการครอบครอง (Chapter 10)"
       },
       {
-        "title": "บทที่ 11 - การมองเห็น ความงาม และความสัมพันธ์ (Chapter 11)"
+        "title": "บทที่ 11 — ความงาม การมองเห็น และพื้นที่ระหว่างเรา (Chapter 11)"
       },
       {
-        "title": "บทที่ 12 - ผู้สังเกตคือสิ่งที่ถูกสังเกต (Chapter 12)"
+        "title": "บทที่ 12 — ผู้สังเกตคือสิ่งที่ถูกสังเกต (Chapter 12)"
       },
       {
-        "title": "บทที่ 13 - ความคิดและความทรงจำ (Chapter 13)"
+        "title": "บทที่ 13 — ความคิด ความทรงจำ และการคิด (Chapter 13)"
       },
       {
-        "title": "บทที่ 14 - ความโดดเดี่ยว พื้นที่ และความเงียบ (Chapter 14)"
+        "title": "บทที่ 14 — ความโดดเดี่ยว วินัย และพื้นที่ภายใน (Chapter 14)"
       },
       {
-        "title": "บทที่ 15 - ประสบการณ์และการทำสมาธิ (Chapter 15)"
+        "title": "บทที่ 15 — ประสบการณ์และการทำสมาธิ (Chapter 15)"
       },
       {
-        "title": "บทที่ 16 - การเปลี่ยนแปลงภายในและความรัก (Chapter 16)"
+        "title": "บทที่ 16 — การเปลี่ยนแปลงภายในและความเงียบ (Chapter 16)"
       }
     ]
   },
@@ -1177,7 +1186,7 @@ window.BOOKWISE_CATALOG = [
     "color": "#d6c3b6",
     "text": "#3b312c",
     "added": 11,
-    "totalChapters": 20,
+    "totalChapters": 21,
     "chapter": 0,
     "progress": 0,
     "favorite": false,
@@ -1185,64 +1194,67 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทที่ 1 — ขุมทรัพย์ภายในตัวคุณ (The Treasure House Within You)"
+        "title": "บทนำ - หนังสือเล่มนี้จะเปลี่ยนชีวิตคุณได้อย่างไร (How This Book Can Work Miracles in Your Life)"
       },
       {
-        "title": "บทที่ 2 — จิตของคุณทำงานอย่างไร (How Your Own Mind Works)"
+        "title": "บทที่ 1 - ขุมทรัพย์ภายในตัวคุณ (The Treasure House Within You)"
       },
       {
-        "title": "บทที่ 3 — พลังอัศจรรย์ของจิตใต้สำนึก (The Miracle-working Power of Your Subconscious)"
+        "title": "บทที่ 2 - จิตของคุณทำงานอย่างไร (How Your Own Mind Works)"
       },
       {
-        "title": "บทที่ 4 — การรักษาทางใจในสมัยโบราณ (Mental Healings in Ancient Times)"
+        "title": "บทที่ 3 - พลังอัศจรรย์ของจิตใต้สำนึก (The Miracle-Working Power of Your Subconscious)"
       },
       {
-        "title": "บทที่ 5 — การรักษาทางใจในยุคใหม่ (Mental Healings in Modern Times)"
+        "title": "บทที่ 4 - การเยียวยาทางใจในสมัยโบราณ (Mental Healings in Ancient Times)"
       },
       {
-        "title": "บทที่ 6 — เทคนิคปฏิบัติสำหรับการเยียวยาทางใจ (Practical Techniques in Mental Healings)"
+        "title": "บทที่ 5 - การเยียวยาทางใจในยุคปัจจุบัน (Mental Healings in Modern Times)"
       },
       {
-        "title": "บทที่ 7 — จิตใต้สำนึกมีแนวโน้มมุ่งสู่ชีวิต (The Tendency of the Subconscious Is Lifeward)"
+        "title": "บทที่ 6 - เทคนิคปฏิบัติเพื่อการเยียวยาทางใจ (Practical Techniques in Mental Healings)"
       },
       {
-        "title": "บทที่ 8 — ทำอย่างไรจึงได้ผลตามต้องการ (How to Get the Results You Want)"
+        "title": "บทที่ 7 - จิตใต้สำนึกมีแนวโน้มมุ่งสู่ชีวิต (The Tendency of the Subconscious Is Lifeward)"
       },
       {
-        "title": "บทที่ 9 — ใช้พลังจิตใต้สำนึกเพื่อความมั่งคั่ง (How to Use the Power of Your Subconscious for Wealth)"
+        "title": "บทที่ 8 - ทำอย่างไรจึงได้ผลตามต้องการ (How to Get the Results You Want)"
       },
       {
-        "title": "บทที่ 10 — สิทธิของคุณที่จะมั่งคั่ง (Your Right to Be Rich)"
+        "title": "บทที่ 9 - วิธีใช้พลังจิตใต้สำนึกเพื่อความมั่งคั่ง (How to Use the Power of Your Subconscious for Wealth)"
       },
       {
-        "title": "บทที่ 11 — จิตใต้สำนึกเป็นหุ้นส่วนแห่งความสำเร็จ (Your Subconscious Mind as a Partner in Success)"
+        "title": "บทที่ 10 - สิทธิของคุณที่จะมีความมั่งคั่ง (Your Right to Be Rich)"
       },
       {
-        "title": "บทที่ 12 — นักวิทยาศาสตร์ใช้จิตใต้สำนึก (Scientists Use the Subconscious Mind)"
+        "title": "บทที่ 11 - จิตใต้สำนึกในฐานะคู่คิดสู่ความสำเร็จ (Your Subconscious Mind as a Partner in Success)"
       },
       {
-        "title": "บทที่ 13 — จิตใต้สำนึกกับความมหัศจรรย์ของการนอน (Your Subconscious and the Wonders of Sleep)"
+        "title": "บทที่ 12 - นักวิทยาศาสตร์ใช้จิตใต้สำนึก (Scientists Use the Subconscious Mind)"
       },
       {
-        "title": "บทที่ 14 — จิตใต้สำนึกกับปัญหาชีวิตคู่ (Your Subconscious Mind and Marital Problems)"
+        "title": "บทที่ 13 - จิตใต้สำนึกกับความมหัศจรรย์ของการนอน (Your Subconscious and the Wonders of Sleep)"
       },
       {
-        "title": "บทที่ 15 — จิตใต้สำนึกกับความสุขของคุณ (Your Subconscious Mind and Your Happiness)"
+        "title": "บทที่ 14 - จิตใต้สำนึกกับปัญหาชีวิตคู่ (Your Subconscious Mind and Marital Problems)"
       },
       {
-        "title": "บทที่ 16 — จิตใต้สำนึกกับความสัมพันธ์ที่กลมกลืน (Your Subconscious Mind and Harmonious Human Relations)"
+        "title": "บทที่ 15 - จิตใต้สำนึกกับความสุขของคุณ (Your Subconscious Mind and Your Happiness)"
       },
       {
-        "title": "บทที่ 17 — ใช้จิตใต้สำนึกเพื่อการให้อภัย (How to Use Your Subconscious Mind for Forgiveness)"
+        "title": "บทที่ 16 - จิตใต้สำนึกกับความสัมพันธ์ที่กลมกลืน (Your Subconscious Mind and Harmonious Human Relations)"
       },
       {
-        "title": "บทที่ 18 — จิตใต้สำนึกช่วยขจัดอุปสรรคทางใจ (How Your Subconscious Removes Mental Blocks)"
+        "title": "บทที่ 17 - วิธีใช้จิตใต้สำนึกเพื่อการให้อภัย (How to Use Your Subconscious Mind for Forgiveness)"
       },
       {
-        "title": "บทที่ 19 — ใช้จิตใต้สำนึกเพื่อขจัดความกลัว (How to Use Your Subconscious Mind to Remove Fear)"
+        "title": "บทที่ 18 - จิตใต้สำนึกช่วยขจัดอุปสรรคทางใจได้อย่างไร (How Your Subconscious Removes Mental Blocks)"
       },
       {
-        "title": "บทที่ 20 — รักษาความเยาว์วัยทางใจไว้เสมอ (How to Stay Young in Spirit Forever)"
+        "title": "บทที่ 19 - วิธีใช้จิตใต้สำนึกเพื่อขจัดความกลัว (How to Use Your Subconscious Mind to Remove Fear)"
+      },
+      {
+        "title": "บทที่ 20 - วิธีคงความเยาว์วัยทางจิตใจ (How to Stay Young in Spirit Forever)"
       }
     ]
   },
@@ -1254,7 +1266,7 @@ window.BOOKWISE_CATALOG = [
     "color": "#d6e3e1",
     "text": "#243b3a",
     "added": 28,
-    "totalChapters": 37,
+    "totalChapters": 38,
     "chapter": 0,
     "progress": 0,
     "favorite": false,
@@ -1262,115 +1274,118 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทนำ — เครื่องมือสำหรับเข้าใจและดูแลสุขภาพใจ (Introduction)"
+        "title": "บทนำ - คู่มือดูแลสุขภาพใจและรับมือความยาก (Introduction)"
       },
       {
-        "title": "บทที่ 1 — On Dark Places: เข้าใจอารมณ์หม่น (Understanding low mood)"
+        "title": "บทที่ 1 - เข้าใจอารมณ์หม่น (Understanding low mood)"
       },
       {
-        "title": "บทที่ 2 — On Dark Places: หลุมพรางทางอารมณ์ที่ควรระวัง (Mood pitfalls to watch out for)"
+        "title": "บทที่ 2 - กับดักทางอารมณ์ที่ควรสังเกต (Mood pitfalls to watch out for)"
       },
       {
-        "title": "บทที่ 3 — On Dark Places: สิ่งที่ช่วยได้ (Things that help)"
+        "title": "บทที่ 3 - สิ่งที่ช่วยได้ (Things that help)"
       },
       {
-        "title": "บทที่ 4 — On Dark Places: เปลี่ยนวันที่แย่ให้ดีขึ้น (How to turn bad days into better days)"
+        "title": "บทที่ 4 - เปลี่ยนวันแย่ให้ดีขึ้นได้อย่างไร (How to turn bad days into better days)"
       },
       {
-        "title": "บทที่ 5 — On Dark Places: จัดพื้นฐานให้ดี (How to get the basics right)"
+        "title": "บทที่ 5 - วางพื้นฐานให้แน่น (How to get the basics right)"
       },
       {
-        "title": "บทที่ 6 — On Motivation: เข้าใจแรงจูงใจ (Understanding motivation)"
+        "title": "บทที่ 6 - ทำความเข้าใจแรงจูงใจ (Understanding motivation)"
       },
       {
-        "title": "บทที่ 7 — On Motivation: หล่อเลี้ยงความรู้สึกมีแรงทำ (How to nurture that motivation feeling)"
+        "title": "บทที่ 7 - หล่อเลี้ยงความรู้สึกมีแรงจูงใจ (How to nurture that motivation feeling)"
       },
       {
-        "title": "บทที่ 8 — On Motivation: จะทำอย่างไรเมื่อไม่อยากทำ? (How do you make yourself do something when you don’t feel like it?)"
+        "title": "บทที่ 8 - ทำอย่างไรเมื่อไม่อยากทำ (How do you make yourself do something when you don’t feel like it?)"
       },
       {
-        "title": "บทที่ 9 — On Motivation: เปลี่ยนแปลงชีวิตครั้งใหญ่ เริ่มตรงไหน? (Big life changes. Where do I start?)"
+        "title": "บทที่ 9 - การเปลี่ยนแปลงครั้งใหญ่ควรเริ่มตรงไหน (Big life changes. Where do I start?)"
       },
       {
-        "title": "บทที่ 10 — On Emotional Pain: ทำให้ความรู้สึกเจ็บปวดหายไป (Make it all go away!)"
+        "title": "บทที่ 10 - ทำให้มันหายไปให้หมด! (Make it all go away!)"
       },
       {
-        "title": "บทที่ 11 — On Emotional Pain: ทำอย่างไรกับอารมณ์ (What to do with emotions)"
+        "title": "บทที่ 11 - รับมือกับอารมณ์อย่างไร (What to do with emotions)"
       },
       {
-        "title": "บทที่ 12 — On Emotional Pain: พลังของถ้อยคำที่เราใช้ (How to harness the power of your words)"
+        "title": "บทที่ 12 - ใช้พลังของถ้อยคำให้เป็นประโยชน์ (How to harness the power of your words)"
       },
       {
-        "title": "บทที่ 13 — On Emotional Pain: ช่วยเหลือคนที่กำลังทุกข์ใจ (How to support someone)"
+        "title": "บทที่ 13 - จะสนับสนุนใครสักคนได้อย่างไร (How to support someone)"
       },
       {
-        "title": "บทที่ 14 — On Grief: เข้าใจความโศกเศร้า (Understanding grief)"
+        "title": "บทที่ 14 - ทำความเข้าใจความโศกเศร้า (Understanding grief)"
       },
       {
-        "title": "บทที่ 15 — On Grief: ขั้นต่าง ๆ ของความโศกเศร้า (The stages of grief)"
+        "title": "บทที่ 15 - ประสบการณ์ต่าง ๆ ระหว่างความโศกเศร้า (The stages of grief)"
       },
       {
-        "title": "บทที่ 16 — On Grief: งานของการไว้ทุกข์ (The tasks of mourning)"
+        "title": "บทที่ 16 - ภารกิจระหว่างการไว้ทุกข์ (The tasks of mourning)"
       },
       {
-        "title": "บทที่ 17 — On Grief: เสาหลักของความเข้มแข็ง (The pillars of strength)"
+        "title": "บทที่ 17 - เสาหลักแห่งความเข้มแข็ง (The pillars of strength)"
       },
       {
-        "title": "บทที่ 18 — On Self-doubt: รับมือคำวิจารณ์และการไม่เห็นด้วย (Dealing with criticism and disapproval)"
+        "title": "บทที่ 18 - รับมือกับคำวิจารณ์และการไม่เห็นด้วย (Dealing with criticism and disapproval)"
       },
       {
-        "title": "บทที่ 19 — On Self-doubt: กุญแจสู่การสร้างความมั่นใจ (The key to building confidence)"
+        "title": "บทที่ 19 - กุญแจสำคัญของการสร้างความมั่นใจ (The key to building confidence)"
       },
       {
-        "title": "บทที่ 20 — On Self-doubt: คุณไม่ใช่ความผิดพลาดของคุณ (You are not your mistakes)"
+        "title": "บทที่ 20 - คุณไม่ใช่ความผิดพลาดของตัวเอง (You are not your mistakes)"
       },
       {
-        "title": "บทที่ 21 — On Self-doubt: การเป็นตัวเองก็เพียงพอ (Being enough)"
+        "title": "บทที่ 21 - การยอมรับว่าตัวเองดีพอ (Being enough)"
       },
       {
-        "title": "บทที่ 22 — On Fear: ทำให้ความวิตกหายไป! (Make anxiety disappear!)"
+        "title": "บทที่ 22 - ทำให้ความกังวลหายไป! (Make anxiety disappear!)"
       },
       {
-        "title": "บทที่ 23 — On Fear: สิ่งที่เราทำแล้วทำให้วิตกแย่ลง (Things we do that make anxiety worse)"
+        "title": "บทที่ 23 - สิ่งที่เราทำแล้วทำให้ความกังวลหนักขึ้น (Things we do that make anxiety worse)"
       },
       {
-        "title": "บทที่ 24 — On Fear: สงบความวิตกในตอนนี้ (How to calm anxiety right now)"
+        "title": "บทที่ 24 - วิธีสงบความกังวลในตอนนี้ (How to calm anxiety right now)"
       },
       {
-        "title": "บทที่ 25 — On Fear: ทำอย่างไรกับความคิดวิตก (What to do with anxious thoughts)"
+        "title": "บทที่ 25 - รับมือกับความคิดกังวลอย่างไร (What to do with anxious thoughts)"
       },
       {
-        "title": "บทที่ 26 — On Fear: ความกลัวสิ่งที่หลีกเลี่ยงไม่ได้ (Fear of the inevitable)"
+        "title": "บทที่ 26 - ความกลัวต่อสิ่งที่หลีกเลี่ยงไม่ได้ (Fear of the inevitable)"
       },
       {
-        "title": "บทที่ 27 — On Stress: ความเครียดต่างจากความวิตกหรือไม่? (Is stress different from anxiety?)"
+        "title": "บทที่ 27 - ความเครียดต่างจากความกังวลหรือไม่? (Is stress different from anxiety?)"
       },
       {
-        "title": "บทที่ 28 — On Stress: ทำไมการลดความเครียดไม่ใช่คำตอบเดียว (Why reducing stress is not the only answer)"
+        "title": "บทที่ 28 - ทำไมการลดความเครียดจึงไม่ใช่คำตอบทั้งหมด (Why reducing stress is not the only answer)"
       },
       {
-        "title": "บทที่ 29 — On Stress: เมื่อความเครียดที่ดีเริ่มทำร้าย (When good stress goes bad)"
+        "title": "บทที่ 29 - เมื่อความเครียดที่ดีเริ่มส่งผลเสีย (When good stress goes bad)"
       },
       {
-        "title": "บทที่ 30 — On Stress: ทำให้ความเครียดทำงานให้คุณ (Making stress work for you)"
+        "title": "บทที่ 30 - ใช้ความเครียดให้เป็นประโยชน์ (Making stress work for you)"
       },
       {
-        "title": "บทที่ 31 — On Stress: รับมือเมื่อถึงเวลาสำคัญ (Coping when it counts)"
+        "title": "บทที่ 31 - รับมือในเวลาที่สำคัญ (Coping when it counts)"
       },
       {
-        "title": "บทที่ 32 — On a Meaningful Life: ปัญหาของ “ฉันแค่อยากมีความสุข” (The problem with ‘I just want to be happy’)"
+        "title": "บทที่ 32 - ปัญหาของคำว่า 'ฉันแค่อยากมีความสุข' (The problem with ‘I just want to be happy’)"
       },
       {
-        "title": "บทที่ 33 — On a Meaningful Life: ค้นหาสิ่งที่สำคัญ (Working out what matters)"
+        "title": "บทที่ 33 - ค้นหาว่าอะไรสำคัญกับเรา (Working out what matters)"
       },
       {
-        "title": "บทที่ 34 — On a Meaningful Life: สร้างชีวิตที่มีความหมาย (How to create a life with meaning)"
+        "title": "บทที่ 34 - สร้างชีวิตที่มีความหมายได้อย่างไร (How to create a life with meaning)"
       },
       {
-        "title": "บทที่ 35 — On a Meaningful Life: ความสัมพันธ์ (Relationships)"
+        "title": "บทที่ 35 - ความสัมพันธ์ (Relationships)"
       },
       {
-        "title": "บทที่ 36 — On a Meaningful Life: เมื่อใดควรขอความช่วยเหลือ (When to seek help)"
+        "title": "บทที่ 36 - เมื่อไรควรขอความช่วยเหลือ (When to seek help)"
+      },
+      {
+        "title": "ภาคผนวก - เครื่องมือเพิ่มเติม (Spare tools)"
       }
     ]
   },
@@ -2219,40 +2234,40 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทนำ - ข้ออ้างที่พบบ่อย (Frequently Made Excuses)"
+        "title": "บทนำ — ข้ออ้างที่พบบ่อย (Frequently Made Excuses)"
       },
       {
-        "title": "บทนำ - เริ่มต้นที่นี่ (Start Here)"
+        "title": "บทนำ — เริ่มต้นที่นี่ (Start Here)"
       },
       {
-        "title": "บทที่ 1 - แค่เริ่มลงมือ (Just Fu**ing Start)"
+        "title": "บทที่ 1 — แค่เริ่มลงมือ (Just Fu**ing Start)"
       },
       {
-        "title": "บทที่ 2 - พลังของการกล้าถามที่ไม่มีเพดาน (The Unlimited Upside of Asking)"
+        "title": "บทที่ 2 — พลังของการกล้าถามที่ไม่มีเพดาน (The Unlimited Upside of Asking)"
       },
       {
-        "title": "บทที่ 3 - ค้นหาไอเดียธุรกิจมูลค่าล้านดอลลาร์ (Finding Million-Dollar Ideas)"
+        "title": "บทที่ 3 — หาไอเดียธุรกิจมูลค่าล้านดอลลาร์ (Finding Million-Dollar Ideas)"
       },
       {
-        "title": "บทที่ 4 - โมเดลธุรกิจในหนึ่งนาที (The One-Minute Business Model)"
+        "title": "บทที่ 4 — โมเดลธุรกิจในหนึ่งนาที (The One-Minute Business Model)"
       },
       {
-        "title": "บทที่ 5 - โจทย์หาเงินใน 48 ชั่วโมง (The 48-Hour Money Challenge)"
+        "title": "บทที่ 5 — โจทย์หาเงินใน 48 ชั่วโมง (The 48-Hour Money Challenge)"
       },
       {
-        "title": "บทที่ 6 - โซเชียลมีเดียเพื่อการเติบโต (Social Media Is for Growth)"
+        "title": "บทที่ 6 — โซเชียลมีเดียเพื่อการเติบโต (Social Media Is for Growth . . .)"
       },
       {
-        "title": "บทที่ 7 - อีเมลสร้างกำไร (... Email Is for Profit)"
+        "title": "บทที่ 7 — อีเมลสร้างกำไร ( . . . Email Is for Profit)"
       },
       {
-        "title": "บทที่ 8 - เครื่องยนต์การเติบโต (The Growth Machine)"
+        "title": "บทที่ 8 — เครื่องยนต์การเติบโต (The Growth Machine)"
       },
       {
-        "title": "บทที่ 9 - 52 โอกาสในหนึ่งปี (52 Chances This Year)"
+        "title": "บทที่ 9 — 52 โอกาสในหนึ่งปี (52 Chances This Year)"
       },
       {
-        "title": "บทส่งท้าย - เริ่มต้นใหม่อีกครั้ง (Start Again)"
+        "title": "บทส่งท้าย — เริ่มต้นใหม่อีกครั้ง (Start Again)"
       }
     ]
   },
@@ -2272,28 +2287,28 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทนำ — หนังสือเล่มนี้พูดถึงอะไร"
+        "title": "บทนำ - หนังสือเล่มนี้พูดถึงอะไร (What This Book Is About And What It Is Not)"
       },
       {
-        "title": "บทที่ 1 — ธุรกิจที่ผมกำลังทำอยู่"
+        "title": "บทที่ 1 - ธุรกิจที่ผมกำลังทำอยู่ (The Kind Of Business We Are In)"
       },
       {
-        "title": "บทที่ 2 — สามช่วงสู่ความสำเร็จในตลาดต่างประเทศ"
+        "title": "บทที่ 2 - สามช่วงสู่ความสำเร็จในตลาดต่างประเทศ (The 3 Phases to International Success)"
       },
       {
-        "title": "บทที่ 3 — องค์ประกอบสามด้านของผู้เล่นระดับนานาชาติ"
+        "title": "บทที่ 3 - องค์ประกอบสามด้านของผู้เล่นระดับนานาชาติ (The Triad Components of International Player Success)"
       },
       {
-        "title": "บทที่ 4 — ความคิดส่งท้าย"
+        "title": "บทที่ 4 - ความคิดส่งท้าย (Final Thoughts)"
       },
       {
-        "title": "บทที่ 5 — การตลาดเสริม 6 เรื่อง"
+        "title": "บทที่ 5 - การตลาดเสริม 6 เรื่อง (6 Extra Marketing Stuff)"
       },
       {
-        "title": "บทที่ 6 — แหล่งข้อมูลและประวัติผู้เขียน"
+        "title": "บทที่ 6 - แหล่งข้อมูลและประวัติผู้เขียน (Resources)"
       },
       {
-        "title": "บทที่ 7 — โบนัสสำหรับผู้อ่าน"
+        "title": "บทที่ 7 - โบนัสสำหรับผู้อ่าน (Free Bonus For Readers)"
       }
     ]
   },
@@ -2836,43 +2851,43 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทที่ 1 - สัญญาณเตือนกลางศาล (The Wake-Up Call)"
+        "title": "บทที่ 1 — สัญญาณเตือนกลางศาล (The Wake-Up Call)"
       },
       {
-        "title": "บทที่ 2 - ผู้มาเยือนลึกลับ (The Mysterious Visitor)"
+        "title": "บทที่ 2 — แขกผู้มาเยือนอย่างลึกลับ (The Mysterious Visitor)"
       },
       {
-        "title": "บทที่ 3 - การเปลี่ยนแปลงอันน่าอัศจรรย์ของ Julian Mantle (The Miraculous Transformation of Julian Mantle)"
+        "title": "บทที่ 3 — การเปลี่ยนแปลงอันน่าอัศจรรย์ของ Julian (The Miraculous Transformation of Julian Mantle)"
       },
       {
-        "title": "บทที่ 4 - การพบปราชญ์แห่ง Sivana (A Magical Meeting With the Sages of Sivana)"
+        "title": "บทที่ 4 — การพบปราชญ์แห่ง Sivana (A Magical Meeting With the Sages of Sivana)"
       },
       {
-        "title": "บทที่ 5 - ศิษย์ทางจิตวิญญาณของเหล่าปราชญ์ (A Spiritual Student of the Sages)"
+        "title": "บทที่ 5 — ศิษย์ผู้เรียนรู้จากปราชญ์ (A Spiritual Student of the Sages)"
       },
       {
-        "title": "บทที่ 6 - ปัญญาแห่งการเปลี่ยนแปลงตนเอง (The Wisdom of Personal Change)"
+        "title": "บทที่ 6 — ภูมิปัญญาแห่งการเปลี่ยนแปลงส่วนบุคคล (The Wisdom of Personal Change)"
       },
       {
-        "title": "บทที่ 7 - สวนอันน่าอัศจรรย์ที่สุด (A Most Extraordinary Garden)"
+        "title": "บทที่ 7 — สวนอันน่าอัศจรรย์ — ฝึกดูแลจิตใจ (A Most Extraordinary Garden)"
       },
       {
-        "title": "บทที่ 8 - จุดไฟภายในตัวเอง (Kindling Your Inner Fire)"
+        "title": "บทที่ 8 — จุดไฟภายใน — เดินตามเป้าหมาย (Kindling Your Inner Fire)"
       },
       {
-        "title": "บทที่ 9 - ศิลปะโบราณแห่งการนำตนเอง (The Ancient Art of Self-Leadership)"
+        "title": "บทที่ 9 — ศิลปะโบราณของการนำตนเอง (The Ancient Art of Self-Leadership)"
       },
       {
-        "title": "บทที่ 10 - พลังแห่งวินัย (The Power of Discipline)"
+        "title": "บทที่ 10 — พลังของวินัย (The Power of Discipline)"
       },
       {
-        "title": "บทที่ 11 - ทรัพยากรล้ำค่าที่สุดของคุณ (Your Most Precious Commodity)"
+        "title": "บทที่ 11 — ทรัพยากรล้ำค่าที่สุด — ใช้เวลาอย่างมีสติ (Your Most Precious Commodity)"
       },
       {
-        "title": "บทที่ 12 - จุดมุ่งหมายสูงสุดของชีวิต (The Ultimate Purpose of Life)"
+        "title": "บทที่ 12 — จุดมุ่งหมายสูงสุดของชีวิต — รับใช้ผู้อื่น (The Ultimate Purpose of Life)"
       },
       {
-        "title": "บทที่ 13 - เคล็ดลับเหนือกาลเวลาสู่ความสุขตลอดชีวิต (The Timeless Secret of Lifelong Happiness)"
+        "title": "บทที่ 13 — ความลับเหนือกาลเวลาของความสุขตลอดชีวิต (The Timeless Secret of Lifelong Happiness)"
       }
     ]
   },
@@ -2892,313 +2907,313 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "คำนำ - ใช้บทเรียนให้เกิดการเปลี่ยนแปลง (Preface)"
+        "title": "คำนำ — ใช้บทเรียนให้เกิดการเปลี่ยนแปลง (Preface)"
       },
       {
-        "title": "บทที่ 1 - ค้นหาสิ่งที่คุณเกิดมาเพื่อทำ (Discover Your Calling)"
+        "title": "บทที่ 1 — ค้นหาสิ่งที่คุณเกิดมาเพื่อทำ (Discover Your Calling)"
       },
       {
-        "title": "บทที่ 2 - มีน้ำใจกับคนแปลกหน้าทุกวัน (Every Day, Be Kind to a Stranger)"
+        "title": "บทที่ 2 — มีน้ำใจกับคนแปลกหน้าทุกวัน (Every Day, Be Kind to a Stranger)"
       },
       {
-        "title": "บทที่ 3 - รักษามุมมองให้กว้าง (Maintain Your Perspective)"
+        "title": "บทที่ 3 — รักษามุมมองให้กว้าง (Maintain Your Perspective)"
       },
       {
-        "title": "บทที่ 4 - ฝึกวินัยด้วยความรักต่อตนเอง (Practice Tough Love)"
+        "title": "บทที่ 4 — ฝึกวินัยด้วยความรักต่อตนเอง (Practice Tough Love)"
       },
       {
-        "title": "บทที่ 5 - เขียนบันทึกประจำวัน (Keep a Journal)"
+        "title": "บทที่ 5 — เขียนบันทึกประจำวัน (Keep a Journal)"
       },
       {
-        "title": "บทที่ 6 - สร้างหลักการซื่อสัตย์ (Develop an Honesty Philosophy)"
+        "title": "บทที่ 6 — สร้างหลักการซื่อสัตย์ (Develop an Honesty Philosophy)"
       },
       {
-        "title": "บทที่ 7 - ให้เกียรติอดีตของคุณ (Honor Your Past)"
+        "title": "บทที่ 7 — ให้เกียรติอดีตของคุณ (Honor Your Past)"
       },
       {
-        "title": "บทที่ 8 - เริ่มต้นวันให้ดี (Start Your Day Well)"
+        "title": "บทที่ 8 — เริ่มต้นวันให้ดี (Start Your Day Well)"
       },
       {
-        "title": "บทที่ 9 - เรียนรู้ที่จะปฏิเสธอย่างสุภาพ (Learn to Say No Gracefully)"
+        "title": "บทที่ 9 — เรียนรู้ที่จะปฏิเสธอย่างสุภาพ (Learn to Say No Gracefully)"
       },
       {
-        "title": "บทที่ 10 - หยุดพักหนึ่งวันในแต่ละสัปดาห์ (Take a Weekly Sabbatical)"
+        "title": "บทที่ 10 — หยุดพักหนึ่งวันในแต่ละสัปดาห์ (Take a Weekly Sabbatical)"
       },
       {
-        "title": "บทที่ 11 - พูดกับตัวเอง (Talk to Yourself)"
+        "title": "บทที่ 11 — พูดกับตัวเอง (Talk to Yourself)"
       },
       {
-        "title": "บทที่ 12 - กำหนดเวลาสำหรับความกังวล (Schedule Worry Breaks)"
+        "title": "บทที่ 12 — กำหนดเวลาสำหรับความกังวล (Schedule Worry Breaks)"
       },
       {
-        "title": "บทที่ 13 - เรียนรู้จากเด็ก (Model a Child)"
+        "title": "บทที่ 13 — เรียนรู้จากเด็ก (Model a Child)"
       },
       {
-        "title": "บทที่ 14 - จำไว้ว่าแรงบันดาลใจสำคัญกว่าที่คิด (Remember, Genius Is 99 Percent Inspiration)"
+        "title": "บทที่ 14 — จำไว้ว่าแรงบันดาลใจสำคัญกว่าที่คิด (Remember, Genius Is 99 Percent Inspiration)"
       },
       {
-        "title": "บทที่ 15 - ดูแลร่างกายเสมือนวิหาร (Care for the Temple)"
+        "title": "บทที่ 15 — ดูแลร่างกายเสมือนวิหาร (Care for the Temple)"
       },
       {
-        "title": "บทที่ 16 - เรียนรู้ที่จะเงียบ (Learn to Be Silent)"
+        "title": "บทที่ 16 — เรียนรู้ที่จะเงียบ (Learn to Be Silent)"
       },
       {
-        "title": "บทที่ 17 - ลองนึกถึงเพื่อนบ้านในอุดมคติ (Think About Your Ideal Neighborhood)"
+        "title": "บทที่ 17 — ลองนึกถึงเพื่อนบ้านในอุดมคติ (Think About Your Ideal Neighborhood)"
       },
       {
-        "title": "บทที่ 18 - ตื่นเช้า (Get Up Early)"
+        "title": "บทที่ 18 — ตื่นเช้า (Get Up Early)"
       },
       {
-        "title": "บทที่ 19 - มองปัญหาเป็นบทเรียน (See Your Troubles as Blessings)"
+        "title": "บทที่ 19 — มองปัญหาเป็นบทเรียน (See Your Troubles as Blessings)"
       },
       {
-        "title": "บทที่ 20 - หัวเราะให้มากขึ้น (Laugh More)"
+        "title": "บทที่ 20 — หัวเราะให้มากขึ้น (Laugh More)"
       },
       {
-        "title": "บทที่ 21 - ใช้เวลาหนึ่งวันโดยไม่ดูนาฬิกา (Spend a Day Without Your Watch)"
+        "title": "บทที่ 21 — ใช้เวลาหนึ่งวันโดยไม่ดูนาฬิกา (Spend a Day Without Your Watch)"
       },
       {
-        "title": "บทที่ 22 - กล้าเสี่ยงมากขึ้น (Take More Risks)"
+        "title": "บทที่ 22 — กล้าเสี่ยงมากขึ้น (Take More Risks)"
       },
       {
-        "title": "บทที่ 23 - ใช้ชีวิตไปกับสิ่งที่เกิดขึ้น (Live a Life)"
+        "title": "บทที่ 23 — ใช้ชีวิตไปกับสิ่งที่เกิดขึ้น (Live a Life)"
       },
       {
-        "title": "บทที่ 24 - เรียนรู้จากภาพยนตร์ดี ๆ (Learn from a Good Movie)"
+        "title": "บทที่ 24 — เรียนรู้จากภาพยนตร์ดี ๆ (Learn from a Good Movie)"
       },
       {
-        "title": "บทที่ 25 - อวยพรเงินที่ใช้จ่าย (Bless Your Money)"
+        "title": "บทที่ 25 — อวยพรเงินที่ใช้จ่าย (Bless Your Money)"
       },
       {
-        "title": "บทที่ 26 - จดจ่อกับสิ่งที่ควรค่า (Focus on the Worthy)"
+        "title": "บทที่ 26 — จดจ่อกับสิ่งที่ควรค่า (Focus on the Worthy)"
       },
       {
-        "title": "บทที่ 27 - เขียนจดหมายขอบคุณ (Write Thank-You Notes)"
+        "title": "บทที่ 27 — เขียนจดหมายขอบคุณ (Write Thank-You Notes)"
       },
       {
-        "title": "บทที่ 28 - พกหนังสือติดตัวเสมอ (Always Carry a Book with You)"
+        "title": "บทที่ 28 — พกหนังสือติดตัวเสมอ (Always Carry a Book with You)"
       },
       {
-        "title": "บทที่ 29 - สร้างบัญชีความรัก (Create a Love Account)"
+        "title": "บทที่ 29 — สร้างบัญชีความรัก (Create a Love Account)"
       },
       {
-        "title": "บทที่ 30 - มองโลกจากหลังดวงตาของผู้อื่น (Get Behind People’s Eyeballs)"
+        "title": "บทที่ 30 — มองโลกจากหลังดวงตาของผู้อื่น (Get Behind People’s Eyeballs)"
       },
       {
-        "title": "บทที่ 31 - จดปัญหาทั้งหมด (List Your Problems)"
+        "title": "บทที่ 31 — จดปัญหาทั้งหมด (List Your Problems)"
       },
       {
-        "title": "บทที่ 32 - ฝึกนิสัยลงมือทำ (Practice the Action Habit)"
+        "title": "บทที่ 32 — ฝึกนิสัยลงมือทำ (Practice the Action Habit)"
       },
       {
-        "title": "บทที่ 33 - มองลูกเป็นของขวัญ (See Your Children as Gifts)"
+        "title": "บทที่ 33 — มองลูกเป็นของขวัญ (See Your Children as Gifts)"
       },
       {
-        "title": "บทที่ 34 - เพลิดเพลินกับเส้นทาง ไม่ใช่แค่รางวัล (Enjoy the Path, Not Just the Reward)"
+        "title": "บทที่ 34 — เพลิดเพลินกับเส้นทาง ไม่ใช่แค่รางวัล (Enjoy the Path, Not Just the Reward)"
       },
       {
-        "title": "บทที่ 35 - จำไว้ว่าความตระหนักรู้มาก่อนการเปลี่ยนแปลง (Remember That Awareness Precedes Change)"
+        "title": "บทที่ 35 — จำไว้ว่าความตระหนักรู้มาก่อนการเปลี่ยนแปลง (Remember That Awareness Precedes Change)"
       },
       {
-        "title": "บทที่ 36 - อ่าน Tuesdays with Morrie (Read Tuesdays with Morrie)"
+        "title": "บทที่ 36 — อ่าน Tuesdays with Morrie (Read Tuesdays with Morrie)"
       },
       {
-        "title": "บทที่ 37 - บริหารเวลาของตัวเอง (Master Your Time)"
+        "title": "บทที่ 37 — บริหารเวลาของตัวเอง (Master Your Time)"
       },
       {
-        "title": "บทที่ 38 - รักษาความใจเย็น (Keep Your Cool)"
+        "title": "บทที่ 38 — รักษาความใจเย็น (Keep Your Cool)"
       },
       {
-        "title": "บทที่ 39 - ตั้งคณะกรรมการบริษัทส่วนตัว (Recruit a Board of Directors)"
+        "title": "บทที่ 39 — ตั้งคณะกรรมการที่ปรึกษาส่วนตัว (Recruit a Board of Directors)"
       },
       {
-        "title": "บทที่ 40 - ทำให้จิตใจที่วอกแวกสงบลง (Cure Your Monkey Mind)"
+        "title": "บทที่ 40 — ทำให้จิตใจที่วอกแวกสงบลง (Cure Your Monkey Mind)"
       },
       {
-        "title": "บทที่ 41 - ฝึกขอให้เป็น (Get Good at Asking)"
+        "title": "บทที่ 41 — ฝึกขอให้เป็น (Get Good at Asking)"
       },
       {
-        "title": "บทที่ 42 - มองหาความหมายที่สูงกว่าในงาน (Look for the Higher Meaning of Your Work)"
+        "title": "บทที่ 42 — มองหาความหมายที่สูงกว่าในงาน (Look for the Higher Meaning of Your Work)"
       },
       {
-        "title": "บทที่ 43 - สร้างห้องสมุดหนังสือปลุกพลัง (Build a Library of Heroic Books)"
+        "title": "บทที่ 43 — สร้างห้องสมุดหนังสือปลุกพลัง (Build a Library of Heroic Books)"
       },
       {
-        "title": "บทที่ 44 - พัฒนาพรสวรรค์ของคุณ (Develop Your Talents)"
+        "title": "บทที่ 44 — พัฒนาพรสวรรค์ของคุณ (Develop Your Talents)"
       },
       {
-        "title": "บทที่ 45 - เชื่อมโยงกับธรรมชาติ (Connect with Nature)"
+        "title": "บทที่ 45 — เชื่อมโยงกับธรรมชาติ (Connect with Nature)"
       },
       {
-        "title": "บทที่ 46 - ใช้เวลาระหว่างเดินทางให้คุ้ม (Use Your Commute Time)"
+        "title": "บทที่ 46 — ใช้เวลาระหว่างเดินทางให้คุ้ม (Use Your Commute Time)"
       },
       {
-        "title": "บทที่ 47 - พักจากการเสพข่าว (Go on a News Fast)"
+        "title": "บทที่ 47 — พักจากการเสพข่าว (Go on a News Fast)"
       },
       {
-        "title": "บทที่ 48 - จริงจังกับการตั้งเป้าหมาย (Get Serious About Setting Goals)"
+        "title": "บทที่ 48 — จริงจังกับการตั้งเป้าหมาย (Get Serious About Setting Goals)"
       },
       {
-        "title": "บทที่ 49 - จำกฎ 21 วัน (Remember the Rule of 21)"
+        "title": "บทที่ 49 — จำกฎ 21 วัน (Remember the Rule of 21)"
       },
       {
-        "title": "บทที่ 50 - ฝึกให้อภัย (Practice Forgiveness)"
+        "title": "บทที่ 50 — ฝึกให้อภัย (Practice Forgiveness)"
       },
       {
-        "title": "บทที่ 51 - ดื่มน้ำผลไม้สด (Drink Fresh Fruit Juice)"
+        "title": "บทที่ 51 — ดื่มน้ำผลไม้สด (Drink Fresh Fruit Juice)"
       },
       {
-        "title": "บทที่ 52 - สร้างสภาพแวดล้อมที่เกื้อหนุน (Create a Pure Environment)"
+        "title": "บทที่ 52 — สร้างสภาพแวดล้อมที่เกื้อหนุน (Create a Pure Environment)"
       },
       {
-        "title": "บทที่ 53 - เดินเล่นในป่า (Walk in the Woods)"
+        "title": "บทที่ 53 — เดินเล่นในป่า (Walk in the Woods)"
       },
       {
-        "title": "บทที่ 54 - หาผู้ฝึกสอน (Get a Coach)"
+        "title": "บทที่ 54 — หาผู้ฝึกสอน (Get a Coach)"
       },
       {
-        "title": "บทที่ 55 - พักร้อนสั้น ๆ ในใจ (Take a Mini-Vacation)"
+        "title": "บทที่ 55 — พักร้อนสั้น ๆ ในใจ (Take a Mini-Vacation)"
       },
       {
-        "title": "บทที่ 56 - เป็นอาสาสมัคร (Become a Volunteer)"
+        "title": "บทที่ 56 — เป็นอาสาสมัคร (Become a Volunteer)"
       },
       {
-        "title": "บทที่ 57 - ค้นหาสายสัมพันธ์หกทอด (Find Your Six Degrees of Separation)"
+        "title": "บทที่ 57 — ค้นหาสายสัมพันธ์หกทอด (Find Your Six Degrees of Separation)"
       },
       {
-        "title": "บทที่ 58 - ฟังเพลงทุกวัน (Listen to Music Daily)"
+        "title": "บทที่ 58 — ฟังเพลงทุกวัน (Listen to Music Daily)"
       },
       {
-        "title": "บทที่ 59 - เขียนถ้อยแถลงมรดกชีวิต (Write a Legacy Statement)"
+        "title": "บทที่ 59 — เขียนถ้อยแถลงมรดกชีวิต (Write a Legacy Statement)"
       },
       {
-        "title": "บทที่ 60 - หาเพื่อนสนิทที่ดีสามคน (Find Three Great Friends)"
+        "title": "บทที่ 60 — หาเพื่อนสนิทที่ดีสามคน (Find Three Great Friends)"
       },
       {
-        "title": "บทที่ 61 - อ่าน The Artist’s Way (Read The Artist’s Way)"
+        "title": "บทที่ 61 — อ่าน The Artist’s Way (Read The Artist’s Way)"
       },
       {
-        "title": "บทที่ 62 - เรียนรู้การทำสมาธิ (Learn to Meditate)"
+        "title": "บทที่ 62 — เรียนรู้การทำสมาธิ (Learn to Meditate)"
       },
       {
-        "title": "บทที่ 63 - จัดงานศพจำลองให้ตัวเองขณะยังมีชีวิต (Have a Living Funeral)"
+        "title": "บทที่ 63 — จัดงานศพจำลองให้ตัวเองขณะยังมีชีวิต (Have a Living Funeral)"
       },
       {
-        "title": "บทที่ 64 - เลิกบ่นแล้วเริ่มใช้ชีวิต (Stop Complaining and Start Living)"
+        "title": "บทที่ 64 — เลิกบ่นแล้วเริ่มใช้ชีวิต (Stop Complaining and Start Living)"
       },
       {
-        "title": "บทที่ 65 - เพิ่มคุณค่าของตัวเอง (Increase Your Value)"
+        "title": "บทที่ 65 — เพิ่มคุณค่าของตัวเอง (Increase Your Value)"
       },
       {
-        "title": "บทที่ 66 - เป็นพ่อแม่ที่ดียิ่งขึ้น (Be a Better Parent)"
+        "title": "บทที่ 66 — เป็นพ่อแม่ที่ดียิ่งขึ้น (Be a Better Parent)"
       },
       {
-        "title": "บทที่ 67 - กล้าคิดและทำต่างจากคนส่วนใหญ่ (Be Unorthodox)"
+        "title": "บทที่ 67 — กล้าคิดและทำต่างจากคนส่วนใหญ่ (Be Unorthodox)"
       },
       {
-        "title": "บทที่ 68 - พกบัตรเป้าหมาย (Carry a Goal Card)"
+        "title": "บทที่ 68 — พกบัตรเป้าหมาย (Carry a Goal Card)"
       },
       {
-        "title": "บทที่ 69 - อย่าปล่อยให้อารมณ์กำหนดตัวตน (Be More than Your Moods)"
+        "title": "บทที่ 69 — เป็นมากกว่าอารมณ์ของตัวเอง (Be More than Your Moods)"
       },
       {
-        "title": "บทที่ 70 - เห็นคุณค่าของเรื่องเรียบง่าย (Savor the Simple Stuff)"
+        "title": "บทที่ 70 — ดื่มด่ำกับเรื่องเรียบง่าย (Savor the Simple Stuff)"
       },
       {
-        "title": "บทที่ 71 - หยุดตัดสินและตำหนิผู้อื่น (Stop Condemning)"
+        "title": "บทที่ 71 — หยุดกล่าวโทษและตำหนิ (Stop Condemning)"
       },
       {
-        "title": "บทที่ 72 - มองหนึ่งวันให้เป็นชีวิตทั้งชีวิต (See Your Day as Your Life)"
+        "title": "บทที่ 72 — มองหนึ่งวันให้เป็นชีวิตทั้งชีวิต (See Your Day as Your Life)"
       },
       {
-        "title": "บทที่ 73 - สร้างกลุ่มเพื่อนร่วมพัฒนา (Create a MasterMind Alliance)"
+        "title": "บทที่ 73 — สร้างกลุ่มความคิดร่วม (Create a MasterMind Alliance)"
       },
       {
-        "title": "บทที่ 74 - สร้างหลักปฏิบัติประจำวัน (Create a Daily Code of Conduct)"
+        "title": "บทที่ 74 — สร้างหลักปฏิบัติประจำวัน (Create a Daily Code of Conduct)"
       },
       {
-        "title": "บทที่ 75 - จินตนาการถึงความจริงที่ดีกว่า (Imagine a Richer Reality)"
+        "title": "บทที่ 75 — จินตนาการถึงความจริงที่ดีกว่า (Imagine a Richer Reality)"
       },
       {
-        "title": "บทที่ 76 - เป็นผู้บริหารชีวิตของตนเอง (Become the CEO of Your Life)"
+        "title": "บทที่ 76 — เป็นซีอีโอชีวิตของตัวเอง (Become the CEO of Your Life)"
       },
       {
-        "title": "บทที่ 77 - ถ่อมตนและเปิดใจเรียนรู้ (Be Humble)"
+        "title": "บทที่ 77 — ถ่อมตน (Be Humble)"
       },
       {
-        "title": "บทที่ 78 - ไม่จำเป็นต้องอ่านทุกเล่มจนจบ (Don’t Finish Every Book You Start)"
+        "title": "บทที่ 78 — ไม่จำเป็นต้องอ่านหนังสือทุกเล่มจนจบ (Don’t Finish Every Book You Start)"
       },
       {
-        "title": "บทที่ 79 - อย่ากดดันตัวเองเกินไป (Don’t Be So Hard on Yourself)"
+        "title": "บทที่ 79 — อย่าเข้มงวดกับตัวเองเกินไป (Don’t Be So Hard on Yourself)"
       },
       {
-        "title": "บทที่ 80 - ฝึกความตั้งใจด้วยช่วงเวลาเงียบ (Make a Vow of Silence)"
+        "title": "บทที่ 80 — ตั้งปณิธานเงียบ (Make a Vow of Silence)"
       },
       {
-        "title": "บทที่ 81 - ไม่ต้องรับโทรศัพท์ทุกครั้งที่ดัง (Don’t Pick Up the Phone Every Time It Rings)"
+        "title": "บทที่ 81 — ไม่ต้องรับโทรศัพท์ทุกครั้งที่ดัง (Don’t Pick Up the Phone Every Time It Rings)"
       },
       {
-        "title": "บทที่ 82 - เลือกการพักผ่อนที่ฟื้นพลังจริง (Remember That Recreation Must Involve Recreation)"
+        "title": "บทที่ 82 — การพักผ่อนควรช่วยเติมพลัง (Remember That Recreation Must Involve Recreation)"
       },
       {
-        "title": "บทที่ 83 - เลือกความท้าทายที่คู่ควรกับเรา (Choose Worthy Opponents)"
+        "title": "บทที่ 83 — เลือกคู่แข่งที่ท้าทายและเหมาะสม (Choose Worthy Opponents)"
       },
       {
-        "title": "บทที่ 84 - นอนให้น้อยลง (Sleep Less)"
+        "title": "บทที่ 84 — นอนให้น้อยลง (Sleep Less)"
       },
       {
-        "title": "บทที่ 85 - มีมื้ออาหารร่วมกันในครอบครัว (Have a Family Mealtime)"
+        "title": "บทที่ 85 — มีมื้ออาหารร่วมกันในครอบครัว (Have a Family Mealtime)"
       },
       {
-        "title": "บทที่ 86 - ลองทำตัวเหมือนคนที่อยากเป็น (Become an Imposter)"
+        "title": "บทที่ 86 — ทำตัวราวกับเป็นคนที่อยากเป็น (Become an Imposter)"
       },
       {
-        "title": "บทที่ 87 - เรียนหลักสูตรการพูดต่อหน้าคน (Take a Public Speaking Course)"
+        "title": "บทที่ 87 — ลงเรียนหลักสูตรการพูดต่อหน้าคน (Take a Public Speaking Course)"
       },
       {
-        "title": "บทที่ 88 - เลิกคิดเล็กจนจำกัดตัวเอง (Stop Thinking Tiny Thoughts)"
+        "title": "บทที่ 88 — เลิกคิดเล็ก (Stop Thinking Tiny Thoughts)"
       },
       {
-        "title": "บทที่ 89 - อย่ากังวลกับสิ่งที่เปลี่ยนไม่ได้ (Don’t Worry About Things You Can’t Change)"
+        "title": "บทที่ 89 — อย่ากังวลกับสิ่งที่เปลี่ยนไม่ได้ (Don’t Worry About Things You Can’t Change)"
       },
       {
-        "title": "บทที่ 90 - เรียนรู้วิธีเดิน (Learn How to Walk)"
+        "title": "บทที่ 90 — เรียนรู้วิธีเดิน (Learn How to Walk)"
       },
       {
-        "title": "บทที่ 91 - เขียนเรื่องราวชีวิตใหม่ (Rewrite Your Life Story)"
+        "title": "บทที่ 91 — เขียนเรื่องราวชีวิตใหม่ (Rewrite Your Life Story)"
       },
       {
-        "title": "บทที่ 92 - ปลูกต้นไม้ (Plant a Tree)"
+        "title": "บทที่ 92 — ปลูกต้นไม้ (Plant a Tree)"
       },
       {
-        "title": "บทที่ 93 - หาสถานที่สงบของตน (Find Your Place of Peace)"
+        "title": "บทที่ 93 — หาสถานที่สงบของตัวเอง (Find Your Place of Peace)"
       },
       {
-        "title": "บทที่ 94 - ถ่ายภาพเก็บช่วงเวลาสำคัญ (Take More Pictures)"
+        "title": "บทที่ 94 — ถ่ายภาพให้มากขึ้น (Take More Pictures)"
       },
       {
-        "title": "บทที่ 95 - เติมชีวิตด้วยการผจญภัย (Be an Adventurer)"
+        "title": "บทที่ 95 — เป็นนักผจญภัย (Be an Adventurer)"
       },
       {
-        "title": "บทที่ 96 - พักใจสั้น ๆ ก่อนกลับบ้าน (Decompress Before You Go Home)"
+        "title": "บทที่ 96 — ผ่อนคลายก่อนกลับถึงบ้าน (Decompress Before You Go Home)"
       },
       {
-        "title": "บทที่ 97 - เคารพสัญชาตญาณของตน (Respect Your Instincts)"
+        "title": "บทที่ 97 — เคารพสัญชาตญาณของตัวเอง (Respect Your Instincts)"
       },
       {
-        "title": "บทที่ 98 - สะสมถ้อยคำที่สร้างแรงบันดาลใจ (Collect Quotes That Inspire You)"
+        "title": "บทที่ 98 — รวบรวมคำคมที่สร้างแรงบันดาลใจ (Collect Quotes That Inspire You)"
       },
       {
-        "title": "บทที่ 99 - รักในงานที่ทำ (Love Your Work)"
+        "title": "บทที่ 99 — รักงานที่ทำ (Love Your Work)"
       },
       {
-        "title": "บทที่ 100 - รับใช้ผู้อื่นโดยไม่เห็นแก่ตน (Selflessly Serve)"
+        "title": "บทที่ 100 — รับใช้ผู้อื่นอย่างไม่เห็นแก่ตัว (Selflessly Serve)"
       },
       {
-        "title": "บทที่ 101 - ใช้ชีวิตให้เต็มที่เพื่อจากไปอย่างเป็นสุข (Live Fully so You Can Die Happy)"
+        "title": "บทที่ 101 — ใช้ชีวิตให้เต็มที่เพื่อจากไปอย่างมีความสุข (Live Fully so You Can Die Happy)"
       },
       {
-        "title": "บทที่ 102 - แหล่งเรียนรู้เพื่อพัฒนาตนเอง (Resources for Personal Greatness)"
+        "title": "ภาคเสริม — แหล่งเรียนรู้เพื่อพัฒนาศักยภาพ (Resources for Personal Greatness)"
       }
     ]
   },
@@ -3218,31 +3233,31 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทนำ - การทำให้ชีวิตที่ปรารถนาเกิดขึ้น (Introduction)"
+        "title": "บทนำ - จุดเริ่มต้นและกรอบการ Manifest (Introduction)"
       },
       {
-        "title": "ขั้นที่ 1 - มองเห็นภาพชีวิตที่ต้องการให้ชัด (Be Clear in Your Vision)"
+        "title": "ขั้นที่ 1 - เห็นภาพสิ่งที่ต้องการให้ชัด (Step 1: Be Clear in Your Vision)"
       },
       {
-        "title": "ขั้นที่ 2 - คลายความกลัวและความสงสัย (Remove Fear and Doubt)"
+        "title": "ขั้นที่ 2 - ปลดปล่อยความกลัวและความสงสัย (Step 2: Remove Fear and Doubt)"
       },
       {
-        "title": "ขั้นที่ 3 - ปรับพฤติกรรมให้สอดคล้อง (Align Your Behaviour)"
+        "title": "ขั้นที่ 3 - ทำพฤติกรรมให้สอดคล้องกับเป้าหมาย (Step 3: Align Your Behaviour)"
       },
       {
-        "title": "ขั้นที่ 4 - ผ่านบททดสอบจากจักรวาล (Overcome Tests from the Universe)"
+        "title": "ขั้นที่ 4 - ก้าวผ่านบททดสอบจากจักรวาล (Step 4: Overcome Tests from the Universe)"
       },
       {
-        "title": "ขั้นที่ 5 - โอบรับความขอบคุณโดยไม่ตั้งข้อแม้ (Embrace Gratitude without caveats)"
+        "title": "ขั้นที่ 5 - โอบรับความกตัญญูโดยไม่มีข้อแม้ (Step 5: Embrace Gratitude (without caveats))"
       },
       {
-        "title": "ขั้นที่ 6 - เปลี่ยนความอิจฉาให้เป็นแรงบันดาลใจ (Turn Envy into Inspiration)"
+        "title": "ขั้นที่ 6 - เปลี่ยนความอิจฉาให้เป็นแรงบันดาลใจ (Step 6: Turn Envy into Inspiration)"
       },
       {
-        "title": "ขั้นที่ 7 - วางใจในจักรวาล (Trust in the Universe)"
+        "title": "ขั้นที่ 7 - ไว้วางใจจักรวาล (Step 7: Trust in the Universe)"
       },
       {
-        "title": "บทส่งท้าย - สร้างชีวิตที่ดีที่สุดของเรา (Epilogue)"
+        "title": "บทส่งท้าย - นำทั้งเจ็ดขั้นมาใช้เพื่อสร้างชีวิตที่ดีที่สุด (Epilogue)"
       }
     ]
   },
@@ -3306,34 +3321,34 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทนำ - ทำความเข้าใจการ manifest ให้ลึกขึ้น (Introduction)"
+        "title": "บทนำ — ดำน้ำลึกสู่การ manifest (Introduction and Key Manifesting Terms)"
       },
       {
-        "title": "บทที่ 1 - เห็นภาพสิ่งที่ต้องการให้ชัด (Be Clear in Your Vision)"
+        "title": "ขั้นที่ 1 — เห็นภาพสิ่งที่ต้องการให้ชัด (Step 1: Be Clear in Your Vision)"
       },
       {
-        "title": "บทที่ 2 - คลายความกลัวและความสงสัย (Remove Fear and Doubt)"
+        "title": "ขั้นที่ 2 — ปลดปล่อยความกลัวและความสงสัย (Step 2: Remove Fear and Doubt)"
       },
       {
-        "title": "บทที่ 4 - ปลูกฝังและฝึกความรักตัวเอง (Cultivate and Practice Self-Love)"
+        "title": "บทฝึกรักตัวเอง — ฝึกฝนความรักต่อตนเอง (Cultivate and Practice Self-Love)"
       },
       {
-        "title": "บทที่ 5 - ปรับพฤติกรรมให้สอดคล้อง (Align Your Behavior)"
+        "title": "ขั้นที่ 3 — ปรับพฤติกรรมให้สอดคล้องกับเป้าหมาย (Step 3: Align Your Behavior)"
       },
       {
-        "title": "บทที่ 6 - ผ่านบททดสอบจากจักรวาล (Overcome Tests from the Universe)"
+        "title": "ขั้นที่ 4 — ก้าวผ่านบททดสอบจากจักรวาล (Step 4: Overcome Tests from the Universe)"
       },
       {
-        "title": "ขั้นที่ 5 - โอบรับความรู้สึกขอบคุณโดยไม่มีข้อแม้ (Embrace Gratitude (Without Caveats))"
+        "title": "ขั้นที่ 5 — โอบรับความกตัญญูโดยไม่ตั้งเงื่อนไข (Step 5: Embrace Gratitude (Without Caveats))"
       },
       {
-        "title": "ขั้นที่ 6 - เปลี่ยนความอิจฉาให้เป็นแรงบันดาลใจ (Turn Envy into Inspiration)"
+        "title": "ขั้นที่ 6 — เปลี่ยนความอิจฉาให้เป็นแรงบันดาลใจ (Step 6: Turn Envy into Inspiration)"
       },
       {
-        "title": "ขั้นที่ 7 - วางใจในจักรวาล (Trust in the Universe)"
+        "title": "ขั้นที่ 7 — ไว้วางใจจักรวาล (Step 7: Trust in the Universe)"
       },
       {
-        "title": "บทส่งท้าย - ใช้ชีวิตที่ดีที่สุดของฉัน (Epilogue)"
+        "title": "บทส่งท้าย — การ manifest คือการใช้ชีวิต (Epilogue)"
       }
     ]
   },
@@ -3445,85 +3460,85 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "Foreword — ใช้ความรู้สร้างธุรกิจและความมั่งคั่ง (Foreword)"
+        "title": "คำนำ - ความรู้และทักษะที่มีอยู่ในตัวคุณ (Foreword)"
       },
       {
-        "title": "What Is Expert Secrets? — จากการเติบโตสู่การช่วยเหลือผู้อื่น (What Is Expert Secrets?)"
+        "title": "บทนำ - จากการเติบโตสู่การช่วยเหลือผู้อื่น (What Is Expert Secrets?)"
       },
       {
-        "title": "Introduction — บทเรียนจากผลิตภัณฑ์ความรู้ชิ้นแรก (Introduction)"
+        "title": "บทนำ - ผลิตภัณฑ์ความรู้ชิ้นแรกของผม (Introduction)"
       },
       {
-        "title": "The Two Types of Expert Businesses — ธุรกิจผู้เชี่ยวชาญสองรูปแบบ (The Two Types of Expert Businesses)"
+        "title": "บทที่ 1 - ธุรกิจผู้เชี่ยวชาญ 2 รูปแบบ (The Two Types of Expert Businesses)"
       },
       {
-        "title": "Secret #1 — ผู้นำที่ผู้คนเชื่อมโยงด้วย (The Charismatic Leader / Attractive Character)"
+        "title": "Secret #1 - ผู้นำที่ผู้คนเชื่อมโยงด้วย (The Charismatic Leader / Attractive Character)"
       },
       {
-        "title": "Secret #2 — สร้างสาเหตุที่ผู้คนอยากร่วม (The Cause)"
+        "title": "Secret #2 - สร้างสาเหตุที่มองไปข้างหน้า (The Cause)"
       },
       {
-        "title": "Secret #3 — นำเสนอโอกาสใหม่ (The New Opportunity)"
+        "title": "Secret #3 - นำเสนอโอกาสใหม่ (The New Opportunity)"
       },
       {
-        "title": "Secret #4 — ออกแบบการเปลี่ยนผ่านสู่โอกาสใหม่ (The Opportunity Switch)"
+        "title": "Secret #4 - ออกแบบโอกาสใหม่และกลุ่มทดลอง (The Opportunity Switch)"
       },
       {
-        "title": "Secret #5 — ความเชื่อแกนหลักที่ทำให้คนตัดสินใจ (The Big Domino)"
+        "title": "Secret #5 - ความเชื่อแกนหลักที่ทำให้คนตัดสินใจ (The Big Domino)"
       },
       {
-        "title": "Secret #6 — เล่าเรื่องที่พาผู้ฟังไปถึงจุดค้นพบ (The Epiphany Bridge)"
+        "title": "บทที่ 9 - สะพานสู่จุดค้นพบ (The Epiphany Bridge)"
       },
       {
-        "title": "Secret #7 — การเดินทางสองชั้นของตัวเอก (The Hero’s Two Journeys)"
+        "title": "บทที่ 10 - Secret #7: การเดินทางสองเส้นทางของตัวเอก (The Hero’s Two Journeys)"
       },
       {
-        "title": "Secret #8 — สคริปต์ Epiphany Bridge (The Epiphany Bridge Script)"
+        "title": "บทที่ 11 - สคริปต์สะพานสู่จุดค้นพบ (The Epiphany Bridge Script)"
       },
       {
-        "title": "Secret #9 — ค้นหาและคลายความเชื่อผิด (False Belief Patterns)"
+        "title": "บทที่ 12 - รูปแบบความเชื่อผิด ๆ (False Belief Patterns)"
       },
       {
-        "title": "Secret #10 — ความเชื่อสามด้านที่ต้องเข้าใจ (The 3 Secrets)"
+        "title": "บทที่ 13 - ความเชื่อผิด ๆ 3 ประการ (The 3 Secrets)"
       },
       {
-        "title": "Secret #11 — สร้างข้อเสนอด้วย Stack Slide (The Stack Slide)"
+        "title": "บทที่ 14 - หน้าที่ทางศีลธรรมและสไลด์จัดข้อเสนอ (Your Moral Obligation - The Stack Slide)"
       },
       {
-        "title": "Secret #12 — โครงสร้าง Perfect Webinar (The Perfect Webinar)"
+        "title": "บทที่ 15 - เว็บบินาร์นำเสนอที่สมบูรณ์แบบ (The Perfect Webinar)"
       },
       {
-        "title": "Secret #13 — บทนำและ One Thing (The One Thing)"
+        "title": "บทที่ 16 - One Thing: เขียนบทนำและสร้างความผูกพัน (The One Thing)"
       },
       {
-        "title": "Secret #14 — คลายและสร้างความเชื่อใหม่ (Breaking and Rebuilding Belief Patterns)"
+        "title": "บทที่ 17 - คลายและสร้างรูปแบบความเชื่อใหม่ (Breaking and Rebuilding Belief Patterns)"
       },
       {
-        "title": "Secret #15 — นำเสนอข้อเสนอด้วย Stack (The Stack)"
+        "title": "บทที่ 18 - นำเสนอข้อเสนอเป็นชั้น ๆ (The Stack)"
       },
       {
-        "title": "Secret #16 — คำถามเช็กการตัดสินใจและวิธีปิดการขาย (Trial Closes)"
+        "title": "บทที่ 19 - คำถามเช็กการตัดสินใจ (Trial Closes)"
       },
       {
-        "title": "Secret #17 — โมเดล Perfect Webinar รายสัปดาห์ (The Perfect Webinar Model)"
+        "title": "บทที่ 20 - โมเดล Perfect Webinar รายสัปดาห์ (The Perfect Webinar Model)"
       },
       {
-        "title": "Secret #18 — ปิดการขายข้อเสนอราคาสูงด้วยสี่คำถาม (The 4-Question Close (For High-Ticket Offers))"
+        "title": "บทที่ 21 - ปิดข้อเสนอราคาสูงด้วย 4 คำถาม (The 4-Question Close)"
       },
       {
-        "title": "Secret #19 — สร้าง Perfect Webinar อย่างรวดเร็ว (The Perfect Webinar Hack)"
+        "title": "บทที่ 22 - สร้าง Perfect Webinar อย่างรวดเร็ว (The Perfect Webinar Hack)"
       },
       {
-        "title": "Secret #20 — ฟันเนลอีเมล Epiphany (Email Epiphany Funnels)"
+        "title": "บทที่ 23 - ฟันเนลอีเมล Epiphany (Email Epiphany Funnels)"
       },
       {
-        "title": "Secret #21 — ฟันเนลเปิดตัวสินค้าผ่าน Epiphany (Epiphany Product Launch Funnels)"
+        "title": "บทที่ 24 - ฟันเนลเปิดตัวสินค้าผ่าน Epiphany (Epiphany Product Launch Funnels)"
       },
       {
-        "title": "Secret #22 — เติมผู้สนใจเข้าสู่ฟันเนล (Fill Your Funnel)"
+        "title": "บทที่ 25 - เติมผู้คนเข้าสู่ฟันเนล (Fill Your Funnel)"
       },
       {
-        "title": "Conclusion — คำเชิญให้ลงมือและแบ่งปันความรู้ (Conclusion: Your Invitation)"
+        "title": "บทส่งท้าย - คำเชิญให้ลงมือและแบ่งปันความรู้ (Conclusion: Your Invitation)"
       }
     ]
   },
@@ -3791,19 +3806,19 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทนำ - คุณธรรม 4 ประการและวินัยสร้างเสรีภาพ (The Four Virtues and Introduction)"
+        "title": "บทนำ — วินัยคือการปกครองตนเอง (Introduction)"
       },
       {
-        "title": "ภาคหนึ่ง - ภายนอก: ร่างกาย (Part I: The Exterior (The Body))"
+        "title": "ภาคหนึ่ง — ภายนอก — ฝึกวินัยผ่านร่างกาย (Part I: The Exterior (The Body))"
       },
       {
-        "title": "ภาคสอง - ภายใน: อารมณ์และบุคลิก (Part II: The Inner Domain (The Temperament))"
+        "title": "ภาคสอง — ขอบเขตภายใน — ฝึกวินัยทางอารมณ์ (Part II: The Inner Domain (The Temperament))"
       },
       {
-        "title": "ภาคสาม - ภาวะผู้นำตนเอง: จิตวิญญาณ (Part III: The Magisterial (The Soul))"
+        "title": "ภาคสาม — จิตวิญญาณแห่งการนำ — วินัยเพื่อผู้อื่น (Part III: The Magisterial (The Soul))"
       },
       {
-        "title": "บทส่งท้าย - วินัยที่พาเราเดินต่ออย่างพอดี (Afterword and Acknowledgments)"
+        "title": "บทส่งท้าย — วินัยสร้างเสรีภาพ (Afterword)"
       }
     ]
   },
@@ -3815,7 +3830,7 @@ window.BOOKWISE_CATALOG = [
     "color": "#d6d7de",
     "text": "#373945",
     "added": 54,
-    "totalChapters": 6,
+    "totalChapters": 33,
     "chapter": 0,
     "progress": 0,
     "favorite": false,
@@ -3823,22 +3838,103 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "บทนำก่อนเนื้อหา — บทเรียนจากความสำเร็จและการพังทลาย (The Painful Prologue)"
+        "title": "บทนำก่อนเนื้อหา - บทเรียนจากความสำเร็จและการพังทลาย (The Painful Prologue)"
       },
       {
-        "title": "บทนำ — อัตตาเป็นศัตรู (Introduction)"
+        "title": "บทนำ - อัตตาเป็นศัตรู (Introduction)"
       },
       {
-        "title": "ภาคหนึ่ง — ความทะเยอทะยาน — เริ่มต้นด้วยความถ่อมตน (Part I: Aspire)"
+        "title": "ภาคหนึ่ง - ความทะเยอทะยาน (Part I: Aspire)"
       },
       {
-        "title": "ภาคสอง — ความสำเร็จ — อย่าปล่อยให้อัตตาครอบงำ (Part II: Success)"
+        "title": "พูด พูด พูด (Talk, Talk, Talk)"
       },
       {
-        "title": "ภาคสาม — ความล้มเหลว — ใช้เวลาให้เกิดประโยชน์ (Part III: Failure)"
+        "title": "จะเป็นใคร หรือจะทำอะไร? (To Be or to Do?)"
       },
       {
-        "title": "บทส่งท้าย — อัตตายังคงเป็นศัตรู (Epilogue)"
+        "title": "จงเป็นผู้เรียนรู้ (Become a Student)"
+      },
+      {
+        "title": "อย่าปล่อยให้ความหลงใหลครอบงำ (Don’t Be Passionate)"
+      },
+      {
+        "title": "ใช้กลยุทธ์ผืนผ้าใบ (Follow the Canvas Strategy)"
+      },
+      {
+        "title": "ควบคุมตนเอง (Restrain Yourself)"
+      },
+      {
+        "title": "ออกจากโลกในหัวของตัวเอง (Get Out of Your Own Head)"
+      },
+      {
+        "title": "อันตรายของความทะนงตนตั้งแต่ต้น (The Danger of Early Pride)"
+      },
+      {
+        "title": "ทำงาน ทำงาน และทำงาน (Work, Work, Work)"
+      },
+      {
+        "title": "บทเชื่อม - ไม่ว่าก้าวต่อไปจะเป็นอะไร อัตตาคือศัตรู (For Everything That Comes Next, Ego Is the Enemy…)"
+      },
+      {
+        "title": "ภาคสอง - ความสำเร็จ (Part II: Success)"
+      },
+      {
+        "title": "จงเป็นผู้เรียนรู้อยู่เสมอ (Always Stay a Student)"
+      },
+      {
+        "title": "อย่าแต่งเรื่องเข้าข้างตัวเอง (Don’t Tell Yourself a Story)"
+      },
+      {
+        "title": "อะไรสำคัญกับคุณ? (What’s Important to You?)"
+      },
+      {
+        "title": "ความรู้สึกว่าตนสมควรได้ การควบคุม และความหวาดระแวง (Entitlement, Control, and Paranoia)"
+      },
+      {
+        "title": "บริหารจัดการตัวเอง (Managing Yourself)"
+      },
+      {
+        "title": "ระวังโรคที่เรียกว่า ‘ฉัน’ (Beware the Disease of Me)"
+      },
+      {
+        "title": "ใคร่ครวญถึงความกว้างใหญ่ไพศาล (Meditate on the Immensity)"
+      },
+      {
+        "title": "รักษาความสุขุมและไม่หลงระเริง (Maintain Your Sobriety)"
+      },
+      {
+        "title": "บทเชื่อม - สิ่งที่มักตามมาหลังความสำเร็จ (For What Often Comes Next, Ego Is the Enemy…)"
+      },
+      {
+        "title": "ภาคสาม - ความล้มเหลว (Part III: Failure)"
+      },
+      {
+        "title": "เวลาที่มีชีวิตหรือเวลาที่สูญเปล่า? (Alive Time or Dead Time?)"
+      },
+      {
+        "title": "ความพยายามก็มีความหมายในตัวเอง (The Effort Is Enough)"
+      },
+      {
+        "title": "ช่วงเวลาที่ต้องเผชิญหน้ากับความจริง (Fight Club Moments)"
+      },
+      {
+        "title": "ขีดเส้นแบ่งให้ชัด (Draw the Line)"
+      },
+      {
+        "title": "ใช้เกณฑ์วัดความสำเร็จของตัวเอง (Maintain Your Own Scorecard)"
+      },
+      {
+        "title": "จงเลือกความรักเสมอ (Always Love)"
+      },
+      {
+        "title": "บทเชื่อม - ไม่ว่าก้าวต่อไปจะเป็นอะไร อัตตาคือศัตรู (For Everything That Comes Next, Ego Is the Enemy...)"
+      },
+      {
+        "title": "บทส่งท้าย - อัตตายังคงเป็นศัตรู (Epilogue)"
+      },
+      {
+        "title": "อ่านอะไรต่อดี? (What Should You Read Next?)"
       }
     ]
   },
@@ -3928,22 +4024,22 @@ window.BOOKWISE_CATALOG = [
     "completed": false,
     "chapters": [
       {
-        "title": "คำนำ - คุณธรรม 4 ประการ (The Four Virtues)"
+        "title": "คำนำ — คุณธรรมสี่ประการและการเรียนรู้ (The Four Virtues)"
       },
       {
-        "title": "บทนำ - ปัญญาต้องลงแรงฝึก (Introduction: This Is the Way, Wisdom Takes Work)"
+        "title": "บทนำ — ปัญญาต้องใช้แรงฝึก (Introduction: This Is the Way, Wisdom Takes Work)"
       },
       {
-        "title": "ภาค 1 - อาโกเก: สนามฝึกแห่งปัญญา (Part I: The Agoge (Your Training Ground))"
+        "title": "ภาคหนึ่ง — อาโกเก — สนามฝึกของเรา (Part I: The Agoge (Your Training Ground))"
       },
       {
-        "title": "ภาค 2 - ไซเรนและความคิดที่ล่อลวง (Part II: The Sirens (The Perilous Rocks You Must Beware))"
+        "title": "ภาคสอง — เสียงไซเรน — โขดหินที่ต้องระวัง (Part II: The Sirens (The Perilous Rocks You Must Beware))"
       },
       {
-        "title": "ภาค 3 - ก้าวสู่ความเป็นเลิศ (The Apotheosis)"
+        "title": "ภาคสาม — การก้าวสู่ความเป็นเลิศ — ใช้ปัญญาให้เป็นคุณธรรม (Part III: The Apotheosis)"
       },
       {
-        "title": "บทส่งท้าย - ปัญญาไม่มีวันจบการฝึก (Afterword)"
+        "title": "บทส่งท้าย — ปัญญาคือคุณธรรม (Afterword)"
       }
     ]
   },
@@ -4037,7 +4133,7 @@ window.BOOKWISE_CATALOG = [
   },
   {
     "id": "dopamine-nation",
-    "title": "Dopamine Nation: Finding Balance in the Age of Indulgence",
+    "title": "Dopamine Nation",
     "author": "Anna Lembke",
     "category": "สุขภาพและจิตวิทยา",
     "color": "#3f536b",
@@ -4090,7 +4186,7 @@ window.BOOKWISE_CATALOG = [
   },
   {
     "id": "buddhas-brain",
-    "title": "Buddha's Brain: The Practical Neuroscience of Happiness, Love, and Wisdom",
+    "title": "Buddha’s Brain",
     "author": "Rick Hanson with Richard Mendius",
     "category": "สุขภาพและจิตวิทยา",
     "color": "#536c68",
@@ -4153,6 +4249,622 @@ window.BOOKWISE_CATALOG = [
       },
       {
         "title": "ภาคผนวก - โภชนาการกับสารเคมีในสมอง (Nutritional Neurochemistry)"
+      }
+    ]
+  },
+  {
+    "title": "Apple: The First 50 Years",
+    "author": "David Pogue",
+    "category": "ธุรกิจและเทคโนโลยี",
+    "color": "#d8dce2",
+    "text": "#273548",
+    "added": 88,
+    "id": "apple-the-first-50-years",
+    "totalChapters": 51,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "บทนำ (Introduction)"
+      },
+      {
+        "title": "บทที่ 1 - สองสตีฟ (Two Steves)"
+      },
+      {
+        "title": "บทที่ 2 - Apple I (Apple I)"
+      },
+      {
+        "title": "บทที่ 3 - บริษัท Apple Computer (Apple Computer Company)"
+      },
+      {
+        "title": "บทที่ 4 - Apple II"
+      },
+      {
+        "title": "บทที่ 5 - เริ่มทำธุรกิจ (In Business)"
+      },
+      {
+        "title": "บทที่ 6 - Apple III"
+      },
+      {
+        "title": "บทที่ 7 - Lisa"
+      },
+      {
+        "title": "บทที่ 8 - วิกฤตการณ์ (Crashes)"
+      },
+      {
+        "title": "บทที่ 9 - Macintosh"
+      },
+      {
+        "title": "บทที่ 10 - Sculley"
+      },
+      {
+        "title": "บทที่ 11 - Software"
+      },
+      {
+        "title": "บทที่ 12 - ทำตลาด Mac (Marketing the Mac)"
+      },
+      {
+        "title": "บทที่ 13 - ยอดเยี่ยมเกินธรรมดา (Insanely Great)"
+      },
+      {
+        "title": "บทที่ 14 - สำนักงาน Macintosh (Macintosh Office)"
+      },
+      {
+        "title": "บทที่ 15 - รอยร้าว (Rift)"
+      },
+      {
+        "title": "บทที่ 16 - แนวคิดใหม่ (New Ideas)"
+      },
+      {
+        "title": "บทที่ 17 - ท้าทายกรอบเดิม (Heresies)"
+      },
+      {
+        "title": "บทที่ 18 - สูง/ขวา ต่ำ/ซ้าย (High/Right, Low/Left)"
+      },
+      {
+        "title": "บทที่ 19 - System 7"
+      },
+      {
+        "title": "บทที่ 20 - Newton"
+      },
+      {
+        "title": "บทที่ 21 - Moonshots"
+      },
+      {
+        "title": "บทที่ 22 - PowerBooks"
+      },
+      {
+        "title": "บทที่ 23 - Spindler"
+      },
+      {
+        "title": "บทที่ 24 - Clones"
+      },
+      {
+        "title": "บทที่ 25 - อะมีลิโอ"
+      },
+      {
+        "title": "บทที่ 26 - NeXT"
+      },
+      {
+        "title": "บทที่ 27 - ช่วงเปลี่ยนผ่าน"
+      },
+      {
+        "title": "บทที่ 28 - การพลิกฟื้น"
+      },
+      {
+        "title": "บทที่ 29 - Jony Ive"
+      },
+      {
+        "title": "บทที่ 30 - iMac"
+      },
+      {
+        "title": "บทที่ 31 - Keynotes"
+      },
+      {
+        "title": "บทที่ 32 - Millennium"
+      },
+      {
+        "title": "บทที่ 33 - Retail"
+      },
+      {
+        "title": "บทที่ 34 - iPod"
+      },
+      {
+        "title": "บทที่ 35 - กลับสู่ Mac (Back to the Macs)"
+      },
+      {
+        "title": "บทที่ 36 - iPhone"
+      },
+      {
+        "title": "บทที่ 37 - แอป (Apps)"
+      },
+      {
+        "title": "บทที่ 38 - ภาคต่อ (Sequels)"
+      },
+      {
+        "title": "บทที่ 39 - iPad"
+      },
+      {
+        "title": "บทที่ 40 - China"
+      },
+      {
+        "title": "บทที่ 41 - Apple Park"
+      },
+      {
+        "title": "บทที่ 42 - Loss (การสูญเสีย)"
+      },
+      {
+        "title": "บทที่ 43 - Services (บริการ)"
+      },
+      {
+        "title": "บทที่ 44 - Watch (นาฬิกา)"
+      },
+      {
+        "title": "บทที่ 45 - Vision Pro"
+      },
+      {
+        "title": "บทที่ 46 - Silicon"
+      },
+      {
+        "title": "บทที่ 47 - Apple Intelligence"
+      },
+      {
+        "title": "บทที่ 48 - Headwinds"
+      },
+      {
+        "title": "บทที่ 49 - Apple: The Next 50 Years"
+      },
+      {
+        "title": "บทที่ 50 - Throughlines"
+      }
+    ]
+  },
+  {
+    "title": "Building a StoryBrand 2.0",
+    "author": "Donald Miller",
+    "category": "ธุรกิจและการตลาด",
+    "color": "#c6d7df",
+    "text": "#263b48",
+    "added": 89,
+    "id": "building-a-storybrand-2",
+    "totalChapters": 18,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "หมายเหตุจากผู้เขียนเกี่ยวกับฉบับปรับปรุง"
+      },
+      {
+        "title": "บทนำ - ลูกค้าคือวีรบุรุษของเรื่อง"
+      },
+      {
+        "title": "บทที่ 1 - กุญแจสู่การทำให้คนมองเห็น ได้ยิน และเข้าใจ"
+      },
+      {
+        "title": "บทที่ 2 - อาวุธลับที่จะช่วยให้ธุรกิจเติบโต"
+      },
+      {
+        "title": "บทที่ 3 - กรอบ SB7 ที่เรียบง่าย"
+      },
+      {
+        "title": "บทที่ 4 - ตัวละคร"
+      },
+      {
+        "title": "บทที่ 5 - มีปัญหา"
+      },
+      {
+        "title": "บทที่ 6 - และพบผู้นำทาง"
+      },
+      {
+        "title": "บทที่ 7 - ผู้ที่มอบแผนให้พวกเขา"
+      },
+      {
+        "title": "บทที่ 8 - และชวนให้ลงมือทำ"
+      },
+      {
+        "title": "บทที่ 9 - ที่ช่วยให้พวกเขาหลีกเลี่ยงความล้มเหลว"
+      },
+      {
+        "title": "บทที่ 10 - และจบลงด้วยความสำเร็จ"
+      },
+      {
+        "title": "บทที่ 11 - ผู้คนต้องการให้แบรนด์มีส่วนร่วมในการเปลี่ยนแปลงตัวตน"
+      },
+      {
+        "title": "บทที่ 12 - กำหนดแนวคิดควบคุม"
+      },
+      {
+        "title": "บทที่ 13 - วิธีดำเนินแคมเปญข้อความ StoryBrand ให้ได้ผล"
+      },
+      {
+        "title": "บทที่ 14 - ทำเว็บไซต์ให้สื่อสารได้ตรงจุด"
+      },
+      {
+        "title": "บทที่ 15 - ดำเนินแคมเปญข้อความและการตลาดแบบ StoryBrand"
+      },
+      {
+        "title": "บทส่งท้าย"
+      }
+    ]
+  },
+  {
+    "title": "The Great Mental Models: General Thinking Concepts",
+    "author": "Shane Parrish",
+    "category": "วิทยาศาสตร์และปรัชญา",
+    "color": "#263b53",
+    "text": "#f4f0e7",
+    "added": 90,
+    "id": "great-mental-models",
+    "totalChapters": 15,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "เกี่ยวกับโครงการ - การเรียนรู้โลกผ่านแบบจำลองความคิด (The Great Mental Models Project)"
+      },
+      {
+        "title": "คำนำ - ทำไมผมจึงรวบรวมแบบจำลองความคิด (Preface)"
+      },
+      {
+        "title": "บทนำ - การแสวงหาปัญญา (Acquiring Wisdom)"
+      },
+      {
+        "title": "บทที่ 1 - แผนที่ไม่ใช่ดินแดน (The Map Is Not the Territory)"
+      },
+      {
+        "title": "บทที่ 2 - ขอบเขตความสามารถ (Circle of Competence)"
+      },
+      {
+        "title": "แนวคิดเสริม - การพิสูจน์ว่าผิดได้ (Falsifiability)"
+      },
+      {
+        "title": "บทที่ 3 - การคิดจากหลักพื้นฐาน (First Principles Thinking)"
+      },
+      {
+        "title": "บทที่ 4 - การทดลองทางความคิด (Thought Experiment)"
+      },
+      {
+        "title": "แนวคิดเสริม - เงื่อนไขจำเป็นและเพียงพอ (Necessity and Sufficiency)"
+      },
+      {
+        "title": "บทที่ 5 - การคิดผลลัพธ์ลำดับถัดไป (Second-Order Thinking)"
+      },
+      {
+        "title": "บทที่ 6 - การคิดเชิงความน่าจะเป็น (Probabilistic Thinking)"
+      },
+      {
+        "title": "แนวคิดเสริม - เหตุและความสัมพันธ์ (Causation vs. Correlation)"
+      },
+      {
+        "title": "บทที่ 7 - การคิดกลับด้าน (Inversion)"
+      },
+      {
+        "title": "บทที่ 8 - มีดโกนของอ็อกแคม (Occam’s Razor)"
+      },
+      {
+        "title": "บทที่ 9 - มีดโกนของแฮนลอน (Hanlon’s Razor)"
+      }
+    ]
+  },
+  {
+    "id": "great-mental-models-volume-2",
+    "title": "The Great Mental Models, Volume 2: Physics, Chemistry, and Biology",
+    "author": "Shane Parrish & Rhiannon Beaubien",
+    "category": "สุขภาพและจิตวิทยา",
+    "color": "#8e2535",
+    "text": "#f6eeee",
+    "added": 91,
+    "totalChapters": 25,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "coverImageUrl": "./assets/covers/great-mental-models-volume-2.jpg",
+    "chapters": [
+      {
+        "title": "บทนำ - มองโลกผ่านแบบจำลองจากวิทยาศาสตร์ (Introduction)"
+      },
+      {
+        "title": "ทฤษฎีสัมพัทธภาพ (Relativity)"
+      },
+      {
+        "title": "การตอบแทน (Reciprocity)"
+      },
+      {
+        "title": "อุณหพลศาสตร์ (Thermodynamics)"
+      },
+      {
+        "title": "ความเฉื่อย (Inertia)"
+      },
+      {
+        "title": "แรงเสียดทานและความหนืด (Friction and Viscosity)"
+      },
+      {
+        "title": "ความเร็วเชิงทิศทาง (Velocity)"
+      },
+      {
+        "title": "คานผ่อนแรง (Leverage)"
+      },
+      {
+        "title": "พลังงานกระตุ้น (Activation Energy)"
+      },
+      {
+        "title": "ตัวเร่งปฏิกิริยา (Catalysts)"
+      },
+      {
+        "title": "การผสมธาตุให้เกิดคุณสมบัติใหม่ (Alloying)"
+      },
+      {
+        "title": "วิวัฒนาการ ตอนที่ 1 - การคัดเลือกโดยธรรมชาติและการสูญพันธุ์ (Evolution Part One: Natural Selection and Extinction)"
+      },
+      {
+        "title": "วิวัฒนาการ ตอนที่ 2 - การปรับตัวและปรากฏการณ์ราชินีแดง (Evolution Part Two: Adaptation Rate and the Red Queen Effect)"
+      },
+      {
+        "title": "แนวคิดเสริม - การแข่งขัน (Competition)"
+      },
+      {
+        "title": "ระบบนิเวศ (Ecosystem)"
+      },
+      {
+        "title": "บทบาทและช่องว่างทางระบบนิเวศ (Niches)"
+      },
+      {
+        "title": "สัญชาตญาณในการปกป้องตนเอง (Self-Preservation)"
+      },
+      {
+        "title": "การทำซ้ำและการส่งต่อ (Replication)"
+      },
+      {
+        "title": "ความร่วมมือ (Cooperation)"
+      },
+      {
+        "title": "แนวคิดเสริม - จำนวนของดันบาร์ (Dunbar’s Number)"
+      },
+      {
+        "title": "การจัดองค์กรแบบลำดับชั้น (Hierarchical Organization)"
+      },
+      {
+        "title": "แรงจูงใจ (Incentives)"
+      },
+      {
+        "title": "แนวโน้มลดการใช้พลังงาน (Tendency to Minimize Energy Output)"
+      },
+      {
+        "title": "บทสรุป - เชื่อมแบบจำลองให้เป็นโครงข่าย (Putting It All Together)"
+      },
+      {
+        "title": "ประวัติย่อบุคคลสำคัญ (Mini-Bios)"
+      }
+    ]
+  },
+  {
+    "id": "great-mental-models-volume-3",
+    "title": "The Great Mental Models, Volume 3: Systems and Mathematics",
+    "author": "Rhiannon Beaubien & Rosie Leizrowice",
+    "authors": [
+      "Rhiannon Beaubien",
+      "Rosie Leizrowice"
+    ],
+    "category": "สุขภาพและจิตวิทยา",
+    "color": "#8e2535",
+    "text": "#f6eeee",
+    "added": 92,
+    "totalChapters": 31,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "coverImageUrl": "./assets/covers/great-mental-models-volume-3.jpg",
+    "chapters": [
+      {
+        "title": "คำกล่าวเปิดเล่มจาก Shane Parrish (เชน แพร์ริช)"
+      },
+      {
+        "title": "บทนำ - มองระบบและคณิตศาสตร์เป็นเครื่องมือคิด (Introduction)"
+      },
+      {
+        "title": "ระบบ (Systems)"
+      },
+      {
+        "title": "วงจรป้อนกลับ (Feedback Loops)"
+      },
+      {
+        "title": "สมดุล (Equilibrium)"
+      },
+      {
+        "title": "คอขวด (Bottlenecks)"
+      },
+      {
+        "title": "ขนาดและระดับของระบบ (Scale)"
+      },
+      {
+        "title": "ระยะเผื่อความปลอดภัย (Margin of Safety)"
+      },
+      {
+        "title": "การหมุนเวียนและการทดแทน (Churn)"
+      },
+      {
+        "title": "อัลกอริทึม (Algorithms)"
+      },
+      {
+        "title": "แนวคิดเสริม - ระบบซับซ้อนที่ปรับตัวได้ (Complex Adaptive Systems)"
+      },
+      {
+        "title": "มวลวิกฤต (Critical Mass)"
+      },
+      {
+        "title": "คุณสมบัติที่เกิดขึ้นใหม่ (Emergence)"
+      },
+      {
+        "title": "แนวคิดเสริม - พลวัตแห่งความโกลาหล (Chaos Dynamics)"
+      },
+      {
+        "title": "การลดทอนจนถึงแก่นที่ขาดไม่ได้ (Irreducibility)"
+      },
+      {
+        "title": "กฎผลตอบแทนที่ลดลง (The Law of Diminishing Returns)"
+      },
+      {
+        "title": "คณิตศาสตร์ (Mathematics)"
+      },
+      {
+        "title": "แนวคิดเสริม - การแจกแจงข้อมูล (Distributions)"
+      },
+      {
+        "title": "การทบต้น (Compounding)"
+      },
+      {
+        "title": "แนวคิดเสริม - ผลของเครือข่าย (Network Effects)"
+      },
+      {
+        "title": "การสุ่มตัวอย่าง (Sampling)"
+      },
+      {
+        "title": "ความสุ่ม (Randomness)"
+      },
+      {
+        "title": "แนวคิดเสริม - หลักการพาเรโต (Pareto Principle)"
+      },
+      {
+        "title": "การถดถอยสู่ค่าเฉลี่ย (Regression to the Mean)"
+      },
+      {
+        "title": "การคูณด้วยศูนย์ (Multiplying by Zero)"
+      },
+      {
+        "title": "ความเทียบเท่า (Equivalence)"
+      },
+      {
+        "title": "แนวคิดเสริม - ลำดับขนาด (Order of Magnitude)"
+      },
+      {
+        "title": "พื้นที่ผิว (Surface Area)"
+      },
+      {
+        "title": "ค่าสูงสุดโดยรวมและค่าสูงสุดเฉพาะที่ (Global and Local Maxima)"
+      },
+      {
+        "title": "แล้วจะทำอะไรต่อ (Now What?)"
+      },
+      {
+        "title": "ประวัติย่อของบุคคลในเล่ม (Mini-Bios)"
+      }
+    ]
+  },
+  {
+    "id": "great-mental-models-volume-4",
+    "title": "The Great Mental Models, Volume 4: Economics and Art",
+    "author": "Shane Parrish & Rhiannon Beaubien",
+    "category": "วิทยาศาสตร์และปรัชญา",
+    "color": "#8e2535",
+    "text": "#f6eeee",
+    "added": 93,
+    "totalChapters": 29,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "coverImageUrl": "./assets/covers/great-mental-models-volume-4.jpg",
+    "chapters": [
+      {
+        "title": "บทนำ - คลังแบบจำลองความคิดจากเศรษฐศาสตร์และศิลปะ (Introduction)"
+      },
+      {
+        "title": "ความขาดแคลน (Scarcity)"
+      },
+      {
+        "title": "อุปสงค์และอุปทาน (Supply and Demand)"
+      },
+      {
+        "title": "แนวคิดเสริม - ทฤษฎีเกม (Supporting Idea: Game Theory)"
+      },
+      {
+        "title": "การทำให้เกิดประสิทธิผลสูงสุด (Optimization)"
+      },
+      {
+        "title": "การแลกเปลี่ยนที่ต้องยอมเสียบางอย่าง (Trade-Offs)"
+      },
+      {
+        "title": "ความเชี่ยวชาญเฉพาะทาง (Specialization)"
+      },
+      {
+        "title": "การพึ่งพาซึ่งกันและกัน (Interdependence)"
+      },
+      {
+        "title": "ประสิทธิภาพ (Efficiency)"
+      },
+      {
+        "title": "หนี้ (Debt)"
+      },
+      {
+        "title": "การผูกขาดและการแข่งขัน (Monopoly and Competition)"
+      },
+      {
+        "title": "แนวคิดเสริม - ผลกระทบภายนอก (Supporting Idea: Externalities)"
+      },
+      {
+        "title": "การทำลายเพื่อสร้างสิ่งใหม่ (Creative Destruction)"
+      },
+      {
+        "title": "กฎของเกรแชม (Gresham’s Law)"
+      },
+      {
+        "title": "ฟองสบู่ (Bubbles)"
+      },
+      {
+        "title": "ผู้ชม (Audience)"
+      },
+      {
+        "title": "แนวประเภท (Genre)"
+      },
+      {
+        "title": "ความแตกต่างที่ตัดกัน (Contrast)"
+      },
+      {
+        "title": "กรอบการมอง (Framing)"
+      },
+      {
+        "title": "จังหวะ (Rhythm)"
+      },
+      {
+        "title": "ทำนอง (Melody)"
+      },
+      {
+        "title": "การนำเสนอแทนสิ่งจริง (Representation)"
+      },
+      {
+        "title": "หลักเสริม: สมดุล (Balance)"
+      },
+      {
+        "title": "โครงเรื่อง (Plot)"
+      },
+      {
+        "title": "ตัวละคร (Character)"
+      },
+      {
+        "title": "สภาพแวดล้อม (Setting)"
+      },
+      {
+        "title": "นัยแฝง (Subtext)"
+      },
+      {
+        "title": "การแสดง (Performance)"
+      },
+      {
+        "title": "ข้อคิดส่งท้าย (Afterthoughts)"
       }
     ]
   },
