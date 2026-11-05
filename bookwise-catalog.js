@@ -4960,5 +4960,37 @@ window.BOOKWISE_CATALOG = [
         "title": "บทที่ 7 - เช็กลิสต์ทำโฆษณา (GOATed Ads Playbook Cheat Sheet)"
       }
     ]
+  },
+  {
+    "id": "100m-hooks-playbook",
+    "title": "$100M Hooks Playbook",
+    "author": "Alex Hormozi",
+    "category": "ธุรกิจและการตลาด",
+    "color": "#c9d8d1",
+    "text": "#25352f",
+    "added": 96,
+    "totalChapters": 5,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "ส่วนที่ 1 - ฮุกที่ทำให้คนหยุดดู (Hooks That Get Clicks)"
+      },
+      {
+        "title": "ส่วนที่ 2 - กลไกและรูปแบบของ Hook"
+      },
+      {
+        "title": "ส่วนที่ 3 - กระบวนการสร้างและทดสอบ Hook"
+      },
+      {
+        "title": "ส่วนที่ 4 - ตัวอย่าง Hooks ที่ทำผลงานดี 121 แบบ"
+      },
+      {
+        "title": "ส่วนที่ 5 - เหตุผลที่ควรปรับ Hook และ Hook Checklist"
+      }
+    ]
   }
 ];
