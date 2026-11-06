@@ -70,4 +70,5 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'wisdom-takes-work': 'revised',
   '100m-lifetime-value-playbook': 'revised',
   '100m-marketing-machine-playbook': 'revised',
+  '100m-money-models': 'revised',
 });

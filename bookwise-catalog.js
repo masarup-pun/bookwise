@@ -5109,5 +5109,118 @@ window.BOOKWISE_CATALOG = [
         "title": "บทที่ 12 - เช็กลิสต์นำระบบไปใช้ (Marketing Machine Implementation Checklist)"
       }
     ]
+  },
+  {
+    "id": "100m-money-models",
+    "title": "$100M Money Models",
+    "author": "Alex Hormozi",
+    "category": "ธุรกิจและการตลาด",
+    "color": "#c9d8d1",
+    "text": "#25352f",
+    "added": 100,
+    "totalChapters": 32,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "บทนำ - เริ่มต้นที่นี่ (Start Here)"
+      },
+      {
+        "title": "บทที่ 1 - Money Model คืออะไร? (What's A Money Model?)"
+      },
+      {
+        "title": "บทที่ 2 - ข้อเสนอ 4 ประเภทที่ประกอบเป็น Money Model (The Four Types of Offers That Make Money Models)"
+      },
+      {
+        "title": "บทที่ 3 - ข้อเสนอเพื่อดึงดูดลูกค้า (Attraction Offers)"
+      },
+      {
+        "title": "บทที่ 4 - วางเงินก่อน แล้วรับคืนเมื่อทำตามเงื่อนไข (Win Your Money Back)"
+      },
+      {
+        "title": "บทที่ 5 - แจกของรางวัลเพื่อดึงดูดผู้สนใจ (Giveaways)"
+      },
+      {
+        "title": "บทที่ 6 - ข้อเสนอเปรียบเทียบกับตัวเลือกพรีเมียม (Decoy Offer)"
+      },
+      {
+        "title": "บทที่ 7 - ซื้อ X รับ Y ฟรี (Buy X Get Y Free)"
+      },
+      {
+        "title": "บทที่ 8 - จ่ายน้อยกว่าตอนนี้ หรือจ่ายมากกว่าภายหลัง (Pay Less Now or Pay More Later)"
+      },
+      {
+        "title": "บทที่ 9 - ข้อเสนอสร้างไมตรีด้วยการให้ (Free Goodwill Offer)"
+      },
+      {
+        "title": "บทสรุปหมวด - ข้อเสนอที่ดึงดูดลูกค้า (Attraction Offers Conclusion)"
+      },
+      {
+        "title": "บทนำหมวด - ข้อเสนอขายต่อยอด (Section III: Upsell Offers)"
+      },
+      {
+        "title": "บทที่ 10 - ข้อเสนอขายสิ่งที่แก้ปัญหาถัดไป (The Classic Upsell)"
+      },
+      {
+        "title": "บทที่ 11 - เมนูข้อเสนอที่ช่วยให้เลือกสิ่งที่ต้องการ (Menu Upsell)"
+      },
+      {
+        "title": "บทที่ 12 - เสนอข้อเสนอพรีเมียมก่อนเพื่อให้เห็นความคุ้ม (Anchor Upsell)"
+      },
+      {
+        "title": "บทที่ 13 - นำยอดซื้อเดิมไปเป็นเครดิตสำหรับข้อเสนอถัดไป (Rollover Upsell)"
+      },
+      {
+        "title": "บทสรุปหมวด - ข้อเสนอขายต่อยอด (Upsell Offers Conclusion)"
+      },
+      {
+        "title": "บทนำหมวด - วิธีปรับข้อเสนอเมื่อลูกค้าปฏิเสธ (Section IV: Downsell Offers)"
+      },
+      {
+        "title": "บทที่ 14 - แบ่งจ่ายโดยไม่ลดมูลค่าของข้อเสนอ (Payment Plan Downsells)"
+      },
+      {
+        "title": "บทที่ 15 - ทดลองใช้ฟรีเมื่อทำตามเงื่อนไข (Trial With Penalty)"
+      },
+      {
+        "title": "บทที่ 16 - ลดราคาโดยปรับสิ่งที่ลูกค้าได้รับ (Feature Downsells)"
+      },
+      {
+        "title": "บทสรุปหมวด - ข้อเสนอขายลดระดับ (Downsell Offers Conclusion)"
+      },
+      {
+        "title": "หมวด V - ข้อเสนอแบบต่อเนื่อง (Continuity Offers)"
+      },
+      {
+        "title": "บทที่ 17 - โบนัสเพื่อเริ่มสมาชิกต่อเนื่อง (Continuity Bonus Offers)"
+      },
+      {
+        "title": "บทที่ 18 - ข้อเสนอสินค้าดิจิทัลและโบนัสสมาชิก (Digital Product Offer)"
+      },
+      {
+        "title": "บทที่ 19 - ให้เวลาฟรีเมื่อสมัครสมาชิกต่อเนื่อง (Continuity Discount Offers)"
+      },
+      {
+        "title": "บทที่ 20 - ยกเว้นค่าตั้งระบบเมื่อผูกพันระยะยาว (Waived Fee Offer)"
+      },
+      {
+        "title": "บทสรุปหมวด - ข้อเสนอแบบต่อเนื่อง (Continuity Offers Conclusion)"
+      },
+      {
+        "title": "หมวด VI - สร้าง Money Model ของคุณ (Make Your Money Model)"
+      },
+      {
+        "title": "บทที่ 30 - 10 ปีใน 10 นาที (Ten Years In Ten Minutes)"
+      },
+      {
+        "title": "บทที่ 31 - ความคิดส่งท้าย (Final Thoughts)"
+      },
+      {
+        "title": "ภาคผนวก - แหล่งเรียนรู้เพิ่มเติม (Free Goodies)"
+      }
+    ]
   }
 ];
