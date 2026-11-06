@@ -69,4 +69,5 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'obstacle-is-the-way': 'revised',
   'wisdom-takes-work': 'revised',
   '100m-lifetime-value-playbook': 'revised',
+  '100m-marketing-machine-playbook': 'revised',
 });

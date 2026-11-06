@@ -5056,5 +5056,58 @@ window.BOOKWISE_CATALOG = [
         "title": "แบบฝึกหัด - ทำให้ลูกค้ามีมูลค่าเพิ่มขึ้น (Make Customers Worth More: The Crazy Eight)"
       }
     ]
+  },
+  {
+    "id": "100m-marketing-machine-playbook",
+    "title": "$100M Marketing Machine Playbook",
+    "author": "Alex Hormozi",
+    "category": "ธุรกิจและการตลาด",
+    "color": "#c9d8d1",
+    "text": "#25352f",
+    "added": 99,
+    "totalChapters": 12,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "บทที่ 1 - ต้นกำเนิดระบบการตลาด (Marketing Machine)"
+      },
+      {
+        "title": "บทที่ 2 - เหตุผลที่ระบบนี้สำคัญ (Why This Matters)"
+      },
+      {
+        "title": "บทที่ 3 - ระบบ Marketing Machine ทำงานอย่างไร (How The Marketing Machine Works)"
+      },
+      {
+        "title": "บทที่ 4 - โฆษณาจากเส้นทางลูกค้า (Lifecycle Ads)"
+      },
+      {
+        "title": "บทที่ 5 - ค้นหาเนื้อหาจากโซเชียลมีเดีย (Social Media Scrape)"
+      },
+      {
+        "title": "บทที่ 6 - เก็บหลักฐานจากงานอีเวนต์ (In-Person Events)"
+      },
+      {
+        "title": "บทที่ 7 - รวบรวมคำชนะจากการสื่อสารและชุมชน (Communication and Communities Scrape)"
+      },
+      {
+        "title": "บทที่ 8 - โฆษณาจากโบนัสและรางวัล (Bonuses and Award Ads)"
+      },
+      {
+        "title": "บทที่ 9 - การแข่งขันคำรับรอง (Competitions)"
+      },
+      {
+        "title": "บทที่ 10 - รวมระบบทั้งหมดเข้าด้วยกัน (Putting It All Together)"
+      },
+      {
+        "title": "บทที่ 11 - ข้อคิดส่งท้าย (Final Thoughts)"
+      },
+      {
+        "title": "บทที่ 12 - เช็กลิสต์นำระบบไปใช้ (Marketing Machine Implementation Checklist)"
+      }
+    ]
   }
 ];
