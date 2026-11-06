@@ -5033,5 +5033,28 @@ window.BOOKWISE_CATALOG = [
         "title": "ส่วนที่ 8 - Lead Nurture Checklist"
       }
     ]
+  },
+  {
+    "id": "100m-lifetime-value-playbook",
+    "title": "$100M Lifetime Value Playbook",
+    "author": "Alex Hormozi",
+    "category": "ธุรกิจและการตลาด",
+    "color": "#c9d8d1",
+    "text": "#25352f",
+    "added": 98,
+    "totalChapters": 2,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "บทที่ 1 - เพิ่มมูลค่าตลอดอายุลูกค้า (Increasing Lifetime Value: The Crazy 8)"
+      },
+      {
+        "title": "แบบฝึกหัด - ทำให้ลูกค้ามีมูลค่าเพิ่มขึ้น (Make Customers Worth More: The Crazy Eight)"
+      }
+    ]
   }
 ];
