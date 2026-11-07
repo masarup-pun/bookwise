@@ -5222,5 +5222,94 @@ window.BOOKWISE_CATALOG = [
         "title": "ภาคผนวก - แหล่งเรียนรู้เพิ่มเติม (Free Goodies)"
       }
     ]
+  },
+  {
+    "id": "acq-closer-handbook",
+    "title": "ACQ Closer Handbook",
+    "author": "Alex Hormozi",
+    "category": "ธุรกิจและการตลาด",
+    "color": "#c9d8d1",
+    "text": "#25352f",
+    "added": 101,
+    "totalChapters": 24,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "บทที่ 1 - ยินดีต้อนรับสู่ป่า (Welcome to the Jungle)"
+      },
+      {
+        "title": "บทที่ 2 - วิธีใช้คู่มือนี้ (How to Use This Handbook)"
+      },
+      {
+        "title": "บทที่ 3 - การขายคืออะไร (What Is Selling?)"
+      },
+      {
+        "title": "บทที่ 4 - เส้นทางอาชีพฝ่ายขาย ACQ (ACQ Sales Career Path)"
+      },
+      {
+        "title": "บทที่ 5 - ตารางฝึกและการเริ่มงาน (Onboarding: Schedule & Training)"
+      },
+      {
+        "title": "บทที่ 6 - การฝึกต่อเนื่อง (On-Going: Training)"
+      },
+      {
+        "title": "บทที่ 7 - ตารางทำงานต่อเนื่อง (On-Going: Schedule)"
+      },
+      {
+        "title": "บทที่ 8 - Hunt Mode: การหาโอกาส (Hunt Mode)"
+      },
+      {
+        "title": "บทที่ 9 - Kill Mode: การปิดการขาย (Kill Mode)"
+      },
+      {
+        "title": "บทที่ 10 - ใช้สคริปต์ให้เป็นธรรมชาติ (Breathe the Script)"
+      },
+      {
+        "title": "บทที่ 11 - น้ำเสียง (Tone)"
+      },
+      {
+        "title": "บทที่ 12 - การเปิดสาย (Introduction)"
+      },
+      {
+        "title": "บทที่ 13 - การค้นหาปัญหา (Discovery)"
+      },
+      {
+        "title": "บทที่ 14 - การทำข้อเสนอ (Offer)"
+      },
+      {
+        "title": "บทที่ 15 - ข้อโต้แย้งก่อนซื้อ (Objections)"
+      },
+      {
+        "title": "บทที่ 16 - การวนตอบข้อกังวล (Looping)"
+      },
+      {
+        "title": "บทที่ 17 - นัดต่อก่อนจบสาย (BAMFAM)"
+      },
+      {
+        "title": "บทที่ 18 - การขอผู้แนะนำ (Referrals)"
+      },
+      {
+        "title": "บทที่ 19 - สิ่งที่ต้องใช้เพื่อเป็นคนกลุ่มบน 0.01% (What Being the Top .01% Looks Like)"
+      },
+      {
+        "title": "บทที่ 20 - ภาคผนวกคลังสคริปต์ (Appendix: Script Bank)"
+      },
+      {
+        "title": "บทที่ 21 - สคริปต์โทรและเตรียมนัด (Outbound and Inbound Set Scripts)"
+      },
+      {
+        "title": "บทที่ 22 - สคริปต์ปิดและสคริปต์ตอบข้อกังวล (Closing and Objection Scripts)"
+      },
+      {
+        "title": "บทที่ 23 - สคริปต์ติดตามและนัดซ้ำ (Follow-Up Scripts)"
+      },
+      {
+        "title": "บทที่ 24 - แหล่งฝึกเพิ่มเติม (Additional Trainings)"
+      }
+    ]
   }
 ];
