@@ -5381,5 +5381,98 @@ window.BOOKWISE_CATALOG = [
         "originalTitle": "Stage 1: Monetize"
       }
     ]
+  },
+  {
+    "id": "100m-offers",
+    "title": "$100M Offers",
+    "author": "Alex Hormozi",
+    "category": "ธุรกิจและการตลาด",
+    "color": "#c9d8d1",
+    "text": "#25352f",
+    "added": 104,
+    "totalChapters": 19,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "เริ่มต้นที่นี่ (Start Here)",
+        "originalTitle": "Start Here"
+      },
+      {
+        "title": "บทที่ 1 - จุดเริ่มต้นของผม (How We Got Here)",
+        "originalTitle": "How We Got Here"
+      },
+      {
+        "title": "บทที่ 2 - ข้อเสนอ Grand Slam (Grand Slam Offers)",
+        "originalTitle": "Grand Slam Offers"
+      },
+      {
+        "title": "บทที่ 3 - ปัญหาของการขายแบบสินค้าโภคภัณฑ์ (Pricing: The Commodity Problem)",
+        "originalTitle": "Pricing: The Commodity Problem"
+      },
+      {
+        "title": "บทที่ 4 - เลือกตลาดที่มีความต้องการจริง (Finding the Right Market - A Starving Crowd)",
+        "originalTitle": "Pricing: Finding The Right Market - A Starving Crowd"
+      },
+      {
+        "title": "บทที่ 5 - ตั้งราคาให้สมกับคุณค่า (Pricing: Charge What It’s Worth)",
+        "originalTitle": "Pricing: Charge What It’s Worth"
+      },
+      {
+        "title": "บทที่ 6 - สมการแห่งคุณค่า (The Value Equation)",
+        "originalTitle": "Value Offer: The Value Equation"
+      },
+      {
+        "title": "บทที่ 7 - การให้โดยไม่หวังผลตอบแทน (Free Goodwill)",
+        "originalTitle": "Free Goodwill"
+      },
+      {
+        "title": "บทที่ 8 - วิธีคิดเพื่อสร้างข้อเสนอ (The Thought Process)",
+        "originalTitle": "Value Offer: The Thought Process"
+      },
+      {
+        "title": "บทที่ 9 - สร้างข้อเสนอ Grand Slam ภาค 1: ปัญหาและทางแก้ (Problems & Solutions)",
+        "originalTitle": "Value Offer: Creating Your Grand Slam Offer Part I: Problems & Solutions"
+      },
+      {
+        "title": "บทที่ 10 - สร้างข้อเสนอ Grand Slam ภาค 2: ตัดและจัดชุด (Trim & Stack)",
+        "originalTitle": "Value Offer: Creating Your Grand Slam Offer Part II: Trim & Stack"
+      },
+      {
+        "title": "บทที่ 11 - เพิ่มพลังให้ข้อเสนอ (Enhancing The Offer)",
+        "originalTitle": "Enhancing The Offer: Scarcity, Urgency, Bonuses, Guarantees, and Naming"
+      },
+      {
+        "title": "บทที่ 12 - ความขาดแคลน (Scarcity)",
+        "originalTitle": "Enhancing the Offer: Scarcity"
+      },
+      {
+        "title": "บทที่ 13 - ความเร่งด่วน (Urgency)",
+        "originalTitle": "Enhancing the Offer: Urgency"
+      },
+      {
+        "title": "บทที่ 14 - โบนัส (Bonuses)",
+        "originalTitle": "Enhancing the Offer: Bonuses"
+      },
+      {
+        "title": "บทที่ 15 - การรับประกัน (Guarantees)",
+        "originalTitle": "Enhancing the Offer: Guarantees"
+      },
+      {
+        "title": "บทที่ 16 - การตั้งชื่อ (Naming)",
+        "originalTitle": "Enhancing the Offer: Naming"
+      },
+      {
+        "title": "ส่วนสรุป - เงิน $100,000 แรก (Your First $100,000)",
+        "originalTitle": "Your First $100,000"
+      },
+      {
+        "title": "บทที่หายไป - ลูกค้าในอุดมคติของคุณ (Your First Avatar)",
+        "originalTitle": "The Lost Chapter: Your First Avatar"
+      }
+    ]
   }
 ];
