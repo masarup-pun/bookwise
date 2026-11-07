@@ -5356,5 +5356,30 @@ window.BOOKWISE_CATALOG = [
         "originalTitle": "Tying It All Together"
       }
     ]
+  },
+  {
+    "id": "100m-scaling-roadmap",
+    "title": "$100M Scaling Roadmap",
+    "author": "Alex Hormozi",
+    "category": "ธุรกิจและการตลาด",
+    "color": "#c9d8d1",
+    "text": "#25352f",
+    "added": 103,
+    "totalChapters": 2,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "ส่วนที่ 1 - Stage 0: เริ่มทดลอง (Improvise)",
+        "originalTitle": "Stage 0: Improvise"
+      },
+      {
+        "title": "ส่วนที่ 2 - Stage 1: เริ่มสร้างรายได้ (Monetize)",
+        "originalTitle": "Stage 1: Monetize"
+      }
+    ]
   }
 ];
