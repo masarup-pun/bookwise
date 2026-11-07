@@ -5563,5 +5563,82 @@ window.BOOKWISE_CATALOG = [
         "originalTitle": "Appendix: The Price Raise Letter Template"
       }
     ]
+  },
+  {
+    "id": "100m-pricing-playbook",
+    "title": "$100M Pricing Playbook",
+    "author": "Alex Hormozi",
+    "category": "ธุรกิจและการตลาด",
+    "color": "#c9d8d1",
+    "text": "#25352f",
+    "added": 106,
+    "totalChapters": 15,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "หลักยึดและข้อจำกัดของหนังสือ (Guiding Principles)",
+        "originalTitle": "Guiding Principles"
+      },
+      {
+        "title": "ตั้งราคาเพื่อทำกำไรให้มากที่สุด (Pricing To Make The Most Money)",
+        "originalTitle": "Pricing To Make The Most Money"
+      },
+      {
+        "title": "โมเดลการตั้งราคา 3 แบบ (Three Models Of Pricing)",
+        "originalTitle": "Three Models Of Pricing"
+      },
+      {
+        "title": "ขึ้นราคาและกำไรจากการปรับเล็กน้อย (Just Raise It)",
+        "originalTitle": "Just Raise It"
+      },
+      {
+        "title": "Pricing Play #1: รอบบิลรายเดือนเป็นทุก 28 วัน (Monthly to 28 Day Billing Cycles)",
+        "originalTitle": "Pricing Play #1: Monthly to 28 Day Billing Cycles"
+      },
+      {
+        "title": "Pricing Play #2: ค่าธรรมเนียมรับบัตรและช่องทางชำระเงินสำรอง (Processing Fees & Second Form of Payment)",
+        "originalTitle": "Pricing Play #2: Processing Fees & Second Form of Payment"
+      },
+      {
+        "title": "Pricing Play #3: แยกภาษีขายออกจากราคา (Sales Tax)",
+        "originalTitle": "Pricing Play #3: Sales Tax"
+      },
+      {
+        "title": "Pricing Play #4: ปรับราคาขึ้นทุกปี (Annual Price Increases)",
+        "originalTitle": "Pricing Play #4: Annual Price Increases"
+      },
+      {
+        "title": "Pricing Play #5: เสนอการชำระรายปี (Annual Billing)",
+        "originalTitle": "Pricing Play #5: Annual Billing"
+      },
+      {
+        "title": "Pricing Play #6: ปัดราคาให้สูงขึ้น (Round Up)",
+        "originalTitle": "Pricing Play #6: Round Up"
+      },
+      {
+        "title": "Pricing Play #7: ค่าต่ออายุรายปีเพิ่มจากรายเดือน (Annual Renewal Fee On Top of Monthly)",
+        "originalTitle": "Pricing Play #7: Annual Renewal Fee On Top of Monthly"
+      },
+      {
+        "title": "Pricing Play #8: การต่ออายุบริการอัตโนมัติ (Automatic Continuity)",
+        "originalTitle": "Pricing Play #8: Automatic Continuity"
+      },
+      {
+        "title": "Pricing Play #9: ใช้ตัวเลือกราคาสูงเป็นจุดอ้างอิง (Ultra High Ticket Anchor)",
+        "originalTitle": "Pricing Play #9: Ultra High Ticket Anchor"
+      },
+      {
+        "title": "Pricing Play #10: ขายการรับประกันหรือคุ้มครองเพิ่มเติม (Guarantee and Warranty Upsells)",
+        "originalTitle": "Pricing Play #10: Guarantee and Warranty Upsells"
+      },
+      {
+        "title": "สรุปแผนปรับราคาและบทส่งท้าย (The Instant Profit Pricing Playbook)",
+        "originalTitle": "The Instant Profit Pricing Playbook"
+      }
+    ]
   }
 ];
