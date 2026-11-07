@@ -5474,5 +5474,94 @@ window.BOOKWISE_CATALOG = [
         "originalTitle": "The Lost Chapter: Your First Avatar"
       }
     ]
+  },
+  {
+    "id": "100m-price-raise-playbook",
+    "title": "$100M Price Raise Playbook",
+    "author": "Alex Hormozi",
+    "category": "ธุรกิจและการตลาด",
+    "color": "#c9d8d1",
+    "text": "#25352f",
+    "added": 105,
+    "totalChapters": 18,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "ข้อควรรู้เกี่ยวกับข้อมูลในเล่ม (Legal Disclaimer)",
+        "originalTitle": "Legal Disclaimer"
+      },
+      {
+        "title": "ขึ้นราคา (Raise Prices)",
+        "originalTitle": "Raise Prices"
+      },
+      {
+        "title": "โครงร่างของคู่มือ (Outline of This Playbook)",
+        "originalTitle": "Outline of This Playbook"
+      },
+      {
+        "title": "ทำไมการขึ้นราคาจึงเป็นความคิดที่ดี (Why Raising Prices Is A Good Idea)",
+        "originalTitle": "Why Raising Prices Is A Good Idea"
+      },
+      {
+        "title": "กติกาการขึ้นราคา (My Rules For Raising Prices)",
+        "originalTitle": "My Rules For Raising Prices"
+      },
+      {
+        "title": "วิธีเลือกราคา (How To Pick Your Price)",
+        "originalTitle": "How To Pick Your Price"
+      },
+      {
+        "title": "R - ทบทวนคุณค่าที่ลูกค้าได้รับแล้ว (Remind Them of the Value)",
+        "originalTitle": "Section #1 - R: Remind them of the value you provided them already"
+      },
+      {
+        "title": "A - แจ้งการเปลี่ยนราคาโดยตรง (Address the Price Change Directly)",
+        "originalTitle": "Section #2 - A: Address the price change directly"
+      },
+      {
+        "title": "I - ลงทุนเพื่ออนาคตของลูกค้า (Invest in Their Future)",
+        "originalTitle": "Section #3 - I: Invest in their future"
+      },
+      {
+        "title": "S - มอบรางวัลตอบแทนความภักดี (Soften the News with a Loyalty Reward)",
+        "originalTitle": "Section #4 - S: Soften the news with a loyalty reward"
+      },
+      {
+        "title": "E - ตอบข้อกังวลของลูกค้า (Explain Away Their Concerns)",
+        "originalTitle": "Section #5 - E: Explain away their concerns"
+      },
+      {
+        "title": "ตัวอย่างจดหมายฉบับเต็ม (What This Letter Looks Like All Together)",
+        "originalTitle": "What This Letter Looks Like All Together"
+      },
+      {
+        "title": "หลังส่งจดหมายควรทำอย่างไร (What to Do Next)",
+        "originalTitle": "What to Do Next"
+      },
+      {
+        "title": "จัดการลูกค้าใหม่ที่เข้ามา (What To Do About Incoming Customers)",
+        "originalTitle": "What To Do About Incoming Customers"
+      },
+      {
+        "title": "ตัวอย่างจดหมายขึ้นราคาของยิม (My Gym Price Increase Letter)",
+        "originalTitle": "My Gym Price Increase Letter"
+      },
+      {
+        "title": "ทำไมควรลงมือขึ้นราคา (Why You Should Actually Do This)",
+        "originalTitle": "Why You Should Actually Do This"
+      },
+      {
+        "title": "เช็กลิสต์การขึ้นราคา (Price Raise Checklist)",
+        "originalTitle": "Price Raise Checklist"
+      },
+      {
+        "title": "ภาคผนวก: แบบจดหมายแจ้งขึ้นราคา (Appendix: The Price Raise Letter Template)",
+        "originalTitle": "Appendix: The Price Raise Letter Template"
+      }
+    ]
   }
 ];

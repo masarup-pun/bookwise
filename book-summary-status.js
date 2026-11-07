@@ -75,4 +75,5 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   '5-scaling-framework-sops': 'revised',
   '100m-scaling-roadmap': 'revised',
   '100m-offers': 'revised',
+  '100m-price-raise-playbook': 'revised',
 });
