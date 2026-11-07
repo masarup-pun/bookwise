@@ -72,4 +72,5 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   '100m-marketing-machine-playbook': 'revised',
   '100m-money-models': 'revised',
   'acq-closer-handbook': 'revised',
+  '5-scaling-framework-sops': 'revised',
 });

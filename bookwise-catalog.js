@@ -5311,5 +5311,50 @@ window.BOOKWISE_CATALOG = [
         "title": "บทที่ 24 - แหล่งฝึกเพิ่มเติม (Additional Trainings)"
       }
     ]
+  },
+  {
+    "id": "5-scaling-framework-sops",
+    "title": "5 Scaling Framework SOPs",
+    "author": "Leila Hormozi",
+    "category": "ธุรกิจและการตลาด",
+    "color": "#c9d8d1",
+    "text": "#25352f",
+    "added": 102,
+    "totalChapters": 7,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "บทที่ 1 - อ่านส่วนนี้ก่อน (Read This First)",
+        "originalTitle": "Read This First"
+      },
+      {
+        "title": "บทที่ 2 - กรอบบริการห้าดาว (5 Star Service Framework)",
+        "originalTitle": "5 Star Service Framework SOP"
+      },
+      {
+        "title": "บทที่ 3 - กรอบทบทวนสายงานร่วมกัน (Gametape Review Framework)",
+        "originalTitle": "Gametape Review Framework SOP"
+      },
+      {
+        "title": "บทที่ 4 - กรอบการสื่อสารประสิทธิภาพสูง (High Performance Communication Framework)",
+        "originalTitle": "High Performance Communication Framework SOP"
+      },
+      {
+        "title": "บทที่ 5 - กรอบวางแผนวันจันทร์หนึ่งชั่วโมง (Monday Hour One Framework)",
+        "originalTitle": "Monday Hour One Framework SOP"
+      },
+      {
+        "title": "บทที่ 6 - กรอบการปรับเงินเดือน (Pay Increase Framework)",
+        "originalTitle": "Pay Increase Framework SOP"
+      },
+      {
+        "title": "บทที่ 7 - สรุปกรอบทั้ง 5 (Tying It All Together)",
+        "originalTitle": "Tying It All Together"
+      }
+    ]
   }
 ];
