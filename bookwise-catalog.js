@@ -10164,5 +10164,79 @@ window.BOOKWISE_CATALOG = [
         "title": "บทเสริม A - โปรโมชั่นส่วนลด (Section A: Discount Promotions)"
       }
     ]
+  },
+  {
+    "id": "you-can-just-do-things",
+    "title": "You Can Just Do Things",
+    "author": "Cate Hall",
+    "category": "การพัฒนาตนเองและการใช้ชีวิต",
+    "color": "#d8cdb7",
+    "text": "#30291f",
+    "added": 115,
+    "totalChapters": 19,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "บทนำ - ฉันเป็นผู้กำหนดทางเลือกของตัวเอง (Introduction)"
+      },
+      {
+        "title": "บทที่ 1 - จ้องมองเหว (Stare into the Abyss)"
+      },
+      {
+        "title": "บทที่ 2 - มาเป็นผู้จัดการวิกฤตให้ชีวิตตัวเอง (Become Your Own Crisis Manager)"
+      },
+      {
+        "title": "บทที่ 3 - เลิกใช้ตรรกะแบบในหนัง (Quit Living in Movie Logic)"
+      },
+      {
+        "title": "บทที่ 4 - ขอข้อมูลย้อนกลับที่จริงใจ (Seek Real Feedback)"
+      },
+      {
+        "title": "บทที่ 5 - เรียนรู้ที่จะรักคูเมืองสถานะต่ำ (Learn to Love the Moat of Low Status)"
+      },
+      {
+        "title": "บทที่ 6 - จงเข้าหาการถูกปฏิเสธ (Court Rejection)"
+      },
+      {
+        "title": "บทที่ 7 - มองความล้มเหลวเป็นต้นทุนของการลงมือทำ (Recognize Failure as a Cost of Doing Business)"
+      },
+      {
+        "title": "บทที่ 8 - มองลักษณะนิสัยเป็นทักษะที่เรียนรู้ได้ (Learn to See Traits as Skills)"
+      },
+      {
+        "title": "บทที่ 9 - อย่าเรียนรู้บทเรียนปลอม (Don’t Learn Fake Lessons)"
+      },
+      {
+        "title": "บทที่ 10 - ฝ่าดงความขัดเขิน (Cross the Cringe Minefield)"
+      },
+      {
+        "title": "บทที่ 11 - อย่าคิดว่ามันจะยาก (Don’t Assume It Will Be Hard)"
+      },
+      {
+        "title": "บทที่ 12 - ใช้ทางลัด (Take Shortcuts)"
+      },
+      {
+        "title": "บทที่ 13 - เพิ่มพื้นที่ให้โชคเข้ามา (Increase Your Surface Area for Luck)"
+      },
+      {
+        "title": "บทที่ 14 - หาทางออกให้ได้ (Find a Way)"
+      },
+      {
+        "title": "บทที่ 15 - ผูกตัวเองไว้กับเสากระโดง (Tie Yourself to the Mast)"
+      },
+      {
+        "title": "บทที่ 16 - ตั้งเป้าให้เก่งเหนือคาด (Aim for Hypercompetence)"
+      },
+      {
+        "title": "บทที่ 17 - ลงมือทำด้วยตัวเอง (Do It Yourself)"
+      },
+      {
+        "title": "บทสรุป - โอกาสจะมาถึง (The Gods Will Offer You Chances)"
+      }
+    ]
   }
 ];
