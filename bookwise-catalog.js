@@ -10238,5 +10238,61 @@ window.BOOKWISE_CATALOG = [
         "title": "บทสรุป - โอกาสจะมาถึง (The Gods Will Offer You Chances)"
       }
     ]
+  },
+  {
+    "id": "the-inner-game-of-tennis",
+    "title": "The Inner Game of Tennis",
+    "author": "W. Timothy Gallwey",
+    "category": "Psychology",
+    "color": "#b9c7d8",
+    "text": "#263448",
+    "added": 116,
+    "totalChapters": 13,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "คำนำโดย Pete Carroll - จิตใจเป็นส่วนหนึ่งของสมรรถนะ (Foreword)"
+      },
+      {
+        "title": "คำนำโดย Zach Kleinman - เรียนรู้ด้วยความไว้วางใจ (Preface)"
+      },
+      {
+        "title": "บทนำ - เกมภายนอกและเกมภายใน (Introduction)"
+      },
+      {
+        "title": "บทที่ 1 - ทบทวนด้านจิตใจของเทนนิส (Reflections on the Mental Side of Tennis)"
+      },
+      {
+        "title": "บทที่ 2 - การค้นพบตัวตน 2 ส่วน (The Discovery of the Two Selves)"
+      },
+      {
+        "title": "บทที่ 3 - ทำให้ Self 1 สงบ (Quieting Self 1)"
+      },
+      {
+        "title": "บทที่ 4 - ไว้ใจ Self 2 (Trusting Self 2)"
+      },
+      {
+        "title": "บทที่ 5 - ค้นพบเทคนิค (Discovering Technique)"
+      },
+      {
+        "title": "บทที่ 6 - เปลี่ยนนิสัย (Changing Habits)"
+      },
+      {
+        "title": "บทที่ 7 - สมาธิ: เรียนรู้การจดจ่อ (Concentration: Learning to Focus)"
+      },
+      {
+        "title": "บทที่ 8 - เกมที่ผู้คนเล่นในสนาม (Games People Play on the Court)"
+      },
+      {
+        "title": "บทที่ 9 - ความหมายของการแข่งขัน (The Meaning of Competition)"
+      },
+      {
+        "title": "บทที่ 10 - เกมภายในนอกสนาม (The Inner Game Off the Court)"
+      }
+    ]
   }
 ];

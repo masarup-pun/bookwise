@@ -88,4 +88,5 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'designing-your-new-work-life': 'revised',
   'get-it-done': 'revised',
   'dont-sweat-small-stuff': 'revised',
+  'the-inner-game-of-tennis': 'revised'
 });
