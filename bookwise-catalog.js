@@ -1,4 +1,3 @@
-// Public catalog: titles only. Reading content is served by authenticated Supabase queries.
 window.BOOKWISE_CATALOG = [
   {
     "id": "the-50th-law",
@@ -5746,5 +5745,95 @@ window.BOOKWISE_CATALOG = [
         "originalTitle": "Decrease Churn: The Churn Checklist"
       }
     ]
+  },
+  {
+    "id": "100m-playbook-closing",
+    "title": "$100M Playbook: Closing",
+    "author": "Alex Hormozi",
+    "category": "ธุรกิจและการตลาด",
+    "color": "#c9d8d1",
+    "text": "#25352f",
+    "added": 109,
+    "totalChapters": 18,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "บทที่ 1 - เริ่มต้นจากจุดต่ำสุด (Start Here)",
+        "originalTitle": "Start Here"
+      },
+      {
+        "title": "บทที่ 2 - เหตุใดการปิดการขายจึงสำคัญ (Why Is Closing So Important?)",
+        "originalTitle": "Why Is Closing So Important?"
+      },
+      {
+        "title": "บทที่ 3 - พลังที่ขาดหายไปในการตัดสินใจซื้อ (Power: The Missing Ingredient In Most Buying Decisions)",
+        "originalTitle": "Power: The Missing Ingredient In Most Buying Decisions"
+      },
+      {
+        "title": "บทที่ 4 - การโทษสิ่งอื่นทำให้คนสูญเสียอำนาจ (Blame: What Robs People Of Their Power)",
+        "originalTitle": "Blame: What Robs People Of Their Power"
+      },
+      {
+        "title": "บทที่ 5 - รูปแบบการโทษระหว่างการขาย (What Blame Looks Like During A Sale)",
+        "originalTitle": "What Blame Looks Like During A Sale"
+      },
+      {
+        "title": "บทที่ 6 - กฎการปิดการขายของผม (My Rules of Closing)",
+        "originalTitle": "My Rules of Closing"
+      },
+      {
+        "title": "บทที่ 7 - วิธีปิดการขายที่ใช้ได้หลายสถานการณ์ (All-Purpose Closes)",
+        "originalTitle": "All-Purpose Closes"
+      },
+      {
+        "title": "บทที่ 8 - เมื่อผู้สนใจโทษสถานการณ์ (What I Say When They Blame Circumstances)",
+        "originalTitle": "What I Say When They Blame Circumstances"
+      },
+      {
+        "title": "บทที่ 9 - เมื่อผู้สนใจโทษเรื่องเวลา (What I Say When They Blame Time)",
+        "originalTitle": "What I Say When They Blame Time"
+      },
+      {
+        "title": "บทที่ 10 - เมื่อผู้สนใจโทษเรื่องเงิน (What I Say When They Blame Money)",
+        "originalTitle": "What I Say When They Blame Money"
+      },
+      {
+        "title": "บทที่ 11 - เมื่อผู้สนใจโทษคนอื่น (When They Blame Other People)",
+        "originalTitle": "When They Blame Other People"
+      },
+      {
+        "title": "บทที่ 12 - เมื่อผู้สนใจต้องปรึกษาผู้มีอำนาจตัดสินใจ (When They Blame Decision Makers)",
+        "originalTitle": "When They Blame Decision Makers"
+      },
+      {
+        "title": "บทที่ 13 - เมื่อผู้สนใจเคยผิดหวังกับสินค้าอื่น (When They Blame Bad Experiences With Other Products)",
+        "originalTitle": "When They Blame Bad Experiences With Other Products"
+      },
+      {
+        "title": "บทที่ 14 - เมื่อผู้สนใจโทษตัวเอง (When They Take The Blame)",
+        "originalTitle": "When They Take The Blame"
+      },
+      {
+        "title": "บทที่ 15 - เมื่อผู้สนใจโทษความชอบของตัวเอง (When They Blame Their Own Preferences)",
+        "originalTitle": "When They Blame Their Own Preferences"
+      },
+      {
+        "title": "บทที่ 16 - เมื่อผู้สนใจโทษการตัดสินใจที่เร่งรีบ (When They Blame Rushed Decisions)",
+        "originalTitle": "When They Blame Rushed Decisions"
+      },
+      {
+        "title": "บทที่ 17 - เหตุใดควรใช้เวลาฝึกการปิดการขาย (Why You Should Take The Time To Train Closing)",
+        "originalTitle": "Why You Should Take The Time To Train Closing"
+      },
+      {
+        "title": "บทที่ 18 - รวมวิธีปิดการขาย (Closes Consolidated)",
+        "originalTitle": "Closes Consolidated"
+      }
+    ]
   }
 ];
+
