@@ -10060,5 +10060,109 @@ window.BOOKWISE_CATALOG = [
         "originalTitle": "Advertising One-Page Checklist; Rule of 100; Closing Thoughts"
       }
     ]
+  },
+  {
+    "id": "100m-leads",
+    "title": "$100M Leads",
+    "author": "Alex Hormozi",
+    "category": "ธุรกิจและการตลาด",
+    "color": "#c9d8d1",
+    "text": "#25352f",
+    "added": 114,
+    "totalChapters": 29,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "บทนำ - เริ่มต้นที่นี่ (Start Here)"
+      },
+      {
+        "title": "บทนำ - เรื่องราวของผม (How I Got Here)"
+      },
+      {
+        "title": "บทนำ - ปัญหาที่หนังสือเล่มนี้แก้ (The Problem This Book Solves)"
+      },
+      {
+        "title": "บทที่ 1 - แค่มี Leads ยังไม่พอ (Leads Alone Aren’t Enough)"
+      },
+      {
+        "title": "บทที่ 2 - ทำให้ Leads สนใจด้วยข้อเสนอและ Lead Magnet (Engage Your Leads: Offers and Lead Magnets)"
+      },
+      {
+        "title": "บทนำ - หาวิธีหา Leads (Section III: Get Leads)"
+      },
+      {
+        "title": "บทที่ 3 - เข้าหาคนที่รู้จัก (Warm Outreach)"
+      },
+      {
+        "title": "บทที่ 4 - โพสต์เนื้อหาฟรีเพื่อสร้างผู้ชม (Post Free Content Part I)"
+      },
+      {
+        "title": "บทที่ 5 - โพสต์เนื้อหาฟรีเพื่อสร้างผู้ชมและสร้างรายได้ (Post Free Content Part II)"
+      },
+      {
+        "title": "บทคั่น - แบ่งปันน้ำใจและส่งต่อโอกาส (Free Goodwill)"
+      },
+      {
+        "title": "บทที่ 6 - เข้าหาคนแปลกหน้าเพื่อสร้าง Engaged Leads (Cold Outreach)"
+      },
+      {
+        "title": "บทที่ 7 - สร้างโฆษณาเพื่อเข้าถึงคนแปลกหน้า (Run Paid Ads Part I: Making An Ad)"
+      },
+      {
+        "title": "บทที่ 8 - วัดผลและขยายงบโฆษณา (Run Paid Ads Part II: Money Stuff)"
+      },
+      {
+        "title": "บทที่ 9 - ขยาย Core Four ด้วย More, Better, New (Core Four On Steroids: More Better New)"
+      },
+      {
+        "title": "บทนำส่วนที่ 4 - หาคนช่วยพา Leads มาเพิ่ม (Section IV: Get Lead Getters)"
+      },
+      {
+        "title": "บทที่ 10 - การแนะนำต่อจากลูกค้า (Customer Referrals - Word of Mouth)"
+      },
+      {
+        "title": "บทที่ 11 - ใช้พนักงานช่วยสร้าง Leads (Employees)"
+      },
+      {
+        "title": "บทที่ 12 - ใช้ Agencies เพื่อเรียนรู้และสร้าง Leads (Agencies)"
+      },
+      {
+        "title": "บทที่ 13 - สร้างกองทัพพันธมิตรแนะนำลูกค้า (#4 Affiliates and Partners)"
+      },
+      {
+        "title": "บทสรุปท้ายส่วนที่ 4 - หาคนช่วยพา Leads มาเพิ่ม (Section IV Conclusion: Get Lead Getters)"
+      },
+      {
+        "title": "ส่วนที่ 5 - เริ่มลงมือทำ (Section V: Get Started)"
+      },
+      {
+        "title": "บทที่ 14 - โฆษณาในชีวิตจริง: ทำจนถึงเป้าหมาย (Advertising in Real Life: Open To Goal)"
+      },
+      {
+        "title": "บทที่ 15 - แผนที่ขยายโฆษณาจากจุดเริ่มต้นสู่ $100M (The Roadmap - Putting it All Together)"
+      },
+      {
+        "title": "บทส่งท้าย - สรุปบทเรียนในหน้าเดียว (A Decade in a Page)"
+      },
+      {
+        "title": "บทส่งท้าย - ของแถมและช่องทางต่อยอด (Free Goodies: Calls To Action)"
+      },
+      {
+        "title": "บทเสริม A - ดึงดูดให้คนมีส่วนร่วมด้วยข้อเสนอฟรีและส่วนลด (Attract: Free & Discount Promotions)"
+      },
+      {
+        "title": "บทเสริม A - โปรโมชั่นพรีเมียม: นำเสนอข้อเสนอหลักโดยตรง (Premium Promotions: Presenting Your Grand Slam Offer On Its Own)"
+      },
+      {
+        "title": "บทเสริม A - ข้อเสนอฟรี (Section A: Free Promotions)"
+      },
+      {
+        "title": "บทเสริม A - โปรโมชั่นส่วนลด (Section A: Discount Promotions)"
+      }
+    ]
   }
 ];
