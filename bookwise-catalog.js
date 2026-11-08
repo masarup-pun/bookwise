@@ -9963,5 +9963,102 @@ window.BOOKWISE_CATALOG = [
         "title": "บทที่ 14 - เป้าหมายสร้างความสัมพันธ์ที่มีความสุข (Goals Make a Happy Relationship)"
       }
     ]
+  },
+  {
+    "id": "100m-journal",
+    "title": "$100M Journal",
+    "author": "Alex Hormozi",
+    "category": "ธุรกิจและการตลาด",
+    "color": "#c9d8d1",
+    "text": "#25352f",
+    "added": 113,
+    "totalChapters": 20,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "บทนำ - อ่านสมุดภาพและติดตามพัฒนาการของแนวคิด (Start Here)",
+        "originalTitle": "Start Here; Dear Reader; Table of Contents"
+      },
+      {
+        "title": "บทที่ 1 - จัดหาลูกค้าและสร้างกระแสเงินสดจากข้อเสนอ (Client-Financed Acquisition)",
+        "originalTitle": "Grand Slam Offer; Client-Financed Acquisition; Ultimate Monetization Structure"
+      },
+      {
+        "title": "บทที่ 2 - องค์ประกอบข้อเสนอและสมการแห่งคุณค่า (Offer Components; Value Equation)",
+        "originalTitle": "Offer Components; Value Equation"
+      },
+      {
+        "title": "บทที่ 3 - ราคา คุณค่าที่รับรู้ และวงจรราคา (Price to Value; Cycle of Price)",
+        "originalTitle": "Price to Value; Cycle of Price; Sales to Fulfillment Continuum"
+      },
+      {
+        "title": "บทที่ 4 - สร้างข้อเสนอ ตั้งชื่อ และห่อคุณค่าให้ชัด (Offer Creation; MAGIC Headline)",
+        "originalTitle": "5 Steps to Create Your Grand Slam Offer; MAGIC Headline Formula; Gift Wrapping an Offer"
+      },
+      {
+        "title": "บทที่ 5 - การรับประกันและเส้นอุปสงค์กับอุปทาน (Guarantees; Supply-Demand Curve)",
+        "originalTitle": "Guarantees Checklist; Shifting Supply-Demand Curve"
+      },
+      {
+        "title": "บทที่ 6 - วางระบบ Lead ตั้งแต่กลุ่มเป้าหมายถึงการตอบสนอง (Leads; Targeting; Lead Flow)",
+        "originalTitle": "$100M Leads Journal; Table of Contents Evolution; Lead Flow; Lead Filters"
+      },
+      {
+        "title": "บทที่ 7 - Core Four และการเพิ่มแรงส่งผ่านช่องทาง (The Core Four; Leverage)",
+        "originalTitle": "The Core Four; Lead Sources; Leverage"
+      },
+      {
+        "title": "บทที่ 8 - เลือกกลุ่ม ช่องทาง และจังหวะการโฆษณา (Advertising Decisions)",
+        "originalTitle": "Advertising Cycle; Audience; Medium; Platform; Activity"
+      },
+      {
+        "title": "บทที่ 9 - Lead Stages และ Lead Magnets (Lead Stages; Lead Magnets)",
+        "originalTitle": "Lead Stages; Lead Magnets"
+      },
+      {
+        "title": "บทที่ 10 - ติดต่อคนที่รู้จักอย่างมีประโยชน์ (Warm Reach Outs)",
+        "originalTitle": "Warm Reach Outs"
+      },
+      {
+        "title": "บทที่ 11 - ใช้เนื้อหาเพื่อดึงและรักษาความสนใจ (Post Content)",
+        "originalTitle": "Post Content; Hook-Retain-Reward"
+      },
+      {
+        "title": "บทที่ 12 - ติดต่อผู้ที่ยังไม่รู้จักธุรกิจ (Cold Reach Outs)",
+        "originalTitle": "Cold Reach Outs"
+      },
+      {
+        "title": "บทที่ 13 - วางหลักการซื้อโฆษณาและคำนวณการคืนทุน (Run Paid Ads)",
+        "originalTitle": "Run Paid Ads"
+      },
+      {
+        "title": "บทที่ 14 - เพิ่มจำนวน ปรับให้ดีขึ้น หรือขยายไปทางใหม่ (More, Better, New)",
+        "originalTitle": "More, Better, New; Market Size"
+      },
+      {
+        "title": "บทที่ 15 - ใช้ Lead Getters เพิ่มจำนวนผู้เข้าถึง (Lead Getters)",
+        "originalTitle": "Lead Getters"
+      },
+      {
+        "title": "บทที่ 16 - ทำให้การแนะนำลูกค้ากลายเป็นระบบ (Referrals)",
+        "originalTitle": "Referrals"
+      },
+      {
+        "title": "บทที่ 17 - ร่วมมือกับ Affiliates (Affiliates)",
+        "originalTitle": "Affiliates"
+      },
+      {
+        "title": "บทที่ 18 - ใช้พนักงานและระบบเพิ่มกำลังการเติบโต (Employees)",
+        "originalTitle": "Employees; Performance Diamond"
+      },
+      {
+        "title": "บทที่ 19 - ใช้รายการตรวจสอบโฆษณาและปิดสมุดบันทึก (Advertising Checklist; Closing Thoughts)",
+        "originalTitle": "Advertising One-Page Checklist; Rule of 100; Closing Thoughts"
+      }
+    ]
   }
 ];
