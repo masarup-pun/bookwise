@@ -5640,5 +5640,54 @@ window.BOOKWISE_CATALOG = [
         "originalTitle": "The Instant Profit Pricing Playbook"
       }
     ]
+  },
+  {
+    "id": "100m-proof-checklist",
+    "title": "$100M Proof Checklist",
+    "author": "Alex Hormozi",
+    "category": "ธุรกิจและการตลาด",
+    "color": "#c9d8d1",
+    "text": "#25352f",
+    "added": 107,
+    "totalChapters": 8,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "เปิดเรื่อง - หลักฐานทำให้คำสัญญาน่าเชื่อ (Start Here)",
+        "originalTitle": "Start Here"
+      },
+      {
+        "title": "วิธีที่หลักฐานทำงาน (How Proof Works)",
+        "originalTitle": "How Proof Works"
+      },
+      {
+        "title": "ทำให้หลักฐานโน้มน้าวใจขึ้น (How I Make Proof More Compelling)",
+        "originalTitle": "How I Make Proof More Compelling"
+      },
+      {
+        "title": "Proof Checklist - หลักฐาน 13 แบบที่เพิ่มความน่าเชื่อถือ",
+        "originalTitle": "Proof Checklist"
+      },
+      {
+        "title": "สรุป - เก็บหลักฐานให้ทันก่อนหายไป (Summary)",
+        "originalTitle": "Summary"
+      },
+      {
+        "title": "เหตุผลที่ควรทำ - ผลของหลักฐานต่อธุรกิจ (Why You Should Actually Do This)",
+        "originalTitle": "Why You Should Actually Do This"
+      },
+      {
+        "title": "คำชวนใช้ระบบและรายการตรวจฉบับย่อ (Back Matter)",
+        "originalTitle": "PS / Callout"
+      },
+      {
+        "title": "รายการตรวจหลักฐานฉบับหน้าเดียว (Proof One-Page Checklist)",
+        "originalTitle": "Proof One-Page Checklist"
+      }
+    ]
   }
 ];
