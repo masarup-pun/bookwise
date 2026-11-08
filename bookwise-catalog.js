@@ -5689,5 +5689,62 @@ window.BOOKWISE_CATALOG = [
         "originalTitle": "Proof One-Page Checklist"
       }
     ]
+  },
+  {
+    "id": "100m-retention-playbook",
+    "title": "$100M Retention Playbook",
+    "author": "Alex Hormozi",
+    "category": "ธุรกิจและการตลาด",
+    "color": "#c9d8d1",
+    "text": "#25352f",
+    "added": 108,
+    "totalChapters": 10,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "ส่วนที่ 1 - ลูกค้าเข้า แต่ก็ออก (Churn Checklist)",
+        "originalTitle": "Churn Checklist"
+      },
+      {
+        "title": "ส่วนที่ 2 - แก้ปัญหาด้วยการหาปัจจัยร่วม (Solving Problems Like The Big Boys)",
+        "originalTitle": "Solving Problems Like The Big Boys"
+      },
+      {
+        "title": "ส่วนที่ 3 - 5 กลไกหลักในการรักษาลูกค้า (The 5 Horsemen of Retention)",
+        "originalTitle": "The 5 Horsemen of Retention"
+      },
+      {
+        "title": "ส่วนที่ 4 - ทำไม churn อาจเพิ่มก่อนจะลด (The 5 Horsemen Of Retention: Results)",
+        "originalTitle": "The 5 Horsemen Of Retention: Results"
+      },
+      {
+        "title": "ส่วนที่ 5 - Churn วัดจากใคร (What Is Churn?)",
+        "originalTitle": "What Is Churn?"
+      },
+      {
+        "title": "ส่วนที่ 6 - ราคา คุณค่า และการยกเลิก (Price, Value, And Churn)",
+        "originalTitle": "Price, Value, And Churn"
+      },
+      {
+        "title": "ส่วนที่ 7 - เหตุใดการลด churn จึงสำคัญ (Why Is Reducing Churn So Important?)",
+        "originalTitle": "Why Is Reducing Churn So Important?"
+      },
+      {
+        "title": "ส่วนที่ 8 - Churn Checklist: 9 วิธีลงมือทำ",
+        "originalTitle": "Churn Checklist"
+      },
+      {
+        "title": "ส่วนที่ 9 - นำทุกวิธีมารวมกัน (Putting It All Together)",
+        "originalTitle": "Putting It All Together"
+      },
+      {
+        "title": "ส่วนที่ 10 - รายการลงมือทำลด churn (Decrease Churn: The Churn Checklist)",
+        "originalTitle": "Decrease Churn: The Churn Checklist"
+      }
+    ]
   }
 ];

@@ -78,4 +78,5 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   '100m-price-raise-playbook': 'revised',
   '100m-pricing-playbook': 'revised',
   '100m-proof-checklist': 'revised',
+  '100m-retention-playbook': 'revised',
 });
