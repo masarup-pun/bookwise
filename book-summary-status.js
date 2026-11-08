@@ -83,4 +83,5 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   'conspiracy': 'revised',
   'company-of-one': 'revised',
   'designing-your-new-work-life': 'revised',
+  'dont-sweat-small-stuff': 'revised',
 });

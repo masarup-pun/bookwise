@@ -9578,5 +9578,328 @@ window.BOOKWISE_CATALOG = [
         "title": "บทสรุป - อนุญาตให้ตัวเองมีความสุข (Conclusion: Permission to Be Happy)"
       }
     ]
+  },
+  {
+    "id": "dont-sweat-small-stuff",
+    "title": "Don't Sweat the Small Stuff",
+    "author": "Richard Carlson",
+    "category": "Psychology",
+    "color": "#c7b6a3",
+    "text": "#34312d",
+    "added": 107,
+    "totalChapters": 102,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "บทนำ - เปลี่ยนมุมมองเพื่อใช้ชีวิตให้สงบ (Introduction)"
+      },
+      {
+        "title": "บทที่ 1 - อย่าเก็บเรื่องเล็กน้อยมาทำให้ใจหนัก (Don't Sweat the Small Stuff)"
+      },
+      {
+        "title": "บทที่ 2 - ยอมรับความไม่สมบูรณ์แบบ (Make Peace with Imperfection)"
+      },
+      {
+        "title": "บทที่ 3 - คนสงบก็ประสบความสำเร็จได้ (Let Go of the Idea that Gentle, Relaxed People Can't Be Superachievers)"
+      },
+      {
+        "title": "บทที่ 4 - หยุดความคิดลบไม่ให้พอกพูน (Be Aware of the Snowball Effect of Your Thinking)"
+      },
+      {
+        "title": "บทที่ 5 - ฝึกมีเมตตาต่อผู้อื่น (Develop Your Compassion)"
+      },
+      {
+        "title": "บทที่ 6 - เตือนตัวเองว่างานจะไม่มีวันหมด (Remind Yourself that When You Die, Your \"In Basket\" Won't Be Empty)"
+      },
+      {
+        "title": "บทที่ 7 - อย่าขัดจังหวะหรือพูดต่อแทนคนอื่น (Don't Interrupt Others or Finish Their Sentences)"
+      },
+      {
+        "title": "บทที่ 8 - ทำสิ่งดีให้คนอื่นโดยไม่ต้องบอกใคร (Do Something Nice for Someone Else - and Don't Tell Anyone About It)"
+      },
+      {
+        "title": "บทที่ 9 - เปิดพื้นที่ให้คนอื่นได้รับคำชื่นชม (Let Others Have the Glory)"
+      },
+      {
+        "title": "บทที่ 10 - เรียนรู้ที่จะอยู่กับปัจจุบัน (Learn to Live in the Present Moment)"
+      },
+      {
+        "title": "บทที่ 11 - ลองมองว่าทุกคนกำลังสอนอะไรเรา (Imagine that Everyone Is Enlightened Except You)"
+      },
+      {
+        "title": "บทที่ 12 - ปล่อยให้อีกฝ่ายถูกบ้างเป็นส่วนใหญ่ (Let Others Be \"Right\" Most of the Time)"
+      },
+      {
+        "title": "บทที่ 13 - ฝึกความอดทน (Become More Patient)"
+      },
+      {
+        "title": "บทที่ 14 - สร้างช่วงเวลาฝึกความอดทน (Create \"Patience Practice Periods\")"
+      },
+      {
+        "title": "บทที่ 15 - เป็นฝ่ายเริ่มแสดงความรักหรือยื่นไมตรีก่อน (Be the First One to Act Loving or Reach Out)"
+      },
+      {
+        "title": "บทที่ 16 - ถามตัวเองว่าอีก 1 ปีเรื่องนี้ยังสำคัญไหม (Ask Yourself the Question, \"Will This Matter a Year from Now?\")"
+      },
+      {
+        "title": "บทที่ 17 - ยอมรับว่าชีวิตไม่ยุติธรรม (Surrender to the Fact that Life Isn't Fair)"
+      },
+      {
+        "title": "บทที่ 18 - อนุญาตให้ตัวเองรู้สึกเบื่อบ้าง (Allow Yourself to Be Bored)"
+      },
+      {
+        "title": "บทที่ 19 - ลดความทนต่อความเครียดของตัวเอง (Lower Your Tolerance to Stress)"
+      },
+      {
+        "title": "บทที่ 20 - เขียนจดหมายจากใจสัปดาห์ละครั้ง (Once a Week, Write a Heartfelt Letter)"
+      },
+      {
+        "title": "บทที่ 21 - ลองนึกภาพตัวเองในงานศพของตัวเอง (Imagine Yourself at Your Own Funeral)"
+      },
+      {
+        "title": "บทที่ 22 - เตือนตัวเองว่า “ชีวิตไม่ใช่เหตุฉุกเฉิน” (Repeat to Yourself, “Life Isn’t an Emergency”)"
+      },
+      {
+        "title": "บทที่ 23 - ทดลองวางเรื่องไว้บนเตาหลัง (Experiment with Your Back Burner)"
+      },
+      {
+        "title": "บทที่ 24 - ใช้เวลาสักครู่ทุกวันนึกถึงคนที่เราอยากขอบคุณ (Spend a Moment Every Day Thinking of Someone to Thank)"
+      },
+      {
+        "title": "บทที่ 25 - ยิ้มให้คนแปลกหน้า สบตา และกล่าวทักทาย (Smile at Strangers, Look into Their Eyes, and Say Hello)"
+      },
+      {
+        "title": "บทที่ 26 - กันเวลาเงียบ ๆ ให้ตัวเองทุกวัน (Set Aside Quiet Time, Every Day)"
+      },
+      {
+        "title": "บทที่ 27 - มองคนรอบตัวเป็นทั้งทารกและผู้สูงวัย 100 ปี (Imagine the People in Your Life as Tiny Infants and as One-Hundred-Year-Old Adults)"
+      },
+      {
+        "title": "บทที่ 28 - พยายามเข้าใจอีกฝ่ายก่อน (Seek First to Understand)"
+      },
+      {
+        "title": "บทที่ 29 - ฝึกเป็นผู้ฟังที่ดีขึ้น (Become a Better Listener)"
+      },
+      {
+        "title": "บทที่ 30 - เลือกเรื่องที่ควรโต้แย้งอย่างรอบคอบ (Choose Your Battles Wisely)"
+      },
+      {
+        "title": "บทที่ 31 - รู้ทันอารมณ์และอย่าปล่อยให้อารมณ์ตกหลอกเรา (Become Aware of Your Moods and Don’t Allow Yourself to Be Fooled by the Low Ones)"
+      },
+      {
+        "title": "บทที่ 32 - ชีวิตคือแบบทดสอบ และเป็นเพียงแบบทดสอบ (Life Is a Test. It Is Only a Test)"
+      },
+      {
+        "title": "บทที่ 33 - คำชมและคำตำหนิก็เป็นเพียงความเห็น (Praise and Blame Are All the Same)"
+      },
+      {
+        "title": "บทที่ 34 - ฝึกทำความดีโดยไม่ต้องนัดหมาย (Practice Random Acts of Kindness)"
+      },
+      {
+        "title": "บทที่ 35 - มองให้พ้นจากพฤติกรรมที่เห็น (Look Beyond Behavior)"
+      },
+      {
+        "title": "บทที่ 36 - มองเห็นความบริสุทธิ์ในตัวคนอื่น (See the Innocence)"
+      },
+      {
+        "title": "บทที่ 37 - เลือกความเมตตาแทนการเป็นฝ่ายถูก (Choose Being Kind over Being Right)"
+      },
+      {
+        "title": "บทที่ 38 - วันนี้บอกคน 3 คนว่าคุณรักเขามากแค่ไหน (Tell Three People (Today) How Much You Love Them)"
+      },
+      {
+        "title": "บทที่ 39 - ฝึกความถ่อมตน (Practice Humility)"
+      },
+      {
+        "title": "บทที่ 40 - ถ้าไม่แน่ใจว่าใครควรเอาขยะไปทิ้ง ก็เป็นคนเอาไปทิ้งเถอะ (When in Doubt about Whose Turn It Is to Take Out the Trash Go Ahead and Take It Out)"
+      },
+      {
+        "title": "บทที่ 41 - เลิกคอยอุดรอยรั่วทุกอย่าง (Avoid Weatherproofing)"
+      },
+      {
+        "title": "บทที่ 42 - ใช้เวลาสักครู่ทุกวันนึกถึงคนที่เราอยากส่งความรักให้ (Spend a Moment, Every Day, Thinking of Someone to Love)"
+      },
+      {
+        "title": "บทที่ 43 - ลองเป็นนักมานุษยวิทยา (Become an Anthropologist)"
+      },
+      {
+        "title": "บทที่ 44 - เข้าใจว่าแต่ละคนมีโลกความจริงของตัวเอง (Understand Separate Realities)"
+      },
+      {
+        "title": "บทที่ 45 - สร้างกิจวัตรช่วยเหลือในแบบของตัวเอง (Develop Your Own Helping Rituals)"
+      },
+      {
+        "title": "บทที่ 46 - บอกใครสักคนทุกวันว่าเราชอบ ชื่นชม หรือเห็นคุณค่าอะไรในตัวเขา (Every Day, Tell at Least One Person Something You Like, Admire, or Appreciate about Them)"
+      },
+      {
+        "title": "บทที่ 47 - เถียงสนับสนุนข้อจำกัดของตัวเอง แล้วมันก็จะกลายเป็นของคุณ (Argue for Your Limitations, and They’re Yours)"
+      },
+      {
+        "title": "บทที่ 48 - จำไว้ว่าทุกสิ่งมีร่องรอยของพระเจ้าอยู่ (Remember that Everything Has God’s Fingerprints on It)"
+      },
+      {
+        "title": "บทที่ 49 - ต้านแรงกระตุ้นที่จะวิจารณ์ (Resist the Urge to Criticize)"
+      },
+      {
+        "title": "บทที่ 50 - เขียนจุดยืนที่ดื้อรั้นที่สุด 5 ข้อ แล้วลองผ่อนลง (Write Down Your Five Most Stubborn Positions and See if You Can Soften Them)"
+      },
+      {
+        "title": "บทที่ 51 - ลองเห็นด้วยกับคำวิจารณ์ที่พุ่งมาหาเรา แล้วดูว่ามันคลายลงไหม (Just for Fun, Agree with Criticism Directed Toward You (Then Watch It Go Away))"
+      },
+      {
+        "title": "บทที่ 52 - มองหาเศษเสี้ยวความจริงในความเห็นของคนอื่น (Search for the Grain of Truth in Other Opinions)"
+      },
+      {
+        "title": "บทที่ 53 - มองแก้วว่าแตกไปแล้ว (และทุกสิ่งก็เช่นกัน) (See the Glass as Already Broken (and Everything Else Too))"
+      },
+      {
+        "title": "บทที่ 54 - เข้าใจคำพูดที่ว่า “ไปที่ไหน เราก็พาตัวเองไปด้วย” (Understand the Statement, “Wherever You Go, There You Are”)"
+      },
+      {
+        "title": "บทที่ 55 - หายใจก่อนพูด (Breathe Before You Speak)"
+      },
+      {
+        "title": "บทที่ 56 - ขอบคุณเมื่อรู้สึกดี และอ่อนโยนเมื่อรู้สึกแย่ (Be Grateful when You’re Feeling Good and Graceful when You’re Feeling Bad)"
+      },
+      {
+        "title": "บทที่ 57 - ขับรถอย่างก้าวร้าวให้น้อยลง (Become a Less Aggressive Driver)"
+      },
+      {
+        "title": "บทที่ 58 - ผ่อนคลาย (Relax)"
+      },
+      {
+        "title": "บทที่ 59 - อุปการะเด็กผ่านจดหมาย (Adopt a Child Through the Mail)"
+      },
+      {
+        "title": "บทที่ 60 - เปลี่ยนละครชีวิตให้เบาลง (Turn Your Melodrama into a Mellow-Drama)"
+      },
+      {
+        "title": "บทที่ 61 - อ่านบทความและหนังสือที่มีมุมมองต่างจากเรา แล้วลองเรียนรู้อะไรสักอย่าง (Read Articles and Books with Entirely Different Points of View from Your Own and Try to Learn Something)"
+      },
+      {
+        "title": "บทที่ 62 - ทำทีละอย่าง (Do One Thing at a Time)"
+      },
+      {
+        "title": "บทที่ 63 - นับถึง 10 (Count to Ten)"
+      },
+      {
+        "title": "บทที่ 64 - ฝึกอยู่ตรงใจกลางพายุ (Practice Being in the “Eye of the Storm”)"
+      },
+      {
+        "title": "บทที่ 65 - ยืดหยุ่นเมื่อแผนเปลี่ยน (Be Flexible with Changes in Your Plans)"
+      },
+      {
+        "title": "บทที่ 66 - นึกถึงสิ่งที่มี แทนสิ่งที่อยากได้ (Think of What You Have Instead of What You Want)"
+      },
+      {
+        "title": "บทที่ 67 - ฝึกปล่อยความคิดด้านลบผ่านไป (Practice Ignoring Your Negative Thoughts)"
+      },
+      {
+        "title": "บทที่ 68 - พร้อมเรียนรู้จากเพื่อนและครอบครัว (Be Willing to Learn from Friends and Family)"
+      },
+      {
+        "title": "บทที่ 69 - มีความสุขกับจุดที่เราอยู่ตอนนี้ (Be Happy Where You Are)"
+      },
+      {
+        "title": "บทที่ 70 - จำไว้ว่าคุณจะกลายเป็นสิ่งที่ฝึกฝนบ่อยที่สุด (Remember that You Become What You Practice Most)"
+      },
+      {
+        "title": "บทที่ 71 - ทำใจให้เงียบสงบ (Quiet the Mind)"
+      },
+      {
+        "title": "บทที่ 72 - ลองฝึกโยคะ (Take Up Yoga)"
+      },
+      {
+        "title": "บทที่ 73 - ทำให้การรับใช้ผู้อื่นเป็นส่วนหนึ่งของชีวิต (Make Service an Integral Part of Your Life)"
+      },
+      {
+        "title": "บทที่ 74 - ทำสิ่งดีให้ใครโดยไม่ขอหรือคาดหวังสิ่งตอบแทน (Do a Favor and Don’t Ask For, or Expect, One in Return)"
+      },
+      {
+        "title": "บทที่ 75 - มองปัญหาเป็นครูที่อาจสอนเราได้ (Think of Your Problems as Potential Teachers)"
+      },
+      {
+        "title": "บทที่ 76 - สบายใจกับการไม่รู้ว่าอะไรจะเกิดขึ้น (Get Comfortable Not Knowing)"
+      },
+      {
+        "title": "บทที่ 77 - ยอมรับตัวตนทั้งหมดของเรา (Acknowledge the Totality of Your Being)"
+      },
+      {
+        "title": "บทที่ 78 - ผ่อนปรนกับตัวเองบ้าง (Cut Yourself Some Slack)"
+      },
+      {
+        "title": "บทที่ 79 - หยุดโทษคนอื่น (Stop Blaming Others)"
+      },
+      {
+        "title": "บทที่ 80 - ตื่นเช้ากว่าปกติ (Become an Early Riser)"
+      },
+      {
+        "title": "บทที่ 81 - เมื่ออยากช่วยคนอื่น ให้ใส่ใจกับสิ่งเล็ก ๆ (When Trying to Be Helpful, Focus on Little Things)"
+      },
+      {
+        "title": "บทที่ 82 - จำไว้ว่าอีก 100 ปีจะเป็นผู้คนรุ่นใหม่ทั้งหมด (Remember, One Hundred Years from Now, All New People)"
+      },
+      {
+        "title": "บทที่ 83 - ทำใจให้เบาขึ้น (Lighten Up)"
+      },
+      {
+        "title": "บทที่ 84 - ดูแลต้นไม้สักต้น (Nurture a Plant)"
+      },
+      {
+        "title": "บทที่ 85 - เปลี่ยนความสัมพันธ์ที่เรามีต่อปัญหา (Transform Your Relationship to Your Problems)"
+      },
+      {
+        "title": "บทที่ 86 - ครั้งหน้าที่โต้เถียง แทนปกป้องจุดยืน ลองมองมุมของอีกฝ่ายก่อน (The Next Time You Find Yourself in an Argument, Rather than Defend Your Position, See if You Can See the Other Point of View First)"
+      },
+      {
+        "title": "บทที่ 87 - นิยามความสำเร็จที่มีความหมายใหม่ (Redefine a “Meaningful Accomplishment”)"
+      },
+      {
+        "title": "บทที่ 88 - ฟังความรู้สึกของตัวเอง เพราะมันกำลังบอกอะไรบางอย่าง (Listen to Your Feelings (They Are Trying to Tell You Something))"
+      },
+      {
+        "title": "บทที่ 89 - ถ้ามีคนโยนลูกบอลให้ คุณไม่จำเป็นต้องรับ (If Someone Throws You the Ball, You Don’t Have to Catch It)"
+      },
+      {
+        "title": "บทที่ 90 - อีกหนึ่งภาพที่ผ่านพ้นไป (One More Passing Show)"
+      },
+      {
+        "title": "บทที่ 91 - เติมความรักให้เต็มชีวิต (Fill Your Life with Love)"
+      },
+      {
+        "title": "บทที่ 92 - ตระหนักถึงพลังของความคิดตัวเอง (Realize the Power of Your Own Thoughts)"
+      },
+      {
+        "title": "บทที่ 93 - เลิกเชื่อว่า “ยิ่งมากยิ่งดี” (Give Up on the Idea that “More Is Better”)"
+      },
+      {
+        "title": "บทที่ 94 - ถามตัวเองเสมอว่า “อะไรสำคัญจริง ๆ?” (Keep Asking Yourself, “What’s Really Important?”)"
+      },
+      {
+        "title": "บทที่ 95 - เชื่อหัวใจที่หยั่งรู้ (Trust Your Intuitive Heart)"
+      },
+      {
+        "title": "บทที่ 96 - เปิดใจยอมรับสิ่งที่เป็นอยู่ (Be Open to “What Is”)"
+      },
+      {
+        "title": "บทที่ 97 - ดูแลเรื่องของตัวเอง (Mind Your Own Business)"
+      },
+      {
+        "title": "บทที่ 98 - มองเห็นสิ่งพิเศษในเรื่องธรรมดา (Look for the Extraordinary in the Ordinary)"
+      },
+      {
+        "title": "บทที่ 99 - จัดเวลาให้กับการดูแลจิตใจ (Schedule Time for Your Inner Work)"
+      },
+      {
+        "title": "บทที่ 100 - ใช้วันนี้ราวกับเป็นวันสุดท้าย (Live This Day as if It Were Your Last. It Might Be!)"
+      },
+      {
+        "title": "หนังสืออ่านต่อที่แนะนำ (Suggested Reading)"
+      }
+    ]
   }
 ];
