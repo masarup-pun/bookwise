@@ -82,4 +82,5 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   '100m-playbook-closing': 'revised',
   'conspiracy': 'revised',
   'company-of-one': 'revised',
+  'designing-your-new-work-life': 'revised',
 });

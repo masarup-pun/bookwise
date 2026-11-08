@@ -9510,5 +9510,73 @@ window.BOOKWISE_CATALOG = [
         ]
       }
     ]
+  },
+  {
+    "id": "designing-your-new-work-life",
+    "title": "Designing Your New Work Life",
+    "author": "Bill Burnett & Dave Evans",
+    "category": "ธุรกิจและการทำงาน",
+    "color": "#d8c9b5",
+    "text": "#302a24",
+    "added": 112,
+    "totalChapters": 17,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "คำนำ - ชีวิตการทำงานบทใหม่ (Your New Work Life)"
+      },
+      {
+        "title": "บทนำ - ทำให้งานเป็นงานของเรา (Making It Work at Work)"
+      },
+      {
+        "title": "บทที่ 1 - เรามาถึงหรือยัง? (Are We There Yet?)"
+      },
+      {
+        "title": "บทที่ 2 - เงินหรือความหมาย (Money or Meaning)"
+      },
+      {
+        "title": "บทที่ 3 - ปัญหาคืออะไร? (What’s the Problem?)"
+      },
+      {
+        "title": "บทที่ 4 - งานล้นจนรับมือไม่ไหว (My Overwhelm Is Overwhelmed)"
+      },
+      {
+        "title": "บทที่ 5 - กรอบคิด ความพากเพียร และ ARC ในอาชีพ (Mind-set, Grit, and the ARC of Your Career)"
+      },
+      {
+        "title": "บทที่ 6 - อิทธิพลและการเมืองในที่ทำงาน (Power and Politics)"
+      },
+      {
+        "title": "บทที่ 7 - อย่าเพิ่งลาออก จงออกแบบงานใหม่ (Don’t Resign, Redesign!)"
+      },
+      {
+        "title": "บทที่ 8 - ลาออกอย่างงดงาม (Quitting Well)"
+      },
+      {
+        "title": "บทที่ 9 - ก้าวต่อไป (Moving On)"
+      },
+      {
+        "title": "บทที่ 10 - เป็นเจ้านายตัวเอง (Being Your Own Boss)"
+      },
+      {
+        "title": "บทที่ 11 - ทุกความปั่นป่วนส่งผลต่อชีวิตเรา (All Disruption Is Personal)"
+      },
+      {
+        "title": "บทที่ 12 - ตอนนี้เราอยู่ตรงไหน? (Now Where Are We?)"
+      },
+      {
+        "title": "บทที่ 13 - ออกแบบฝ่าความปั่นป่วน (Disruption Design)"
+      },
+      {
+        "title": "บทที่ 14 - มนุษย์ที่อยู่ในห้องทำงาน (The Humans in the Room)"
+      },
+      {
+        "title": "บทสรุป - อนุญาตให้ตัวเองมีความสุข (Conclusion: Permission to Be Happy)"
+      }
+    ]
   }
 ];
