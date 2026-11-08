@@ -9901,5 +9901,67 @@ window.BOOKWISE_CATALOG = [
         "title": "หนังสืออ่านต่อที่แนะนำ (Suggested Reading)"
       }
     ]
+  },
+  {
+    "id": "get-it-done",
+    "title": "Get It Done",
+    "author": "Ayelet Fishbach",
+    "category": "Psychology",
+    "color": "#c7b6a3",
+    "text": "#34312d",
+    "added": 108,
+    "totalChapters": 15,
+    "chapter": 0,
+    "progress": 0,
+    "favorite": false,
+    "started": false,
+    "completed": false,
+    "chapters": [
+      {
+        "title": "บทนำ - การดึงตัวเองขึ้นจากปลัก (Introduction)"
+      },
+      {
+        "title": "บทที่ 1 - เป้าหมายไม่ใช่งานจำเจ (Goals Aren’t Chores)"
+      },
+      {
+        "title": "บทที่ 2 - กำหนดตัวเลขให้เป้าหมาย (Put a Number on It)"
+      },
+      {
+        "title": "บทที่ 3 - สิ่งตอบแทนมีผล (Incentives Matter)"
+      },
+      {
+        "title": "บทที่ 4 - แรงจูงใจภายในและความสนุก (Intrinsic Motivation)"
+      },
+      {
+        "title": "บทที่ 5 - ความก้าวหน้าเพิ่มแรงจูงใจ (Progress Increases Motivation)"
+      },
+      {
+        "title": "บทที่ 6 - มองความก้าวหน้าจากสองด้าน (The Glass Half Full and Half Empty)"
+      },
+      {
+        "title": "บทที่ 7 - ปัญหาช่วงกลาง (The Middle Problem)"
+      },
+      {
+        "title": "บทที่ 8 - คุณคิดผิด: เรียนรู้จากผลป้อนกลับเชิงลบ (“You’re Wrong!”: Learning from Negative Feedback)"
+      },
+      {
+        "title": "บทที่ 9 - จัดการหลายเป้าหมาย (Goal Juggling)"
+      },
+      {
+        "title": "บทที่ 10 - การควบคุมตนเอง (Self-Control)"
+      },
+      {
+        "title": "บทที่ 11 - ความอดทน (Patience)"
+      },
+      {
+        "title": "บทที่ 12 - ทำเป้าหมายท่ามกลางผู้อื่น (Pursuing Goals in the Presence of Others)"
+      },
+      {
+        "title": "บทที่ 13 - ทำเป้าหมายร่วมกับผู้อื่น (Pursuing Goals with Others)"
+      },
+      {
+        "title": "บทที่ 14 - เป้าหมายสร้างความสัมพันธ์ที่มีความสุข (Goals Make a Happy Relationship)"
+      }
+    ]
   }
 ];
