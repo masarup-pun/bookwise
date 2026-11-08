@@ -80,5 +80,6 @@ window.BOOKWISE_SUMMARY_STATUS = Object.freeze({
   '100m-proof-checklist': 'revised',
   '100m-retention-playbook': 'revised',
   '100m-playbook-closing': 'revised',
+  'conspiracy': 'revised',
   'company-of-one': 'revised',
 });
